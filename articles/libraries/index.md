@@ -9,8 +9,8 @@ ms.openlocfilehash: 5a5b28f7e8c1669d26d1064753f20551a6b0d036
 ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72970388"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73056451"
 ---
 Quantum Development Kit se proporciona con varias bibliotecas para facilitar el desarrollo de aplicaciones cuánticas en Q#.
 En esta sección de la documentación, se describen estas bibliotecas y cómo usarlas en los programas.
