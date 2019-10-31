@@ -1,0 +1,20 @@
+- name: ¿Qué es la computación cuántica?
+  href: index.md
+- name: Vectores y matrices
+  href: vectors-and-matrices.md
+- name: Conceptos avanzados de matrices
+  href: advanced-matrices.md
+- name: El qubit
+  href: the-qubit.md
+- name: Varios qubits
+  href: multiple-qubits.md
+- name: Notación Dirac
+  href: dirac-notation.md
+- name: Medidas Pauli
+  href: pauli-measurements.md
+- name: Circuitos cuánticos
+  href: circuits.md
+- name: Cajas negras cuánticas
+  href: oracles.md
+- name: Pila de software
+  href: software-stack.md

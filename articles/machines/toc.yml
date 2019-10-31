@@ -1,0 +1,11 @@
+- name: Máquinas y controladores clásicos
+  href: index.md
+- name: Simulador cuántico
+  href: full-state-simulator.md
+- name: Estimador de recursos
+  href: resources-estimator.md
+- name: Simulador de seguimiento de equipos cuánticos
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml
+- name: Simulador Toffoli
+  href: toffoli-simulator.md
