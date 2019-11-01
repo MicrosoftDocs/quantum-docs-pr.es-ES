@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.steanecode
+name: SteaneCode
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Devuelve un valor de CSS que representa el codificador y descodificador de código ⟦ 7, 1, 3 ⟧ Steane con medición de síndrome en contexto.
+remarks: >-
+  Este código se encontró en el siguiente documento:
+
+
+  - R: Steane, "interferencia de varias partículas y corrección de errores de Quantum", proc. Roy. SOC. Lond. A452 (1996) pp. 2551; https://arxiv.org/abs/quant-ph/9601029.
+syntax: 'function SteaneCode () : Microsoft.Quantum.ErrorCorrection.CSS'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.CSS
+  types:
+  - summary: Objeto de tipo CSS que recopila todos los datos pertinentes para realizar la codificación y la corrección de errores para el código Steane de ⟦ 7, 1, 3 ⟧.
+    uid: microsoft.quantum.errorcorrection.css
+ms.openlocfilehash: 353ea31a44965d478379a50a5b0b6520740a378a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220341"
