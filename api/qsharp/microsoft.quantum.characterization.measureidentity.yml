@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.measureidentity
+name: MeasureIdentity
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Mide el operador de identidad en un registro de qubits.
+remarks: >-
+  Dado que $ \boldone $ solo tiene eigenvalue $1 $ y no tiene un eigenvalue negativo, esta operación siempre devuelve `Zero`, que corresponde a eigenvalue $ + 1 = (-1) ^ 0 $, y no provoca la contracción del estado de `register`.
+
+
+  Por su cuenta, esta operación no es útil, pero es útil en el contexto del proceso Tomography, ya que proporciona información sobre la preservación del seguimiento de un proceso Quantum.
+
+  En concreto, una máquina de destino con medición de pérdida debe reemplazar esta operación por una medida real de $ \boldone $.
+syntax: 'operation MeasureIdentity (register : Qubit[]) : Result'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: El registro que se va a medir.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: Valor del resultado `Zero`.
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229130"

@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.identicalformatfactfxp
+name: IdenticalFormatFactFxP
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Declara que todos los números de punto fijo de la matriz proporcionada tienen posiciones de punto y números de qubit idénticos.
+syntax: 'function IdenticalFormatFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
+input:
+  content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
+  types:
+  - name: fixedPoints
+    summary: Matriz de números de punto fijo Quantum cuya compatibilidad se comprobará (mediante aserciones).
+    isArray: true
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 533106904cc8e46f48eccfe4228d6e18554d4301
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219100"

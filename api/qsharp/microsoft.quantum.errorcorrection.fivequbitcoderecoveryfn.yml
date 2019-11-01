@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
+name: FiveQubitCodeRecoveryFn
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Devuelve la función que asigna las medidas del síndrome de error a los operadores de Pauli de corrección de errores adecuados por búsqueda de tabla para el código de Quantum ⟦ 5, 1, 3 ⟧.
+remarks: >-
+  Al recorrer en iteración todos los errores del peso $1 $, se obtiene un total de $3 \ Times 5 = 15 $ posibles síndrome no triviales.
+
+  Junto con la identidad, se crea una tabla de error y el síndrome correspondiente. Para el código de 5 qubit que proporciona esta tabla: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ con $Y _ _ i $ obtenido agregando los $X _ i y $Z _ _ $ síndromes. Tenga en cuenta que la ordenación en la recuperación de la búsqueda de tabla se proporciona mediante la conversión de bitvectors en enteros (mediante little endian).
+syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+  types:
+  - summary: Función de tipo `RecoveryFn` que toma un `Result[]` de medida de síndrome y devuelve los operadores de `Pauli[]` que corrigen el error detectado.
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+seeAlso:
+- recoveryfn
+ms.openlocfilehash: efeabbeb6595d1440882eef73f152610a3ac74c5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211637"

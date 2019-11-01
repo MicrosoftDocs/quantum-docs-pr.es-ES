@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.measure
+name: Measure
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Realiza una medida conjunta de una o varias qubits en las bases de Pauli especificadas.
+
+
+  El resultado de la salida lo proporciona la distribución: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} donde $P _ _ $ es el $i $ TH de @no__ t_0_, donde $N = \texttt{Length} (\texttt{bases}) $.
+
+  Es decir, la medida devuelve un `Result` $d $ de modo que el eigenvalue del efecto de medición observado sea $ (-1) ^ d $.
+remarks: Si la matriz base y la matriz qubit tienen longitudes diferentes, se producirá un error en la operación.
+syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[])'
+  types:
+  - name: bases
+    summary: Matriz de valores de Pauli de qubit único que indican los factores del producto tensores en cada qubit.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Registro de qubits que se va a medir.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: '`Zero` si se observa el eigenvalue $ + $1 y `One` si se observa el eigenvalue de $ $1.'
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234111"

@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.realmod
+name: RealMod
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Calcula el módulo entre dos números reales.
+remarks: >-
+  Esta función calcula el módulo real encapsulando la línea real sobre el círculo de unidad y, a continuación, busca el ángulo en el círculo de unidad correspondiente a la entrada.
+
+  A continuación, el `minValue` entrada especifica de forma eficaz dónde se debe cortar el círculo de unidad.
+examples: >-
+  ```qsharp
+      // Returns 3 π / 2.
+      let y = RealMod(5.5 * PI(), 2.0 * PI(), 0.0);
+      // Returns -1.2, since +3.6 and -1.2 are 4.8 apart on the real line,
+      // which is a multiple of 2.4.
+      let z = RealMod(3.6, 2.4, -1.2);
+  ```
+syntax: 'function RealMod (value : Double, modulo : Double, minValue : Double) : Double'
+input:
+  content: '(value : Double, modulo : Double, minValue : Double)'
+  types:
+  - name: value
+    summary: Un número real $x $ para tomar el módulo de.
+    isPrimitive: true
+    uid: Double
+  - name: modulo
+    summary: Un número real para tomar el módulo de $x $ con respecto a.
+    isPrimitive: true
+    uid: Double
+  - name: minValue
+    summary: Valor menor que va a ser devuelto por esta función.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9430ce172fec2bf10d64aa111d5a788c574a9566
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232377"
