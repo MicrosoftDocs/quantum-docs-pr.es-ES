@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.intasboolarray
+name: IntAsBoolArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Genera una representación binaria de un entero positivo, utilizando la representación Little-Endian de la matriz devuelta.
+remarks: La `number` de entrada debe ser como máximo $2 ^ {\texttt{bits}}-$1.
+syntax: 'function IntAsBoolArray (number : Int, bits : Int) : Bool[]'
+input:
+  content: '(number : Int, bits : Int)'
+  types:
+  - name: number
+    summary: Entero positivo que se va a convertir en una matriz de valores booleanos.
+    isPrimitive: true
+    uid: Int
+  - name: bits
+    summary: Número de bits en la representación binaria de `number`.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool[]
+  types:
+  - summary: Matriz de valores booleanos que representan `number`.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 5f9dcb138c24390f5abfec3e0b9b12263b6119d6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220375"

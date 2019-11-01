@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.encodeintosteanecode
+name: EncodeIntoSteaneCode
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Una operación de codificación que asigna un registro de Quantum sin codificar a un registro de Quantum codificado en el Código ⟦ 7, 1, 3 ⟧ Steane Quantum.
+syntax: 'operation EncodeIntoSteaneCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: Un registro qubit que contiene el estado de Quantum sin codificar
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: auxQubits
+    summary: Un registro qubit que es inicialmente cero y que se agrega al sistema Quantum para que se pueda realizar una operación de codificación.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+  types:
+  - summary: Un registro de Quantum que contiene el estado después de haber aplicado el codificador Steane
+    uid: microsoft.quantum.errorcorrection.logicalregister
+seeAlso:
+- logicalregister
+- steanecodedecoder
+ms.openlocfilehash: d31387f0a8540874b220889778edb392bab84131
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211654"

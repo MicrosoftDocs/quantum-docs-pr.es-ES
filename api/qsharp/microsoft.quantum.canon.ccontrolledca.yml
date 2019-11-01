@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.ccontrolledca
+name: CControlledCA
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Dada una operación OP, devuelve una nueva operación que aplica el operador OP si un bit de control clásico es true. Si `false`, no sucede nada.
+
+  El modificador `CA` indica que la operación es controlable y adjointable.
+syntax: "function CControlledCA (op : ('T => Unit is Ctl + Adj)) : ((Bool, 'T) => Unit is Ctl + Adj)"
+input:
+  content: "(OP: (' t = > unidad es CTL + ADJ))"
+  types:
+  - name: operador
+    summary: Operación que se va a aplicar condicionalmente.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+output:
+  content: ((Bool, ' t) = la unidad > es CTL + ADJ)
+  types:
+  - summary: Nueva operación que es operativa si el bit de control clásico es true.
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Bool
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+typeParameters:
+- uid: "'T"
+  summary: Tipo de entrada de la operación que se va a aplicar condicionalmente.
+seeAlso:
+- microsoft.quantum.canon.ccontrolled
+ms.openlocfilehash: 918146c6f167050490d3a9047cf75dc66236b004
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73068077"

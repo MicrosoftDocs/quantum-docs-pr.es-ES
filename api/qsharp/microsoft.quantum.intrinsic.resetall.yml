@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.resetall
+name: ResetAll
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: Dada una matriz de qubits, mida y asegúrese de que se encuentran en el estado | 0 ⟩ de modo que se puedan liberar de forma segura.
+syntax: 'operation ResetAll (qubits : Qubit[]) : Unit'
+input:
+  content: '(qubits : Qubit[])'
+  types:
+  - name: qubits
+    summary: Una matriz de qubits cuyos Estados se van a restablecer a $ \ket{0}$.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 99d3c4d8e8c109e9dc02447fc57fe13714ac1128
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216516"

@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.prepareidentity
+name: PrepareIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Dado un registro, prepara ese registro en el estado de máxima mezcla.
+
+
+  El registro se prepara en el estado $ \boldone/2 ^ N $ aplicando el canal de depolaridad completo a cada qubit, donde $N $ es la longitud del registro.
+syntax: 'operation PrepareIdentity (register : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[])'
+  types:
+  - name: register
+    summary: Registro cuyo estado se va a despolar de la manera descrita anteriormente.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.preparesinglequbitidentity
+ms.openlocfilehash: 3242bb0249f26e78ac33f0d16eb7b7c9dcd86ee8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226614"

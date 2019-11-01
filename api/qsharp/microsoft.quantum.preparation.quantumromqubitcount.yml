@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.quantumromqubitcount
+name: QuantumROMQubitCount
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: Devuelve el número total de qubits que deben asignarse a la operación devuelta por `QuantumROM`.
+syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
+input:
+  content: '(targetError : Double, nCoeffs : Int)'
+  types:
+  - name: targetError
+    summary: El error de destino $ \epsilon $.
+    isPrimitive: true
+    uid: Double
+  - name: nCoeffs
+    summary: Número de coeficientes especificados en `QuantumROM`.
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Int, (Int, Int))
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>Primer parámetro
+
+
+      Una tupla `(x,(y,z))` donde `x = y + z` es el número total de qubits asignados, `y` es el número de qubits para el registro de `LittleEndian` y `z` es el número de qubits de elementos no utilizados.
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Int
+      - isPrimitive: true
+        uid: Int
+ms.openlocfilehash: fdc1d18f088cd5d07558a6fac28b92af6c9884d3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226393"

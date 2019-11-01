@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.expfrac
+name: ExpFrac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Aplica el valor exponencial de un operador Pauli de varios qubit con un argumento proporcionado por una fracción Dyadic.
+
+
+  \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align} donde $P _ i es el $i $ TH de `paulis`y donde $N = $`Length(paulis)`.
+syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
+input:
+  content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
+  types:
+  - name: paulis
+    summary: Matriz de valores de Pauli de qubit único que indican los factores del producto tensores en cada qubit.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    summary: Numerador ($k $) en la representación de la fracción de Dyadic del ángulo por el que se va a girar el registro qubit.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Potencia de dos ($n $) que especifica el denominador del ángulo por el que se va a girar el registro qubit.
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Regístrese para aplicar el giro determinado a.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: d02f48d695db3dd2d7012df5bbf22718ffe41b74
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73223775"

@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.robustphaseestimation
+name: RobustPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Realiza el robusto algoritmo de estimación de fase de Quantum no iterativo para una determinada `U` de Oracle y eigenstate, y proporciona una única estimación de valor real de la fase con ajuste de varianza en el límite de Heisenberg.
+remarks: En el límite de un gran número de consultas, los límites inferiores de Cramer-Rao para la desviación estándar de la estimación de $ \phi $ satisfacen $ \sigma \ge 2 \pi/\text{n.º de consultas} $.
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
+references: '- Calibración sólida de un conjunto de puertas uniQubit universal a través de una sólida estimación de fase de Shelby Kimmel, Guang Hao Low, Theodore J. Yoder https://arxiv.org/abs/1502.02677'
+input:
+  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
+  types:
+  - name: bitsPrecision
+    summary: Esto proporciona una estimación de $ \phi $ con la desviación estándar $ \sigma \le 2 \ pi/2 ^ \text{bitsPrecision} $ mediante un número de consultas que escalan como $ \sigma \le 10,7 \pi/\text{# de consultas} $.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: Una operación que implementa $U ^ m $ para los enteros especificados $m $.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: Un registro de Quantum en el que $U $ actúa. Si almacena un eigenstate $ \ket{\phi} $ de $U $, $U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ para $ \phi\in (-\pi, \pi] $ una fase desconocida.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229062"

@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
+name: ObliviousOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: Combina los `DeterministicStateOracle` de Oracle y `ObliviousOracle`.
+syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
+input:
+  content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
+  types:
+  - name: ancillaOracle
+    summary: Una preparación de estado Oracle $A $ de tipo `DeterministicStateOracle` que actúa en el registro $a $.
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+  - name: signalOracle
+    summary: Oracle $U $ de tipo `ObliviousOracle` que actúa conjuntamente en el registro $a, s $.
+    uid: microsoft.quantum.oracles.obliviousoracle
+output:
+  content: Microsoft.Quantum.Oracles.ObliviousOracle
+  types:
+  - summary: Un $O de Oracle = UA $ de tipo `ObliviousOracle`.
+    uid: microsoft.quantum.oracles.obliviousoracle
+seeAlso:
+- microsoft.quantum.canon.deterministicstateoracle
+- microsoft.quantum.canon.obliviousoracle
+ms.openlocfilehash: 2fc80a583ef8990b0a9043e4847d926f37b48b77
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231017"

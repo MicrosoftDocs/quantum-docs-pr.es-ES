@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequency
+name: EstimateFrequency
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Dada una preparación y medida, calcula la frecuencia con la que la medida se realiza correctamente (devuelve `Zero`) mediante la realización de un número determinado de pruebas.
+syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: Operación $P $ que prepara un estado determinado $ \rho $ en su registro de entrada.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: measurement
+    summary: Operación $M $ que representa la medida de interés.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: El número de qubits en el que actúa la preparación y medición de cada uno.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: El número de veces que se debe realizar la medida para calcular la frecuencia de interés.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: >-
+      Una estimación de $ \hat{p} $ de la frecuencia con la que $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ devuelve `Zero`, obtenida mediante el estimador binomial no sesgado $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, donde $n\_{\ flecha arriba} $ es el número de `Zero` resultados observados.
+
+
+      Esto es especialmente importante en las máquinas de destino que respetan las limitaciones físicas, de modo que no se pueden medir las probabilidades.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 1c27d38983f9fa9c1a1dc5c80548e307b7c36ffe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229198"

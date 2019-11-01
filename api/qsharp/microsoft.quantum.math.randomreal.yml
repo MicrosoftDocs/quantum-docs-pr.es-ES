@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.randomreal
+name: RandomReal
+type: operation
+namespace: Microsoft.Quantum.Math
+summary: Devuelve un número real aleatorio en el intervalo mayor o igual que cero y menor que uno.
+remarks: Esta función llama a <xref:microsoft.quantum.intrinsic.random>, por lo que su aleatoriedad depende de la implementación de `Random`.
+syntax: 'operation RandomReal (bitsRandom : Int) : Double'
+input:
+  content: '(bitsRandom : Int)'
+  types:
+  - name: bitsRandom
+    summary: >-
+      El número de bits de precisión con el que se debe muestrear el número aleatorio.
+
+          # Output
+
+      Un número real $x = k/2 ^ {\texttt{bitsRandom}} $ para un entero $k $ sampled del intervalo $ [0, 2 ^ {\texttt{bitsRandom}}) $ con probabilidad $ \Pr (k) = 1/2 ^ {\texttt{bitsRandom}} $.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: c0780e0b8771c74a04145d5dce70d47dfefafa0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219967"

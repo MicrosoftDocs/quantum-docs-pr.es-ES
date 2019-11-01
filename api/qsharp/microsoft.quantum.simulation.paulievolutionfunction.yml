@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.paulievolutionfunction
+name: PauliEvolutionFunction
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de Pauli.
+syntax: 'function PauliEvolutionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.EvolutionUnitary'
+input:
+  content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
+  types:
+  - name: generatorIndex
+    summary: Índice de generador que se va a representar como una evolución de la Pauli.
+    uid: microsoft.quantum.simulation.generatorindex
+output:
+  content: Microsoft.Quantum.Simulation.EvolutionUnitary
+  types:
+  - summary: "`EvolutionUnitary` que representa la evolución del tiempo por el término al que se hace referencia en ' generatorIndex."
+    uid: microsoft.quantum.simulation.evolutionunitary
+ms.openlocfilehash: 87434cc1cd78747e68c9ada990ef8173734641e8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216193"

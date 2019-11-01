@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparesinglequbitidentity
+name: PrepareSingleQubitIdentity
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Prepara un qubit en el estado de máxima mezcla.
+
+
+  Prepara el qubit dado en el estado $ \boldone/$2 mediante la aplicación del canal de despolar $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu \en \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ Cruz}, \end{align} $ $ Where $ \sigma\_i $ es el $i operador $ TH Pauli y donde $ \rho $ es un operador de densidad que representa un estado mixto.
+remarks: >-
+  El estado mixto $ \boldone/$2 que describe el resultado de aplicar esta operación a un estado describe implícitamente un valor de expectativa sobre las elecciones aleatorias realizadas en esta operación.
+
+  Por lo tanto, para una sola aplicación, esta operación asigna Estados puros a Estados puros, pero actúa como se describe en expectativa.
+
+  En concreto, esta operación se puede usar en el proceso Tomography para medir los componentes *no unitarios* de un canal.
+syntax: 'operation PrepareSingleQubitIdentity (qubit : Qubit) : Unit'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: Un qubit cuyo estado se va a despolar de la manera descrita anteriormente.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 944178e3a8473b2206de037031bd8def546425b8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226529"

@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.squaresi
+name: SquareSI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Entero con signo cuadrado `xs` y almacenar el resultado en `result`, que debe ser cero inicialmente.
+remarks: La implementación se basa en IntegerSquare.
+syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  types:
+  - name: xs
+    summary: entero de n bits a Square (SignedLittleEndian)
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+  - name: result
+    summary: el resultado de bit 2N (SignedLittleEndian) debe estar en el estado $ \ket{0}$ inicialmente.
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 71a3ffc190540ccfb51eb81febdce6a943dc99fb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218420"

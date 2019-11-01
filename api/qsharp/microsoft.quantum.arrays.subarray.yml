@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.subarray
+name: Subarray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Toma una matriz y una lista de ubicaciones y genera una nueva matriz formada a partir de los elementos de la matriz original que coinciden con las ubicaciones especificadas.
+remarks: >-
+  La función se define para tipos genéricos, es decir, cada vez que tenemos una matriz `'T[]` y una lista de ubicaciones `Int[]` definir la submatriz.
+
+  La construcción de la submatriz es un basado en la generación de una nueva copia en profundidad de la matriz determinada en lugar de mantener referencias.
+
+
+  Si `Length(indices) < Length(array)`, esta función devolverá un subconjunto de `array`. Por otro lado, si `indices` contiene elementos repetidos, también se repetirán los elementos correspondientes de `array`.
+
+  Si `indices` y `array` tienen la misma longitud, esta función proporciona permutaciones de `array`.
+syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(indices : Int[], array : 'T[])"
+  types:
+  - name: indices
+    summary: Una lista de enteros que se utiliza para definir la submatriz.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: Matriz de elementos en `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Matriz `out` de elementos cuyos índices corresponden a la submatriz, de modo que `out[idx] == array[indices[idx]]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Tipo de elementos `array`.
+ms.openlocfilehash: 1590e5c24dad56db8c6a0f5dc433bf060d8ac175
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217859"

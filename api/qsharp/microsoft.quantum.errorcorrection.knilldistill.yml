@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.knilldistill
+name: KnillDistill
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: >-
+  Implementa el algoritmo de destilación de estado mágico de Knill.
+
+
+  Dadas 15 copias aproximadas de un estado mágico $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ produce una copia de mayor calidad.
+remarks: >-
+  Seguimos el algoritmo de Knill.
+
+  Sin embargo, la implementación actual está lejos de ser óptima, ya que utiliza demasiados qubits.
+
+  Los Estados mágicos se insertan en esta rutina, en cuyo caso hay mejores protocolos.
+syntax: 'operation KnillDistill (roughMagic : Qubit[]) : Bool'
+references: '- [Knill](https://arxiv.org/abs/quant-ph/0402171)'
+input:
+  content: '(roughMagic : Qubit[])'
+  types:
+  - name: roughMagic
+    summary: Un registro de quince qubits que contiene copias aproximadas de un estado mágico. La siguiente aplicación de este procedimiento de destilación, `roughMagic[0]` contendrá una copia de mayor calidad y el resto del registro se restablecerá al estado $ \ket{00\cdots 0} $.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Bool
+  types:
+  - summary: Si `true`, el procedimiento se realizó correctamente y se debe aceptar la copia de mayor calidad. Si `false`, se produjo un error en el procedimiento, y el estado del registro se debe considerar sin definir.
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226733"

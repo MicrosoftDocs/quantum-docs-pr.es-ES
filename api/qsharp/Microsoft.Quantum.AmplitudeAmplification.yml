@@ -1,0 +1,43 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.amplitudeamplification
+name: Microsoft. Quantum. AmplitudeAmplification
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones y operaciones para realizar amplificación de amplitud.\n\n # <a name=\"description\"></a>description\n La amplificación de amplitud desconocen con reflejos parciales es la forma más general de amplificación de amplitud implementada aquí.\n\n Esto se llama a través de la operación AmpAmpObliviousByReflectionPhases.\n\n Esto tiene dos registros: `ancillaRegister` y `systemRegister`.\n\n Esto acepta dos Oracle para estas reflexiones de tipo `ReflectionOracle` que solo actúan en el registro de `ancillaRegister`.\n\n Esto acepta una amplificación de amplitud de Oracle especial a desconocen de tipo `ObliviousOracle` que actúa conjuntamente en ambos registros.\n\n Se supone que el estado de entrada a `ancillaRegister` es el eigenstate $-$1 único del primer operador de reflexión $I-2 \\ les {s} \\ Bra {s} $.\n\n Las reflexiones sobre un estado de cuanto de destino se suelen implementar suponiendo el acceso a un Oracle que preparan ese estado de la base de cálculo $ \\ket{0\\cdots 0} $.\n\n Nuestra Convención para estos Oracle requiere dos registros: un único qubit `flagQubit` registro y un registro para todo lo demás en el registro ancillaRegister.\n\n Oracle de tipo `StateOracle` actúa conjuntamente en ambos registros para crear el estado de destino marcado por $ \\ket{1}$ en el `flagQubit` registro con una amplitud real.\n\n La operación `TargetStateReflectionOracle`genera el `ReflectionOracle` de reflexión sobre el estado de esta marca.\n\n La reflexión `ReflectionOracle` sobre el estado de entrada a `ancillaRegister` se genera mediante el StateOracle de inversión y, a continuación, se refleja aproximadamente $ \\ket{0\\cdots 0} $ con ReflectionStart ().\n\n Oracle de tipo `DeterministicStateOracle` actúa en el `qubitState` registra para crear el estado de destino exactamente sin ninguna marca.\n\n `AmpAmpObliviousByOraclePhases` es una versión de amplificación de amplitud de desconocen que acepta Oracle `StateOracle` y `ObliviousOracle` en lugar de reflexiones.\n\n Tenga en cuenta que la amplificación de amplitud es un caso especial de amplificación de amplitud desconocen donde `ObliviousOracle` es el operador de identidad y no hay ningún qubits del sistema, es decir, `systemRegister` está vacío.\n\n Esto se llama a través de la operación `AmpAmByReflectionPhases` y `AmpAmpByOraclePhases`.\n\n La función AmpAmpPhasesStandard proporciona las fases para las reflexiones parciales en el caso estándar de búsqueda de Grover.\n\n Por ejemplo, tenemos las siguientes dependencias: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
+functions:
+- uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
+  summary: Algoritmo de amplificación de amplitud estándar
+- uid: microsoft.quantum.amplitudeamplification.ampampbyoraclephases
+  summary: Amplificación de amplitud de Oracle para reflexiones parciales.
+- uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
+  summary: Amplificación de amplitud por reflejos parciales.
+- uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyoraclephases
+  summary: Amplificación de amplitud desconocen de Oracle para reflexiones parciales.
+- uid: microsoft.quantum.amplitudeamplification.ampampobliviousbyreflectionphases
+  summary: Devuelve una unitario que implementa la amplificación de amplitud de desconocen especificando para reflexiones parciales.
+- uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+  summary: Calcula las fases de reflexión parcial para la amplificación de amplitud de punto fijo.
+- uid: microsoft.quantum.amplitudeamplification.ampampphasesstandard
+  summary: Calcula las fases de reflexión parcial para la amplificación de amplitud estándar.
+- uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
+  summary: Convierte las fases especificadas como rotaciones de un solo qubit en fases especificadas como reflejos parciales.
+- uid: microsoft.quantum.amplitudeamplification.reflectionstart
+  summary: Construye una reflexión sobre la cadena All-cero | 0... 0 〉, que es el estado de entrada típico para amplificación de amplitud.
+- uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
+  summary: >-
+    Construye un `ReflectionOracle` sobre el estado de destino marcado de forma exclusiva por la marca qubit.
+
+
+    El estado de destino tiene un único qubit establecido en 1 y todos los demás 0: $ \ket{1}_f $.
+operations:
+- uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
+  summary: Algoritmo de amplificación de amplitud de punto fijo
+newtypes:
+- uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  summary: Fases para una secuencia de reflejos parciales en amplificación de amplitud.
+- uid: microsoft.quantum.amplitudeamplification.rotationphases
+  summary: Fases para una secuencia de rotaciones de un solo qubit en amplificación de amplitud.
+ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057126"

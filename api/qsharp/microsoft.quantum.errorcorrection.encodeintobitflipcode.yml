@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.encodeintobitflipcode
+name: EncodeIntoBitFlipCode
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Codifica en el código de volteo de bits [3, 1, 3]/⟦ 3, 1, 1 ⟧.
+syntax: 'operation EncodeIntoBitFlipCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
+input:
+  content: '(physRegister : Qubit[], auxQubits : Qubit[])'
+  types:
+  - name: physRegister
+    summary: Registro del qubits físico que representa los datos que se van a proteger.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: auxQubits
+    summary: Un registro de qubits auxiliar inicialmente en el estado $ \ket{00}$ que se va a usar para codificar los datos que se van a proteger.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+  types:
+  - summary: La qubits física y auxiliar utilizada en la codificación, representada como un registro lógico.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+seeAlso:
+- logicalregister
+ms.openlocfilehash: 3890f4eebb70ea38fd23ffbe2b7b7eadf9e41d7b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234587"

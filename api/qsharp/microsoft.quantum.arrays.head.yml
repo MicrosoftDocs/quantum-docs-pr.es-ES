@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.head
+name: Head
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Devuelve el primer elemento de la matriz.
+syntax: "function Head (array : 'A[]) : 'A"
+input:
+  content: "(array : 'A[])"
+  types:
+  - name: array
+    summary: Matriz de la que se toma el primer elemento. La matriz debe tener una longitud de al menos 1.
+    isArray: true
+    uid: "'A"
+    isLocal: true
+output:
+  content: "'A"
+  types:
+  - summary: Primer elemento de la matriz.
+    uid: "'A"
+    isLocal: true
+typeParameters:
+- uid: "'A"
+  summary: Tipo de los elementos de la matriz.
+ms.openlocfilehash: 62909924e6c2d303fd52528f9910341b2224e31f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214272"

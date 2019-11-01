@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.filtered
+name: Filtered
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Dada una matriz y un predicado definidos para los elementos de la matriz, devuelve una matriz que consta de los elementos que cumplen el predicado.
+remarks: La función se define para tipos genéricos, es decir, cada vez que tenemos una matriz `'T[]` y un predicado `'T -> Bool` se pueden filtrar elementos.
+syntax: "function Filtered (predicate : ('T -> Bool), array : 'T[]) : 'T[]"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: Función de `'T` a un valor booleano que se usa para filtrar elementos.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: Matriz de elementos en `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Matriz `'T[]` de elementos que satisfacen el predicado.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Tipo de elementos `array`.
+ms.openlocfilehash: f2749f204c6276a0a43ac67bdee9c4cda0de049e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218369"

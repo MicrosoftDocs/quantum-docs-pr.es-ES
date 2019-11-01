@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  Calcula la energía asociada a un término de Hamiltonian de Jordania-Wigner determinado.
+
+
+  Esta operación calcula el valor de expectativa asociado a cada operador de medida y lo multiplica por el coeficiente correspondiente, mediante el muestreo.
+
+  Los resultados se agregan a una variable que contiene la energía del término Jordania-Wigner.
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: La unitario usada para la preparación del estado.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: Los operadores de medida del término Jordania-Wigner.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: Los coeficientes del término Jordania-Wigner.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: El número de qubits necesario para simular el sistema molecular.
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: Número de muestras que se van a usar para la estimación de la expectativa de términos.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: La energía asociada al término Jordania-Wigner.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228450"

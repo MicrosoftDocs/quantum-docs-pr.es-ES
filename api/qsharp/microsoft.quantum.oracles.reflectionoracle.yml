@@ -1,0 +1,23 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.reflectionoracle
+name: ReflectionOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Representa una reflexión de Oracle.
+
+
+  Una reflexión de Oracle, $O $, tiene entradas:
+
+
+  - Fase $ \phi $ por la que se va a girar el subespacio reflejado.
+
+  - Registro qubit en el que se va a realizar la reflexión determinada.
+remarks: Esta $O de Oracle = \boldone-(1-e ^ {i \phi}) \ket{\psi}\bra{\psi} $ realiza una reflexión parcial en una fase $ \phi $ sobre un único estado puro $ \ket{\psi} $.
+syntax: newtype ReflectionOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230864"

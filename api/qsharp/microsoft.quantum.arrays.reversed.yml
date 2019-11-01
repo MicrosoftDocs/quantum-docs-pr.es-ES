@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.reversed
+name: Reversed
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Cree una matriz que contenga los mismos elementos que una matriz de entrada, pero en orden inverso.
+syntax: "function Reversed (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Una matriz cuyos elementos se van a copiar en orden inverso.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Una matriz que contiene los elementos `array[Length(array) - 1]`.. `array[0]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: Tipo de los elementos de la matriz.
+ms.openlocfilehash: 946d1f06619a4533a2c32cf58266815d7a510434
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218029"

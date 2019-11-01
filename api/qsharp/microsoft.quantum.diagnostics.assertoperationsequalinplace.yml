@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+name: AssertOperationsEqualInPlace
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: >-
+  Dadas dos operaciones, garantiza que actúan de forma idéntica para todos los Estados de entrada.
+
+
+  Esta aserción se implementa mediante la comprobación de la acción de las operaciones en todos los Estados de la forma $V _0 \otimes... \otimes v_ {n-1} $, donde $V _k $ es uno de los Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ y $ \ket{i} $ (+ 1 eigenstate del operador Pauli Y).
+
+
+  Esta aserción usa $n $ qubits y requiere varias llamadas de las operaciones que se van a comparar.
+syntax: 'operation AssertOperationsEqualInPlace (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
+references: La base de los Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ y $ \ket{i} $ es la base Chuang-Nielsen, que se describe en [ *i. L. Chuang, M. A. Nielsen* ](https://arxiv.org/abs/quant-ph/9610001).
+input:
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
+  types:
+  - name: nQubits
+    summary: El número de qubits $n $ en el que las operaciones `givenU` y `expectedU` operan.
+    isPrimitive: true
+    uid: Int
+  - name: givenU
+    summary: Operación en $n $ qubits que se va a comprobar.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: expectedU
+    summary: Operación de referencia en $n $ qubits con la que se va a comparar `givenU`.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- assertoperationsequalreferenced
+ms.openlocfilehash: a6c58f51bbc30f3917457d4137afb083533519fe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225764"

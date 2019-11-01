@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.zip3
+name: Zip3
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Dadas tres matrices, devuelve una nueva matriz de 3 tuplas, de modo que cada una de estas tres tuplas contiene un elemento de cada matriz original.
+syntax: "function Zip3 (first : 'T1[], second : 'T2[], third : 'T3[]) : ('T1, 'T2, 'T3)[]"
+input:
+  content: "(first : 'T1[], second : 'T2[], third : 'T3[])"
+  types:
+  - name: first
+    summary: Una matriz que contiene valores para el primer elemento de cada tupla.
+    isArray: true
+    uid: "'T1"
+    isLocal: true
+  - name: second
+    summary: Una matriz que contiene valores para el segundo elemento de cada tupla.
+    isArray: true
+    uid: "'T2"
+    isLocal: true
+  - name: third
+    summary: Una matriz que contiene valores para el tercer elemento de cada tupla.
+    isArray: true
+    uid: "'T3"
+    isLocal: true
+output:
+  content: ('T1, 'T2, 'T3)[]
+  types:
+  - summary: Una matriz que contiene tres tuplas de la forma `(first[idx], second[idx], third[idx])` para cada `idx`. Si las tres matrices no tienen la misma longitud, la salida será tan larga como las entradas más cortas.
+    isArray: true
+    types:
+    - uid: "'T1"
+      isLocal: true
+    - uid: "'T2"
+      isLocal: true
+    - uid: "'T3"
+      isLocal: true
+typeParameters:
+- uid: "'T1"
+  summary: Tipo de los primeros elementos de la matriz.
+- uid: "'T2"
+  summary: Tipo de los elementos de la segunda matriz.
+- uid: "'T3"
+  summary: Tipo de los elementos de la tercera matriz.
+seeAlso:
+- zip
+- zip4
+ms.openlocfilehash: 1a4f3a533178e089d975d5a510d202afe004d999
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214187"

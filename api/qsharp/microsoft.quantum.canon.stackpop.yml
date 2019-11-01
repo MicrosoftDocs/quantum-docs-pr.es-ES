@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpop
+name: StackPop
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Quita el elemento de nivel superior de un <xref:microsoft.quantum.canon.resultstack>.
+syntax: 'function StackPop (stack : Microsoft.Quantum.Canon.ResultStack) : Microsoft.Quantum.Canon.ResultStack'
+input:
+  content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
+  types:
+  - name: stack
+    summary: Pila que se va a extraer.
+    uid: microsoft.quantum.canon.resultstack
+output:
+  content: Microsoft.Quantum.Canon.ResultStack
+  types:
+  - summary: '`stack` con el elemento superior quitado. La nueva pila tiene la misma capacidad que la anterior, pero su longitud se reduce en uno.'
+    uid: microsoft.quantum.canon.resultstack
+ms.openlocfilehash: 371952e68e9c06fc11d9e8c309a4d388b80a9556
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219372"
