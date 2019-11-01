@@ -1,0 +1,70 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelser
+name: ApplyIfElseR
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica una de dos operaciones, dependiendo del valor de un resultado clásico.
+
+
+  Dado un `result`de resultados, aplica la operación `zeroOp` con `zeroInput` como entrada cuando `result` es igual a `Zero`y se aplica `oneOp(oneInput)` cuando `result == One`.
+syntax: "operation ApplyIfElseR (result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U)) : Unit"
+input:
+  content: "(result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U))"
+  types:
+  - name: result
+    summary: El resultado de la medida que se usa para determinar si se aplica `zeroOp` o `oneOp`.
+    isPrimitive: true
+    uid: Result
+  - name: zeroOp
+    summary: Operación que se va a aplicar cuando se `result == Zero`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: zeroInput
+    summary: Entrada que se va a proporcionar a `zeroOp` cuando se `result == Zero`.
+    uid: "'T"
+    isLocal: true
+  - name: oneOp
+    summary: Operación que se va a aplicar cuando se `result == One`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: oneInput
+    summary: Entrada que se va a proporcionar a `oneOp` cuando se `result == One`.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Tipo de entrada de la operación `zeroOp` que se va a aplicar condicionalmente.
+- uid: "'U"
+  summary: Tipo de entrada de la operación `oneOp` que se va a aplicar condicionalmente.
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: dc3c41c064297dfa3aef53362095c4d9f998538b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217434"

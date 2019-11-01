@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.allequalityfactb
+name: AllEqualityFactB
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Valida que dos matrices de valores booleanos son iguales.
+syntax: 'function AllEqualityFactB (actual : Bool[], expected : Bool[], message : String) : Unit'
+input:
+  content: '(actual : Bool[], expected : Bool[], message : String)'
+  types:
+  - name: actual
+    summary: La matriz generada por un caso de prueba de interés.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: expected
+    summary: La matriz que se espera de un caso de prueba de interés.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: message
+    summary: Un mensaje que se va a imprimir si las matrices no son iguales.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: ebda74cfe793c2c5ec8411f893aa852f9e091728
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227158"

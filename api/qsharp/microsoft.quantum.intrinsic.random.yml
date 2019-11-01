@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.random
+name: Random
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  La operación Random toma una matriz de valores double como entrada y devuelve un índice seleccionado aleatoriamente en la matriz como un `Int`.
+
+  La probabilidad de seleccionar un índice específico es proporcional al valor del elemento de la matriz en dicho índice.
+
+  Los elementos de matriz que son iguales a cero se omiten y sus índices nunca se devuelven. Si algún elemento de la matriz es menor que cero, o si ningún elemento de la matriz es mayor que cero, se produce un error en la operación.
+syntax: 'operation Random (probs : Double[]) : Int'
+input:
+  content: '(probs : Double[])'
+  types:
+  - name: probs
+    summary: Una matriz de números de punto flotante proporcional a la probabilidad de seleccionar cada índice.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - summary: Entero $i $ con probabilidad $ \Pr (i) = p_i/\sum_i p_i $, donde $p _ i $ es el $i elemento $ TH de `probs`.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: b2a5f6a0b1d2584e385bfa4de2b2c43fc1cf6509
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233941"

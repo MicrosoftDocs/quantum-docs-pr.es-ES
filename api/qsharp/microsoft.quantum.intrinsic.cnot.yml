@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.cnot
+name: CNOT
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Aplica la puerta controlada-NOT (CNOT) a un par de qubits.
+
+
+  \begin{align} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix} , \end{align}
+
+
+  donde se ordenan las filas y las columnas como en la guía de conceptos de Quantum.
+remarks: >-
+  Equivalente a:
+
+
+  ```qsharp
+
+  Controlled X([control], target);
+
+  ```
+syntax: 'operation CNOT (control : Qubit, target : Qubit) : Unit'
+input:
+  content: '(control : Qubit, target : Qubit)'
+  types:
+  - name: control
+    summary: Controle qubit para la puerta CNOT.
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Qubit de destino para la puerta CNOT.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: b0173ad04caa8f3c5830f856d5dc805c896eecff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219287"

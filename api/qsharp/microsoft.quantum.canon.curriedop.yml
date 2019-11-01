@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.curriedop
+name: CurriedOp
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Devuelve una versión currificada de una operación con dos entradas.
+
+
+  Es decir, dada una operación con dos entradas, esta función aplica isomorphism de la $f (x, y) \equiv f (x) $ para devolver una operación de una entrada que devuelve una operación de una entrada.
+remarks: >-
+  Los siguientes son equivalentes:
+
+
+  ```qsharp
+
+  op(x, y);
+
+
+  let curried = CurriedOp(op);
+
+  let partial = curried(x);
+
+  partial(y);
+
+  ```
+syntax: "function CurriedOp (op : (('T, 'U) => Unit)) : ('T -> ('U => Unit))"
+input:
+  content: "(OP: ((' t, ' U) = > unidad))"
+  types:
+  - name: operador
+    summary: Operación cuya entrada es un par.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: (T-> (' U = unidad >)
+  types:
+  - summary: Una operación que acepta el primer elemento de un par y devuelve una operación que acepta como entrada el segundo elemento de la entrada de la operación original.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isOperation: true
+        input:
+          types:
+          - uid: "'U"
+            isLocal: true
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: Tipo del primer componente de una función definida en pares.
+- uid: "'U"
+  summary: Tipo del segundo componente de una función definida en pares.
+ms.openlocfilehash: 788648d24ba536926504caba92e768ecb34e001a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067907"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequencya
+name: EstimateFrequencyA
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Dada una preparación que es adjointable y Measurement, calcula la frecuencia con la que la medida se realiza correctamente (devuelve `Zero`) mediante la realización de un número determinado de pruebas.
+remarks: En el caso de las operaciones de adjointable, se pueden realizar determinadas suposiciones, como llamar a la operación, se preparará el qubits exactamente en el mismo estado, lo que permite a los equipos de destino realizar algunas optimizaciones de rendimiento.
+syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: Una operación adjointable $P $ que prepara un estado determinado $ \rho $ en su registro de entrada.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: measurement
+    summary: Operación $M $ que representa la medida de interés.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: El número de qubits en el que actúa la preparación y medición de cada uno.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: El número de veces que se debe realizar la medida para calcular la frecuencia de interés.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: Una estimación de $ \hat{p} $ de la frecuencia con la que $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ devuelve `Zero`, obtenida mediante el estimador binomial no sesgado $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, donde $n\_{\ flecha arriba} $ es el número de `Zero` resultados observados.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229181"

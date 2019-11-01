@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.all
+name: All
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Dada una matriz y un predicado definidos para los elementos de la matriz, y comprueba si todos los elementos de la matriz satisfacen el predicado.
+remarks: "La función se define para tipos genéricos, es decir, cada vez que tenemos una matriz `'T[]` y una función `predicate: 'T -> Bool` podemos generar un valor de `Bool` que indica si todos los elementos cumplen `predicate`."
+syntax: "function All (predicate : ('T -> Bool), array : 'T[]) : Bool"
+input:
+  content: "(predicate : ('T -> Bool), array : 'T[])"
+  types:
+  - name: predicate
+    summary: Función de `'T` a `Bool` que se usa para comprobar los elementos.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array
+    summary: Matriz de elementos en `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: Un valor `Bool` de la función y del predicado que se aplica a todos los elementos.
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: Tipo de elementos `array`.
+ms.openlocfilehash: bb439ae76d0f7644625686cd89f05670051a4c9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214459"

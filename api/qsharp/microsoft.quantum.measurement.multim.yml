@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.multim
+name: MultiM
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Mide cada qubit en una matriz determinada en función del estándar.
+syntax: 'operation MultiM (targets : Qubit[]) : Result[]'
+input:
+  content: '(targets : Qubit[])'
+  types:
+  - name: targets
+    summary: Matriz de qubits que se va a medir.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result[]
+  types:
+  - summary: Matriz de resultados de la medición.
+    isArray: true
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 647957702c124f0acafa76c155a71796b0c56f25
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231153"

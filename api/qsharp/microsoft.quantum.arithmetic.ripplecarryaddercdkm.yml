@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
+name: RippleCarryAdderCDKM
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Agregación reversible, en contexto, de dos enteros.
+
+  Dados dos $n enteros de $ bits codificados en los registros de LittleEndian `xs` y `ys`, y un transporte qubit, la operación calcula la suma de los dos enteros en los que los bits $n $ menos significativos del resultado se encuentran en `ys` y el bit de transporte es XORed al `carry`qubit.
+remarks: Esta operación tiene la misma funcionalidad que RippleCarryAdderD, pero solo usa un ancilla qubit en lugar de $n $.
+syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
+references: >-
+  - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "un nuevo circuito de adición del transporte de onda de Quantum", 2004.
+    https://arxiv.org/abs/quant-ph/0410184v1
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
+  types:
+  - name: xs
+    summary: LittleEndian qubit registra la codificación del primer entero sumando.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: LittleEndian qubit registra la codificación del segundo entero sumando, se modifica para contener los n bits menos significativos de la suma.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: carry
+    summary: Transportar qubit, es XORed con el bit más significativo de la suma.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 2d973659a9457c301ba65a282e4fd4b627c93671
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218488"

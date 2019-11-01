@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.squarei
+name: SquareI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Calcula el cuadrado del `xs` entero en `result`, que debe ser cero inicialmente.
+remarks: Utiliza un enfoque estándar de desplazamiento y adición para calcular el cuadrado. Guarda $n-$1 qubits en comparación con la solución de reenvío directo que primero copia los XS antes de aplicar un multiplicador normal y, a continuación, deshacer la operación de copia.
+syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: xs
+    summary: $n un número de bits a Square (LittleEndian)
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: el resultado de $2N $-bit (LittleEndian) debe estar en el estado $ \ket{0}$ inicialmente.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: ae55cd24a5dad065c010006f01484f7e903e76f6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218437"

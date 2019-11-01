@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.sum
+name: Sum
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Implementa una puerta de suma reversible. Dado un bit que se codifica en qubit `carryIn` y dos bits sumando codificados en `summand1` y `summand2`, calcula la operación XOR bit a bit de `carryIn`, `summand1` y `summand2` en el `summand2`qubit.
+remarks: A diferencia de la operación `Carry`, esto no calcula el bit de transporte.
+syntax: 'operation Sum (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit) : Unit'
+input:
+  content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit)'
+  types:
+  - name: carryIn
+    summary: Qubit de transporte.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand1
+    summary: Primer sumando qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand2
+    summary: Second sumando qubit, se reemplaza por el bit más bajo de la suma de `summand1` y `summand2`.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 125ee44b5debf5d8c83d7fb5176c4298bd702563
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218403"

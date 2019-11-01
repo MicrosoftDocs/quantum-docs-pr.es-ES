@@ -1,0 +1,64 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.arrays
+name: Microsoft. Quantum. matrices
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones para crear y manipular matrices de datos."
+functions:
+- uid: microsoft.quantum.arrays.all
+  summary: Dada una matriz y un predicado definidos para los elementos de la matriz, y comprueba si todos los elementos de la matriz satisfacen el predicado.
+- uid: microsoft.quantum.arrays.any
+  summary: Dada una matriz y un predicado definidos para los elementos de la matriz, comprueba si al menos un elemento de la matriz satisface el predicado.
+- uid: microsoft.quantum.arrays.constantarray
+  summary: Crea una matriz de longitud determinada con todos los elementos iguales al valor especificado.
+- uid: microsoft.quantum.arrays.enumerated
+  summary: Dada una matriz, devuelve una nueva matriz que contiene elementos de la matriz original junto con los índices de cada elemento.
+- uid: microsoft.quantum.arrays.exclude
+  summary: Devuelve una matriz que contiene los elementos de otra matriz, excluidos los elementos de una lista determinada de índices.
+- uid: microsoft.quantum.arrays.filtered
+  summary: Dada una matriz y un predicado definidos para los elementos de la matriz, devuelve una matriz que consta de los elementos que cumplen el predicado.
+- uid: microsoft.quantum.arrays.fold
+  summary: Recorre en iteración una función `f` a través de una `array`de matriz y devuelve `f(f(f(initialState, array[0]), array[1]), ...)`.
+- uid: microsoft.quantum.arrays.head
+  summary: Devuelve el primer elemento de la matriz.
+- uid: microsoft.quantum.arrays.indexof
+  summary: Devuelve el primer índice del primer elemento de una matriz que satisface un predicado determinado. Si no existe ningún elemento de este tipo, devuelve-1.
+- uid: microsoft.quantum.arrays.indexrange
+  summary: Dada una matriz, devuelve un intervalo sobre los índices de esa matriz, adecuado para su uso en un bucle for.
+- uid: microsoft.quantum.arrays.lookupfunction
+  summary: Dada una matriz, devuelve una función que devuelve elementos de esa matriz.
+- uid: microsoft.quantum.arrays.mapped
+  summary: Dada una matriz y una función que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la función.
+- uid: microsoft.quantum.arrays.mappedbyindex
+  summary: Dada una matriz y una función que se define para los elementos indizados de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la función.
+- uid: microsoft.quantum.arrays.most
+  summary: Crea una matriz que es igual a una matriz de entrada, salvo que se quita el último elemento de la matriz.
+- uid: microsoft.quantum.arrays.padded
+  summary: Devuelve una matriz que se rellena con los valores especificados hasta una longitud especificada.
+- uid: microsoft.quantum.arrays.partitioned
+  summary: Divide una matriz en varias partes.
+- uid: microsoft.quantum.arrays.rest
+  summary: Crea una matriz que es igual a una matriz de entrada, salvo que se quita el primer elemento de la matriz.
+- uid: microsoft.quantum.arrays.reversed
+  summary: Cree una matriz que contenga los mismos elementos que una matriz de entrada, pero en orden inverso.
+- uid: microsoft.quantum.arrays.sequencei
+  summary: Obtiene una matriz de enteros en un intervalo determinado.
+- uid: microsoft.quantum.arrays.sequencel
+  summary: Obtiene una matriz de enteros en un intervalo determinado.
+- uid: microsoft.quantum.arrays.subarray
+  summary: Toma una matriz y una lista de ubicaciones y genera una nueva matriz formada a partir de los elementos de la matriz original que coinciden con las ubicaciones especificadas.
+- uid: microsoft.quantum.arrays.tail
+  summary: Devuelve el último elemento de la matriz.
+- uid: microsoft.quantum.arrays.zip
+  summary: Dadas dos matrices, devuelve una nueva matriz de pares de modo que cada par contiene un elemento de cada matriz original.
+- uid: microsoft.quantum.arrays.zip3
+  summary: Dadas tres matrices, devuelve una nueva matriz de 3 tuplas, de modo que cada una de estas tres tuplas contiene un elemento de cada matriz original.
+- uid: microsoft.quantum.arrays.zip4
+  summary: Dadas cuatro matrices, devuelve una nueva matriz de 4 tuplas, de modo que cada tupla de 4 contiene un elemento de cada matriz original.
+operations:
+- uid: microsoft.quantum.arrays.foreach
+  summary: Dada una matriz y una operación que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la operación.
+ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057246"

@@ -1,0 +1,21 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.bitflipcode
+name: BitFlipCode
+type: function
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Devuelve un valor de QECC que representa el codificador y descodificador de código de volteo de ⟦ 3, 1, 1 ⟧ bits con medición de síndrome en contexto.
+syntax: 'function BitFlipCode () : Microsoft.Quantum.ErrorCorrection.QECC'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.ErrorCorrection.QECC
+  types:
+  - summary: Devuelve una implementación de un código de corrección de errores de Quantum especificando un tipo de `QECC`.
+    uid: microsoft.quantum.errorcorrection.qecc
+ms.openlocfilehash: bd9fdd54cf79610fa83ed99f4c94c89b7218c2c6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230422"

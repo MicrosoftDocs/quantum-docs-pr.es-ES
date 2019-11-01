@@ -1,0 +1,21 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.core
+name: Microsoft. Quantum. Core
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres incluye funciones y operaciones de Q # Core.\n\n # <a name=\"remarks\"></a>Comentarios\n El compilador de Q # abre automáticamente este espacio de nombres, por lo que todos los elementos de este espacio de nombres siempre están disponibles."
+functions:
+- uid: microsoft.quantum.core.length
+  summary: Devuelve el número de elementos de una matriz.
+- uid: microsoft.quantum.core.rangeend
+  summary: Devuelve el valor final definido del intervalo especificado, que no es necesariamente el último elemento de la secuencia.
+- uid: microsoft.quantum.core.rangereverse
+  summary: Devuelve un nuevo intervalo que es el inverso del intervalo de entrada.
+- uid: microsoft.quantum.core.rangestart
+  summary: Devuelve el valor inicial definido del intervalo especificado.
+- uid: microsoft.quantum.core.rangestep
+  summary: Devuelve el entero que especifica cómo se calcula el siguiente valor de un intervalo.
+ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056890"

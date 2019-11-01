@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
+name: IdenticalPointPosFactFxP
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Declara que todos los números de punto fijo de la matriz proporcionada tienen posiciones de punto idénticas al contar desde el bit menos significativo. Es decir, el número de bits menos la posición de punto debe ser constante para todos los números de punto fijo de la matriz.
+syntax: 'function IdenticalPointPosFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
+input:
+  content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
+  types:
+  - name: fixedPoints
+    summary: Matriz de números de punto fijo Quantum cuya compatibilidad se comprobará (mediante aserciones).
+    isArray: true
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 2cd4bcb86490cf468215c507d32d8dc015af2a5b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220987"

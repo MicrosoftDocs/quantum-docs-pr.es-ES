@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.maj
+name: MAJ
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Esto aplica la operación de mayoría local a 3 qubits.
+
+
+  Si denotamos el estado de la qubit de destino como $ \ket{z} $ y los Estados de entrada de la qubits de entrada como $ \ket{x} $ y $ \ket{y} $, esta operación realiza la siguiente transformación: $ \ket{XYZ} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} ( x, y, z)} $.
+syntax: 'operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit'
+input:
+  content: '(input0 : Qubit, input1 : Qubit, target : Qubit)'
+  types:
+  - name: input0
+    summary: La primera entrada qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: input1
+    summary: La segunda entrada qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Un qubit en el que se aplicará la función mayoritario.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 253b6f6ee152f2aa5326a06fab120433b75a5f0b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218811"

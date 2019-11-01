@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.zbits
+name: ZBits
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: Devuelve un entero que representa los bits Z de una matriz de operadores Pauli.
+remarks: La función producirá una excepción si la longitud de `paulis` matriz es mayor que 63.
+syntax: 'function ZBits (paulis : Pauli[]) : Int'
+input:
+  content: '(paulis : Pauli[])'
+  types:
+  - name: paulis
+    summary: Matriz de operadores Pauli que se va a representar como un entero.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Int
+  types:
+  - summary: Entero $x $ con la representación binaria $ (P_{62}\,P_{61}\,\dots\,p_0) $, donde $p _ i = $0 si `paulis[i]` es `PauliI` o `PauliX` y donde $p _ i = $1 si `paulis[i]` es `PauliY` o `PauliZ`.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- xbits
+ms.openlocfilehash: 21d3da075cb4b98e5604f72b8432536bb9d51753
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217706"

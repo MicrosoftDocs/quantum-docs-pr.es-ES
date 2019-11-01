@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.carry
+name: Carry
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Implementa una puerta de transporte reversible. Dado un bit de transporte codificado en la `carryIn` de qubit y dos bits de sumando codificados en `summand1` y `summand2`, calcula la operación XOR bit a bit de `carryIn`, `summand1` y `summand2` en el `summand2` de qubit y el proceso de entrega se XORed al `carryOut`qubit.
+syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
+input:
+  content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
+  types:
+  - name: carryIn
+    summary: Qubit de transporte.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand1
+    summary: Primer sumando qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: summand2
+    summary: Second sumando qubit, se reemplaza por el bit más bajo de la suma de `summand1` y `summand2`.
+    isPrimitive: true
+    uid: Qubit
+  - name: carryOut
+    summary: El qubit se XORed con el bit más alto de la suma.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221344"

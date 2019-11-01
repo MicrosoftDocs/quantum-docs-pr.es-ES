@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.max
+name: Máx.
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Dada una matriz de enteros, devuelve el elemento más grande.
+syntax: 'function Max (values : Int[]) : Int'
+input:
+  content: '(valores: int [])'
+  types:
+  - name: valores
+    summary: Matriz de la que se va a tomar el valor máximo.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Elemento más grande de `values`.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 2e5a33b9b476e0428d5afc80957bb2524cc3dd6a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066513"

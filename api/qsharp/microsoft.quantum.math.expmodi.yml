@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.expmodi
+name: ExpModI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Devuelve un entero elevado a una potencia determinada con respecto a un módulo determinado.
+
+
+  Supongamos que expBase $x $, Power by $p $ y modulus $N $.
+
+  La función devuelve $x ^ p \operatorname{mod} N $.
+
+
+  Damos por hecho que $N $, $x $ son positivos y la potencia no es negativa.
+remarks: Lleva tiempo proporcional al número de bits de `power`, no al `power` mismo.
+syntax: 'function ExpModI (expBase : Int, power : Int, modulus : Int) : Int'
+input:
+  content: '(expBase : Int, power : Int, modulus : Int)'
+  types:
+  - name: expBase
+    isPrimitive: true
+    uid: Int
+  - name: power
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: cd98e60dab928d1cbb5055a762c8ffa31c460009
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229504"

@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applydiagonalunitary
+name: ApplyDiagonalUnitary
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica una matriz de fases complejas a Estados de base numéricos de un registro de qubits.
+
+
+  Es decir, implementa la operación de unitarios diagonal $U $ que aplica una fase compleja $e ^ {i \theta_j} $ en $n el estado de número $ \ket{j} $-qubit.
+
+
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ les {j} \ Bra {j} $.
+remarks: '`coefficients` se rellenarán con los elementos $ \theta_j = $0,0 si se especifican menos de $2 ^ n $.'
+syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: '- Síntesis de los circuitos de lógica Quantum Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
+input:
+  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: coefficients
+    summary: Matriz de hasta $2 ^ n $ coeficientes $ \theta_j $. El coeficiente de $j $ TH indexa el número $ \ket{j} $ codificado en formato Little-Endian.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: qubits
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 80247438297c9d3a4f7d582f659a50f5d48c1335
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217689"

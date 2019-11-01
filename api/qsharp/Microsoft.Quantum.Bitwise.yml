@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.bitwise
+name: Microsoft.Quantum.Bitwise
+functions:
+- uid: microsoft.quantum.bitwise.and
+  summary: >-
+    Devuelve el and bit a bit de dos enteros.
+
+    Esto realiza el mismo cálculo que el operador integrado `&&&`.
+- uid: microsoft.quantum.bitwise.leftshiftedi
+  summary: Desplaza la representación bit a bit de un número a la izquierda de un número determinado de bits.
+- uid: microsoft.quantum.bitwise.leftshiftedl
+  summary: Desplaza la representación bit a bit de un número a la izquierda de un número determinado de bits.
+- uid: microsoft.quantum.bitwise.not
+  summary: >-
+    Devuelve el NOT bit a bit de un entero.
+
+    Esto realiza el mismo cálculo que el operador integrado `~~~`.
+- uid: microsoft.quantum.bitwise.or
+  summary: >-
+    Devuelve la operación OR bit a bit de dos enteros.
+
+    Esto realiza el mismo cálculo que el operador integrado `|||`.
+- uid: microsoft.quantum.bitwise.parity
+  summary: Devuelve la paridad bit a bit de un entero (1 Si su representación binaria contiene un número impar de unos y 0 de lo contrario).
+- uid: microsoft.quantum.bitwise.rightshiftedi
+  summary: Desplaza la representación bit a bit de un número a la derecha un número determinado de bits.
+- uid: microsoft.quantum.bitwise.rightshiftedl
+  summary: Desplaza la representación bit a bit de un número a la derecha un número determinado de bits.
+- uid: microsoft.quantum.bitwise.xbits
+  summary: Devuelve un entero que representa los bits X de una matriz de operadores Pauli.
+- uid: microsoft.quantum.bitwise.xor
+  summary: >-
+    Devuelve la operación OR exclusiva bit a bit (XOR) de dos enteros.
+
+    Esto realiza el mismo cálculo que el operador integrado `^^^`.
+- uid: microsoft.quantum.bitwise.zbits
+  summary: Devuelve un entero que representa los bits Z de una matriz de operadores Pauli.
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones para actuar en la representación bit a bit de los tipos de datos clásico."
+ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210957"

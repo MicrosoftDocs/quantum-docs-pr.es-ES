@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.bigendianaslittleendian
+name: BigEndianAsLittleEndian
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Convierte un registro de `BigEndian` qubit en un registro de `LittleEndian` qubit invirtiendo el orden qubit.
+syntax: 'function BigEndianAsLittleEndian (input : Microsoft.Quantum.Arithmetic.BigEndian) : Microsoft.Quantum.Arithmetic.LittleEndian'
+input:
+  content: '(input : Microsoft.Quantum.Arithmetic.BigEndian)'
+  types:
+  - name: input
+    summary: Qubit registro en formato de `BigEndian`.
+    uid: microsoft.quantum.arithmetic.bigendian
+output:
+  content: Microsoft.Quantum.Arithmetic.LittleEndian
+  types:
+  - summary: Qubit registro en formato de `LittleEndian`.
+    uid: microsoft.quantum.arithmetic.littleendian
+ms.openlocfilehash: 0d6003b2901e4ccb4d0b47a763b15ff8d64a0037
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221378"

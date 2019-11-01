@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.powi
+name: PowI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Devuelve un número elevado a una potencia determinada.
+syntax: 'function PowI (a : Int, power : Int) : Int'
+input:
+  content: '(a : Int, power : Int)'
+  types:
+  - name: a
+    summary: Número $a $ que se va a generar.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: La potencia $b $ en la que se debe generar $a $.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: La potencia $a ^ b $
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 3287ec73f90d22a502e2f4e214da7532d0729d1a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220052"
