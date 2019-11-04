@@ -1,4 +1,4 @@
-- name: Máquinas y controladores clásicos
+- name: Información general
   href: index.md
 - name: Simulador cuántico
   href: full-state-simulator.md

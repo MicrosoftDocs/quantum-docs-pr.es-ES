@@ -1,0 +1,128 @@
+---
+title: Usar la biblioteca de valores numéricos | Microsoft Docs
+description: Usar la biblioteca de valores numéricos
+author: thomashaener
+ms.author: thhaner
+ms.date: 5/14/2019
+ms.topic: article
+uid: microsoft.quantum.numerics.usage
+ms.openlocfilehash: 332781a4356015461426ee7640fd931a41450367
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73184617"
+---
+# <a name="using-the-numerics-library"></a>Usar la biblioteca de valores numéricos
+
+## <a name="overview"></a>Información general
+
+La biblioteca de valores numéricos consta de tres componentes
+
+1. **Aritmética de enteros básico** con agregadores y agregadores de enteros
+1. **Funcionalidad de entero de alto nivel** que se basa en la funcionalidad básica; incluye multiplicación, división, inversión, etc.  para enteros con signo y sin signo.
+1. **Funcionalidad aritmética de punto fijo** con inicialización de punto fijo, suma, multiplicación, mutua, evaluación polinómica y medición.
+
+Se puede tener acceso a todos estos componentes mediante una única instrucción `open`:
+```qsharp
+open Microsoft.Quantum.Arithmetic;
+```
+
+## <a name="types"></a>Tipos
+
+La biblioteca de valores numéricos admite los siguientes tipos
+
+1. **`LittleEndian`** : una matriz de qubit `qArr : Qubit[]` que representa un entero donde `qArr[0]` denota el bit menos significativo.
+1. **`SignedLittleEndian`** : igual que `LittleEndian`, salvo que representa un entero con signo almacenado en el complemento de dos.
+1. **`FixedPoint`** : representa un número real que consta de una matriz de qubit `qArr2 : Qubit[]` y una posición de punto binaria `pos`, que cuenta el número de dígitos binarios a la izquierda del punto binario. `qArr2` se almacena de la misma manera que `SignedLittleEndian`.
+
+## <a name="operations"></a>Operations
+
+Para cada uno de los tres tipos anteriores, hay disponible una variedad de operaciones:
+
+1. **`LittleEndian`**
+    - Suma
+    - Comparación
+    - Multiplicación
+    - Elevar
+    - División (con resto)
+
+1. **`SignedLittleEndian`**
+    - Suma
+    - Comparación
+    - Complemento del módulo de inversión 2
+    - Multiplicación
+    - Elevar
+
+1. **`FixedPoint`**
+    - Preparación/inicialización en un valor clásico
+    - Suma (constante clásica u otro punto fijo Quantum)
+    - Comparación
+    - Multiplicación
+    - Elevar
+    - Evaluación polinómica con especialización para las funciones pares e impares
+    - Recíproco (1/x)
+    - Medida (doble clásico)
+
+Para obtener más información y documentación detallada sobre cada una de estas operaciones, vea los documentos de referencia de la biblioteca de Q # en [docs.Microsoft.com](https://docs.microsoft.com/en-us/quantum)
+
+## <a name="sample-integer-addition"></a>Ejemplo: suma de enteros
+
+Como ejemplo básico, considere la operación $ $ \ket x\ket y\mapsto \ket x\ket {x + y} $ $ es decir, una operación que toma un entero n-qubit $x $ y un valor n-or (n + 1)-qubit registre $y $ como entrada, el último de los cuales se asigna a la suma $ (x + y) $. Tenga en cuenta que la suma es el módulo calculado $2 ^ n $ si $y $ está almacenado en un registro de $-bit $n.
+
+Con el kit de desarrollo de Quantum, esta operación se puede aplicar de la siguiente manera:
+```qsharp
+operation MyAdditionTest (xInt : Int, yInt : Int, n : Int) : Unit
+{
+    using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
+    {
+        x = LittleEndian(xQubits); // define bit order
+        y = LittleEndian(yQubits);
+        
+        ApplyXorInPlace(xInt, x); // initialize values
+        ApplyXorInPlace(yInt, y);
+        
+        AddI(x, y); // perform addition x+y into y
+        
+        // ... (use the result)
+    }
+}
+```
+
+## <a name="sample-evaluating-smooth-functions"></a>Ejemplo: evaluar funciones fluidas
+
+Para evaluar funciones suaves como $ \sin (x) $ en un equipo Quantum, donde $x $ es un número de `FixedPoint` Quantum, la biblioteca de valores numéricos del kit de desarrollo de Quantum proporciona las operaciones `EvaluatePolynomialFxP` y `Evaluate[Even/Odd]PolynomialFxP`.
+
+La primera, `EvaluatePolynomialFxP`, permite evaluar un polinomio con el formato $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, donde $d $ denota el *grado*. Para ello, lo único que se necesita son los coeficientes polinómicos `[a_0,..., a_d]` (de tipo `Double[]`), el `x : FixedPoint` de entrada y el `y : FixedPoint` de salida (inicialmente cero):
+```qsharp
+EvaluatePolynomialFxP([1.0, 2.0], xFxP, yFxP);
+```
+El resultado, $P (x) = 1 + 2x $, se almacenará en `yFxP`.
+
+El segundo, `EvaluateEvenPolynomialFxP`y el tercero, `EvaluateOddPolynomialFxP`, son especializaciones para los casos de las funciones pares e impares, respectivamente. Es decir, para una función par/impar $f (x) $ y $ $ P_ {Even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ se aproxima bien mediante $P _ {Even} (x) $ o $P _ {impar} (x): = x\cdot P_ {Even} (x) $ poco.
+En Q #, estos dos casos se pueden administrar de la siguiente manera:
+```qsharp
+EvaluateEvenPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+```
+que evalúa $P _ {Even} (x) = 1 + 2x ^ 2 $ y
+```qsharp
+EvaluateOddPolynomialFxP([1.0, 2.0], xFxP, yFxP);
+```
+que evalúa $P _ {impares} (x) = x + 2x ^ 3 $.
+
+## <a name="more-samples"></a>Más ejemplos
+
+Puede encontrar más ejemplos en el [repositorio principal de ejemplos](https://github.com/Microsoft/Quantum).
+
+Para empezar, Clone el repositorio y abra la subcarpeta `Numerics`:
+
+```bash
+git clone https://github.com/Microsoft/Quantum.git
+cd Quantum/Numerics
+```
+
+A continuación, `cd` en una de las carpetas de ejemplo y ejecute el ejemplo a través de
+
+```bash
+dotnet run
+```

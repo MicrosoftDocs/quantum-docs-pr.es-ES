@@ -1,0 +1,40 @@
+- name: Documentación de Microsoft Quantum
+  href: index.yml
+- name: Información general
+  href: welcome.md
+- name: Guías de inicio rápido
+  items:
+    - name: Instalación del QDK
+      href: install-guide/index.md
+    - name: Actualización del QDK
+      href: install-guide/update.md
+    - name: Escriba su primer programa cuántico
+      href: quickstart.md
+- name: Conceptos
+  items:
+    - name: Técnicas de desarrollo cuántico
+      topicHref: techniques/index.md
+      href: techniques/toc.yml
+    - name: 'Lenguaje de programación Q#'
+      topicHref: language/index.md
+      href: language/toc.yml
+    - name: 'Bibliotecas de Q#'
+      href: libraries/toc.yml
+    - name: Conceptos de computación cuántica
+      href: concepts/toc.yml
+    - name: Hospedaje de una máquina cuántica
+      href: machines/toc.yml
+- name: Recursos
+  items:
+    - name: Notas de la versión de Quantum Developer Kit
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: Contribución a Quantum Developer Kit
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: Glosario
+      href: Glossary.md
+    - name: Para obtener más información
+      href: for-more-info.md
+    - name: Licencia
+      href: license.md

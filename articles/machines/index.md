@@ -1,19 +1,19 @@
 ---
-title: Simuladores cuánticos y controladores clásicos | Microsoft Docs
+title: Simuladores cuánticos y aplicaciones host | Microsoft Docs
 description: Describe cómo impulsar los simuladores cuánticos con un lenguaje informático clásico .NET, por lo general C# o Q#.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 5ac79280669ae0acfe993a1c2ae1c069b0c01848
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035115"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442222"
 ---
-# <a name="classical-drivers-and-machines"></a>Máquinas y controladores clásicos
+# <a name="quantum-simulators-and-host-applications"></a>Simuladores cuánticos y aplicaciones host
 
 ## <a name="what-youll-learn"></a>Temas que se abordarán
 
@@ -52,7 +52,7 @@ Todas ellas se definen en el espacio de nombres `Microsoft.Quantum.Simulation.Si
 * Un [estimador de recursos basado en seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro), la clase `QCTraceSimulator`, permite un análisis de nivel superior de los recursos necesarios para ejecutar un algoritmo cuántico.
 * Un [simulador de Toffoli](xref:microsoft.quantum.machines.toffoli-simulator), la clase `ToffoliSimulator`.
 
-## <a name="writing-a-classical-driver-program"></a>Escritura de un programa de controlador clásico
+## <a name="writing-a-host-application"></a>Escritura de una aplicación host
 
 En [Escritura de un programa cuántico](xref:microsoft.quantum.write-program), escribimos un controlador C# sencillo para el algoritmo de teletransporte. Un controlador C# tiene 4 propósitos principales:
 
@@ -94,7 +94,7 @@ Existen algunos matices al pasar argumentos a un método `Run`:
 * Las matrices se deben encapsular en un objeto `Microsoft.Quantum.Simulation.Core.QArray<T>`.
     Una clase `QArray` tiene un constructor que puede tomar cualquier colección ordenada (`IEnumerable<T>`) de los objetos adecuados.
 * La tupla vacía, `()` en Q#, se representa con `QVoid.Instance` en C#.
-* Las tuplas no vacías se representan como instancias `ValueType` de .NET.
+* Las tuplas no vacías se representan como instancias `ValueTuple` de .NET.
 * Los tipos de Q# definidos por el usuario se pasan como su tipo base.
 * Para pasar una operación o función a un método `Run`, debe obtener una instancia de la clase de la operación o una clase de la función, a través del método `Get<>` del simulador.
 
