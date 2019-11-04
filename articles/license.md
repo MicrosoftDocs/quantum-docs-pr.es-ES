@@ -1,21 +1,18 @@
 ---
-title: Licencia de Microsoft Quantum Development Kit | Microsoft Docs
+title: Licencia de Microsoft Quantum Development Kit
 description: Licencia de Microsoft Quantum Development Kit
-services: service-name-with-dashes-AZURE-ONLY
-keywords: No agregue o edite palabras clave sin consultar su campo SEO.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
-ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
-ms.openlocfilehash: e14720143144d4890358a1c6167541a0ea5a8362
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.author: cpalmer
+ms.date: 11/04/2019
+ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184940"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463369"
 ---
 # <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DE SOFTWARE DE MICROSOFT 
-# <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DESARROLLO DE QUANTUM DE MICROSOFT (VERSIÓN PRELIMINAR)
+## <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DESARROLLO DE QUANTUM DE MICROSOFT (VERSIÓN PRELIMINAR)
 
 
 * * *
@@ -61,13 +58,13 @@ SI CUMPLE ESTOS TÉRMINOS DE LICENCIA, TENDRÁ LOS DERECHOS SIGUIENTES. AL USAR 
     
     e. compartir, publicar, distribuir o prestar el software, proporcionar el software como una solución hospedada independiente para que otros usuarios lo utilicen o transferir el software o este contrato a terceros.
 
-1. **restricciones de exportación**. El usuario debe cumplir con todas las normas y las leyes de exportación nacionales e internacionales que se aplican al software, lo que incluye restricciones sobre los destinos, los usuarios finales y el uso final. Para más información sobre las restricciones a la exportación, visite http://aka.ms/exporting.
+1. **restricciones de exportación**. El usuario debe cumplir con todas las normas y las leyes de exportación nacionales e internacionales que se aplican al software, lo que incluye restricciones sobre los destinos, los usuarios finales y el uso final. Para más información sobre las restricciones a la exportación, visite https://aka.ms/exporting.
 
 1. **servicios de soporte técnico**. Microsoft no está obligado bajo este contrato a proporcionar ningún servicio de soporte técnico para el software. Cualquier compatibilidad se proporciona "tal cual", "con todos los defectos" y sin garantía de ningún tipo.
 
 1. **Actualizaciones**. El software puede buscar periódicamente actualizaciones y descargarlas e instalarlas de forma automática. Puede obtener actualizaciones solo de Microsoft o de fuentes autorizadas. Microsoft puede requerir actualizar su sistema para proporcionarle las actualizaciones. Acepta recibir estas actualizaciones automáticas sin ningún otro aviso. Las actualizaciones pueden no incluir o admitir todas las características existentes de software, servicios o dispositivos periféricos.
 
-1. **arbitraje de enlace y exención de acción de clase. Esta sección se aplica si vive en (o, en el caso de una empresa, su lugar principal de negocio está en) el Estados Unidos**.  Si usted y Microsoft tienen un conflicto, usted y Microsoft acuerdan intentar resolverlo de manera informal durante 60 días. Si usted y Microsoft no pueden, usted y Microsoft acuerdan **enlazar un arbitraje individual antes de la Asociación de arbitraje estadounidense** en virtud de la ley federal de arbitraje ("FAA") y **no de Sue en el Tribunal de un juez o jurado**. En su lugar, un árbitro neutral tomará la decisión. **No se permiten** **demandas de acción de clase, arbitrajes de toda la clase, acciones generales del abogado**y otros procedimientos en los que alguien actúe en una capacidad representativa. tampoco combina procedimientos individuales sin el consentimiento de todas las partes. El contrato de arbitraje completo contiene más condiciones y se encuentra en http://aka.ms/arb-agreement-1. Usted y Microsoft aceptan estos términos.
+1. **arbitraje de enlace y exención de acción de clase. Esta sección se aplica si vive en (o, en el caso de una empresa, su lugar principal de negocio está en) el Estados Unidos**.  Si usted y Microsoft tienen un conflicto, usted y Microsoft acuerdan intentar resolverlo de manera informal durante 60 días. Si usted y Microsoft no pueden, usted y Microsoft acuerdan **enlazar un arbitraje individual antes de la Asociación de arbitraje estadounidense** en virtud de la ley federal de arbitraje ("FAA") y **no de Sue en el Tribunal de un juez o jurado**. En su lugar, un árbitro neutral tomará la decisión. **No se permiten** **demandas de acción de clase, arbitrajes de toda la clase, acciones generales del abogado**y otros procedimientos en los que alguien actúe en una capacidad representativa. tampoco combina procedimientos individuales sin el consentimiento de todas las partes. El contrato de arbitraje completo contiene más condiciones y se encuentra en https://aka.ms/arb-agreement-1. Usted y Microsoft aceptan estos términos.
 
 1. **contrato completo**. Este contrato, y otros términos que Microsoft pueda proporcionar para los suplementos, actualizaciones o aplicaciones de terceros, constituye el contrato completo para el software.
 

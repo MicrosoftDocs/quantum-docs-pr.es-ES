@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183852"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463313"
 ---
 # <a name="q-style-guide"></a>Guía de estilo de preguntas y respuestas #
 ## <a name="general-conventions"></a>Convenciones generales ##
 
 Las convenciones sugeridas en esta guía están pensadas para facilitar la lectura y comprensión de los programas y las bibliotecas escritos en preguntas y respuestas.
 
-# <a name="guidancetabguidance"></a>[Guía](#tab/guidance)
+## <a name="guidance"></a>Guía
 
 Sugerimos:
 
 - No ignore nunca una Convención a menos que lo haga de forma intencionada con el fin de proporcionar código más legible y comprensible para los usuarios.
-
-# <a name="examplestabexamples"></a>[Ejemplos](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>Convenciones de nomenclatura ##
 
@@ -67,7 +63,7 @@ Otros verbos también pueden resultar útiles en este caso, como en `IterateThro
 | Verbo | Efecto esperado |
 | ---- | ------ |
 | Solicitar | Se llama a una operación que se proporciona como entrada. |
-| Declarar | Un simulador comprueba una hipótesis sobre el resultado de una posible medida Quantum. |
+| Assert | Un simulador comprueba una hipótesis sobre el resultado de una posible medida Quantum. |
 | Presupuesto | Se devuelve un valor clásico que representa una estimación dibujada a partir de una o más medidas |
 | Measure | Se realiza una medición de cuanto y el resultado se devuelve al usuario. |
 | Preparativos | Un registro determinado de qubits se inicializa en un estado determinado. |

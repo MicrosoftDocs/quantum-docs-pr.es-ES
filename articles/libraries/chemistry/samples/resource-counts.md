@@ -6,16 +6,16 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: b28a27c4c1f1e64644fcfb074a731ff7b65cacb6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184090"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442462"
 ---
-## <a name="obtaining-resource-counts"></a>Obtención de recuentos de recursos
+# <a name="obtaining-resource-counts"></a>Obtención de recuentos de recursos
 
-El costo de simular $n $ qubits en un equipo clásico se escala exponencialmente con $n $. Esto limita en gran medida el tamaño de una simulación de química de Quantum que se puede llevar a cabo con el simulador de estado completo. En el caso de instancias grandes de química, podemos obtener información útil. En este caso, veremos cómo los costos de recursos, como el número de puertas de T o de CNOT, para simular la química se pueden obtener de manera automatizada mediante el [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Esta información nos informa de cuándo los equipos Quantum pueden ser lo suficientemente grandes como para ejecutar estos algoritmos de química de Quantum. Como referencia, vea el ejemplo de `GetGateCount` proporcionado.
+El costo de simular $n $ qubits en equipos clásico escala exponencialmente con $n $. Esto limita en gran medida el tamaño de una simulación de química de Quantum que se puede llevar a cabo con el simulador de estado completo. En el caso de instancias grandes de química, podemos obtener información útil. En este caso, veremos cómo los costos de recursos, como el número de puertas de T o de CNOT, para simular la química se pueden obtener de manera automatizada mediante el [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Esta información nos informa de cuándo los equipos Quantum pueden ser lo suficientemente grandes como para ejecutar estos algoritmos de química de Quantum. Como referencia, vea el ejemplo de `GetGateCount` proporcionado.
 
 Supongamos que ya tenemos una instancia de `FermionHamiltonian`, por ejemplo, que se carga desde el esquema Broombridge, como se describe en el ejemplo de [carga de archivos](xref:microsoft.quantum.chemistry.examples.loadhamiltonian) . 
 
@@ -31,7 +31,7 @@ Supongamos que ya tenemos una instancia de `FermionHamiltonian`, por ejemplo, qu
     var qSharpData = problem.ToQSharpFormat();
 ```
 
-La sintaxis para obtener estimaciones de recursos es casi idéntica a la ejecución del algoritmo en el simulador de estado completo. Simplemente elegiremos un equipo de destino diferente. Para los fines de las estimaciones de recursos, basta con evaluar el costo de un solo paso de Trotter o un recorrido de Quantum creado por la técnica de Qubitization. Los reutilizables para invocar estos algoritmos son los siguientes.
+La sintaxis para obtener estimaciones de recursos es casi idéntica a la ejecución del algoritmo en el simulador de estado completo. Simplemente elegiremos un equipo de destino diferente. Para los fines de las estimaciones de recursos, basta con evaluar el costo de un solo paso de Trotter o un recorrido de Quantum creado por la técnica de Qubitization. La forma reutilizable para invocar estos algoritmos es la siguiente.
 
 ```qsharp
 //////////////////////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-Ahora se configura el simulador de seguimiento para realizar un seguimiento de los recursos que le interesan. En este caso, se cuentan las operaciones de Quantum primitivas estableciendo la marca de `usePrimitiveOperationsCounter` en `true`. Un `throwOnUnconstraintMeasurement` de detalles técnicos se establece en `false` para evitar excepciones en los casos en los que el código de Q # no valida correctamente probabiltiy de los resultados de la medición, si se realiza alguno.
+Ahora se configura el simulador de seguimiento para realizar un seguimiento de los recursos que le interesan. En este caso, se cuentan las operaciones de Quantum primitivas estableciendo la marca de `usePrimitiveOperationsCounter` en `true`. Un `throwOnUnconstraintMeasurement` de detalles técnicos se establece en `false` para evitar excepciones en los casos en los que el código de Q # no valida correctamente la probabilidad de los resultados de la medición, si se realizan.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()
