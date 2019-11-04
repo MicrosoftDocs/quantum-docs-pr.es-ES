@@ -6,16 +6,16 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.intro
-ms.openlocfilehash: d8759b9f043d2e13f4b0c97d54bd824c7e87d6de
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 560926f6f3e05c32a935f01ca5107a614e743ee2
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035272"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442480"
 ---
 # <a name="the-q-programming-language"></a>El lenguaje de programación Q#
 
-# <a name="introduction"></a>Introducción
+## <a name="introduction"></a>Introducción
 
 Un modelo natural de computación cuántica consiste en tratar el equipo cuántico como un coprocesador, similar al que se usa para GPU, FPGA y otros procesadores complementarios.
 La lógica de control principal ejecuta código clásico en un equipo "host" clásico.
@@ -36,7 +36,7 @@ En las secciones siguientes se detallan:
 - [Instrucciones](xref:microsoft.quantum.language.statements)
 - [Estructura de archivos](xref:microsoft.quantum.language.file-structure)
 
-# <a name="conventions"></a>Convenciones
+## <a name="conventions"></a>Convenciones
 
 Estamos trabajando para asegurarnos de que los signos de puntuación comunes se utilicen de forma coherente en todos los casos.
 Esperamos que esto facilite el aprendizaje y la lectura de Q#, porque estos signos significarán siempre lo mismo, y el mismo concepto se representa siempre de la misma manera.
