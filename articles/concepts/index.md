@@ -1,19 +1,19 @@
 ---
-title: Conceptos de computación cuántica
-description: ¿Qué es la computación cuántica?
+title: Historia y contexto de la computación cuántica
+description: Obtenga información sobre la historia de la computación cuántica, cómo funciona y Microsoft Quantum Development Kit.
 author: QuantumWriter
-ms.author: nawiebe@microsoft.com
+ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 37f5181f2d9e4e11efa29811c24116ca7d64f81b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72978947"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442301"
 ---
-# <a name="what-is-quantum-computing"></a>¿Qué es la computación cuántica?
+# <a name="quantum-computing-history-and-background"></a>Historia y contexto de la computación cuántica
 
 En los últimos años ha surgido un conjunto de nuevas tecnologías, y la computación cuántica es posiblemente la tecnología que requiere el mayor cambio de paradigma por parte de los desarrolladores.  [Richard Feynman](https://en.wikipedia.org/wiki/Richard_Feynman) y [Yuri Manin](https://en.wikipedia.org/wiki/Yuri_Manin) ya propusieron equipos cuánticos en la década de 1980.  El origen de la computación cuántica se debió al que solía considerarse uno de los aspectos más embarazosos de la física: los grandes progresos científicos se enfrentaban a la imposibilidad de modelar incluso sistemas simples. La mecánica cuántica se desarrolló entre 1900 y 1925, y sigue siendo la piedra angular en la que se basan la química, la física de la materia condensada y tecnologías que van desde los chips informáticos a la iluminación LED.  Y, a pesar de estos éxitos, incluso algunos de los sistemas más sencillos parecían quedar fuera del alcance de la capacidad humana para modelar con mecánica cuántica.  Esto se debe a que la simulación de sistemas de incluso unas pocas decenas de partículas en interacción requiere más potencia de computación de la que pueda proporcionar cualquier equipo convencional durante miles de años.
 
