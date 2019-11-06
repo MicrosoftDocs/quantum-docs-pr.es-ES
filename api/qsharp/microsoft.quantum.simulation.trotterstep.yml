@@ -7,9 +7,9 @@ summary: Implementa un único paso temporal de la evolución del tiempo por part
 remarks: Para obtener más información sobre la descomposición Trotter – Suzuki, vea [composición ordenada por tiempo](/quantum/libraries/control-flow#time-ordered-composition).
 syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
 input:
-  content: '(evolutionGenerator: Microsoft. Quantum. Simulation. EvolutionGenerator, trotterOrder: int, trotterStepSize: Double)'
+  content: '(evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double)'
   types:
-  - name: EvolutionGenerator
+  - name: evolutionGenerator
     summary: Una descripción completa del sistema que se va a simular.
     uid: microsoft.quantum.simulation.evolutiongenerator
   - name: trotterOrder
@@ -21,7 +21,7 @@ input:
     isPrimitive: true
     uid: Double
 output:
-  content: (Qubit [] = la unidad > es ADJ + CTL)
+  content: (Qubit[] => Unit is Adj + Ctl)
   types:
   - summary: Operación unitario que se aproxima a un solo paso de la evolución del tiempo para la duración `trotterStepSize`.
     isOperation: true
@@ -37,9 +37,10 @@ output:
     functors:
     - Adjoint
     - Controlled
-ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065221"
+metadata:
+  ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065221"
