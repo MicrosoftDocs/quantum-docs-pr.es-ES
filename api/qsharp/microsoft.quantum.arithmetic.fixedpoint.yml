@@ -5,9 +5,10 @@ type: newtype
 namespace: Microsoft.Quantum.Arithmetic
 summary: Representa un registro de qubits que codifica un número de punto fijo. Consta de un entero que es igual al número de qubits a la izquierda del punto binario, es decir, qubits de peso mayor o igual que 1 y un registro de Quantum.
 syntax: newtype FixedPoint = (Int, Qubit[]);
-ms.openlocfilehash: 4ab209ab14486893ea3b23b32e14e6c8a05da514
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73219083"
+metadata:
+  ms.openlocfilehash: 4ab209ab14486893ea3b23b32e14e6c8a05da514
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73219083"
