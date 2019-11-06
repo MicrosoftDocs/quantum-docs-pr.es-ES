@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Simulation
 summary: Devuelve un `TimeDependentGeneratorSystem` que representa la interpolación lineal entre dos `GeneratorSystem`s.
 syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
 input:
-  content: '(generatorSystemStart: Microsoft. Quantum. Simulation. GeneratorSystem, generatorSystemEnd: Microsoft. Quantum. Simulation. GeneratorSystem)'
+  content: '(generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemStart
     summary: '`GeneratorSystem`de inicio.'
@@ -15,16 +15,17 @@ input:
     summary: '`GeneratorSystem`final.'
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: Microsoft. Quantum. Simulation. TimeDependentGeneratorSystem
+  content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
   - summary: '`TimeDependentGeneratorSystem` que representa un sistema que es la suma de los sistemas de generador de entrada, con un peso de $ (1-s) $ en `generatorSystemStart` y peso $s $ en `generatorSystemEnd`.'
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 - microsoft.quantum.canon.timedependentgeneratorsystem
-ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065527"
+metadata:
+  ms.openlocfilehash: ac01ddee211ddf2ad741b611707aa6e5e6ea70f9
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065527"

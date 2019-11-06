@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Convert
 summary: Convierte un tipo de `Bool[]` en un tipo de `Result[]`, donde `true` se asigna a `One` y `false` se asigna a `Zero`.
 syntax: 'function BoolArrayAsResultArray (input : Bool[]) : Result[]'
 input:
-  content: '(entrada: bool [])'
+  content: '(input : Bool[])'
   types:
   - name: input
     summary: '`Bool[]` que se va a convertir.'
@@ -14,15 +14,16 @@ input:
     isPrimitive: true
     uid: Bool
 output:
-  content: Resultado []
+  content: Result[]
   types:
   - summary: '`Result[]` que representa el `input`.'
     isArray: true
     isPrimitive: true
     uid: Result
-ms.openlocfilehash: c81ac2d1bcfdc8e08769bc448f83fa215e058a9a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066887"
+metadata:
+  ms.openlocfilehash: c81ac2d1bcfdc8e08769bc448f83fa215e058a9a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066887"

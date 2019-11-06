@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 169a8ac31c53f2892624618a227d8bdbdc458458
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72958886"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463341"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Este artículo contiene información sobre cada versión de Quantum Development 
 Para obtener instrucciones de instalación, consulte la [guía de instalación](xref:microsoft.quantum.install).
 
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
+
+## <a name="version-0101911307"></a>Versión 0.10.1911.307
+
+*Fecha de lanzamiento: 1 de noviembre de 2019*
+
+Esta versión contiene lo siguiente:
+
+- Actualizaciones para las extensiones de Visual Studio Code y Visual Studio para implementar un servidor de lenguaje como un archivo ejecutable independiente, eliminando la dependencia en la versión del SDK de .NET Core  
+- Migración a .NET Core 3.0
+- Cambio importante en Microsoft.Quantum.Simulation.Core.IOperationFactory con presentación del nuevo método `Fail`. Solo afecta a los simuladores personalizados que no extienden SimulatorBase. Para más información, [vea la solicitud de incorporación de cambios de GitHub](https://github.com/microsoft/qsharp-runtime/pull/59).
+- Nuevo soporte para atributos en desuso
+
+Consulte la lista completa de solicitudes de incorporación de cambios cerradas para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiladores](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [tiempo de ejecución](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) y [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0919093002"></a>Versión 0.9.1909.3002
 
@@ -337,11 +350,11 @@ Más información acerca de las [pruebas y depuración](xref:microsoft.quantum.t
 ### <a name="community-contributions"></a>Contribuciones de la comunidad
 
 La comunidad de programadores de Q# está creciendo y estamos encantados de ver que los usuarios han aportado los primeros ejemplos y bibliotecas a nuestra base de código abierto en http://github.com/Microsoft/quantum.  **Muchísimas gracias** a los colaboradores siguientes:
-* Mathias Soeken ([](https://github.com/msoeken)@msoeken): ha aportado un ejemplo que define un método de síntesis lógica basado en una transformación, que construye redes Toffoli para implementar una permutación determinada. El código está escrito completamente con funciones y operaciones de Q#.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
+* Mathias Soeken ([@msoeken](https://github.com/msoeken)): ha aportado un ejemplo que define un método de síntesis lógica basado en una transformación, que construye redes Toffoli para implementar una permutación determinada. El código está escrito completamente con funciones y operaciones de Q#.  [PR #41](https://github.com/Microsoft/Quantum/pull/41).
 * RolfHuisman ([@RolfHuisman](https://github.com/RolfHuisman)): Rolf Huisman, Microsoft MVP, ha aportado un ejemplo que genera código QASM plano a partir de código de Q# para una clase restringida de programas que no tienen un flujo de control clásico y que tienen operaciones cuánticas restringidas. [PR #59](https://github.com/Microsoft/Quantum/pull/59)
-* Sarah Kasier ([](https://github.com/crazy4pi314)@crazy4pi314): ha ayudado a mejorar nuestra base de código mediante el envío de una función de biblioteca para operaciones controladas. [PR #53](https://github.com/Microsoft/Quantum/pull/53)
-* Jessica Lemieux ([](https://github.com/Lemj3111)@Lemj3111): ha corregido @"microsoft.quantum.canon.quantumphaseestimation" y ha creado nuevas pruebas unitarias.  [PR #54](https://github.com/Microsoft/Quantum/pull/54)
-* Tama McGlinn ([](https://github.com/TamaHobbit)@TamaHobbit): ha limpiado el ejemplo de teleportabilidad y se ha asegurado de que se desecha la instancia de QuantumSimulator. [PR #20](https://github.com/Microsoft/Quantum/pull/20)
+* Sarah Kasier ([@crazy4pi314](https://github.com/crazy4pi314)): ha ayudado a mejorar nuestra base de código mediante el envío de una función de biblioteca para operaciones controladas. [PR #53](https://github.com/Microsoft/Quantum/pull/53)
+* Jessica Lemieux ([@Lemj3111](https://github.com/Lemj3111)): ha corregido @"microsoft.quantum.canon.quantumphaseestimation" y ha creado nuevas pruebas unitarias.  [PR #54](https://github.com/Microsoft/Quantum/pull/54)
+* Tama McGlinn ([@TamaHobbit](https://github.com/TamaHobbit)): ha limpiado el ejemplo de teleportabilidad y se ha asegurado de que se desecha la instancia de QuantumSimulator. [PR #20](https://github.com/Microsoft/Quantum/pull/20)
 
 Además, **muchas gracias** a estos ingenieros de software de Microsoft, de los equipos de servicios de ingeniería comercial, que hicieron cambios importantes en nuestra documentación durante su hackathon.  Sus cambios han mejorado considerablemente la claridad y la experiencia de incorporación para todos:
 * Sascha Corti
