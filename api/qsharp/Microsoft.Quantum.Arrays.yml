@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
-name: Microsoft. Quantum. matrices
+name: Microsoft.Quantum.Arrays
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones para crear y manipular matrices de datos."
 functions:
 - uid: microsoft.quantum.arrays.all
@@ -56,9 +56,10 @@ functions:
 operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada una matriz y una operación que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la operación.
-ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057246"
+metadata:
+  ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057246"
