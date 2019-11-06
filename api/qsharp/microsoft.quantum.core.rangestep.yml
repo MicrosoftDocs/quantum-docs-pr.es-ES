@@ -7,7 +7,7 @@ summary: Devuelve el entero que especifica cómo se calcula el siguiente valor d
 remarks: El primer elemento de una expresión de rango es `start`, su segundo elemento es `start+step`, el tercer elemento es `start+step+step`, etc., hasta que se pasa `end`.
 syntax: 'function RangeStep (range : Range) : Int'
 input:
-  content: '(intervalo: intervalo)'
+  content: '(range : Range)'
   types:
   - name: range
     isPrimitive: true
@@ -18,9 +18,10 @@ output:
   - summary: Valor de paso definido del intervalo especificado.
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066615"
+metadata:
+  ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066615"
