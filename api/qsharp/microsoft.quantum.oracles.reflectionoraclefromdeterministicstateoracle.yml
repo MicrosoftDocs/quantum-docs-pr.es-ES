@@ -10,22 +10,23 @@ summary: >-
   Dado el $O de Oracle $ de tipo <xref:microsoft.quantum.oracles.deterministicstateoracle>, el resultado de esta función es un reflejo alrededor del estado $ \ket{\psi} $, donde $O \ket{0} = \ket{\psi} $.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
-  content: '(Oracle: Microsoft. Quantum. Oracle. DeterministicStateOracle)'
+  content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
-  - name: Oracle
+  - name: oracle
     summary: Oracle de tipo "DeterministicStateOracle"
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
-  content: Microsoft. Quantum. Oracle. ReflectionOracle
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
   - summary: '`ReflectionOracle` que refleja el estado $ \ket{\psi} $.'
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - deterministicstateoracle
 - reflectionoracle
-ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73050333"
+metadata:
+  ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73050333"

@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
-name: Microsoft. Quantum. Extensions. Convert
+name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Resumen\n Estas son algunas de las funciones del espacio de nombres System. Convert de .NET CLR que son relevantes en el sistema de tipos de preguntas y respuestas.\n\n # <a name=\"remarks\"></a>Comentarios\n Si hay varias versiones de la función para los tipos bool, int y Double, las funciones correspondientes tienen el sufijo B, I y D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
@@ -53,9 +53,10 @@ functions:
     > [!WARNING]
 
     > En desuso, use @"microsoft.quantum.convert.intasstringwithformat".
-ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056483"
+metadata:
+  ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056483"
