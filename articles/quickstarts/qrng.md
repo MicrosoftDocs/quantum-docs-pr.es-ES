@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: a7c077eda3e46430cbe6598cb899adb460451f75
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: c3039b92c4b3235a397d5cf31280ac2673706e9d
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443926"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462845"
 ---
 # <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Inicio rápido: Implementación de un generador cuántico de números aleatorios en Q#
 Un ejemplo sencillo de un algoritmo cuántico escrito en Q# es un generador cuántico de números aleatorios. Este algoritmo aprovecha la naturaleza de la mecánica cuántica para generar un número aleatorio. 
@@ -69,4 +69,4 @@ Podemos usar esta representación para visualizar lo que está haciendo el códi
 
 <img src="./Measurement2.svg" width="450">
 
-Como el resultado de la medida es completamente aleatorio, hemos obtenido un bit aleatorio. Podemos llamar a esta función varias veces para crear enteros. Por ejemplo, si llamamos a la función tres veces para obtener tres bits aleatorios, podemos crear números de 3 bits aleatorios (es decir, un número aleatorio entre 0 y 7).
+Como el resultado de la medida es completamente aleatorio, hemos obtenido un bit aleatorio. Podemos llamar a esta operación varias veces para crear enteros. Por ejemplo, si llamamos a la operación tres veces para obtener tres bits aleatorios, podemos crear números de 3 bits aleatorios (es decir, un número aleatorio entre 0 y 7).

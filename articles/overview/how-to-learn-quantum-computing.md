@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 8967fee11931c6cef4b2d98084b2e319cea55284
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444113"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529972"
 ---
 # <a name="how-to-learn-quantum-computing"></a>¿Cómo aprender computación cuántica?
 
@@ -29,7 +29,7 @@ Estos conceptos le proporcionarán una buena introducción a los conocimientos f
 
 * [Mecánica cuántica básica](xref:microsoft.quantum.concepts.intro): Acabamos de decir que no es necesario conocer la física cuántica para empezar a codificar (¡y es verdad!). Pero algunos conceptos básicos de mecánica cuántica y su notación matemática serán útiles para comprender la programación cuántica.
 
-* **Álgebra lineal (vectores y matrices)** : En la computación cuántica, los estados cuánticos se representan mediante vectores, donde las operaciones cuánticas son transformaciones lineales aplicadas a estos vectores.  Este es un [tutorial de Jupyter Notebook sobre álgebra lineal](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  También puede leer más sobre el tema en nuestra guía de conceptos de [vectores y matrices](xref:microsoft.quantum.concepts.vectors).
+* **Álgebra lineal (vectores y matrices)** : En la computación cuántica, los estados cuánticos se representan mediante vectores, donde las operaciones cuánticas son transformaciones lineales aplicadas a estos vectores.  Este es un [tutorial de Jupyter Notebook sobre álgebra lineal](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra).  También puede leer más sobre álgebra lineal en nuestra guía de conceptos de [vectores y matrices](xref:microsoft.quantum.concepts.vectors).
 
 * **Aritmética compleja:** Los coeficientes de los vectores de estado cuántico son números complejos. Puede comprender algunos conceptos básicos de la computación cuántica sin ellos, pero no llegará muy lejos antes de que necesite incorporarlos en el kit de herramientas cuánticas.  Este es un [tutorial de Jupyter Notebook sobre aritmética compleja](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic) que explica parte de los conocimientos matemáticos necesarios para trabajar con computación cuántica. 
 
@@ -45,12 +45,12 @@ Quizás quiera profundizar más en la teoría de la mecánica cuántica y la com
 
 * Comience con nuestra guía para conocer los [conceptos sobre computación cuántica](xref:microsoft.quantum.concepts.intro), una compilación de conceptos básicos para la computación cuántica.
 * _Obtenga información acerca de computación cuántica con Python y Q#_ (Sarah C. Kaiser y Christopher E. Granade) proporciona una excelente introducción para las personas que tienen poca o nula experiencia con la mecánica cuántica, pero que cuentan con algunas ideas sobre programación.
-* _Computación cuántica e información cuántica_ (Michael A. Nielsen, Isaac L. Chuang) es el texto más citado en el campo de la computación cuántica. Se considera el texto estándar sobre el tema. El libro supone una experiencia previa mínima con la mecánicas cuántica y la informática. Es una excelente opción para los lectores que desean una introducción rigurosa al tema, así como para quienes buscan referencias para conocer conceptos avanzados.
-* MIT OpenCourseWare tiene un excelente [curso en línea](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) impartido por Allan Adams para aprender los aspectos básicos de mecánica cuántica. Es perfecto para quienes desean comprender mejor la física subyacente.
+* _Computación cuántica e información cuántica_ (Michael A. Nielsen, Isaac L. Chuang) es el texto más citado en el campo de la computación cuántica y se considera el referente en esta materia. El libro supone una experiencia previa mínima con la mecánicas cuántica y la informática. Es una excelente opción para los lectores que desean una introducción rigurosa al tema, así como para quienes buscan referencias para conocer conceptos avanzados.
+* MIT OpenCourseWare tiene un excelente [curso en línea](https://www.youtube.com/watch?v=lZ3bPUKo5zc&list=PLUl4u3cNGP61-9PEhRognw5vryrSEVLPr) impartido por Allan Adams para aprender los aspectos básicos de mecánica cuántica. Es perfecto para los desarrolladores que quieren comprender mejor la física subyacente.
 
 ## <a name="join-the-quantum-community"></a>Únase a la comunidad cuántica
 
-No tiene que aprender esto por sí solo, tenga en cuenta que hay una gran comunidad de aficionados y expertos que están dispuestos a ayudarle. No tenga miedo de preguntar.
+No tiene que aprender esto por sí solo; tenga en cuenta que hay una gran comunidad de aficionados y expertos que están dispuestos a ayudarle. No tenga miedo de preguntar.
 
 * Si tiene alguna pregunta sobre Q# o computación cuántica, no dude y eche un vistazo al sitio de Quantum Computing Stack Exchange. Si no encuentra su pregunta específica, siempre puede hacer una nueva. 
 * Consulte el [blog de Q#](https://devblogs.microsoft.com/qsharp/) y el [blog de Microsoft Quantum](https://cloudblogs.microsoft.com/quantum/) para mantenerse al día con las noticias y los recursos más recientes sobre Q#.

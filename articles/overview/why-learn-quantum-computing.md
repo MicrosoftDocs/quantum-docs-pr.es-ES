@@ -6,20 +6,22 @@ ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 1ccf21aad9473f18a33bf6b12e14b021ac159cbb
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443909"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529908"
 ---
 # <a name="why-learn-quantum-computing"></a>¿Por qué aprender computación cuántica?
 
-Los equipos cuánticos son útiles, pero ¿por qué debe aprender computación cuántica? En esta sección, le exponemos algunos motivos por los que aprender computación cuántica hoy en día es una buena idea.
+Los equipos cuánticos son útiles, pero ¿por qué debe aprender computación cuántica?
+
+En esta sección, le exponemos algunos motivos por los que aprender computación cuántica hoy en día es una buena idea.
 
 ## <a name="join-the-quantum-revolution"></a>Únase a la revolución cuántica
 
-Los investigadores han empezado a visualizar las posibilidades de las futuras tecnologías cuánticas. Hoy en día, asistimos al comienzo de lo que algunas personas denominan segunda revolución cuántica. La primera revolución consistió en el uso de la física cuántica para crear inventos que cambiaron el mundo, como el láser o el transistor. En la última década, la ciencia ha empezado a adquirir control sobre los sistemas cuánticos a nivel de partículas individuales. Esto abre paso a inmensas posibilidades, la mayoría aún por descubrir. ¡Deje de ser un mero espectador y empiece a crear! Ya puede empezar a colaborar con la tecnología que dará forma al mundo del mañana.
+Los investigadores han empezado a visualizar las posibilidades de las futuras tecnologías cuánticas. Hoy en día, asistimos al comienzo de lo que algunas personas denominan segunda revolución cuántica. La primera revolución consistió en el uso de la física cuántica para crear inventos que cambiaron el mundo, como el láser o el transistor. En la última década, la ciencia ha empezado a obtener control sobre los sistemas cuánticos en el nivel de partículas individuales, lo que abre la puerta a enormes posibilidades, la mayoría de las cuales todavía está por descubrir. ¡Deje de ser un mero espectador y empiece a crear! Ya puede empezar a colaborar con la tecnología que dará forma al mundo del mañana.
 
 ## <a name="solving-great-challenges-requires-diverse-communities"></a>La resolución de grandes desafíos requiere diversas comunidades
 

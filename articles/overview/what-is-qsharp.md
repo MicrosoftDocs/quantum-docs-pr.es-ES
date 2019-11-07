@@ -6,31 +6,33 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: e04228ff62092a15c529297bd56b9ee48399f4a5
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443960"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529989"
 ---
 # <a name="what-is-q"></a>¿Qué es Q#?
 
-Q# es un lenguaje de programación con características especiales de la computación cuántica. Q# proporciona a los programadores cuánticos un marco que les permite centrarse en los algoritmos sin tener que preocuparse por detalles técnicos, como la optimización de secuencia de puertas o la implementación física de un equipo cuántico.
+Q# es un lenguaje de programación con características especiales de la computación cuántica.
+
+Q# proporciona a los programadores cuánticos un marco que les permite centrarse en los algoritmos sin tener que preocuparse por detalles técnicos, como la optimización de secuencia de puertas o la implementación física de un equipo cuántico.
 
 El lenguaje de programación Q# proporciona un intuitivo conjunto de tipos, operaciones y expresiones lógicas para desarrollar algoritmos sin tener que preocuparse por la lógica interna del equipo cuántico.
 
 ## <a name="code-algorithms"></a>Algoritmos de código
 
-Al principio, los algoritmos de computación cuántica se visualizaban como diagramas, de forma similar a los diagramas de circuitos de la computación clásica.  Mientras que el modelo de circuitos se ha usado mucho en la investigación de computación cuántica durante muchos años, en Microsoft creemos que los desarrolladores pueden ir más allá de los circuitos cuánticos y desarrollar aplicaciones y algoritmos cuánticos con Q#. El lenguaje Q# se ha diseñado para aprovechar lo que hemos aprendido durante décadas de desarrollo de software clásico y capacita a los desarrolladores cuánticos con funcionalidades de lenguaje de alto nivel destinadas específicamente para la computación cuántica.
+Al principio, los algoritmos de computación cuántica se visualizaban como diagramas, de forma similar a los diagramas de circuitos de la computación clásica.  Mientras que el modelo de circuitos se ha usado mucho en la investigación de computación cuántica durante muchos años, en Microsoft creemos que los desarrolladores pueden ir más allá de los circuitos cuánticos y desarrollar aplicaciones y algoritmos cuánticos con Q#. El lenguaje Q# se ha diseñado para aprovechar lo que hemos aprendido durante décadas de desarrollo de software clásico y capacita a los desarrolladores cuánticos con funcionalidades de lenguaje de alto nivel destinadas a la computación cuántica.
 
 
 ## <a name="how-does-q-work"></a>¿Cómo funciona Q#?
 
 Uno de los bloques de compilación fundamentales de Q# es el tipo `Qubit`, que no se puede copiar ni acceder a él directamente, como un qubit real. En su lugar, podemos medirlo y almacenar el resultado de la medición en una variable `Result`, un tipo de Q# que puede tomar dos valores posibles: `Zero` y `One`. Construcciones como esta garantizan que los algoritmos respeten siempre las leyes de la física cuántica, así como que se puedan ejecutar correctamente en simuladores o equipos cuánticos.
 
-Q# también incluye funcionalidades de lógica clásicas, como condicionales o bucles con algunos matices, para asegurarse de que se respetan todas las reglas cuánticas. Por ejemplo, las operaciones cuánticas deben ser reversibles. Esto aplica algunas restricciones en la forma en que se ejecutan los bucles.
+Q# también incluye funcionalidades de lógica clásicas, como condicionales o bucles con algunos matices, para asegurarse de que se respetan todas las reglas cuánticas. Por ejemplo, restringir el modo en que se ejecutan los bucles para asegurarse de que las operaciones cuánticas se puedan realizar.
 
-Con frecuencia, los programas de Q# están emparejados con un programa host escrito en C# o Python, que puede proporcionar una organización adecuada del código clásico y cuántico. Además de la compatibilidad con lenguajes .NET, como C# y Python, QDK proporciona compatibilidad de Jupyter Notebook con el kernel de Jupyter IQ#.
+Con frecuencia, los programas de Q# están emparejados con un programa host escrito en C# o Python, que puede proporcionar una organización adecuada del código clásico y cuántico. Además de la compatibilidad con lenguajes como C# y Python, QDK proporciona compatibilidad de Jupyter Notebook con el kernel de Jupyter IQ#.
 
 ## <a name="use-q-to-learn-quantum-computing"></a>Uso de Q# para aprender computación cuántica
 
@@ -42,7 +44,7 @@ Q# proporciona un creciente número de bibliotecas y tipos definidos por el usua
 
 ## <a name="use-q-to-estimate-quantum-resources"></a>Uso de Q# para calcular los recursos cuánticos
 
-Puede simular la ejecución del programa de Q# con el simulador cuántico de estado completo incluido en Quantum Development Kit (QDK).  QDK también ofrece estimaciones de recursos que proporcionan información sobre el rendimiento de los programas de Q# que son demasiado grandes para ejecutarse en un simulador.  Esto resulta muy útil para los diseñadores de algoritmos, porque pueden optimizar sus programas para que usen menos recursos (por ejemplo, un menor número de qubits que se ejecutan para menos cantidad de operaciones), para que puedan ejecutarse en un hardware cuántico de menor escala.   
+Puede simular la ejecución del programa de Q# con el simulador cuántico de estado completo incluido en Quantum Development Kit (QDK).  QDK también ofrece estimaciones de recursos que proporcionan información sobre el rendimiento de los programas de Q# que son demasiado grandes para ejecutarse en un simulador.  Esto resulta muy útil para los diseñadores de algoritmos, porque pueden optimizar sus programas para que usen menos recursos (por ejemplo, un menor número de qubits que se ejecutan para menos cantidad de operaciones), para que puedan ejecutarse en un hardware cuántico de menor escala.
 
 ## <a name="use-q-to-validate-hardware-performance"></a>Uso de Q# para validar el rendimiento del hardware
 
