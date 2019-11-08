@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
-ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
+ms.openlocfilehash: 580ac14f2e839d723884a96e9c5fd336ebcb5da0
+ms.sourcegitcommit: 30fcb35986b43388ad65dfb876eb3ad8ad0533ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73462873"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73799164"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Instalación de Microsoft Quantum Development Kit (QDK)
 
@@ -34,17 +34,17 @@ El paquete qsharp de Python facilita la simulación de operaciones y funciones d
     - El administrador de paquetes de Python [PIP](https://pip.pypa.io/en/stable/installing)
     - [SDK de .NET Core 3.0 o posterior](https://www.microsoft.com/net/download)
 
+1. Instalar el paquete `qsharp`
+
+    ```bash
+    pip install qsharp
+    ```
+
 1. Instalar el paquete `iqsharp`
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
-    ```
-
-1. Instalar el paquete `qsharp`
-
-    ```bash
-    pip install qsharp
     ```
 
 1. Cree una aplicación `Hello World` para comprobar la instalación.
