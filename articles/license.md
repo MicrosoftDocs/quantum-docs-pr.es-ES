@@ -86,7 +86,7 @@ SI CUMPLE ESTOS TÉRMINOS DE LICENCIA, TENDRÁ LOS DERECHOS SIGUIENTES. AL USAR 
 
 <p>15. <strong>LIMITACIÓN Y EXCLUSIÓN DE DAÑOS. SI TIENE ALGUNA BASE PARA LA RECUPERACIÓN DE DAÑOS A PESAR DE LA RENUNCIA ANTERIOR DE GARANTÍA, PUEDE RECUPERAR DE MICROSOFT Y SUS PROVEEDORES SOLO LOS DAÑOS DIRECTOS HASTA EL $5,00 DE EE. UU. NO SE PUEDE RECUPERAR NINGÚN OTRO DAÑO, INCLUIDOS LOS CONSECUENTES, PÉRDIDAS DE BENEFICIOS, ESPECIALES, INDIRECTOS O INCIDENTALES.</strong>
 
-**Esta limitación se aplica a (a) todo lo relacionado con el software, los servicios, el contenido (incluido el código) en sitios de Internet de terceros o aplicaciones de terceros; y (b) reclamaciones por incumplimiento de contrato, garantía, garantía o condición; responsabilidad estricta, negligencia u otra responsabilidad extracontractual; o cualquier otra demanda; en cada caso en la medida que lo permita la ley aplicable**.
+**Esta limitación se aplica a (a) todo lo relacionado con el software, los servicios, el contenido (incluido el código) en sitios de Internet de terceros o aplicaciones de terceros; y (b) reclamaciones por incumplimiento de contrato, garantía, garantía o condición; responsabilidad objetiva, negligencia u otro agravio; o cualquier otra reclamación; en cada caso en la medida que lo permita la ley aplicable**
 
 **También se aplica incluso si Microsoft conocía o debería haber conocido la posibilidad de los daños. Es posible que la limitación o exclusión anterior no se aplique a su caso porque su estado, provincia o país no pueden permitir la exclusión o limitación de daños incidentales, CONSECUENCIALES u otros**.
 </blockquote>
