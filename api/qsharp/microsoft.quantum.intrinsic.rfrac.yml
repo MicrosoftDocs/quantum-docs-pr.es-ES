@@ -7,7 +7,7 @@ summary: >-
   Aplica un giro sobre el eje Pauli determinado mediante un ángulo especificado como fracción Dyadic.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} donde $ \mu \en \{I, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} donde $ \mu \en \{I, X, Y, Z\}$.
 
 
   > [!WARNING]

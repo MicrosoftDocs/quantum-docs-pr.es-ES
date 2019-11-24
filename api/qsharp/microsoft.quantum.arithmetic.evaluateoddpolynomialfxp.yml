@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Coeficientes del polinomio impar como una matriz doble, es decir, la matriz $ [a_0, a_1,..., a_k] $ para la $P impar (x) = a_0 x + a_1 x ^ 3 + \cdots + a_k x ^ {2K + 1} $.
+    summary: Los coeficientes del polinomio impar como una matriz doble, es decir, la matriz $ [a_0, a_1,..., a_k] $ para la $P extraña (x) = a_0 x + a_1 x ^ 3 + \cdots + a_k x ^ {2K + 1} $.
     isArray: true
     isPrimitive: true
     uid: Double

@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres proporciona tipos definidos por el usuario para decorar varios tipos de Oracle según su uso previsto en algoritmos Quantum como la estimación de la fase y la amplificación de amplitud."
+summary: " # <a name=\"summary\"></a>summary\n Este espacio de nombres proporciona tipos definidos por el usuario para decorar varios tipos de Oracle según su uso previsto en algoritmos Quantum como la estimación de la fase y la amplificación de amplitud."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
   summary: Convierte un tipo de `StateOracle` de Oracle en `DeterministicStateOracle`.

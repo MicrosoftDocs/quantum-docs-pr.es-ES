@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.simulation
 name: Microsoft.Quantum.Simulation
-summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones y operaciones para simular de coherencia la dinámica de los sistemas Quantum."
+summary: " # <a name=\"summary\"></a>summary\n Este espacio de nombres contiene funciones y operaciones para simular de coherencia la dinámica de los sistemas Quantum."
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
   summary: Agrega dos `GeneratorSystem`s para crear un nuevo `GeneratorSystem`.
@@ -10,13 +10,13 @@ functions:
     Codifica un operador de interés en un `BlockEncoding`.
 
 
-    Esto crea una `BlockEncoding` unitario $U = P\cdot V\cdot P ^ \dagger $ que codifica algún operador $H = \sum_{j} | \alpha_j | U_j $ de interés que es una combinación lineal de unitaries. Normalmente, $P $ es una unitario de preparación de estado que $P \ket{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ y $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+    Esto crea una `BlockEncoding` unitario $U = P\cdot V\cdot P ^ \dagger $ que codifica algún operador $H = \ sum_ {j} | \ alpha_j | U_j $ de interés que es una combinación lineal de unitaries. Normalmente, $P $ es una unitario de preparación de estado que $P \ket{0}\_a = \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ y $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
   summary: >-
     Codifica un operador de interés en un `BlockEncodingReflection`.
 
 
-    Esto crea una `BlockEncodingReflection` unitario $U = P\cdot V\cdot P ^ \dagger $ que codifica algún operador $H = \sum_{j} | \alpha_j | U_j $ de interés que es una combinación lineal de unitaries. Normalmente, $P $ es una unitario de preparación de estado que $P \ket{0}\_a\sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ y $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+    Esto crea una `BlockEncodingReflection` unitario $U = P\cdot V\cdot P ^ \dagger $ que codifica algún operador $H = \ sum_ {j} | \ alpha_j | U_j $ de interés que es una combinación lineal de unitaries. Normalmente, $P $ es una unitario de preparación de estado que $P \ket{0}\_a \ sum_j \sqrt{\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_a $ y $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 - uid: microsoft.quantum.simulation.blockencodingtoreflection
   summary: >-
     Convierte un `BlockEncoding` en un `BLockEncodingReflection`equivalente.
@@ -52,7 +52,7 @@ functions:
     Crea una unidad de codificación de bloques para un Hamiltonian.
 
 
-    Hamiltonian $H = \sum_{j}\alpha_j P_j $ se describe mediante una suma de los términos Pauli $P _J $, cada uno con coeficiente real $ \alpha_j $.
+    El Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ se describe mediante una suma de los términos de Pauli $P _j $, cada uno con coeficiente real $ \ alpha_j $.
 - uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
   summary: Extrae el coeficiente de un término Pauli descrito por un `GeneratorIndex`.
 - uid: microsoft.quantum.simulation.paulievolutionfunction
@@ -88,10 +88,10 @@ newtypes:
     Representa una unidad en la que un operador arbitrario de interés se codifica en el bloque superior izquierdo.
 
 
-    Es decir, un `BlockEncoding` es un unitario $U $ donde un operador arbitrario $H $ de interés que actúa en el registro del sistema `s` se codifica en el bloque superior izquierdo correspondiente al estado auxiliar $ \ket{0}a $. Es decir
+    Es decir, un `BlockEncoding` es un unitario $U $ donde un operador arbitrario $H $ de interés que actúa en el registro del sistema `s` se codifica en el bloque superior izquierdo correspondiente al estado auxiliar $ \ket{0}_a $. Es decir
 
 
-    $ $ \begin{align} (\bra{0}a \ otimes I_s) U (\ket{0}a \ otimes I_s) = H \end{align} $ $.
+    $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
 - uid: microsoft.quantum.simulation.blockencodingreflection
   summary: Representa un `BlockEncoding` que también es un reflejo.
 - uid: microsoft.quantum.simulation.evolutiongenerator
@@ -143,10 +143,10 @@ newtypes:
     Representa una `BlockEncoding` controlada por un registro del reloj.
 
 
-    Es decir, un `TimeDependentBlockEncoding` es un unitario $U $ controlado por un estado $ \ket{k}_D $ en el registro del reloj `d` tal que un operador arbitrario $H _k $ de interés que actúa en el registro del sistema `s` se codifica en el bloque superior izquierdo correspondiente al estado auxiliar $ \ket @no __t_3_ a $. Es decir
+    Es decir, un `TimeDependentBlockEncoding` es un unitario $U $ controlado por un estado $ \ket{k} _d $ en el registro del reloj `d` tal que un operador arbitrario $H _k $ de interés que actúa en el registro del sistema `s` se codifica en el bloque superior izquierdo correspondiente al estado auxiliar $ \ket{0}_a $. Es decir
 
 
-    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+    $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
 
     \end{align} $ $.
 - uid: microsoft.quantum.simulation.timedependentgeneratorsystem

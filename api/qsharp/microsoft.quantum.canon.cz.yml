@@ -7,7 +7,7 @@ summary: >-
   Aplica la puerta controlada-Z (CZ) a un par de qubits.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $, donde las filas y las columnas se organizan como en la guía de conceptos de Quantum.
+  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}, $ $, donde las filas y columnas están organizadas como en la guía de conceptos de Quantum.
 remarks: >-
   Equivalente a:
 

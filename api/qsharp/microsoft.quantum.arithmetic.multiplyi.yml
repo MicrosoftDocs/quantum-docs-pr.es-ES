@@ -7,7 +7,7 @@ summary: Multiplicar `xs` entero por un entero `ys` y almacenar el resultado en 
 remarks: >-
   Utiliza un enfoque estándar de desplazamiento y adición para implementar la multiplicación.
 
-  La versión controlada se mejoró mediante la copia de $x _ i $ en un qubit de ancilla en el control qubits y, a continuación, el control de la adición en el ancilla qubit.
+  La versión controlada se mejoró mediante la copia de $x _i $ en una ancilla qubit condicionada en el control qubits y, a continuación, el control de la adición en el ancilla qubit.
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
