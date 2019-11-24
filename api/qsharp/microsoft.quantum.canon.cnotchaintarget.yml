@@ -7,7 +7,7 @@ summary: >-
   Calcula la paridad de una matriz de qubits en un qubit de destino.
 
 
-  Si la matriz está inicialmente en el estado $ \ket{q_0} \ket{q_1} \cdots \ket{Q_{\text{Target}}} $, el estado final lo proporciona $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{Q_{n-1} \oplus \cdots \oplus q_0 \oplus Q_ {\text{Target}}} $.
+  Si la matriz está inicialmente en el estado $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{Target}}} $, el estado final lo proporciona $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{Target}}} $.
 remarks: >-
   Los siguientes son equivalentes:
 

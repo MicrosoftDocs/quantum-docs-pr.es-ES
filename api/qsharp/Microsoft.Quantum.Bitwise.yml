@@ -36,7 +36,7 @@ functions:
     Esto realiza el mismo cálculo que el operador integrado `^^^`.
 - uid: microsoft.quantum.bitwise.zbits
   summary: Devuelve un entero que representa los bits Z de una matriz de operadores Pauli.
-summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones para actuar en la representación bit a bit de los tipos de datos clásico."
+summary: " # <a name=\"summary\"></a>summary\n Este espacio de nombres contiene funciones para actuar en la representación bit a bit de los tipos de datos clásico."
 metadata:
   ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
   ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0

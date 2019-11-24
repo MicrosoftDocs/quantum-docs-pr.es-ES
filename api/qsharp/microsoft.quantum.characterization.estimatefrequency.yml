@@ -44,7 +44,7 @@ output:
   content: Double
   types:
   - summary: >-
-      Una estimación de $ \hat{p} $ de la frecuencia con la que $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ devuelve `Zero`, obtenida mediante el estimador binomial no sesgado $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, donde $n\_{\ flecha arriba} $ es el número de `Zero` resultados observados.
+      Una estimación de $ \hat{p} $ de la frecuencia con la que $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ devuelve `Zero`, obtenida mediante el estimador binomial no sesgado $ \hat{p} = n\_{\uparrow}/n\_{\text{Measurements}} $, donde $n\_{\uparrow} $ es el número de `Zero` resultados observados.
 
 
       Esto es especialmente importante en las máquinas de destino que respetan las limitaciones físicas, de modo que no se pueden medir las probabilidades.

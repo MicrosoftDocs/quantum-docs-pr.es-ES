@@ -3,7 +3,7 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: $U unitario $ que aplica la cadena de Pauli en $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ on qubits $0.. p $ condicionada en un índice $z \en\{0, 1\}$ y $p $. Es decir, $ $ \begin{align} U\ket {z} \ les {p} \ les {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ PSI} \end{align} $ $
+summary: $U unitario $ que aplica la cadena de Pauli en $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ on qubits $0.. p $ condicionada en un índice $z \en\{0, 1\}$ y $p $. Es decir, $ $ \begin{align} U\ket {z} \ les {p} \ les {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 \ket{\psi} \end{align} $ $
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
 references: '- Codifique los espectros electrónicos en los circuitos Quantum con la complejidad T lineal Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru pálido, Austin Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662'
 input:

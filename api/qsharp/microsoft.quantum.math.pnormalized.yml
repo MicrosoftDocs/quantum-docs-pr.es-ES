@@ -7,7 +7,7 @@ summary: >-
   Normaliza un vector de `Double`s en la norma `L(p)`.
 
 
-  Es decir, dada una matriz $x $ de tipo `Double[]`, devuelve una matriz donde todos los elementos se dividen por la $p $-Norm $\|x\|_P $.
+  Es decir, dada una matriz $x $ de tipo `Double[]`, devuelve una matriz donde todos los elementos se dividen por la $p $-Norm $\|x\|_p $.
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,7 +23,7 @@ input:
 output:
   content: Double[]
   types:
-  - summary: La matriz $x $ normalizada por el $p $-Norm $\|x\|_P $.
+  - summary: La matriz $x $ normalizada por el $p $-Norm $\|x\|_p $.
     isArray: true
     isPrimitive: true
     uid: Double

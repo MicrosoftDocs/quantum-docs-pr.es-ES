@@ -7,7 +7,7 @@ summary: >-
   Realiza una medida conjunta de una o varias qubits en las bases de Pauli especificadas.
 
 
-  El resultado de la salida lo proporciona la distribución: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} donde $P _ _ $ es el $i $ TH de @no__ t_0_, donde $N = \texttt{Length} (\texttt{bases}) $.
+  El resultado de la salida lo proporciona la distribución: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} donde $P _i $ es el elemento $i $ TH de `bases`y donde $N = \texttt{Length} (\texttt{bases}) $.
 
   Es decir, la medida devuelve un `Result` $d $ de modo que el eigenvalue del efecto de medición observado sea $ (-1) ^ d $.
 remarks: Si la matriz base y la matriz qubit tienen longitudes diferentes, se producirá un error en la operación.

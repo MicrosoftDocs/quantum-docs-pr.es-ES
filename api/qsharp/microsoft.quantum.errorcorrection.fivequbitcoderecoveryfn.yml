@@ -7,7 +7,7 @@ summary: Devuelve la función que asigna las medidas del síndrome de error a lo
 remarks: >-
   Al recorrer en iteración todos los errores del peso $1 $, se obtiene un total de $3 \ Times 5 = 15 $ posibles síndrome no triviales.
 
-  Junto con la identidad, se crea una tabla de error y el síndrome correspondiente. Para el código de 5 qubit que proporciona esta tabla: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ con $Y _ _ i $ obtenido agregando los $X _ i y $Z _ _ $ síndromes. Tenga en cuenta que la ordenación en la recuperación de la búsqueda de tabla se proporciona mediante la conversión de bitvectors en enteros (mediante little endian).
+  Junto con la identidad, se crea una tabla de error y el síndrome correspondiente. Para el código de 5 qubit que proporciona esta tabla: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ con $Y _i $ obtenido mediante la adición de los $X _i $ y $Z _i $ síndromes. Tenga en cuenta que la ordenación en la recuperación de la búsqueda de tabla se proporciona mediante la conversión de bitvectors en enteros (mediante little endian).
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()

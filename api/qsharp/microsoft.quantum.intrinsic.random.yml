@@ -21,7 +21,7 @@ input:
 output:
   content: Int
   types:
-  - summary: Entero $i $ con probabilidad $ \Pr (i) = p_i/\sum_i p_i $, donde $p _ i $ es el $i elemento $ TH de `probs`.
+  - summary: Un entero $i $ con probabilidad $ \Pr (i) = p_i/\ sum_i p_i $, donde $p _i $ es el elemento $i $ TH de `probs`.
     isPrimitive: true
     uid: Int
 metadata:
