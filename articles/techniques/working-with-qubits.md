@@ -6,18 +6,18 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183478"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864260"
 ---
 # <a name="working-with-qubits"></a>Trabajar con qubits #
 
 Teniendo en cuenta que ahora hay una variedad de diferentes partes del lenguaje de preguntas y respuestas, vamos a profundizar en ella y veremos cómo usar qubits.
 
-## <a name="allocating-qubits"></a>Asignar qubits ##
+## <a name="allocating-qubits"></a>Asignación de objetos Qubit ##
 
 En primer lugar, para obtener un qubit que podamos usar en Q #, *asignamos* qubits dentro de un bloque `using`:
 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > Más adelante, veremos formas más compactas de escribir esta operación que no requieren el control de flujo manual.
 
-También podemos preparar estados como $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ y $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ mediante la transformación Hadamard $H $ , que se representa en Q # mediante la operación intrínseca `H : (Qubit => Unit is Adj + Ctl)`:
+También podemos preparar estados como $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ y $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ mediante la transformación Hadamard $H $, que se representa en Q # mediante la operación intrínseca `H : (Qubit => Unit is Adj + Ctl)`:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>Medidas ##
 
-Con la operación de `Measure`, que es una operación no de unitario intrínseca integrada, podemos extraer información clásica de un objeto de tipo `Qubit` y asignar un valor clásico como resultado, que tiene un tipo reservado `Result`, que indica que el resultado es no el estado de Quantum es mayor. La entrada a `Measure` es un eje Pauli en la esfera Bloch, representado por un objeto de tipo `Pauli` (es decir, por ejemplo `PauliX`) y un objeto de tipo `Qubit`. 
+Con la operación de `Measure`, que es una operación no unitario intrínseca integrada, podemos extraer información clásica de un objeto de tipo `Qubit` y asignar un valor clásico como resultado, que tiene un tipo reservado `Result`, que indica que el resultado ya no es un estado Quantum. La entrada a `Measure` es un eje Pauli en la esfera Bloch, representado por un objeto de tipo `Pauli` (es decir, por ejemplo `PauliX`) y un objeto de tipo `Qubit`. 
 
 Un ejemplo sencillo es la siguiente operación, que crea un qubit en $ \ket{0}$ State y, a continuación, aplica una puerta de Hadamard ``H`` a él y, a continuación, mide el resultado en la `PauliZ` base. 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-El lenguaje Q # permite las dependencias del flujo de control clásico en los resultados de la medición de qubits. A su vez, esto permite implementar gadgets de probabilística eficaces que pueden reducir el costo de cálculo para implementar unitaries. Por ejemplo, es fácil de implementar, lo que se conoce como *repetir-hasta-éxito* en Q #, que son los circuitos probabilística que tienen un costo bajo *esperado* en cuanto a las puertas elementales, pero para los que el costo real depende de una ejecución real y de un intercalación de varias ramificaciones posibles. 
+El lenguaje Q # permite las dependencias del flujo de control clásico en los resultados de la medición de qubits. A su vez, esto permite implementar gadgets de probabilística eficaces que pueden reducir el costo de cálculo para implementar unitaries. Por ejemplo, es fácil de implementar, lo que se conoce como *Repetir, hasta el éxito* en Q #, que son los circuitos probabilística que tienen un costo bajo *previsto* en cuanto a las puertas elementales, pero para los que el costo real depende de una ejecución real y un entrelazado real de varias ramificaciones posibles. 
 
 Para facilitar patrones de repetición hasta la correcta (RU), Q # admite la construcción
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 En este ejemplo se muestra el uso de una variable mutable `finished` que está en el ámbito de todo el bucle de repetición hasta la corrección y que se inicializa antes del bucle y se actualiza en el paso de corrección.
 
-Por último, se muestra un ejemplo de un patrón de RU para preparar un estado de Quantum $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, a partir del estado $ \ket{+} $. Vea también el [ejemplo de pruebas unitarias que se proporciona con la biblioteca estándar](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs): 
+Por último, se muestra un ejemplo de un patrón de RU para preparar un estado de Quantum $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, a partir del estado $ \ket{+} $. Vea también el [ejemplo de pruebas unitarias que se proporciona con la biblioteca estándar](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs): 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-Las características de programación más importantes que se muestran en esta operación son una parte más compleja `fixup` del bucle que implica operaciones Quantum y el uso de instrucciones `AssertProb` para determinar la probabilidad de medir el estado de cuanto en determinados puntos especificados en el introduce. Vea también [probar y depurar](xref:microsoft.quantum.techniques.testing-and-debugging) para obtener más información sobre las instrucciones `Assert` y `AssertProb`. 
+Las características importantes de programación que se muestran en esta operación son una parte más compleja `fixup` del bucle que implica las operaciones Quantum y el uso de instrucciones `AssertProb` para determinar la probabilidad de medir el estado de cuanto en determinados puntos especificados en el programa. Vea también [probar y depurar](xref:microsoft.quantum.techniques.testing-and-debugging) para obtener más información sobre las instrucciones `Assert` y `AssertProb`. 

@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184498"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864345"
 ---
 # <a name="diagnostics"></a>Diagnósticos #
 
@@ -42,7 +42,7 @@ Por comparación, el equipo de destino del [simulador Toffoli](xref:microsoft.qu
 
 ## <a name="facts-and-assertions"></a>Hechos y aserciones ##
 
-Como se describe en [pruebas y depuración](xref:microsoft.quantum.techniques.testing-and-debugging), una función u operación con la firma `Unit -> Unit` o `Unit => Unit`, respectivamente, se puede llamar como una *prueba unitaria*.
+Como se describe en [pruebas y depuración](xref:microsoft.quantum.techniques.testing-and-debugging), una función u operación con la firma `Unit -> Unit` o `Unit => Unit`, respectivamente, se puede marcar como una *prueba unitaria*.
 Generalmente, cada prueba unitaria consta de un pequeño programa Quantum, junto con una o más condiciones que comprueban la corrección de ese programa.
 Estas condiciones pueden presentarse en forma de _hechos_, que comprueban los valores de sus entradas, o _aserciones_, que comprueban los Estados de uno o más qubits pasados como entrada.
 
@@ -109,7 +109,7 @@ Sin embargo, debido a la fase global, podemos elegir $a\_i = $0, de modo que sol
 Por lo tanto, es necesario especificar tres aserciones que son independientes entre sí con el fin de validar el estado que se espera.
 Para ello, se busca la probabilidad de observar `Zero` para cada medida de Pauli dada $ \alpha $ y $ \beta $, y la aserción de cada una de ellas de forma independiente.
 Permita $x $, $y $ y $z $ se `Result` valores para Pauli $X $, $Y $ y $Z $ Measurements, respectivamente.
-A continuación, con la función de probabilidad para las mediciones de Quantum, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ \Pr (y = \texttt{Zero} | \alpha , \beta) & = \frac12 + a\_r b\_i-a\_i\_r \\\\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
+A continuación, con la función de probabilidad para las mediciones de Quantum, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ \Pr (y = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_i-a\_i\_r \\\\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
 \end{align}
 
 La operación <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> implementa estas aserciones dadas las representaciones de $ \alpha $ y $ \beta $ como valores de tipo <xref:microsoft.quantum.math.complex>.
@@ -129,7 +129,7 @@ Estas estrategias las implementan las operaciones de Canon <xref:microsoft.quant
 
 > [!NOTE]
 > La aserción a la que se hace referencia anteriormente funciona en función de [Choi – Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), un marco de trabajo matemático que relaciona las operaciones en $n $ qubits con los Estados indebidos en $2N $ qubits.
-> En concreto, la operación de identidad en $n $ qubits se representa mediante $n $ copias del estado enenredado $ \ket{\beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$.
+> En concreto, la operación de identidad en $n $ qubits se representa mediante $n $ copias del estado enenredado $ \ket{\ beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$.
 > La operación <xref:microsoft.quantum.preparation.preparechoistate> implementa este isomorphism y prepara un estado que representa una operación determinada.
 
 En líneas generales, estas estrategias se distinguen por un equilibrio de tiempo y espacio.

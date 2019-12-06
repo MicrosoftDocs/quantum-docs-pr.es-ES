@@ -5,18 +5,17 @@ author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4677b0f9c4f64a9c1bc46d34e8a883dc006ba8f0
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183308"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863153"
 ---
-# <a name="going-further"></a>Más información #
+# <a name="going-further"></a>Ir más allá #
 
 Ahora que ha visto cómo escribir programas Quantum interesantes en p #, en esta sección se explica con más detalle mediante la introducción de algunos temas más avanzados que deberían resultar útiles en el futuro.
 
-<!-- Moved Debugging and Testing Quantum Programs section to a separate article -->
 
 ## <a name="generic-operations-and-functions"></a>Operaciones y funciones genéricas ##
 
@@ -178,6 +177,6 @@ is Adj + Ctl {
 }
 ```
 
-Tenga en cuenta que el uso extensivo del `With` combinador---en su forma que es aplicable a las operaciones que admiten el modo contiguo, es decir, `WithA`---se realizó en este ejemplo, que es un estilo de programación adecuado como agregar control a las estructuras que solo implican `With` propaga el control a la operación interna. Tenga en cuenta que aquí, además de la `body` de la operación, se proporcionó explícitamente una implementación del cuerpo `controlled` de la operación, en lugar de recurrir a una instrucción `controlled auto`. La razón es que sabemos de la estructura del circuito cómo agregar fácilmente más controles, lo que es beneficioso en comparación con la adición de control a cada una de las puertas individuales del `body`. 
+Tenga en cuenta que el uso extensivo del `With` combinador---en su forma que es aplicable a las operaciones que admiten el operador de cojoin, es decir, `WithA`---se realizó en este ejemplo, que es un estilo de programación adecuado, ya que agregar el control a las estructuras que implican `With` solo propaga el control a la operación interna. Tenga en cuenta que aquí, además de la `body` de la operación, se proporcionó explícitamente una implementación del cuerpo `controlled` de la operación, en lugar de recurrir a una instrucción `controlled auto`. La razón es que sabemos de la estructura del circuito cómo agregar fácilmente más controles, lo que es beneficioso en comparación con la adición de control a cada una de las puertas individuales del `body`. 
 
 Es instructivo comparar este código con otra función de Canon `MultiControlledXClean` que logra el mismo objetivo de implementar una operación de `X` controlada multiplicada, sin embargo, que usa varios qubits limpios con el mecanismo de `using`. 

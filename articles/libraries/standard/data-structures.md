@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184515"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864362"
 ---
 # <a name="data-structures-and-modeling"></a>Modelado y estructuras de datos #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184515"
 Junto con los tipos definidos por el usuario para representar los conceptos de Quantum, el Canon también proporciona operaciones, funciones y tipos para trabajar con datos de uso clásico en el control de sistemas Quantum.
 Por ejemplo, la función <xref:microsoft.quantum.arrays.reversed> toma una matriz como entrada y devuelve la misma matriz en orden inverso.
 A continuación, se puede usar en una matriz de tipo `Qubit[]` para evitar tener que aplicar las puertas $ \operatorname{SWAP} $ innecesarias al convertir entre representaciones de Quantum de enteros.
-Del mismo modo, vimos en la sección anterior que los tipos de `(Int, Int -> T)` de formulario pueden ser útiles para representar colecciones de acceso aleatorio, por lo que la función <xref:microsoft.quantum.arrays.lookupfunction> proporciona una manera convienent de construir estos tipos a partir de tipos de matriz.
+Del mismo modo, vimos en la sección anterior que los tipos de `(Int, Int -> T)` de formulario pueden ser útiles para representar colecciones de acceso aleatorio, por lo que la función <xref:microsoft.quantum.arrays.lookupfunction> proporciona una forma cómoda de construir estos tipos a partir de tipos de matriz.
 
 ### <a name="pairs"></a>Pair ###
 
@@ -77,7 +77,7 @@ Además, los tipos definidos por el usuario se usan para etiquetar las distintas
 
 Estas Oracle aparecen en varios contextos diferentes, incluidos ejemplos famosos como los algoritmos [de búsqueda y de simulación de Quantum de Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
 Aquí nos centramos en los Oracle necesarios solo para dos aplicaciones: amplificación de amplitud y estimación de fase.
-En primer lugar, analizaremos la amplificación de amplitud Oracle antes de prousar la estimación de fase.
+En primer lugar, analizaremos la amplificación de amplitud Oracle antes de proceder a la estimación de fase.
 
 ### <a name="amplitude-amplification-oracles"></a>Oracle de amplificación de amplitud ###
 
@@ -145,7 +145,7 @@ is Adj + Ctl {
 }
 ```
 
-A continuación, podemos combinar estos dos Oracle juntos para rotar entre los dos Estados y transformar de forma determinista $ \ket{+} ^ {\otimes n} $ en $ \ket{0}$ mediante un número de capas de puertas de Hadamard que es proporcional a $ \sqrt{2 ^ n} $ (IE $m \propto \sqrt{2 ^ n} $) en comparación con las capas aproximadamente de $2 ^ n $ que se necesitarían para preparar de forma no determinista el estado $ \ket{0}$ al preparar y medir el estado inicial hasta que se observe el resultado $0 $.
+A continuación, podemos combinar estos dos Oracle juntos para rotar entre los dos Estados y transformar de forma determinista $ \ket{+} ^ {\otimes n} $ en $ \ket{0}$ mediante un número de capas de puertas de Hadamard que es proporcional a $ \sqrt{2 ^ n} $ (es decir, $m \propto \sqrt{2 ^ n} $) frente a las capas aproximadamente de $2 ^ n $ que serían necesarias para preparar de forma no determinista el estado $ \ket{0}$ mediante la preparación y medición del estado inicial hasta que se observe el resultado $0 $.
 
 ### <a name="phase-estimation-oracles"></a>Estimación de fase de Oracle ###
 
@@ -157,8 +157,8 @@ Esta unitario se describe habitualmente mediante uno de dos tipos de Oracle.
 
 > [!TIP]
 > Los dos tipos de Oracle descritos a continuación se describen en los ejemplos.
-> Para obtener más información acerca de las Oracle de consulta continua, consulte el ejemplo de [ **PhaseEstimation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation).
-> Para obtener más información sobre Oracle de consultas discretas, consulte el [ejemplo de **IsingPhaseEstimation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
+> Para obtener más información acerca de las Oracle de consulta continua, consulte el ejemplo de [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
+> Para obtener más información sobre Oracle de consultas discretas, consulte el [ejemplo de **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
 
 El primer tipo de Oracle, que llamamos una consulta discreta de Oracle y que se representa con el tipo definido por el usuario <xref:microsoft.quantum.oracles.discreteoracle>, simplemente implica una matriz de unitarios.
 Si $U $ es la unitario cuyo vectores propios desea calcular, Oracle para $U $ es simplemente un producto para una subrutina que implementa $U $.
@@ -199,17 +199,17 @@ Un objetivo principal de la simulación dinámica es implementar el operador de 
 
 $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-en el caso de que la evolución de la hora por cada término solo sea fácil de implementar en un equipo Quantum. Por ejemplo, si $H _J $ es un operador Pauli $X _1X_2 $ que actúa sobre los elementos 1 y 2 de la `qubits`de registro qubit, la evolución de la hora de este en cualquier momento $t $ se puede implementar simplemente mediante una llamada a la operación `Exp([PauliX,PauliX], t, qubits[1..2])`, que tiene `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`de firma. Como se describe más adelante en la simulación de Hamiltonian, una solución consiste en aproximar la evolución del tiempo mediante $H $ con una secuencia de operaciones más sencillas.
+en el caso de que la evolución de la hora por cada término solo sea fácil de implementar en un equipo Quantum. Por ejemplo, si $H _j $ es un operador Pauli $X _1X_2 $ que actúa sobre los elementos 1 y 2 de la `qubits`de registro qubit, la evolución de la hora por ti en cualquier momento $t $ se puede implementar simplemente mediante una llamada a la operación `Exp([PauliX,PauliX], t, qubits[1..2])`, que tiene `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`de firma. Como se describe más adelante en la simulación de Hamiltonian, una solución consiste en aproximar la evolución del tiempo mediante $H $ con una secuencia de operaciones más sencillas.
 
-$ $ \begin{align} U (t) & = \left (e ^ {-admitir\_0 t/r} e ^ {-admitir\_1 t/r} \cdots e ^ {-admitir\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
+$ $ \begin{align} U (t) & = \left (e ^ {-admitir\_0 t/r} e ^ {-admitir\_1 t/r} \cdots e ^ {-admitir\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
 
 donde el entero $r > $0 controla el error de aproximación.
 
 La biblioteca de modelado de generación dinámica proporciona un marco para codificar sistemáticamente generadores complicados en términos de generadores más sencillos. Una descripción de este tipo se puede pasar a, por ejemplo, a la biblioteca de simulación para implementar la evolución del tiempo mediante un algoritmo de simulación de elección, con muchos detalles que se deben tener en cuenta automáticamente.
 
 > [!TIP]
-> La biblioteca de generadores dinámicos que se describe a continuación se incluye en los ejemplos. Para ver un ejemplo basado en el modelo Ising, consulte el [ejemplo **IsingGenerators** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators).
-> Para ver un ejemplo basado en hidrógeno molecular, consulte los ejemplos de [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) y [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) .
+> La biblioteca de generadores dinámicos que se describe a continuación se incluye en los ejemplos. Para ver un ejemplo basado en el modelo Ising, consulte el [ejemplo **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
+> Para ver un ejemplo basado en hidrógeno molecular, consulte los ejemplos de [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) y [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Descripción completa de un generador ###
 
@@ -244,7 +244,7 @@ $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{align} $ $, donde c
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-En nuestra codificación, el primer parámetro `Int[]` especifica una cadena Pauli, donde $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2 y $ \hat Z\rightarrow $3. El segundo parámetro `Double[]` almacena el coeficiente de la cadena Pauli en Hamiltonian. Tenga en cuenta que solo se usa el primer elemento de esta matriz. El tercer parámetro `Int[]` indiza el qubits en el que actúa esta cadena Pauli y no debe tener elementos duplicados. Por lo tanto, Hamiltonian term $0,4 \hat X_0 \hat Y_8\hat I_2\hat Z_1 $ se puede representar como
+En nuestra codificación, el primer parámetro `Int[]` especifica una cadena Pauli, donde $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2 y $ \hat Z\rightarrow $3. El segundo parámetro `Double[]` almacena el coeficiente de la cadena Pauli en Hamiltonian. Tenga en cuenta que solo se usa el primer elemento de esta matriz. El tercer parámetro `Int[]` indiza el qubits en el que actúa esta cadena Pauli y no debe tener elementos duplicados. Por lo tanto, Hamiltonian term $0,4 \hat X_0 \hat Y_8 \hat I_2 \hat Z_1 $ se puede representar como
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);
