@@ -3,85 +3,37 @@ uid: microsoft.quantum.canon
 name: Microsoft.Quantum.Canon
 functions:
 - uid: microsoft.quantum.canon.asqubitarray
-  summary: >-
-    > [!WARNING]
-
-    > Se ha quitado esta función en desuso.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAsQubitArray está en desuso.\nEsta función se ha quitado."
 - uid: microsoft.quantum.canon.assertalmostequal
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertAlmostEqual está en desuso. Use @\"microsoft.quantum.diagnostics.nearequalityfactd\" en su lugar.\nUse @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" en su lugar."
 - uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertAlmostEqualTol está en desuso. Use @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" en su lugar.\nUse @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" en su lugar."
 - uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Diagnostics.AllEqualityFactB" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertBoolArrayEqual está en desuso. Use @\"microsoft.quantum.diagnostics.allequalityfactb\" en su lugar.\nUse @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" en su lugar."
 - uid: microsoft.quantum.canon.assertboolequal
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Diagnostics.EqualityFactB" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertBoolEqual está en desuso. Use @\"microsoft.quantum.diagnostics.equalityfactb\" en su lugar.\nUse @\"Microsoft.Quantum.Diagnostics.EqualityFactB\" en su lugar."
 - uid: microsoft.quantum.canon.assertintequal
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Diagnostics.EqualityFactI" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertIntEqual está en desuso. Use @\"microsoft.quantum.diagnostics.equalityfacti\" en su lugar.\nUse @\"Microsoft.Quantum.Diagnostics.EqualityFactI\" en su lugar."
 - uid: microsoft.quantum.canon.assertresultequal
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Diagnostics.EqualityFactR" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertResultEqual está en desuso. Use @\"microsoft.quantum.diagnostics.equalityfactr\" en su lugar.\nUse @\"Microsoft.Quantum.Diagnostics.EqualityFactR\" en su lugar."
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian".
+  summary: "\n> [!WARNING]\n> En desuso\n\nBigEndianToLittleEndian está en desuso. Use @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
 - uid: microsoft.quantum.canon.bind
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.bound".
+  summary: "\n> [!WARNING]\n> En desuso\n\nEl enlace está en desuso. Use @\"microsoft.quantum.canon.bound\" en su lugar.\nUse @\"microsoft.quantum.canon.bound\"."
 - uid: microsoft.quantum.canon.binda
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.bounda".
+  summary: "\n> [!WARNING]\n> En desuso\n\nBinda está en desuso. Use @\"microsoft.quantum.canon.bounda\" en su lugar.\nUse @\"microsoft.quantum.canon.bounda\"."
 - uid: microsoft.quantum.canon.bindc
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.boundc".
+  summary: "\n> [!WARNING]\n> En desuso\n\nBindC está en desuso. Use @\"microsoft.quantum.canon.boundc\" en su lugar.\nUse @\"microsoft.quantum.canon.boundc\"."
 - uid: microsoft.quantum.canon.bindca
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.boundca".
+  summary: "\n> [!WARNING]\n> En desuso\n\nBindCA está en desuso. Use @\"microsoft.quantum.canon.boundca\" en su lugar.\nUse @\"microsoft.quantum.canon.boundca\"."
 - uid: microsoft.quantum.canon.bitsize
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.bitsizei".
+  summary: "\n> [!WARNING]\n> En desuso\n\nEl bit de BitS está en desuso. Use @\"microsoft.quantum.math.bitsizei\" en su lugar.\nUse @\"microsoft.quantum.math.bitsizei\"."
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.intasboolarray".
+  summary: "\n> [!WARNING]\n> En desuso\n\nBoolArrFromPositiveInt está en desuso. Use @\"microsoft.quantum.convert.intasboolarray\" en su lugar.\nUse @\"microsoft.quantum.convert.intasboolarray\"."
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.resultarrayasboolarray".
+  summary: "\n> [!WARNING]\n> En desuso\n\nBoolArrFromResultArr está en desuso. Use @\"microsoft.quantum.convert.resultarrayasboolarray\" en su lugar.\nUse @\"microsoft.quantum.convert.resultarrayasboolarray\"."
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.resultasbool".
+  summary: "\n> [!WARNING]\n> En desuso\n\nBoolFromResult está en desuso. Use @\"microsoft.quantum.convert.resultasbool\" en su lugar.\nUse @\"microsoft.quantum.convert.resultasbool\"."
 - uid: microsoft.quantum.canon.bound
   summary: Dada una matriz de operaciones que actúan en una sola entrada, genera una nueva operación que realiza cada operación dada en secuencia.
 - uid: microsoft.quantum.canon.bounda
@@ -131,10 +83,7 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: Dadas las operaciones externas e internas, devuelve una nueva operación que conjuga la operación interna mediante la operación externa.
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.continuedfractionconvergenti".
+  summary: "\n> [!WARNING]\n> En desuso\n\nContinuedFractionConvergent está en desuso. Use @\"microsoft.quantum.math.continuedfractionconvergenti\" en su lugar.\nUse @\"microsoft.quantum.math.continuedfractionconvergenti\"."
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Devuelve un operador unitario que aplica un Oracle en el registro de destino si el estado del registro de control corresponde a una máscara de bits especificada.
 - uid: microsoft.quantum.canon.controlledonint
@@ -146,10 +95,7 @@ functions:
 
     Es decir, dada una operación con dos entradas, esta función aplica isomorphism de la $f (x, y) \equiv f (x) $ para devolver una operación de una entrada que devuelve una operación de una entrada.
 - uid: microsoft.quantum.canon.curryop
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.curriedop".
+  summary: "\n> [!WARNING]\n> En desuso\n\nCurryOp está en desuso. Use @\"microsoft.quantum.canon.curriedop\" en su lugar.\nUse @\"microsoft.quantum.canon.curriedop\"."
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
   summary: Devuelve una operación que implementa el integrador Trotter – Suzuki para una operación determinada.
 - uid: microsoft.quantum.canon.delayed
@@ -163,105 +109,57 @@ functions:
 - uid: microsoft.quantum.canon.embedpauli
   summary: Dado un operador Pauli de un solo qubit y el índice de un qubit, devuelve un operador Pauli de qubit múltiple con el operador único de qubit especificado en ese índice y `PauliI` en cada uno de los demás índices.
 - uid: microsoft.quantum.canon.expmod
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.expmodi".
+  summary: "\n> [!WARNING]\n> En desuso\n\nExpMod está en desuso. Use @\"microsoft.quantum.math.expmodi\" en su lugar.\nUse @\"microsoft.quantum.math.expmodi\"."
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.extendedgreatestcommondivisori".
+  summary: "\n> [!WARNING]\n> En desuso\n\nExtendedGCD está en desuso. Use @\"microsoft.quantum.math.extendedgreatestcommondivisori\" en su lugar.\nUse @\"microsoft.quantum.math.extendedgreatestcommondivisori\"."
 - uid: microsoft.quantum.canon.filter
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arrays.Filtered" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nEl filtro está en desuso. Use @\"microsoft.quantum.arrays.filtered\" en su lugar.\nUse @\"Microsoft.Quantum.Arrays.Filtered\" en su lugar."
 - uid: microsoft.quantum.canon.forall
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arrays.All" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nForAll está en desuso. Use @\"microsoft.quantum.arrays.all\" en su lugar.\nUse @\"Microsoft.Quantum.Arrays.All\" en su lugar."
 - uid: microsoft.quantum.canon.forany
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arrays.Any" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nDaños está en desuso. Use @\"microsoft.quantum.arrays.any\" en su lugar.\nUse @\"Microsoft.Quantum.Arrays.Any\" en su lugar."
 - uid: microsoft.quantum.canon.fst
   summary: Dado un par, devuelve su primer elemento.
 - uid: microsoft.quantum.canon.gcd
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.greatestcommondivisori".
+  summary: "\n> [!WARNING]\n> En desuso\n\nEl M.C. d está en desuso. Use @\"microsoft.quantum.math.greatestcommondivisori\" en su lugar.\nUse @\"microsoft.quantum.math.greatestcommondivisori\"."
 - uid: microsoft.quantum.canon.ignore
   summary: Omite el resultado de una operación o función.
 - uid: microsoft.quantum.canon.intabs
-  summary: >-
-    > [!WARNING]
-
-    > Se ha quitado esta función en desuso.
+  summary: "\n> [!WARNING]\n> En desuso\n\nLas inpestañas están desusadas. Use @\"microsoft.quantum.math.absi\" en su lugar.\nEsta función se ha quitado."
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.rangeasintarray".
+  summary: "\n> [!WARNING]\n> En desuso\n\nIntArrayFromRange está en desuso. Use @\"microsoft.quantum.convert.rangeasintarray\" en su lugar.\nUse @\"microsoft.quantum.convert.rangeasintarray\"."
 - uid: microsoft.quantum.canon.intmax
-  summary: >-
-    > [!WARNING]
-
-    > Se ha quitado esta función en desuso.
+  summary: "\n> [!WARNING]\n> En desuso\n\nIntMax está en desuso. Use @\"microsoft.quantum.math.maxi\" en su lugar.\nEsta función se ha quitado."
 - uid: microsoft.quantum.canon.inversemod
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.inversemodi".
+  summary: "\n> [!WARNING]\n> En desuso\n\nInverseMod está en desuso. Use @\"microsoft.quantum.math.inversemodi\" en su lugar.\nUse @\"microsoft.quantum.math.inversemodi\"."
 - uid: microsoft.quantum.canon.iscoprime
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.greatestcommondivisori".
+  summary: "\n> [!WARNING]\n> En desuso\n\nIsCoprime está en desuso. Use @\"microsoft.quantum.math.iscoprimei\" en su lugar.\nUse @\"microsoft.quantum.math.greatestcommondivisori\"."
 - uid: microsoft.quantum.canon.isresultone
   summary: Comprueba si un valor de resultado determinado es igual a `One`.
 - uid: microsoft.quantum.canon.isresultzero
   summary: Comprueba si un valor de resultado determinado es igual a `Zero`.
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian".
+  summary: "\n> [!WARNING]\n> En desuso\n\nLittleEndianToBigEndian está en desuso. Use @\"microsoft.quantum.arithmetic.littleendianasbigendian\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
 - uid: microsoft.quantum.canon.map
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arrays.Mapped" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nLa asignación está en desuso. Use @\"microsoft.quantum.arrays.mapped\" en su lugar.\nUse @\"Microsoft.Quantum.Arrays.Mapped\" en su lugar."
 - uid: microsoft.quantum.canon.mapindex
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arrays.MappedByIndex" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nMapIndex está en desuso. Use @\"microsoft.quantum.arrays.mappedbyindex\" en su lugar.\nUse @\"Microsoft.Quantum.Arrays.MappedByIndex\" en su lugar."
 - uid: microsoft.quantum.canon.modulus
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.modulusi".
+  summary: "\n> [!WARNING]\n> En desuso\n\nEl módulo está en desuso. Use @\"microsoft.quantum.math.modulusi\" en su lugar.\nUse @\"microsoft.quantum.math.modulusi\"."
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
-    Devuelve una operación de unitario con control de multiplicación $U $ que aplica un valor unitario $V _J $ cuando está controlado por el estado de número n-qubit $ \ket{j} $.
+    Devuelve una operación de unitario con control de multiplicación $U $ que aplica una $V unitario _j $ cuando está controlada por el estado de n-qubit número $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexerfromgenerator
   summary: >-
-    Devuelve una operación de unitario con control de multiplicación $U $ que aplica un valor unitario $V _J $ cuando está controlado por el estado de número n-qubit $ \ket{j} $.
+    Devuelve una operación de unitario con control de multiplicación $U $ que aplica una $V unitario _j $ cuando está controlada por el estado de n-qubit número $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.nearequalityfact
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nNearEqualityFact está en desuso. Use @\"microsoft.quantum.diagnostics.nearequalityfactd\" en su lugar.\nUse @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" en su lugar."
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     Eleva una operación a una potencia.
@@ -293,30 +191,15 @@ functions:
 
     Es decir, dada una operación que representa una puerta $U $, devuelve una nueva operación $U ^ m $ para una potencia $m $.
 - uid: microsoft.quantum.canon.pad
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arrays.Padded" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nPad está en desuso. Use @\"microsoft.quantum.arrays.padded\" en su lugar.\nUse @\"Microsoft.Quantum.Arrays.Padded\" en su lugar."
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.boolarrayaspauli".
+  summary: "\n> [!WARNING]\n> En desuso\n\nPauliFromBitString está en desuso. Use @\"microsoft.quantum.convert.boolarrayaspauli\" en su lugar.\nUse @\"microsoft.quantum.convert.boolarrayaspauli\"."
 - uid: microsoft.quantum.canon.pnormalize
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.math.pnormalized".
+  summary: "\n> [!WARNING]\n> En desuso\n\nPNormalize está en desuso. Use @\"microsoft.quantum.math.pnormalized\" en su lugar.\nUse @\"microsoft.quantum.math.pnormalized\"."
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.boolarrayasint".
+  summary: "\n> [!WARNING]\n> En desuso\n\nPositiveIntFromBoolArr está en desuso. Use @\"microsoft.quantum.convert.boolarrayasint\" en su lugar.\nUse @\"microsoft.quantum.convert.boolarrayasint\"."
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.resultarrayasint".
+  summary: "\n> [!WARNING]\n> En desuso\n\nPositiveIntFromResultArr está en desuso. Use @\"microsoft.quantum.convert.resultarrayasint\" en su lugar.\nUse @\"microsoft.quantum.canon.resultarrayasint\"."
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: Restringe una operación a una matriz de índices de un registro, es decir, un subregistro.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -335,52 +218,25 @@ functions:
 
     El modificador `CA` indica que la operación es controlable y adjointable.
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.restrictedtosubregister".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRestrictToSubregister está en desuso. Use @\"microsoft.quantum.canon.restrictedtosubregister\" en su lugar.\nUse @\"microsoft.quantum.canon.restrictedtosubregister\"."
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.restrictedtosubregistera".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRestrictToSubregisterA está en desuso. Use @\"microsoft.quantum.canon.restrictedtosubregistera\" en su lugar.\nUse @\"microsoft.quantum.canon.restrictedtosubregistera\"."
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.restrictedtosubregisterc".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRestrictToSubregisterC está en desuso. Use @\"microsoft.quantum.canon.restrictedtosubregisterc\" en su lugar.\nUse @\"microsoft.quantum.canon.restrictedtosubregisterc\"."
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.restrictedtosubregisterca".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRestrictToSubregisterCA está en desuso. Use @\"microsoft.quantum.canon.restrictedtosubregisterca\" en su lugar.\nUse @\"microsoft.quantum.canon.restrictedtosubregisterca\"."
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.resultarrayasboolarray".
+  summary: "\n> [!WARNING]\n> En desuso\n\nResultArrFromBoolArr está en desuso. Use @\"microsoft.quantum.convert.boolarrayasresultarray\" en su lugar.\nUse @\"microsoft.quantum.convert.resultarrayasboolarray\"."
 - uid: microsoft.quantum.canon.resultasint
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.resultarrayasint".
+  summary: "\n> [!WARNING]\n> En desuso\n\nResultAsInt está en desuso. Use @\"microsoft.quantum.convert.resultarrayasint\" en su lugar.\nUse @\"microsoft.quantum.convert.resultarrayasint\"."
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.boolasresult".
+  summary: "\n> [!WARNING]\n> En desuso\n\nResultFromBool está en desuso. Use @\"microsoft.quantum.convert.boolasresult\" en su lugar.\nUse @\"microsoft.quantum.convert.boolasresult\"."
 - uid: microsoft.quantum.canon.reverse
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arrays.Reversed" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nReverse está en desuso. Use @\"microsoft.quantum.arrays.reversed\" en su lugar.\nUse @\"Microsoft.Quantum.Arrays.Reversed\" en su lugar."
 - uid: microsoft.quantum.canon.snd
   summary: Dado un par, devuelve su segundo elemento.
 - uid: microsoft.quantum.canon.splitarray
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arrays.Partitioned" en su lugar.
+  summary: "\n> [!WARNING]\n> En desuso\n\nSplitArray está en desuso. Use @\"microsoft.quantum.arrays.partitioned\" en su lugar.\nUse @\"Microsoft.Quantum.Arrays.Partitioned\" en su lugar."
 - uid: microsoft.quantum.canon.stackcapacity
   summary: Recupera la capacidad de un <xref:microsoft.quantum.canon.resultstack>.
 - uid: microsoft.quantum.canon.stacklength
@@ -394,10 +250,7 @@ functions:
 - uid: microsoft.quantum.canon.stackpush
   summary: Envía un nuevo elemento a un <xref:microsoft.quantum.canon.resultstack>.
 - uid: microsoft.quantum.canon.tooperation
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.convert.functionasoperation".
+  summary: "\n> [!WARNING]\n> En desuso\n\nToOperation está en desuso. Use @\"microsoft.quantum.convert.functionasoperation\" en su lugar.\nUse @\"microsoft.quantum.convert.functionasoperation\"."
 - uid: microsoft.quantum.canon.transformedoperation
   summary: Dada una función y una operación, devuelve una nueva operación cuya entrada se transforma mediante la función especificada.
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -424,50 +277,35 @@ functions:
 
     El modificador `CA` indica que las operaciones se pueden controlar y adjointable.
 - uid: microsoft.quantum.canon.uncurryop
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.uncurriedop".
+  summary: "\n> [!WARNING]\n> En desuso\n\nUncurryOp está en desuso. Use @\"microsoft.quantum.canon.uncurriedop\" en su lugar.\nUse @\"microsoft.quantum.canon.uncurriedop\"."
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.uncurriedopa".
+  summary: "\n> [!WARNING]\n> En desuso\n\nUncurryOpA está en desuso. Use @\"microsoft.quantum.canon.uncurriedopa\" en su lugar.\nUse @\"microsoft.quantum.canon.uncurriedopa\"."
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.uncurriedopc".
+  summary: "\n> [!WARNING]\n> En desuso\n\nUncurryOpC está en desuso. Use @\"microsoft.quantum.canon.uncurriedopc\" en su lugar.\nUse @\"microsoft.quantum.canon.uncurriedopc\"."
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.uncurriedopca".
+  summary: "\n> [!WARNING]\n> En desuso\n\nUncurryOpCA está en desuso. Use @\"microsoft.quantum.canon.uncurriedopca\" en su lugar.\nUse @\"microsoft.quantum.canon.uncurriedopca\"."
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: Devuelve una matriz de todos los operadores Weight-1 Pauli en un número determinado de qubits.
 - uid: microsoft.quantum.canon.xor
   summary: Calcula el OR exclusivo de dos bits.
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.simuilation.pnormalized".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAdiabaticStateEnergyUnitary está en desuso. Use @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" en su lugar.\nUse @\"microsoft.quantum.simuilation.pnormalized\"."
 - uid: microsoft.quantum.canon.andladder
   summary: >-
     Realiza una "y escalera" controlada en el qubits de destino.
 
 
-    Esto aplica una unitario proporcionada por el siguiente mapa en vectores de base de cálculo: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $ Where $ \ket{x\_1, \dots, x\_n} $ hace referencia a los Estados de base de cálculo de `controls`y donde $ \ket{y\_1, \dots, y\_{n-1}} $ hace referencia a los Estados de base de cálculo de `targets`.
+    Esto aplica un unitario dado por el siguiente mapa en vectores de base de cálculo: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{align} $ $ Where $ \ket{x\_1, \dots, x\_n} $ hace referencia a los Estados de base de cálculo de `controls`y donde $ \ket{y\_1, \dots, y\_{n-1}} $ hace referencia a los Estados de base de cálculo de `targets`.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
     Aplica una matriz de fases complejas a Estados de base numéricos de un registro de qubits.
 
 
-    Es decir, implementa la operación de unitarios diagonal $U $ que aplica una fase compleja $e ^ {i \theta_j} $ en $n el estado de número $ \ket{j} $-qubit.
+    Es decir, implementa la operación de la operación de unitarios diagonal $U $ que aplica una fase compleja $e ^ {i \ theta_j} $ en el $n $-qubit Number State $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ les {j} \ Bra {j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j} $.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: Aplica el intercambio de Fermionic.
 - uid: microsoft.quantum.canon.applyif
@@ -520,6 +358,14 @@ operations:
     Aplica una versión con control de multiplicación de una operación controlada de una sola vez.
 
     El modificador `CA` indica que la operación de un solo qubit es controlable y adjointable.
+- uid: microsoft.quantum.canon.applyoprepeatedlyover
+  summary: Aplica la misma operación sobre un registro de qubit varias veces.
+- uid: microsoft.quantum.canon.applyoprepeatedlyovera
+  summary: Aplica la misma operación sobre un registro de qubit varias veces.
+- uid: microsoft.quantum.canon.applyoprepeatedlyoverc
+  summary: Aplica la misma operación sobre un registro de qubit varias veces.
+- uid: microsoft.quantum.canon.applyoprepeatedlyoverca
+  summary: Aplica la misma operación sobre un registro de qubit varias veces.
 - uid: microsoft.quantum.canon.applypauli
   summary: Dado un operador Pauli de varios qubit, aplica la operación correspondiente a un registro.
 - uid: microsoft.quantum.canon.applypaulifrombitstring
@@ -527,62 +373,37 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransform
   summary: Realiza la transformación de Fourier de Quantum en un registro de Quantum que contiene un entero en la representación Little-Endian.
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
-  summary: >-
-    > [!WARNING]
-
-    > Se ha quitado esta operación.
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyQuantumFourierTransformBE está en desuso. En su lugar, use @ \"applyquantumfouriertransform (bigendianaslittleendian (q))\".\nEsta operación se ha quitado."
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: ''
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyQuantumFourierTransformLE está en desuso. Use @\"microsoft.quantum.canon.applyquantumfouriertransform\" en su lugar.\nUse @\"microsoft.quantum.canon.applyquantumfouriertransform\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyReversedOpBigEndian está en desuso. Use @\"microsoft.quantum.arithmetic.applyreversedopbe\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyReversedOpBigEndianA está en desuso. Use @\"microsoft.quantum.arithmetic.applyreversedopbea\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyReversedOpBigEndianC está en desuso. Use @\"microsoft.quantum.arithmetic.applyreversedopbec\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyReversedOpBigEndianCA está en desuso. Use @\"microsoft.quantum.arithmetic.applyreversedopbeca\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyReversedOpLittleEndian está en desuso. Use @\"microsoft.quantum.arithmetic.applyreversedople\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyReversedOpLittleEndianA está en desuso. Use @\"microsoft.quantum.arithmetic.applyreversedoplea\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyReversedOpLittleEndianC está en desuso. Use @\"microsoft.quantum.arithmetic.applyreversedoplec\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyReversedOpLittleEndianCA está en desuso. Use @\"microsoft.quantum.arithmetic.applyreversedopleca\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
-  summary: >-
-    > [!WARNING]
-
-    > Se ha quitado esta operación.
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyRippleCarryComparatorBE está en desuso. Use @ \"compareusingripplecarry (bigendianaslittleendian (x), bigendianaslittleendian (y), Output)\" en su lugar.\nEsta operación se ha quitado."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry".
+  summary: "\n> [!WARNING]\n> En desuso\n\nApplyRippleCarryComparatorLE está en desuso. Use @\"microsoft.quantum.arithmetic.compareusingripplecarry\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
+- uid: microsoft.quantum.canon.applyseriesofops
+  summary: Aplica una lista de operaciones y sus destinos secuencialmente en una matriz.
+- uid: microsoft.quantum.canon.applyseriesofopsa
+  summary: Aplica una lista de operaciones y sus destinos secuencialmente en una matriz. (Contiguo)
+- uid: microsoft.quantum.canon.applyseriesofopsc
+  summary: Aplica una lista de operaciones y sus destinos secuencialmente en una matriz. Regula
+- uid: microsoft.quantum.canon.applyseriesofopsca
+  summary: Aplica una lista de operaciones y sus destinos secuencialmente en una matriz. (Contiguot + controlado)
 - uid: microsoft.quantum.canon.applytoeach
   summary: Aplica una operación de un solo qubit a cada elemento de un registro.
 - uid: microsoft.quantum.canon.applytoeacha
@@ -721,15 +542,9 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: Aplique la transformación de Fourier de Quantum aproximada (AQFT) a un registro de Quantum.
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertHighestBit está en desuso. Use @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertLessThanPhaseLE está en desuso. Use @\"microsoft.quantum.arithmetic.assertphaselessthan\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     Declara que la fase de un estado de superposición igual tiene el valor esperado.
@@ -737,10 +552,7 @@ operations:
 
     En concreto, garantiza que la fase $ \phi $ de un estado de Quantum que se puede expresar como $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ les{0} + e ^ {-i\phi} \ les{1}) $ para alguna instrucción real real de t arbitrario tiene el valor esperado.
 - uid: microsoft.quantum.canon.assertprobintbe
-  summary: >-
-    > [!WARNING]
-
-    > Se ha quitado esta operación.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertProbIntBE está en desuso. Use @ \"assertprobint (stateindex, prob, bigendianaslittleendian (qubits), Tolerance)\" en su lugar.\nEsta operación se ha quitado."
 - uid: microsoft.quantum.canon.cnotchain
   summary: >-
     Calcula la paridad de una matriz de qubits en contexto.
@@ -752,30 +564,27 @@ operations:
     Calcula la paridad de una matriz de qubits en un qubit de destino.
 
 
-    Si la matriz está inicialmente en el estado $ \ket{q_0} \ket{q_1} \cdots \ket{Q_{\text{Target}}} $, el estado final lo proporciona $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{Q_{n-1} \oplus \cdots \oplus q_0 \oplus Q_ {\text{Target}}} $.
+    Si la matriz está inicialmente en el estado $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\text{Target}}} $, el estado final lo proporciona $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\text{Target}}} $.
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit".
+  summary: "\n> [!WARNING]\n> En desuso\n\nCopyMostSignificantBitLE está en desuso. Use @\"microsoft.quantum.arithmetic.copymostsignificantbit\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
 - uid: microsoft.quantum.canon.cx
   summary: >-
     Aplica la puerta controlada X (CX) a un par de qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $, donde las filas y las columnas se organizan como en la guía de conceptos de Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align}, $ $, donde las filas y columnas están organizadas como en la guía de conceptos de Quantum.
 - uid: microsoft.quantum.canon.cy
   summary: >-
     Aplica la puerta controlada-Y (CY) a un par de qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align} , $ $, donde las filas y las columnas se organizan como en la guía de conceptos de Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align}, $ $, donde las filas y columnas están organizadas como en la guía de conceptos de Quantum.
 - uid: microsoft.quantum.canon.cz
   summary: >-
     Aplica la puerta controlada-Z (CZ) a un par de qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $, donde las filas y las columnas se organizan como en la guía de conceptos de Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align}, $ $, donde las filas y columnas están organizadas como en la guía de conceptos de Quantum.
 - uid: microsoft.quantum.canon.delay
   summary: Aplica una operación determinada con un retraso.
 - uid: microsoft.quantum.canon.delaya
@@ -796,77 +605,47 @@ operations:
 
     \end{align}
 - uid: microsoft.quantum.canon.inplacexorbe
-  summary: >-
-    > [!WARNING]
-
-    > Se ha quitado esta operación.
+  summary: "\n> [!WARNING]\n> En desuso\n\nInPlaceXorBE está en desuso. Use @ \"applyreversedopleca (applyxorinplace (Value, _), Target)\" en su lugar.\nEsta operación se ha quitado."
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Measurement.ApplyXorInPlace".
+  summary: "\n> [!WARNING]\n> En desuso\n\nInPlaceXorLE está en desuso. Use @\"microsoft.quantum.measurement.applyxorinplace\" en su lugar.\nUse @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.IncrementByInteger".
+  summary: "\n> [!WARNING]\n> En desuso\n\nIntegerIncrementLE está en desuso. Use @\"microsoft.quantum.arithmetic.incrementbyinteger\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger".
+  summary: "\n> [!WARNING]\n> En desuso\n\nIntegerIncrementPhaseLE está en desuso. Use @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: Recorre en iteración una variable, por ejemplo ARR, a través del producto cartesiano [0, enlazado-1] × [0, enlazado-1] × [0, Bound-1] y llama a OP (arr) para cada elemento del producto cartesiano.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
   summary: Recorre en iteración una variable, por ejemplo `arr`, a través de un producto cartesiano [0, los límites [0]-1] × [0, los límites [1]-1] × [0, los límites [longitud (límites)-1]-1] y llama a OP (arr) para cada elemento del producto cartesiano
 - uid: microsoft.quantum.canon.measureintegerbe
-  summary: >-
-    > [!WARNING]
-
-    > Se ha quitado esta operación.
+  summary: "\n> [!WARNING]\n> En desuso\n\nMeasureIntegerBE está en desuso. En su lugar, use @ \"measureinteger (bigendianaslittleendian (Target))\".\nEsta operación se ha quitado."
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".
+  summary: "\n> [!WARNING]\n> En desuso\n\nModularAddProductLE está en desuso. Use @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger".
+  summary: "\n> [!WARNING]\n> En desuso\n\nModularAddProductPhaseLE está en desuso. Use @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger".
+  summary: "\n> [!WARNING]\n> En desuso\n\nModularIncrementLE está en desuso. Use @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger".
+  summary: "\n> [!WARNING]\n> En desuso\n\nModularIncrementPhaseLE está en desuso. Use @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".
+  summary: "\n> [!WARNING]\n> En desuso\n\nModularMultiplyByConstantLE está en desuso. Use @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     Aplica una matriz de operaciones controlada por una matriz de Estados numéricos.
 
 
-    Es decir, se aplica la operación unitario controlada por multiplicación $U $ que aplica un valor unitario $V _J $ cuando lo controla $n $-qubit Number State $ \ket{j} $.
+    Es decir, se aplica la operación unitario controlada por multiplicación $U $ que aplica una $V unitario _j $ cuando se controla mediante $n $-qubit Number State $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
   summary: >-
-    Aplica la operación de unitarios controlada por multiplicación $U $ que aplica una unitario $V _J $ cuando está controlada por el estado de número n-qubit $ \ket{j} $.
+    Aplica la operación de unitarios controlada por multiplicación $U $ que aplica una $V unitario _j $ cuando está controlada por el estado de n-qubit número $ \ket{j} $.
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
   summary: >-
-    Aplica una operación de unitario con control de multiplicación $U $ que aplica una unitario $V _J $ cuando está controlada por el estado de número n-qubit $ \ket{j} $.
+    Aplica una operación de unitario con control de multiplicación $U $ que aplica una $V unitario _j $ cuando está controlada por el estado de n-qubit número $ \ket{j} $.
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -875,21 +654,23 @@ operations:
     Aplica una rotación Pauli condicionada en una matriz de qubits.
 
 
-    De esta forma se aplica la operación unitario controlada por multiplicación $U $ que realiza rotaciones por ángulo $ \theta_j $ sobre el operador de Pauli de qubit único $P $ cuando lo controla el $n $-qubit Number State $ \ket{j} $.
+    Esto aplica la operación de unitario controlada por multiplicación $U $ que realiza rotaciones por ángulo $ \ theta_j $ sobre el operador Pauli de un solo qubit $P $ cuando lo controla el $n $-qubit Number $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
 - uid: microsoft.quantum.canon.multiplexz
   summary: >-
     Aplica una rotación de Pauli Z condicionada en una matriz de qubits.
 
 
-    De esta forma se aplica la operación unitario controlada por multiplicación $U $ que realiza rotaciones por ángulo $ \theta_j $ sobre el operador de Pauli de qubit único $Z $ cuando lo controla el $n $-qubit Number State $ \ket{j} $.
+    Esto aplica la operación de unitario controlada por multiplicación $U $ que realiza rotaciones por ángulo $ \ theta_j $ sobre el operador Pauli de un solo qubit $Z $ cuando lo controla el $n $-qubit Number $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \ theta_j} $.
 - uid: microsoft.quantum.canon.noop
   summary: Realiza la operación de identidad (no OP) en un argumento.
+- uid: microsoft.quantum.canon.permutequbits
+  summary: Se silencia qubits mediante la operación de intercambio.
 - uid: microsoft.quantum.canon.qft
   summary: Realiza la transformación de Fourier de Quantum en un registro de Quantum que contiene un entero en la representación Big-Endian.
 - uid: microsoft.quantum.canon.qftle
@@ -909,25 +690,13 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Usa las puertas de intercambio para invertir el orden de los qubits en un registro.
 - uid: microsoft.quantum.canon.with
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Canon.ApplyWith".
+  summary: "\n> [!WARNING]\n> En desuso\n\nCon está en desuso. Use @\"microsoft.quantum.canon.applywith\" en su lugar.\nUse @\"Microsoft.Quantum.Canon.ApplyWith\"."
 - uid: microsoft.quantum.canon.witha
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Canon.ApplyWithA".
+  summary: "\n> [!WARNING]\n> En desuso\n\nWitha ha quedado en desuso. Use @\"microsoft.quantum.canon.applywitha\" en su lugar.\nUse @\"Microsoft.Quantum.Canon.ApplyWithA\"."
 - uid: microsoft.quantum.canon.withc
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Canon.ApplyWithC".
+  summary: "\n> [!WARNING]\n> En desuso\n\nWithC está en desuso. Use @\"microsoft.quantum.canon.applywithc\" en su lugar.\nUse @\"Microsoft.Quantum.Canon.ApplyWithC\"."
 - uid: microsoft.quantum.canon.withca
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"Microsoft.Quantum.Canon.ApplyWithCA".
+  summary: "\n> [!WARNING]\n> En desuso\n\nWithCA está en desuso. Use @\"microsoft.quantum.canon.applywithca\" en su lugar.\nUse @\"Microsoft.Quantum.Canon.ApplyWithCA\"."
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: El tipo de firma de la puerta CCNOT.
@@ -937,9 +706,9 @@ newtypes:
 
     La pila consta de una capacidad de entero, un puntero de pila y una matriz de `Result`.
 metadata:
-  ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 457d211ace716ddc09ebcd94c5cbc3c33b42d704
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065170"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858554"

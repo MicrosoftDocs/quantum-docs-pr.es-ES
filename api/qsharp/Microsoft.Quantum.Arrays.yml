@@ -45,8 +45,12 @@ functions:
   summary: Obtiene una matriz de enteros en un intervalo determinado.
 - uid: microsoft.quantum.arrays.subarray
   summary: Toma una matriz y una lista de ubicaciones y genera una nueva matriz formada a partir de los elementos de la matriz original que coinciden con las ubicaciones especificadas.
+- uid: microsoft.quantum.arrays.swapped
+  summary: Aplica un intercambio de dos elementos en una matriz.
 - uid: microsoft.quantum.arrays.tail
-  summary: Devuelve el último elemento de la matriz.
+  summary: Devuelve el último elemento de la secuencia.
+- uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+  summary: Convierte una lista de dos tuplas en una matriz anidada.
 - uid: microsoft.quantum.arrays.zip
   summary: Dadas dos matrices, devuelve una nueva matriz de pares de modo que cada par contiene un elemento de cada matriz original.
 - uid: microsoft.quantum.arrays.zip3
@@ -57,9 +61,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada una matriz y una operación que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la operación.
 metadata:
-  ms.openlocfilehash: 7c377d5df0e32be0da75f133b08c778ec94c6a39
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057246"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858877"

@@ -40,7 +40,7 @@ operations:
     Dadas dos operaciones, garantiza que actúan de forma idéntica para todos los Estados de entrada.
 
 
-    Esta aserción se implementa mediante la comprobación de la acción de las operaciones en todos los Estados de la forma $V _0 \otimes... \otimes v_ {n-1} $, donde $V _k $ es uno de los Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ y $ \ket{i} $ (+ 1 eigenstate del operador Pauli Y).
+    Esta aserción se implementa comprobando la acción de las operaciones en todos los Estados del formulario $V _0 \otimes... \otimes V_ {n-1} $, donde $V _k $ es uno de los Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ y $ \ket{i} $ (+ 1 eigenstate del operador Pauli Y).
 
 
     Esta aserción usa $n $ qubits y requiere varias llamadas de las operaciones que se van a comparar.
@@ -73,11 +73,14 @@ operations:
     El último argumento define la tolerancia con la que se realiza la aserción.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Valida que el `q` qubit se encuentra en el eigenstate esperado del operador Pauli Z hasta una tolerancia determinada.
+newtypes:
+- uid: microsoft.quantum.diagnostics.test
+  summary: Atributo reconocido por el compilador que se usa para marcar una prueba unitaria.
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones y operaciones útiles para fines de diagnóstico, incluidas operaciones de aserción y funciones de notificaciones."
 metadata:
-  ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a633a9555f380e6aa6c6701d277d026c58130ff2
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056856"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858282"
