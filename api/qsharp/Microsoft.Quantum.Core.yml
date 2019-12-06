@@ -3,6 +3,8 @@ uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres incluye funciones y operaciones de Q # Core.\n\n # <a name=\"remarks\"></a>Comentarios\n El compilador de Q # abre automáticamente este espacio de nombres, por lo que todos los elementos de este espacio de nombres siempre están disponibles."
 functions:
+- uid: microsoft.quantum.core.default
+  summary: Devuelve una instancia predeterminada del tipo especificado.
 - uid: microsoft.quantum.core.length
   summary: Devuelve el número de elementos de una matriz.
 - uid: microsoft.quantum.core.rangeend
@@ -13,10 +15,17 @@ functions:
   summary: Devuelve el valor inicial definido del intervalo especificado.
 - uid: microsoft.quantum.core.rangestep
   summary: Devuelve el entero que especifica cómo se calcula el siguiente valor de un intervalo.
+newtypes:
+- uid: microsoft.quantum.core.attribute
+  summary: El compilador reconoció el atributo utilizado para marcar los tipos definidos por el usuario como atributos.
+- uid: microsoft.quantum.core.deprecated
+  summary: El compilador reconoció el atributo que se usa para marcar un tipo o que se puede llamar como desusado.
+- uid: microsoft.quantum.core.entrypoint
+  summary: Atributo reconocido por el compilador usado para marcar el punto de entrada de un ejecutable.
 metadata:
-  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6391521907deddbf4425b927b1dec12e73f0ee5d
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056890"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858588"

@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyseriesofopsa
+name: ApplySeriesOfOpsA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Aplica una lista de operaciones y sus destinos secuencialmente en una matriz. (Contiguo)
+syntax: "operation ApplySeriesOfOpsA (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit"
+input:
+  content: "(listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[])"
+  types:
+  - name: listOfOps
+    summary: >-
+      Lista de operaciones, cada una de las cuales toma una matriz ' t ' que se va a aplicar. Se aplican secuencialmente, el índice más bajo en primer lugar.
+
+      Cada debe tener un functor injoin
+    isArray: true
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: targets
+    summary: Matrices anidadas que describen los destinos de la operación. Cada matriz debe contener una lista de enteros que describen los índices que se van a utilizar.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Int
+  - name: register
+    summary: Registro de qubit en el que se va a actuar.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyoprepeatedlyover
+metadata:
+  ms.openlocfilehash: 0d48ff75f99ea7fd3b7c65790ef6c5d184532f82
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866400"

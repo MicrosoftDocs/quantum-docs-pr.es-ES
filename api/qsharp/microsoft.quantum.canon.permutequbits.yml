@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.permutequbits
+name: PermuteQubits
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Se silencia qubits mediante la operación de intercambio.
+examples: >-
+  Dado el orden = [2, 1, 0] y el registro $ \ket{\ alpha_0} \ket{\ alpha_1} \ket{\ alpha_2} $, PermuteQubits cambia el registro en $ \ket{\ alpha_2} \ket{\ alpha_1} \ket{\ alpha_0} $
+
+
+  ```qsharp
+
+  // The following two lines are equivalent
+
+  PermuteQubits([2, 1, 0], register);
+
+  SWAP(register[0], register[2]);
+
+  ```
+syntax: 'operation PermuteQubits (ordering : Int[], register : Qubit[]) : Unit'
+input:
+  content: '(ordering : Int[], register : Qubit[])'
+  types:
+  - name: ordering
+    summary: Describe la nueva ordenación de qubits, donde el qubit en el índice ahora estará en el orden [i].
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: register
+    summary: Registro de qubit en el que se va a actuar.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: ad5b37017edfc6ba3cb2f552172da1b910227681
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866587"

@@ -3,55 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.diagnostics.assertallzero".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertAllZero está en desuso. Use @\"microsoft.quantum.diagnostics.assertallzero\" en su lugar.\nUse @\"microsoft.quantum.diagnostics.assertallzero\"."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertAllZeroTol está en desuso. Use @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\" en su lugar.\nUse @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
-
-    Tenga en cuenta que el orden de los argumentos de esta operación ha cambiado.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertOperationsEqualInPlace está en desuso. Use @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\" en su lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nTenga en cuenta que el orden de los argumentos de esta operación ha cambiado."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
-
-    Tenga en cuenta que el orden de los argumentos de esta operación ha cambiado.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertOperationsEqualInPlaceCompBasis está en desuso. Use @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\" en su lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nTenga en cuenta que el orden de los argumentos de esta operación ha cambiado."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
-
-    Tenga en cuenta que el orden de los argumentos de esta operación ha cambiado.
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertOperationsEqualReferenced está en desuso. Use @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\" en su lugar.\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nTenga en cuenta que el orden de los argumentos de esta operación ha cambiado."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.diagnostics.assertqubit".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertQubit está en desuso. Use @\"microsoft.quantum.diagnostics.assertqubit\" en su lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubit\"."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertQubitState está en desuso. Use @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\" en su lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertQubitTol está en desuso. Use @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\" en su lugar.\nUse @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
 metadata:
-  ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210351"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858421"

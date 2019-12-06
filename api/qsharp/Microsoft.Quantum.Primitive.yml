@@ -3,150 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.message".
+  summary: "\n> [!WARNING]\n> En desuso\n\nEl mensaje está en desuso. Use @\"microsoft.quantum.intrinsic.message\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.message\"."
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.assert".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssert está en desuso. Use @\"microsoft.quantum.intrinsic.assert\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.assert\"."
 - uid: microsoft.quantum.primitive.assertprob
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.assertprob".
+  summary: "\n> [!WARNING]\n> En desuso\n\nAssertProb está en desuso. Use @\"microsoft.quantum.intrinsic.assertprob\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.assertprob\"."
 - uid: microsoft.quantum.primitive.ccnot
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.ccnot".
+  summary: "\n> [!WARNING]\n> En desuso\n\nCCNOT está en desuso. Use @\"microsoft.quantum.intrinsic.ccnot\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.ccnot\"."
 - uid: microsoft.quantum.primitive.cnot
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.cnot".
+  summary: "\n> [!WARNING]\n> En desuso\n\nCNOT está en desuso. Use @\"microsoft.quantum.intrinsic.cnot\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.cnot\"."
 - uid: microsoft.quantum.primitive.exp
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.exp".
+  summary: "\n> [!WARNING]\n> En desuso\n\nEXP está en desuso. Use @\"microsoft.quantum.intrinsic.exp\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.exp\"."
 - uid: microsoft.quantum.primitive.expfrac
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.expfrac".
+  summary: "\n> [!WARNING]\n> En desuso\n\nExpFrac está en desuso. Use @\"microsoft.quantum.intrinsic.expfrac\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.expfrac\"."
 - uid: microsoft.quantum.primitive.h
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.h".
+  summary: "\n> [!WARNING]\n> En desuso\n\nH está en desuso. Use @\"microsoft.quantum.intrinsic.h\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.h\"."
 - uid: microsoft.quantum.primitive.i
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.i".
+  summary: "\n> [!WARNING]\n> En desuso\n\nHe quedado en desuso. Use @\"microsoft.quantum.intrinsic.i\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.i\"."
 - uid: microsoft.quantum.primitive.m
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.m".
+  summary: "\n> [!WARNING]\n> En desuso\n\nM está en desuso. Use @\"microsoft.quantum.intrinsic.m\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.m\"."
 - uid: microsoft.quantum.primitive.measure
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.measure".
+  summary: "\n> [!WARNING]\n> En desuso\n\nLa medida está en desuso. Use @\"microsoft.quantum.intrinsic.measure\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.measure\"."
 - uid: microsoft.quantum.primitive.multix
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.canon.applytoeachca".
+  summary: "\n> [!WARNING]\n> En desuso\n\nMultiX está en desuso. En su lugar, use @ \"applytoeachca (x, _)\".\nUse @\"microsoft.quantum.canon.applytoeachca\"."
 - uid: microsoft.quantum.primitive.r
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.r".
+  summary: "\n> [!WARNING]\n> En desuso\n\nR está en desuso. Use @\"microsoft.quantum.intrinsic.r\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.r\"."
 - uid: microsoft.quantum.primitive.r1
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.r1".
+  summary: "\n> [!WARNING]\n> En desuso\n\nR1 está en desuso. Use @\"microsoft.quantum.intrinsic.r1\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.r1\"."
 - uid: microsoft.quantum.primitive.r1frac
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.r1frac".
+  summary: "\n> [!WARNING]\n> En desuso\n\nR1Frac está en desuso. Use @\"microsoft.quantum.intrinsic.r1frac\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.r1frac\"."
 - uid: microsoft.quantum.primitive.random
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.random".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRandom está en desuso. Use @\"microsoft.quantum.intrinsic.random\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.random\"."
 - uid: microsoft.quantum.primitive.reset
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.reset".
+  summary: "\n> [!WARNING]\n> En desuso\n\nEl restablecimiento ha quedado desusado. Use @\"microsoft.quantum.intrinsic.reset\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.reset\"."
 - uid: microsoft.quantum.primitive.resetall
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.resetall".
+  summary: "\n> [!WARNING]\n> En desuso\n\nResetAll está en desuso. Use @\"microsoft.quantum.intrinsic.resetall\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.resetall\"."
 - uid: microsoft.quantum.primitive.rfrac
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.rfrac".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRFrac está en desuso. Use @\"microsoft.quantum.intrinsic.rfrac\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.rfrac\"."
 - uid: microsoft.quantum.primitive.rx
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.rx".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRX está en desuso. Use @\"microsoft.quantum.intrinsic.rx\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.rx\"."
 - uid: microsoft.quantum.primitive.ry
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.ry".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRy está en desuso. Use @\"microsoft.quantum.intrinsic.ry\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.ry\"."
 - uid: microsoft.quantum.primitive.rz
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.rz".
+  summary: "\n> [!WARNING]\n> En desuso\n\nRZ está en desuso. Use @\"microsoft.quantum.intrinsic.rz\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.rz\"."
 - uid: microsoft.quantum.primitive.s
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.s".
+  summary: "\n> [!WARNING]\n> En desuso\n\nS ha quedado en desuso. Use @\"microsoft.quantum.intrinsic.s\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.s\"."
 - uid: microsoft.quantum.primitive.swap
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.swap".
+  summary: "\n> [!WARNING]\n> En desuso\n\nSWAP está en desuso. Use @\"microsoft.quantum.intrinsic.swap\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.swap\"."
 - uid: microsoft.quantum.primitive.t
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.t".
+  summary: "\n> [!WARNING]\n> En desuso\n\nT está en desuso. Use @\"microsoft.quantum.intrinsic.t\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.t\"."
 - uid: microsoft.quantum.primitive.x
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.x".
+  summary: "\n> [!WARNING]\n> En desuso\n\nX está en desuso. Use @\"microsoft.quantum.intrinsic.x\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.x\"."
 - uid: microsoft.quantum.primitive.y
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.y".
+  summary: "\n> [!WARNING]\n> En desuso\n\nY está en desuso. Use @\"microsoft.quantum.intrinsic.y\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.y\"."
 - uid: microsoft.quantum.primitive.z
-  summary: >-
-    > [!WARNING]
-
-    > En desuso, use @"microsoft.quantum.intrinsic.z".
+  summary: "\n> [!WARNING]\n> En desuso\n\nZ está en desuso. Use @\"microsoft.quantum.intrinsic.z\" en su lugar.\nUse @\"microsoft.quantum.intrinsic.z\"."
 metadata:
-  ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216040"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858248"
