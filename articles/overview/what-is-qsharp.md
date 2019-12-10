@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
-ms.openlocfilehash: 3fd288439c7db7f939240b4388c9cdb114b6535c
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: e04d72bafe390ff5c79af408db1d9400754b06ce
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529989"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864294"
 ---
 # <a name="what-is-q"></a>¿Qué es Q#?
 
@@ -25,12 +25,11 @@ El lenguaje de programación Q# proporciona un intuitivo conjunto de tipos, oper
 
 Al principio, los algoritmos de computación cuántica se visualizaban como diagramas, de forma similar a los diagramas de circuitos de la computación clásica.  Mientras que el modelo de circuitos se ha usado mucho en la investigación de computación cuántica durante muchos años, en Microsoft creemos que los desarrolladores pueden ir más allá de los circuitos cuánticos y desarrollar aplicaciones y algoritmos cuánticos con Q#. El lenguaje Q# se ha diseñado para aprovechar lo que hemos aprendido durante décadas de desarrollo de software clásico y capacita a los desarrolladores cuánticos con funcionalidades de lenguaje de alto nivel destinadas a la computación cuántica.
 
-
 ## <a name="how-does-q-work"></a>¿Cómo funciona Q#?
 
 Uno de los bloques de compilación fundamentales de Q# es el tipo `Qubit`, que no se puede copiar ni acceder a él directamente, como un qubit real. En su lugar, podemos medirlo y almacenar el resultado de la medición en una variable `Result`, un tipo de Q# que puede tomar dos valores posibles: `Zero` y `One`. Construcciones como esta garantizan que los algoritmos respeten siempre las leyes de la física cuántica, así como que se puedan ejecutar correctamente en simuladores o equipos cuánticos.
 
-Q# también incluye funcionalidades de lógica clásicas, como condicionales o bucles con algunos matices, para asegurarse de que se respetan todas las reglas cuánticas. Por ejemplo, restringir el modo en que se ejecutan los bucles para asegurarse de que las operaciones cuánticas se puedan realizar.
+Q# también incluye funcionalidades de lógica clásicas, como condicionales y bucles con algunos matices, para asegurarse de que se respetan todas las reglas cuánticas. Por ejemplo, restringir el modo en que se ejecutan los bucles para asegurarse de que no se llama a operaciones cuánticas en funciones que pueden contener solo subrutinas clásicas deterministas.
 
 Con frecuencia, los programas de Q# están emparejados con un programa host escrito en C# o Python, que puede proporcionar una organización adecuada del código clásico y cuántico. Además de la compatibilidad con lenguajes como C# y Python, QDK proporciona compatibilidad de Jupyter Notebook con el kernel de Jupyter IQ#.
 
