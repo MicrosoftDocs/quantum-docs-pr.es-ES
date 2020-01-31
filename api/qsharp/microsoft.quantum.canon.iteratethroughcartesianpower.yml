@@ -3,18 +3,51 @@ uid: microsoft.quantum.canon.iteratethroughcartesianpower
 name: IterateThroughCartesianPower
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Recorre en iteración una variable, por ejemplo ARR, a través del producto cartesiano [0, enlazado-1] × [0, enlazado-1] × [0, Bound-1] y llama a OP (arr) para cada elemento del producto cartesiano.
+summary: >-
+  Aplica una operación para cada índice en la potencia cartesiano de un intervalo de enteros.
+
+
+  Aplica de forma iterativa una operación para cada elemento de una potencia cartesiano del intervalo `0..(bound - 1)`.
+examples: >-
+  Dada una operación `op`, los dos fragmentos de código siguientes son equivalentes:
+
+
+  ```Q#
+
+  IterateThroughCartesianPower(2, 3, op);
+
+  ```
+
+
+  ```Q#
+
+  op([0, 0]);
+
+  op([1, 0]);
+
+  op([2, 0]);
+
+  op([0, 1]);
+
+  // ..
+
+  op([2, 2]);
+
+  ```
 syntax: 'operation IterateThroughCartesianPower (power : Int, bound : Int, op : (Int[] => Unit)) : Unit'
 input:
   content: '(power : Int, bound : Int, op : (Int[] => Unit))'
   types:
   - name: power
+    summary: La potencia cartesiano a la que se debe elevar el intervalo `0..(bound - 1)`.
     isPrimitive: true
     uid: Int
   - name: bound
+    summary: Especificación del intervalo que se va a recorrer en iteración, dado como la longitud del intervalo.
     isPrimitive: true
     uid: Int
   - name: op
+    summary: Operación a la que se va a llamar para cada elemento de la potencia cartesiano dada.
     isOperation: true
     input:
       types:
@@ -30,10 +63,12 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+seeAlso:
+- microsoft.quantum.canon.iteratethroughcartesianproduct
 metadata:
-  ms.openlocfilehash: 4a35dbc3be07bf936e6a0ff2abf09004cc103fd0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4679e1b569dab167eecbb22947543ab993d7fa8d
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223027"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870944"

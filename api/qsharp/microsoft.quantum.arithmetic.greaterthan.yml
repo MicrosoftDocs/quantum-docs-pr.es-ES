@@ -3,7 +3,11 @@ uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Lleva a cabo un valor estrictamente mayor que la comparación de dos enteros $x $ y $y $, codificados en qubit registra XS y calendario. Si $x > y $, se volteará el resultado qubit, de lo contrario se conservará su estado.
+summary: >-
+  Aplica una comparación mayor que entre dos enteros codificados en registros de qubit, volteando un qubit de destino basándose en el resultado de la comparación.
+
+
+  Lleva a cabo un valor estrictamente mayor que la comparación de dos enteros $x $ y $y $, codificados en qubit registra XS y calendario. Si $x > y $, se volteará el resultado qubit; de lo contrario, el resultado qubit mantendrá su estado.
 remarks: Utiliza el truco que $x-y = (x ' + y) ' $, donde ' denota el complemento de uno.
 syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 references: >-
@@ -33,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6961a6a4f22d2290a264298a3be3b15f7bdb0ac7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 062d892ad66b8ab41e8ad0bbd2fce6e1eaff0baa
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214952"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870859"

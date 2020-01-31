@@ -7,26 +7,26 @@ summary: >-
   Construye la reflexión sobre un estado determinado desde Oracle.
 
 
-  Dado el $O de Oracle $ de tipo <xref:microsoft.quantum.oracles.deterministicstateoracle>, el resultado de esta función es un reflejo alrededor del estado $ \ket{\psi} $, donde $O \ket{0} = \ket{\psi} $.
+  Dada una preparación de estado de determinstic Oracle representada por una matriz de unitarios $O $, el resultado de esta función es una Oracle que aplica un reflejo en torno al estado $ \ket{\psi} $ preparado por Oracle $O $; es decir, el estado $ \ket{\psi} $, de modo que $O \ket{0} = \ket{\psi} $.
 syntax: 'function ReflectionOracleFromDeterministicStateOracle (oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
   types:
   - name: oracle
-    summary: Oracle de tipo "DeterministicStateOracle"
+    summary: Oracle que prepara copias del estado $ \ket{\psi} $.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: '`ReflectionOracle` que refleja el estado $ \ket{\psi} $.'
+  - summary: Oracle que refleja el estado $ \ket{\psi} $.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
-- deterministicstateoracle
-- reflectionoracle
+- microsoft.quantum.oracles.deterministicstateoracle
+- microsoft.quantum.oracles.reflectionoracle
 metadata:
-  ms.openlocfilehash: c48c9259b4b3c122a8d7551db6d326ea523dd2a0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 604c0dab70979e3f429b58168a969a7557e2a0de
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73050333"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76868941"

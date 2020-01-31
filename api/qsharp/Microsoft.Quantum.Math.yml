@@ -25,7 +25,7 @@ functions:
 - uid: microsoft.quantum.math.arcsinh
   summary: Calcula el seno hiperbólico inverso de un número.
 - uid: microsoft.quantum.math.arctan
-  summary: Devuelve el ángulo cuya tangente corresponde al número especificado.
+  summary: Devuelve el ángulo cuya tangente es el número especificado.
 - uid: microsoft.quantum.math.arctan2
   summary: Devuelve el ángulo cuya tangente es el cociente de dos números especificados.
 - uid: microsoft.quantum.math.arctanh
@@ -47,15 +47,15 @@ functions:
 
     Es decir, devuelve el menor $n $ que $a < 2 ^ n $.
 - uid: microsoft.quantum.math.ceiling
-  summary: Devuelve el número entero más pequeño mayor o igual que el número especificado.
+  summary: Devuelve el entero más pequeño mayor o igual que el número especificado.
 - uid: microsoft.quantum.math.complexascomplexpolar
   summary: Convierte un número complejo de `Complex` de tipo en un número complejo de `ComplexPolar`de tipo.
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Convierte un número complejo de `ComplexPolar` de tipo en un número complejo de `Complex`de tipo.
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> En desuso\n\nComplexPolarToComplex está en desuso. Use @\"microsoft.quantum.math.complexpolarascomplex\" en su lugar."
+  summary: "\n> [!WARNING]\n> En desuso\n\nComplexPolarToComplex está en desuso. En su lugar, use @\"microsoft.quantum.math.complexpolarascomplex\"."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> En desuso\n\nComplexToComplexPolar está en desuso. Use @\"microsoft.quantum.math.complexascomplexpolar\" en su lugar."
+  summary: "\n> [!WARNING]\n> En desuso\n\nComplexToComplexPolar está en desuso. En su lugar, use @\"microsoft.quantum.math.complexascomplexpolar\"."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
@@ -95,7 +95,7 @@ functions:
 - uid: microsoft.quantum.math.greatestcommondivisorl
   summary: Calcula el máximo común divisor de $a $ y $b $. El M.C. d siempre es positivo.
 - uid: microsoft.quantum.math.ieeeremainder
-  summary: Devuelve el resto de la división de dos números especificados.
+  summary: Devuelve el resto resultante de la división de un número especificado por otro número especificado.
 - uid: microsoft.quantum.math.inversemodi
   summary: Devuelve $b $ de modo que $a \cdot b = 1 (\operatorname{mod} \texttt{modulus}) $.
 - uid: microsoft.quantum.math.inversemodl
@@ -159,7 +159,7 @@ functions:
 - uid: microsoft.quantum.math.negationl
   summary: Devuelve la negación unaria de una entrada.
 - uid: microsoft.quantum.math.pi
-  summary: Representa la proporción de la circunferencia de un círculo en relación con su diámetro, especificado por la constante π.
+  summary: Representa la relación entre la circunferencia de un círculo y su diámetro, especificada por la constante de π.
 - uid: microsoft.quantum.math.plusa
   summary: Devuelve la suma (concatenación) de dos entradas.
 - uid: microsoft.quantum.math.plusc
@@ -197,7 +197,7 @@ functions:
 - uid: microsoft.quantum.math.realmod
   summary: Calcula el módulo entre dos números reales.
 - uid: microsoft.quantum.math.round
-  summary: Redondea un valor al entero más próximo o al número especificado de dígitos fraccionarios.
+  summary: Redondea un valor al entero más próximo.
 - uid: microsoft.quantum.math.signd
   summary: Devuelve un entero que indica el signo de un número.
 - uid: microsoft.quantum.math.signi
@@ -253,9 +253,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Devuelve uno de los operadores de Pauli de un solo qubit de forma aleatoria.
 metadata:
-  ms.openlocfilehash: 00156d553e8378b1a38dcd6f1749c4ff3cb689a7
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: f1a0185252155a39572a6b4159a88686533154c0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858265"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870193"

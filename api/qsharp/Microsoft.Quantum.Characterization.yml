@@ -11,12 +11,14 @@ operations:
   summary: Dada una preparación y medida, calcula la frecuencia con la que la medida se realiza correctamente (devuelve `Zero`) mediante la realización de un número determinado de pruebas.
 - uid: microsoft.quantum.characterization.estimatefrequencya
   summary: Dada una preparación que es adjointable y Measurement, calcula la frecuencia con la que la medida se realiza correctamente (devuelve `Zero`) mediante la realización de un número determinado de pruebas.
+- uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+  summary: Dadas dos operaciones que preparan copias de un estado, calcula la parte imaginaria de la superposición entre los Estados preparados por cada operación.
+- uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
+  summary: Dadas dos operaciones que preparan copias de un estado, calcula la superposición cuadrada entre los Estados preparados por cada operación.
+- uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+  summary: Dadas dos operaciones que preparan copias de un estado, calcula la parte real de la superposición entre los Estados preparados por cada operación.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: >-
-    Mide conjuntamente un registro de qubits en la base de Pauli Z.
-
-
-    En otras palabras, mide la operación $Z \otimes Z \otimes \cdots \otimes Z $ en un registro determinado.
+  summary: "\n> [!WARNING]\n> En desuso\n\nMeasureAllZ está en desuso. En su lugar, use @\"microsoft.quantum.measurement.measureallz\".\nUse @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Mide el operador de identidad en un registro de qubits.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
@@ -26,9 +28,9 @@ operations:
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
   summary: Realiza una medición de Tomography de proceso de un solo qubit en el Pauli, dado un canal concreto de interés.
 metadata:
-  ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056947"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870688"

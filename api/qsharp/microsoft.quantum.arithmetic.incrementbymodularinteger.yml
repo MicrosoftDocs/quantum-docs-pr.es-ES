@@ -7,22 +7,27 @@ summary: >-
   Realiza un incremento modular de un registro qubit por una constante de tipo entero.
 
 
-  Vamos a indicar `increment` por un, `modulus` por N y entero codificado en `target` por y, a continuación, la operación realiza la transformación siguiente: \begin{align} \ket{y} \mapsto \ket{y + 1 \operatorname{mod} N} \end{align} enteros se codifican en formato Little-Endian.
-remarks: Supone que el valor de destino es menor que N. tenga en cuenta que <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> implementa la misma operación, pero en el `PhaseLittleEndian` base.
+  Vamos a indicar `increment` por $a $, `modulus` por $N $ y el entero codificado en `target` por $y $.
+
+  A continuación, la operación realiza la transformación siguiente: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} los enteros se codifican en formato Little-Endian.
+remarks: >-
+  Supone que el valor inicial del destino es menor que $N $ y que el incremento $a $ es menor que $N $.
+
+  Tenga en cuenta que <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> implementa la misma operación en el `PhaseLittleEndian` base.
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: Incremento de entero que se va a agregar a y.
+    summary: Incremento de entero $a $ que se va a agregar a $y $.
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Entero N que mods y + a.
+    summary: Entero $N $ que mods $y + a $.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Entero y en `LittleEndian` formato al que se agrega `increment` a.
+    summary: Entero $y $ in `LittleEndian` formato al que se agrega `increment` $a $.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -33,11 +38,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- incrementphasebymodularinteger
+- microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 9b61ed007a08d176d1754a7c1cd6cd2d9edce7d2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 975d4548eadbc61f8174b6719d067ffed32797dd
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219066"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871607"
