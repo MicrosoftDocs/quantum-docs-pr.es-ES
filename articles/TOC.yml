@@ -2,7 +2,7 @@
   href: index.yml
 - name: Información general
   items:
-    - name: Primeros pasos
+    - name: Introducción
       href: welcome.md
     - name: Cinco preguntas sobre la computación cuántica
       items:
@@ -26,10 +26,18 @@
       href: quickstart.md
     - name: Implementación del algoritmo de búsqueda de Grover
       href: quickstarts/search.md
-- name: Guías de procedimientos
+- name: Guías paso a paso
   items:
     - name: Instalación del QDK
-      href: install-guide/index.md
+      items:
+        - name: Introducción a la instalación
+          href: install-guide/index.md
+        - name: 'Q# + C#'
+          href: install-guide/csinstall.md
+        - name: 'Q# + Python'
+          href: install-guide/pyinstall.md
+        - name: 'Cuadernos de Jupyter Notebook de Q#'
+          href: install-guide/qjupyter.md
     - name: Actualización del QDK
       href: install-guide/update.md
     - name: 'Creación de un proyecto de Q#'

@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863170"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871624"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Este artículo contiene información sobre cada versión de Quantum Development 
 Para obtener instrucciones de instalación, consulte la [guía de instalación](xref:microsoft.quantum.install).
 
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
+
+## <a name="version-01020012831"></a>Versión 0.10.2001.2831
+
+*Fecha de lanzamiento: 29 de enero de 2020*
+
+Esta versión contiene lo siguiente:
+
+- Nuevo paquete NuGet Microsoft.Quantum.SDK. Para más información, consulte el archivo [Léame](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md)
+- Se ha agregado compatibilidad con .NET Core 3.1. Se recomienda encarecidamente tener instalada la versión 3.1.100, ya que la compilación con versiones anteriores del SDK de .NET Core puede causar problemas
+- Nuevas transformaciones del compilador disponibles en Microsoft.Quantum.QsCompiler.Experimental
+- Nueva funcionalidad para exponer vectores de estado de salida como HTML en IQ#
+- Se ha agregado compatibilidad de EstimateFrequencyA con Microsoft.Quantum.Characterization para las pruebas de Hadamard y SWAP
+- El espacio de nombres AmplitudeAmplification ahora usa la guía de estilo de Q#
 
 ## <a name="version-01019120501"></a>Versión 0.10.1912.0501
 
@@ -123,11 +136,11 @@ Esta versión agrega una nueva sintaxis del lenguaje Q#:
 En esta versión se agrega una biblioteca de valores numéricos: Obtenga más información sobre cómo [usar la nueva biblioteca de valores numéricos](xref:microsoft.quantum.numerics.usage) y probar los [nuevos ejemplos](https://github.com/microsoft/quantum/tree/master/Numerics).  [PR 102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
 
 Esta versión reorganiza, extiende y actualiza la biblioteca de química:
-* Mejora la modularidad de los componentes, la extensibilidad y la limpieza de código general.  [PR 58](https://github.com/microsoft/QuantumLibraries/pull/58).
+* Mejora la modularidad de los componentes, la extensibilidad y la limpieza de código general.  [PR #58](https://github.com/microsoft/QuantumLibraries/pull/58).
 * Se agrega compatibilidad para [funciones de onda de varias referencias](xref:microsoft.quantum.chemistry.concepts.multireference), tanto funciones de onda de varias referencias dispersas como un clúster acoplado unitario.  [PR 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Gracias) Colaborador de [1QBit](https://1qbit.com) ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): evaluación de energía con ansatz variacional. [PR 120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * Actualización del esquema de [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) a la nueva [versión 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2); adición de especificación de clúster acoplado unitario. [Problema 65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Adición de interoperabilidad de Python a las funciones de la biblioteca de química. Pruebe este [ejemplo](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problema 53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Adición de interoperabilidad de Python a las funciones de la biblioteca de química. Pruebe este [ejemplo](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Incidencia 53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>Versión 0.6.1905
 
@@ -319,7 +332,7 @@ Esta versión incluye correcciones de errores y características para los proble
 
 ### <a name="community-contributions"></a>Contribuciones de la comunidad
 
-**Gracias** a las siguientes personas que han contribuido a nuestra base de código abierto en http://github.com/Microsoft/Quantum. Estas contribuciones se suman significativamente a los ejemplos de código Q#:
+**Gracias** a las siguientes personas que han contribuido a nuestra base de código abierto en http://github.com/Microsoft/Quantum. Estas contribuciones son una importante aportación a los ejemplos de código Q#:
 
 * Rolf Huisman ([@RolfHuisman](https://github.com/RolfHuisman)): Se ha mejorado la experiencia de los desarrolladores de QASM/Q# mediante la creación de un QASM al traductor de Q#. [PR #58](https://github.com/Microsoft/Quantum/pull/58).
 
