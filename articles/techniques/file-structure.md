@@ -1,18 +1,19 @@
 ---
-title: Introducción a las técnicas de desarrollo de Quantum | Microsoft Docs
-description: Introducción a las técnicas de desarrollo de Quantum
+title: 'Información general del programa de preguntas y respuestas: técnicas de Q # | Microsoft Docs'
+description: 'Información general del programa de preguntas y respuestas: técnicas de Q #'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442565"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820834"
 ---
-# <a name="q-program-overview"></a>Información general del programa de preguntas y respuestas
+# <a name="q-program-overview"></a>Introducción a un programa en Q#
 
 Q # es un lenguaje de programación escalable, de paradigma múltiple y específico del dominio para la informática Quantum. Q # es un lenguaje de programación Quantum en el que se puede usar para describir cómo se ejecutan las instrucciones en máquinas Quantum. Los equipos a los que se puede dirigir desde simuladores hasta hardware Quantum real. Q # es escalable: se puede usar para escribir programas de demostración sencillos, como teletranspórtate, que se ejecutan en unos pocos qubits, pero también admite la escritura de programas grandes y sofisticados, como simulaciones de moléculas complejas que requerirán máquinas grandes con millones de qubits. Aunque las máquinas físicas de gran tamaño siguen en el futuro, Q # permite a un programador programar algoritmos Quantum complejos ahora. Lo que es más, Q # admite varias tareas, como la depuración, la generación de perfiles, la estimación de recursos y ciertas simulaciones de propósito especial de una manera escalable. 
 

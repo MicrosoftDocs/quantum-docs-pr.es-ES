@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.simulation
 name: Microsoft.Quantum.Simulation
-summary: " # <a name=\"summary\"></a>summary\n Este espacio de nombres contiene funciones y operaciones para simular de coherencia la dinámica de los sistemas Quantum."
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones y operaciones para simular de coherencia la dinámica de los sistemas Quantum."
 functions:
 - uid: microsoft.quantum.simulation.addgeneratorsystems
   summary: Agrega dos `GeneratorSystem`s para crear un nuevo `GeneratorSystem`.
@@ -62,11 +62,7 @@ functions:
 - uid: microsoft.quantum.simulation.paulistringfromgenidx
   summary: Extrae la cadena Pauli y sus índices qubit de un término Pauli descrito por un `GeneratorIndex`.
 - uid: microsoft.quantum.simulation.quantumwalkbyqubitization
-  summary: >-
-    Convierte un `BlockEncodingReflection` en un recorrido de Quantum.
-
-
-    Es decir, dado un `BlockEncodingReflection` unitario $U $ que codifica algún operador $H $ de interés, lo convierte en un recorrido de Quantum $W $ que contiene el espectro de $ \pm e ^ {\pm i\sin ^{-1}(H)} $.
+  summary: Convierte una reflexión de codificación de bloques en un recorrido de Quantum.
 - uid: microsoft.quantum.simulation.sumgeneratorsystems
   summary: Agrega varios `GeneratorSystem`s para crear un nuevo GeneratorSystem.
 - uid: microsoft.quantum.simulation.timedependenttrottersimulationalgorithm
@@ -162,9 +158,9 @@ newtypes:
 - uid: microsoft.quantum.simulation.unitary
   summary: Representa la evolución en un operador unitario.
 metadata:
-  ms.openlocfilehash: 05db213d04304a635e4e86e0f6c40f15bb81441a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 967c27e6c5c8f475e54f7e9d4f3a14594fb04cc5
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215887"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869834"

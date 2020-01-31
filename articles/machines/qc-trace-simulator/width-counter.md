@@ -1,28 +1,27 @@
 ---
 title: Ancho del contador | Simulador de seguimiento de equipo Quantum | Microsoft Docs
-description: Información general sobre el simulador de seguimiento de equipos Quantum
+description: Introducción a un simulador de seguimiento de equipos cuánticos
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: ae0c0ec2e677be03dc8dc1497dc62ad9034295a4
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442406"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820375"
 ---
 # <a name="width-counter"></a>Ancho (contador)
 
 El `Width Counter` cuenta el número de qubits asignados y prestados por cada operación.
-Todas las operaciones del espacio de nombres `Microsoft.Quantum.Primitive` se expresan en términos de rotaciones de qubit individuales, de T, de qubit Clifford, de CNOT y de qubit de Pauli. Algunas de las operaciones primitivas pueden asignar qubits adicionales. Por ejemplo, multiplique las puertas `X` controladas o las puertas de `T` controladas. Vamos a calcular el número de qubits adicionales asignados por la implementación de una puerta de `X` controlada por multiplicación:
+Todas las operaciones del espacio de nombres `Microsoft.Quantum.Intrinsic` se expresan en términos de rotaciones de qubit individuales, de T, de qubit Clifford, de CNOT y de qubit de Pauli. Algunas de las operaciones primitivas pueden asignar qubits adicionales. Por ejemplo, multiplique las puertas `X` controladas o las puertas de `T` controladas. Vamos a calcular el número de qubits adicionales asignados por la implementación de una puerta de `X` controlada por multiplicación:
 
 ```qsharp
-open Microsoft.Quantum.Primitive;
+open Microsoft.Quantum.Intrinsic;
 open Microsoft.Quantum.Arrays;
-operation MultiControlledXDriver( numberOfQubits : Int ) : Unit {
-
+operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
     using(qubits = Qubit[numberOfQubits]) {
         Controlled X (Rest(qubits), Head(qubits));
     } 
@@ -38,20 +37,20 @@ var config = new QCTraceSimulatorConfiguration();
 config.useWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
-var res = MultiControlledXDriver.Run(sim, totalNumberOfQubits).Result;
+var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
 
 double allocatedQubits = 
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.ExtraWidth,
         functor: OperationFunctor.Controlled); 
 
 double inputWidth =
-    sim.GetMetric<Primitive.X, MultiControlledXDriver>(
+    sim.GetMetric<Primitive.X, ApplyMultiControlledX>(
         WidthCounter.Metrics.InputWidth,
         functor: OperationFunctor.Controlled);
 ```
 
-La primera parte del programa ejecuta `MultiControlledXDriver`. En la segunda parte usamos el método `QCTraceSimulator.GetMetric` para obtener el número de qubits asignados, así como el número de qubits que se han controlado `X` recibido como entrada. 
+La primera parte del programa ejecuta `ApplyMultiControlledX`. En la segunda parte usamos el método `QCTraceSimulator.GetMetric` para obtener el número de qubits asignados, así como el número de qubits que se han controlado `X` recibido como entrada. 
 
 Por último, para generar todas las estadísticas recopiladas por el contador de ancho en formato CSV, podemos usar lo siguiente:
 ```csharp

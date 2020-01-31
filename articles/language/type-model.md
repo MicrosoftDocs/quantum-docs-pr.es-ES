@@ -1,17 +1,17 @@
 ---
 title: 'Modelo de tipo Q # | Microsoft Docs'
-description: 'Modelo de tipo Q #'
+description: Modelo de tipo Q#
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 4e251053d1b8306bf8956314d8099e95c56bce55
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184753"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871641"
 ---
 # <a name="the-type-model"></a>Modelo de tipo
 
@@ -120,7 +120,7 @@ Hacemos referencia a esta propiedad como _equivalencia de tupla singleton_.
 
 Un archivo de preguntas # puede definir un nuevo tipo con nombre que contenga un valor único de cualquier tipo válido.
 Para cualquier tipo de tupla `T`, podemos declarar un nuevo tipo definido por el usuario que sea un subtipo de `T` con la instrucción `newtype`.
-En el espacio de nombres @"microsoft.quantum.canon", por ejemplo, los números complejos se definen como un tipo definido por el usuario:
+En el espacio de nombres @"microsoft.quantum.math", por ejemplo, los números complejos se definen como un tipo definido por el usuario:
 
 ```qsharp
 newtype Complex = (Double, Double);
@@ -141,7 +141,7 @@ newtype Nested = (Double, (ItemName : Int, String));
 Los elementos con nombre tienen la ventaja de que se puede tener acceso a ellos directamente a través del operador de acceso `::`. 
 
 ```qsharp
-function Addition (c1 : Complex, c2 : Complex) : Complex {
+function ComplexAddition(c1 : Complex, c2 : Complex) : Complex {
     return Complex(c1::Re + c2::Re, c1::Im + c2::Im);
 }
 ```
@@ -151,7 +151,7 @@ El operador "Unwrap", `!`, permite extraer el valor contenido en un tipo definid
 El tipo de una expresión "Unwrap" es el tipo subyacente del tipo definido por el usuario. 
 
 ```qsharp
-function PrintMsg (value : Nested) : Unit {
+function PrintedMessage(value : Nested) : Unit {
     let (d, (_, str)) = value!;
     Message ($"{str}, value: {d}");
 }
@@ -227,7 +227,7 @@ De esta manera, los tipos definidos por el usuario tienen un rol similar como F#
 ## <a name="operation-and-function-types"></a>Tipos de operación y función
 
 Una _operación_ Q # es una subrutina Quantum.
-Es decir, es una rutina invocable que contiene operaciones Quantum.
+Es decir, es una rutina invocable que contiene operaciones cuánticas.
 
 Una _función_ Q # es una subrutina clásica utilizada en un algoritmo Quantum.
 Puede contener código clásico pero sin operaciones Quantum.
@@ -286,27 +286,28 @@ Q # es contravariante con respecto a los tipos de entrada: una invocable que tom
 Es decir, dadas las siguientes definiciones:
 
 ```qsharp
-operation Invertible (qs : Qubit[]) : Unit 
+operation Invert(qubits : Qubit[]) : Unit 
 is Adj {...} 
-operation Unitary (qs : Qubit[]) : Unit 
+
+operation ApplyUnitary(qubits : Qubit[]) : Unit 
 is Adj + Ctl {...} 
 
-function ConjugateInvertibleWith (
-   inner: (Qubit[] => Unit is Adj),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateInvertWith(
+    inner : (Qubit[] => Unit is Adj),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj) {...}
 
-function ConjugateUnitaryWith (
-   inner: (Qubit[] => Unit is Adj + Ctl),
-   outer : (Qubit[] => Unit is Adj))
+function ConjugateUnitaryWith(
+    inner : (Qubit[] => Unit is Adj + Ctl),
+    outer : (Qubit[] => Unit is Adj))
 : (Qubit[] => Unit is Adj + Ctl) {...}
 ```
 
 lo siguiente es cierto:
 
-- La operación `ConjugateInvertibleWith` se puede invocar con un argumento `inner` de `Invertible` o `Unitary`.
-- La operación `ConjugateUnitaryWith` se puede invocar con un argumento `inner` de `Unitary`, pero no `Invertible`.
-- Un valor de tipo `(Qubit[] => Unit is Adj + Ctl)` puede devolverse desde `ConjugateInvertibleWith`.
+- La función `ConjugateInvertWith` se puede invocar con un argumento `inner` de `Invert` o `ApplyUnitary`.
+- La función `ConjugateUnitaryWith` se puede invocar con un argumento `inner` de `ApplyUnitary`, pero no `Invert`.
+- Un valor de tipo `(Qubit[] => Unit is Adj + Ctl)` puede devolverse desde `ConjugateInvertWith`.
 
 > [!IMPORTANT]
 > Q # 0,3 presenta una diferencia significativa en el comportamiento de los tipos definidos por el usuario.
@@ -377,14 +378,12 @@ Este ejemplo de una operación de Q # procede del ejemplo de [medición](https:/
 ```qsharp
 /// # Summary
 /// Prepares a state and measures it in the Pauli-Z basis.
-operation MeasureOneQubit () : Result {
+operation MeasureOneQubit() : Result {
         mutable result = Zero;
 
         using (qubit = Qubit()) { // Allocate a qubit
             H(qubit);               // Use a quantum operation on that qubit
-
             set result = M(qubit);      // Measure the qubit
-
             if (result == One) {    // Reset the qubit so that it can be released
                 X(qubit);
             }
@@ -396,12 +395,11 @@ operation MeasureOneQubit () : Result {
 
 Este ejemplo de una función proviene del ejemplo [PhaseEstimation](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) . Contiene código puramente clásico. Puede ver que, a diferencia del ejemplo anterior, no se asigna ningún qubits y no se usa ninguna operación Quantum.
 
-
 ```qsharp
 /// # Summary
 /// Given two arrays, returns a new array that is the pointwise product
 /// of each of the given arrays.
-function MultiplyPointwise (left : Double[], right : Double[]) : Double[] {
+function PointwiseProduct(left : Double[], right : Double[]) : Double[] {
     mutable product = new Double[Length(left)];
 
     for (idxElement in IndexRange(left)) {
@@ -417,7 +415,10 @@ También es posible que una función se pase qubits para su procesamiento, como 
 /// # Summary
 /// Translate MCT masks into multiple-controlled Toffoli gates (with single
 /// targets).
-function GateMasksToToffoliGates (qubits : Qubit[], masks : MCMTMask[]) : MCTGate[] {
+function GateMasksToToffoliGates(
+    qubits : Qubit[], 
+    masks : MCMTMask[]) 
+: MCTGate[] {
 
     mutable result = new MCTGate[0];
     let n = Length(qubits);

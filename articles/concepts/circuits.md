@@ -1,17 +1,17 @@
 ---
 title: Circuitos Quantum | Microsoft Docs
-description: Circuitos Quantum
+description: Circuitos cuánticos
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210685"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820800"
 ---
 # <a name="quantum-circuits"></a>Circuitos Quantum
 Considere, por un momento, la transformación unitario $ \text{CNOT} _{01}(H\otimes 1) $.
@@ -39,7 +39,7 @@ Por ejemplo, el símbolo
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-es la puerta [Hadamard](xref:microsoft.quantum.primitive.h) que actúa en un registro de qubit único.
+es la puerta [Hadamard](xref:microsoft.quantum.intrinsic.h) que actúa en un registro de qubit único.
 
 Las puertas de Quantum se ordenan cronológicamente con la puerta situada más a la izquierda como la puerta que se aplica primero a qubits.
 En otras palabras, si se imagen de los cables como que contienen el estado de Quantum, los cables llevan el estado de Quantum a través de cada una de las puertas del diagrama de izquierda a derecha.
@@ -72,7 +72,7 @@ Esto significa que puede obtener un Intuition sobre el flujo de datos para un al
 
 ## <a name="controlled-gates"></a>Puertas controladas
 La otra construcción que se integra en los diagramas del circuito de Quantum de varios qubit es control.
-La acción de una puerta Quantum controlada por una vez, indicada como $ \Lambda (G) $, donde el valor de un único qubit controla la aplicación de $G $, se puede entender observando el siguiente ejemplo de una entrada de estado del producto $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ PSI} $.
+La acción de una puerta de Quantum controlada por una vez, indicada como $ \Lambda (G) $, donde un valor de qubit único controla la aplicación de $G $, se puede entender examinando el ejemplo siguiente de una entrada de estado de producto $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ PSI} $
 Es decir, la barrera controlada aplica $G $ al registro que contiene $ \psi $ si y solo si el control qubit toma el valor $1 $.
 En general, se describen las operaciones controladas en diagramas de circuitos como
 
@@ -81,7 +81,7 @@ En general, se describen las operaciones controladas en diagramas de circuitos c
 ![](~/media/concepts_5.png)
 
 Aquí el círculo negro denota el bit de Quantum en el que se controla la puerta y una conexión vertical denota la unitario que se aplica cuando el control qubit toma el valor $1 $.
-Para los casos especiales en los que $G = X $ y $G = Z $, presentamos la siguiente notación para describir la versión controlada de las puertas (tenga en cuenta que la puerta controlada-X es la [$CNOT $ Gate](xref:microsoft.quantum.primitive.cnot)):
+Para los casos especiales en los que $G = X $ y $G = Z $, presentamos la siguiente notación para describir la versión controlada de las puertas (tenga en cuenta que la puerta controlada-X es la [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -106,7 +106,7 @@ En concreto, este Subcircuito tiene el siguiente aspecto:
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_7.png) de circuito de medición
 
-Q # implementa un [operador de medida](xref:microsoft.quantum.primitive.measure) para este fin.
+Q # implementa un [operador de medida](xref:microsoft.quantum.intrinsic.measure) para este fin.
 Vea la [sección sobre medidas](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obtener más información.
 
 Del mismo modo, el Subcircuito

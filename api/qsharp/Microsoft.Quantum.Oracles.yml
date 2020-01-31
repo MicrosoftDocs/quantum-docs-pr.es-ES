@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>summary\n Este espacio de nombres proporciona tipos definidos por el usuario para decorar varios tipos de Oracle según su uso previsto en algoritmos Quantum como la estimación de la fase y la amplificación de amplitud."
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres proporciona tipos definidos por el usuario para decorar varios tipos de Oracle según su uso previsto en algoritmos Quantum como la estimación de la fase y la amplificación de amplitud."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
   summary: Convierte un tipo de `StateOracle` de Oracle en `DeterministicStateOracle`.
@@ -10,11 +10,7 @@ functions:
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Dada una operación que representa una "caja negra" de Oracle, devuelve una Oracle de tiempo discreto que representa el valor de Oracle "Black-Box" repetido varias veces.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: >-
-    Construye la reflexión sobre un estado determinado desde Oracle.
-
-
-    Dado el $O de Oracle $ de tipo <xref:microsoft.quantum.oracles.deterministicstateoracle>, el resultado de esta función es un reflejo alrededor del estado $ \ket{\psi} $, donde $O \ket{0} = \ket{\psi} $.
+  summary: Construye la reflexión sobre un estado determinado desde Oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
   summary: Convierte un tipo de `DeterministicStateOracle` de Oracle en `StateOracle`.
 newtypes:
@@ -73,9 +69,9 @@ newtypes:
 
     - El registro del sistema $s $ que almacenará el estado de cuanto deseado, $ \ket{\psi}\_s $.
 metadata:
-  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216108"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870010"

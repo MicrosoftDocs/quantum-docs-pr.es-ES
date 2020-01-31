@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 1eb48da9d4ae2a730019e2707dcb2c69b998491e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864379"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870358"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterización y estadísticas de Quantum #
 
@@ -39,11 +39,11 @@ En la explicación de la estimación de la fase iterativa, se considerará una $
 Tal y como se describe en la sección sobre Oracle en las [estructuras de datos](xref:microsoft.quantum.libraries.data-structures), los modelos de Q # Canon tales como las operaciones del tipo definido por el usuario <xref:microsoft.quantum.oracles.discreteoracle>, definido por el tipo de tupla `((Int, Qubit[]) => Unit : Adjoint, Controlled)`.
 Concretamente, si `U : DiscreteOracle`, `U(m)` implementa $U ^ m $ para `m : Int`.
 
-Con esta definición en su lugar, cada paso de la estimación de la fase iterativa se realiza mediante la preparación de un qubit auxiliar en el estado $ \ket{+} $ junto con el estado inicial $ \ket{\phi} $ que asumimos es un [Eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) de $U (m) $, es decir, $U (m) \ket{\phi} = e ^ {im\phi} \ les {\ Phi} $.  
+Con esta definición en su lugar, cada paso de la estimación de la fase iterativa continúa mediante la preparación de un qubit auxiliar en el estado $ \ket{+} $ junto con el estado inicial $ \ket{\phi} $ que asumimos es un [Eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) de $U (m) $, es decir, $U (m) \ket{\phi} = e ^ {im\phi} \ les {\ Phi} $.  
 Después, se usa una aplicación controlada de `U(m)` que prepara el estado $ \left (R\_1 (m \phi) \ket{+} \right) \ket{\phi} $.
 Como en el caso de Quantum, el efecto de una aplicación controlada del `U(m)` de Oracle es exactamente el mismo que el efecto de aplicar $R _ 1 _ 1 para la fase desconocida en $ \ket{+} $, de modo que podamos describir los efectos de $U $ en este modo más sencillo.
 Opcionalmente, el algoritmo rota el qubit de control aplicando $R _ 1 (-m\theta) $ para obtener un estado $ \ket{\psi} = \left (R\_1 (m [\phi-\theta]) \ket{+} \right) \ket{\phi} $ $.
-La qubit auxiliar que se usa como control para `U(m)` se mide en el $X $ base para obtener un único `Result`clásico.
+El qubit auxiliar que se usa como control para `U(m)` se mide en el $X $ base para obtener un único `Result`clásico.
 
 En este momento, reconstruir la fase de los valores `Result` obtenidos mediante la estimación de la fase iterativa es un problema de inferencia estadística clásico.
 La búsqueda del valor de $m $ que maximiza la información obtenida, dado un método de inferencia fijo, es simplemente un problema en las estadísticas.
@@ -106,7 +106,7 @@ Un ejemplo de este tipo con un paso de procesamiento posterior más eficaz es el
 
 La característica más importante de una estimación de fase sólida, que se comparte con la mayoría de las otras variantes útiles, es que la calidad de reconstrucción de $ \hat{\phi} $ está en cierto sentido Heisenberg-Limited. Esto significa que si la desviación de $ \hat{\phi} $ del valor true es $ \sigma $, $ \sigma $ se escala inversamente proporcionalmente al número total de consultas $Q $ realizado en controled-$U $, es decir, $ \sigma = \mathcal{O} (1/Q) $. Ahora, la definición de la desviación varía entre distintos algoritmos de estimación. En algunos casos, puede significar que, al menos $ \mathcal{O} (1) $ probability, el error de estimación $ | \hat{\phi}-\phi |\_\circ\le \sigma $ en algunas medidas circulares $ \circ $. Para una estimación de fase sólida, la desviación es precisamente la varianza $ \sigma ^ 2 = \mathbb{E}\_\hat{\phi} [(\mod\_{2 \ PI} (\hat{\phi}-\phi + \pi)-\pi) ^ 2] $ si desencapsulamos las fases periódicas en un único intervalo finito $ (-\pi, \pi] $. Más concretamente, la desviación estándar en una estimación de fase sólida satisface las desigualdades $ $ \begin{align} 2,0 \pi/Q \le \sigma \le 2 \ pi/2 ^ {n} \le 10.7 \ PI/Q, \end{align} $ $ donde se alcanza el límite inferior en el límite de asymptotically grande $Q $ y se garantiza el límite superior incluso para tamaños de ejemplo pequeños.  Tenga en cuenta que $n $ seleccionado por la entrada `bitsPrecision`, que define implícitamente $Q $.
 
-Otros detalles relevantes incluyen, por ejemplo, la sobrecarga de espacio pequeña de solo $1 $ ancilla qubit, o que el procedimiento no es adaptable, lo que significa que la secuencia requerida de experimentos de Quantum es independiente de los resultados de la medida intermedia. En este y en los próximos ejemplos en los que la elección del algoritmo de estimación de fase es importante, uno debería hacer referencia a la documentación, como @"microsoft.quantum.canon.robustphaseestimation" y las publicaciones a las que se hace referencia, para obtener más información y para su implementación.
+Otros detalles relevantes incluyen, por ejemplo, la sobrecarga de espacio pequeña de solo $1 $ ancilla qubit, o que el procedimiento no es adaptable, lo que significa que la secuencia requerida de experimentos de Quantum es independiente de los resultados de la medida intermedia. En este y en los próximos ejemplos en los que la elección del algoritmo de estimación de fase es importante, uno debería hacer referencia a la documentación, como @"microsoft.quantum.characterization.robustphaseestimation" y las publicaciones a las que se hace referencia, para obtener más información y para su implementación.
 
 > [!TIP]
 > Hay muchos ejemplos en los que se usa una estimación de fase sólida. Para estimar la fase en la extracción de la energía de estado de la alimentación de varios sistemas físicos, consulte el ejemplo de [ **simulación de H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), el [ejemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)y el ejemplo de [ **Modelo Hubbard** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
@@ -154,25 +154,27 @@ Por lo tanto, como se aprecia en **H2Sample**, una operación puede aceptar un a
 
 ```qsharp
 operation H2EstimateEnergy(
-    idxBondLength : Int, 
+    idxBondLength : Int,
     trotterStepSize : Double,
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
 : Double
 ```
 
-Estos pocos algoritmos de estimación de fase están optimizados para las distintas propiedades y parámetros de entrada, que deben entenderse para que sea la mejor opción para la aplicación de destino. Por ejemplo, algunos algoritmos de estimación de fase son adaptables, lo que significa que los pasos futuros se controlan de forma controlada por los resultados de la medición de los pasos anteriores. Algunos requieren la capacidad de exponentiater su unitario de cuadro negro de Oracle por poderes reales arbitrarios, y otros solo requieren potencias enteras, pero solo pueden resolver un módulo de estimación de fase $2 \ PI $. Algunos requieren muchos qubits auxiliar y otros solo requieren uno.
+Estos pocos algoritmos de estimación de fase están optimizados para las distintas propiedades y parámetros de entrada, que deben entenderse para que sea la mejor opción para la aplicación de destino. Por ejemplo, algunos algoritmos de estimación de fase son adaptables, lo que significa que los pasos futuros se controlan de forma controlada por los resultados de la medición de los pasos anteriores. Algunos requieren la capacidad de exponentiater su unitario de cuadro negro de Oracle por poderes reales arbitrarios, y otros solo requieren potencias enteras, pero solo pueden resolver un módulo de estimación de fase $2 \ PI $. Algunos requieren muchos qubits auxiliares y otros solo requieren uno.
 
 Del mismo modo, el uso de la estimación de fases de recorrido aleatorios se realiza de forma muy similar a la de otros algoritmos que se proporcionan con Canon:
 
 ```qsharp
-operation ExampleOracle(eigenphase : Double, time : Double, register : Qubit[]) : Unit
-is Adj + Ctl {
+operation ApplyExampleOracle(
+    eigenphase : Double,
+    time : Double,
+    register : Qubit[])
+: Unit is Adj + Ctl {
     Rz(2.0 * eigenphase * time, register[0]);
 }
 
-operation BayesianPhaseEstimationCanonSample(eigenphase : Double) : Double {
-
-    let oracle = ContinuousOracle(ExampleOracle(eigenphase, _, _));
+operation EstimateBayesianPhase(eigenphase : Double) : Double {
+    let oracle = ContinuousOracle(ApplyExampleOracle(eigenphase, _, _));
     using (eigenstate = Qubit()) {
         X(eigenstate);
         // The additional inputs here specify the mean and variance of the prior, the number of

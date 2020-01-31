@@ -1,17 +1,17 @@
 ---
-title: 'Técnicas de Q #: operaciones y funciones | Microsoft Docs'
-description: 'Técnicas de Q #: operaciones y funciones'
+title: 'Operaciones y funciones: técnicas de Q # | Microsoft Docs'
+description: 'Operaciones y funciones: técnicas de Q #'
 uid: microsoft.quantum.techniques.opsandfunctions
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 06da09dc9c6e0ba0331db6bc0cd3d2ddeb287113
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1fca20bb44cc42008f7d25d2fc71a39b962525c2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183461"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820783"
 ---
 # <a name="q-operations-and-functions"></a>Operaciones y funciones de Q #
 
@@ -66,7 +66,7 @@ Si una operación implementa una transformación unitario, es posible definir c�
 La existencia de estas especializaciones se puede declarar como parte de la firma de la operación: `is Adj + Ctl` en el ejemplo siguiente. El compilador genera la implementación correspondiente para cada una de estas especializaciones declaradas implícitamente. 
 
 ```qsharp
-operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit {
+operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit
 is Adj + Ctl { // implies the existence of an adjoint, a controlled, and a controlled adjoint specialization
     H(here);
     CNOT(here, there);
@@ -111,7 +111,7 @@ is Ctl + Adj {
     controlled adjoint invert; 
 }
 ```
-En el ejemplo anterior, `adjoint invert;` indica que la especialización de la instancia contigua se va a generar invirtiendo la implementación del cuerpo y `controlled adjoint invert;` indica que la especialización del adyacente controlada se va a generar invirtiendo la implementación dada del especialización controlada.
+En el ejemplo anterior, `adjoint invert;` indica que la especialización de la instancia contigua se va a generar invirtiendo la implementación del cuerpo y `controlled adjoint invert;` indica que la especialización contigua controlada se generará invirtiendo la implementación dada de la especialización controlada.
 
 Veremos más ejemplos de esto en el [flujo de control de orden superior](xref:microsoft.quantum.concepts.control-flow).
 
@@ -163,7 +163,7 @@ operation U(target : Qubit) : Unit {
 
 Cada vez que se llama a `U`, tendrá una acción diferente en `target`.
 En concreto, el compilador no puede garantizar que si se agrega una declaración de especialización `adjoint auto` a `U`, `U(target); Adjoint U(target);` actúa como identidad (es decir, como una operación no operativa).
-Esto infringe la definición del método contiguo que vimos en [vectores y matrices](xref:microsoft.quantum.concepts.vectors), de modo que permitir la generación automática de una especialización de tipo contiguo en una operación en la que se llamó a la operación <xref:microsoft.quantum.math.randomreal> interrumpiría las garantías proporcionadas por el compilador ; <xref:microsoft.quantum.math.randomreal> es una operación para la que no existe ninguna versión contigua o controlada.
+Esto infringe la definición del método contiguo que vimos en [vectores y matrices](xref:microsoft.quantum.concepts.vectors), de modo que permitir la generación automática de una especialización de tipo contiguo en una operación en la que se llamó a la operación <xref:microsoft.quantum.math.randomreal> interrumpiría las garantías proporcionadas por el compilador. <xref:microsoft.quantum.math.randomreal> es una operación para la que no existe ninguna versión contigua o controlada.
 
 Por otro lado, permitir llamadas a funciones como `Square` es seguro, en el que el compilador puede estar seguro de que solo necesita conservar la entrada en `Square` para mantener la salida estable.
 Por lo tanto, el aislamiento de la lógica más clásica posible en las funciones facilita la reutilización de esa lógica en otras funciones y operaciones similares.

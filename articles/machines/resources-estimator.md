@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 591e306b3001934bd81342a533e3f6ca25129781
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184991"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820868"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>El equipo de destino ResourcesEstimator
 
@@ -103,31 +103,31 @@ A continuación se muestra la lista de métricas estimadas por el `ResourcesEsti
 * __BorrowedWidth__: número máximo de qubits prestado dentro de la operación Q #.
 
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Proporcionar la probabilidad de los resultados de la medición
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Proporcionar la probabilidad de los resultados de medidas
 
-<xref:microsoft.quantum.primitive.assertprob> del espacio de nombres de <xref:microsoft.quantum.primitive> se puede usar para proporcionar información sobre la probabilidad esperada de una medida que ayude a impulsar la ejecución del programa de preguntas y respuestas. Esto se ilustra en el ejemplo siguiente:
+<xref:microsoft.quantum.intrinsic.assertprob> del espacio de nombres de <xref:microsoft.quantum.intrinsic> se puede usar para proporcionar información sobre la probabilidad esperada de una medida que ayude a impulsar la ejecución del programa de preguntas y respuestas. Esto se ilustra en el ejemplo siguiente:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
+operation Teleport(source : Qubit, target : Qubit) : Unit {
 
-    using (ancilla = Qubit()) {
+    using (qubit = Qubit()) {
 
-        H(ancilla);
-        CNOT(ancilla, target);
+        H(q);
+        CNOT(qubit, target);
 
-        CNOT(source, ancilla);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [qubit], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(qubit) == One) { X(target); X(qubit); }
     }
 }
 ```
 
-Cuando el `ResourcesEstimator` encuentra `AssertProb` registrará que la medición `PauliZ` en `source` y `ancilla` debe recibir el resultado de `Zero` con la probabilidad 0,5. Cuando se ejecuta `M` más adelante, buscará los valores registrados de las probabilidades de resultado y `M` devolverá `Zero` o `One` con probabilidad 0,5.
+Cuando el `ResourcesEstimator` encuentra `AssertProb` registrará que la medición `PauliZ` en `source` y `q` debe recibir el resultado de `Zero` con la probabilidad 0,5. Cuando se ejecuta `M` más adelante, buscará los valores registrados de las probabilidades de resultado y `M` devolverá `Zero` o `One` con probabilidad 0,5.
 
 
 ## <a name="see-also"></a>Vea también

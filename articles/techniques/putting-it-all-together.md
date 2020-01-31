@@ -1,23 +1,23 @@
 ---
-title: 'Técnicas de preguntas y respuestas: colocarlas todas juntas | Microsoft Docs'
-description: 'Técnicas de Q #: reunir todo'
+title: 'Reunir todo: técnicas de Q # | Microsoft Docs'
+description: 'Reunir todo: técnicas de preguntas y respuestas'
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f65b3e260f98a7a90da13b62edd6cc63d200f5af
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183274"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820171"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Reunir todo: teleportabilidad #
 Volvamos al ejemplo del circuito de teleportabilidad definido en los circuitos de [Quantum](xref:microsoft.quantum.concepts.circuits). Vamos a usar esto para ilustrar los conceptos que hemos aprendido hasta ahora. A continuación se proporciona una explicación de la teleportabilidad de Quantum para quienes no están familiarizados con la teoría, seguidos de un tutorial de la implementación del código en Q #. 
 
 ## <a name="quantum-teleportation-theory"></a>Teleportabilidad de Quantum: teoría
-La teleportabilidad de Quantum es una técnica para enviar un estado de Quantum desconocido (al que haremos referencia como "__mensaje__") desde una qubit en una ubicación a una qubit en otra ubicación (haremos referencia a estas qubits como "__aquí__" y "__allí__", respectivamente). Podemos representar el __mensaje__ como un vector mediante la notación Dirac: 
+La teleportabilidad de Quantum es una técnica para enviar un estado de Quantum desconocido (al que haremos referencia como el "__mensaje__") desde una qubit en una ubicación a una qubit en otra ubicación (nos referiremos a estas qubits como "__aquí__" y "__allí__", respectivamente). Podemos representar el __mensaje__ como un vector mediante la notación Dirac: 
 
 $ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
 
@@ -56,7 +56,7 @@ $ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
 
 Si se aplica la puerta Hadamard al primer qubit de cada término de la salida anterior, obtenemos el siguiente resultado:
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{ \sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
 
 Tenga en cuenta que cada término tiene $2 \frac{1}{\sqrt{2}} $ factores. Podemos multiplicarlos por el siguiente resultado:
 
@@ -125,7 +125,7 @@ También necesitamos asignar una `here` qubit que se logra con un bloque de `usi
 ```
 
 ### <a name="step-1-create-an-entangled-state"></a>Paso 1: creación de un estado desenredado
-A continuación, podemos crear el par enenredado entre `here` y `there` mediante las operaciones @"microsoft.quantum.primitive.h" y @"microsoft.quantum.primitive.cnot":
+A continuación, podemos crear el par enenredado entre `here` y `there` mediante las operaciones @"microsoft.quantum.intrinsic.h" y @"microsoft.quantum.intrinsic.cnot":
 
 ```qsharp
         H(here);
@@ -141,7 +141,7 @@ Después usamos las siguientes $ \operatorname{CNOT} $ y $H $ Gates para pasar e
 ```
 
 ### <a name="step-3--4-measuring-and-interpreting-the-result"></a>Paso 3 & 4: medir e interpretar el resultado
-Por último, usamos @"microsoft.quantum.primitive.m" para realizar las medidas y realizar las operaciones de puerta necesarias para obtener el estado deseado, como se indica en las instrucciones de `if`:
+Por último, usamos @"microsoft.quantum.intrinsic.m" para realizar las medidas y realizar las operaciones de puerta necesarias para obtener el estado deseado, como se indica en las instrucciones de `if`:
 
 ```qsharp
         // Measure out the entanglement

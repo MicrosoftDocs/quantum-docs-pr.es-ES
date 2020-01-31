@@ -3,30 +3,24 @@ uid: microsoft.quantum.characterization.measureallz
 name: MeasureAllZ
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: >-
-  Mide conjuntamente un registro de qubits en la base de Pauli Z.
-
-
-  En otras palabras, mide la operación $Z \otimes Z \otimes \cdots \otimes Z $ en un registro determinado.
+summary: MeasureAllZ está en desuso. En su lugar, use @"microsoft.quantum.measurement.measureallz".
 syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: El registro que se va a medir.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: El resultado de medir $Z \otimes Z \otimes \cdots \otimes Z $.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: d9582f1656cbee854600eaf37bf3a0effa52869f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 894ff0836f6efef5124a118bdea16057a3d84a77
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229147"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870893"

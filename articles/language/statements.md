@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184872"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821072"
 ---
 # <a name="statements-and-other-constructs"></a>Instrucciones y otras construcciones
 
@@ -54,8 +54,7 @@ Por ejemplo:
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
@@ -90,7 +89,6 @@ Si se ha definido un nombre corto `Z` para `X.Y` en ese espacio de nombres y arc
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
@@ -181,7 +179,7 @@ for (i in 1 .. 2 .. 10) {
 Las instrucciones similares están disponibles para todos los operadores binarios en los que el tipo del lado izquierdo coincide con el tipo de expresión. Esto proporciona, por ejemplo, una manera cómoda de acumular valores:
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
@@ -193,7 +191,7 @@ Existe una concatenación similar para las expresiones de copia y actualización
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -209,19 +207,17 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 En el caso de las matrices, nuestras bibliotecas estándar contienen las herramientas necesarias para muchas necesidades comunes de inicialización y manipulación de matrices y, por tanto, ayudan a evitar tener que actualizar los elementos de la matriz en primer lugar. Las instrucciones Update-and-resign proporcionan una alternativa si es necesario:
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -236,10 +232,9 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 
 La función
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
@@ -249,15 +244,15 @@ function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
 por ejemplo, se puede simplificar simplemente con la función `ConstantArray` en `Microsoft.Quantum.Arrays`y devolver una expresión de copia y actualización:
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
 ### <a name="binding-scopes"></a>Ámbitos de enlace
 
 En general, los enlaces de símbolos salen del ámbito y quedan inoperativos al final del bloque de instrucciones en el que se encuentran.
-Hay dos excepciones a esta regla:
+Esta regla tiene dos excepciones:
 
 - El enlace de la variable de bucle de un bucle `for` está en el ámbito del cuerpo del bucle for, pero no después del final del bucle.
 - Las tres partes de una `repeat`/bucle `until` (el cuerpo, la prueba y la corrección) se tratan como un solo ámbito, por lo que los símbolos que están enlazados en el cuerpo están disponibles en la prueba y en la corrección.
@@ -315,7 +310,7 @@ if (a == b) {
 
 ## <a name="control-flow"></a>Flujo de control
 
-### <a name="for-loop"></a>Bucle for
+### <a name="for-loop"></a>Bucle For
 
 La instrucción `for` admite la iteración en un intervalo de enteros o en una matriz.
 La instrucción consta de la palabra clave `for`, un paréntesis de apertura `(`, seguido de una tupla de símbolos o símbolos, la palabra clave `in`, una expresión de tipo `Range` o array, un paréntesis de cierre `)`y un bloque de instrucciones.
@@ -330,8 +325,8 @@ Por ejemplo,
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -359,13 +354,13 @@ El cuerpo, la condición y la corrección del bucle se consideran un solo ámbit
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
@@ -374,25 +369,25 @@ Si la condición es true, la instrucción se completa; de lo contrario, se ejecu
 Tenga en cuenta que al completar la ejecución de la corrección finaliza el ámbito de la instrucción, de modo que los enlaces de símbolos realizados durante el cuerpo o la corrección no estén disponibles en las repeticiones posteriores.
 
 Por ejemplo, el código siguiente es un circuito probabilística que implementa una puerta de rotación importante $V _3 = (\boldone + 2 i Z)/\sqrt{5}$ usando las puertas Hadamard y T.
-El bucle finaliza en 8/5 repeticiones de promedio.
+El bucle finaliza en $ \frac{8}{5}$ repeticiones en promedio.
 Vea [*repetir hasta el éxito: descomposición no determinista de unitaries de un solo qubit*](https://arxiv.org/abs/1311.1074) (Paetznick y Svore, 2014) para obtener más información.
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
@@ -480,7 +475,7 @@ O bien
 return (results, qubits);
 ```
 
-### <a name="fail"></a>Fail (no superado)
+### <a name="fail"></a>Incorrecto
 
 La instrucción FAIL finaliza la ejecución de una operación y devuelve un valor de error al autor de la llamada.
 Consta de la palabra clave `fail`, seguida de una cadena y un punto y coma de terminación.
@@ -519,15 +514,15 @@ Los inicializadores están disponibles para un único qubit, indicado como `Qubi
 Por ejemplo,
 
 ```qsharp
-using (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-### <a name="dirty-qubits"></a>Qubits sucio
+### <a name="borrowed-qubits"></a>Qubits prestado
 
 La instrucción `borrowing` se usa para obtener qubits para su uso temporal. La instrucción consta de la palabra clave `borrowing`, seguida de un paréntesis de apertura `(`, un enlace, un paréntesis de cierre `)`y el bloque de instrucciones en el que estará disponible el qubits.
 El enlace sigue el mismo patrón y las mismas reglas que el de una instrucción `using`.
@@ -535,10 +530,10 @@ El enlace sigue el mismo patrón y las mismas reglas que el de una instrucción 
 Por ejemplo,
 
 ```qsharp
-borrowing (q = Qubit()) {
+borrowing (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
@@ -547,8 +542,7 @@ Los qubits prestados se encuentran en un estado desconocido y salen del ámbito 
 El prestatario se compromete a mantener el qubits en el mismo estado en que se encontraban cuando se prestó, es decir, su estado al principio y al final del bloque de instrucciones se espera que sea el mismo.
 En concreto, este estado no es necesariamente un estado clásico, de modo que en la mayoría de los casos, los ámbitos de préstamo no deben contener medidas. 
 
-Estos qubits a menudo se conocen como "sucios Ancilla".
-Consulte [*factorización con 2N + 2 qubits con multiplicación modular basada en Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler y Svore 2017) para obtener un ejemplo de uso de Dirty ancilla.
+Consulte [*factorización con 2N + 2 qubits con multiplicación modular basada en Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler y Svore 2017) para obtener un ejemplo de uso de qubit prestado.
 
 Al tomar prestado qubits, el sistema intentará en primer lugar rellenar la solicitud de qubits que están en uso, pero a las que no se tiene acceso durante el cuerpo de la instrucción de `borrowing`.
 Si no hay suficiente qubits, asignará nuevo qubits para completar la solicitud.

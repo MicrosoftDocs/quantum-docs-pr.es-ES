@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 10b1048501c2de055f5711fc0fdbc4bac76e8f77
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864413"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819899"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Creación de un proyecto de Q # en el entorno de desarrollo
 
@@ -23,7 +23,7 @@ Un proyecto de Q # contiene archivos de preguntas y respuestas que contienen có
 Elija el entorno de desarrollo y el idioma en las secciones siguientes:
 
 * [Python](#create-a-python-project)
-* [Jupyter Notebooks](#create-a-jupyter-notebook-project)
+* [P # Jupyter notebooks](#create-a-q-jupyter-notebook-project)
 * [C#con Visual Studio](#create-a-c-project-on-windows-using-visual-studio)
 * [C#con VS Code](#create-a-c-project-using-vs-code)
 * [C#con la línea de comandos](#create-a-c-project-using-the-dotnet-command-line-tool)
@@ -32,7 +32,7 @@ Elija el entorno de desarrollo y el idioma en las secciones siguientes:
 
 1. Requisitos previos
 
-     * El [Kit de desarrollo de Quantum para Python](xref:microsoft.quantum.install#develop-with-python)
+     * Instalación del [Kit de desarrollo de Quantum para Python](xref:microsoft.quantum.install.python)
 
 1. Cree una carpeta para el proyecto y vaya a esa carpeta.
 
@@ -75,11 +75,11 @@ Elija el entorno de desarrollo y el idioma en las secciones siguientes:
 
 Ahora puede continuar desarrollando el programa Quantum.
 
-## <a name="create-a-jupyter-notebook-project"></a>Creación de un proyecto de Jupyter Notebook
+## <a name="create-a-q-jupyter-notebook-project"></a>Creación de un proyecto de Jupyter Notebook de preguntas #
 
 1. Requisitos previos
 
-    * El [Kit de desarrollo de Quantum para cuadernos de Jupyter Notebook](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+    * Instalación del [Kit de desarrollo de Quantum para cuadernos de Jupyter Notebook](xref:microsoft.quantum.install.jupyter)
 
 1. Ejecute el siguiente comando para iniciar el servidor de cuadernos:
 
@@ -115,7 +115,7 @@ Ahora puede agregar otras operaciones de Q # para continuar con el desarrollo de
 
 1. Requisitos previos
 
-    * El [Kit de desarrollo de Quantum para Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
+    * Instalación [de la extensión de Quantum Development Kit para Visual Studio](xref:microsoft.quantum.install.cs)
 
 1. Creación de una aplicación de Q#
 
@@ -144,7 +144,7 @@ Ahora puede continuar con el desarrollo de Quantum con Visual Studio.
 
 1. Requisitos previos
 
-    * El [Kit de desarrollo de Quantum para vs Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
+    * Instalación [de la extensión de Quantum Development Kit para vs Code](xref:microsoft.quantum.install.cs)
 
 1. Cree un nuevo proyecto:
 
@@ -169,7 +169,7 @@ Ahora puede continuar con el desarrollo de Quantum mediante Visual Studio Code.
 
 1. Requisitos previos
 
-    * El [Kit de desarrollo de Quantum para la línea de comandos](xref:microsoft.quantum.install#develop-with-c-using-the-dotnet-command-line-tool)
+    * Instalación del [Kit de desarrollo de Quantum para la línea de comandos](xref:microsoft.quantum.install.cs)
 
 1. Creación de una aplicación
 

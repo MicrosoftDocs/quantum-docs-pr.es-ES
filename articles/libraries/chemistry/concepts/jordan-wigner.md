@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: f34233bc17ff68a9e04256959f8d79be2682c34f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184056"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820545"
 ---
 # <a name="jordan-wigner-representation"></a>Jordania: representación Wigner
 
@@ -22,16 +22,21 @@ Sin embargo, también existen otros, como la representación Bravyi – Kitaev y
 La principal ventaja de la representación Jordania-Wigner es su simplicidad.
 
 La representación Jordania-Wigner es sencilla para derivar.
-Recuerde que un estado $ \ket{0}_J $ implica que el giro orbital $j $ está vacío y $ \ket{1}_J $ implica que está ocupado.
+Recuerde que un estado $ \ket{0}_j $ implica que el giro orbital $j $ está vacío y $ \ket{1}_j $ implica que está ocupado.
 Esto significa que qubits puede almacenar de forma natural la profesión de un giro orbital determinado.
-Después tenemos ese $a ^ \dagger_j \ket{0}_J = \ket{1}_J $ y $a ^ \dagger_j \ket{1}_J = $0.
-Es fácil comprobar que \begin{Align} a ^ \dagger_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \frac{X_j + iY_j}{2}, \nonumber\\\\ a_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \end{ bmatrix} = \frac{X_j-iY_j}{2}, \end{align} donde $X _J $ y $Y _J $ son los operadores Pauli-$X $ y-$Y $ que actúan en qubit $j $.
+Después tenemos ese $a ^ \ dagger_j \ket{0}_j = \ket{1}_j $ y $a ^ \ dagger_j \ket{1}_J = $0.
+Es fácil comprobar que \begin{Align} a ^ \ dagger_j & = \begin{bmatrix}0 & 0 \\\ 1 & 0 \end{bmatrix} = \frac{X_j-iY_j}{2}\nonumber\\\\ a_j & = \begin{bmatrix}0 & 1 \\\ 0 & 0 \end{bmatrix} = \frac{X_j + iY_j}{2}, \end{align} donde $X _J $ y $Y _j $ son los operadores Pauli-$X $ y-$Y $ que actúan en qubit $j $.
+
+>[!NOTE]
+> En Q #, $ \ket{0}$ State representa el eigenstate + 1 del operador $Z $. En algunas áreas de física, $ \ket{0}$ representa el estado de la baja energía y, por tanto, el-1 eigenstate del operador $Z $. Por lo tanto, algunas fórmulas pueden diferir de la literatura popular.
+
+En la biblioteca de química, usamos $ \ket{0}$ para representar un giro orbital no ocupado.
 Esto muestra que, en el caso de una sola rotación, es fácil representar los operadores de creación y Annihilation en términos de matrices unitarios que entienden los equipos Quantum.
 Tenga en cuenta que mientras $X $ y $Y $ son unitarios $a ^ \dagger $ y $a $ no lo son.
 Más adelante veremos que esto no supone un reto para la simulación.
 
 Un problema que queda es que mientras que la construcción anterior funciona para un único giro orbital, se produce un error en los sistemas con dos o más giros de giro.
-Como fermions son antisymmetic, sabemos que $a ^ \dagger_j a ^ \dagger_k =-a ^ \dagger_k a ^ \dagger_j $ para cualquier $j $ y $k $.
+Como fermions son antisymmetic, sabemos que $a ^ \ dagger_j a ^ \ dagger_k =-a ^ \ dagger_k a ^ \ dagger_j $ para cualquier $j $ y $k $.
 Sin embargo, $ $ \left (\frac{X_j-iY_j}{2}\right) \left (\frac{X_k-iY_k}{2}\right) = \left (\frac{X_k-iY_k}{2}\right) \left (\frac{X_j-iY_j}{2}\right).
 $ $ En otras palabras, los dos operadores de creación no contrae el desactivador según sea necesario.
 Esto puede solucionarse en un modo sencillo, si es elegante.
@@ -40,11 +45,11 @@ En concreto, $XZ =-ZX $ y $YZ =-ZY $.
 Por lo tanto, al entremezclar $Z operadores $ en la construcción del operador, podemos emular la commutación correcta.
 La construcción completa es la siguiente: 
 
-\begin{Align} a ^ \dagger_1 & = \left (\frac{X-iY}{2}\right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1,\\\\ a ^ \dagger_2 & = Z\otimes\left (\frac{X-iY}{2}\right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1 ,\\\\ ^ \dagger_3 & = Z\otimes Z\otimes \left (\frac{X-iY}{2}\right) \otimes 1 \otimes \cdots \otimes 1,\\\\ & \vdots\\\\ a ^ \dagger_N & = Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z\otimes \left (\frac{X-iY}{2}\right). \label{EQ: JW} \end{align}
+\begin{Align} a ^ \ dagger_1 & = \left (\frac{X-iY}{2}\right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1,\\\\ a ^ \ dagger_2 & = Z\otimes\left (\frac{X-iY}{2}\right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1,\\\\ a ^ \ dagger_3 & = Z\otimes Z\otimes \left (\frac{X-iY}{2}\right) \otimes 1 \otimes \cdots \otimes 1,\\\\ & \vdots\\\\ a ^ \ dagger_N & = Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z \ otimes \left (\frac{X-iY}{2}\right). \label{EQ: JW} \end{align}
 
-También es conveniente expresar los operadores numéricos, $n _J $, en términos de operadores Pauli.
+También es conveniente expresar los operadores de número, $n _j $, en términos de operadores de Pauli.
 Afortunadamente, las cadenas de $Z $ Operators (conocidas como cadenas de Jordania-Wigner) cancelan después de una realiza esta sustitución.
-Después de llevar esto (y de que se revoque que $X _jY_j = iZ_j $), tenemos \begin{Equation} n_j = a ^ \dagger_j a_j = \frac{(1-Z_j)}{2}.
+Después de llevar esto (y de que se revoque $X _jY_j = iZ_j $), tenemos \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)}{2}.
 \end{equation}
 
 
@@ -56,7 +61,7 @@ Cuando una realiza esta sustitución, solo hay cinco clases de términos dentro 
 Estas cinco clases se corresponden con las distintas formas en que se puede elegir el $p, q $ y $p, q, r, s $ en los términos de un cuerpo y dos cuerpos en el Hamiltonian.
 Estas cinco clases, para el caso en que $p > q > r > s $ y las órbitas con valores reales son
 
-\begin{align} H_ {PP} A_P ^ \dagger A_P & = \sum_p \frac{H_{PP}}{2}(1-Z_p)\\\\ H_ {PQ} (A_P ^ \dagger a_q + a ^ \dagger_q A_P) & = \frac{H_{pq}}{2}\left (\prod_{j = q + 1} ^ {p-1} Z_j \right) \ Left (X_pX_q + Y_pY_q\right)\\\\ H_ {pqqp} n_P n_q & = \frac{H_{pqqp}}{4}\left (1-Z_p-Z_q + Z_pZ_q \right)\\\\ H_ {pqqr} & = \frac{H_{pqqr}}{2}\left (\prod_{j = r + 1} ^ {p-1} Z_j \right) \left (X_pX_r + Y_pY_r\right) \left (\frac{1-Z_q}{2}\right)\\\\ H_ {PQRS} & = \frac{H_{PQRS}}{8}\prod_{j = s + 1} ^ {r-1} Z_j\prod_ {k = q + 1} ^ {p-1} Z_k \Big (XXXX-XXYY + XYXY\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + YXXY + YXYX-YYXX\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + XYYX + YYYY\Big) \end{align}
+\begin{align} h_ {PP} a_p ^ \dagger a_p & = \ sum_p \frac{h_ {PP}}{2}(1-Z_p)\\\\ h_ {PQ} (a_p ^ \dagger a_q + a ^ \ dagger_q a_p) & = \frac{h_ {pq}}{2}\left (\ prod_ {j = q + 1} ^ {p-1} Z_j \right) \left (X_pX_q + Y_pY_q \right)\\\\ h_ {pqqp} n_p n_q & = \frac{h_ {pqqp}}{4}\left (1-Z_p-Z_q + Z_pZ_q \right)\\\\ H_ {pqqr} & = \frac{h_ {pqqr}}{2}\left (\ prod_ {j = r + 1} ^ {p-1} Z_j \right) \left (X_pX_r + Y_pY_r \right) \left (\frac{1-Z_q}{2}\right)\\\\ H_ {PQRS} & = \frac{h_ {PQRS}}{8}\ prod_ {j = s + 1} ^ {r-1} Z_j \ prod_ {k = q + 1} ^ {p-1} Z_k \Big (XXXX-XXYY + XYXY\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + YXXY + YXYX-YYXX\nonumber\\\\ & \qquad\qquad\qquad\qquad\qquad + XYYX + YYYY\Big) \end{align}
 
 Aunque la generación de Hamiltonians a mano solo requiere la aplicación de estas reglas de reemplazo, hacerlo sería inviable para moléculas grandes que pueden constar de millones de términos de Hamiltonian.
 Como alternativa, podemos construir automáticamente el `JordanWignerEncoding` dada una representación `FermionHamiltonian` de Hamiltonian.

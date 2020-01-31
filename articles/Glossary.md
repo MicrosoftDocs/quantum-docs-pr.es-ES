@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 5c7f2c4a572f6194ee846f056016a25b8c5303a2
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442550"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820766"
 ---
 # <a name="quantum-computing-glossary"></a>Glosario de Quantum Computing
 
@@ -19,7 +19,7 @@ ms.locfileid: "73442550"
 |-------------|----------|
 |Contiguo|La transposición de conjugada compleja de la operación. En el caso de las operaciones que implementan un operador unitario, el contiguo es el inverso de la operación.|
 |Llamadas|Las operaciones y las funciones se conocen colectivamente como *Invocables*.|
-|Estándar|Operaciones y funciones definidas en Q # Building sobre la lógica definida en el predicho. La implementación de la biblioteca estándar es independiente con respecto a los equipos de destino.|
+|Standard|Operaciones y funciones definidas en Q # Building sobre la lógica definida en el predicho. La implementación de la biblioteca estándar es independiente con respecto a los equipos de destino.|
 |Grupo Clifford|Conjunto de operaciones que ocupan el octants de la esfera Bloch. Entre ellas se incluyen: `X`, `Y`, `Z`, `H` y `S`|
 |Regula|Una operación Quantum que toma uno o más qubits como habilitadores para la operación de destino.|
 |Notación Dirac|Una representación abreviada del estado de Quantum. Vea la sección [notación de Dirac](xref:microsoft.quantum.concepts.dirac) para obtener más detalles.|
@@ -39,10 +39,9 @@ ms.locfileid: "73442550"
 |Preludio|Conjunto de operaciones primitivas y clásicas y funciones definidas por cada equipo de destino individual, en lugar de en el nivel de Q #.|
 |Circuito de Quantum|La representación de un programa para un equipo Quantum. Vea la sección <xref:microsoft.quantum.concepts.circuits> para obtener más detalles.|
 |Estado de Quantum|Representación de qubits en el sistema. Normalmente, esto se indica como un vector de columna complejo. Para más información, consulte <xref:microsoft.quantum.concepts.vectors>. |
-|qubit|Unidad de almacenamiento de Quantum. Vea la sección <xref:microsoft.quantum.concepts.qubit> para obtener más detalles.|
+|Qubit|Unidad de almacenamiento de Quantum. Vea la sección <xref:microsoft.quantum.concepts.qubit> para obtener más detalles.|
 |Repetir hasta éxito|Un algoritmo Quantum que se ejecuta con probabilidad de éxito. En caso de error, la rutina volverá a intentarlo hasta que sea correcta (o se alcance un límite). |
-|Pila de software|Conjunto completo de software clásico y Quantum, así como los compiladores, simuladores y tiempos de ejecución necesarios para poner en funcionamiento un equipo Quantum. Vea la sección <xref:microsoft.quantum.concepts.software-stack> para obtener más detalles. |
 |Máquina de destino|Un destino de compilación que reduce un programa Quantum abstracto hacia el hardware o la simulación. Esto suele incluir reescrituras para muchos propósitos, incluidos el reemplazo de la puerta, la codificación para la corrección de errores, el diseño geométrico y otros.|
-|Organizar|Los tipos separados por comas se agrupan entre paréntesis. |
+|Tuple|Los tipos separados por comas se agrupan entre paréntesis. |
 |Tipo definido por el usuario|Colección de tipos integrados o definidos previamente que se pueden denominar una sola unidad.|
 

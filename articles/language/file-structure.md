@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 40b2e7ddf5def6285250dffe130b152429dce1f8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185195"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821089"
 ---
 # <a name="file-structure"></a>Estructura de archivos
 
@@ -84,13 +84,13 @@ Cada archivo de código fuente de Q # puede definir cualquier número de operaci
 
 Los nombres de operación deben ser únicos dentro de un espacio de nombres y no pueden entrar en conflicto con los nombres de función y tipo.
 
-Una declaración de operación consta de la palabra clave `operation`, seguida del símbolo que es el nombre de la operación, una tupla de identificador con tipo que define los argumentos de la operación, un signo de dos puntos `:`, una anotación de tipo que describe el tipo de resultado de la operación. Opcionalmente, una anotación con las características de la operación, una llave de apertura `{`, el cuerpo de la declaración de la operación y una llave de cierre final `}`.
+Las declaraciones de operación se componen de la palabra clave `operation`, seguido del símbolo que es el nombre de la operación, una tupla de identificador con tipo que define los argumentos de la operación, un signo de dos puntos `:`, una anotación de tipo que describe el tipo de resultado de la operación, opcionalmente una anotación con las características de la operación, una llave de apertura `{`, el cuerpo de la declaración de la operación y una llave de cierre final `}`.
 
 El cuerpo de la declaración de operación se compone de la implementación predeterminada o de una lista de especializaciones.
 La implementación predeterminada se puede especificar directamente dentro de la declaración si solo es necesario especificar explícitamente la implementación de la especialización del cuerpo predeterminado.
 En este caso, una anotación con las características de la operación en la declaración es útil para asegurarse de que el compilador genera automáticamente otras especializaciones basadas en la implementación predeterminada. 
 
-Por ejemplo: 
+Por ejemplo 
 
 ```qsharp
 operation PrepareEntangledPair(here : Qubit, there : Qubit) : Unit 
@@ -138,7 +138,7 @@ is Ctl + Adj {
 }
 ```
 
-En el ejemplo anterior, `adjoint invert;` indica que la especialización de la instancia contigua se va a generar invirtiendo la implementación del cuerpo y `controlled adjoint invert;` indica que la especialización del adyacente controlada se va a generar invirtiendo la implementación dada del especialización controlada.
+En el ejemplo anterior, `adjoint invert;` indica que la especialización de la instancia contigua se va a generar invirtiendo la implementación del cuerpo y `controlled adjoint invert;` indica que la especialización contigua controlada se generará invirtiendo la implementación dada de la especialización controlada.
 
 Para que una operación admita la aplicación del `Adjoint` o del functor `Controlled`, es necesario `Unit`su tipo de valor devuelto. 
 
@@ -187,12 +187,12 @@ Por `body` y `adjoint`, la lista de argumentos siempre debe estar `(...)`; por `
 Si es necesario declarar explícitamente una o más especializaciones además del cuerpo predeterminado, la implementación del cuerpo predeterminado debe ajustarse también en una declaración de especialización adecuada:
 
 ```qsharp
-operation CountOnes(qs: Qubit[]) : Int {
+operation CountOnes(qubits: Qubit[]) : Int {
 
     body (...) // default body specialization
     {
         mutable n = 0;
-        for (q in qs) {
+        for (qubit in qubits) {
             set n += M(q) == One ? 1 | 0;
         }
         return n;
@@ -208,7 +208,7 @@ Es válido especificar una operación sin el anexado. por ejemplo, las operacion
 Una operación es compatible con el `Adjoint` functor si su declaración contiene una declaración implícita o explícita de una especialización de unjoin.
 Una especialización contigua controlada explícitamente declarada implica la existencia de una especialización del mismo. 
 
-Para la operación cuyo cuerpo contiene bucles de repetición hasta la ejecución correcta, instrucciones SET, medidas, instrucciones Return o llamadas a otras operaciones que no admiten el `Adjoint` functor, que genera automáticamente una especialización de unjoin después del `invert` o @no__ la Directiva t_2_ no es posible.
+En el caso de una operación cuyo cuerpo contenga bucles de repetición hasta la correcta, instrucciones SET, medidas, instrucciones Return o llamadas a otras operaciones que no admiten el `Adjoint` functor, no es posible generar automáticamente una especialización de la función de `invert` o `auto`.
 
 ### <a name="controlled"></a>Regula
 
@@ -236,7 +236,7 @@ En el caso de una operación cuyo cuerpo contenga llamadas a otras operaciones q
 Una declaración de operación podría ser tan simple como la siguiente, que define la operación Pauli X primitiva:
 
 ```qsharp
-operation X (q : Qubit) : Unit
+operation X (qubit : Qubit) : Unit
 is Adj + Ctl {
     body intrinsic;
     adjoint self;
@@ -282,7 +282,7 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
 Las funciones son rutinas meramente clásicas en Q #.
 Cada archivo de código fuente de Q # puede definir cualquier número de funciones.
 
-Una declaración de función consta de la palabra clave `function`, seguida del símbolo que es el nombre de la función, una tupla de identificador con tipo, una anotación de tipo que describe el tipo de valor devuelto de la función y un bloque de instrucciones que describe la implementación de. funcionalidad.
+Una declaración de función consta de la palabra clave `function`, seguida del símbolo que es el nombre de la función, una tupla de identificador con tipo, una anotación de tipo que describe el tipo de valor devuelto de la función y un bloque de instrucciones que describe la implementación de la función.
 
 El bloque de instrucciones que define una función debe incluirse en `{` y `}` como cualquier otro bloque de instrucciones.
 

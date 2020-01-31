@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases
+name: RotationPhasesAsReflectionPhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Convierte las fases especificadas como rotaciones de un solo qubit en fases especificadas como reflejos parciales.
+syntax: 'function RotationPhasesAsReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  Usamos la Convención en
+
+
+  - [ *G.H. Low, i. L. Chuang* ](https://arxiv.org/abs/1707.05391) para relacionar las fases de rotación de un solo qubit con las fases del operador de reflexión.
+input:
+  content: '(rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)'
+  types:
+  - name: rotPhases
+    summary: Matriz de rotaciones de un solo qubit que se van a convertir en reflejos parciales.
+    uid: microsoft.quantum.amplitudeamplification.rotationphases
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Operación que implementa las fases especificadas como reflejos parciales.
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+metadata:
+  ms.openlocfilehash: b5f0716988262edb247d5c72a30eab2063727d32
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872740"
