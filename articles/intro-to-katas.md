@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/17/2019
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 7fb8dba2a10f9a983ebee52e394260bbdc0d2f9c
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: af54a2260147b8ca07919b241548aac85ed0d8a1
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444147"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821106"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Conozca la computación cuántica con Quantum Katas
 
@@ -19,7 +19,7 @@ ms.locfileid: "73444147"
 
 ## <a name="learning-by-doing"></a>Aprendizaje práctico
 
-Los tutoriales y katas recopilados en este proyecto resaltan el aprendizaje práctico: ofrecen tareas de programación que abarcan determinados temas que progresan desde muy sencillo a muy desafiante. Cada tarea requiere que complete un código; las primeras tareas pueden requerir solo una línea y las últimas pueden requerir un fragmento variable de código.
+Los tutoriales y ejercicios recopilados en este proyecto resaltan el aprendizaje práctico: ofrecen tareas de programación que abarcan determinados temas que progresan desde muy sencillo a muy desafiante. Cada tarea requiere que complete un código; las primeras tareas pueden requerir solo una línea y las últimas pueden requerir un fragmento variable de código.
 
 Lo más importante es que los katas incluye marcos de pruebas que configuran, ejecutan y validan las soluciones a las tareas. Esto le permite obtener comentarios inmediatos sobre su solución y reconsiderar su enfoque en caso de que fuera incorrecto.
 
@@ -36,10 +36,12 @@ Este es un resumen de los principales temas tratados en Quantum Katas. Le recome
 
 ### <a name="introduction-to-quantum-computing-concepts"></a>Introducción a los conceptos de computación cuántica
 
-* [Aritmética compleja](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ComplexArithmetic)
-* [Álgebra lineal](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/LinearAlgebra)
-* [Concepto de qubit](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/Qubit)
-* [Puertas cuánticas de un solo qubit](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/SingleQubitGates)
+* [Aritmética compleja](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+* [Álgebra lineal](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
+* [Concepto de qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)
+* [Puertas cuánticas de un solo qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)
+* [Sistemas de varios qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)
+* [Puertas de varios qubits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)
 
 ### <a name="quantum-computing-fundamentals"></a>Conceptos básicos de la computación cuántica
 
@@ -52,10 +54,10 @@ Este es un resumen de los principales temas tratados en Quantum Katas. Le recome
 
 * [Teleportabilidad cuántica](https://github.com/microsoft/QuantumKatas/tree/master/Teleportation)
 * [Codificación superdensa](https://github.com/microsoft/QuantumKatas/tree/master/SuperdenseCoding)
-* [Algoritmo de Deutsch-Jozsa](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/DeutschJozsaAlgorithm)
+* [Algoritmo de Deutsch-Jozsa](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringDeutschJozsaAlgorithm)
 * [Implementación del algoritmo de búsqueda de Grover](https://github.com/microsoft/QuantumKatas/tree/master/GroversAlgorithm)
-* [Exploración de las propiedades generales del algoritmo de búsqueda de Grover](https://github.com/microsoft/QuantumKatas/blob/master/tutorials/ExploringGroversAlgorithm)
-* Solución de problemas reales con el algoritmo de Grover: [Problemas de SAT](https://github.com/microsoft/QuantumKatas/blob/master/SolveSATWithGrover) y [problemas de color de gráficos](https://github.com/microsoft/QuantumKatas/blob/master/GraphColoring)
+* [Exploración de las propiedades generales del algoritmo de búsqueda de Grover](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ExploringGroversAlgorithm)
+* Solución de problemas reales con el algoritmo de Grover: [Problemas de SAT](https://github.com/microsoft/QuantumKatas/tree/master/SolveSATWithGrover) y [problemas de color de gráficos](https://github.com/microsoft/QuantumKatas/tree/master/GraphColoring)
 
 ### <a name="protocols-and-libraries"></a>Protocolos y bibliotecas
 
@@ -66,8 +68,8 @@ Este es un resumen de los principales temas tratados en Quantum Katas. Le recome
 
 ### <a name="entanglement-games"></a>Juegos de entrelazamiento
 
-* [Juego CHSH](https://github.com/microsoft/QuantumKatas/blob/master/CHSHGame)
-* [Juego GHZ](https://github.com/microsoft/QuantumKatas/blob/master/GHZGame)
+* [Juego CHSH](https://github.com/microsoft/QuantumKatas/tree/master/CHSHGame)
+* [Juego GHZ](https://github.com/microsoft/QuantumKatas/tree/master/GHZGame)
 * [Juego del cuadrado mágico de Mermin-Peres](https://github.com/microsoft/QuantumKatas/tree/master/MagicSquareGame)
 
 ## <a name="resources"></a>Recursos

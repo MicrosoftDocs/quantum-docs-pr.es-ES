@@ -6,16 +6,18 @@ author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: overview
-ms.openlocfilehash: 8fb3b7181632bd6f2b562735546adbf4b461a1b6
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 4308bf7e0e48e5735419fab836e479641455e9a5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73530016"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819934"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Introducción a Quantum Development Kit (QDK)
 
-Le damos la bienvenida a Microsoft Quantum Development Kit.  Aquí encontrará todas las herramientas que necesita para obtener información sobre la programación cuántica con Q#.  Para guiarle en el aprendizaje de la computación cuántica con Q#, se le proporciona esta guía de introducción para aquellos usuarios que quieran empezar a codificar programas cuánticos y los que todavía no están preparados para empezar a codificar, pero quieran más información sobre Q# y la programación cuántica.
+Le damos la bienvenida a Microsoft Quantum Development Kit.  Aquí encontrará todas las herramientas que necesita para obtener información sobre la programación cuántica con Q#.  Para guiarle en el aprendizaje de la computación cuántica con Q#, se le proporciona esta guía de introducción para aquellos usuarios que quieran empezar a codificar programas cuánticos y los que todavía no están preparados para empezar a codificar, pero quieran más información sobre Q# y la programación cuántica. 
+
+Si está listo para empezar a programar, [instale ahora el QDK](xref:microsoft.quantum.install).
 
 ## <a name="questions-about-quantum-computing"></a>Preguntas sobre la computación cuántica
 
@@ -54,9 +56,8 @@ Las guías y artículos de introducción tienen como objetivo guiar a los usuari
 * Explore nuestros [ejemplos de Q#](https://docs.microsoft.com/samples/browse/?languages=qsharp) y descubra qué problemas puede resolver con la computación cuántica.
 
 * Desarrolle en un equipo local con el lenguaje de programación host y el entorno de desarrollo que prefiera:
-  * Desarrollo con [Python](xref:microsoft.quantum.install#develop-with-python)
-  * Desarrollo con [Visual Studio](xref:microsoft.quantum.install#develop-with-c-on-windows-using-visual-studio)
-  * Desarrollo con [Visual Studio Code](xref:microsoft.quantum.install#develop-with-c-using-visual-studio-code)
-  * Desarrollo con [Jupyter Notebooks](xref:microsoft.quantum.install#develop-with-jupyter-notebooks)
+  * Desarrollo con [Q# y Python](xref:microsoft.quantum.install.python)
+  * Desarrollo con [Q# y C#](xref:microsoft.quantum.install.cs)
+  * Desarrollo con [Q# y Jupyter Notebook](xref:microsoft.quantum.install.jupyter)
 
 * Pase a formar parte de la comunidad de Microsoft Quantum y contribuya al proyecto de código abierto de [QDK](xref:microsoft.quantum.contributing).
