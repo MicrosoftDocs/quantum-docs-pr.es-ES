@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870358"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036260"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterización y estadísticas de Quantum #
 
@@ -88,7 +88,7 @@ Después de la terminología clásica tradicional, llamamos a $ \eqref{EQ: Phase
 
 Tras observar un `Result` de la función de probabilidad de estimación de fase iterativa, podemos usar la regla de Bayes para prescribir lo que creemos que la fase debe seguir esa observación.
 Concretamente, \begin{Equation} \Pr (\phi | d) = \frac{\Pr (d | \phi) \Pr (\phi)} {\int \Pr (d | \phi) \Pr (\phi) {\mathrm d} \phi} \Pr (\phi), \end{Equation} donde $d \en \\{\texttt{Zero}, \texttt{One}\\} $ es un `Result`y donde $ \Pr (\phi) $ describe nuestras creencias anteriores sobre $ \phi $.
-Esto hace que la naturaleza iterativa de la estimación de fase iterativa sea explícita, ya que la distribución posterior $ \Pr (\phi | d) $ describe nuestras creencias inmediatamente antes de la observación de la siguiente `Result`.
+Esto hace que la naturaleza iterativa de la estimación de fase iterativa sea explícita, ya que la distribución posterior $ \Pr (\phi | d) $ describe nuestras creencias inmediatamente antes de la observación del siguiente `Result`.
 
 En cualquier momento durante este procedimiento, podemos informar de la fase $ \hat{\phi} $ inferido por el controlador clásico como \begin{Equation} \hat{\phi} \mathrel{: =} \expect [\phi | \text{Data}] = \int \phi \Pr (\phi | \text{Data}) {\mathrm d} \phi, \end{Equation} donde $ \text{Data} $ representa todo el registro de todos los valores `Result` obtenidos.
 

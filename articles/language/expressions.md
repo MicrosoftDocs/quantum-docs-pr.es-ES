@@ -6,12 +6,12 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185212"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036321"
 ---
 # <a name="expressions"></a>Expresiones
 
@@ -22,7 +22,7 @@ Por ejemplo, `(7)` es una expresión `Int`, `([1,2,3])` es una expresión de tip
 
 La equivalencia entre los valores simples y las tuplas de un solo elemento que se describen en [el modelo de tipo](xref:microsoft.quantum.language.type-model#tuple-types) elimina la ambigüedad entre `(6)` como un grupo y `(6)` como una tupla de un solo elemento.
 
-## <a name="symbols"></a>Euro
+## <a name="symbols"></a>Symbols
 
 El nombre de un símbolo enlazado o asignado a un valor de tipo `'T` es una expresión de tipo `'T`.
 Por ejemplo, si el `count` de símbolos se enlaza al valor entero `5`, `count` es una expresión de tipo entero.
@@ -61,7 +61,7 @@ En este caso, el segundo parámetro debe caber en 32 bits; Si no es así, se pro
 
 Dadas dos expresiones integer o Big Integer, se puede formar una nueva expresión de tipo entero o grande con los operadores `%` (módulo), `&&&` (and bit a bit), `|||` (OR bit a bit) o `^^^` (XOR bit a bit).
 
-Dado un entero o una expresión de tipo entero grande a la izquierda, y una expresión de entero a la derecha, se pueden usar los operadores `<<<` (desplazamiento aritmético a la izquierda) o `>>>` (desplazamiento aritmético a la derecha) para crear una nueva expresión con el mismo tipo que el lado izquierdo. Expresiones.
+Si se especifica una expresión de tipo entero o Big Integer a la izquierda, y una expresión de entero a la derecha, se pueden usar los operadores `<<<` (desplazamiento aritmético a la izquierda) o `>>>` (desplazamiento aritmético a la derecha) para crear una nueva expresión con el mismo tipo que la expresión de la izquierda.
 
 El segundo parámetro (la cantidad de desplazamiento) de una operación de desplazamiento debe ser mayor o igual que cero; el comportamiento de los valores de desplazamiento negativos es indefinido.
 La cantidad de desplazamiento de una operación de desplazamiento también debe caber en 32 bits; Si no es así, se producirá un error en tiempo de ejecución.
@@ -94,9 +94,9 @@ Dado cualquier expresión integer o Big Integer, se puede formar una nueva expre
 Los dos `Bool` valores literales son `true` y `false`.
 
 Dadas dos expresiones cualesquiera del mismo tipo primitivo, se pueden usar los operadores binarios `==` y `!=` para construir una expresión `Bool`.
-La expresión será true si las dos expresiones son iguales (resp. no).
+La expresión será true si las dos expresiones son iguales y false en caso contrario.
 
-No se pueden comparar los valores de los tipos definidos por el usuario, solo se pueden comparar sus valores. Por ejemplo,
+No se pueden comparar los valores de los tipos definidos por el usuario, solo se pueden comparar los valores desencapsulados. Por ejemplo, mediante el operador "desencapsular" `!` (se explica en la [Página modelo de Q # type](xref:microsoft.quantum.language.type-model#user-defined-types)).
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -112,7 +112,7 @@ Esta comparación no compara, tiene acceso, mide o modifica el estado de los dos
 La comparación de igualdad para los valores de `Double` puede ser engañosa debido a efectos de redondeo.
 Por ejemplo, `49.0 * (1.0/49.0) != 1.0`.
 
-Dadas dos expresiones numéricas, se pueden usar los operadores binarios `>`, `<`, `>=`y `<=` para construir una nueva expresión booleana que es true si la primera expresión es respectivamente mayor que, menor que, mayor o igual que , o menor o igual que la segunda expresión.
+Dadas dos expresiones numéricas, se pueden usar los operadores binarios `>`, `<`, `>=`y `<=` para construir una nueva expresión booleana que es true si la primera expresión es respectivamente mayor que, menor que, mayor o igual que, o menor o igual que la segunda expresión.
 
 Dadas dos expresiones booleanas, se pueden usar los operadores binarios `and` y `or` para construir una nueva expresión booleana que es true si las dos expresiones son verdaderas (o ambas).
 
@@ -229,7 +229,7 @@ Normalmente esto no es necesario, ya que el compilador de preguntas y respuestas
 Es necesario para la aplicación parcial (vea más abajo) si no se especifica un argumento con parámetros de tipo.
 También es útil a veces cuando se pasan operaciones con un functor diferente para llamar a.
 
-Por ejemplo, si `Func` tiene `('T1, 'T2, 'T1) -> 'T2`de firma, `Op1` y `Op2` tienen `(Qubit[] => Unit is Adj)`de firma, y `Op3` tiene `(Qubit[] => Unit)`de firma, para invocar `Func` con `Op1` como primer argumento, `Op2` como segundo. y `Op3` como el tercero:
+Por ejemplo, si `Func` tiene `('T1, 'T2, 'T1) -> 'T2`de firma, `Op1` y `Op2` tienen `(Qubit[] => Unit is Adj)`de firma y `Op3` tiene `(Qubit[] => Unit)`de firma, para invocar `Func` con `Op1` como primer argumento, `Op2` como segundo y `Op3` como el tercero:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
@@ -347,7 +347,7 @@ Las matrices que contienen qubits o llamadas se deben inicializar correctamente 
 
 Los valores predeterminados para cada tipo son:
 
-Type | Valor predeterminado
+Tipo | Valor predeterminado
 ---------|----------
  `Int` | `0`
  `BigInt` | `0L`
@@ -476,7 +476,7 @@ Por ejemplo, en el caso `a==b ? C(qs) | D(qs)`, si `a==b` es true, se invocará 
 Esto es similar a la cortocircuito en otros lenguajes.
 
 
-## <a name="operator-precedence"></a>Precedencia de operadores
+## <a name="operator-precedence"></a>Prioridad de los operadores
 
 Todos los operadores binarios son asociativos a la derecha, excepto en el caso de `^`.
 
@@ -488,7 +488,7 @@ Los paréntesis para la invocación de la operación y la función también se e
 
 Operadores en orden de prioridad, de mayor a menor:
 
-Operator | Polaridad | description | Tipos de operando
+Operator | Polaridad | Descripción | Tipos de operando
 ---------|----------|---------|---------------
  `!` finales | Unario | Desencapsulado | Cualquier tipo definido por el usuario
  `-`, `~~~`, `not` | Unario | Negativo numérico, complemento bit a bit, negación lógica | `Int`, `BigInt` o `Double` para `-`, `Int` o `BigInt` para `~~~``Bool` `not`
@@ -498,11 +498,11 @@ Operator | Polaridad | description | Tipos de operando
  `<<<`, `>>>` | Binary | Desplazamiento a la izquierda, desplazamiento a la derecha | `Int` o `BigInt`
  `<`, `<=`, `>`, `>=` | Binary | Comparaciones menor que, menor o igual que, mayor que, mayor o igual que. | `Int`, `BigInt` o `Double`
  `==`, `!=` | Binary | comparaciones iguales y no iguales | cualquier tipo primitivo
- `&&&` | Binary | And bit a bit | `Int` o `BigInt`
+ `&&&` | Binary | AND bit a bit | `Int` o `BigInt`
  `^^^` | Binary | XOR bit a bit | `Int` o `BigInt`
  <code>\|\|\|</code> | Binary | OR bit a bit | `Int` o `BigInt`
- `and` | Binary | AND lógico | `Bool`
- `or` | Binary | OR lógico | `Bool`
+ `and` | Binary | Y lógico | `Bool`
+ `or` | Binary | O lógico | `Bool`
  `..` | Binario/ternario | Range (operador) | `Int`
- `?``|` | Ternario | Condicional | `Bool` para el lado izquierdo
-`w/``<-` | Ternario | Copiar y actualizar | vea [expresiones de copia y actualización](#copy-and-update-expressions)
+ `?` `|` | Ternario | Condicional | `Bool` para el lado izquierdo
+`w/` `<-` | Ternario | Copiar y actualizar | vea [expresiones de copia y actualización](#copy-and-update-expressions)

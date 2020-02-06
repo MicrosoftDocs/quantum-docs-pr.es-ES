@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821021"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036362"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quantum #
 
@@ -48,7 +48,8 @@ Además, la eficacia de la *transformación de Fourier de Quantum* (QFT) supera 
 
 Como generalización aproximada de QFT, proporcionamos la <xref:microsoft.quantum.canon.approximateqft> operación que permite más optimizaciones mediante la eliminación de las rotaciones que no son estrictamente necesarias para la precisión algorítmica deseada.
 El QFT aproximado requiere la operación Dyadic $Z $-Rotation <xref:microsoft.quantum.intrinsic.rfrac> así como la operación <xref:microsoft.quantum.intrinsic.h>.
-Se supone que la entrada y la salida se codifican en big endian codificación (el bit más bajo/qubit está a la izquierda, igual que la [notación les](xref:microsoft.quantum.concepts.dirac)).
+Se supone que la entrada y la salida se codifican en big endian codificación---es decir, qubit con el índice `0` se codifica en el bit más a la izquierda (más alto) de la representación de entero binario.
+Esto se alinea con la [notación les](xref:microsoft.quantum.concepts.dirac), como un registro de tres qubits en el estado $ \ket{100}$ corresponde a $q _0 $ que se encuentre en el estado $ \ket{1}$ while $q _ 1 _ _ $ y $q _2 $ están en el estado $ \ket{0}$.
 El parámetro de aproximación $a $ determina el nivel de eliminación de los $Z $-rotations, es decir, $a \en [0.. n] $.
 En este caso, todos los $Z los giros $2 \ pi/2 ^ k $, donde $k > se quita un $ del circuito QFT.
 Se sabe que para $k \ge \ log_2 (n) + \ log_2 (1/\epsilon) + $3. uno puede enlazar $\\| \operatorname{QFT}-\operatorname{AQFT} \\| < \epsilon $.

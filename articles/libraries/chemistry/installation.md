@@ -6,12 +6,12 @@ ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: fd43c783fa82c7219e143a57759919606fdd197f
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: de13d1814821c612ed74a347dc8ffb5881063576
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184209"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036481"
 ---
 # <a name="chemistry-library-installation-and-validation"></a>Instalación y validación de la biblioteca de química
 
@@ -51,18 +51,18 @@ Para obtener más información, consulte la guía de la [consola del administrad
 
 **Línea de comandos o Visual Studio Code:** Con la línea de comandos por su cuenta o desde Visual Studio Code, puede usar el comando `dotnet` para agregar una referencia de paquete NuGet al proyecto:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Chemistry
 ```
 
 ## <a name="verifying-your-installation"></a>Comprobación de la instalación 
 
 Al igual que el resto del kit de desarrollo de Quantum, la biblioteca de química de Quantum incluye una serie de ejemplos totalmente documentados para ayudarle a ponerse en marcha rápidamente.
-Para probar la instalación con estos ejemplos, Clone el [repositorio de ejemplos principal](https://github.com/Microsoft/Quantum)y, a continuación, ejecute uno de los ejemplos.  Por ejemplo, para ejecutar el ejemplo [`MolecularHydrogen`](https://github.com/Microsoft/Quantum/tree/master/Chemistry/MolecularHydrogen) :
+Para probar la instalación con estos ejemplos, Clone el [repositorio de ejemplos principal](https://github.com/Microsoft/Quantum)y, a continuación, ejecute uno de los ejemplos.  Por ejemplo, para ejecutar el ejemplo [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) :
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Chemistry/MolecularHydrogen
+cd Quantum/samples/chemistry/MolecularHydrogen
 dotnet run
 ```
 
@@ -78,11 +78,11 @@ Vea [obtener estimaciones de nivel de energía](xref:microsoft.quantum.chemistry
 
 El ejemplo MolecularHydrogen usa datos de entrada moleculares que se configuran manualmente.  Aunque esto es adecuado para pequeños ejemplos, la química de Quantum a escala requiere Hamiltonians con millones o miles de millones de términos. Tales Hamiltonians, generados por paquetes de química de cálculo escalables, son demasiado grandes para importarlos a mano. 
 
-La biblioteca de química de Quantum para el kit de desarrollo de Quantum está diseñada para funcionar bien con paquetes de Química computacional, en particular la plataforma Química computacional de [**NWChem**](http://www.nwchem-sw.org/) desarrollada por el laboratorio de Ciencias moleculares del entorno ( EMSL) en el laboratorio nacional noroccidental del Pacífico.
+La biblioteca de química de Quantum para el kit de desarrollo de Quantum se ha diseñado para funcionar bien con paquetes de Química computacional, en particular la plataforma química de cómputo de [**NWChem**](http://www.nwchem-sw.org/) desarrollada por el laboratorio de Ciencias moleculares del entorno (emsl) en el laboratorio nacional de Asia noroccidental.
 En concreto, el paquete de `Microsoft.Quantum.Chemistry` proporciona herramientas para cargar instancias de problemas de simulación de química de Quantum representadas en el [esquema de Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), que también se admiten para la exportación de versiones recientes de NWChem.
 
 Para empezar a trabajar con NWChem junto con el kit de desarrollo de Quantum, se recomienda uno de los métodos siguientes:
-- Comience a usar los archivos de Broombridge existentes que se proporcionan con los ejemplos en [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML).
+- Comience a usar los archivos de Broombridge existentes que se proporcionan con los ejemplos en [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
 - Use el [generador de flechas emsl para el Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) , que es un front-end basado en web para NWChem, para generar nuevos archivos de entrada molecular con formato Broombridge.  
 - Use la [imagen de Docker](https://hub.docker.com/r/nwchemorg/nwchem-qc/) que proporciona PNNL para ejecutar NWChem, o bien
 - [Compile NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) para la plataforma.
@@ -90,9 +90,10 @@ Para empezar a trabajar con NWChem junto con el kit de desarrollo de Quantum, se
 Consulte de un [extremo a otro con NWChem](xref:microsoft.quantum.chemistry.examples.endtoend) para más información sobre cómo trabajar con NWChem en modelos químicos para analizar con la biblioteca de química del kit de desarrollo de Quantum.
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>Introducción al uso de archivos Broombridge proporcionados con los ejemplos
-La carpeta [IntegralData/YAML](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML) del repositorio de ejemplos del kit de desarrollo de Quantum contiene archivos de datos de moléculas con formato Broombridge.  
 
-Como ejemplo sencillo, use el ejemplo de la biblioteca de química, [GetGateCount](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount) para cargar el Hamiltonian de uno de los archivos de Broombridge y realizar estimaciones de las puertas de la simulación de Quantum algorigthms:
+La carpeta [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) del repositorio de ejemplos del kit de desarrollo de Quantum contiene archivos de datos de moléculas con formato Broombridge.  
+
+Como ejemplo sencillo, use el ejemplo de la biblioteca de química, [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) para cargar el Hamiltonian de uno de los archivos de Broombridge y realizar estimaciones de las puertas de la simulación de Quantum algorigthms:
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -171,5 +172,3 @@ Puede obtener más información mediante el uso de la funcionalidad de ayuda int
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
-
-

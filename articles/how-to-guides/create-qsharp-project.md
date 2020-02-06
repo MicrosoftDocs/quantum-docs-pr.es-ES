@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819899"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036447"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Creación de un proyecto de Q # en el entorno de desarrollo
 
@@ -87,7 +87,7 @@ Ahora puede continuar desarrollando el programa Quantum.
     jupyter notebook
     ```
 
-1. Vaya a la dirección URL que aparece en la línea de comandos. Por ejemplo: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85 ]
+1. Vaya a la dirección URL que aparece en la línea de comandos. Por ejemplo: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
 1. Aparece una página Jupyter en el explorador. En la pestaña **archivos** , seleccione **nuevo** > **Q #** para crear un cuaderno de Jupyter Notebook con un kernel de preguntas y respuestas. Agregue el código siguiente a la primera celda del cuaderno:
 
@@ -157,7 +157,7 @@ Ahora puede continuar con el desarrollo de Quantum con Visual Studio.
 1. Ejecute la aplicación:
 
     * Ir a **terminal** -> **nuevo terminal**
-    * Escriba `dotnet run`.
+    * escriba `dotnet run`.
     * Debería ver el texto siguiente en la ventana de salida: `Hello quantum world!`.
 
 Ahora puede continuar con el desarrollo de Quantum mediante Visual Studio Code.
@@ -173,7 +173,7 @@ Ahora puede continuar con el desarrollo de Quantum mediante Visual Studio Code.
 
 1. Creación de una aplicación
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# -o <project name>
     ```
 
@@ -187,7 +187,7 @@ Ahora puede continuar con el desarrollo de Quantum mediante Visual Studio Code.
 
 1. Ejecución de la aplicación
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
@@ -195,6 +195,6 @@ Ahora puede continuar con el desarrollo de Quantum mediante Visual Studio Code.
 
 Ahora continúa con el desarrollo de Quantum mediante herramientas de línea de comandos.
 
-## <a name="whats-next"></a>¿Qué es lo próximo?
+## <a name="whats-next"></a>¿Qué sigue?
 
 Ahora que ha creado un proyecto en su entorno preferido, puede continuar con el desarrollo de Quantum.

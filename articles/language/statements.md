@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821072"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036498"
 ---
 # <a name="statements-and-other-constructs"></a>Instrucciones y otras construcciones
 
@@ -191,7 +191,7 @@ Existe una concatenación similar para las expresiones de copia y actualización
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
+function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -433,7 +433,7 @@ if (result == One) {
 } 
 ```
 
-O bien
+or
 
 ```qsharp
 if (i == 1) {
@@ -463,13 +463,13 @@ Por ejemplo,
 return 1;
 ```
 
-O bien
+or
 
 ```qsharp
 return ();
 ```
 
-O bien
+or
 
 ```qsharp
 return (results, qubits);
@@ -490,7 +490,7 @@ Por ejemplo,
 fail $"Impossible state reached";
 ```
 
-O bien
+or
 
 ```qsharp
 fail $"Syndrome {syn} is incorrect";

@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: ed2a90749bbe245dde97424fc3191682f995d85b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: f19285ae0e008b3460d06430a236f098d716e268
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819746"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036328"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Actualización del Microsoft Quantum Development Kit (QDK)
 
@@ -28,10 +28,12 @@ Se recomienda mantenerse al día con la versión más reciente de QDK. Siga esta
 Independientemente de si usa C# o Python para hospedar operaciones de q #, siga estas instrucciones para actualizar los proyectos de q #.
 
 1. En primer lugar, compruebe que dispone de la versión más reciente del [SDK de .NET Core 3,1](https://dotnet.microsoft.com/download). Ejecute el siguiente comando en el símbolo del sistema:
-    ```bash
+
+    ```dotnetcli
     dotnet --version
     ```
-Compruebe que la salida es `3.1.100` o superior. Si no es así, instale la [versión más reciente](https://dotnet.microsoft.com/download) y vuelva a comprobarlo. A continuación, siga las instrucciones que se indican a continuación en función de la configuración (Visual Studio, Visual Studio Code o directamente la línea de comandos).
+
+    Compruebe que la salida es `3.1.100` o superior. Si no es así, instale la [versión más reciente](https://dotnet.microsoft.com/download) y vuelva a comprobarlo. A continuación, siga las instrucciones que se indican a continuación en función de la configuración (Visual Studio, Visual Studio Code o directamente la línea de comandos).
 
 ### <a name="update-q-projects-in-visual-studio"></a>Actualización de proyectos de Q # en Visual Studio
  
@@ -40,18 +42,22 @@ Compruebe que la salida es `3.1.100` o superior. Si no es así, instale la [vers
 3. En el menú, seleccione **Compilar** -> **limpiar solución** .
 4. En cada uno de los archivos. csproj, actualice la plataforma de destino a `netcoreapp3.0` (o `netstandard2.1` si es un proyecto de biblioteca).
     Es decir, edite las líneas del formulario:
+
     ```xml
     <TargetFramework>netcoreapp3.0</TargetFramework>
     ```
+
     Puede encontrar más detalles sobre cómo especificar las plataformas de destino [aquí](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 5. Guardar y cerrar todos los archivos de la solución
 6. Seleccione **herramientas** ->  -> de **línea de comandos** **símbolo del sistema para desarrolladores**
 7. Para cada proyecto de la solución, ejecute el siguiente comando:
-    ```bash
+
+    ```dotnetcli
     dotnet add [project_name].csproj package Microsoft.Quantum.Development.Kit
     ```
-    Si los proyectos usan otros paquetes Microsoft. Quantum (por ejemplo, Microsoft. Quantum. Numerics), ejecute también el comando.
-8. Cierre el símbolo del sistema y seleccione **Compilar** -> **compilar solución** ( *no* seleccione recompilar solución, ya que la regeneración no se realizará inicialmente)
+
+   Si los proyectos usan otros paquetes Microsoft. Quantum (por ejemplo, Microsoft. Quantum. Numerics), ejecute también el comando.
+8. Cierre el símbolo del sistema y seleccione **Compilar** -> **compilar solución** ( *no* seleccione recompilar solución).
 
 Ahora puede continuar con [la actualización de la extensión QDK de Visual Studio](#update-visual-studio-qdk-extension).
 
@@ -66,24 +72,30 @@ Ahora puede continuar con [la actualización de la extensión QDK de Visual Stud
 
 1. Navegue hasta la carpeta que contiene el archivo de proyecto.
 2. Ejecute el siguiente comando:
-    ```bash
+
+    ```dotnetcli
     dotnet clean [project_name].csproj
     ```
 
 3. En cada uno de los archivos. csproj, actualice la plataforma de destino a `netcoreapp3.0` (o `netstandard2.1` si es un proyecto de biblioteca).
     Es decir, edite las líneas del formulario:
+
     ```xml
     <TargetFramework>netcoreapp3.0</TargetFramework>
     ```
+
     Puede encontrar más detalles sobre cómo especificar las plataformas de destino [aquí](https://docs.microsoft.com/dotnet/standard/frameworks#how-to-specify-target-frameworks).
 4. Ejecute el siguiente comando:
-    ```bash
+
+    ```dotnetcli
     dotnet add package Microsoft.Quantum.Development.Kit
     ```
+
     Si el proyecto usa otros paquetes Microsoft. Quantum (por ejemplo, Microsoft. Quantum. Numerics), ejecute también el comando.
 5. Guarde y cierre todos los archivos.
 6. Repita 1-4 para cada dependencia del proyecto y, a continuación, vuelva a la carpeta que contiene el proyecto principal y ejecute:
-    ```bash
+
+    ```dotnetcli
     dotnet build [project_name].csproj
     ```
 
@@ -105,14 +117,14 @@ Seleccione el entorno de desarrollo a continuación.
 
 1. Actualización del kernel de `iqsharp` 
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 2. Comprobar la versión de `iqsharp`
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -122,6 +134,7 @@ Seleccione el entorno de desarrollo a continuación.
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
+
     No se preocupe si la versión de `iqsharp` es superior, debe coincidir con la [versión más reciente](xref:microsoft.quantum.relnotes).
 
 3. Actualizar el paquete de `qsharp`
@@ -144,7 +157,9 @@ Seleccione el entorno de desarrollo a continuación.
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
+
 5. Ejecute el siguiente comando desde la ubicación de los archivos de `.qs`
+
     ```bash
     python -c "import qsharp; qsharp.reload()"
     ```
@@ -155,14 +170,14 @@ Seleccione el entorno de desarrollo a continuación.
 
 1. Actualización del kernel de `iqsharp`
 
-    ```bash
+    ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
 2. Comprobar la versión de `iqsharp`
 
-    ```bash
+    ```dotnetcli
     dotnet iqsharp --version
     ```
 
@@ -172,9 +187,11 @@ Seleccione el entorno de desarrollo a continuación.
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
+
     No se preocupe si la versión de `iqsharp` es superior, debe coincidir con la [versión más reciente](xref:microsoft.quantum.relnotes).
 
 3. Ejecute el siguiente comando desde una celda del Jupyter Notebook:
+
     ```
     %workspace reload
     ```
@@ -210,10 +227,10 @@ Seleccione el entorno de desarrollo a continuación.
 
 1. Actualización de las plantillas de proyecto Quantum para .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-## <a name="whats-next"></a>¿Qué es lo próximo?
+## <a name="whats-next"></a>¿Qué sigue?
 
 Ahora que ha actualizado el kit de desarrollo de Quantum en su entorno preferido, puede seguir desarrollando y ejecutando sus programas de Quantum. Si aún no ha escrito un programa, puede empezar a trabajar con [su primer programa Quantum](xref:microsoft.quantum.write-program).
