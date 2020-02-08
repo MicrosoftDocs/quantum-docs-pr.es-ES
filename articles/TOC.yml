@@ -16,17 +16,7 @@
           href: overview/what-is-qsharp.md
         - name: ¿Cómo aprender computación cuántica?
           href: overview/how-to-learn-quantum-computing.md
-    - name: Aprenda con Quantum Katas
-      href: intro-to-katas.md
-- name: Guías de inicio rápido
-  items:
-    - name: Generador cuántico de números aleatorios
-      href: quickstarts/qrng.md
-    - name: 'Aspectos básicos de los programas cuánticos con Q#'
-      href: quickstart.md
-    - name: Implementación del algoritmo de búsqueda de Grover
-      href: quickstarts/search.md
-- name: Guías paso a paso
+- name: Instalación y actualización
   items:
     - name: Instalación del QDK
       items:
@@ -40,8 +30,14 @@
           href: install-guide/qjupyter.md
     - name: Actualización del QDK
       href: install-guide/update.md
-    - name: 'Creación de un proyecto de Q#'
-      href: how-to-guides/create-qsharp-project.md
+- name: Guías de inicio rápido
+  items:
+    - name: Generador cuántico de números aleatorios
+      href: quickstarts/qrng.md
+    - name: 'Aspectos básicos de los programas cuánticos con Q#'
+      href: quickstart.md
+    - name: Implementación del algoritmo de búsqueda de Grover
+      href: quickstarts/search.md
 - name: Conceptos
   items:
     - name: Técnicas de desarrollo cuántico
@@ -52,21 +48,31 @@
       href: language/toc.yml
     - name: 'Bibliotecas de Q#'
       href: libraries/toc.yml
-    - name: Conceptos de computación cuántica
-      href: concepts/toc.yml
     - name: Simuladores cuánticos y calculadoras de recursos
       href: machines/toc.yml
+    - name: Conceptos de computación cuántica
+      href: concepts/toc.yml
+- name: Guías paso a paso
+  items:
+    - name: 'Creación de un proyecto de Q#'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Recursos de aprendizaje de Q#'
+  items:
+    - name: Aprenda con Quantum Katas
+      href: intro-to-katas.md
+    - name: 'Ejemplos de Q#'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
 - name: Recursos
   items:
+    - name: Glosario
+      href: Glossary.md
+    - name: Lecturas adicionales
+      href: for-more-info.md
     - name: Notas de la versión de Quantum Developer Kit
       topicHref: relnotes/index.md
       href: relnotes/toc.yml
     - name: Contribución a Quantum Developer Kit
       href: contributing/toc.yml
       topicHref: contributing/index.md
-    - name: Glosario
-      href: Glossary.md
-    - name: Para obtener más información
-      href: for-more-info.md
     - name: Licencia
       href: license.md
