@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831025"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036294"
 ---
 # <a name="develop-with-q--c"></a>Desarrollo con preguntas y respuestasC#
 
@@ -23,7 +23,7 @@ Q # se ha creado para experimentar bien con los lenguajes de C#.net, específica
 - [P # + C# uso de Visual Studio Code (Windows, Linux y Mac)](#VSC)
 - [Q # + C# con la herramienta de línea de comandos `dotnet`](#command)
 
-## Desarrollo con Q # + C# mediante Visual Studio<a name="VS"></a>
+## Desarrollo con Q # + C# mediante Visual Studio <a name="VS"></a>
 
 Visual Studio ofrece un entorno completo para desarrollar programas de preguntas y respuestas. La extensión de preguntas y respuestas de Visual Studio contiene plantillas para los proyectos y archivos de preguntas y respuestas, así como el resaltado de sintaxis, la finalización de código y la compatibilidad con IntelliSense.
 
@@ -59,7 +59,7 @@ Visual Studio ofrece un entorno completo para desarrollar programas de preguntas
 > [!NOTE]
 > * Si tiene varios proyectos en una solución de Visual Studio, todos los proyectos contenidos en ella deben estar en la misma carpeta que la solución o en una de sus subcarpetas.  
 
-## Desarrollo con Q # + C# mediante Visual Studio Code<a name="VSC"></a>
+## Desarrollo con Q # + C# mediante Visual Studio Code <a name="VSC"></a>
 
 Visual Studio Code (VS Code) ofrece un entorno completo para desarrollar programas de preguntas y respuestas en Windows, Linux y Mac.  La extensión Q # VS Code incluye compatibilidad con el resaltado de sintaxis Q #, la finalización de código y los fragmentos de código de Q #.
 
@@ -75,7 +75,7 @@ Visual Studio Code (VS Code) ofrece un entorno completo para desarrollar program
 1. Instale las plantillas de proyecto de Quantum:
 
    - Vaya a **Ver** -> **Paleta de comandos**.
-   - Seleccione **Q#: Install project templates** (Q#: Instalar plantillas de proyecto)
+   - Seleccionar **Q #: instalar plantillas de proyecto**
 
     Ahora ya tiene Quantum Development Kit instalado y listo para usarse en sus propias aplicaciones y bibliotecas.
 
@@ -84,7 +84,7 @@ Visual Studio Code (VS Code) ofrece un entorno completo para desarrollar program
     - Cree un nuevo proyecto:
 
         - Vaya a **Ver** -> **Paleta de comandos**.
-        - Seleccione **Q#: Crear nuevo proyecto**
+        - Seleccione **Q #: crear nuevo proyecto**
         - Seleccionar **aplicación de consola independiente**
         - Vaya a la ubicación del sistema de archivos en la que desea crear la aplicación.
         - Haga clic en el botón **Open new project...** (Abrir nuevo proyecto), una vez creado el proyecto.
@@ -94,14 +94,14 @@ Visual Studio Code (VS Code) ofrece un entorno completo para desarrollar program
     - Ejecute la aplicación:
 
         - Ir a **terminal** -> **nuevo terminal**
-        - Escriba `dotnet run`.
+        - escriba `dotnet run`.
         - Debería ver el texto siguiente en la ventana de salida: `Hello quantum world!`.
 
 
 > [!NOTE]
 > * No se admiten actualmente áreas de trabajo con varias carpetas raíz en la extensión de Visual Studio Code. Si tiene varios proyectos en un área de trabajo VS Code, todos los proyectos deben estar contenidos en la misma carpeta raíz.
 
-## Desarrollo con Q # + C# mediante la herramienta de línea de comandos `dotnet`<a name="command"></a>
+## Desarrollo con Q # + C# mediante la herramienta de línea de comandos `dotnet` <a name="command"></a>
 
 Por supuesto, también puede compilar y ejecutar programas de Q# desde la línea de comandos, simplemente instalando las plantillas de proyecto del SDK de .NET Core y QDK. 
 
@@ -111,7 +111,7 @@ Por supuesto, también puede compilar y ejecutar programas de Q# desde la línea
 
 1. Instale las plantillas de proyecto de Quantum para .NET.
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Por supuesto, también puede compilar y ejecutar programas de Q# desde la línea
 
     - Creación de una aplicación
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Vaya al nuevo directorio de la aplicación.
@@ -135,7 +135,7 @@ Por supuesto, también puede compilar y ejecutar programas de Q# desde la línea
 
     - Ejecución de la aplicación
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
