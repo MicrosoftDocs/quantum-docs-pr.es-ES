@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reflectaboutinteger
+name: ReflectAboutInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Refleja un registro de Quantum sobre un entero clásico determinado.
+
+
+  Dado un registro de Quantum inicialmente en el estado $ \ sum_i \ alpha_i \ket{i} $, donde cada $ \ket{i} $ es un estado de base que representa un entero $i $, refleja el estado del registro sobre el estado de base de un entero determinado $ \ket{j} $, $ $ \ sum_i (-1) ^ {\ delta_ {ij}} \alpha _i \ket{i} $ $
+remarks: Esta operación se implementa en contexto, sin la asignación explícita de qubits auxiliar adicionales.
+syntax: 'operation ReflectAboutInteger (index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(index : Int, reg : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: index
+    summary: Entero clásico que indiza el estado base sobre el que se va a reflejar.
+    isPrimitive: true
+    uid: Int
+  - name: reg
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 4a76b08b8d8b7b70a63a615f8e69e26cd4df7129
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908266"

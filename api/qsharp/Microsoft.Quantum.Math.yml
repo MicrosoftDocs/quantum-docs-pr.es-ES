@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Convierte un número complejo de `ComplexPolar` de tipo en un número complejo de `Complex`de tipo.
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> En desuso\n\nComplexPolarToComplex está en desuso. En su lugar, use @\"microsoft.quantum.math.complexpolarascomplex\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nComplexPolarToComplex está en desuso. En su lugar, use @\"microsoft.quantum.math.complexpolarascomplex\"."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> En desuso\n\nComplexToComplexPolar está en desuso. En su lugar, use @\"microsoft.quantum.math.complexascomplexpolar\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nComplexToComplexPolar está en desuso. En su lugar, use @\"microsoft.quantum.math.complexascomplexpolar\"."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
@@ -210,6 +210,8 @@ functions:
   summary: Devuelve el seno hiperbólico del ángulo especificado.
 - uid: microsoft.quantum.math.sqrt
   summary: Devuelve la raíz cuadrada de un número especificado.
+- uid: microsoft.quantum.math.squarednorm
+  summary: Devuelve el cuadrado de 2-norma de un vector.
 - uid: microsoft.quantum.math.tan
   summary: Devuelve la tangente del ángulo especificado.
 - uid: microsoft.quantum.math.tanh
@@ -253,9 +255,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Devuelve uno de los operadores de Pauli de un solo qubit de forma aleatoria.
 metadata:
-  ms.openlocfilehash: f1a0185252155a39572a6b4159a88686533154c0
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 03a0eba2101d3a20b393b7f685ac463b1abcd727
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870193"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905835"

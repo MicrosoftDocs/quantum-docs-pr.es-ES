@@ -45,6 +45,8 @@ functions:
   summary: Devuelve true si y solo si un número es menor o igual que otro número.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: Devuelve true si y solo si un número es menor o igual que otro número.
+- uid: microsoft.quantum.logical.nearlyequald
+  summary: Devuelve true si y solo si dos entradas son casi iguales (es decir, dentro de una tolerancia de 1E-12).
 - uid: microsoft.quantum.logical.not
   summary: Devuelve la negación booleana de un valor.
 - uid: microsoft.quantum.logical.notequalb
@@ -61,14 +63,16 @@ functions:
   summary: Devuelve true si y solo si dos entradas no son iguales.
 - uid: microsoft.quantum.logical.notequalr
   summary: Devuelve true si y solo si dos entradas no son iguales.
+- uid: microsoft.quantum.logical.notnearlyequald
+  summary: Devuelve true si y solo si dos entradas no son casi iguales (es decir, no se encuentran dentro de una tolerancia de 1E-12).
 - uid: microsoft.quantum.logical.or
   summary: Devuelve la disyunción booleana de dos valores.
 - uid: microsoft.quantum.logical.xor
   summary: Devuelve la disyunción exclusiva booleana de dos valores.
 metadata:
-  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 356a31be888d7ed3a96e219f8f7b31151179d3eb
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056275"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905903"

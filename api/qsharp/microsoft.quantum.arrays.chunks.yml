@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.chunks
+name: Chunks
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Divide una matriz en varias partes de la misma longitud.
+remarks: Tenga en cuenta que el último elemento del resultado puede ser menor que `nElements` si `Length(arr)` no es divisible por `nElements`.
+syntax: "function Chunks (nElements : Int, arr : 'T[]) : 'T[][]"
+input:
+  content: "(nElements : Int, arr : 'T[])"
+  types:
+  - name: nElements
+    summary: La longitud de cada fragmento.
+    isPrimitive: true
+    uid: Int
+  - name: arr
+    summary: Matriz que se va a dividir.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - summary: Una matriz que contiene cada fragmento de la matriz original.
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+metadata:
+  ms.openlocfilehash: 733a2a475ec8db8f603888259151b3dca29b5797
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908113"

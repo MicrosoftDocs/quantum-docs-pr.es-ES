@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.estimateclassificationprobability
+name: EstimateClassificationProbability
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Dado un ejemplo y un clasificador secuencial, calcula la probabilidad de clasificación para ese ejemplo midiendo repetidamente la salida del clasificador en el ejemplo determinado.
+syntax: 'operation EstimateClassificationProbability (tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, sample : Double[], nMeasurements : Int) : Double'
+input:
+  content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, sample : Double[], nMeasurements : Int)'
+  types:
+  - name: tolerance
+    summary: Tolerancia que se permite en la codificación del ejemplo en una operación de preparación del estado.
+    isPrimitive: true
+    uid: Double
+  - name: model
+    summary: Modelo secuencial que se va a utilizar para calcular la probabilidad de clasificación para el ejemplo determinado.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: sample
+    summary: Vector de características para el ejemplo que se va a clasificar.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nMeasurements
+    summary: El número de measusrements que se va a usar para calcular la probabilidad de clasificación.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: Una estimación de la probabilidad de clasificación para el ejemplo determinado.
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 21c4dcb04d4f4a81fcc9e39d6379a2bf2a92f90d
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909490"

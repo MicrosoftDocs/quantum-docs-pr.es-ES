@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.defaulttrainingoptions
+name: DefaultTrainingOptions
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Devuelve un conjunto predeterminado de opciones para los clasificadores de entrenamiento.
+examples: >-
+  Para usar las opciones predeterminadas, pero con medidas adicionales, use el operador `w/`:
+
+
+  ```Q#
+
+  let options = DefaultTrainingOptions()
+      w/ NMeasurements <- 1000000;
+  ```
+syntax: 'function DefaultTrainingOptions () : Microsoft.Quantum.MachineLearning.TrainingOptions'
+input:
+  content: ()
+  types: []
+output:
+  content: Microsoft.Quantum.MachineLearning.TrainingOptions
+  types:
+  - summary: Un conjunto razonable de opciones de entrenamiento predeterminadas para usar al entrenar clasificadores.
+    uid: microsoft.quantum.machinelearning.trainingoptions
+metadata:
+  ms.openlocfilehash: 6013d4f7268cfc422eedbe7d2070adbb167ad4ea
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909473"

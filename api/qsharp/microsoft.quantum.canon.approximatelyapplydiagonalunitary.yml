@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applydiagonalunitary
-name: ApplyDiagonalUnitary
+uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+name: ApproximatelyApplyDiagonalUnitary
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica una matriz de fases complejas a Estados de base numéricos de un registro de qubits.
+  Aplica una matriz de fases complejas a Estados de base numéricos de un registro de qubits, truncando ángulos de rotación pequeños según una tolerancia determinada.
 
 
   Esta operación implementa una unitario diagonal que aplica una fase compleja $e ^ {i \ theta_j} $ en el $n $-qubit Number State $ \ket{j} $.
@@ -16,11 +16,15 @@ summary: >-
 
   \end{align} $ $
 remarks: '`coefficients` se rellenarán con los elementos $ \ theta_j = $0,0 si se especifican menos de $2 ^ n $.'
-syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+syntax: 'operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: '- Síntesis de los circuitos de lógica Quantum Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
-  content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  content: '(tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
+  - name: tolerance
+    summary: Tolerancia por debajo de la cual se truncan los coeficientes pequeños.
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: Matriz de hasta $2 ^ n $ coeficientes $ \ theta_j $. El coeficiente de $j $ TH indexa el número $ \ket{j} $ codificado en formato Little-Endian.
     isArray: true
@@ -37,11 +41,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelyapplydiagonalunitary
+- applydiagonalunitary
 metadata:
-  ms.openlocfilehash: a98bdfc2503f7acf4e5cb145df6d6de528fc3f4f
+  ms.openlocfilehash: 9d2ee3254a3cd7c182ae6b4a57a6c48a993fa679
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: es-ES
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905276"
+  ms.locfileid: "77907960"

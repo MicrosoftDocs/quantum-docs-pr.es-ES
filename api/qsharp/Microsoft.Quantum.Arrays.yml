@@ -7,6 +7,8 @@ functions:
   summary: Dada una matriz y un predicado definidos para los elementos de la matriz, y comprueba si todos los elementos de la matriz satisfacen el predicado.
 - uid: microsoft.quantum.arrays.any
   summary: Dada una matriz y un predicado definidos para los elementos de la matriz, comprueba si al menos un elemento de la matriz satisface el predicado.
+- uid: microsoft.quantum.arrays.chunks
+  summary: Divide una matriz en varias partes de la misma longitud.
 - uid: microsoft.quantum.arrays.constantarray
   summary: Crea una matriz de longitud determinada con todos los elementos iguales al valor especificado.
 - uid: microsoft.quantum.arrays.enumerated
@@ -23,6 +25,8 @@ functions:
   summary: Devuelve el primer índice del primer elemento de una matriz que satisface un predicado determinado. Si no existe ningún elemento de este tipo, devuelve-1.
 - uid: microsoft.quantum.arrays.indexrange
   summary: Dada una matriz, devuelve un intervalo sobre los índices de esa matriz, adecuado para su uso en un bucle for.
+- uid: microsoft.quantum.arrays.isempty
+  summary: Devuelve true si y solo si una matriz está vacía.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: Dada una matriz, devuelve una función que devuelve elementos de esa matriz.
 - uid: microsoft.quantum.arrays.mapped
@@ -48,9 +52,11 @@ functions:
 - uid: microsoft.quantum.arrays.swapped
   summary: Aplica un intercambio de dos elementos en una matriz.
 - uid: microsoft.quantum.arrays.tail
-  summary: Devuelve el último elemento de la secuencia.
+  summary: Devuelve el último elemento de la matriz.
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   summary: Convierte una lista de dos tuplas en una matriz anidada.
+- uid: microsoft.quantum.arrays.where
+  summary: Dado un predicado y una matriz, devuelve los índices de esa matriz donde el predicado es true.
 - uid: microsoft.quantum.arrays.zip
   summary: Dadas dos matrices, devuelve una nueva matriz de pares de modo que cada par contiene un elemento de cada matriz original.
 - uid: microsoft.quantum.arrays.zip3
@@ -61,9 +67,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada una matriz y una operación que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la operación.
 metadata:
-  ms.openlocfilehash: 12835bef2608d979809027cb9a271f2cda864b10
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 5cbe8e172fda72d1016b407656c75457526651aa
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858877"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905597"

@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.combinedstructure
+name: CombinedStructure
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Dado una o más capas de rotaciones controladas, devuelve una sola capa con el índice del parámetro de modelo desplazado de modo que las capas distintas estén parametrizadas por parámetros de modelo distintos.
+examples: >-
+  Los siguientes son equivalentes:
+
+
+  ```Q#
+
+  let structure = CombinedStructure([
+      LocalRotationLayer(2, PauliY),
+      CyclicEntanglingLayer(3, PauliX, 2)
+  ]);
+
+  let structure = [
+      ControlledRotation((0, new Int[0]), PauliY, 0),
+      ControlledRotation((1, new Int[0]), PauliY, 1),
+      ControlledRotation((0, [2]), PauliX, 2),
+      ControlledRotation((1, [0]), PauliX, 3),
+      ControlledRotation((2, [1]), PauliX, 4)
+  ];
+
+  ```
+syntax: 'function CombinedStructure (layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][]) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(layers : Microsoft.Quantum.MachineLearning.ControlledRotation[][])'
+  types:
+  - name: layers
+    summary: Capas que se van a combinar.
+    isArray: true
+    types:
+    - isArray: true
+      uid: microsoft.quantum.machinelearning.controlledrotation
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: Una sola capa de giros controlados que representa la concatenación de todas las demás capas.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 484aef85795ab27aba90dcde89fbf4a0de43ab5a
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908725"
