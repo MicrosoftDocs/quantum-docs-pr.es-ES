@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+name: ValidateSequentialClassifier
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Valida un clasificador secuencial determinado con respecto a un conjunto determinado de muestras con etiqueta previa.
+syntax: 'operation ValidateSequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : Microsoft.Quantum.MachineLearning.ValidationResults'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  types:
+  - name: model
+    summary: Modelo secuencial que se va a validar.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: Los ejemplos que se van a usar para validar el modelo determinado.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.labeledsample
+  - name: tolerance
+    summary: Tolerancia de aproximación que se va a usar para codificar cada ejemplo como una entrada al clasificador secuencial.
+    isPrimitive: true
+    uid: Double
+  - name: nMeasurements
+    summary: El número de medidas que se utilizarán para clasificar cada ejemplo.
+    isPrimitive: true
+    uid: Int
+  - name: validationSchedule
+    summary: La programación por la que se deben extraer los ejemplos del conjunto de validación.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+output:
+  content: Microsoft.Quantum.MachineLearning.ValidationResults
+  types:
+  - uid: microsoft.quantum.machinelearning.validationresults
+metadata:
+  ms.openlocfilehash: 211f5110f11a1128da4c73edbdfc948bc87e7959
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908487"

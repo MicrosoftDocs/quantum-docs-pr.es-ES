@@ -7,11 +7,11 @@ summary: >-
   Aplica una matriz de operaciones controlada por una matriz de Estados numéricos.
 
 
-  Es decir, se aplica la operación unitario controlada por multiplicación $U $ que aplica un valor unitario $V _J $ cuando lo controla $n $-qubit Number State $ \ket{j} $.
+  Es decir, se aplica la operación unitario controlada por multiplicación $U $ que aplica una $V unitario _j $ cuando se controla mediante $n $-qubit Number State $ \ket{j} $.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
-remarks: '`coefficients` se rellenarán con elementos Identity si se especifican menos de $2 ^ n $. Esta implementación usa $n qubits ancilla-$1.'
+remarks: '`coefficients` se rellenarán con elementos Identity si se especifican menos de $2 ^ n $. Esta implementación usa $n auxiliar qubits-$1.'
 syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 references: '- Hacia la primera simulación de Quantum con la velocidad de Quantum Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan su https://arxiv.org/abs/1711.10980'
 input:
@@ -36,7 +36,7 @@ input:
     summary: $n registro de control $-qubit que codifica los Estados de número $ \ket{j} $ en formato Little-Endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registro qubit genérico en el que $V _J $ actúa.
+    summary: Registro qubit genérico en el que $V _j $ actúa.
     uid: "'T"
     isLocal: true
 output:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: bd248ece9d76729a33db3dfead177fa68909f438
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 93fa7ef1f5a7374f970098eb5fa865e02854d1ff
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223503"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906719"
