@@ -1,21 +1,21 @@
 ---
-title: 'Bibliotecas de Q # Standard: corrección de errores | Microsoft Docs'
-description: 'Bibliotecas de preguntas y respuestas estándar: corrección de errores'
+title: Corrección de errores en las bibliotecas estándar de preguntas y respuestas
+description: Obtenga información sobre cómo usar códigos de corrección de errores en los programas de preguntas y respuestas mientras se protege el estado de la qubits.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863204"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907773"
 ---
 # <a name="error-correction"></a>Corrección de errores #
 
-## <a name="introduction"></a>Presentación ##
+## <a name="introduction"></a>Introducción ##
 
 En informática clásica, si desea proteger un poco de los errores, a menudo es suficiente para representar ese bit por un *bit lógico* repitiendo el bit de datos.
 Por ejemplo, supongamos que $ \overline{0} = $0 es la codificación del bit de datos 0, donde usamos una línea por encima de la etiqueta 0 para indicar que es una codificación de un bit en el estado 0.
@@ -28,7 +28,7 @@ En el valor de Quantum, veremos que la medida es problemática. Todavía podemos
 Es útil hacerlo para ver cómo se puede generalizar la corrección de errores en el caso de Quantum.
 Por lo tanto, Let $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$ y Let $ \ket{\overline{1}} = \ket{111}$.
 Después, por linealidad, hemos definido el código de repetición para todas las entradas. por ejemplo, $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$.
-En particular, si se permite un error de bits inverso $X _ 1 $ Act en el centro qubit, vemos que la corrección necesaria en ambas bifurcaciones es precisamente $X _ 1 _ 1-$ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010}
+En particular, si se permite un error de bits inverso $X _ 1 $ Act en el centro qubit, vemos que la corrección necesaria en ambas bifurcaciones es precisamente $X _ 1 _ 1-$ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010}{101}
 \end{align} $ $
 
 Para ver cómo podemos identificar que este es el caso sin medir el estado que estamos intentando proteger, es útil anotar qué hace cada error de volteo de bits diferente en los Estados lógicos:
@@ -36,7 +36,7 @@ Para ver cómo podemos identificar que este es el caso sin medir el estado que e
 | Error $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ |
 | --- | --- | --- |
 | $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ |
-| $X_0$ | $ \ket{100}$ | $ \ket{011}$ |
+| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ |
 | $X _ 1 _ $ | $ \ket{010}$ | $ \ket{101}$ |
 | $X _2 $ | $ \ket{001}$ | $ \ket{110}$ |
 
@@ -53,7 +53,7 @@ Denotamos los resultados de cada medida por el signo del eigenvalue que se obser
 | Error $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | Resultado de $Z _0 Z_1 $ | Resultado de $Z _ 1 Z_2 $ |
 | --- | --- | --- | --- | --- |
 | $ \boldone $ | $ \ket{000}$ | $ \ket{111}$ | $+$ | $+$ |
-| $X_0$ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
+| $X _0 $ | $ \ket{100}$ | $ \ket{011}$ | $-$ | $+$ |
 | $X _ 1 _ $ | $ \ket{010}$ | $ \ket{101}$ | $-$ | $-$ |
 | $X _2 $ | $ \ket{001}$ | $ \ket{110}$ | $+$ | $-$ |
 

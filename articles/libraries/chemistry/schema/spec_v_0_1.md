@@ -1,16 +1,17 @@
 ---
-title: Especificación del esquema Broombridge
+title: Especificación del esquema Broombridge (versión 0,1)
+description: Detalla las especificaciones para el esquema de química Broombridge de Quantum v 0.1 para Microsoft Quantum química Library.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
-ms.openlocfilehash: a950e04d44e5de8091b034214258d2c2fa663f58
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 618892b6cb01855d17522b06e47f72f68595ab38
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185365"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906430"
 ---
 # <a name="broombridge-specification-v01"></a>Especificación de Broombridge v 0.1 #
 
@@ -18,7 +19,7 @@ Las palabras clave "debe", "no debe", "Required", "", "no debe", "no debería", 
 
 Cualquier barra lateral con los títulos "Nota", "información" o "ADVERTENCIA" es informativa.
 
-## <a name="introduction"></a>Presentación ##
+## <a name="introduction"></a>Introducción ##
 
 Esta sección es informativa.
 
@@ -35,7 +36,7 @@ En el resto de esta especificación, "el objeto Broombridge" hará referencia al
 
 A menos que se indique lo contrario explícitamente, los objetos no deben tener propiedades adicionales más allá de las especificadas explícitamente en este documento.
 
-## <a name="additional-definitions"></a>Otras definiciones ##
+## <a name="additional-definitions"></a>Definiciones adicionales ##
 
 Esta sección es normativa.
 
@@ -136,13 +137,13 @@ Esta sección es informativa.
 La propiedad `hamiltonian` de cada objeto de conjunto entero describe el Hamiltonian de un problema de química de Quantum determinado enumerando sus términos de uno y dos cuerpos como matrices dispersas de números reales.
 Los operadores Hamiltonian descritos por cada objeto de conjunto entero tienen el formato
 
-$ $ H = \sum\_\{i, j\}\sum\_{\sigma\in\\{\uparrow, \downarrow\\}} H\_\{ij\} a ^\{\dagger\}\_{i , \sigma} a\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} h\_{ijkl} a ^ \dagger\_{i , \sigma} ^ \dagger\_{k, \rho} a\_{l, \rho} a\_{j, \sigma}, $ $
+$ $ H = \sum\_\{i, j\}\sum\_{\sigma\in\\{\uparrow, \downarrow\\}} H\_\{ij\} a ^\{\dagger\}\_{i, \sigma} a\_{j, \sigma} + \frac{1}{2}\sum\_\{i, j, k, l\}\sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} H\_{ijkl} a ^ \dagger\_{i , \sigma} ^ \dagger\_{k, \rho} a\_{l, \rho} a\_{j, \sigma}, $ $
 
 Aquí $h _ {ijkl} = (ij | KL) $ in Mulliken Convention.
 
 Para mayor claridad, el término de un electrones es
 
-$ $ H_ {ij} = \int {\mathrm d} x \psi ^ *\_i (x) \left (\frac{1}{2}\nabla ^ 2 + \sum\_{A} \frac{Z\_A} {| x-x\_A |}  \right) \psi\_j (x), $ $
+$ $ h_ {ij} = \int {\mathrm d} x \psi ^ *\_i (x) \left (\frac{1}{2}\nabla ^ 2 + \sum\_{A} \frac{Z\_A} {| x-x\_A |}  \right) \psi\_j (x), $ $
 
 y el término de dos electrones es
 
@@ -152,7 +153,7 @@ $$
 Como se indicó en la descripción de la [propiedad`basis_set`](#basis-set-object) de cada elemento de la propiedad `integral_sets`, se supone que las funciones de base utilizadas son de valor real.
 Esto nos permite usar los siguientes Symmetries entre los términos para comprimir la representación de la Hamiltonian.
 
-$ $ H_ {ijkl} = H_ {ijlk} = H_ {jikl} = H_ {JILK} = H_ {klij} = H_ {klji} = H_ {lkij} = H_ {lkji}.
+$ $ h_ {ijkl} = h_ {ijlk} = h_ {jikl} = h_ {JILK} = h_ {klij} = h_ {klji} = h_ {lkij} = h_ {lkji}.
 $$
 
 
@@ -172,14 +173,14 @@ Esta sección es normativa.
 La propiedad `one_electron_integrals` del objeto Hamiltonian debe ser una cantidad de matriz dispersa cuyos índices son dos enteros y cuyos valores son números.
 Cada término debe tener índices `[i, j]` donde `i >= j`.
 
-> Tenga en cuenta Esto refleja la simetría que $h _ {ij} = H_ {ji} $, que es una consecuencia del hecho de que Hamiltonian es Hermitian.
+> Tenga en cuenta Esto refleja la simetría que $h _ {ij} = h_ {ji} $, que es una consecuencia del hecho de que Hamiltonian es Hermitian.
 
 
 ###### <a name="example"></a>Ejemplo ######
 
 Esta sección es informativa.
 
-La siguiente cantidad de matriz dispersa representa el Hamiltonian $ $ H = \left (-5,0 (a ^\{\dagger\}\_{1, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{1 , \downarrow}) + 0,17 (a ^\{\dagger\}\_{2, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \uparrow} a\_{2, \uparrow} + a ^\{\dagger\}\_{2 , \downarrow} a\_{1, \downarrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{2, \downarrow}) \right)\\, \mathrm{Ha}.
+La siguiente cantidad de matriz dispersa representa el Hamiltonian $ $ H = \left (-5,0 (a ^\{\dagger\}\_{1, \uparrow}\_{1, \uparrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{1, \downarrow}) + 0,17 (a ^\{\dagger\}\_{2, \uparrow} a\_{1, \uparrow} + a ^\{\dagger\}\_{1, \uparrow} a\_{2, \uparrow} + a ^\{\dagger\}\_{2 , \downarrow} a\_{1, \downarrow} + a ^\{\dagger\}\_{1, \downarrow} a\_{2, \downarrow}) \right)\\, \mathrm{Ha}.
 $$
 
 ```yaml
@@ -204,7 +205,7 @@ Cada elemento del valor de `two_electron_integrals` debe tener cuatro índices.
 
 Cada propiedad `two_electron_integrals` debe tener una propiedad `index_convention`.
 El valor de la propiedad `index_convention` debe ser uno de los valores permitidos enumerados en la tabla 1.
-Si el valor de `index_convention` es `mulliken`, para cada elemento de la `two_electron_integrals` cantidad de matriz dispersa, un analizador que cargue un documento de Broombridge debe crear una instancia de un término Hamiltonian igual al operador de dos electrones $h _ {i, j, k, l} a ^ \dagger_i a ^ \dagger_j a_k A_L $ , donde $i $, $j $, $k $ y $l $ deben ser enteros en el intervalo inclusivo comprendido entre 1 y el número de electrones especificado por la propiedad `n_electrons` del objeto de conjunto entero, y donde $h _ {i, j, k, l} $ es el elemento `[i, j, k, l, h(i, j, k, l)]` de la cantidad de matriz dispersa.
+Si el valor de `index_convention` es `mulliken`, para cada elemento de la `two_electron_integrals` cantidad de matriz dispersa, un analizador que cargue un documento de Broombridge debe crear una instancia de un término Hamiltonian igual al operador de dos electrones $h _ {i, j, k, l} a ^ \ dagger_i a ^ \ dagger_j a_k a_l $, donde $i $, $j $, $k $ y $l $ deben ser enteros en el intervalo inclusivo comprendido entre 1 y el número de electrones especificados por la propiedad `n_electrons` del objeto de conjunto entero, y donde $h _ {i, j , k, l} $ es el elemento `[i, j, k, l, h(i, j, k, l)]` de la cantidad de matriz dispersa.
 
 ###### <a name="symmetries"></a>Symmetries ######
 
@@ -232,7 +233,7 @@ Esta sección es informativa.
 
 El siguiente objeto especifica Hamiltonian
 
-$ $ H = \frac12 \sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} \Biggr (1,6 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{1, \rho} a\_{1, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{6 , \sigma} ^ {\dagger}\_{1, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{2, \rho} a\_{3 , \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{2 , \rho} a\_{3, \sigma} $ $ $ $-0,1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2 , \rho} a\_{1, \rho} a\_{6, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{2 , \sigma} a ^ {\dagger}\_{3, \rho} a\_{1, \rho} a\_{6, \sigma}\Biggr)\\, \textrm{Ha}.
+$ $ H = \frac12 \sum\_{\sigma, \rho\in\\{\uparrow, \downarrow\\}} \Biggr (1,6 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{1, \rho} a\_{1, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{6, \sigma} a ^ {\dagger}\_{1, \rho} a\_{2 , \rho} a\_{3, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{3, \rho} a\_{2, \sigma}-0,1 a ^ {\dagger}\_{1, \sigma} a ^ {\dagger}\_{6, \rho} a\_{2, \rho} a\_{3, \sigma} $ $ $ $-0,1 a ^ {\dagger}\_{3, \sigma} a ^ {\dagger}\_{2, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{3 , \sigma} a ^ {\dagger}\_{2, \rho} a\_{1, \rho} a\_{6, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{6, \rho} a\_{1, \sigma}-0,1 a ^ {\dagger}\_{2, \sigma} a ^ {\dagger}\_{3, \rho} a\_{1, \rho} a\_{6, \sigma}\Biggr)\\, \textrm{Ha}.
 $$
 
 ```yaml
@@ -269,7 +270,7 @@ El objeto initial_state_suggestion especifica los Estados iniciales de Quantum d
 
 Cada Estado representa una superposición de órbitas ocupadas. Cada objeto de Estado debe tener una propiedad `label` que contenga una cadena. Cada objeto de Estado debe tener una propiedad `superposition` que contenga una matriz de Estados de base y sus amplitudes no normalizadas.
 
-Por ejemplo, los Estados iniciales $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger}\_{1 , \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) + 0,2 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \uparrow}a ^ {\dagger}\_{2, \downarrow})} {\sqrt{| 0.1 | ^ 2 + | 0,2 | ^ 2}} \ket{0} $ $ representado por
+Por ejemplo, los Estados iniciales $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) \ket{0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{2, \uparrow}a ^ {\dagger}\_{2, \downarrow}) + 0,2 (a ^ {\dagger}\_{1, \uparrow}a ^ {\dagger}\_{3, \uparrow}a ^ {\dagger}\_{2, \downarrow})} {\sqrt{| 0.1 | ^ 2 + | 0,2 | ^ 2}} \ket{0} $ $ se representan como
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
     - state:

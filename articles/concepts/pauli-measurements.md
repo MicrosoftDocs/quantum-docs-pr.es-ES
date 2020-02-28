@@ -1,17 +1,17 @@
 ---
 title: Medidas Pauli
-description: Medidas Pauli
+description: Obtenga información sobre cómo trabajar con operaciones de medición de Pauli de un solo y varios qubit.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.pauli
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 300a1ebcfd5d7bca8b025c69adebaad03106433d
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: fcd30c171859f96c3f9cc74664ecba8df0a02855
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036614"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907518"
 ---
 # <a name="pauli-measurements"></a>Medidas Pauli
 

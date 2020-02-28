@@ -1,17 +1,17 @@
 ---
-title: 'Más información: técnicas de Q # | Microsoft Docs'
-description: 'Más información: técnicas de Q #'
+title: Continuar con las técnicas de preguntas y respuestas
+description: 'Explore los temas avanzados en Q #, como la creación de funciones genéricas y la toma de qubits.'
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.going-further
-ms.openlocfilehash: 41713827a93d2cc97e198fa4ad377012c846cf8b
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 46ebf544c1d6e56f152a06d06151305fa972011a
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036243"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906906"
 ---
 # <a name="going-further"></a>Más información #
 

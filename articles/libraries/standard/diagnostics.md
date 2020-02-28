@@ -1,18 +1,18 @@
 ---
-title: 'Bibliotecas de Q # Standard: diagnósticos | Microsoft Docs'
-description: 'Bibliotecas estándar de preguntas y respuestas: diagnóstico'
+title: Diagnósticos en las bibliotecas estándar de preguntas y respuestas
+description: Obtenga información sobre las funciones y las operaciones de diagnóstico de las bibliotecas de preguntas y respuestas estándar de los programas que se usan para detectar errores o errores en los programas Quantum.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820987"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906243"
 ---
-# <a name="diagnostics"></a>Diagnósticos #
+# <a name="diagnostics"></a>Diagnóstico #
 
 Al igual que con el desarrollo clásico, es importante poder diagnosticar errores y errores en los programas Quantum.
 Las bibliotecas de preguntas y respuestas de Q # proporcionan una serie de maneras diferentes para garantizar la corrección de los programas Quantum, como se detalla en <xref:microsoft.quantum.techniques.testing-and-debugging>.

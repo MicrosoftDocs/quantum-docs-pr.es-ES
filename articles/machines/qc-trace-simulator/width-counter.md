@@ -1,17 +1,17 @@
 ---
-title: Ancho del contador | Simulador de seguimiento de equipo Quantum | Microsoft Docs
-description: Introducción a un simulador de seguimiento de equipos cuánticos
+title: Ancho (contador)
+description: Obtenga información sobre el contador de ancho de QDK de Microsoft, que cuenta el número de qubits asignado y prestado por cada operación en un programa Quantum.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: 9c3601e74eec17bd6b463e90f8f3085c959d6f95
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820375"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907093"
 ---
 # <a name="width-counter"></a>Ancho (contador)
 
@@ -57,6 +57,6 @@ Por último, para generar todas las estadísticas recopiladas por el contador de
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>Vea también ##
+## <a name="see-also"></a>Consulte también ##
 
 - Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) de equipos Quantum.

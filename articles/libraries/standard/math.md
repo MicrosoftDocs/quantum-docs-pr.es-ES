@@ -1,16 +1,16 @@
 ---
-title: 'Bibliotecas de Q # Standard: Math | Microsoft Docs'
-description: 'Bibliotecas estándar de Q #: matemáticas'
+title: Matemáticas en las bibliotecas estándar de preguntas y respuestas
+description: Obtenga información sobre las funciones matemáticas clásicas en las bibliotecas de preguntas y respuestas estándar que se utilizan con los tipos de datos integrados.
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 7ac9d321f59f7cc95ad8939a4cf7c36e0c5e0491
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: bec866472abc0d4327cdc570306341375395f492
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184464"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906158"
 ---
 # <a name="classical-mathematical-functions"></a>Funciones matemáticas clásicas #
 

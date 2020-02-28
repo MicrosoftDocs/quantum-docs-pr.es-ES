@@ -1,17 +1,17 @@
 ---
-title: Instalación y validación de la biblioteca de valores | Microsoft Docs
-description: Instalación y validación de la biblioteca de valores numéricos
+title: 'Biblioteca de valores numéricos de Microsoft Quantum: instalación y validación'
+description: Obtenga información sobre cómo agregar la biblioteca de números de quantums de Microsoft a su instalación de Visual Studio 2019 o posterior.
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036464"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906345"
 ---
 # <a name="numerics-library-installation-and-validation"></a>Instalación y validación de la biblioteca de valores numéricos
 
@@ -33,7 +33,7 @@ Para obtener más información, vea la guía de la [interfaz de usuario del admi
 
 Como alternativa, puede usar la consola del administrador de paquetes para agregar la biblioteca de valores numéricos al proyecto a través de la interfaz de la línea de comandos.
 
-![](../../media/vs2017-nuget-console-menu.png)
+![Usar la consola del administrador de paquetes desde la línea de comandos](../../media/vs2017-nuget-console-menu.png)
 
 En la consola del administrador de paquetes, ejecute lo siguiente:
 

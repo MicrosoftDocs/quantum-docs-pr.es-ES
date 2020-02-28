@@ -1,17 +1,17 @@
 ---
-title: 'P # bibliotecas estándar: caracterización | Microsoft Docs'
-description: 'Bibliotecas estándar de preguntas y respuestas: caracterización'
+title: Caracterización y estadísticas de Quantum
+description: Obtenga información sobre cómo se usan las estadísticas de medida de las estimaciones de fase para calcular los valores de resultado en la programación de Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036260"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907195"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterización y estadísticas de Quantum #
 

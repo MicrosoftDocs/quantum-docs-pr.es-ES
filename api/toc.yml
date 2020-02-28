@@ -1,4 +1,4 @@
-- name: Referencia
+- name: Referencia de API
   items:
     - name: 'Bibliotecas de Q#'
       href: qsharp/toc.yml

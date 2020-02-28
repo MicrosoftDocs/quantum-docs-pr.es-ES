@@ -1,17 +1,17 @@
 ---
 title: Licencia de Microsoft Quantum Development Kit
-description: Licencia de Microsoft Quantum Development Kit
+description: Términos de licencia, Disclaimers y derechos de usuario para el Microsoft Quantum Development Kit.
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: d864c3e4ecefa6f998b9a893ecc4a3995d67dac4
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463369"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907127"
 ---
-# <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DE SOFTWARE DE MICROSOFT 
+# <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DEL SOFTWARE DE MICROSOFT 
 ## <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DESARROLLO DE QUANTUM DE MICROSOFT (VERSIÓN PRELIMINAR)
 
 

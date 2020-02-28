@@ -1,17 +1,17 @@
 ---
-title: Estimador de recursos del kit de desarrollo de Quantum | Microsoft Docs
-description: Información general sobre el estimador de recursos del kit de desarrollo de Quantum de Microsoft
+title: Estimador de recursos del kit de desarrollo de Quantum
+description: 'Obtenga información sobre el estimador de recursos, que estima los recursos necesarios para ejecutar una instancia determinada de una operación de Q # en un equipo Quantum.'
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 960fda3dade7648f9cd24496c3a49fd11d6f807a
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820868"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907059"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>El equipo de destino ResourcesEstimator
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 Cuando el `ResourcesEstimator` encuentra `AssertProb` registrará que la medición `PauliZ` en `source` y `q` debe recibir el resultado de `Zero` con la probabilidad 0,5. Cuando se ejecuta `M` más adelante, buscará los valores registrados de las probabilidades de resultado y `M` devolverá `Zero` o `One` con probabilidad 0,5.
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 El `ResourcesEstimator` se basa en el [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de equipos Quantum, que proporciona un conjunto más completo de métricas, la capacidad de notificar métricas en el gráfico de llamadas completo y características como el [Comprobador de entradas distintas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) para ayudar a encontrar errores en los programas de Q #. Consulte la documentación del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) para obtener más información.
 

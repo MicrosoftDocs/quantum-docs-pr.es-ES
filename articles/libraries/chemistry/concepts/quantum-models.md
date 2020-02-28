@@ -1,29 +1,29 @@
 ---
-title: Modelos de Quantum para sistemas electrónicos | Microsoft Docs
-description: Modelos de Quantum para sistemas electrónicos documentos conceptuales
+title: Modelos de Quantum para sistemas electrónicos
+description: Obtenga información sobre cómo se simulan los sistemas electrónicos moleculares mediante el modelado de Quantum.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantummodels
-ms.openlocfilehash: 45d134333c8a3c8937d206cb0a4a9cc6101a85df
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9f9fc37944dd76026c2641d9cdf126e71053a598
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184158"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904424"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Modelos de Quantum para sistemas electrónicos
 
 Con el fin de simular sistemas electrónicos, primero es necesario especificar el Hamiltonian, que se puede encontrar mediante el procedimiento de cuantificación canónico descrito anteriormente.
-En concreto, por $N _e $ electrones con Momentum $p _ i (en tres dimensiones) y masa $m _e $ y vectores de posición $x _ h $ junto con núcleos con cargos $Z _k e $ en las posiciones $y _k $, el operador Hamiltonian Lee \begin{Equation} \hat{H} = \sum\_{i = 1} ^ {N @no_ _t_1_ e} \frac{\hat{p}\_i ^ 2} {2m\_e} + \frac{1}{2}\sum\_{i\ne j} \frac{e ^ 2} {| \hat{x}\_i-\hat{x}\_j |}-\sum\_{i , k} \frac{Z\_ke ^ 2} {| \hat{x}\_i-{y}\_k |} + \frac{1}{2} \sum_{k\ne k '} \frac{Z\_kZ\_{k '} e ^ 2} {| y\_k-y\_k ' |}. \label{EQ: jamón} \end{Equation} los operadores de Momentum $ \hat{p}\_i ^ 2 $ se pueden ver en el espacio real como operadores de Laplacian, es decir, $ \hat{p}\_i ^ 2 =-\partial\_{x\_i} ^ 2-\partial\_{y\_i} ^ 2-\partial\_{z\_i} ^ 2 $.
+En concreto, por $N _e $ electrones con Momentum $p _i $ (en tres dimensiones) y masa $m _e $ y vectores de posición $x _i $ junto con núcleos con cargos $Z _k e $ en las posiciones $y _k $, el operador Hamiltonian Lee \begin{Equation} \hat{H} = \sum\_{i = 1} ^ {N\_e} \frac{\hat{p}\_i ^ 2} {2m\_e} + \frac{1}{2}\sum\_{i\ne j} \frac{e ^ 2} {| \hat{x}\_i-\hat{x}\_j |}-\sum\_{i , k} \frac{Z\_ke ^ 2} {| \hat{x}\_i-{y}\_k |} + \frac{1}{2} \ sum_ {k\ne k '} \frac{Z\_kZ\_{k '} e ^ 2} {| y\_k-y\_k ' |}. \label{EQ: jamón} \end{Equation} los operadores de Momentum $ \hat{p}\_i ^ 2 $ se pueden ver en el espacio real como operadores Laplacian, es decir, $ \hat{p}\_i ^ 2 =-\partial\_{x\_i} ^ 2-\partial\_{y\_i} ^ 2-\partial\_{z\_i} ^ 2 $.
 Aquí hemos realizado la suposición de simplificación de que los núcleos están en reposo para la molécula.
 Esto se conoce como la aproximación nacida Oppenheimer y tiende a ser válida para el espectro de energía de bajo consumo de $ \hat{H} $, ya que la masa de electrones es aproximadamente 1/1836 $ la masa de una Proton.
 Este operador Hamiltonian se puede encontrar fácilmente escribiendo la energía de un sistema de $N\_e $ electrones y aplicando el proceso de cuantificación canónico descrito en [dinámica de Quantum](xref:microsoft.quantum.chemistry.concepts.quantumdynamics).
 
 Para construir la representación de matriz de unitarios para $e ^ {-i\hat {H} t} $ necesitamos representar el operador $ \hat{H} $ como una matriz.
 Para ello, es necesario elegir un sistema de coordenadas o una base para representar el problema en.
-Por ejemplo, si $ \psi_j $ son un conjunto de funciones de base ortogonal para el $N _e $ electrones, podemos definir la matriz.
+Por ejemplo, si $ \ psi_j $ son un conjunto de funciones de base ortogonales para el $N _e $ electrones, podemos definir la matriz.
 
 \begin{Equation} H\_{i, j} = \int\_{-\infty} ^ \infty\int\_{-\infty} ^ \infty \psi ^ {\*}\_i (x\_1) \hat{H} \psi\_j (x\_2) \dd ^ 3\_1 \dd ^ 3x\_2. \ etiqueta {EQ: discreteHam} \end{Equation}
 
@@ -38,7 +38,7 @@ Se pueden usar otros conjuntos, como ondas de plano o órbitas de espacio en tie
 Aunque los Estados usados en el modelo anterior pueden parecer arbitrarios, la mecánica de Quantum impone restricciones en los Estados que se pueden encontrar por naturaleza.
 En concreto, todos los Estados electrónicos de Quantum válidos deben ser antisimétricos en el intercambio de etiquetas de electrones.
 Es decir, si $ \psi (x_1, x_2) $ eran la función de onda para el estado de cuanto conjunto de dos electrones, debemos tener $ $ \psi (x_1, x_2) =-\psi (x_2, x_1).
-$ $ El principio de exclusión de Pauli, que prohíbe que dos electrones se encuentren en el mismo estado de Quantum, es fascinante, una consecuencia directa de esta ley como puede ser intuitiva del hecho de que se intercambian dos electrones que se encuentran en la misma posición $ \psi (x_1, x_1) \mapsto \psi ( x_1, x_1) \ne-\psi (x_1, x_1) $ a menos que $ \psi (x_1, x_1) = 0 $.
+$ $ El principio de exclusión de Pauli, que prohíbe que dos electrones se encuentren en el mismo estado de Quantum, es fascinante, una consecuencia directa de esta ley como se puede intuir del hecho de que, si se intercambian dos electrones que se encuentran en la misma posición $ \psi (x_1, x_1) \mapsto \psi ( x_1, x_1) \ne-\psi (x_1, x_1) $ a menos que $ \psi (x_1, x_1) = 0 $.
 Por lo tanto, se deben elegir los Estados iniciales para obedecer esta propiedad antisimetría y, a su vez, nunca tener dos electrones en el mismo estado al mismo tiempo.
 Esto es fundamental para la estructura electrónica porque prohíbe que varios electrones estén en el mismo estado y, a su vez, permite que los equipos Quantum usen un solo bit de Quantum para almacenar el número de electrones en un estado de Quantum determinado.
 

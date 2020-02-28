@@ -1,17 +1,17 @@
 ---
-title: Dynamics de Quantum | Microsoft Docs
-description: Documentos conceptuales de Dynamics Quantum
+title: Dynamics de Quantum
+description: Obtenga información sobre las similitudes y las diferencias entre las dinámicas de Quantum y la dinámica.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
-ms.openlocfilehash: 0fd27e59921fdf8429bf164c4c64cfa3b8e44160
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9cb74ccd4b7806a90c0701300860d777fa8e5d75
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185348"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904492"
 ---
 # <a name="quantum-dynamics"></a>Dynamics de Quantum
 
@@ -22,7 +22,7 @@ Antes de continuar con la explicación de la dinámica de Quantum, es útil volv
 En la dinámica clásica, sabemos de la segunda ley de movimiento que la posición de una partícula evoluciona según $F (x, t) = MA = m\frac {\ DD ^ 2} {\dd t ^ 2} {x} (t) $, donde $F (x, t) $ es la fuerza, $m $ es la masa y $a $ es la aceleración.
 A continuación, dada una posición inicial $x (0) $, el tiempo de evolución $t $ y la descripción de las fuerzas que actúan en la partícula, podemos encontrar $x (t) $ resolviendo la ecuación diferencial proporcionada por las ecuaciones de Newton para $x (t) $.
 Especificar las fuerzas de este modo es un poco problemático.
-Por lo tanto, a menudo expresamos las fuerzas en términos de la energía potencial del sistema, que nos proporciona $-\partial_x V (x, t) = m \frac{\dd ^ 2} {\dd t ^ 2} {x} (t) $.
+Por lo tanto, a menudo expresamos las fuerzas en términos de la energía potencial del sistema, que nos proporciona $-\ partial_x V (x, t) = m \frac{\dd ^ 2} {\dd t ^ 2} {x} (t) $.
 Por lo tanto, en el caso de una partícula, la dinámica del sistema solo se especifica mediante la función de energía potencial, la masa de partículas y el tiempo de evolución.
 
 A menudo se introduce un lenguaje más amplio para la dinámica clásica que va más allá $F = MA $.
@@ -30,7 +30,7 @@ Una formulación, que es especialmente útil en la mecánica de Quantum, es la m
 En las mecánicas de Hamiltonian, la energía total de un sistema y las posiciones (generalizadas) y Momentum proporcionan toda la información necesaria para describir el movimiento de un objeto clásico arbitrario.
 En concreto, deje que $f (x, p, t) $ sea una función de las posiciones generalizadas $x $ y Momentum $p $ de un sistema y deje que $H (x, p, t) $ sea la función Hamiltonian.
 Por ejemplo, si tomamos $f (x, p, t) = x (t) $ y $H (x, p, t) = p ^ 2 (t)/2m-V (x, t) $, recuperaremos el caso anterior de Newtonian Dynamics.
-Por lo general, tenemos \begin{align} \frac{d}{DT} f & = \partial_t f-(\partial_x H\partial_p f + \partial_p H\partial_x f)\\\\ & \defeq \partial_t f + \\{f, H\\}.
+Por lo general, tenemos que \begin{align} \frac{d}{DT} f & = \ partial_t f-(\ partial_x H \ partial_p f + \ partial_p H \ partial_x f)\\\\ & \defeq \ partial_t f + \\{f, H\\}.
 \end{align} aquí $\\{f, H\\} $ se denomina [corchete de Poisson](https://en.wikipedia.org/wiki/Poisson_bracket) y aparece omnipresentemente en la dinámica clásica debido al rol central que desempeña en la definición de Dynamics.
 
 La dinámica de Quantum se puede describir usando exactamente el mismo lenguaje.
@@ -47,13 +47,13 @@ Esto garantiza que el vectores propios de las matrices sea de valor real; condic
 Del mismo modo que los análogos de Position y Momentum en la mecánica de Quantum deben reemplazarse por operadores, la función Hamiltonian debe reemplazarse de manera similar por un operador.
 Por ejemplo, en el caso de una partícula en el espacio disponible, tenemos $H (x, p) = p ^ 2/2m $ mientras que en la mecánica de Quantum el operador Hamiltonian $ \hat{H} $ es $ \hat{H} = \hat{p} ^ 2/2m $, donde $ \hat{p} $ es el operador Momentum.
 Desde esta perspectiva, pasar de una dinámica de clásica a la de Quantum solo implica reemplazar las variables utilizadas en la dinámica ordinaria con operadores.
-Una vez que se ha construido el operador Hamiltonian mediante la traducción de la Hamiltonian clásica normal sobre el lenguaje Quantum, podemos expresar la dinámica de una cantidad mecánica de cuanto (es decir, el operador de Quantum mecánico) $ \hat{f} (t) $ Via \begin{ align} \frac{d}{DT} \hat{f} = \partial_t \hat{f} + [\hat{f}, \hat{H}], \end{align} donde $ [f, H] = fH-HF $ se conoce como commutator.
+Una vez que se ha construido el operador Hamiltonian mediante la traducción de la Hamiltonian clásica normal sobre el lenguaje Quantum, podemos expresar la dinámica de una cantidad mecánica de cuanto (es decir, el operador de Quantum mecánico) $ \hat{f} (t) $ Via \begin{ align} \frac{d}{DT} \hat{f} = \ partial_t \hat{f} + [\hat{f}, \hat{H}], \end{align} donde $ [f, H] = fH-HF $ se conoce como commutator.
 Esta expresión es exactamente igual a la expresión clásica indicada anteriormente, con la diferencia de que el corchete de Poisson $\\{f, H\\} $ se ha reemplazado por el commutator entre $f $ y $H $.
 Este proceso de tomar un Hamiltonian clásico y usarlo para buscar un Quantum Hamiltonian se conoce en la jerga de Quantum como cuantificación canónica.
 
 ¿Qué operadores $f $ le interesan más?  La respuesta a esto depende del problema que se desea resolver.
 Quizás la cantidad más útil para encontrar es el operador de estado de Quantum, que se explica en la documentación conceptual anterior que se puede usar para extraer todo lo que nos gustaría obtener información sobre la dinámica.
-Después de hacer esto (y simplificar el resultado en caso de que uno tenga un estado puro), se encuentra la ecuación Schrödinger para el estado de Quantum \begin{align} i\partial_t \ket{\psi (t)} = \hat{H} (t) \ket{\psi (t)}.
+Después de hacer esto (y simplificar el resultado en caso de que uno tenga un estado puro), se encuentra la ecuación Schrödinger para el estado de Quantum \begin{align} i \ partial_t \ket{\psi (t)} = \hat{H} (t) \ket{\psi (t)}.
 \end{align}
 
 Esta ecuación, aunque quizás sea menos intuitiva que la anterior, proporciona quizás la expresión más sencilla para entender cómo simular la dinámica de Quantum en un Quantum o en un equipo clásico.

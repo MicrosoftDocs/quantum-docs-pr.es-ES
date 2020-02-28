@@ -1,17 +1,17 @@
 ---
-title: Simulación de Hamiltonian Dynamics | Microsoft Docs
-description: Simulación de documentos conceptuales de Hamiltonian Dynamics
+title: Simulación de Hamiltonian Dynamics
+description: Aprenda a usar las fórmulas de Trotter-Suzuki y qubitization para trabajar con simulaciones de Hamiltonian.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: 69c7923ea447af320a413889df54716abd5475ea
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820647"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904645"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Simulación de Hamiltonian Dynamics
 

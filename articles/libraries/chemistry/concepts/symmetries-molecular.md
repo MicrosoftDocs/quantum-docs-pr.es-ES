@@ -1,24 +1,24 @@
 ---
-title: Symmetries de integrales moleculares | Microsoft Docs
-description: Documentos conceptuales de Symmetries de enteros moleculares
+title: Symmetries de integrales moleculares
+description: 'Obtenga información sobre cómo usar el tipo Q # OrbitalIntegral para enumerar el Symmetries molecular.'
 author: nathanwiebe2
 ms.author: nawiebe
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.symmetries
-ms.openlocfilehash: 041d600bc8d65e7d67f5fe7d61a69426fb42ffbc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: b7e7b79af17af544c4a784eff08500498afc9f67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442393"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904475"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Symmetries de integrales moleculares
 
-La simetría inherente del Hamiltonian de Coulomb (, que es el Hamiltonian proporcionado en los [modelos de Quantum para sistemas electrónicos](xref:microsoft.quantum.chemistry.concepts.quantummodels), que describe los electrones que interactúan de forma eléctrica entre sí y con los núcleos, conduce a una serie de Symmetries que se pueden se aprovecha para comprimir los términos de Hamiltonian.
-En general, si no se realizan más suposiciones sobre las funciones de base $ \psi_j $, solo tenemos \begin{Equation} H_ {PQRS} = H_ {qpsr}, \tag{★} \label{EQ: hpqrs} \end{Equation} que se pueden obtener inmediatamente a partir de los enteros en los [modelos de Quantum para Sistemas electrónicos en los](xref:microsoft.quantum.chemistry.concepts.quantummodels) que se indica que sus valores siguen siendo idénticos si $p, q $ y $r, s $ se intercambian a partir de la antimutación.
+La simetría inherente del Hamiltonian de Coulomb (, que es el Hamiltonian proporcionado en los [modelos de Quantum para sistemas electrónicos](xref:microsoft.quantum.chemistry.concepts.quantummodels), que describe los electrones que interactúan de forma eléctrica entre sí y con los núcleos, conduce a una serie de Symmetries que se pueden aprovechar para comprimir los términos de la Hamiltonian.
+En general, si no se realizan más suposiciones sobre las funciones de base $ \ psi_j $, solo tenemos \begin{Equation} H_ {PQRS} = H_ {qpsr}. \tag{★} \label{EQ: hpqrs} \end{Equation} que se puede obtener inmediatamente a partir de los enteros de los [modelos de Quantum para los sistemas electrónicos](xref:microsoft.quantum.chemistry.concepts.quantummodels) cuando se indica que sus valores siguen siendo idénticos si $p, q $ y $r, s $ se intercambian desde la commutación.
 
-Si damos por hecho que las órbitas giradas son de valor real (como son para las bases orbitales gaussiano), entonces tenemos que \begin{Equation} H_ {PQRS} = H_ {qpsr} = H_ {srqp} = H_ {rspq} = H_ {rqps} = H_ {psrq} = H_ {SPQR} = H_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ Equation} dadas estas suposiciones, podemos usar el Symmetries anterior para reducir los datos necesarios para almacenar los elementos de la matriz de Hamiltonian en un factor de $8 $; Aunque esto hace que la importación de datos de una manera coherente sea ligeramente más complicada.
+Si damos por hecho que las órbitas giradas son de valor real (como son para las bases orbitales gaussiano), entonces tenemos más que \begin{Equation} h_ {PQRS} = h_ {qpsr} = h_ {srqp} = h_ {rspq} = h_ {rqps} = h_ {psrq} = h_ {SPQR} = h_ {qrsp} .\tag {★} \label{EQ: hpqrsreal} \end{ Equation} dadas estas suposiciones, podemos usar el Symmetries anterior para reducir los datos necesarios para almacenar los elementos de la matriz de Hamiltonian en un factor de $8 $; Aunque esto hace que la importación de datos de una manera coherente sea ligeramente más complicada.
 Afortunadamente, la biblioteca de simulación de Hamiltonian tiene subrutinas que se pueden usar para importar archivos enteros desde [Liqui $ | \rangle $](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) o directamente desde [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
 
 Enteros orbitales moleculares (es decir, el $h\_{pq} $ y $h\_{PQRS} $ Terms) como estos se representan mediante el tipo de `OrbitalIntegral`, que proporciona una serie de funciones útiles para expresar esta simetría.

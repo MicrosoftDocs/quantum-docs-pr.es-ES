@@ -1,17 +1,17 @@
 ---
-title: Usar la biblioteca de valores numéricos | Microsoft Docs
-description: Usar la biblioteca de valores numéricos
+title: Usar la biblioteca de preguntas y respuestas de Microsoft
+description: Obtenga información sobre los tipos y las operaciones disponibles en la biblioteca de valores numéricos de Microsoft Quantum.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821038"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907263"
 ---
 # <a name="using-the-numerics-library"></a>Usar la biblioteca de valores numéricos
 
@@ -36,20 +36,20 @@ La biblioteca de valores numéricos admite los siguientes tipos
 1. **`SignedLittleEndian`** : igual que `LittleEndian`, salvo que representa un entero con signo almacenado en el complemento de dos.
 1. **`FixedPoint`** : representa un número real que consta de una matriz de qubit `qArr2 : Qubit[]` y una posición de punto binaria `pos`, que cuenta el número de dígitos binarios a la izquierda del punto binario. `qArr2` se almacena de la misma manera que `SignedLittleEndian`.
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Operaciones
 
 Para cada uno de los tres tipos anteriores, hay disponible una variedad de operaciones:
 
 1. **`LittleEndian`**
     - Suma
-    - Comparación
+    - De comparación
     - Multiplicación
     - Elevar
     - División (con resto)
 
 1. **`SignedLittleEndian`**
     - Suma
-    - Comparación
+    - De comparación
     - Complemento del módulo de inversión 2
     - Multiplicación
     - Elevar
@@ -57,7 +57,7 @@ Para cada uno de los tres tipos anteriores, hay disponible una variedad de opera
 1. **`FixedPoint`**
     - Preparación/inicialización en un valor clásico
     - Suma (constante clásica u otro punto fijo Quantum)
-    - Comparación
+    - De comparación
     - Multiplicación
     - Elevar
     - Evaluación polinómica con especialización para las funciones pares e impares

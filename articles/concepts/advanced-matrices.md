@@ -1,17 +1,17 @@
 ---
-title: Conceptos de la matriz avanzada | Microsoft Docs
-description: Conceptos de matriz avanzada
+title: Conceptos avanzados de matrices
+description: Obtenga información sobre vectores propios, vectores propios y la matriz exponencial, las herramientas fundamentales que se usan para describir y simular algoritmos Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.matrix-advanced
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: f87b3bcd19d2f98fea2a9724a280781a78c4cbb9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a83911e01ad758bbcb7f701000fd58b4f1c91cd2
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183767"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907586"
 ---
 # <a name="advanced-matrix-concepts"></a>Conceptos de matriz avanzada #
 
@@ -32,14 +32,14 @@ $$
 
 Vectores
 
-$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ final {bmatrix} y \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ end {bmatrix} $ $
+$ $ \begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix}0 \\\\ 1 \\\\ 0 \ end {bmatrix} y \begin{bmatrix}0 \\\\ 0 \\\\ 1 \ end {bmatrix} $ $
 
 son vectores propios de esta matriz con vectores propios $d _ 1, $d _2 $ y $d _3 $, respectivamente. Si $d _ 1, $d _2 $ y $d _3 $ son números distintos, estos vectores (y sus múltiplos) son los únicos vectores propios de la matriz $D $. En general, para una matriz diagonal es fácil leer las vectores propios y vectores propios. Los vectores propios son todos los números que aparecen en la diagonal, y sus respectivas vectores propios son los vectores de unidad con una entrada igual a $1 $ y las entradas restantes son iguales a $0 $.
 
-Observe en el ejemplo anterior que el vectores propios de $D $ forma una base para los vectores $3 $-dimensionales. Una base es un conjunto de vectores, de modo que cualquier vector se puede escribir como una combinación lineal de ellos. Más explícitamente, $v _ _ 1 $, $v _2 $ y $v _3 $ forman una base si se puede escribir cualquier vector $v $ como $v = a_1 V_1 + a_2 v_2 + a_3 v_3 $ para algunos números $a _ 1, $a _2 $ y $a _3 $.
+Observe en el ejemplo anterior que el vectores propios de $D $ forma una base para los vectores $3 $-dimensionales. Una base es un conjunto de vectores, de modo que cualquier vector se puede escribir como una combinación lineal de ellos. Más explícitamente, $v _ _ 1 $, $v _2 $ y $v _3 $ forman una base si se puede escribir cualquier vector $v $ como $v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ para algunos números $a _ 1, $a _2 $ y $a _3 $.
 
 Recuerde que una matriz de Hermitian (también llamada Self-adjoin) es una matriz cuadrada compleja igual a su propia conjugada compleja, mientras que una matriz de la unitario es una matriz cuadrada compleja cuyo inverso es igual a su conjugado complejo.
-En el caso de las matrices Hermitian y unitarios, que son esencialmente las únicas matrices que se encuentran en la informática Quantum, hay un resultado general conocido como [*teorema espectral*](https://en.wikipedia.org/wiki/Spectral_theorem), que afirma lo siguiente: para cualquier matriz Hermitian o unitario $M $, existe un unitario $U $ de modo que $M = U ^ \dagger D U $ para algunas matrices diagonales $D $. Además, las entradas diagonales de $D $ serán el vectores propios de $M $.
+En el caso de las matrices Hermitian y unitarios, que son esencialmente las únicas matrices que se encuentran en la informática Quantum, hay un resultado general conocido como [*teorema espectral*](https://en.wikipedia.org/wiki/Spectral_theorem), que valida lo siguiente: para cualquier matriz Hermitian o unitario $M $, existe una unidad $U $ que $M = u ^ \Dagger D U $ para alguna matriz diagonal $D $. Además, las entradas diagonales de $D $ serán el vectores propios de $M $.
 
 Ya sabemos cómo calcular el vectores propios y el vectores propios de una matriz diagonal $D $. Con esta teorema sabemos que si $v $ es un Eigenvector de $D $ con eigenvalue $c $, es decir, $Dv = CV $, entonces $U ^ \dagger v $ será un Eigenvector de $M $ con eigenvalue $c $. Esto se debe a que
 

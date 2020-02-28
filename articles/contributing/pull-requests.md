@@ -1,19 +1,19 @@
 ---
-title: Abriendo solicitudes de incorporación de cambios | Microsoft Docs
-description: Abrir solicitudes de incorporación de cambios
+title: Abrir solicitudes de incorporación de cambios
+description: Obtenga información sobre cómo enviar una solicitud de incorporación de cambios de GitHub cuando esté listo para aportar código o documentación al Microsoft Quantum Development Kit.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183733"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907467"
 ---
-# <a name="opening-pull-requests"></a>Abrir solicitudes de incorporación de cambios #
+# <a name="opening-pull-requests"></a>Apertura de solicitudes de incorporación de cambios #
 
 Toda la documentación del kit de desarrollo de Quantum se administra mediante el sistema de control de versiones de Git mediante el uso de varios repositorios hospedados en GitHub.
 El uso conjunto de Git y GitHub facilita la colaboración en el kit de desarrollo de Quantum.
@@ -42,19 +42,19 @@ A menudo se dibujan diagramas en los que las confirmaciones se dibujan como cír
 Supongamos que ha iniciado una contribución en una _rama_ llamada `feature`.
 Después, la bifurcación de **Microsoft/Quantum** podría tener un aspecto similar al siguiente:
 
-![](~/media/git-workflow-step0.png)
+![Una rama de trabajo en GitHub](~/media/git-workflow-step0.png)
 
 Si realiza cambios en el repositorio local, puede _extraer_ los cambios de otro repositorio en el suyo para detectar los cambios que se produjeron en el nivel ascendente.
 
-![](~/media/git-workflow-step1.png)
+![Extracción y combinación de cambios de un repositorio ascendente](~/media/git-workflow-step1.png)
 
 Las solicitudes de incorporación de cambios funcionan de la misma manera, pero en orden inverso: cuando se abre una solicitud de incorporación de cambios, se solicita el repositorio ascendente para extraer su contribución.
 
-![](~/media/git-workflow-step2.png)
+![Solicitando volver a extraer los cambios en el repositorio original](~/media/git-workflow-step2.png)
 
 Al abrir una solicitud de incorporación de cambios a uno de nuestros repositorios, GitHub ofrecerá una oportunidad para que otros usuarios de la comunidad puedan ver un resumen de los cambios, comentarlos y realizar sugerencias sobre cómo mejorar la contribución.
 
-![](~/media/pull-request-header.png)
+![Captura de pantalla de una solicitud de incorporación de cambios en GitHub](~/media/pull-request-header.png)
 
 El uso de este proceso nos ayuda a usar la funcionalidad de GitHub para mejorar las contribuciones y para mantener un producto de alta calidad para la comunidad de programación de Quantum.
 
@@ -84,7 +84,7 @@ This way, you can edit your personal fork to your heart's content before making 
 
 -->
 
-## <a name="next-steps"></a>pasos siguientes ##
+## <a name="next-steps"></a>Pasos siguientes ##
 
 Enhorabuena por usar git para ayudar a la comunidad Quantum Development Kit.
 Para obtener más información sobre cómo contribuir con el código, continúe con la siguiente guía.

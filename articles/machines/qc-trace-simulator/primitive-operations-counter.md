@@ -1,17 +1,17 @@
 ---
-title: Contador de operaciones primitivas | Simulador de seguimiento de equipo Quantum | Microsoft Docs
-description: Introducción a un simulador de seguimiento de equipos cuánticos
+title: Contador de operaciones primitivas
+description: Obtenga información sobre el contador de operaciones primitivas de Microsoft QDK, que realiza un seguimiento del número de ejecuciones primitivas usadas por las operaciones en un programa Quantum.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 1f554c0a1b92c8f6b59be3a9d9965e0e25bd074f
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820426"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77905954"
 ---
 # <a name="primitive-operations-counter"></a>Contador de operaciones primitivas  
 
@@ -63,6 +63,6 @@ Finalmente, para generar todas las estadísticas recopiladas por el contador de 
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Vea también ##
+## <a name="see-also"></a>Consulte también ##
 
 - Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) de equipos Quantum.

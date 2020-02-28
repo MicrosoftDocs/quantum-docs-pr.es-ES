@@ -1,16 +1,16 @@
 ---
-title: De un extremo a otro con NWChem | Microsoft Docs
-description: De un extremo a otro con documentos de NWChem
+title: Programa Quantum de ejemplo NWChem
+description: Con una baraja de entrada de NWChem, recorra un ejemplo de obtención de recuentos de puertas para la simulación de química de Quantum.
 author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 8f727ea4599e06b41ced561c624c4e773b9887d9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185824"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906515"
 ---
 # <a name="end-to-end-with-nwchem"></a>De un extremo a otro con NWChem #
 

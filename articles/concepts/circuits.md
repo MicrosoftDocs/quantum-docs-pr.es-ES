@@ -1,17 +1,17 @@
 ---
-title: Circuitos Quantum | Microsoft Docs
-description: Circuitos cuánticos
+title: Circuitos cuánticos
+description: Obtenga información sobre cómo representar visualmente operaciones Quantum simples y complejas con diagramas de circuito de Quantum.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 8ba4648f1837065d15957a01ab4ca8dd2d490a42
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820800"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77905155"
 ---
 # <a name="quantum-circuits"></a>Circuitos Quantum
 Considere, por un momento, la transformación unitario $ \text{CNOT} _{01}(H\otimes 1) $.
@@ -24,7 +24,7 @@ El diagrama del circuito para preparar este estado de Quantum con el máximo gra
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/Concepts1.png)
+![diagrama de circuito para un estado de dos qubits con un máximo de dos](~/media/Concepts1.png)
 
 ## <a name="quantum-circuit-diagram-conventions"></a>Convenciones de diagrama del circuito de Quantum
 Este lenguaje visual para las operaciones Quantum puede ser más fácil de entender que escribir su matriz equivalente una vez que comprenda las convenciones para expresar un circuito de Quantum.
@@ -37,9 +37,9 @@ Por ejemplo, el símbolo
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_2.png)
+![símbolo para una operación de Hadamard que actúa en un registro de qubit único](~/media/concepts_2.png)
 
-es la puerta [Hadamard](xref:microsoft.quantum.intrinsic.h) que actúa en un registro de qubit único.
+es una operación de [Hadamard](xref:microsoft.quantum.intrinsic.h) que actúa en un registro de un solo qubit.
 
 Las puertas de Quantum se ordenan cronológicamente con la puerta situada más a la izquierda como la puerta que se aplica primero a qubits.
 En otras palabras, si se imagen de los cables como que contienen el estado de Quantum, los cables llevan el estado de Quantum a través de cada una de las puertas del diagrama de izquierda a derecha.
@@ -47,7 +47,7 @@ Es decir
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_3.png)
+![diagrama de las puertas Quantum que se aplican](~/media/concepts_3.png) de izquierda a derecha
 
 es la matriz unitario $CBA $.
 La multiplicación de matrices obedece la Convención opuesta: primero se aplica la matriz que se encuentra más a la derecha. Sin embargo, en los diagramas de circuito Quantum, se aplica primero la puerta situada más a la izquierda.
@@ -65,7 +65,7 @@ Como ejemplo de clarificación, podemos definir una operación unitario de dos q
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_4.png)
+![diagrama de circuito de una operación de unitario de dos qubit](~/media/concepts_4.png)
 
 También podemos ver $B $ como si tuvieran una acción en un solo registro de dos qubit, en lugar de en 2 1-qubit, según el contexto en el que se use el circuito. Quizás la propiedad más útil de estos diagramas de circuitos abstractos es que permiten describir algoritmos Quantum complicados en un nivel alto sin tener que compilarlos en las puertas fundamentales.
 Esto significa que puede obtener un Intuition sobre el flujo de datos para un algoritmo Quantum grande sin necesidad de comprender todos los detalles de cómo funciona cada una de las subrutinas dentro del algoritmo.
@@ -78,14 +78,14 @@ En general, se describen las operaciones controladas en diagramas de circuitos c
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_5.png)
+![diagrama de circuito de una puerta controlada por un](~/media/concepts_5.png)
 
 Aquí el círculo negro denota el bit de Quantum en el que se controla la puerta y una conexión vertical denota la unitario que se aplica cuando el control qubit toma el valor $1 $.
 Para los casos especiales en los que $G = X $ y $G = Z $, presentamos la siguiente notación para describir la versión controlada de las puertas (tenga en cuenta que la puerta controlada-X es la [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_6.png)
+![diagrama de circuito para casos especiales de puertas controladas](~/media/concepts_6.png)
 
 Q # proporciona métodos para generar automáticamente la versión controlada de una operación, lo que evita que el programador tenga que codificar estas operaciones. A continuación se muestra un ejemplo de esto:
 
@@ -104,7 +104,7 @@ En concreto, este Subcircuito tiene el siguiente aspecto:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_7.png) de circuito de medición
+![símbolo que representa una operación de medición](~/media/concepts_7.png)
 
 Q # implementa un [operador de medida](xref:microsoft.quantum.intrinsic.measure) para este fin.
 Vea la [sección sobre medidas](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obtener más información.
@@ -113,7 +113,7 @@ Del mismo modo, el Subcircuito
 
 <!--- ![](.\media\8.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![](~/media/concepts_8.png)
+![diagrama del circuito que representa una operación controlada](~/media/concepts_8.png)
 
 proporciona una puerta controlada por clases, donde $G $ se aplica en el bit de control clásico que es el valor $1 $.
 
@@ -125,4 +125,4 @@ Esto es necesario para que el protocolo funcione según las leyes de la mecánic
 A continuación se proporciona el circuito de teleportabilidad de Quantum; También proporcionamos una versión anotada del circuito para ilustrar cómo leer el circuito de Quantum.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
-![](~/media/concepts_tp2.png)
+![circuito de teleportabilidad de Quantum](~/media/concepts_tp2.png)

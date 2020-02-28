@@ -1,17 +1,17 @@
 ---
-title: 'Modelo de tipo Q # | Microsoft Docs'
-description: Modelo de tipo Q#
+title: 'Tipos de datos de Q #'
+description: Obtenga información sobre los diferentes tipos que se usan en el lenguaje de programación de preguntas y respuestas, incluidos tipos integrados, matrices, tuplas, operaciones, funciones y tipos definidos por el usuario.
 author: QuantumWriter
 uid: microsoft.quantum.language.type-model
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0aabb144779da301b71ad215c8e975cc29b4dcce
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: 1fc4c0b3fed9277c7f9f3ac421330df03c1b30e4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76871641"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904662"
 ---
 # <a name="the-type-model"></a>Modelo de tipo
 

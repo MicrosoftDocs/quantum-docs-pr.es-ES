@@ -1,17 +1,17 @@
 ---
-title: 'Reunir todo: técnicas de Q # | Microsoft Docs'
-description: 'Reunir todo: técnicas de preguntas y respuestas'
+title: 'Técnicas de Q #: reunir todo'
+description: Recorra un programa básico de preguntas y respuestas que muestre la teleportabilidad de Quantum.
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820171"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906838"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Reunir todo: teleportabilidad #
 Volvamos al ejemplo del circuito de teleportabilidad definido en los circuitos de [Quantum](xref:microsoft.quantum.concepts.circuits). Vamos a usar esto para ilustrar los conceptos que hemos aprendido hasta ahora. A continuación se proporciona una explicación de la teleportabilidad de Quantum para quienes no están familiarizados con la teoría, seguidos de un tutorial de la implementación del código en Q #. 
