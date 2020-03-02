@@ -6,12 +6,12 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/19/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.search
-ms.openlocfilehash: c1fd578fdb3d56a7b48972e6ccc9b1605047fe36
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 0e64fcd56929fa33397c45bf1b2e99bf687eca6f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820358"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906957"
 ---
 # <a name="quickstart-implement-grovers-search-algorithm-in-q"></a>Inicio rápido: Implementación del algoritmo de búsqueda de Grover en Q#
 
@@ -23,7 +23,7 @@ Mediante el algoritmo de búsqueda de Grover, se garantiza que un equipo cuánti
 
 Puede compilar un algoritmo de búsqueda de Grover con unas pocas líneas de código.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Microsoft [Quantum Development Kit][install].
 
@@ -43,7 +43,7 @@ El número de aumentos incrementales es menor que el número de elementos de la 
 
 1. Agregue el siguiente código al archivo `Operations.qs` del proyecto nuevo:
 
-    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-23" highlight="5,27":::
+    :::code language="qsharp" source="~/quantum/samples/algorithms/simple-grover/SimpleGrover.qs" range="4-40":::
 
 1. Para definir la lista que estamos buscando, cree un nuevo archivo `Reflections.qs` y péguelo en el siguiente código:
 
@@ -53,7 +53,7 @@ El número de aumentos incrementales es menor que el número de elementos de la 
 
 1. A continuación, ejecute el programa de Q# para buscar el elemento marcado por `ReflectAboutMarked`.
 
-    ### <a name="python-with-visual-studio-code-or-the-command-linetabtabid-python"></a>[Python con Visual Studio Code o la línea de comandos](#tab/tabid-python)
+    ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python con Visual Studio Code o la línea de comandos](#tab/tabid-python)
 
     Para ejecutar el nuevo programa de Q# desde Python, guarde el código siguiente como `host.py`:
 
@@ -71,7 +71,7 @@ El número de aumentos incrementales es menor que el número de elementos de la 
     [0, 1, 0, 1, 0]
     ```
 
-    ### <a name="c-with-visual-studio-code-or-the-command-linetabtabid-csharp"></a>[C# con Visual Studio Code o la línea de comandos](#tab/tabid-csharp)
+    ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# con Visual Studio Code o la línea de comandos](#tab/tabid-csharp)
 
     Para ejecutar el nuevo programa de Q# desde C#, modifique `Driver.cs` para incluir el siguiente código de C#:
 
@@ -90,7 +90,7 @@ El número de aumentos incrementales es menor que el número de elementos de la 
     Press any key to continue...
     ```
 
-    ### <a name="c-with-visual-studio-2019tabtabid-vs2019"></a>[C# con Visual Studio 2019](#tab/tabid-vs2019)
+    ### <a name="c-with-visual-studio-2019"></a>[C# con Visual Studio 2019](#tab/tabid-vs2019)
 
     Para ejecutar el nuevo programa de Q# desde C# en Visual Studio, modifique `Driver.cs` para que incluya el código C# siguiente:
 
