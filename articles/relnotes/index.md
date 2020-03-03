@@ -1,17 +1,17 @@
 ---
 title: Notas de la versión preliminar de Quantum Development Kit
-description: Notas de la versión preliminar de Quantum Development Kit
+description: Obtenga información sobre las últimas actualizaciones de la versión preliminar del kit de desarrollo de Microsoft Quantum.
 author: natke
 ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: be1eff8127be9fb024a1dc2de3ec82952ac2dc2b
-ms.sourcegitcommit: b7e205aaa7fa1ca9f0daa163e46154945f4bc965
+ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441035"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906940"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -22,18 +22,32 @@ Para obtener instrucciones de instalación, consulte la [guía de instalación](
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
 
 
+## <a name="version-01020022610"></a>Versión 0.10.2002.2610
+
+*Fecha de lanzamiento: 27 de febrero de 2020*
+
+Esta versión contiene lo siguiente:
+
+- Nueva biblioteca de aprendizaje automático cuántico. Para más información, visite nuestra [página de documentación sobre QML](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview).
+- Correcciones de errores de IQ#, que dan como resultado un aumento del rendimiento de 10 a 20 veces superior al cargar paquetes NuGet.
+
+Consulte la lista completa de solicitudes de incorporación de cambios cerradas para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiladores](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [tiempo de ejecución](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) y [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 ## <a name="version-01020012831"></a>Versión 0.10.2001.2831
 
 *Fecha de lanzamiento: 29 de enero de 2020*
 
 Esta versión contiene lo siguiente:
 
-- Nuevo paquete NuGet Microsoft.Quantum.SDK
+- Nuevo paquete NuGet Microsoft.Quantum.SDK, que reemplazará al paquete NuGet Microsoft.Quantum.Development.Kit al crear nuevos proyectos. El paquete NuGet Microsoft.Quantum.Development.Kit se seguirá admitiendo en los proyectos existentes. 
+- Compatibilidad con las extensiones de compilador de Q#, habilitadas por el nuevo paquete NuGet Microsoft.Quantum.SDK. Para más información, consulte la [documentación en GitHub](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler), el [ejemplo de extensiones de compilador](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) y el [blog para desarrolladores de Q#](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/).
 - Se ha agregado compatibilidad con .NET Core 3.1. Se recomienda encarecidamente tener instalada la versión 3.1.100, ya que la compilación con versiones anteriores del SDK de .NET Core puede causar problemas
 - Nuevas transformaciones del compilador disponibles en Microsoft.Quantum.QsCompiler.Experimental
 - Nueva funcionalidad para exponer vectores de estado de salida como HTML en IQ#
 - Se ha agregado compatibilidad de EstimateFrequencyA con Microsoft.Quantum.Characterization para las pruebas de Hadamard y SWAP
 - El espacio de nombres AmplitudeAmplification ahora usa la guía de estilo de Q#
+
+Consulte la lista completa de solicitudes de incorporación de cambios cerradas para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiladores](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [tiempo de ejecución](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) y [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01019120501"></a>Versión 0.10.1912.0501
 
