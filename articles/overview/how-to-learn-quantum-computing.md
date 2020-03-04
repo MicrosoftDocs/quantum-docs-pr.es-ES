@@ -1,19 +1,19 @@
 ---
 title: ¿Cómo aprender computación cuántica con Q#?
-description: ''
+description: Recursos con información básica sobre matemáticas y física que le ayudarán a empezar a trabajar con la computación cuántica.
 author: natke
 ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.learn
-ms.openlocfilehash: 53682ae8ab9cb31fa0de68832cb3574aa4e30216
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.openlocfilehash: 17fc4e7a73f93a86d981996bf8b59309bccb6e67
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73529972"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907756"
 ---
-# <a name="how-to-learn-quantum-computing"></a>¿Cómo aprender computación cuántica?
+# <a name="how-to-learn-about-quantum-computing"></a>Cómo aprender computación cuántica
 
 Obtenga instrucciones para aprender sobre la computación cuántica y la escritura de sus primeros programas. Esta no es una guía exhaustiva, sino un buen punto de partida.
 
