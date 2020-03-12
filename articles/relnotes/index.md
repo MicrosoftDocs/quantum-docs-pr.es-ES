@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: f4bc69e5b14833dea0d61106a9eb368d7d7f5663
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 53b7d226f0f9b12f47460964944f1ddb6160c357
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906940"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022835"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -57,7 +57,7 @@ Esta versión contiene lo siguiente:
 
 - Nuevo atributo de prueba para las pruebas unitarias de Q#. Consulte la documentación de API actualizada [aquí](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) y la guía de prueba y depuración actualizada [aquí](xref:microsoft.quantum.techniques.testing-and-debugging)
 - Se ha agregado un seguimiento de la pila en caso de un error de ejecución de un programa en Q#
-- Se ha incorporado la compatibilidad con puntos de interrupción en Visual Studio Code debido a una actualización de la [extensión de Visual Studio Code en C# para OmniSharp](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+- Se ha incorporado la compatibilidad con puntos de interrupción en Visual Studio Code debido a una actualización de la [extensión de Visual Studio Code en C# para OmniSharp](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
 Consulte la lista completa de solicitudes de incorporación de cambios cerradas para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiladores](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [tiempo de ejecución](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) y [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
