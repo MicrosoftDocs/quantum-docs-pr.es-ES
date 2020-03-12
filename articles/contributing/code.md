@@ -6,27 +6,27 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907484"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022470"
 ---
-# <a name="contributing-code"></a>Contribución de código #
+# <a name="contributing-code"></a>Contribución de código
 
 Además de notificar problemas y mejorar la documentación, el código que contribuye al kit de desarrollo de Quantum puede ser una forma muy directa de ayudar a sus colegas en la comunidad de programación Quantum.
 Al contribuir con el código, puede ayudar a solucionar problemas, proporcionar nuevos ejemplos, facilitar el uso de las bibliotecas existentes o incluso agregar características completamente nuevas.
 
 En esta guía, detallaremos un poco de lo que se busca cuando revisemos las solicitudes de incorporación de cambios para ayudar a que su contribución sea lo más conveniente.
 
-## <a name="what-we-look-for"></a>Qué buscamos ##
+## <a name="what-we-look-for"></a>Qué buscamos
 
 Una contribución de código ideal se basa en el trabajo existente en un repositorio de Quantum Development Kit para corregir problemas, expandir características existentes o agregar nuevas características que se encuentran dentro del ámbito de un repositorio.
 Cuando aceptamos una contribución del código, se convierte en parte del kit de desarrollo de Quantum, de modo que las nuevas características se publiquen, se mantendrán y se desarrollen de la misma manera que el resto del kit de desarrollo de Quantum.
 Por lo tanto, resulta útil cuando la funcionalidad agregada por una contribución está bien probada y está documentada.
 
-### <a name="unit-tests"></a>Pruebas unitarias ###
+### <a name="unit-tests"></a>Pruebas unitarias
 
 Las funciones, operaciones y tipos definidos por el usuario de preguntas y respuestas que componen bibliotecas como la Canon se prueban automáticamente como parte del desarrollo en el repositorio [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Cuando se abre una nueva solicitud de incorporación de cambios, por ejemplo, la configuración de [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/) comprobará que los cambios en la solicitud de incorporación de cambios no interrumpan ninguna funcionalidad existente de la que dependa la comunidad de programación de Quantum.
@@ -56,7 +56,7 @@ function PairTest () : Unit {
 Se pueden comprobar condiciones más complicadas mediante las técnicas de la [sección pruebas](xref:microsoft.quantum.libraries.diagnostics) de la guía de bibliotecas estándar.
 Por ejemplo, la siguiente prueba comprueba que `H(q); X(q); H(q);` como lo llama <xref:microsoft.quantum.canon.applywith> hace lo mismo que `Z(q)`.
 
-```qsharp
+```Q#
 @Test("QuantumSimulator")
 operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
@@ -79,7 +79,8 @@ Localmente, las pruebas unitarias se pueden ejecutar con el explorador de prueba
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>Cuándo se rechazará una solicitud de incorporación de cambios ##
+
+## <a name="when-well-reject-a-pull-request"></a>Cuándo se rechazará una solicitud de incorporación de cambios
 
 A veces, rechazaremos la solicitud de incorporación de cambios para una contribución.
 Si esto sucede, no significa que sea malo, ya que hay una serie de motivos por los que es posible que no podamos aceptar una contribución determinada.
@@ -98,10 +99,15 @@ Por último, no podemos aceptar contribuciones que causan el daño de la comunid
 Queremos asegurarnos de que las contribuciones sirvan a toda la comunidad Quantum Computing, tanto en su actual diversidad actual como en el futuro, a medida que crezcan aún más.
 Agradecemos su ayuda para alcanzar este objetivo.
 
-## <a name="next-steps"></a>Pasos siguientes ##
+## <a name="next-steps"></a>Pasos siguientes
 
 Gracias por ayudarnos a que el kit de desarrollo de Quantum sea un excelente recurso para toda la comunidad de programación de Quantum.
 Para obtener más información, continúe con la siguiente guía sobre el estilo de preguntas y respuestas.
 
 > [!div class="nextstepaction"]
 > [Más información sobre las directrices de estilo de preguntas y respuestas](xref:microsoft.quantum.contributing.style)
+
+En función del tipo de código que esté contribuyendo, es posible que tenga que tener en cuenta aspectos adicionales que pueden ayudarle a hacer que su contribución sea lo más conveniente para la comunidad como sea posible.
+
+> [!div class="nextstepaction"]
+> [Más información sobre los ejemplos de contribución](xref:microsoft.quantum.contributing.samples)

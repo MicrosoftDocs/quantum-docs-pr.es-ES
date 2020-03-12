@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906515"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022491"
 ---
 # <a name="end-to-end-with-nwchem"></a>De un extremo a otro con NWChem #
 
-En esta página, veremos un ejemplo de cómo obtener recuentos de puertas para la simulación de química de Quantum, empezando por una baraja de entrada de [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) .
+En este artículo, le guiará a través de un ejemplo de cómo obtener recuentos de puertas para la simulación de química de Quantum, empezando por una baraja de entrada de [NWChem](http://www.nwchem-sw.org/index.php/Main_Page) .
 Antes de continuar con este ejemplo, asegúrese de que ha instalado Docker, siguiendo la [Guía de instalación y validación](xref:microsoft.quantum.chemistry.concepts.installation).
 
 Para obtener más información:
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 A continuación, importaremos el comando `Get-GateCount` proporcionado con el ejemplo **GetGateCount** .
-Para obtener información completa, consulte las [instrucciones proporcionadas con el ejemplo](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount).
+Para obtener información completa, consulte las [instrucciones proporcionadas con el ejemplo](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
 A continuación, ejecute lo siguiente, sustituyendo `<runtime>` por `win10-x64`, `osx-x64`o `linux-x64`, en función del sistema operativo:
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>Generar y consumir la salida de Broombridge desde NWChem ##
 
-Ahora tenemos todo lo que necesitamos para generar y consumir documentos de Broombridge.
+Ahora tiene todo lo que necesita para generar y consumir documentos de Broombridge.
 Para ejecutar NWChem y generar un documento Broombridge para el `h4_sto6g_0.000.nw` baraja de entrada, ejecute `Convert-NWChemToBroombridge`:
 
 > [!NOTE]
@@ -123,7 +123,7 @@ Para ejecutar NWChem y generar un documento Broombridge para el `h4_sto6g_0.000.
 Convert-NWChemToBroombridge h4_sto6g_0.000.nw 
 ```
 
-Esto producirá un documento Broombridge denominado `h4_sto6g_0.000.yaml` que se puede usar con `Get-GateCount`:
+Esto producirá un documento Broombridge denominado `h4_sto6g_0.000.yaml` que puede usar con `Get-GateCount`:
 
 ```powershell
 Get-GateCount -Format YAML h4_sto6g_0.000.yaml
@@ -164,7 +164,7 @@ Hay muchas cosas que debe hacer desde aquí:
 - Pruebe diferentes Barajas de entrada predefinidas, por ejemplo, variando el parámetro `alpha` en `h4_sto6g_alpha.nw`. 
 - Pruebe a modificar las Barajas editando directamente las Barajas de NWChem, por ejemplo, explorando modelos de `STO-nG` para distintas opciones de n. 
 - Pruebe otras Barajas de entrada NWChem predefinidas que están disponibles en `nwchem/qa/chem_library_tests`,
-- Pruebe un conjunto de pruebas comparativas predefinidas de Broombridge YAML que se generaron a partir de NWChem y que están disponibles como parte del [repositorio Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML). Estas pruebas comparativas incluyen: 
+- Pruebe un conjunto de pruebas comparativas predefinidas de Broombridge YAML que se generaron a partir de NWChem y que están disponibles como parte del [repositorio Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Estas pruebas comparativas incluyen: 
     - moléculas pequeñas como el hidrógeno molecular (H2), Beryllium (ser), litio hidruro (LiH),
     - moléculas mayores como ozono (O3), beta-Carotene, cytosine y muchas más. 
 - Pruebe las flechas gráficas de [emsl](https://arrows.emsl.pnnl.gov/api/qsharp_chem) de front-end que incluye una interfaz en el Microsoft Quantum Development Kit. 
