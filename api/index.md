@@ -6,20 +6,19 @@ author: natke
 ms.author: nakersha
 ms.date: 09/04/2019
 ms.topic: landing-page
-ms.openlocfilehash: 25a53e1cb8577761ef89cdcf2cfcddc509093f86
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 5975b0caf0fc73ad18fbd8a1e7c82a2333161da2
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056963"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022513"
 ---
-# <a name="q-standard-libraries"></a>Bibliotecas estándar de Q# #
+# <a name="q-api-reference"></a>Referencia de la API de Q# #
 
-Q# es compatible con una variedad de diferentes operaciones, funciones y tipos definidos por el usuario útiles que componen la *biblioteca estándar* de Q#.
-La biblioteca estándar de Q# se divide en dos partes principales:
+Esta referencia de la API incluye la biblioteca estándar de Q# y tres bibliotecas adicionales basadas en ella: bibliotecas de química, de valores numéricos y de aprendizaje automático. También hay bibliotecas de .NET y Python disponibles para Q#.
 
-- **El preludio**: las operaciones y funciones definidas como parte del compilador y la máquina de destino, por lo general en código .NET nativo clásico.
-  En general, máquinas distintas pueden tener implementaciones diferentes del preludio correspondientes a cada sistema.
-- **El canon**: las operaciones y funciones definidas en Q# que se basan en la lógica definida en el preludio.
-  La implementación del canon es independiente de las máquinas de destino.
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+- [Bibliotecas de Q#](xref:microsoft.quantum.qsharplibintro)
+- [Bibliotecas de .NET](xref:microsoft.quantum.dotnetlibsintro)
+- [Bibliotecas de Python](https://docs.microsoft.com/python/qsharp)
+
+Para más información acerca de las bibliotecas de Q#, consulte <xref:microsoft.quantum.libraries>.
