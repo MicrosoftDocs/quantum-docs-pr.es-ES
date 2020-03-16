@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907246"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402857"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quantum #
 
@@ -77,9 +77,9 @@ $ $ Si definimos $ $ \ket{\phi\_k (a)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^
 $ $ La ruta de acceso para realizar un agregador se queda clara después de observar que la suma de las entradas se puede escribir como $ $ \ket{a + b} = \operatorname{QFT} ^{-1}\ket{\phi\_1 (a + b)} \otimes \cdots \otimes \ket{\phi\_n (a + b)}.
 $ $ Los enteros $b $ y $a $ se pueden agregar al realizar una rotación de fase controlada en cada una de las qubits de la descomposición usando los bits de los controles $b $ as.
 
-Esta expansión se puede simplificar aún más indicando que para cualquier entero $j $ y el número real $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Esto se debe a que si gira $360 ^ {\circ} $ degrees ($ 2 \ PI $ radianes) en un círculo, acabará exactamente donde comenzó.  La única parte importante de $x $ para $e ^ {i2\pi x} $ es, por lo tanto, la parte fraccionaria de $x $.  En concreto, si tenemos una expansión binaria con el formato $x = y +0. x\_0x\_2 \ ldots x\_n $ $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $ y, por tanto, $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ Esto significa que si realizamos la adición incrementando cada uno de los tensores factores en la expansión de la transformación de Fourier de $ \ket{a} $, el número de giros se reduce como $k $ reduce.  Esto reduce considerablemente el número de puertas de Quantum necesarias en el agregador.  Denotamos los pasos transformación de Fourier, adición de fase y transformación de Fourier inversos que forman el agregador de Draper como $ \operatorname{QFT} ^{-1} \left (\phi\\\!\operatorname{ADD}\right) \operatorname{QFT} $. A continuación, se puede observar un circuito de Quantum que usa esta simplificación para implementar todo el proceso.
+Esta expansión se puede simplificar aún más indicando que para cualquier entero $j $ y el número real $x $, $e ^ {i2\pi (x + j)} = e ^ {i2\pi x} $.  Esto se debe a que si gira $360 ^ {\circ} $ degrees ($ 2 \ PI $ radianes) en un círculo, acabará exactamente donde comenzó.  La única parte importante de $x $ para $e ^ {i2\pi x} $ es, por lo tanto, la parte fraccionaria de $x $.  En concreto, si tenemos una expansión binaria con el formato $x = y +0. x\_0x\_2 \ ldots x\_n $ $e ^ {i2\pi x} = e ^ {i2\pi (0. x\_0x\_2 \ ldots x\_{n-1})} $ y, por tanto, $ $ \ket{\phi\_k (a + b)} = \frac{1}{\sqrt{2}} \left (\ket{0} + e ^ {i2\pi [a/2 ^ k +0. b\_k\ldots b\_1]} \ket{1} \right). $ $ Esto significa que, si se realiza una adición incrementando cada uno de los factores tensores en la expansión de la transformación de Fourier de $ \ket{a} $, entonces el el número de giros se reduce como $k $ reduce.  Esto reduce considerablemente el número de puertas de Quantum necesarias en el agregador.  Denotamos los pasos transformación de Fourier, adición de fase y transformación de Fourier inversos que forman el agregador de Draper como $ \operatorname{QFT} ^{-1} \left (\phi\\\!\operatorname{ADD}\right) \operatorname{QFT} $. A continuación, se puede observar un circuito de Quantum que usa esta simplificación para implementar todo el proceso.
 
-![El agregador de Draper se muestra como diagrama de circuito](~/media/draper.png)
+![El agregador de Draper se muestra como diagrama de circuito](~/media/draper.svg)
 
 Cada puerta controlada $e ^ {I2 \ PI/k} $ del circuito hace referencia a una puerta de fase controlada.  Estas puertas tienen la propiedad que en el par de qubits en el que actúan, $ \ket{00}\mapsto \ket{00}$ pero $ \ket{11}\mapsto e ^ {I2 \ PI/k} \ les{11}$.  Este circuito nos permite realizar adiciones sin qubits adicionales, aparte de las necesarias para almacenar las entradas y las salidas.
 
@@ -92,7 +92,7 @@ $$
 
 El agregador de Beauregard usa el agregador de Draper, o más específicamente $ \phi\\\!\operatorname{ADD} $, para agregar $a $ y $b $ en la fase.  A continuación, usa la misma operación para identificar si $a + b < N $ restando $N $ y prueba si $a + b-N < 0 $.  El circuito almacena esta información en un qubit auxiliar y, a continuación, agrega $N $ al registro si $a + b < N $.  A continuación, concluye descalculando este bit auxiliar (este paso es necesario para asegurarse de que se puede anular la asignación de ancilla después de llamar al agregador).  A continuación se proporciona el circuito del agregador de Beauregard.
 
-![El agregador de Beauregard se muestra como diagrama de circuito](~/media/beau.png)
+![El agregador de Beauregard se muestra como diagrama de circuito](~/media/beau.svg)
 
 Aquí, la puerta $ \Phi\\\!\operatorname{ADD} $ tiene el mismo formato que $ \Phi\\\!\operatorname{ADD} $, salvo que en este contexto la entrada es clásica en lugar de Quantum.  Esto permite que las fases controladas en $ \Phi\\\!\operatorname{ADD} $ se reemplacen con las puertas de fase que se pueden compilar en menos operaciones para reducir el número de qubits y el número de puertas necesarias para el agregador.
 
@@ -111,7 +111,7 @@ Y se colocan de forma diferente, el efecto de aplicar $V $ es precisamente el mi
 Por lo tanto, en el resto de este debate se tratará la estimación de fases en términos de $R _ 1 (\phi) $, que se implementan mediante el uso de la *fase Kickback*.
 
 Dado que el registro de destino y el control permanecen inalterados después de este proceso, podemos volver a usar $ \ket{\phi} $ como destino de una aplicación controlada de $U ^ $2 para preparar un segundo control qubit en el estado $R _ 1 (2 \phi) \ket{+} $.
-Continuando de este modo, podemos obtener un registro con el formato \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align} donde $n $ es el número de bits de precisión que se necesitan. y donde se ha usado ${} \propto {}$ para indicar que se ha suprimido el factor de normalización de $ 1/\sqrt{2 ^ n} $.
+Continuando de este modo, podemos obtener un registro con el formato \begin{align} \ket{\psi} & = \ sum_ {j = 0} ^ n R_1 (2 ^ j \phi) \ket{+} \\\\ & \propto \ bigotimes_ {j = 0} ^ {n} \left (\ket{0} + \exp (i 2 ^ {j} \phi) \ket{1}\right) \\\\ & \propto \ sum_ {k = 0} ^ {2 ^ n-1} \exp (i \phi k) \ket{k} \end{align} donde $n $ es el número de bits de precisión que se necesitan. y donde se ha usado ${} \propto {}$ para indicar que se ha suprimido el factor de normalización de $1/\sqrt {2 ^ n} $.
 
 Si damos por hecho que $ \phi = 2 \pi p/2 ^ k $ para un entero $p $, se reconocerá como $ \ket{\psi} = \operatorname{QFT} \ket{p_0 p_1 \dots p_n} $, donde $p _j $ es el $j ^ {\textrm{TH}} $ bit de $2 \pi \phi $.
 Al aplicar el contiguo de la transformación de Fourier de Quantum, se obtiene la representación binaria de la fase codificada como estado de Quantum.
