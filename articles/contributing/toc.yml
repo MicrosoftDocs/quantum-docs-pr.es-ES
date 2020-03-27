@@ -1,6 +1,6 @@
 - name: Informes de errores
   href: reporting-bugs.md
-- name: Contribución de documentación
+- name: Mejora de la documentación
   href: docs.md
 - name: Apertura de solicitudes de incorporación de cambios
   href: pull-requests.md
