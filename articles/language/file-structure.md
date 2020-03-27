@@ -6,12 +6,12 @@ uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 96de062bc6ce4edf94520bec449e8d95259c0f5c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907399"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320758"
 ---
 # <a name="file-structure"></a>Estructura de archivos
 
@@ -248,7 +248,7 @@ A continuación se define la operación de teletransportar.
 ```qsharp
 // Entangle two qubits.
 // Assumes that both qubits are in the |0> state.
-operation EPR (q1 : Qubit, q2 : Qubit) : Unit 
+operation PrepareEntangledPair (q1 : Qubit, q2 : Qubit) : Unit 
 is Adj + Ctl {
     H(q2);
     CNOT(q2, q1);
@@ -262,10 +262,10 @@ operation Teleport (source : Qubit, target : Qubit) : Unit {
     using (ancilla = Qubit())
     {
         // Create a Bell pair between the temporary and the target
-        EPR(target, ancilla);
+        PrepareEntangledPair(target, ancilla);
 
         // Do the teleportation
-        Adjoint EPR (ancilla, source);
+        Adjoint PrepareEntangledPair(ancilla, source);
 
         if (MResetZ(source) == One) {
             X(target);
@@ -304,3 +304,41 @@ function DotProduct(a : Double[], b : Double[]) : Double {
     return accum;
 }
 ```
+
+
+## <a name="internal-declarations"></a>Declaraciones internas
+
+Los tipos definidos por el usuario, las operaciones y las funciones también se pueden declarar como *internas*.
+Esto significa que solo se puede tener acceso a ellos desde dentro del proyecto de Q # en el que se declaran.
+Cuando se usa un proyecto como referencia, todas sus declaraciones *públicas* (no internas) están disponibles, pero si se intenta usar una declaración interna de otro proyecto, se producirá un error.
+Las declaraciones internas son útiles para escribir código modular que se puede reutilizar en otras partes del proyecto, pero que se modificarán posteriormente sin interrumpir otros proyectos que puedan depender de él.
+
+Un tipo, operación o función interna definida por el usuario se puede declarar simplemente agregando `internal` al principio de la declaración.
+Por ejemplo,
+
+```qsharp
+internal newtype PairOfQubits = (Qubit, Qubit);
+
+internal operation PrepareEntangledPair(pair : PairOfQubits) : Unit 
+is Adj + Ctl {
+    let (q1, q2) = pair!;
+    H(q2);
+    CNOT(q2, q1);
+}
+
+internal function DotProduct(a : Double[], b : Double[]) : Double {
+    ...
+}
+```
+
+> [!WARNING]
+> Los tipos internos definidos por el usuario solo se pueden usar en firmas o tipos subyacentes si el tipo correspondiente o definido por el usuario también es interno.
+> Por ejemplo, si hay un tipo definido por el usuario `InternalOptions` que se declaró con la palabra clave `internal`, las declaraciones siguientes producirán errores:
+>
+> ```qsharp
+> // Error: Can't use InternalOptions as an output type of a public function.
+> function DefaultInternalOptions() : InternalOptions { ... }
+>
+> // Error: Can't use InternalOptions as an item in a public user-defined type.
+> newtype ExtendedOptions = (Internal : InternalOptions);
+> ```
