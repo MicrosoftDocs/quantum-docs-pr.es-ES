@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 61a91278ee2c77972ff12ed77b4f20c837b02643
-ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+ms.openlocfilehash: 4fbb740568ff6cdc99e4f6a813802ed8d4234ab4
+ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80320699"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269393"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -21,6 +21,17 @@ Para obtener instrucciones de instalación, consulte la [guía de instalación](
 
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
 
+
+## <a name="version-01120032506"></a>Version 0.11.2003.2506
+
+*Fecha de lanzamiento: 26 de marzo de 2020*
+
+Esta versión contiene lo siguiente:
+
+- Se ha agregado compatibilidad con los modificadores de acceso en Q#. Para más información, consulte [Estructuras de archivo](xref:microsoft.quantum.language.file-structure).
+- Se ha actualizado al SDK de .NET Core 3.1.
+
+Consulte la lista completa de solicitudes de incorporación de cambios cerradas para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiladores](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [tiempo de ejecución](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) y [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01020022610"></a>Versión 0.10.2002.2610
 
