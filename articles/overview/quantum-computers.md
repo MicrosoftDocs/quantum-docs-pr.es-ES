@@ -7,10 +7,10 @@ ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
 ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
-ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "73529946"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>¿Qué pueden hacer los equipos cuánticos?
@@ -29,7 +29,7 @@ La simulación de sistemas microscópicos que se comportan de acuerdo con las le
 
 Las moléculas químicas son sistemas cuánticos y, por lo tanto, se pueden analizar de esta manera. Una sustancia química específica es la enzima _nitrogenasa_ que, con una mejor comprensión de sus propiedades, podría tener la posibilidad de reducir el consumo energético y la emisión del gas de efecto invernadero de los fertilizantes actuales.
 
-## <a name="cryptography"></a>Criptografía
+## <a name="cryptography"></a>Cryptography
 
 Quizás la aplicación más famosa de los equipos cuánticos sea la criptografía. En ella, Peter Shor mostró en 1994 que un equipo cuántico escalable puede vulnerar todas las técnicas de cifrado más usadas.  La criptografía clásica se basa en la irresolubilidad de las operaciones en números grandes, tales como la factorización de números grandes en dos números primos.
 
@@ -37,7 +37,7 @@ La computación cuántica hace que estas operaciones sean teóricamente resolubl
 
 En Microsoft, contamos con el mejor equipo del mundo en seguridad y criptografía poscuántica, que desarrollan algoritmos resistentes a la computación cuántica.
 
-## <a name="optimization"></a>Optimización
+## <a name="optimization"></a>Optimization
 
 La optimización es la tarea de realizar una búsqueda grande en un espacio de grandes dimensiones para obtener una solución que minimice una función de costo determinada.   En un equipo cuántico, podemos acelerar los algoritmos de optimización, lo que permite encontrar soluciones que, de otro modo, no serían posibles. Las aplicaciones van desde el transporte y la logística a la asistencia sanitaria, el diagnóstico y la ciencia de los materiales. Puede suponer un impacto profundo en la eficiencia de estos sectores.
 
@@ -62,4 +62,4 @@ Los algoritmos de inspiración cuántica se aplican a la investigación médica.
 ## <a name="next-steps"></a>Pasos siguientes
 
 * [¿Por qué debería aprender computación cuántica?](xref:microsoft.quantum.overview.why)
-* [Comience con el Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)
+* [Introducción a Microsoft Quantum Development Kit](xref:microsoft.quantum.welcome)
