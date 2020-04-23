@@ -1,147 +1,147 @@
 ---
-title: 'Técnicas de Q #: reunir todo'
-description: Recorra un programa básico de preguntas y respuestas que muestre la teleportabilidad de Quantum.
+title: Técnicas de Q - Ponerlo todo junto
+description: Repase a través de un programa básico de Q que demuestra la teletransportación cuántica.
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 4bd91699017e4c1acd9f4449b8a65e39bd07878e
+ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906838"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82030572"
 ---
-# <a name="putting-it-all-together-teleportation"></a>Reunir todo: teleportabilidad #
-Volvamos al ejemplo del circuito de teleportabilidad definido en los circuitos de [Quantum](xref:microsoft.quantum.concepts.circuits). Vamos a usar esto para ilustrar los conceptos que hemos aprendido hasta ahora. A continuación se proporciona una explicación de la teleportabilidad de Quantum para quienes no están familiarizados con la teoría, seguidos de un tutorial de la implementación del código en Q #. 
+# <a name="putting-it-all-together-teleportation"></a>Putting It All Together: Teletransportation #
+Volvamos al ejemplo del circuito de teletransportación definido en [Circuitos Cuánticos.](xref:microsoft.quantum.concepts.circuits) Vamos a usar esto para ilustrar los conceptos que hemos aprendido hasta ahora. A continuación se proporciona una explicación de la teletransportación cuántica para aquellos que no están familiarizados con la teoría, seguido de un tutorial de la implementación de código en Q. 
 
-## <a name="quantum-teleportation-theory"></a>Teleportabilidad de Quantum: teoría
-La teleportabilidad de Quantum es una técnica para enviar un estado de Quantum desconocido (al que haremos referencia como el "__mensaje__") desde una qubit en una ubicación a una qubit en otra ubicación (nos referiremos a estas qubits como "__aquí__" y "__allí__", respectivamente). Podemos representar el __mensaje__ como un vector mediante la notación Dirac: 
+## <a name="quantum-teleportation-theory"></a>Teletransportación cuántica: Teoría
+La teletransportación cuántica es una técnica para enviar un estado cuántico desconocido (que nos referiremos como el __'mensaje')__ de un qubit en una ubicación a un qubit en otra ubicación (nos referiremos a estos qubits como __'aquí'__ y '__allí__', respectivamente). Podemos representar nuestro __mensaje__ como un vector usando la notación Dirac: 
 
-$ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
+$$ á ket,psi, á alpha, ket{0} +{1} ábeta, $$
 
-Se desconoce el estado del qubit de __mensajes__ , ya que no se conocen los valores de $ \alpha $ y $ \beta $.
+El estado del __mensaje__ qubit es desconocido para nosotros, ya que no sabemos los valores de $-alpha$ y $-beta$.
 
-### <a name="step-1-create-an-entangled-state"></a>Paso 1: creación de un estado desenredado
-Con el fin de enviar el __mensaje__ que necesitamos para que __el qubit se__ qubit __allí__. Esto se logra aplicando una puerta Hadamard, seguida de una puerta CNOT. Echemos un vistazo a las matemáticas detrás de estas operaciones de la puerta.
+### <a name="step-1-create-an-entangled-state"></a>Paso 1: Crear un estado enredado
+Para enviar el __mensaje__ necesitamos que el qubit __aquí__ se enrede con el qubit __allí__. Esto se logra mediante la aplicación de una puerta Hadamard, seguido de una puerta CNOT. Echemos un vistazo a las matemáticas detrás de estas operaciones de la puerta.
 
-Comenzaremos con qubits __aquí__ __y en__ el estado $ \ket{0}$. Después de la inenredo de estos qubits, se encuentran en el estado:
+Comenzaremos con los qubits __aquí__ y __allá__ {0}tanto en el estado $-ket $. Después de enredar estos qubits, se encuentran en el estado:
 
-$ $ \ket{\phi ^ +} = \frac{1}{\sqrt{2}} (\ket{00} + \ket{11}) $ $
+$$ á ket,phi,+ á{1}á frac sqrt{2}('ket{00} {11}+ 'ket' ) '$
 
-### <a name="step-2-send-the-message"></a>Paso 2: enviar el mensaje
-Para enviar el __mensaje__ , primero se aplica una puerta CNOT con el __mensaje__ qubit y __aquí__ qubit como entradas (el __mensaje__ qubit es el control y __aquí__ qubit es el qubit de destino, en esta instancia). Este estado de entrada se puede escribir:
+### <a name="step-2-send-the-message"></a>Paso 2: Enviar el mensaje
+Para enviar el __mensaje__ primero aplicamos una puerta CNOT con el __mensaje__ qubit y __aquí__ qubit como entradas (el __mensaje__ qubit es el control y el __qubit aquí__ es el qubit objetivo, en este caso). Este estado de entrada se puede escribir:
 
-$ $ \ket{\psi}\ket{\phi ^ +} = (\alpha\ket{0} + \beta\ket{1}) (\frac{1}{\sqrt{2}} (\ket{00} + \ket{11})) $ $
+$$ á ket, psi, ket, phi, etc., á{0} ('alpha''{1}''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''{1}{2}{00} {11}
 
-Se expande a:
+Esto se expande a:
 
-$ $ \ket{\psi}\ket{\phi ^ +} = \frac{\alpha}{\sqrt{2}} \ket{000} + \frac{\alpha}{\sqrt{2}} \ket{011} + \frac{\beta}{\sqrt{2}} \ket{100} + \frac{\beta}{\sqrt{2}} \ket{111} $ $
+$$ .ket, psi, ket, phi, phi, etc., etc. ,frac, alpha, sqrt,{2}ket , etc.{000} {2}{011} {2}{100} {2}{111}
 
-Como recordatorio, la puerta CNOT voltea el qubit de destino cuando el qubit de control es 1. Por ejemplo, una entrada de $ \ket{000}$ no producirá ningún cambio, ya que el primer qubit (el control) es 0. Sin embargo, tome un caso en el que el primer qubit es 1, por ejemplo, una entrada de $ \ket{100}$. En esta instancia, la salida es $ \ket{110}$ como el segundo qubit (el destino) se voltea mediante la puerta CNOT.
+Como recordatorio, la puerta CNOT voltea el qubit objetivo cuando el qubit de control es 1. Por ejemplo, una entrada de{000}$-ket $ no dará lugar a ningún cambio ya que el primer qubit (el control) es 0. Sin embargo, tome un caso en el que el{100}primer qubit es 1 - por ejemplo, una entrada de $-ket $. En este caso, la salida{110}es $-ket $ como el segundo qubit (el objetivo) es volteado por la puerta CNOT.
 
-Ahora vamos a tener en cuenta la salida una vez que la puerta CNOT haya actuado en la entrada anterior. El resultado es el siguiente:
+Ahora vamos a considerar nuestra salida una vez que la puerta CNOT ha actuado en nuestra entrada anterior. El resultado es el siguiente:
 
-$ $ \frac{\alpha}{\sqrt{2}} \ket{000} + \frac{\alpha}{\sqrt{2}} \ket{011} + \frac{\beta}{\sqrt{2}} \ket{110} + \frac{\beta}{\sqrt{2}} \ket{101} $ $
+$$ á frac,{2}alpha, sqrt,{000} etc., etc. y áfrac,{2}alpha,{011} etc. y áclomenos, etc.{2}{110} {2}{101}
 
-El siguiente paso para enviar el __mensaje__ consiste en aplicar una puerta Hadamard al __mensaje__ qubit (que es el primer qubit de cada término). 
+El siguiente paso para enviar el __mensaje__ es aplicar una puerta de Hadamard al __mensaje__ qubit (ese es el primer qubit de cada término). 
 
-Como recordatorio, la puerta Hadamard hace lo siguiente:
+Como recordatorio, la puerta de Hadamard hace lo siguiente:
 
 Entrada | Output
 ---------------------------| ---------------------------------------------------------------
-$ \ket{0}$  | $ \frac{1}{\sqrt{2}} (\ket{0} + \ket{1}) $
-$ \ket{1}$  | $ \frac{1}{\sqrt{2}} (\ket{0}-\ket{1}) $
+$-ket{0}$  | $-frac{1}ásqrt{2}('ket+{0} ''ket')'{1}
+$-ket{1}$  | $-frac{1}ásqrt{2}(ket{0} - áket{1})$
 
-Si se aplica la puerta Hadamard al primer qubit de cada término de la salida anterior, obtenemos el siguiente resultado:
+Si aplicamos la puerta de Hadamard al primer qubit de cada término de nuestra salida anterior, obtenemos el siguiente resultado:
 
-$ $ \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{00} + \frac{\alpha}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0} + \ket{1})) \ket{11} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{10} + \frac{\beta}{\sqrt{2}} (\frac{1}{\sqrt{2}} (\ket{0}-\ket{1})) \ket{01} $ $
+$$ á frac, alpha, sqrt,{2}{1}etc., frac,{2}sqrt, etc. (ket{0} + ket{1})) , ket{00} {2}+ á{1}frac, alpha,{2}(frac,{0} alpha,{1}"frac"{11} y "sqrt" ("frac"{2}("ket" + "ket") (ket ) y "ket" (") frac-beta-sqrt{1}{2}(frac, sqrt, etc.,{1}{01} {0} "ket" y{1}"ket)", "ket", "ket", "ket",{10} "frac" y{2}"beta", "frac",{1}"frac", "sqrt"{2}("ket"{0} y "ket" )", "ket" $$
 
-Tenga en cuenta que cada término tiene $2 \frac{1}{\sqrt{2}} $ factores. Podemos multiplicarlos por el siguiente resultado:
+Tenga en cuenta que cada{1}término tiene{2}dos factores $-frac-sqrt-$. Podemos multiplicarlos dando el siguiente resultado:
 
-$ $ \frac{\alpha}{2}(\ket{0} + \ket{1}) \ket{00} + \frac{\alpha}{2}(\ket{0} + \ket{1}) \ket{11} + \frac{\beta}{2}(\ket{0}-\ket{1}) \ket{10} + \frac{\beta}{2}(\ket{0}-\ket{1}) \ket{01} $ $
+$$ á frac-alpha-('''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''{2}{0} {1}{00} {2}{0} {1}{11} {2}{0} {1}{10} {2}{0} {1}{01}
 
-$ \Frac{1}{2}$ factor es común a cada término, por lo que ahora podemos desecharlo fuera de los corchetes:
+El factor{1}{2}$-frac $ es común a cada término, por lo que ahora podemos llevarlo fuera de los corchetes:
 
-$ $ \frac{1}{2}\big [\alpha (\ket{0} + \ket{1}) \ket{00} + \alpha (\ket{0} + \ket{1}) \ket{11} + \beta (\ket{0}-\ket{1}) \ket{10} + \beta (\ket{0}-\ket{1}) \ket{01}\big] $ $
+$${1}{2}áfrac ábig[-alpha('ket{0} {1}+ 'ket ''ket'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''{00} {0} {1}{11} {0} {1}{10} {0} {1}{01}
 
-A continuación, podemos multiplicar los corchetes por cada término:
+A continuación, podemos multiplicar los corchetes para cada término dando:
 
-$ $ \frac{1}{2}\big [\alpha\ket{000} + \alpha\ket{100} + \alpha\ket{011} + \alpha\ket{111} + \beta\ket{010}-\beta\ket{110} + \beta\ket{001}-\beta\ket{101}\big] $ $
+{1}{2}$$ áfrac ábig ['alpha'ket{000} +{100} ''alpha'ket +{011} ''alpha''ket + ''alpha'ket{111} + ''beta'ket'{010} ' ''beta'ket{110} + 'beta'ket'{001} '{101}
 
-### <a name="step-3-measure-the-result"></a>Paso 3: medir el resultado
+### <a name="step-3-measure-the-result"></a>Paso 3: Mida el resultado
 
-Debido a __la existencia de__ __aquí__ y, cualquier medida que se produzca __aquí__ afectará al estado de __allí__. Si medimos el primer y el segundo qubit (__mensaje__ y __aquí__) podemos obtener información sobre __el estado en__ el que se encuentra, debido a la propiedad de la inenredo. 
+Debido a __que aquí__ y __allá__ se enredan, cualquier medida en __aquí__ afectará el estado de __allí.__ Si medimos el primer y segundo qubit (__mensaje__ y __aquí__) podemos aprender en qué estado __hay,__ debido a esta propiedad de enredo. 
 
-* Si medimos y obtenemos el resultado 00, la superposición se contrae, lo que solo mantiene los términos coherentes con este resultado. Eso es $ \alpha\ket{000} + \beta\ket{001}$. Esto se puede refactorizar a $ \ket{00}(\alpha\ket{0} + \beta\ket{1}) $. Por lo tanto, si medimos el primer y el segundo qubit para que sea 00, sabemos que el tercer qubit, __ahí__, está en el estado $ (\alpha\ket{0} + \beta\ket{1}) $.
-* Si medimos y obtenemos el resultado 01, la superposición se contrae, lo que solo mantiene los términos coherentes con este resultado. Eso es $ \alpha\ket{011} + \beta\ket{010}$. Esto se puede refactorizar a $ \ket{01}(\alpha\ket{1} + \beta\ket{0}) $. Por lo tanto, si medimos el primer y el segundo qubit para que sea 01, sabemos que el tercer qubit, __ahí__, está en el estado $ (\alpha\ket{1} + \beta\ket{0}) $.
-* Si medimos y obtenemos el resultado 10, la superposición se contrae, lo que solo mantiene los términos coherentes con este resultado. Ese es $ \alpha\ket{100}-{101}\beta\ket $. Esto se puede refactorizar a $ \ket{10}(\alpha\ket{0}-\beta\ket{1}) $. Por lo tanto, si medimos el primer y el segundo qubit para que sea 10, sabemos que el tercer qubit, __ahí__, está en el estado $ (\alpha\ket{0}-\beta\ket{1}) $.
-* Si medimos y obtenemos el resultado 11, la superposición se contrae, lo que solo mantiene los términos coherentes con este resultado. Ese es $ \alpha\ket{111}-{110}\beta\ket $. Esto se puede refactorizar a $ \ket{11}(\alpha\ket{1}-\beta\ket{0}) $. Por lo tanto, si medimos el primer y el segundo qubit para que sea 11, sabemos que el tercer qubit, __ahí__, está en el estado $ (\alpha\ket{1}-\beta\ket{0}) $.
+* Si medimos y obtenemos un resultado 00, la superposición se contrae, dejando solo los términos coherentes con este resultado. Eso es $-alpha-ket{000} +-beta-ket{001}$. Esto se puede refactorizar{00}a $-ket{0} ('alpha'ket+'beta'ket{1}''$' . Por lo tanto, si medimos el primer y segundo qubit para que sea 00, sabemos{0} que el tercer{1}qubit, __allí__, está en el estado $('alpha'ket +'beta'ket )$.
+* Si medimos y obtenemos un resultado 01, la superposición se contrae, dejando solo los términos coherentes con este resultado. Eso es $-alpha-ket{011} +-beta-ket{010}$. Esto se puede refactorizar{01}a $-ket{1} ('alpha'ket+'beta'ket{0}''$' . Por lo tanto, si medimos el primer y segundo qubit para que sea 01, sabemos{1} que el tercer{0}qubit, __allí__, está en el estado $('alpha'ket +'beta'ket )$.
+* Si medimos y obtenemos un resultado 10, la superposición colapsa, dejando solo términos consistentes con este resultado. Eso es $-alpha-ket{100} --beta-ket{101}$. Esto se puede refactorizar{10}a $-ket{0} ('alpha'ket{1}''beta'ket ''$' . Por lo tanto, si medimos el primer y segundo qubit para que sea 10, sabemos{0} que el tercer{1}qubit, __allí__, está en el estado $('alpha'ket -'beta'ket )$.
+* Si medimos y obtenemos un resultado 11, la superposición colapsa, dejando solo términos consistentes con este resultado. Eso es $-alpha-ket{111} --beta-ket{110}$. Esto se puede refactorizar{11}a $-ket{1} ('alpha'ket{0}''beta'ket ''$' . Por lo tanto, si medimos el primer y segundo qubit para que sea 11, sabemos{1} que el tercer{0}qubit, __allí__, está en el estado $('alpha'ket -'beta'ket )$.
 
-### <a name="step-4-interpret-the-result"></a>Paso 4: interpretar el resultado
+### <a name="step-4-interpret-the-result"></a>Paso 4: Interpretar el resultado
 
-Como recordatorio, el __mensaje__ original que quería enviar era:
+Como recordatorio, el __mensaje__ original que deseamos enviar era:
 
-$ $ \ket{\psi} = \alpha\ket{0} + \beta\ket{1} $ $
+$$ á ket,psi, á alpha, ket{0} +{1} ábeta, $$
 
-Necesitamos obtener la qubit en este estado, de modo __que el estado__ recibido sea el que se pretendía. 
+Tenemos que poner el __qubit allí__ en este estado, para que el estado recibido sea el que se pretendía. 
 
-* Si medimos y obtuvieron el resultado __00, el tercer qubit, en__el estado $ (\alpha\ket{0} + \beta\ket{1}) $. Como este es el __mensaje__previsto, no se requiere ninguna modificación.
-* Si medimos y obtuvieron el resultado __01, el tercer qubit, en__el estado $ (\alpha\ket{1} + \beta\ket{0}) $. Esto difiere del __mensaje__previsto; sin embargo, si se aplica una puerta not, nos proporciona el estado deseado $ (\alpha\ket{0} + \beta\ket{1}) $.
-* Si medimos y obtuvieron un resultado de __10, el tercer qubit, en__el estado $ (\alpha\ket{0}-\beta\ket{1}) $. Esto difiere del __mensaje__previsto; sin embargo, la aplicación de una puerta Z nos proporciona el estado deseado $ (\alpha\ket{0} + \beta\ket{1}) $.
-* Si medimos y obtuvieron un resultado de __11, el tercer qubit, en__el estado $ (\alpha\ket{1}-\beta\ket{0}) $. Esto difiere del __mensaje__previsto, pero la aplicación de una puerta not seguida de una puerta Z nos proporciona el estado deseado $ (\alpha\ket{0} + \beta\ket{1}) $.
+* Si medimos y obtuvimos un resultado de 00, entonces el tercer qubit, __allí__, está en el estado $('alpha'ket{0} +'beta'ket{1})$. Como este es el __mensaje__previsto, no se requiere ninguna alteración.
+* Si medimos y obtuvimos un resultado de 01, entonces el tercer qubit, __allí__, está en el estado $('alpha'ket{1} +'beta'ket{0})$. Esto difiere del __mensaje__previsto, sin embargo, la aplicación de una{0} puerta NOT nos{1}da el estado deseado $('alpha'ket+'beta'ket )$.
+* Si medimos y obtuvimos un resultado de 10, entonces el tercer qubit, __allí__, está en el estado $('alpha'ket{0} -'beta'ket{1})$. Esto difiere del __mensaje__previsto, sin embargo, la aplicación de una{0} puerta Z nos{1}da el estado deseado $('alpha'ket +'beta'ket )$.
+* Si medimos y obtuvimos un resultado de 11, entonces el tercer qubit, __allí__, está en el estado $('alpha'ket{1} -'beta'ket{0})$. Esto difiere del __mensaje__previsto, sin embargo, la aplicación de una puerta NOT seguida{0} de una puerta{1}Z nos da el estado deseado $(-alpha-ket +-beta-ket )$.
 
-En Resumen, si medimos y el primer qubit es 1, se aplica una puerta Z. Si medimos y el segundo qubit es 1, se aplica una puerta NOT.
+En resumen, si medimos y el primer qubit es 1, se aplica una puerta Z. Si medimos y el segundo qubit es 1, se aplica una puerta NOT.
 
 ### <a name="summary"></a>Resumen
-A continuación se muestra un circuito de Quantum de libro de texto que implementa la teleportabilidad. Si se mueve de izquierda a derecha, puede ver:
-- Paso 1: desenredo __aquí__ y __allí__ aplicando una puerta HADAMARD y una puerta CNOT.
-- Paso 2: enviar el __mensaje__ mediante una puerta CNOT y una puerta Hadamard.
-- Paso 3: realizar una medición del primer y segundo qubits, __mensaje__ y __aquí__.
-- Paso 4: aplicar una puerta NOT o una puerta Z, dependiendo del resultado de la medición en el paso 3.
+A continuación se muestra un circuito cuántico de libro de texto que implementa la teletransportación. Pasando de izquierda a derecha se puede ver:
+- Paso 1: Enredado __aquí__ y __allá__ mediante la aplicación de una puerta Hadamard y puerta CNOT.
+- Paso 2: Enviar el __mensaje__ usando una puerta CNOT y una puerta Hadamard.
+- Paso 3: Tomando una medida del primer y segundo qubits, __mensaje__ y __aquí__.
+- Paso 4: Aplicar una puerta NO o una puerta Z, dependiendo del resultado de la medición en el paso 3.
 
-![' Teletranspórtate (MSG: qubit, ahí: qubit): unidad '](~/media/teleportation.svg)
+!['Teleport(msg : Qubit, hay : Qubit) : Unidad'](~/media/teleportation.svg)
 
-## <a name="quantum-teleportation-code"></a>Teleportabilidad de Quantum: código
+## <a name="quantum-teleportation-code"></a>Teletransportación cuántica: Código
 
-Tenemos nuestro circuito para la teleportabilidad de Quantum:
+Tenemos nuestro circuito de teletransportación cuántica:
 
-![' Teletranspórtate (MSG: qubit, ahí: qubit): unidad '](~/media/teleportation.svg)
+!['Teleport(msg : Qubit, hay : Qubit) : Unidad'](~/media/teleportation.svg)
 
-Ahora podemos traducir cada uno de los pasos de este circuito de Quantum en Q #.
+Ahora podemos traducir cada uno de los pasos de este circuito cuántico en Q.
 
-### <a name="step-0-definition"></a>Paso 0: definición
-Cuando se realiza la teleportabilidad, es necesario conocer el __mensaje__ que se desea enviar y dónde se desea enviarlo (__allí__). Por esta razón, empezamos definiendo una nueva operación de teletransporta con dos qubits como argumentos, `msg` y `there`:
+### <a name="step-0-definition"></a>Paso 0: Definición
+Cuando realizamos la teletransportación, debemos conocer el __mensaje__ que deseamos enviar, y dónde queremos enviarlo __(allí).__ Por esta razón, comenzamos definiendo una nueva operación de Teletransporte `msg` `there`a la que se le dan dos qubits como argumentos, y:
 
 ```qsharp
 operation Teleport(msg : Qubit, there : Qubit) : Unit {
 ```
 
-También necesitamos asignar una `here` qubit que se logra con un bloque de `using`:
+También necesitamos asignar un `here` qubit que `using` logramos con un bloque:
 
 ```qsharp
     using (here = Qubit()) {
 ```
 
-### <a name="step-1-create-an-entangled-state"></a>Paso 1: creación de un estado desenredado
-A continuación, podemos crear el par enenredado entre `here` y `there` mediante las operaciones @"microsoft.quantum.intrinsic.h" y @"microsoft.quantum.intrinsic.cnot":
+### <a name="step-1-create-an-entangled-state"></a>Paso 1: Crear un estado enredado
+A continuación, podemos crear el `here` `there` par entre @"microsoft.quantum.intrinsic.h" @"microsoft.quantum.intrinsic.cnot" y mediante las operaciones:
 
 ```qsharp
         H(here);
         CNOT(here, there);
 ```
 
-### <a name="step-2-send-the-message"></a>Paso 2: enviar el mensaje
-Después usamos las siguientes $ \operatorname{CNOT} $ y $H $ Gates para pasar el mensaje qubit:
+### <a name="step-2-send-the-message"></a>Paso 2: Enviar el mensaje
+A continuación, usamos las siguientes puertas $-nombredeusuario-CNOT-$ y $H$ para mover nuestro mensaje qubit:
 
 ```qsharp
         CNOT(msg, here);
         H(msg);
 ```
 
-### <a name="step-3--4-measuring-and-interpreting-the-result"></a>Paso 3 & 4: medir e interpretar el resultado
-Por último, usamos @"microsoft.quantum.intrinsic.m" para realizar las medidas y realizar las operaciones de puerta necesarias para obtener el estado deseado, como se indica en las instrucciones de `if`:
+### <a name="step-3--4-measuring-and-interpreting-the-result"></a>Paso 3 & 4: Medición e interpretación del resultado
+Por último, @"microsoft.quantum.intrinsic.m" utilizamos para realizar las mediciones y realizar las operaciones `if` de puerta necesarias para obtener el estado deseado, como se indica mediante instrucciones:
 
 ```qsharp
         // Measure out the entanglement
@@ -149,9 +149,16 @@ Por último, usamos @"microsoft.quantum.intrinsic.m" para realizar las medidas y
         if (M(here) == One) { X(there); }
 ```
 
-Esto finaliza la definición de nuestro operador de teleportabilidad, de modo que podemos desasignar `here`, finalizar el cuerpo y finalizar la operación.
+### <a name="step-5-restarting-the-qubit-register"></a>Paso 5: Reiniciar el registro qubit
+
+Al final de cada operación de Q, tenemos que{0}dejar que los qubits en el estado $-ket $. Podemos usar @"microsoft.quantum.intrinsic.reset" para reiniciar todos los qubits al estado cero y esto terminará nuestra operación.
 
 ```qsharp
+        Reset(msg);
+        Reset(here);
+        Reset(there);
     }
 }
 ```
+
+
