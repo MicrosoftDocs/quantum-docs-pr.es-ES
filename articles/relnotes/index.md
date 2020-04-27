@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 7a080f82e586f06d40e9d793ee05932db4c3ccef
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
+ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81481414"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82030606"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -21,6 +21,11 @@ Para obtener instrucciones de instalación, consulte la [guía de instalación](
 
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
 
+## <a name="version-01120033107"></a>Versión 0.11.2003.3107
+
+*Fecha de lanzamiento: 31 de marzo de 2020*
+
+Esta versión contiene correcciones menores de la versión 0.11.2003.2506.
 
 ## <a name="version-01120032506"></a>Version 0.11.2003.2506
 
