@@ -17,7 +17,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: Configuración que se va a usar al entrenar; Consulte @"microsoft.quantum.machinelearning.trainingoptions" y @"microsoft.quantum.machinelearning.defaulttrainingoptions" para obtener más información.
+    summary: Configuración que se va a usar al entrenar; vea @"microsoft.quantum.machinelearning.trainingoptions" y @"microsoft.quantum.machinelearning.defaulttrainingoptions" para obtener más detalles.
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
     summary: Programación de muestreo que se va a usar al seleccionar muestras de los datos de entrenamiento durante los pasos de entrenamiento.
@@ -40,9 +40,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: 3abcfd38cbd089ec78cad6b48b157ad666813da9
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: e5a9d2c6747ee970bfd01b266e2f10f45d514f06
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908470"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684311"

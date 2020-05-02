@@ -5,7 +5,7 @@ type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: Representa una operación que se utiliza para medir el síndrome de un bloque de código de corrección de errores.
 remarks: >-
-  La firma `(LogicalRegister => Syndrome)` representa una operación que actúa conjuntamente en el qubits en `LogicalRegister` y algún qubits auxiliar seguido de una medida de la qubits auxiliar para extraer un valor de `Syndrome` que representa el `Result[]` de estas medidas.
+  La firma `(LogicalRegister => Syndrome)` representa una operación que actúa conjuntamente en el qubits en `LogicalRegister` y algún qubits auxiliar seguido de una medida de la qubits auxiliar para extraer un `Syndrome` valor que representa `Result[]` el de estas medidas.
 
 
   ### <a name="examples"></a>Ejemplos
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: 75f0fee569475e887b97d9969c9e92285809f1cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232241"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684824"
