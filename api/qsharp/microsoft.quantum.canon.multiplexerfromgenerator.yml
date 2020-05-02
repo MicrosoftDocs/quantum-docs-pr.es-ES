@@ -13,7 +13,7 @@ input:
   content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
   types:
   - name: unitaryGenerator
-    summary: Una tupla en la que el primer elemento `Int` es el número de unitaries $N $ y el segundo elemento `(Int -> ('T => () is Adj + Ctl))` es una función que toma un entero $j $ en $ [0, N-1] $ y genera la operación unitario $V _j $.
+    summary: Una tupla en la que el `Int` primer elemento es el número de unitaries $N $ y el segundo `(Int -> ('T => () is Adj + Ctl))` elemento es una función que toma un entero $j $ in $ [0, N-1] $ y genera la operación unitario $V _J $.
     types:
     - isPrimitive: true
       uid: Int
@@ -40,7 +40,7 @@ input:
 output:
   content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Operación de unitario controlada por multiplicación $U $ que aplica unitaries descrito por `unitaryGenerator`.
+  - summary: Operación de unitario controlada por multiplicación $U $ que aplica unitaries descrito `unitaryGenerator`por.
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.multiplexoperationsfromgenerator
 metadata:
-  ms.openlocfilehash: 52cd79e2450e7c33c8c5ff2b1d6fbf540200c7e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1000e7606b7afed988687839cc85442a0dd9ff30
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227770"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678840"
