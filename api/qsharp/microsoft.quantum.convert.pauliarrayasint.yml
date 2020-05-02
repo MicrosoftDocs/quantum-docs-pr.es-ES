@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  Dada una matriz de operadores Pauli `[P0, ..., Pn]`, esta función devuelve un entero con expansión binaria formada mediante la concatenación de las asignaciones de cada operador Pauli en orden Big-Endian `bits(Pn) ... bits(P0)`.
+  Dada una matriz de operadores `[P0, ..., Pn]`Pauli, esta función devuelve un entero con expansión binaria formada mediante la concatenación de las asignaciones de cada operador Pauli en orden `bits(Pn) ... bits(P0)`Big Endian.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Entero que identifica de forma única `paulis`, como se describe a continuación.
+  - summary: Un entero que identifica `paulis`de forma única, tal y como se describe a continuación.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230762"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677388"
