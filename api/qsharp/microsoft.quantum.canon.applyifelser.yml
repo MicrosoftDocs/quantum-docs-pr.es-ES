@@ -7,17 +7,17 @@ summary: >-
   Aplica una de dos operaciones, dependiendo del valor de un resultado clásico.
 
 
-  Dado un `result`de resultados, aplica la operación `zeroOp` con `zeroInput` como entrada cuando `result` es igual a `Zero`y se aplica `oneOp(oneInput)` cuando `result == One`.
+  Dado un resultado `result`, se aplica la `zeroOp` operación `zeroInput` con como entrada cuando `result` es igual a `Zero`y se aplica `oneOp(oneInput)` cuando `result == One`.
 syntax: "operation ApplyIfElseR (result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit), zeroInput : 'T), (oneOp : ('U => Unit), oneInput : 'U))"
   types:
   - name: result
-    summary: El resultado de la medida que se usa para determinar si se aplica `zeroOp` o `oneOp`.
+    summary: El resultado de la medida que se `zeroOp` usa `oneOp` para determinar si se aplica o.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Operación que se va a aplicar cuando se `result == Zero`.
+    summary: Operación que se va a aplicar `result == Zero`cuando.
     isOperation: true
     input:
       types:
@@ -28,11 +28,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: zeroInput
-    summary: Entrada que se va a proporcionar a `zeroOp` cuando se `result == Zero`.
+    summary: Entrada que se va a proporcionar `zeroOp` cuando `result == Zero`.
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Operación que se va a aplicar cuando se `result == One`.
+    summary: Operación que se va a aplicar `result == One`cuando.
     isOperation: true
     input:
       types:
@@ -43,7 +43,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: oneInput
-    summary: Entrada que se va a proporcionar a `oneOp` cuando se `result == One`.
+    summary: Entrada que se va a proporcionar `oneOp` cuando `result == One`.
     uid: "'U"
     isLocal: true
 output:
@@ -63,9 +63,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: dc3c41c064297dfa3aef53362095c4d9f998538b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4623c321aa2b802b8f27f6a3ec8e65463083b314
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217434"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672755"

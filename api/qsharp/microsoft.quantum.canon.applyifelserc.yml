@@ -7,17 +7,17 @@ summary: >-
   Aplica una de dos operaciones controlables, dependiendo del valor de un resultado clásico.
 
 
-  Dado un `result`de resultados, aplica la operación `zeroOp` con `zeroInput` como entrada cuando `result` es igual a `Zero`y se aplica `oneOp(oneInput)` cuando `result == One`.
+  Dado un resultado `result`, se aplica la `zeroOp` operación `zeroInput` con como entrada cuando `result` es igual a `Zero`y se aplica `oneOp(oneInput)` cuando `result == One`.
 syntax: "operation ApplyIfElseRC (result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Ctl), zeroInput : 'T), (oneOp : ('U => Unit is Ctl), oneInput : 'U))"
   types:
   - name: result
-    summary: El resultado de la medida que se usa para determinar si se aplica `zeroOp` o `oneOp`.
+    summary: El resultado de la medida que se `zeroOp` usa `oneOp` para determinar si se aplica o.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: Operación controlable que se va a aplicar cuando se `result == Zero`.
+    summary: Operación controlable que se va a aplicar cuando `result == Zero`.
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Controlled
   - name: zeroInput
-    summary: Entrada que se va a proporcionar a `zeroOp` cuando se `result == Zero`.
+    summary: Entrada que se va a proporcionar `zeroOp` cuando `result == Zero`.
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: Operación controlable que se va a aplicar cuando se `result == One`.
+    summary: Operación controlable que se va a aplicar cuando `result == One`.
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Controlled
   - name: oneInput
-    summary: Entrada que se va a proporcionar a `oneOp` cuando se `result == One`.
+    summary: Entrada que se va a proporcionar `oneOp` cuando `result == One`.
     uid: "'U"
     isLocal: true
 output:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: e2dd871aa42ed22ba088e6eaad9d9705dfb26254
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aeb4c7f86ac1f41140bb14436d9dee39b4c4d98b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220936"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672741"
