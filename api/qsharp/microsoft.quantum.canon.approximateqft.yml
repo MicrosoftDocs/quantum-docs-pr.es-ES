@@ -22,7 +22,7 @@ input:
       parámetro de aproximación que determina en qué nivel se eliminan los giros Z controlados que se producen en el circuito QFT.
 
 
-      El parámetro de aproximación a determina el nivel de eliminación de los giros Z, es decir, un ∈ {0.. n} y todos los giros Z 2π/2K donde k > a se quitan del circuito QFT. Se sabe que para k > = log ₂ (n) + log ₂ (1/ε) + 3 puede enlazarse | | QFT-AQFT | | < ε.
+      El parámetro de aproximación a determina el nivel de eliminación de los giros Z, es decir, un ∈ {0.. n} y todos los giros Z 2π/2K donde k>a se quitan del circuito QFT. Se sabe que para k >= log ₂ (n) + log ₂ (1/ε) + 3 puede enlazarse | | QFT-AQFT | |<ε.
     isPrimitive: true
     uid: Int
   - name: qs
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44d6a5937924f13cab04137bd3d0eb81396824c9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212538"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674405"
