@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Implementa una puerta de transporte reversible. Dado un bit de transporte codificado en la `carryIn` de qubit y dos bits de sumando codificados en `summand1` y `summand2`, calcula la operación XOR bit a bit de `carryIn`, `summand1` y `summand2` en el `summand2` de qubit y el proceso de entrega se XORed al `carryOut`qubit.
+summary: Implementa una puerta de transporte reversible. Dado un bit de transporte codificado `carryIn` en qubit y dos bits de sumando codificados en `summand1` y `summand2`, calcula la operación XOR bit a bit de `carryIn` `summand1` y `summand2` en el qubit `summand2` y el transporte se XORed a qubit. `carryOut`
 syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: Second sumando qubit, se reemplaza por el bit más bajo de la suma de `summand1` y `summand2`.
+    summary: Second sumando qubit, se reemplaza por el bit más bajo de la suma `summand1` de `summand2`y.
     isPrimitive: true
     uid: Qubit
   - name: carryOut
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6736bc62db7d8ac1952bf74617bd8764702bd8b3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3fa18b56fb242e76a88a23af02b3ebe7e5cc57d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221344"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679850"
