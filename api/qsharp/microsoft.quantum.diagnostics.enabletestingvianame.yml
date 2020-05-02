@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.enabletestingvianame
+name: EnableTestingViaName
+type: newtype
+namespace: Microsoft.Quantum.Diagnostics
+summary: El compilador reconoció el atributo a través del cual se puede definir un nombre alternativo que se puede usar al cargar un tipo o llamar a para realizar pruebas.
+syntax: newtype EnableTestingViaName = String;
+metadata:
+  ms.openlocfilehash: 7887df093b51d9e525adda1860361ea649106cb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82706676"
