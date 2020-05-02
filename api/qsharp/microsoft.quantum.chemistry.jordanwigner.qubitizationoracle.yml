@@ -9,12 +9,12 @@ input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData)'
   types:
   - name: qSharpData
-    summary: Hamiltonian descrito por el formato de `JordanWignerEncodingData`.
+    summary: Hamiltonian descrito por `JordanWignerEncodingData` Format.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Una tupla donde: `Int` es el número de qubits asignados, `Double` es la norma de los coeficientes de Hamiltonian y la operación es el recorrido de Quantum creado por Qubitization.'
+  - summary: 'Una tupla donde: `Int` es el número de qubits asignados `Double` , es la única norma de los coeficientes de Hamiltonian y la operación es el recorrido de Quantum creado por Qubitization.'
     types:
     - isPrimitive: true
       uid: Int
@@ -35,9 +35,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: 4890f95631a5d99720fc5da307707ad040f0b391
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9e58837b8f4d59505a321578cbd9f69b4c849627
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233516"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82663457"
