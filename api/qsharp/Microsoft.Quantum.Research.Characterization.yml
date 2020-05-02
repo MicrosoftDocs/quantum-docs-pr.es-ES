@@ -1,0 +1,14 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.characterization
+name: Microsoft.Quantum.Research.Characterization
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres proporciona métodos de investigación avanzada para la caracterización y estimación de la fase de Quantum."
+operations:
+- uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
+  summary: Realiza una estimación de la fase iterativa mediante un recorrido aleatorio para la inferencia bayesiana aproximada en los resultados de medidas clásicas de una determinada Oracle y eigenstate.
+metadata:
+  ms.openlocfilehash: 8f4ca8b0f5f16f5eae8b6db42e1da32cfc3a778f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82706710"
