@@ -3,14 +3,14 @@ uid: microsoft.quantum.diagnostics.assertqubit
 name: AssertQubit
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Valida que el `q` qubit se encuentra en el eigenstate esperado del operador Pauli Z.
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> permite la aserción de Estados de qubit arbitrarios en lugar de solo $Z $ eigenstates.
+summary: Valida que qubit `q` está en el eigenstate esperado del operador Pauli Z.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>permite la aserción de Estados de qubit arbitrarios en lugar de solo $Z $ eigenstates.
 syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
 input:
   content: '(expected : Result, q : Qubit)'
   types:
   - name: expected
-    summary: 'El estado en el que se espera que esté el qubit: `Zero` o `One`.'
+    summary: 'El estado en el que se espera que esté el `Zero` qubit `One`: o.'
     isPrimitive: true
     uid: Result
   - name: q
@@ -25,9 +25,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: e926e8a106e7ef0999f30d00922394e611aa40a8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 18d1db5c36dddf7bd40c64e02252a15d37dc4fe1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227175"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677259"
