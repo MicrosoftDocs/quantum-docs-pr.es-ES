@@ -7,17 +7,17 @@ summary: >-
   Aplica una de las dos operaciones de unitario, dependiendo del valor de un bit clásico.
 
 
-  Dado un bit `bit`, aplica la operación `trueOp` con `trueInput` como su entrada cuando `bit` se `true`y se aplica `falseOp(falseInput)` cuando `bit` se `false`.
+  Dado un bit `bit`, aplica la operación `trueOp` con `trueInput` como su entrada cuando `bit` es `true`y se aplica `falseOp(falseInput)` cuando `bit` es `false`.
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
-    summary: Valor booleano que se usa para determinar si se aplica `trueOp` o `falseOp`.
+    summary: Valor booleano que se usa para determinar `trueOp` si `falseOp` se aplica o.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: Operación unitario que se va a aplicar cuando se `true`la `bit`.
+    summary: La operación unitario que se va a `bit` aplicar `true`cuando es.
     isOperation: true
     input:
       types:
@@ -31,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: Entrada que se va a proporcionar a `trueOp` cuando se `true``bit`.
+    summary: Entrada que se va a proporcionar `trueOp` cuando `bit` sea `true`.
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: Operación unitario que se va a aplicar cuando se `false`la `bit`.
+    summary: La operación unitario que se va a `bit` aplicar `false`cuando es.
     isOperation: true
     input:
       types:
@@ -49,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: Entrada que se va a proporcionar a `falseOp` cuando se `false``bit`.
+    summary: Entrada que se va a proporcionar `falseOp` cuando `bit` sea `false`.
     uid: "'U"
     isLocal: true
 output:
@@ -72,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 526170a58fcab51aa36abeee6bd1573dc5eeddbb
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 3f0d704d33fc1d3e964e804c2ff68cb893069445
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871335"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672766"

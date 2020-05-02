@@ -7,7 +7,7 @@ summary: >-
   Aplica una operación adjointable condicionada en un valor de resultado clásico a cero.
 
 
-  Dada una operación `op` y un valor de resultado `result`, se aplica `op` al `target` si `result` `Zero`. Si `One`, no ocurre nada en el `target`.
+  Dada una operación `op` y un valor `result`de resultado, `op` se aplica `target` a `result` si `Zero`es. Si `One`es, no sucede nada `target`con.
 
   El sufijo `A` indica que la operación que se va a aplicar es adjointable.
 syntax: "operation ApplyIfZeroA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 626bb5bbd18cceb409632ec0d27b48c6ea98fbbe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b8b85714f173e10d3121d6f012fefa76b956686e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220732"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672611"

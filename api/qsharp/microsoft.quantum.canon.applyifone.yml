@@ -7,7 +7,7 @@ summary: >-
   Aplica una operación condicionada a un valor de resultado clásico a uno.
 
 
-  Dada una operación `op` y un valor de resultado `result`, se aplica `op` al `target` si `result` `One`. Si `Zero`, no ocurre nada en el `target`.
+  Dada una operación `op` y un valor `result`de resultado, `op` se aplica `target` a `result` si `One`es. Si `Zero`es, no sucede nada `target`con.
 syntax: "operation ApplyIfOne (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
@@ -44,9 +44,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 5609226c113fd6b9660fdad2f05d154a7abde5a3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1cf549dce4e903810d4c59f8020afb4689c26888
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220919"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672707"

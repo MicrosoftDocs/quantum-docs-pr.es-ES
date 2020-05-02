@@ -7,7 +7,7 @@ summary: Amplificación de amplitud por reflejos parciales.
 remarks: >-
   La amplificación de amplitud es un caso especial de amplificación de amplitud de desconocen en la que no hay qubits del sistema y desconocen Oracle está establecido en Identity.
 
-  En la mayoría de los casos, `startQubits` se inicializa en el estado $ \ket{\text{Start}}\_$1, que es el eigenstate de $ $1 de `startStateReflection`.
+  En la mayoría de `startQubits` los casos, se inicializa en el estado\_$ \ket{\text{start}} $1, que es el eigenstate $- `startStateReflection`$1 de.
 syntax: 'function AmplitudeAmplificationFromPartialReflections (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle)'
@@ -39,9 +39,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 8fd7ecce6a7623158e26ec4db6732daf114490af
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 4dae118f99c8a2e7cf933a378ed38d414a94fef4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872315"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672997"
