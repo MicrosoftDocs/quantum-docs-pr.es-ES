@@ -10,16 +10,16 @@ summary: >-
   La entrada a Oracle $O $ es:
 
 
-  - El registro que almacenará el estado de cuanto deseado, $ \ket{\psi}\_s $.
+  - El registro que almacenará el estado de cuanto deseado,\_$ \ket{\psi} s $.
 remarks: >-
-  Este Oracle definido por $O \ket{0}= \ket{\psi} $ actúa en el estado de base de cálculo $ \ket{0}$ para crear el estado $ \ket{\psi} $.
+  Este Oracle definido por $O \ket{0}= \ket{\psi} $ actúa en el estado de base de cálculo ${0}\ket $ para crear el estado $ \ket{\psi} $.
 
   El primer parámetro es el registro qubit de $ \ket{\psi} $.
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: bc10b84502866d1f5e19b28e77e54c1b10d01b28
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231136"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681308"
