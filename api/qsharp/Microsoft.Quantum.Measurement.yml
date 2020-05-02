@@ -13,15 +13,15 @@ operations:
 - uid: microsoft.quantum.measurement.mresety
   summary: Mide un qubit único en la base y y lo restablece en el estado de base estándar | 0 〉 después de la medida.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: Mide un único qubit en el `Z` y lo restablece en el estado de base estándar | 0 〉 después de la medida.
+  summary: Mide un único qubit en `Z` base y lo restablece en el estado de base estándar | 0 〉 después de la medida.
 - uid: microsoft.quantum.measurement.multim
   summary: Mide cada qubit en una matriz determinada en función del estándar.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Establece un qubit en un estado de base de cálculo determinado midiendo el qubit y aplicando un volteo de bits si es necesario.
 metadata:
-  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905767"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673142"

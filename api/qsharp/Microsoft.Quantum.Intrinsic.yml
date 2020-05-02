@@ -16,7 +16,7 @@ operations:
     Aplica la puerta controlada-NOT (CNOT) a un par de qubits.
 
 
-    \begin{align} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix} , \end{align}
+    \begin{align} \operatorname{CNOT} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \\ \\ 0 & 0 & 1 & 0 \end{bmatrix}, \end{align}
 
 
     donde se ordenan las filas y las columnas como en la guía de conceptos de Quantum.
@@ -25,19 +25,19 @@ operations:
     Aplica el valor exponencial de un operador Pauli de varios qubit.
 
 
-    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align} donde $P _ i es el elemento $i $ TH de `paulis`y donde $N = $`Length(paulis)`.
+    \begin{align} e ^ {i \theta [P_0 \otimes P_1 \cdots P_ {N-1}]}, \end{align} donde $P _i $ es el elemento $i $ TH de `paulis`y donde $N = $`Length(paulis)`.
 - uid: microsoft.quantum.intrinsic.expfrac
   summary: >-
     Aplica el valor exponencial de un operador Pauli de varios qubit con un argumento proporcionado por una fracción Dyadic.
 
 
-    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align} donde $P _ i es el $i $ TH de `paulis`y donde $N = $`Length(paulis)`.
+    \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align} donde $P _i $ es el elemento $i $ TH de `paulis`y donde $N = $`Length(paulis)`.
 - uid: microsoft.quantum.intrinsic.h
   summary: >-
     Aplica la transformación Hadamard a una sola qubit.
 
 
-    \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}.
+    \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ 1 &-1 \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.i
@@ -55,18 +55,18 @@ operations:
     Realiza una medida conjunta de una o varias qubits en las bases de Pauli especificadas.
 
 
-    El resultado de la salida lo proporciona la distribución: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} donde $P _ _ $ es el $i $ TH de @no__ t_0_, donde $N = \texttt{Length} (\texttt{bases}) $.
+    El resultado de la salida lo proporciona la distribución: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} donde $P _i $ es el elemento $i $ TH `bases`de y donde $N = \texttt{length} (\texttt{bases}) $.
 
-    Es decir, la medida devuelve un `Result` $d $ de modo que el eigenvalue del efecto de medición observado sea $ (-1) ^ d $.
+    Es decir, la medida devuelve `Result` un $d $ de modo que el eigenvalue del efecto de medición observado es $ (-1) ^ d $.
 - uid: microsoft.quantum.intrinsic.r
   summary: >-
     Aplica un giro sobre el eje Pauli especificado.
 
 
-    \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \sigma_{\mu}/2}, \end{align} donde $ \mu \en \{I, X, Y, Z\}$.
+    \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} donde $ \mu \en \{i, X, Y, Z\}$.
 - uid: microsoft.quantum.intrinsic.r1
   summary: >-
-    Aplica un giro sobre $ \ket{1}$ State en un ángulo determinado.
+    Aplica un giro sobre el estado de{1}$ \ket $ en un ángulo determinado.
 
 
     \begin{align} R_1 (\theta) \mathrel{: =} \operatorname{DIAG} (1, e ^ {i\theta}).
@@ -74,7 +74,7 @@ operations:
     \end{align}
 - uid: microsoft.quantum.intrinsic.r1frac
   summary: >-
-    Aplica un giro sobre $ \ket{1}$ State mediante un ángulo especificado como fracción Dyadic.
+    Aplica un giro sobre el estado de{1}$ \ket $ mediante un ángulo especificado como fracción Dyadic.
 
 
     \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{DIAG} (1, e ^ {i \pi k/2 ^ n}).
@@ -84,10 +84,10 @@ operations:
 
     > [!WARNING]
 
-    > Esta operación usa la Convención de signo **opuesto** de @"microsoft.quantum.intrinsic.r"y no incluye el factor de $1/2 $ incluido en @"microsoft.quantum.intrinsic.r1".
+    > Esta operación utiliza la **opposite** Convención de signo opuesto @"microsoft.quantum.intrinsic.r"de y no incluye el factor de $1/2 $ incluido en @"microsoft.quantum.intrinsic.r1".
 - uid: microsoft.quantum.intrinsic.random
   summary: >-
-    La operación Random toma una matriz de valores double como entrada y devuelve un índice seleccionado aleatoriamente en la matriz como un `Int`.
+    La operación Random toma una matriz de valores double como entrada y devuelve un índice seleccionado aleatoriamente en la matriz como `Int`.
 
     La probabilidad de seleccionar un índice específico es proporcional al valor del elemento de la matriz en dicho índice.
 
@@ -101,34 +101,22 @@ operations:
     Aplica un giro sobre el eje Pauli determinado mediante un ángulo especificado como fracción Dyadic.
 
 
-    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} donde $ \mu \en \{I, X, Y, Z\}$.
+    \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} donde $ \mu \en \{i, X, y, Z\}$.
 
 
     > [!WARNING]
 
-    > Esta operación utiliza la Convención de signo **opuesto** de @"microsoft.quantum.intrinsic.r".
+    > Esta operación utiliza la **opposite** Convención de signo opuesto @"microsoft.quantum.intrinsic.r"de.
 - uid: microsoft.quantum.intrinsic.rx
-  summary: >-
-    Aplica un giro sobre el $x $ AXIS en un ángulo determinado.
-
-
-    \begin{align} R_x (\theta) \mathrel{: =} e ^ {-i \theta \sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-i\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}.
-
-    \end{align}
+  summary: "Aplica un giro sobre el $x $ AXIS en un ángulo determinado.\n\n\\begin{align} R_x (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_x/2} = \\begin{bmatrix} \\cos \\frac{\\theta}{2} &-i\\sin \\frac{\\theta}{2} \\\\ \\\\ -i\\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.ry
-  summary: >-
-    Aplica un giro sobre el $y $ AXIS en un ángulo determinado.
-
-
-    \begin{align} R_y (\theta) \mathrel{: =} e ^ {-i \theta \sigma_y/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-\sin \frac{\theta}{2}\\\\ \sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}.
-
-    \end{align}
+  summary: "Aplica un giro sobre el $y $ AXIS en un ángulo determinado.\n\n\\begin{align} R_y (\\theta) \\mathrel{: =} e ^ {-i \\theta \\ sigma_y/2} = \\begin{bmatrix} \\cos \\frac{\\theta}{2} &-\\sin \\frac{\\theta}{2} \\\\ \\\\ \\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}.  \n\\end{align}"
 - uid: microsoft.quantum.intrinsic.rz
   summary: >-
     Aplica un giro sobre el $z $ axis en un ángulo determinado.
 
 
-    \begin{align} R_z (\theta) \mathrel{: =} e ^ {-i \theta \sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\\\ 0 & e ^ {i \theta/2} \end{bmatrix}.
+    \begin{align} R_z (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_z/2} = \begin{bmatrix} e ^ {-i \theta/2} & 0 \\ \\ 0 & e ^ {i \theta/2} \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.s
@@ -136,7 +124,7 @@ operations:
     Aplica la puerta de fase de π/4 a un único qubit.
 
 
-    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & i \end{bmatrix}.
+    \begin{align} S \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & i \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.swap
@@ -144,7 +132,7 @@ operations:
     Aplica la puerta de intercambio a un par de qubits.
 
 
-    \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix} , \end{align}
+    \begin{align} \operatorname{swap} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & 0 \\ \\ 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
 
 
     donde se ordenan las filas y las columnas como en la guía de conceptos de Quantum.
@@ -153,7 +141,7 @@ operations:
     Aplica la puerta de π/8 a un único qubit.
 
 
-    \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \pi/4} \end{bmatrix}.
+    \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 & e ^ {i \pi/4} \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.x
@@ -161,7 +149,7 @@ operations:
     Aplica la Pauli $X $ Gate.
 
 
-    \begin{align} \sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
+    \begin{align} \ sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.y
@@ -169,7 +157,7 @@ operations:
     Aplica la Pauli $Y $ Gate.
 
 
-    \begin{align} \sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\\\ i & 0 \end{bmatrix}.
+    \begin{align} \ sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\ \\ & 0 \end{bmatrix}.
 
     \end{align}
 - uid: microsoft.quantum.intrinsic.z
@@ -177,13 +165,13 @@ operations:
     Aplica la Pauli $Z $ Gate.
 
 
-    \begin{align} \sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+    \begin{align} \ sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix}.
 
     \end{align}
 metadata:
-  ms.openlocfilehash: a2f80ca98d86e5a1457efb6dad34c60d6ef75a2e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 303e6d0376841672b9c8dbd3d8bd47ff7b24916a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056344"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673222"

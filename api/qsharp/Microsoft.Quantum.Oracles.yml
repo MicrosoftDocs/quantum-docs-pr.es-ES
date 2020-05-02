@@ -4,15 +4,15 @@ name: Microsoft.Quantum.Oracles
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres proporciona tipos definidos por el usuario para decorar varios tipos de Oracle según su uso previsto en algoritmos Quantum como la estimación de la fase y la amplificación de amplitud."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Convierte un tipo de `StateOracle` de Oracle en `DeterministicStateOracle`.
+  summary: Convierte una Oracle de tipo `StateOracle` en. `DeterministicStateOracle`
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Combina los `DeterministicStateOracle` de Oracle y `ObliviousOracle`.
+  summary: Combina Oracle `DeterministicStateOracle` y `ObliviousOracle`.
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Dada una operación que representa una "caja negra" de Oracle, devuelve una Oracle de tiempo discreto que representa el valor de Oracle "Black-Box" repetido varias veces.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Construye la reflexión sobre un estado determinado desde Oracle.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Convierte un tipo de `DeterministicStateOracle` de Oracle en `StateOracle`.
+  summary: Convierte una Oracle de tipo `DeterministicStateOracle` en. `StateOracle`
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -28,7 +28,7 @@ newtypes:
     La entrada a Oracle $O $ es:
 
 
-    - El registro que almacenará el estado de cuanto deseado, $ \ket{\psi}\_s $.
+    - El registro que almacenará el estado de cuanto deseado,\_$ \ket{\psi} s $.
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
     Representa una Oracle de tiempo discreto.
@@ -67,11 +67,11 @@ newtypes:
 
     - Un entero que indiza la marca qubit $f $.
 
-    - El registro del sistema $s $ que almacenará el estado de cuanto deseado, $ \ket{\psi}\_s $.
+    - El registro del sistema $s $ que almacenará el estado de cuanto deseado\_, $ \ket{\psi} s $.
 metadata:
-  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870010"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673102"
