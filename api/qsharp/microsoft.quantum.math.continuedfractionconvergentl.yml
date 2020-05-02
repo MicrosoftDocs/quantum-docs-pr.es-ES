@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.continuedfractionconvergentl
 name: ContinuedFractionConvergentL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que `denominatorBound`
+summary: Busca la fracción continua convergentes más cercana `fraction` a con el denominador menor o igual que`denominatorBound`
 syntax: 'function ContinuedFractionConvergentL (fraction : Microsoft.Quantum.Math.BigFraction, denominatorBound : BigInt) : Microsoft.Quantum.Math.BigFraction'
 input:
   content: '(fraction : Microsoft.Quantum.Math.BigFraction, denominatorBound : BigInt)'
@@ -16,12 +16,12 @@ input:
 output:
   content: Microsoft.Quantum.Math.BigFraction
   types:
-  - summary: Fracción continua más cercana a `fraction` con el denominador menor o igual que `denominatorBound`
+  - summary: Fracción continua más cercana `fraction` a con el denominador menor o igual que`denominatorBound`
     uid: microsoft.quantum.math.bigfraction
 metadata:
-  ms.openlocfilehash: 33092dc94b5af0693a019ad2ba19586d8e46c412
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5b17320e044bc984553f6fc13cec028bcb16bb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229844"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685710"
