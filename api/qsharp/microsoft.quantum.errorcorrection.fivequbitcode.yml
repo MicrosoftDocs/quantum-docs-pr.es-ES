@@ -10,7 +10,7 @@ remarks: >-
 
   - C. H. Bennett, D. DiVincenzo, J. A. Smolin y W. K. Wootters, "mezclado de estado mixto y corrección de errores de Quantum", "físico. Rev. A, 54 (1996) pp. 3824-3851; https://arxiv.org/abs/quant-ph/9604024 y
 
-  - R. Laflamme, C. Miquel, J. P. Paz y W. H. Zurek, "código de corrección de errores de Quantum perfectos", "físico. Rev. paleta. 77 (1996) pp. 198-201; https://arxiv.org/abs/quant-ph/9602019
+  - R. Laflamme, C. Miquel, J. P. Paz y W. H. Zurek, "código de corrección de errores de Quantum perfectos", "físico. Rev. paleta. 77 (1996) pp. 198-201;https://arxiv.org/abs/quant-ph/9602019
 syntax: 'function FiveQubitCode () : Microsoft.Quantum.ErrorCorrection.QECC'
 input:
   content: ()
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.QECC
   types:
-  - summary: Devuelve una implementación de un código de corrección de errores de Quantum especificando un tipo de `QECC`.
+  - summary: Devuelve una implementación de un código de corrección de errores de Quantum especificando un `QECC` tipo.
     uid: microsoft.quantum.errorcorrection.qecc
 metadata:
-  ms.openlocfilehash: 1865ededef3e3ada743a49ef81141aeffdcfed0a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 39bd3adacd0f8e872d682d0df0bf81a3f1e1d8f0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220409"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684943"

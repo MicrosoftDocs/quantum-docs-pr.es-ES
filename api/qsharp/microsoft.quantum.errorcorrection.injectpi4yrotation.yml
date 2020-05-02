@@ -7,10 +7,10 @@ summary: >-
   Gira un qubit único por π/4 sobre el eje Y.
 
 
-  Realiza un giro de π/4 sobre `Y`.
+  Realiza una rotación de π/4 `Y`acerca de.
 
 
-  La rotación se realiza mediante el consumo de un estado mágico; es decir, una copia del estado $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1}.
+  La rotación se realiza mediante el consumo de un estado mágico; es decir, una copia del estado $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket.{1}
 
   \end{align} $ $
 remarks: >-
@@ -38,7 +38,7 @@ remarks: >-
   ```
 
 
-  Esta operación admite la `Adjoint` functor, en cuyo caso se utiliza el mismo estado mágico, pero el efecto en el qubit de datos es un $-\ PI/4 $ $Y $-Rotation.
+  Esta operación admite el `Adjoint` functor, en cuyo caso se consume el mismo estado mágico, pero el efecto en el qubit de datos es un $-\ PI/4 $ $Y $-Rotation.
 syntax: 'operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit'
 input:
   content: '(data : Qubit, magic : Qubit)'
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: Un qubit inicialmente en el estado mágico. La siguiente aplicación de esta operación, `magic` se devuelve al estado $ \ket{0}$.
+    summary: Un qubit inicialmente en el estado mágico. La siguiente aplicación de esta operación `magic` se devuelve al estado $ \ket{0}$.
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 9792980f4b8ad01ec41f1317fb574de85e2d4683
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871658"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684877"
