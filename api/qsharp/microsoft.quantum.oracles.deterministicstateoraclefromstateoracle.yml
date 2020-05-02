@@ -3,30 +3,30 @@ uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
 name: DeterministicStateOracleFromStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: Convierte un tipo de `StateOracle` de Oracle en `DeterministicStateOracle`.
+summary: Convierte una Oracle de tipo `StateOracle` en. `DeterministicStateOracle`
 syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
 input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: 'El índice para la marca qubit del `stateOracle` $A $, que actúa explícitamente en dos registros: la marca $f $ y el sistema $s $, por ejemplo $A \ket{0}\_f\ket {\ PSI}\_s $.'
+    summary: 'El índice para la `stateOracle` marca qubit del $A $, que actúa explícitamente en dos registros: la marca $f $ y el sistema $s $, por ejemplo $A \ket{0}\_f\ket {\ PSI}\_s $.'
     isPrimitive: true
     uid: Int
   - name: stateOracle
-    summary: Una preparación de estado de Oracle $A $ de tipo `StateOracle`.
+    summary: Una preparación de estado de Oracle $A $ `StateOracle`de tipo.
     uid: microsoft.quantum.oracles.stateoracle
 output:
   content: Microsoft.Quantum.Oracles.DeterministicStateOracle
   types:
-  - summary: La misma preparación de estado de Oracle $A $, pero ahora del tipo `DeterministicStateOracle`, por lo que actúa en un registro donde $a, s $ ya no se separan de forma explícita, por ejemplo,  $A \ket{0\psi}\_{as} $.
+  - summary: La misma preparación de estado de Oracle $A $, pero ahora `DeterministicStateOracle`de tipo, por lo que actúa en un registro donde $a, s $ ya no se separan de forma explícita, por ejemplo,  $A \ket{0\psi}\_{as} $.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
 - microsoft.quantum.canon.stateoracle
 - microsoft.quantum.canon.deterministicstateoracle
 metadata:
-  ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf6ddc1f1baff27c986f36d944e67192958a0d3f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231102"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681283"
