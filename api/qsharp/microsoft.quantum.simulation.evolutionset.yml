@@ -7,12 +7,12 @@ summary: >-
   Representa un conjunto de puertas que se pueden implementar y usar fácilmente para implementar algoritmos de simulación.
 
 
-  Los elementos del conjunto se indexan mediante una <xref:microsoft.quantum.simulation.generatorindex>, y cada conjunto se describe mediante una función de `GeneratorIndex` a <xref:microsoft.quantum.simulation.evolutionunitary>, que son operaciones parametrizadas por un número real que representa el tiempo.
+  Los elementos del conjunto se indexan mediante <xref:microsoft.quantum.simulation.generatorindex>una, y cada conjunto se describe mediante una función `GeneratorIndex` de <xref:microsoft.quantum.simulation.evolutionunitary>a, que son operaciones parametrizadas por un número real que representa el tiempo.
 syntax: newtype EvolutionSet = (Microsoft.Quantum.Simulation.GeneratorIndex -> Microsoft.Quantum.Simulation.EvolutionUnitary);
 metadata:
-  ms.openlocfilehash: 2e3e717ca219f5e575f750a32f640215142b170c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0db782c1909c6121078f251f34bbffd5b49a4d8e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211093"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686996"
