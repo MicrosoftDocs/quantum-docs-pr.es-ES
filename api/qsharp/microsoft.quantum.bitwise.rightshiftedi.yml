@@ -30,13 +30,13 @@ input:
 output:
   content: Int
   types:
-  - summary: El valor de `value`, desplazado a la derecha `amount` bits.
+  - summary: Valor de `value`, desplazado a la `amount` derecha por bits.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 801e07c06b8af34385fb80badf4dfebb503c982d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9bf08ce00efc1bc93397c25c1a3ddd4d2432721d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217757"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680613"

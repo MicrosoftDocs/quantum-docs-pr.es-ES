@@ -20,7 +20,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Matriz de elementos en `'T`.
+    summary: Matriz de elementos sobre `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -33,11 +33,11 @@ output:
     uid: Int
 typeParameters:
 - uid: "'T"
-  summary: Tipo de elementos `array`.
+  summary: Tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: 89d6a279da57fc0b94f55a3f9f16486fee1c6064
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 2d62fcf97bcd72d2327aeb13db3600324ce6661f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908130"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680760"

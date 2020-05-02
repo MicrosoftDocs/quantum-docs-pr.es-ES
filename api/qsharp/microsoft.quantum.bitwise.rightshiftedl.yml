@@ -30,13 +30,13 @@ input:
 output:
   content: BigInt
   types:
-  - summary: El valor de `value`, desplazado a la derecha `amount` bits.
+  - summary: Valor de `value`, desplazado a la `amount` derecha por bits.
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 4c370d859eefdcff5fc844cf55e17adad7b5df86
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c6a61d838141e86d831bb341a1e077927e580dcc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213864"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680586"

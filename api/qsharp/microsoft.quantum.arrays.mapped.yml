@@ -4,7 +4,7 @@ name: Mapped
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dada una matriz y una función que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la función.
-remarks: "La función se define para tipos genéricos, es decir, cada vez que tenemos una matriz `'T[]` y una función `mapper: 'T -> 'U` podemos asignar los elementos de la matriz y generar una nueva matriz de tipo `'U[]`."
+remarks: "La función se define para tipos genéricos, es decir, cada vez que tenemos `'T[]` una matriz y `mapper: 'T -> 'U` una función, podemos asignar los elementos de la matriz y generar una nueva matriz `'U[]`de tipo."
 syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Matriz de elementos en `'T`.
+    summary: Matriz de elementos sobre `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: Matriz `'U[]` de elementos asignados por la función `mapper`.
+  - summary: Matriz `'U[]` de elementos que se asignan mediante la `mapper` función.
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Tipo de elementos `array`.
+  summary: Tipo de `array` elementos.
 - uid: "'U"
-  summary: El tipo de resultado de la función `mapper`.
+  summary: El tipo de resultado de `mapper` la función.
 metadata:
-  ms.openlocfilehash: 3e9262d3d2b294ccfafac24b2b080b124c9e319c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 877899dad82374281090e189c727c2a662f12b7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218131"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680948"
