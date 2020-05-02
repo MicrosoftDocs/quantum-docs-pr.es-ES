@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Mide el contenido de un registro de Quantum y lo convierte en un entero. La medida se realiza con respecto a la base de cálculo estándar, es decir, el eigenbasis de `PauliZ`.
+summary: Mide el contenido de un registro de Quantum y lo convierte en un entero. La medida se realiza con respecto a la base de cálculo estándar, es decir, el eigenbasis `PauliZ`de.
 remarks: Esta operación restablece su registro de entrada en el estado $ \ket{00\cdots 0} $, adecuado para volver a la máquina de destino.
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
 input:
@@ -21,9 +21,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214884"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676770"

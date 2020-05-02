@@ -34,15 +34,15 @@ functions:
   summary: Valida que un valor de punto flotante clásico tenga el valor esperado hasta una pequeña tolerancia de 1E-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: La aserción de que los qubits especificados se encuentran en $ \ket{0}$ State.
+  summary: La aserción de que qubits dado está en el{0}estado $ \ket $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Assert que dado qubits en $ \ket{0}$ State hasta una tolerancia determinada.
+  summary: La aserción de que los qubits proporcionados están{0}todos en $ \ket $ State hasta una tolerancia determinada.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Dadas dos operaciones, garantiza que actúan de forma idéntica para todos los Estados de entrada.
 
 
-    Esta aserción se implementa comprobando la acción de las operaciones en todos los Estados del formulario $V _0 \otimes... \otimes V_ {n-1} $, donde $V _k $ es uno de los Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ y $ \ket{i} $ (+ 1 eigenstate del operador Pauli Y).
+    Esta aserción se implementa comprobando la acción de las operaciones en todos los Estados del formulario $V _0 \otimes... \otimes v_ {n-1} $, donde $V _k $ es uno de los Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ y $ \ket{i} $ (+ 1 eigenstate del operador Pauli Y).
 
 
     Esta aserción usa $n $ qubits y requiere varias llamadas de las operaciones que se van a comparar.
@@ -62,27 +62,29 @@ operations:
 
     Esta aserción se puede usar para garantizar, por ejemplo, que una versión optimizada de una operación actúa de manera idéntica a su implementación de Naive o que una operación que actúa en un intervalo de entradas que no son de Quantum coincide con casos conocidos.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Valida que el `q` qubit se encuentra en el eigenstate esperado del operador Pauli Z.
+  summary: Valida que qubit `q` está en el eigenstate esperado del operador Pauli Z.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     Valida que qubit en el estado esperado.
 
 
-    `expected` representa un vector complejo, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+    `expected`representa un vector complejo, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
 
     El primer elemento de las tuplas que representa cada una de $a $, $b $ es la parte real del número complejo, mientras que la segunda es la parte imaginaria.
 
     El último argumento define la tolerancia con la que se realiza la aserción.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Valida que el `q` qubit se encuentra en el eigenstate esperado del operador Pauli Z hasta una tolerancia determinada.
+  summary: Valida que qubit `q` está en el eigenstate esperado del operador Pauli Z hasta una tolerancia determinada.
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: El compilador reconoció el atributo a través del cual se puede definir un nombre alternativo que se puede usar al cargar un tipo o llamar a para realizar pruebas.
 - uid: microsoft.quantum.diagnostics.test
   summary: Atributo reconocido por el compilador que se usa para marcar una prueba unitaria.
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones y operaciones útiles para fines de diagnóstico, incluidas operaciones de aserción y funciones de notificaciones."
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905920"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676954"

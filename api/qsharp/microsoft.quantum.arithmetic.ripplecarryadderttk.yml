@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   Agregación reversible, en contexto, de dos enteros.
 
-  Dados dos $n enteros de $ bits codificados en los registros de LittleEndian `xs` y `ys`, y un transporte qubit, la operación calcula la suma de los dos enteros en los que los bits $n $ menos significativos del resultado se encuentran en `ys` y el bit de transporte es XORed al `carry`qubit.
+  Dados dos $n enteros de $ bits codificados en registros de `xs` LittleEndian y `ys`, y un transporte de qubit, la operación calcula la suma de los dos enteros donde se conservan los bits $n $ menos significativos del resultado en `ys` y el bit de transporte es XORed a qubit. `carry`
 remarks: Esta operación tiene la misma funcionalidad que RippleCarryAdderD y, RippleCarryAdderCDKM, pero no usa ningún qubits de ancilla.
 syntax: 'operation RippleCarryAdderTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9c27164d8245c587b03c43606acebd0d156626bd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c1d67c4ffb7d2f75d70bc02be958fd08b6c6b14
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214493"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676659"

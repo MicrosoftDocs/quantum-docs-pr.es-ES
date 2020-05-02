@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907263"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677109"
 ---
 # <a name="using-the-numerics-library"></a>Usar la biblioteca de valores numéricos
 
@@ -23,7 +23,7 @@ La biblioteca de valores numéricos consta de tres componentes
 1. **Funcionalidad de entero de alto nivel** que se basa en la funcionalidad básica; incluye multiplicación, división, inversión, etc.  para enteros con signo y sin signo.
 1. **Funcionalidad aritmética de punto fijo** con inicialización de punto fijo, suma, multiplicación, mutua, evaluación polinómica y medición.
 
-Se puede tener acceso a todos estos componentes mediante una única instrucción `open`:
+Se puede tener acceso a todos estos componentes mediante una sola `open` instrucción:
 ```qsharp
 open Microsoft.Quantum.Arithmetic;
 ```
@@ -32,9 +32,9 @@ open Microsoft.Quantum.Arithmetic;
 
 La biblioteca de valores numéricos admite los siguientes tipos
 
-1. **`LittleEndian`** : una matriz de qubit `qArr : Qubit[]` que representa un entero donde `qArr[0]` denota el bit menos significativo.
-1. **`SignedLittleEndian`** : igual que `LittleEndian`, salvo que representa un entero con signo almacenado en el complemento de dos.
-1. **`FixedPoint`** : representa un número real que consta de una matriz de qubit `qArr2 : Qubit[]` y una posición de punto binaria `pos`, que cuenta el número de dígitos binarios a la izquierda del punto binario. `qArr2` se almacena de la misma manera que `SignedLittleEndian`.
+1. **`LittleEndian`**: Una matriz `qArr : Qubit[]` de qubit que representa un entero en `qArr[0]` el que denota el bit menos significativo.
+1. **`SignedLittleEndian`**: Igual que `LittleEndian` , salvo que representa un entero con signo almacenado en el complemento de dos.
+1. **`FixedPoint`**: Representa un número real que consta de una matriz `qArr2 : Qubit[]` de qubit y una posición `pos`de punto binario, que cuenta el número de dígitos binarios a la izquierda del punto binario. `qArr2`se almacena de la misma manera que `SignedLittleEndian`.
 
 ## <a name="operations"></a>Operaciones
 
@@ -75,8 +75,8 @@ Con el kit de desarrollo de Quantum, esta operación se puede aplicar de la sigu
 operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
     using ((xQubits, yQubits) = (Qubit[n], Qubit[n]))
     {
-        x = LittleEndian(xQubits); // define bit order
-        y = LittleEndian(yQubits);
+        let x = LittleEndian(xQubits); // define bit order
+        let y = LittleEndian(yQubits);
         
         ApplyXorInPlace(xValue, x); // initialize values
         ApplyXorInPlace(yValue, y);
@@ -90,15 +90,15 @@ operation TestMyAddition(xValue : Int, yValue : Int, n : Int) : Unit {
 
 ## <a name="sample-evaluating-smooth-functions"></a>Ejemplo: evaluar funciones fluidas
 
-Para evaluar funciones suaves como $ \sin (x) $ en un equipo Quantum, donde $x $ es un número de `FixedPoint` Quantum, la biblioteca de valores numéricos del kit de desarrollo de Quantum proporciona las operaciones `EvaluatePolynomialFxP` y `Evaluate[Even/Odd]PolynomialFxP`.
+Para evaluar funciones fluidas como $ \sin (x) $ en un equipo Quantum, donde $x $ es un número `FixedPoint` Quantum, la biblioteca de valores numéricos del kit de desarrollo `EvaluatePolynomialFxP` de `Evaluate[Even/Odd]PolynomialFxP`Quantum proporciona las operaciones y.
 
-La primera, `EvaluatePolynomialFxP`, permite evaluar un polinomio con el formato $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, donde $d $ denota el *grado*. Para ello, lo único que se necesita son los coeficientes polinómicos `[a_0,..., a_d]` (de tipo `Double[]`), el `x : FixedPoint` de entrada y el `y : FixedPoint` de salida (inicialmente cero):
+La primera, `EvaluatePolynomialFxP`, permite evaluar un polinomio con el formato $ $ P (x) = a_0 + a_1x + a_2x ^ 2 + \cdots + a_dx ^ d, $ $, donde $d $ denota el *grado*. Para ello, lo único que se necesita son `[a_0,..., a_d]` los coeficientes polinómicos ( `Double[]`de tipo), `x : FixedPoint` la entrada y `y : FixedPoint` la salida (inicialmente cero):
 ```qsharp
 EvaluatePolynomialFxP([1.0, 2.0], x, y);
 ```
 El resultado, $P (x) = 1 + 2x $, se almacenará en `yFxP`.
 
-El segundo, `EvaluateEvenPolynomialFxP`y el tercero, `EvaluateOddPolynomialFxP`, son especializaciones para los casos de las funciones pares e impares, respectivamente. Es decir, para una función par/impar $f (x) $ y $ $ P_ {Even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ se aproxima bien mediante $P _ {Even} (x) $ o $P _ {impares} (x): = x\cdot P_ {Even} (x) $, respectivamente.
+La segunda `EvaluateEvenPolynomialFxP`, y la tercera, `EvaluateOddPolynomialFxP`, son especializaciones para los casos de las funciones pares e impares, respectivamente. Es decir, para una función par/impar $f (x) $ y $ $ P_ {Even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ se aproxima bien mediante $P _ {Even} (x) $ o $P _ {impares} (x): = x\cdot P_ {Even} (x) $, respectivamente.
 En Q #, estos dos casos se pueden administrar de la siguiente manera:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
@@ -113,14 +113,14 @@ que evalúa $P _ {impares} (x) = x + 2x ^ 3 $.
 
 Puede encontrar más ejemplos en el [repositorio principal de ejemplos](https://github.com/Microsoft/Quantum).
 
-Para empezar, Clone el repositorio y abra la subcarpeta `Numerics`:
+Para empezar, Clone el repositorio y abra la `Numerics` subcarpeta:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
 cd Quantum/Numerics
 ```
 
-A continuación, `cd` en una de las carpetas de ejemplo y ejecute el ejemplo a través de
+A continuación `cd` , en una de las carpetas de ejemplo y ejecute el ejemplo a través de
 
 ```bash
 dotnet run

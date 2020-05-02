@@ -3,19 +3,19 @@ uid: microsoft.quantum.chemistry.jordanwigner
 name: Microsoft.Quantum.Chemistry.JordanWigner
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerblockencodinggeneratorsystem
-  summary: Convierte un Hamiltonian descrito por `JWOptimizedHTerms` en un `GeneratorSystem` expresado en términos de la `GeneratorIndex`Pauli.
+  summary: Convierte un Hamiltonian descrito por `JWOptimizedHTerms` en un `GeneratorSystem` expresado en términos de Pauli. `GeneratorIndex`
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorevolutionset
   summary: Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de JordanWigner.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerclusteroperatorgeneratorsystem
-  summary: Convierte un Hamiltonian descrito por `JWOptimizedHTerms` en un `GeneratorSystem` expresado en términos de la Convención de `GeneratorIndex` definida en este archivo.
+  summary: Convierte un Hamiltonian descrito por `JWOptimizedHTerms` en un `GeneratorSystem` expresado en términos de la `GeneratorIndex` Convención definida en este archivo.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionevolutionset
   summary: Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de JordanWigner.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerfermionfunction
   summary: Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de JordanWigner.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignergeneratorsystem
-  summary: Convierte un Hamiltonian descrito por `JWOptimizedHTerms` en un `GeneratorSystem` expresado en términos de la Convención de `GeneratorIndex` definida en este archivo.
+  summary: Convierte un Hamiltonian descrito por `JWOptimizedHTerms` en un `GeneratorSystem` expresado en términos de la `GeneratorIndex` Convención definida en este archivo.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedblockencodinggeneratorsystem
-  summary: Convierte un Hamiltonian descrito por `JWOptimizedHTerms` en un `GeneratorSystem` expresado en términos de la `GeneratorIndex`Pauli.
+  summary: Convierte un Hamiltonian descrito por `JWOptimizedHTerms` en un `GeneratorSystem` expresado en términos de Pauli. `GeneratorIndex`
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
   summary: Devuelve la operación Qubitization optimizada de T-Count y los parámetros necesarios para ejecutarla.
 - uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
@@ -24,7 +24,7 @@ functions:
   summary: Devuelve la operación de paso de Trotter y los parámetros necesarios para ejecutarla.
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
-  summary: $U unitario $ que aplica la cadena de Pauli en $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ on qubits $0.. p $ condicionada en un índice $z \en\{0, 1\}$ y $p $. Es decir, $ $ \begin{align} U\ket {z} \ les {p} \ les {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ PSI} \end{align} $ $
+  summary: $U unitario $ que aplica la cadena de Pauli en $ (X ^ {z + 1}\_py ^ {z}\_p) z\_{p-1}... Z_0 $ on qubits $0.. p $ condicionada en un índice $z \en\{0, 1\}$ y $p $. Es decir, $ $ \begin{align} U\ket {z} \ les {p} \ les {\ PSI} = \ket{z}\ket{p} (X ^ {z + 1}\_py ^ {z}\_p) z\_{p-1}... Z_0 \ket{\psi} \end{align} $ $
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
   summary: Preparación de estado simple del estado de prueba mediante la que se ocupan las órbitas
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
@@ -38,24 +38,24 @@ operations:
 newtypes:
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   summary: >-
-    Formato de los datos pasados C# de a Q # para representar toda la información de la simulación de Hamiltonian.
+    Formato de los datos pasados de C# a Q # para representar toda la información de la simulación de Hamiltonian.
 
     El significado de los datos representados viene determinado por el algoritmo que lo recibe.
 - uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
-  summary: 'Formato de los datos pasados C# de a Q # para representar la preparación del estado inicial, el significado de los datos representados viene determinado por el algoritmo que lo recibe.'
+  summary: 'Formato de los datos pasados de C# a Q # para representar la preparación del estado inicial, el significado de los datos representados viene determinado por el algoritmo que lo recibe.'
 - uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
   summary: >-
-    Formato de los datos pasados C# de a Q # para representar los términos de Hamiltonian.
+    Formato de los datos pasados de C# a Q # para representar los términos del Hamiltonian.
 
     El significado de los datos representados viene determinado por el algoritmo que lo recibe.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbegeneratorsystem
-  summary: Función que devuelve `OptimizedBETermIndex` datos para el término `n` dado un entero `n`, junto con el número de términos de la primera `Int` y la suma de los valores absolutos de todos los coeficientes de todos los términos del `Double`.
+  summary: Función que devuelve `OptimizedBETermIndex` datos para el `n` término dado un entero `n`, junto con el número de términos de la primera `Int` y la suma de los valores absolutos de todos los coeficientes de `Double`los términos de.
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbetermindex
   summary: Datos de términos en el algoritmo optimizado de codificación de bloques.
 metadata:
-  ms.openlocfilehash: d84c4f8bf74f902cdffc19dc7e489f80c63d7949
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bbc51f1ca36c81f15f96d0e526eb15bf79922373
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210940"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677041"

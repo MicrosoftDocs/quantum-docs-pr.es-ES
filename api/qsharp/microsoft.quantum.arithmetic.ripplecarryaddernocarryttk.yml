@@ -7,7 +7,7 @@ summary: >-
   La adición de una ondulación en contexto de dos enteros sin llevar a cabo.
 
 
-  Dadas dos $n enteros de $ bits codificados en registros de LittleEndian `xs` y `ys`, la operación calcula la suma de los dos números de número de enteros (módulo) $2 ^ n $, donde $n $ es el tamaño de bits de las entradas `xs` y `ys`. No calcula el bit de transporte.
+  Dado dos $n enteros de $-bit codificados en registros de `xs` LittleEndian y `ys`, la operación calcula la suma de los dos enteros de módulo $2 ^ n $, donde $n $ es el tamaño de bits de las entradas `xs` y. `ys` No calcula el bit de transporte.
 remarks: Esta operación tiene la misma funcionalidad que RippleCarryAdderTTK pero no devuelve el bit de transporte.
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5147d6d78582ad3f45587938f1b4cf3f8a2dd506
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: cf6855325edc354d22b0324f5949a435a11ce8bb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871063"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676681"
