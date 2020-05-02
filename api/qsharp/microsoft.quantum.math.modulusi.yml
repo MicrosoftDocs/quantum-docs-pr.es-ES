@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.modulusi
 name: ModulusI
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Calcula el residuo canónico de `value` módulo `modulus`.
-remarks: 'Esta función se comporta de forma diferente a cómo se comporta el operador `%` en C# y Q # como en el resultado siempre es un entero positivo entre 0 y `modulus - 1`, incluso si el valor es negativo.'
+summary: Calcula el residuo canónico del `value` módulo. `modulus`
+remarks: 'Esta función se comporta de forma diferente a cómo se `%` comporta el operador en C# y Q # como en el resultado siempre es un entero positivo entre 0 y `modulus - 1`, incluso si el valor es negativo.'
 syntax: 'function ModulusI (value : Int, modulus : Int) : Int'
 input:
   content: '(value : Int, modulus : Int)'
@@ -20,13 +20,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Entero $r $ entre 0 y `modulus - 1` de modo que `value - r` sea divisible por módulo.
+  - summary: Entero $r $ entre 0 y `modulus - 1` este que `value - r` es divisible por módulo.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 1bb3877b4d66b5ad09dabbc072d7d9fb61813745
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d804caa4e5eba1e8d6293d33164255ea4768900c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212096"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686651"

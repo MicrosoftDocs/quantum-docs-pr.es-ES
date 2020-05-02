@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907467"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686851"
 ---
 # <a name="opening-pull-requests"></a>Apertura de solicitudes de incorporación de cambios #
 
@@ -39,7 +39,7 @@ Una vez mencionado lo anterior, es útil dedicar unos minutos a indicar qué **e
 Al trabajar con git, los cambios se representan como _confirmaciones_ que describen cómo se relacionan los cambios con el estado del repositorio antes de esos cambios.
 A menudo se dibujan diagramas en los que las confirmaciones se dibujan como círculos con flechas de confirmaciones anteriores.
 
-Supongamos que ha iniciado una contribución en una _rama_ llamada `feature`.
+Supongamos que ha iniciado una contribución en una `feature` _bifurcación_ denominada.
 Después, la bifurcación de **Microsoft/Quantum** podría tener un aspecto similar al siguiente:
 
 ![Una rama de trabajo en GitHub](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ El uso de este proceso nos ayuda a usar la funcionalidad de GitHub para mejorar 
 
 ## <a name="how-to-make-a-pull-request"></a>Cómo crear una solicitud de incorporación de cambios ##
 
-Hay dos formas principales de hacer una solicitud de incorporación de cambios.
-En el caso de los cambios pequeños que solo afectan a un solo archivo, la interfaz Web de GitHub se puede usar para realizar una solicitud de incorporación de cambios completamente en línea.
-En el caso de las contribuciones más complicadas, a menudo es más fácil usar el equipo local para preparar una solicitud de incorporación de cambios en primer lugar.
+Hay dos formas principales de hacer una solicitud de incorporación de cambios.  
+En el caso de los cambios pequeños que solo afectan a un solo archivo, la interfaz Web de GitHub se puede usar para realizar una solicitud de incorporación de cambios completamente en línea. Simplemente navegue hasta el archivo que desea editar y use el icono de edición.  
+En el caso de las contribuciones más complicadas, a menudo es más fácil clonar el repositorio en el equipo local para preparar primero una solicitud de incorporación de cambios.
 
 <!--
 ### Using the Web Interface ###
