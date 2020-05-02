@@ -13,10 +13,10 @@ input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: Coeficiente de estado complejo de $ \ket{0}$.
+    summary: Coeficiente de estado complejo de ${0}\ket $.
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: Coeficiente de estado complejo de $ \ket{1}$.
+    summary: Coeficiente de estado complejo de ${1}\ket $.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228144"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683222"

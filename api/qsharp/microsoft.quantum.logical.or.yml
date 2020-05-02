@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Logical
 summary: Devuelve la disyunción booleana de dos valores.
 remarks: >-
-  A diferencia del operador `or`, esta función no cortocircuita, de modo que ambas entradas se evalúen por completo.
+  A diferencia del `or` operador, esta función no cortocircuita, de modo que ambas entradas se evalúen por completo.
 
 
   Hasta un comportamiento de cortocircuito, los siguientes son equivalentes:
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true` si y solo `a` si se `true`o `b`.'
+  - summary: '`true`es si y solo si `a` o `b` son `true`.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235165"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683560"

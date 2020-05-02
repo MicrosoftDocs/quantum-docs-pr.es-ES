@@ -7,12 +7,12 @@ summary: >-
   Aplica un giro sobre el eje Pauli determinado mediante un ángulo especificado como fracción Dyadic.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} donde $ \mu \en \{I, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} donde $ \mu \en \{i, X, y, Z\}$.
 
 
   > [!WARNING]
 
-  > Esta operación utiliza la Convención de signo **opuesto** de @"microsoft.quantum.intrinsic.r".
+  > Esta operación utiliza la **opposite** Convención de signo opuesto @"microsoft.quantum.intrinsic.r"de.
 remarks: >-
   Equivalente a:
 
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 10795932b7057ccf58d2219208af2750eff0e363
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dc9f0ca68e1528ee7a36ef1503785cf60c08567c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216499"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683682"
