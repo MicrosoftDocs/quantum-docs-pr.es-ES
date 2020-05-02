@@ -3,24 +3,24 @@ uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
 name: PauliCoefficientFromGenIdx
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Extrae el coeficiente de un término Pauli descrito por un `GeneratorIndex`.
+summary: Extrae el coeficiente de un término Pauli descrito por `GeneratorIndex`un.
 syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: '`GeneratorIndex` tipo que codifica un término Pauli.'
+    summary: '`GeneratorIndex`tipo que codifica un término Pauli.'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: Double
   types:
-  - summary: El coeficiente del término descrito por un `GeneratorIndex`.
+  - summary: Coeficiente del término descrito por un `GeneratorIndex`.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: f4e3412028f11758e5e4dbf50616ede1ed6f294a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8fbf424210cde86aa57068f2f5d2b7a1c85033a7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065425"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682528"

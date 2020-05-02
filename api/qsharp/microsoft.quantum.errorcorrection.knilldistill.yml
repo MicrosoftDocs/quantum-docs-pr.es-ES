@@ -7,7 +7,7 @@ summary: >-
   Implementa el algoritmo de destilación de estado mágico de Knill.
 
 
-  Dadas 15 copias aproximadas de un estado mágico $ $ \begin{align} \cos\frac{\pi}{8} \ket{0} + \sin \frac{\pi}{8} \ket{1} \end{align}, $ $ produce una copia de mayor calidad.
+  Dadas 15 copias aproximadas de un estado mágico $ ${8} \begin{align}{0} \cos\frac{\pi} \ket +{8} \sin{1} \frac{\pi} \ket \end{align}, $ $ produce una copia de mayor calidad.
 remarks: >-
   Seguimos el algoritmo de Knill.
 
@@ -20,20 +20,20 @@ input:
   content: '(roughMagic : Qubit[])'
   types:
   - name: roughMagic
-    summary: Un registro de quince qubits que contiene copias aproximadas de un estado mágico. La siguiente aplicación de este procedimiento de destilación, `roughMagic[0]` contendrá una copia de mayor calidad y el resto del registro se restablecerá al estado $ \ket{00\cdots 0} $.
+    summary: Un registro de quince qubits que contiene copias aproximadas de un estado mágico. La siguiente aplicación de este procedimiento `roughMagic[0]` de destilación contendrá una copia de mayor calidad y el resto del registro se restablecerá al estado $ \ket{00\cdots 0} $.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Bool
   types:
-  - summary: Si `true`, el procedimiento se realizó correctamente y se debe aceptar la copia de mayor calidad. Si `false`, se produjo un error en el procedimiento, y el estado del registro se debe considerar sin definir.
+  - summary: Si `true`es, el procedimiento se realizó correctamente y se debe aceptar la copia de mayor calidad. Si `false`es, se produce un error en el procedimiento, y el estado del registro se debe considerar sin definir.
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 81d87b3dcd6f669a63847e331865b1f2c389f3ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5a8e4c43ff21491b35efedb8f60717979e44f0ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226733"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682362"
