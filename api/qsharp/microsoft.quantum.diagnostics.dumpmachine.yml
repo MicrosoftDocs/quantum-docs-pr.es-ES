@@ -7,10 +7,10 @@ summary: Vuelca el estado actual del equipo de destino.
 remarks: >-
   Este método permite volcar información sobre el estado actual del equipo de destino en un archivo o en otra ubicación.
 
-  La información real generada y la semántica de `location` son específicas de cada equipo de destino. Sin embargo, proporcionar una tupla vacía como ubicación (`()`) o simplemente omitir el parámetro `location` normalmente significa generar la salida en la consola.
+  La información real generada y la semántica de `location` son específicas de cada equipo de destino. Sin embargo, proporcionar una tupla vacía como ubicación (`()`) o simplemente omitir `location` el parámetro significa que se va a generar la salida en la consola.
 
 
-  Para el simulador de estado completo local distribuido como parte del kit de desarrollo de Quantum, este método espera una cadena con la ruta de acceso a un archivo en el que escribirá la función de onda como una matriz unidimensional de números complejos, en la que cada elemento representa el amplitudes de la probabilidad de medir el estado correspondiente.
+  Para el simulador de estado completo local distribuido como parte del kit de desarrollo de Quantum, este método espera una cadena con la ruta de acceso a un archivo en el que escribirá la función de onda como una matriz unidimensional de números complejos, en la que cada elemento representa las amplitudes de la probabilidad de medir el estado correspondiente.
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"
@@ -26,9 +26,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227073"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656574"
