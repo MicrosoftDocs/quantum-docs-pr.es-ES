@@ -1,36 +1,36 @@
 ---
-title: 'Desarrollo con Q # + Python'
+title: Desarrollo con Q# y Python
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 1e40c2dddeaf4fad41693c976493f10fffffa139
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831008"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680145"
 ---
-# <a name="develop-with-q--python"></a>Desarrollo con Q # + Python
+# <a name="develop-with-q--python"></a>Desarrollo con Q# y Python
 
 Instale QDK para desarrollar programas host de Python para llamar a las operaciones de Q #.
 
 1. Requisitos previos
 
-    - [Python](https://www.python.org/downloads/) 3.6 o versiones posteriores
+    - [Python](https://www.python.org/downloads/) 3,6 o posterior
     - El administrador de paquetes de Python [PIP](https://pip.pypa.io/en/stable/installing)
-    - [SDK de .NET Core 3,1 o posterior](https://www.microsoft.com/net/download)
+    - [SDK de .NET Core 3.1 o posterior](https://www.microsoft.com/net/download)
 
 
-1. Instale el paquete de `qsharp`, un paquete de Python que habilita la interoperabilidad entre Q # y Python.
+1. Instale el `qsharp` paquete, un paquete de Python que habilita la interoperabilidad entre Q # y Python.
 
     ```bash
     pip install qsharp
     ```
 
-1. Instale `iqsharp`, un kernel usado por Jupyter y Python que proporciona la funcionalidad básica para compilar y ejecutar operaciones de Q #.
+1. Instale IQ #, un kernel usado por Jupyter y Python que proporciona la funcionalidad básica para compilar y ejecutar operaciones de Q #.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -83,6 +83,6 @@ Instale QDK para desarrollar programas host de Python para llamar a las operacio
 > [!NOTE]
 > * También puede usar cuadernos de Jupyter de Python para escribir el programa de Python clásico y llamar a las operaciones de Q # desde las celdas. El código de Python es simplemente un programa de Python normal.
 
-## <a name="whats-next"></a>¿Qué es lo próximo?
+## <a name="whats-next"></a>Pasos adicionales
 
 Ahora que ha instalado Quantum Development Kit en su entorno preferido, puede escribir y ejecutar [su primer programa cuántico](xref:microsoft.quantum.write-program).
