@@ -7,21 +7,21 @@ summary: >-
   Declara que la fase de un estado de superposición igual tiene el valor esperado.
 
 
-  En concreto, garantiza que la fase $ \phi $ de un estado de Quantum que se puede expresar como $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ les{0} + e ^ {-i\phi} \ les{1}) $ para alguna instrucción real real de t arbitrario tiene el valor esperado.
+  En concreto, declara que la fase $ \phi $ de un estado de Quantum que se puede expresar como $ \frac{e ^ {i t}} {{2}\sqrt} (e ^ {i\phi} \{0} les + e ^ {-i\phi} \{1}les) $ para algún verdadero real arbitrario tiene el valor esperado.
 examples: >-
-  La siguiente aserción se realiza correctamente: `qubit` está en el estado $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ les{0}+ e ^ {i 0.5} \ sqrt {1/2} \ les{1}$;
+  La siguiente aserción se realiza correctamente `qubit` : está en el estado $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2}{0}\ les + e ^ {i 0.5} \ sqrt {1/2}{1}\ les $;
 
 
   - `AssertPhase(0.0,qubit,10e-10);`
 
 
-  `qubit` está en el estado $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \ les{0}+ e ^ {-i 0.5} \ sqrt {1/2} \ les{1}$;
+  `qubit`está en el estado $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \{0}les + e ^ {-i 0.5} \ sqrt {1/2} \{1}les $;
 
 
   - `AssertPhase(0.5,qubit,10e-10);`
 
 
-  `qubit` está en el estado $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \ les{0}+ e ^ {i 0,2} \ sqrt {1/2} \ les{1}$;
+  `qubit`está en el estado $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \{0}les + e ^ {i 0,2} \ sqrt {1/2} \{1}les $;
 
 
   - `AssertPhase(-1.2,qubit,10e-10);`
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 2eaeb042f68a2a5c0cff65918653c37f26ab8d4b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212249"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674315"
