@@ -3,81 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: "\n> [!WARNING]\n> En desuso\n\nAbsB está en desuso. Use @\"microsoft.quantum.math.absl\" en su lugar.\nUse @\"microsoft.quantum.math.absl\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nAbsB está en desuso. Use @\"microsoft.quantum.math.absl\" en su lugar.\nUse @\"microsoft.quantum.math.absl\"."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: "\n> [!WARNING]\n> En desuso\n\nAbsD está en desuso. Use @\"microsoft.quantum.math.absd\" en su lugar.\nUse @\"microsoft.quantum.math.absd\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nAbsD está en desuso. Use @\"microsoft.quantum.math.absd\" en su lugar.\nUse @\"microsoft.quantum.math.absd\"."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: "\n> [!WARNING]\n> En desuso\n\nAbsI está en desuso. Use @\"microsoft.quantum.math.absi\" en su lugar.\nUse @\"microsoft.quantum.math.absi\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nAbsI está en desuso. Use @\"microsoft.quantum.math.absi\" en su lugar.\nUse @\"microsoft.quantum.math.absi\"."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: "\n> [!WARNING]\n> En desuso\n\nArcCos está en desuso. Use @\"microsoft.quantum.math.arccos\" en su lugar.\nUse @\"microsoft.quantum.math.arccos\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nArcCos está en desuso. Use @\"microsoft.quantum.math.arccos\" en su lugar.\nUse @\"microsoft.quantum.math.arccos\"."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: "\n> [!WARNING]\n> En desuso\n\nLos arcos están desusados. Use @\"microsoft.quantum.math.arcsin\" en su lugar.\nUse @\"microsoft.quantum.math.arcsin\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nLos arcos están desusados. Use @\"microsoft.quantum.math.arcsin\" en su lugar.\nUse @\"microsoft.quantum.math.arcsin\"."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: "\n> [!WARNING]\n> En desuso\n\nArcTan está en desuso. Use @\"microsoft.quantum.math.arctan\" en su lugar.\nUse @\"microsoft.quantum.math.arctan\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nArcTan está en desuso. Use @\"microsoft.quantum.math.arctan\" en su lugar.\nUse @\"microsoft.quantum.math.arctan\"."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: "\n> [!WARNING]\n> En desuso\n\nArcTan2 está en desuso. Use @\"microsoft.quantum.math.arctan2\" en su lugar.\nUse @\"microsoft.quantum.math.arctan2\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nArcTan2 está en desuso. Use @\"microsoft.quantum.math.arctan2\" en su lugar.\nUse @\"microsoft.quantum.math.arctan2\"."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: "\n> [!WARNING]\n> En desuso\n\nEl límite superior está en desuso. Use @\"microsoft.quantum.math.ceiling\" en su lugar.\nUse @\"microsoft.quantum.math.ceiling\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nEl límite superior está en desuso. Use @\"microsoft.quantum.math.ceiling\" en su lugar.\nUse @\"microsoft.quantum.math.ceiling\"."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: "\n> [!WARNING]\n> En desuso\n\nCos está en desuso. Use @\"microsoft.quantum.math.cos\" en su lugar.\nUse @\"microsoft.quantum.math.cos\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nCos está en desuso. Use @\"microsoft.quantum.math.cos\" en su lugar.\nUse @\"microsoft.quantum.math.cos\"."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: "\n> [!WARNING]\n> En desuso\n\nCosh está en desuso. Use @\"microsoft.quantum.math.cosh\" en su lugar.\nUse @\"microsoft.quantum.math.cosh\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nCosh está en desuso. Use @\"microsoft.quantum.math.cosh\" en su lugar.\nUse @\"microsoft.quantum.math.cosh\"."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: "\n> [!WARNING]\n> En desuso\n\nDivRemB está en desuso. Use @\"microsoft.quantum.math.divreml\" en su lugar.\nUse @\"microsoft.quantum.math.divreml\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nDivRemB está en desuso. Use @\"microsoft.quantum.math.divreml\" en su lugar.\nUse @\"microsoft.quantum.math.divreml\"."
 - uid: microsoft.quantum.extensions.math.e
-  summary: "\n> [!WARNING]\n> En desuso\n\nE ha quedado en desuso. Use @\"microsoft.quantum.math.e\" en su lugar.\nUse @\"microsoft.quantum.math.e\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nE ha quedado en desuso. Use@\"microsoft.quantum.math.e\" en su lugar.\nUse @\"microsoft.quantum.math.e\"."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: "\n> [!WARNING]\n> En desuso\n\nExpD está en desuso. Use @\"microsoft.quantum.math.expd\" en su lugar.\nUse @\"microsoft.quantum.math.expd\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nExpD está en desuso. Use @\"microsoft.quantum.math.expd\" en su lugar.\nUse @\"microsoft.quantum.math.expd\"."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: "\n> [!WARNING]\n> En desuso\n\nEl piso está en desuso. Use @\"microsoft.quantum.math.floor\" en su lugar.\nUse @\"microsoft.quantum.math.floor\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nEl piso está en desuso. Use @\"microsoft.quantum.math.floor\" en su lugar.\nUse @\"microsoft.quantum.math.floor\"."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: "\n> [!WARNING]\n> En desuso\n\nIEEERemainder está en desuso. Use @\"microsoft.quantum.math.ieeeremainder\" en su lugar.\nUse @\"microsoft.quantum.math.ieeeremainder\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nIEEERemainder está en desuso. Use @\"microsoft.quantum.math.ieeeremainder\" en su lugar.\nUse @\"microsoft.quantum.math.ieeeremainder\"."
 - uid: microsoft.quantum.extensions.math.log
-  summary: "\n> [!WARNING]\n> En desuso\n\nEl registro está en desuso. Use @\"microsoft.quantum.math.log\" en su lugar.\nUse @\"microsoft.quantum.math.log\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nEl registro está en desuso. Use @\"microsoft.quantum.math.log\" en su lugar.\nUse @\"microsoft.quantum.math.log\"."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: "\n> [!WARNING]\n> En desuso\n\nLog10 está en desuso. Use @\"microsoft.quantum.math.log10\" en su lugar.\nUse @\"microsoft.quantum.math.log10\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nLog10 está en desuso. Use @\"microsoft.quantum.math.log10\" en su lugar.\nUse @\"microsoft.quantum.math.log10\"."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: "\n> [!WARNING]\n> En desuso\n\nMaxB está en desuso. Use @\"microsoft.quantum.math.maxl\" en su lugar.\nUse @\"microsoft.quantum.math.maxl\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nMaxB está en desuso. Use @\"microsoft.quantum.math.maxl\" en su lugar.\nUse @\"microsoft.quantum.math.maxl\"."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: "\n> [!WARNING]\n> En desuso\n\nMaxD está en desuso. Use @\"microsoft.quantum.math.maxd\" en su lugar.\nUse @\"microsoft.quantum.math.maxd\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nMaxD está en desuso. Use @\"microsoft.quantum.math.maxd\" en su lugar.\nUse @\"microsoft.quantum.math.maxd\"."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: "\n> [!WARNING]\n> En desuso\n\nMaxI está en desuso. Use @\"microsoft.quantum.math.maxi\" en su lugar.\nUse @\"microsoft.quantum.math.maxi\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nMaxI está en desuso. Use @\"microsoft.quantum.math.maxi\" en su lugar.\nUse @\"microsoft.quantum.math.maxi\"."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: "\n> [!WARNING]\n> En desuso\n\nMinB está en desuso. Use @\"microsoft.quantum.math.minl\" en su lugar.\nUse @\"microsoft.quantum.math.minl\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nMinB está en desuso. Use @\"microsoft.quantum.math.minl\" en su lugar.\nUse @\"microsoft.quantum.math.minl\"."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: "\n> [!WARNING]\n> En desuso\n\nMente está en desuso. Use @\"microsoft.quantum.math.mind\" en su lugar.\nUse @\"microsoft.quantum.math.mind\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nMente está en desuso. Use @\"microsoft.quantum.math.mind\" en su lugar.\nUse @\"microsoft.quantum.math.mind\"."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: "\n> [!WARNING]\n> En desuso\n\nLa minilínea quedó en desuso. Use @\"microsoft.quantum.math.mini\" en su lugar.\nUse @\"microsoft.quantum.math.mini\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nLa minilínea quedó en desuso. Use @\"microsoft.quantum.math.mini\" en su lugar.\nUse @\"microsoft.quantum.math.mini\"."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: "\n> [!WARNING]\n> En desuso\n\nModPowB está en desuso. Use @\"microsoft.quantum.math.modpowl\" en su lugar.\nUse @\"microsoft.quantum.math.modpowl\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nModPowB está en desuso. Use @\"microsoft.quantum.math.modpowl\" en su lugar.\nUse @\"microsoft.quantum.math.modpowl\"."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: "\n> [!WARNING]\n> En desuso\n\nPI está en desuso. Use @\"microsoft.quantum.math.pi\" en su lugar.\nUse @\"microsoft.quantum.math.pi\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nPI está en desuso. Use @\"microsoft.quantum.math.pi\" en su lugar.\nUse @\"microsoft.quantum.math.pi\"."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: "\n> [!WARNING]\n> En desuso\n\nPowD está en desuso. Use @\"microsoft.quantum.math.powd\" en su lugar.\nUse @\"microsoft.quantum.math.powd\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nPowD está en desuso. Use @\"microsoft.quantum.math.powd\" en su lugar.\nUse @\"microsoft.quantum.math.powd\"."
 - uid: microsoft.quantum.extensions.math.round
-  summary: "\n> [!WARNING]\n> En desuso\n\nRound está en desuso. Use @\"microsoft.quantum.math.round\" en su lugar.\nUse @\"microsoft.quantum.math.round\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nRound está en desuso. Use @\"microsoft.quantum.math.round\" en su lugar.\nUse @\"microsoft.quantum.math.round\"."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: "\n> [!WARNING]\n> En desuso\n\nSignB está en desuso. Use @\"microsoft.quantum.math.signl\" en su lugar.\nUse @\"microsoft.quantum.math.signl\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nSignB está en desuso. Use @\"microsoft.quantum.math.signl\" en su lugar.\nUse @\"microsoft.quantum.math.signl\"."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: "\n> [!WARNING]\n> En desuso\n\nEl signo está en desuso. Use @\"microsoft.quantum.math.signd\" en su lugar.\nUse @\"microsoft.quantum.math.signd\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nEl signo está en desuso. Use @\"microsoft.quantum.math.signd\" en su lugar.\nUse @\"microsoft.quantum.math.signd\"."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: "\n> [!WARNING]\n> En desuso\n\nSigni está en desuso. Use @\"microsoft.quantum.math.signi\" en su lugar.\nUse @\"microsoft.quantum.math.signi\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nSigni está en desuso. Use @\"microsoft.quantum.math.signi\" en su lugar.\nUse @\"microsoft.quantum.math.signi\"."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: "\n> [!WARNING]\n> En desuso\n\nSin quedó en desuso. Use @\"microsoft.quantum.math.sin\" en su lugar.\nUse @\"microsoft.quantum.math.sin\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nSin quedó en desuso. Use @\"microsoft.quantum.math.sin\" en su lugar.\nUse @\"microsoft.quantum.math.sin\"."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: "\n> [!WARNING]\n> En desuso\n\nSENOH está en desuso. Use @\"microsoft.quantum.math.sinh\" en su lugar.\nUse @\"microsoft.quantum.math.sinh\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nSENOH está en desuso. Use @\"microsoft.quantum.math.sinh\" en su lugar.\nUse @\"microsoft.quantum.math.sinh\"."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: "\n> [!WARNING]\n> En desuso\n\nSqrt está en desuso. Use @\"microsoft.quantum.math.sqrt\" en su lugar.\nUse @\"microsoft.quantum.math.sqrt\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nSqrt está en desuso. Use @\"microsoft.quantum.math.sqrt\" en su lugar.\nUse @\"microsoft.quantum.math.sqrt\"."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: "\n> [!WARNING]\n> En desuso\n\nTan está en desuso. Use @\"microsoft.quantum.math.tan\" en su lugar.\nUse @\"microsoft.quantum.math.tan\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nTan está en desuso. Use @\"microsoft.quantum.math.tan\" en su lugar.\nUse @\"microsoft.quantum.math.tan\"."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: "\n> [!WARNING]\n> En desuso\n\nTanh está en desuso. Use @\"microsoft.quantum.math.tanh\" en su lugar.\nUse @\"microsoft.quantum.math.tanh\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nTanh está en desuso. Use @\"microsoft.quantum.math.tanh\" en su lugar.\nUse @\"microsoft.quantum.math.tanh\"."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: "\n> [!WARNING]\n> En desuso\n\nTRUNCATE está en desuso. Use @\"microsoft.quantum.math.truncate\" en su lugar.\nUse @\"microsoft.quantum.math.truncate\"."
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nTRUNCATE está en desuso. Use @\"microsoft.quantum.math.truncate\" en su lugar.\nUse @\"microsoft.quantum.math.truncate\"."
 metadata:
-  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: b94b4c7aa1523d9f3e8b42359e759ffa356b25ea
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858843"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673256"

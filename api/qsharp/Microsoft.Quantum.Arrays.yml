@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: Dada una matriz y un predicado definidos para los elementos de la matriz, devuelve una matriz que consta de los elementos que cumplen el predicado.
 - uid: microsoft.quantum.arrays.fold
-  summary: Recorre en iteración una función `f` a través de una `array`de matriz y devuelve `f(f(f(initialState, array[0]), array[1]), ...)`.
+  summary: Recorre en iteración una `f` función `array`a través `f(f(f(initialState, array[0]), array[1]), ...)`de una matriz y devuelve.
 - uid: microsoft.quantum.arrays.head
   summary: Devuelve el primer elemento de la matriz.
 - uid: microsoft.quantum.arrays.indexof
@@ -54,7 +54,7 @@ functions:
 - uid: microsoft.quantum.arrays.swapped
   summary: Aplica un intercambio de dos elementos en una matriz.
 - uid: microsoft.quantum.arrays.tail
-  summary: Devuelve el último elemento de la matriz.
+  summary: Devuelve el último elemento de la secuencia.
 - uid: microsoft.quantum.arrays.tuplearrayasnestedarray
   summary: Convierte una lista de dos tuplas en una matriz anidada.
 - uid: microsoft.quantum.arrays.where
@@ -69,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada una matriz y una operación que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la operación.
 metadata:
-  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320730"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673400"
