@@ -5,7 +5,7 @@ type: function
 namespace: Microsoft.Quantum.Core
 summary: Devuelve el valor inicial definido del intervalo especificado.
 remarks: >-
-  El primer elemento de una expresión de rango es `start`, su segundo elemento es `start+step`, el tercer elemento es `start+step+step`, etc., hasta que se pasa `end`.
+  El primer elemento de una expresión de `start`rango es, su segundo `start+step`elemento es, el `start+step+step`tercer elemento es, etc `end` ., hasta que se pasa.
 
 
   Tenga en cuenta que el valor inicial definido de un intervalo es el mismo que el primer elemento de la secuencia, a menos que el intervalo especifique una secuencia vacía (por ejemplo, 2.. 1).
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a5240da851b459e732c78f7be94b8a2d02b1f1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231765"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657248"
