@@ -10,7 +10,7 @@ summary: >-
   Aplica `X` operaciones a qubits en un registro Little-Endian basado en 1 bit en un entero.
 
 
-  Vamos a denotar `value` por y dejar que y sea un entero sin signo codificado en `target`, `InPlaceXorLE` realiza una operación proporcionada por el siguiente mapa: $ \ket{y}\rightarrow \ket{y\oplus a} $, donde $ \oplus $ es el operador OR exclusivo bit a bit.
+  Vamos a `value` `target` `InPlaceXorLE` indicar mediante un y dejar que y sea un entero sin signo codificado en, realiza una operación proporcionada por la siguiente asignación: $ \ket{y}\rightarrow \ket{y\oplus a} $, donde $ \oplus $ es el operador OR exclusivo bit a bit.
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Un registro de Quantum que se usa para almacenar `value` en la codificación Little-Endian.
+    summary: Un registro de Quantum que se usa para `value` almacenar en la codificación Little-Endian.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9d3d837d92537cc5d51a80e8e1c83c230b7acc28
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871182"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679912"
