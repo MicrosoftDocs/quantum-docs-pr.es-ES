@@ -7,7 +7,7 @@ summary: >-
   Realiza un incremento modular de un registro qubit por una constante de tipo entero.
 
 
-  Vamos a indicar `increment` por $a $, `modulus` por $N $ y el entero codificado en `target` por $y $.
+  Vamos a indicar `increment` $a $, `modulus` $N $ y un entero codificados en `target` por $y $.
 
   A continuación, la operación realiza la transformación siguiente: \begin{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} los enteros se codifican en formato Little-endian en base QFT.
 remarks: >-
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Entero $y $ en formato Little-endian con codificación de fase al que se agrega `increment` $a $.
+    summary: Entero $y $ en formato Little-endian con codificación en fases al que `increment` se agrega $a $.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: 69240c9ecac0917f8f2a6d1f6a3554cc93269cbd
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871420"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676848"

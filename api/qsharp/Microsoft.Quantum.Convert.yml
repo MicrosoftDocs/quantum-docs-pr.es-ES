@@ -18,9 +18,9 @@ functions:
 - uid: microsoft.quantum.convert.boolarrayaspauli
   summary: Dada una cadena de bits, devuelve un operador qubit de Pauli que se representa como una matriz de operadores Pauli de qubit único.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Convierte un tipo de `Bool[]` en un tipo de `Result[]`, donde `true` se asigna a `One` y `false` se asigna a `Zero`.
+  summary: Convierte `Bool[]` un tipo en `Result[]` un tipo, donde `true` se asigna a `One` y `false` se asigna a. `Zero`
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Convierte un tipo de `Bool` en un tipo de `Result`, donde `true` se asigna a `One` y `false` se asigna a `Zero`.
+  summary: Convierte `Bool` un tipo en `Result` un tipo, donde `true` se asigna a `One` y `false` se asigna a. `Zero`
 - uid: microsoft.quantum.convert.boolasstring
   summary: Convierte un valor booleano determinado en una representación de cadena equivalente.
 - uid: microsoft.quantum.convert.doubleasstring
@@ -49,18 +49,18 @@ functions:
 - uid: microsoft.quantum.convert.rangeasintarray
   summary: Crea una matriz `arr` de enteros enumerados por Start.. paso... extremo.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Convierte un tipo de `Result[]` en un tipo de `Bool[]`, donde `One` se asigna a `true` y `Zero` se asigna a `false`.
+  summary: Convierte `Result[]` un tipo en `Bool[]` un tipo, donde `One` se asigna a `true` y `Zero` se asigna a. `false`
 - uid: microsoft.quantum.convert.resultarrayasint
   summary: Genera un entero positivo a partir de una cadena de resultados en little endian formato.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Convierte un tipo de `Result` en un tipo de `Bool`, donde `One` se asigna a `true` y `Zero` se asigna a `false`.
+  summary: Convierte `Result` un tipo en `Bool` un tipo, donde `One` se asigna a `true` y `Zero` se asigna a. `false`
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Llama a una función con una entrada determinada.
 metadata:
-  ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210974"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677011"

@@ -31,17 +31,17 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Matriz `output` tal que `output[0]` es el primer elemento de `array` cuyo índice no aparece en `remove`, de modo que `output[1]` es el segundo elemento de este tipo, y así sucesivamente.
+  - summary: Matriz `output` de tipo que `output[0]` es el primer elemento de `array` cuyo índice no aparece en `remove`, tal que `output[1]` es el segundo elemento de este tipo, y así sucesivamente.
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: Tipo de los elementos de la matriz.
+  summary: El tipo de los elementos de la matriz.
 metadata:
-  ms.openlocfilehash: 624021333e156a4da58509186bffa3074cf44f85
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214306"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676471"
