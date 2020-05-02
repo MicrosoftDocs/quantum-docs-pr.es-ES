@@ -9,21 +9,21 @@ input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: Matriz de enteros en el intervalo `0..3` que se va a convertir en operadores Pauli.
+    summary: Matriz de enteros en el intervalo `0..3` que se va a convertir en operadores de Pauli.
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: Una matriz `paulis` de operadores Pauli `Pauli[]` la misma longitud que `ints` que `paulis[idxPauli]` es igual al elemento de `[PauliI, PauliX, PauliY, PauliZ]` proporcionado por `ints[idxPauli]`.
+  - summary: Una matriz `paulis` `Pauli[]` de operadores Pauli la misma longitud `ints` que `paulis[idxPauli]` es igual al elemento de `[PauliI, PauliX, PauliY, PauliZ]` proporcionado por. `ints[idxPauli]`
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 407ad1481c220f390fffb5f1b59f0968d6d6570c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066989"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682611"

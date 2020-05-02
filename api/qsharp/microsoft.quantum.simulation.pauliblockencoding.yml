@@ -8,13 +8,13 @@ summary: >-
 
 
   El Hamiltonian $H = \ sum_ {j} \ alpha_j P_j $ se describe mediante una suma de los términos de Pauli $P _j $, cada uno con coeficiente real $ \ alpha_j $.
-remarks: Esto se obtiene mediante la preparación y desactivación del estado $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ y la construcción de un <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> de unitario y <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>de la multiplicación controlada.
+remarks: Esto se obtiene al preparar y despreparar el estado $ \ sum_ {j} \sqrt{\ alpha_j/\alpha}\ket{j} $ y construir una unitario <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> controlada por multiplicación y. <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: '`GeneratorSystem` que describe $H $ como suma de los términos de Pauli'
+    summary: '`GeneratorSystem` Que describe $H $ como suma de los términos de Pauli'
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -29,15 +29,15 @@ output:
       ## <a name="second-parameter"></a>Segundo parámetro
 
 
-      Una `BlockEncodingReflection` unitario $U $ del Hamiltonian $H $. Como esta unitario cumple $U ^ 2 = I $, también es una reflexión.
+      Un `BlockEncodingReflection` unitario $U $ de Hamiltonian $H $. Como esta unitario cumple $U ^ 2 = I $, también es una reflexión.
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216142"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682543"

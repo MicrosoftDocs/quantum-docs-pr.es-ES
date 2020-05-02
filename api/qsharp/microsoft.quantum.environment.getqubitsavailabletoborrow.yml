@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Environment
 summary: >-
   Devuelve el número de qubits disponibles actualmente para tomar prestado.
 
-  Esto incluye qubits sin usar; es decir, esto incluye los qubits devueltos por `GetQubitsAvailableToUse`.
+  Esto incluye qubits sin usar; es decir, esto incluye el qubits devuelto `GetQubitsAvailableToUse`por.
 syntax: 'operation GetQubitsAvailableToBorrow () : Int'
 input:
   content: ()
@@ -15,17 +15,17 @@ output:
   content: Int
   types:
   - summary: >-
-      El número de qubits que se pueden asignar en una instrucción `borrowing`.
+      El número de qubits que se pueden asignar en una `borrowing` instrucción.
 
-      Si el equipo de destino que se usa no proporciona esta información, se devuelve `-1`.
+      Si el equipo de destino que se usa no proporciona esta información, `-1` se devuelve.
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletouse
 metadata:
-  ms.openlocfilehash: c0caf866ad9a8773aa11ee7c6951ca3acc60cbaa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 99dd2afb66c334b112a2ee511b0437281da6b888
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230490"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682410"

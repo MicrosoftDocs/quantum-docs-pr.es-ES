@@ -3,16 +3,16 @@ uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Realiza una única ronda de corrección de errores mediante un código Quantum descrito por un tipo de `QECC`.
+summary: Realiza una única ronda de corrección de errores mediante un código Quantum descrito por `QECC` un tipo.
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Un código de corrección de errores de Quantum empaquetado como un tipo de `QECC` describe la codificación y la descodificación de datos de Quantum y cómo se miden los síndrome de error.
+    summary: Un código de error de Quantum que corrija el código empaquetado `QECC` como un tipo describe la codificación y la descodificación de datos de Quantum y cómo se medirán los síndrome de error.
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: '`RecoveryFn` que asigna cada síndrome de error a las operaciones de `Pauli[]` que corrigen el error detectado.'
+    summary: '`RecoveryFn` Que asigna cada síndrome de error a las `Pauli[]` operaciones que corrigen el error detectado.'
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
     summary: Una matriz de qubits en la que se define el código del estabilizador.
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: baaa5862dd189a04667081d762900931e6b5e766
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220358"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682286"
