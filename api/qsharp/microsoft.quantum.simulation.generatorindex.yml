@@ -4,14 +4,14 @@ name: GeneratorIndex
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Representa un término primitivo único en el conjunto de todos los generadores dinámicos, por ejemplo, los operadores Hermitian, para los que existe una asignación de ese generador a la evolución de tiempo de ese generador, a través de `EvolutionSet`.
+  Representa un término primitivo único en el conjunto de todos los generadores dinámicos, por ejemplo, los operadores Hermitian, para los que existe una asignación de ese generador a la evolución de tiempo de `EvolutionSet`ese generador, a través de.
 
 
   El primer elemento (int [], double []) es un índice que tiene un único término; por ejemplo, la cadena Pauli XXY con coeficiente 0,5 sería indexada por ([1, 1, 2], [0,5]). Como alternativa, Hamiltonians parametrizado mediante una variable continua, como X cos φ + Y sin φ, podría representarse por instancia ([], [φ]). El segundo elemento indiza el subsistema en el que actúa el generador.
 remarks: >-
   > [!WARNING]
 
-  > No se ha definido la interpretación de un `GeneratorIndex` excepto con referencia a un conjunto determinado de generadores.
+  > No se define la `GeneratorIndex` interpretación de un, excepto con referencia a un conjunto determinado de generadores.
 
 
   ### <a name="examples"></a>Ejemplos
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067057"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655162"
