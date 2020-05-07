@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 84e5db17ab8d963a75c72da38d3e4487b89abc9d
-ms.sourcegitcommit: b6b8459eb654040f1e19f66411b29fc9e48e95c9
+ms.openlocfilehash: 91f12ef6bd15e27c8920471442c66ff3b1e71122
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030606"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82677088"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -20,6 +20,21 @@ Este artículo contiene información sobre cada versión de Quantum Development 
 Para obtener instrucciones de instalación, consulte la [guía de instalación](xref:microsoft.quantum.install).
 
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
+
+## <a name="version-01120042825"></a>Versión 0.11.2004.2825
+
+*Fecha de lanzamiento: 30 de abril de 2020*
+
+Esta versión contiene lo siguiente:
+
+- Nueva compatibilidad con aplicaciones de línea de comandos de Q#, que ya no requieren un archivo host de C# o Python. Para más información sobre cómo empezar a usar las aplicaciones de línea de comandos de Q#, consulte [aquí](xref:microsoft.quantum.install.standalone).
+- Se ha actualizado el inicio rápido del generador de números cuánticos aleatorios que no necesite un archivo host de C# o Python. Consulte el [Inicio rápido](xref:microsoft.quantum.quickstarts.qrng) actualizado.
+- Mejoras del rendimiento de las imágenes de Docker IQ#
+
+> [!NOTE]
+> Actualmente no se puede llamar a aplicaciones de línea de comandos de Q# que usan el nuevo atributo [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) desde programas host de Python o .NET.
+> Para más información, consulte las guías de [Python](xref:microsoft.quantum.install.python) y [Interoperabilidad de .NET](xref:microsoft.quantum.install.cs).
+
 
 ## <a name="version-01120033107"></a>Versión 0.11.2003.3107
 
