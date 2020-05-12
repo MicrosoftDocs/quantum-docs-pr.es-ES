@@ -6,29 +6,29 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: b9c8592b1296a7de1b9ad5d0538ad1972ec25e31
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 5a433606f08f4c6a4ab7b5df67a7f0c30d2b3f0d
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906991"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82683005"
 ---
-# <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Inicio rápido: Implementación de un generador cuántico de números aleatorios en Q#
-Un ejemplo sencillo de un algoritmo cuántico escrito en Q# es un generador cuántico de números aleatorios. Este algoritmo aprovecha la naturaleza de la mecánica cuántica para generar un número aleatorio. 
+# <a name="quickstart-implement-a-quantum-random-number-generator-in-q"></a>Inicio rápido: Implementación de un generador cuántico de números aleatorios en Q\#
+
+Un ejemplo sencillo de un algoritmo cuántico escrito en Q# es un generador cuántico de números aleatorios. Este algoritmo aprovecha la naturaleza de la mecánica cuántica para generar un número aleatorio.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
 - Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
 - [Creación de un proyecto de Q#](xref:microsoft.quantum.howto.createproject)
 
-
 ## <a name="write-a-q-operation"></a>Escriba una operación de Q#
 
 ### <a name="q-operation-code"></a>Código de operación de Q#
 
-1. Reemplace el contenido del archivo Operation.qs por el código siguiente:
+1. Reemplace el contenido del archivo Program.qs por el código siguiente:
 
- :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-14":::
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
 Tal y como se mencionó en nuestro artículo [¿Qué es computación cuántica?](xref:microsoft.quantum.overview.what), un qubit es una unidad de información cuántica que puede estar en superposición. Cuando se mide, un qubit solo puede ser 0 o 1. Sin embargo, durante la ejecución, el estado del qubit representa la probabilidad de leer un 0 o un 1 al tomar una medida. Este estado probabilístico se conoce como superposición. Podemos usar esta probabilidad para generar números aleatorios.
 
@@ -36,7 +36,7 @@ En nuestra operación de Q#, presentamos el tipo de datos `Qubit`, nativo de Q#.
 
 Con la operación `H`, podemos poner nuestro `Qubit` en superposición. Para medir un qubit y leer su valor, se usa la operación intrínseca `M`.
 
-Al poner el `Qubit` en superposición y medirlo, el resultado será un valor diferente cada vez que se invoque el código. 
+Al poner el `Qubit` en superposición y medirlo, el resultado será un valor diferente cada vez que se invoque el código.
 
 Cuando se desasigna un `Qubit`, se debe volver a poner explícitamente en el estado `Zero`; de lo contrario, el simulador informará de un error de tiempo de ejecución. Una manera fácil de hacerlo es invocar a `Reset`.
 
@@ -52,52 +52,68 @@ Podemos usar esta representación para visualizar lo que está haciendo el códi
 
 <img src="~/media/qrng-H.png" width="450" alt="Preparing a qubit in superposition">
 
-
 * A continuación, se mide el qubit y se guarda el resultado:
 
 <img src="~/media/qrng-meas.png" width="450" alt="Measuring a qubit and saving the output">
 
 Como el resultado de la medida es completamente aleatorio, hemos obtenido un bit aleatorio. Podemos llamar a esta operación varias veces para crear enteros. Por ejemplo, si llamamos a la operación tres veces para obtener tres bits aleatorios, podemos crear números de 3 bits aleatorios (es decir, un número aleatorio entre 0 y 7).
 
-## <a name="creating-a-complete-random-number-generator-using-a-host-program"></a>Creación de un generador completo de números aleatorios mediante un programa host
 
-Ahora que tenemos una operación de Q# que genera bits aleatorios, podemos usarlo para crear un generador completo de números cuánticos aleatorios con un programa host.
+## <a name="creating-a-complete-random-number-generator"></a>Creación de un generador completo de números aleatorios
 
- ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python con Visual Studio Code o la línea de comandos](#tab/tabid-python)
- 
- Para ejecutar el nuevo programa de Q# desde Python, guarde el código siguiente como `host.py`:
- 
-:::code language="python" source="~/quantum/samples/getting-started/qrng/host.py" range="11-30":::
+Ahora que tenemos una operación de Q# que genera bits aleatorios, podemos usarlo para crear un generador completo de números cuánticos aleatorios. Podemos usar las aplicaciones de línea de comandos de Q# o usar un programa host.
 
- A continuación, puede ejecutar el programa host de Python desde la línea de comandos:
- ```bash
- $ python host.py
- Preparing Q# environment...
- ..The random number generated is 42
- ```
- ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# con Visual Studio Code o la línea de comandos](#tab/tabid-csharp)
- 
- Para ejecutar el nuevo programa de Q# desde C#, modifique `Driver.cs` para incluir el siguiente código de C#:
- 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
- 
- A continuación, puede ejecutar el programa host de C# desde la línea de comandos:
- 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
 
- ### <a name="c-with-visual-studio-2019"></a>[C# con Visual Studio 2019](#tab/tabid-vs2019)
 
- Para ejecutar el nuevo programa de Q# desde C# en Visual Studio, modifique `Driver.cs` para que incluya el código C# siguiente:
+### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Aplicaciones de línea de comandos de Q# con Visual Studio o Visual Studio Code](#tab/tabid-qsharp)
 
- :::code language="csharp" source="~/quantum/samples/getting-started/qrng/Host.cs" range="4-39":::
+Para crear la aplicación de línea de comandos de Q# completa, agregue el siguiente punto de entrada al programa de Q#: 
 
- Después, presione F5; el programa iniciará la ejecución y se mostrará una nueva ventana con el número aleatorio generado: 
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
- ```bash
- $ dotnet run
- The random number generated is 42
- ```
- ***
+El ejecutable ejecutará la operación o función marcada con el atributo `@EntryPoint()` en un simulador o una calculadora de recursos, dependiendo de la configuración del proyecto y de las opciones de la línea de comandos.
+
+:::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
+
+En Visual Studio, solo tiene que presionar Ctrl+F5 para ejecutar el script.
+
+En VS Code, escriba lo siguiente en el terminal para compilar el archivo Program.qs la primera vez:
+
+```dotnetcli
+dotnet build
+```
+
+En las ejecuciones posteriores, no es necesario volver a compilarlo. Para ejecutarlo, escriba el siguiente comando y presione Entrar:
+
+```dotnetcli
+dotnet run --no-build
+```
+
+### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python con Visual Studio Code o la línea de comandos](#tab/tabid-python)
+
+Para ejecutar el nuevo programa de Q# desde Python, guarde el código siguiente como `host.py`:
+
+:::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
+
+A continuación, puede ejecutar el programa host de Python desde la línea de comandos:
+
+```bash
+$ python host.py
+Preparing Q# environment...
+..The random number generated is 42
+```
+
+### <a name="c-with-visual-studio-code-or-visual-studio"></a>[C# con Visual Studio Code o Visual Studio](#tab/tabid-csharp)
+
+Para ejecutar el nuevo programa de Q# desde C#, modifique `Driver.cs` para incluir el siguiente código de C#:
+
+:::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
+
+A continuación, puede ejecutar el programa host de C# desde la línea de comandos (en Visual Studio, presione F5):
+
+```bash
+$ dotnet run
+The random number generated is 42
+```
+
+***
