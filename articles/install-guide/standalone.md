@@ -1,19 +1,19 @@
 ---
-title: 'Ejecutar programas Q # sin un controlador y un idioma host'
+title: 'Desarrollo con aplicaciones de línea de comandos de Q #'
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e83acaf10af952da06abf4737ad2ec91f1cf1b8e
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706808"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426431"
 ---
-# <a name="q-command-line-applications"></a>Aplicaciones de línea de comandos de Q #
+# <a name="develop-with-q-command-line-applications"></a>Desarrollo con aplicaciones de línea de comandos de Q #
 
 Los programas de preguntas y respuestas se pueden ejecutar por sí solos, sin un controlador en un lenguaje de host como C#, F # o Python.
 
@@ -23,64 +23,67 @@ Los programas de preguntas y respuestas se pueden ejecutar por sí solos, sin un
 
 ## <a name="installation"></a>Instalación
 
-Aunque puede compilar aplicaciones de línea de comandos de Q # en cualquier IDE, se recomienda encarecidamente usar Visual Studio Code (VS Code) o el IDE de Visual Studio para las aplicaciones de preguntas y respuestas. Con VS Code o Visual Studio y la extensión de Visual Studio Code de QDK obtiene acceso a una funcionalidad más enriquecida.
+Aunque puede compilar aplicaciones de línea de comandos de Q # en cualquier IDE, se recomienda usar Visual Studio Code (VS Code) o el IDE de Visual Studio para las aplicaciones de preguntas y respuestas. El desarrollo en estas herramientas proporciona acceso a una funcionalidad enriquecida.
 
-- Instalación de [vs Code](https://code.visualstudio.com/download) (Windows, Linux y Mac)
-- Instale la [extensión QDK para vs Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) o
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 con la carga de trabajo de desarrollo multiplataforma de .NET Core habilitada.
-- Descarga e instalación de la [extensión de Visual Studio](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+Para configurar VS Code:
+
+1. Descargue e instale [vs Code](https://code.visualstudio.com/download) (Windows, Linux y Mac).
+2. Instale [Microsoft QDK para vs Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
+
+Para configurar Visual Studio:
+
+1. Descargue e instale [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16,3 o una versión posterior, con la carga de trabajo de desarrollo multiplataforma de .net Core habilitada.
+2. Descargue e instale [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
 
 ## <a name="develop-with-q-using-vs-code"></a>Desarrollo con Q # usando VS Code
 
-Instale las plantillas de proyecto de Quantum:
+Instale las plantillas de proyecto de Q #:
 
-- Ir a **Ver** -> **paleta de comandos**
-- Seleccionar **Q #: instalar plantillas de proyecto**
+1. Abra VS Code.
+2. Haga clic en **Ver**  ->  **paleta de comandos**.
+3. Seleccione **Q #: instalar plantillas de proyecto**.
 
-Ahora ya tiene Quantum Development Kit instalado y listo para usarse en sus propias aplicaciones y bibliotecas.
-- Cree un nuevo proyecto:
-  - Ir a **Ver** -> **paleta de comandos**
-  - Seleccione **Q #: crear nuevo proyecto**
-  - Seleccionar **aplicación de consola independiente**
-  - Vaya a la ubicación del sistema de archivos en la que desea crear la aplicación.
-  - Haga clic en el botón **Open new project...** (Abrir nuevo proyecto), una vez creado el proyecto.
+Cuando **las plantillas de proyecto se instalan correctamente** , el QDK está listo para usarse con sus propias aplicaciones y bibliotecas.
+
+Para crear un nuevo proyecto:
+
+1. Haga clic en **Ver**  ->  **paleta de comandos** y seleccione **Q #: crear nuevo proyecto**.
+2. Haga clic en **aplicación de consola independiente**.
+3. Navegue hasta la ubicación donde desea guardar el proyecto y haga clic en **crear proyecto**.
+4. Cuando el proyecto se haya creado correctamente, haga clic en **abrir nuevo proyecto...** en la parte inferior derecha.
         
-- Inspección del proyecto
-  - Debería ver que se ha creado un `Program.qs` archivo llamado Created, que es un programa de preguntas y respuestas que define una operación sencilla para imprimir un mensaje en la consola.
+Inspeccione el proyecto. Debería ver un archivo de código fuente denominado `Program.qs` , que es un programa de preguntas y respuestas que define una operación sencilla para imprimir un mensaje en la consola.
 
-- Ejecute la aplicación:
-  - Ir a **Terminal** -> terminal**New** terminal
-  - Escriba `dotnet run`.
-  - Debería ver el texto siguiente en la ventana de salida: `Hello quantum world!`.
+Para ejecutar la aplicación:
+1. Haga **clic en terminal**  ->  **nuevo**terminal.
+2. En el símbolo del sistema de terminal, escriba `dotnet run` .
+3. Debería ver el texto siguiente en la ventana de salida: `Hello quantum world!`.
 
 
 > [!NOTE]
-> * No se admiten actualmente áreas de trabajo con varias carpetas raíz en la extensión de Visual Studio Code. Si tiene varios proyectos en un área de trabajo VS Code, todos los proyectos deben estar contenidos en la misma carpeta raíz.
+> Las áreas de trabajo con varias carpetas raíz no se admiten actualmente en la extensión VS Code Q #. Si tiene varios proyectos en un área de trabajo VS Code, todos los proyectos deben estar contenidos en la misma carpeta raíz.
 
 ## <a name="develop-with-q-using-visual-studio"></a>Desarrollo con Q # usando Visual Studio
 
-Cree una aplicación `Hello World` para comprobar la instalación.
+Compruebe la instalación de Visual Studio mediante la creación de una aplicación de preguntas y respuestas `Hello World` .
 
-- Creación de una aplicación de Q#
-  - Ir a **archivo** -> **nuevo** -> **proyecto**
-  - Escriba `Q#` en el cuadro de búsqueda.
-  - Seleccione **Q# Application** (Aplicación de Q#)
-  - Seleccione **Siguiente**.
-  - Elija un nombre y una ubicación para su aplicación.
-  - Seleccione **Crear**
+Para crear una nueva aplicación de Q #:
+1. Abra Visual Studio y haga clic en **archivo**  ->  **nuevo**  ->  **proyecto**.
+2. Escriba `Q#` en el cuadro de búsqueda, seleccione la **aplicación de Q #** y haga clic en **siguiente**.
+3. Escriba un nombre y una ubicación para la aplicación y haga clic en **crear**.
 
-- Inspección del proyecto
-  - Debería ver que se ha creado un `Program.qs` archivo llamado, que es un programa de preguntas y respuestas que define una operación sencilla para imprimir un mensaje en la consola.
 
-- Ejecución de la aplicación
-  - Seleccione **depurar** -> **iniciar sin depurar**
-  - Debería ver el texto `Hello quantum world!` impreso en una ventana de la consola.
+Inspeccione el proyecto. Debería ver un archivo de código fuente denominado `Program.qs` , que es un programa de preguntas y respuestas que define una operación sencilla para imprimir un mensaje en la consola.
+
+Para ejecutar la aplicación:
+1. Seleccione **depurar**  ->  **iniciar sin depurar**.
+2. Debería ver el texto `Hello quantum world!` impreso en una ventana de la consola.
 
 > [!NOTE]
-> * Si tiene varios proyectos en una solución de Visual Studio, todos los proyectos contenidos en ella deben estar en la misma carpeta que la solución o en una de sus subcarpetas.  
+> Si tiene varios proyectos en una solución de Visual Studio, todos los proyectos contenidos en la solución deben estar en la misma carpeta que la solución o en una de sus subcarpetas.  
 
 
-## <a name="whats-next"></a>Pasos adicionales
+## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que ha instalado Quantum Development Kit en su entorno preferido, puede escribir y ejecutar [su primer programa cuántico](xref:microsoft.quantum.write-program).
+Ahora que ha instalado Quantum Development Kit en su entorno preferido, puede escribir y ejecutar [su primer programa cuántico](xref:microsoft.quantum.quickstarts.qrng).
