@@ -1,3 +1,5 @@
+- name: Información general
+  href: index.md
 - name: Bibliotecas estándar
   topicHref: standard/index.md
   href: standard/toc.yml
