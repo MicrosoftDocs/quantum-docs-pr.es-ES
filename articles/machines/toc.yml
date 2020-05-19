@@ -1,10 +1,10 @@
 - name: Información general
   href: index.md
-- name: Simulador cuántico
+- name: Simulador de estado completo
   href: full-state-simulator.md
 - name: Estimador de recursos
   href: resources-estimator.md
-- name: Simulador de seguimiento de equipos cuánticos
+- name: Simulador de seguimiento
   topicHref: qc-trace-simulator/index.md
   href: qc-trace-simulator/toc.yml
 - name: Simulador Toffoli
