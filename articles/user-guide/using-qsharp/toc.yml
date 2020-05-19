@@ -1,0 +1,12 @@
+- name: "Estructura de archivos de\_Q#"
+  href: file-structure.md
+- name: Operaciones y funciones
+  href: operations-functions.md
+- name: variables
+  href: variables.md
+- name: Uso de cubits
+  href: working-with-qubits.md
+- name: Flujo de control
+  href: control-flow.md
+- name: Pruebas y depuración
+  href: testing-debugging.md
