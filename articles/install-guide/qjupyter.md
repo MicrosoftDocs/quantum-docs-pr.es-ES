@@ -1,19 +1,19 @@
 ---
-title: 'Desarrollo con cuadernos de preguntas # Jupyter'
+title: Desarrollo con Q# y Jupyter Notebook
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
-ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
+ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551046"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660759"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Desarrollo con cuadernos de preguntas # Jupyter
+# <a name="develop-with-q-jupyter-notebooks"></a>Desarrollo con Q# y Jupyter Notebook
 
 Instale QDK para desarrollar operaciones de Q # en cuadernos de preguntas # Jupyter.
 
@@ -45,9 +45,9 @@ IQ# (pronunciado i-q-sharp) es una extensión del SDK de .NET Core usada princi
         jupyter notebook
         ```
 
-    - Para abrir la copia del cuaderno de Jupyter Notebook y pegar la dirección URL proporcionada por la línea de comandos en el explorador.
+    - Para abrir el Jupyter Notebook, copie y pegue la dirección URL proporcionada por la línea de comandos en el explorador.
 
-    - Cree un cuaderno de Jupyter Notebook con un kernel de Q# y agregue el código siguiente a la primera celda del cuaderno:
+    - Cree un Jupyter Notebook con un kernel de Q # y agregue el código siguiente a la primera celda del cuaderno:
 
         ```qsharp
         operation SayHello () : Unit {
@@ -57,17 +57,21 @@ IQ# (pronunciado i-q-sharp) es una extensión del SDK de .NET Core usada princi
 
     - Ejecute esta celda del cuaderno:
 
-        ![Celda de cuaderno de Jupyter Notebook con código de Q#](~/media/install-guide-jupyter.png)
+        ![Jupyter Notebook celda con código de Q #](~/media/install-guide-jupyter.png)
 
-        Debe aparecer `SayHello` en la salida de la celda. Cuando se ejecuta en cuadernos de Jupyter Notebook, se compila el código de Q# y la salida del cuaderno es el nombre de las operaciones que encuentra.
+        Debe aparecer `SayHello` en la salida de la celda. Cuando se ejecuta en Jupyter Notebook, se compila el código de Q # y el Bloc de notas da como resultado el nombre de las operaciones que encuentra.
 
 
     - En una nueva celda, ejecute la operación que acaba de crear (en un simulador) mediante el `%simulate` comando:
 
-        ![Celda de cuaderno de Jupyter Notebook con el magic %simulate](~/media/install-guide-jupyter-simulate.png)
+        ![Jupyter Notebook celda con% de simulación mágica](~/media/install-guide-jupyter-simulate.png)
 
         Debería ver el mensaje impreso en la pantalla junto con el resultado de la operación invocada (aquí, vemos la tupla vacía `()` porque nuestra operación devuelve simplemente un `Unit` tipo).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que ha instalado Quantum Development Kit en su entorno preferido, puede escribir y ejecutar [su primer programa cuántico](xref:microsoft.quantum.quickstarts.qrng).
+Ahora que ha instalado el QDK para los cuadernos de Q # Jupyter, puede escribir y ejecutar [el primer programa Quantum](xref:microsoft.quantum.quickstarts.qrng) escribiendo el código de preguntas y respuestas directamente en el entorno de Jupyter Notebook.
+
+Para obtener más ejemplos de lo que puede hacer con los cuadernos de preguntas # Jupyter, eche un vistazo a:
+- [Introducción a Q # y Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Allí encontrará un Jupyter Notebook de preguntas y respuestas en el que se muestra cómo usar Q # en este entorno.
+- [Quantum katas](xref:microsoft.quantum.overview.katas), una colección de código abierto de tutoriales autoguiados y conjuntos de ejercicios de programación en forma de cuadernos de preguntas # Jupyter. Los [cuadernos de tutoriales de Quantum katas](https://github.com/microsoft/QuantumKatas#tutorial-topics) son un buen punto de partida. El katas Quantum se destina a la enseñanza de elementos de Quantum Computing y la programación de Q # al mismo tiempo. Son un ejemplo excelente del tipo de contenido que se puede crear con cuadernos de preguntas # Jupyter Notebook.
