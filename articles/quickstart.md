@@ -1,47 +1,49 @@
 ---
-title: Aspectos básicos de los programas cuánticos con Q#
-description: Obtenga información sobre cómo escribir un programa cuántico en Q#. Desarrolle una aplicación de estado Bell mediante el Quantum Development Kit (QDK)
+title: Exploración del entrelazamiento con Q#
+description: Obtenga información sobre cómo escribir un programa cuántico en Q#. Desarrolle una aplicación de estado Bell mediante el kit de desarrollo de Microsoft Quantum (QDK)
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906736"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426839"
 ---
-# <a name="quantum-basics-with-q"></a>Aspectos básicos de los programas cuánticos con Q#
+# <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Exploración del entrelazamiento con Q\#
 
-En este inicio rápido, se muestra cómo escribir un programa de Q# que manipula y mide qubits, y muestra los efectos de la superposición y el entrelazamiento.  Incluye instrucciones para instalar QDK, compilar el programa y ejecutarlo en un simulador cuántico.  
+En este tutorial, se muestra cómo escribir un programa de Q# que manipula y mide cúbits, y muestra los efectos de la superposición y el entrelazamiento.
+Incluye instrucciones para instalar QDK, compilar el programa y ejecutarlo en un simulador cuántico.  
 
-Escribirá una aplicación llamada Bell para demostrar el entrelazamiento cuántico.  El nombre Bell hace referencia a los estados de Bell, que son estados cuánticos específicos de dos qubits que se usan para representar los ejemplos más sencillos de la superposición y el entrelazamiento cuántico. 
+Escribirá una aplicación llamada Bell para demostrar el entrelazamiento cuántico.
+El nombre Bell hace referencia a los estados de Bell, que son estados cuánticos específicos de dos cúbits que se usan para representar los ejemplos más sencillos de la superposición y el entrelazamiento cuántico.
 
 ## <a name="pre-requisites"></a>Requisitos previos
 
 Si está listo para empezar a codificar, siga estos pasos antes de continuar: 
 
-* [Instale](xref:microsoft.quantum.install) el Quantum Development Kit con su lenguaje y entorno de desarrollo preferidos
+* [Instale](xref:microsoft.quantum.install) el kit de desarrollo de Microsoft Quantum con su lenguaje y entorno de desarrollo preferidos
 * Si ya tiene instalado el QDK, asegúrese de que tiene [actualizada](xref:microsoft.quantum.update) la última versión
 
 También puede seguir sin instalar QDK y revisar las introducciones al lenguaje de programación Q# y los primeros conceptos de la computación cuántica.
 
-## <a name="demonstrating-qubit-behavior-with-q"></a>Demostración del comportamiento de los qubits con Q#
+## <a name="demonstrating-qubit-behavior-with-q"></a>Demostración del comportamiento de los cúbits con Q#
 
-Recuerde nuestra [definición sencilla de qubit](xref:microsoft.quantum.overview.what#the-qubit).  Mientras que los bits clásicos contienen un único valor binario, como 0 o 1, el estado de un qubit puede ser una **superposición** simultánea de 0 y 1.  Conceptualmente, un qubit se podría considerar como una dirección en el espacio (también conocida como vector).  Un qubit puede estar en cualquiera de las direcciones posibles. Los dos **estados clásicos** son las dos direcciones, que representan el 100 % de probabilidad de medir 0 y el 100 % de probabilidad de medir 1.  Esta representación se visualiza también más formalmente con la [esfera de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Recuerde nuestra [definición sencilla de cúbit](xref:microsoft.quantum.overview.understanding).  Mientras que los bits clásicos contienen un único valor binario, como 0 o 1, el estado de un cúbit puede ser una **superposición** simultánea de 0 y 1.  Conceptualmente, un cúbit se podría considerar como una dirección en el espacio (también conocida como vector).  Un cúbit puede estar en cualquiera de las direcciones posibles. Los dos **estados clásicos** son las dos direcciones, que representan el 100 % de probabilidad de medir 0 y el 100 % de probabilidad de medir 1.  Esta representación se visualiza también más formalmente con la [esfera de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
-La acción de medir genera un resultado binario y cambia el estado del qubit. La medida produce un valor binario, ya sea 0 o 1.  El qubit pasa de estar en superposición (cualquier dirección) a estar en uno de los estados clásicos.  Después, si se repite la medida sin que intervenga ninguna operación, se produce el mismo resultado binario.  
+La acción de medir genera un resultado binario y cambia el estado del cúbit. La medida produce un valor binario, ya sea 0 o 1.  El cúbit pasa de estar en superposición (cualquier dirección) a estar en uno de los estados clásicos.  Después, si se repite la medida sin que intervenga ninguna operación, se produce el mismo resultado binario.  
 
-Varios qubits pueden estar **entrelazados**. Cuando se toma una medida de un qubit entrelazado, se actualizan también los conocimientos del estado de los otros.
+Varios cúbits pueden estar **entrelazados**. Cuando se toma una medida de un cúbit entrelazado, se actualizan también los conocimientos del estado de los otros.
 
 Ahora, estamos listos para demostrar cómo expresa Q# este comportamiento.  Comience con el programa más sencillo posible y compílelo para demostrar la superposición cuántica y el entrelazamiento cuántico.
 
 ## <a name="setup"></a>Configurar
 
-Las aplicaciones desarrolladas con el Microsoft Quantum Development Kit constan de dos partes:
+Las aplicaciones desarrolladas con el kit de desarrollo de Microsoft Quantum constan de dos partes:
 
 1. Uno o más algoritmos cuánticos, implementados mediante el lenguaje de programación cuántica Q#.
 1. Un programa host, implementado en un lenguaje de programación como Python o C# que actúa como el punto de entrada principal e invoca operaciones de Q# para ejecutar un algoritmo cuántico.
@@ -90,11 +92,11 @@ Las aplicaciones desarrolladas con el Microsoft Quantum Development Kit constan 
 
 ## <a name="write-a-q-operation"></a>Escriba una operación de Q#
 
-Nuestros objetivos son: preparar dos qubits en un estado cuántico específico; demostrar cómo operar en los qubits con Q# para cambiar su estado; y demostrar los efectos de la superposición y el entrelazamiento. Crearemos esto paso a paso para mostrar los estados del qubit, las operaciones y la medida.
+Nuestros objetivos son: preparar dos cúbits en un estado cuántico específico; demostrar cómo operar en los cúbits con Q# para cambiar su estado; y demostrar los efectos de la superposición y el entrelazamiento. Crearemos esto paso a paso para mostrar los estados del cúbit, las operaciones y la medida.
 
-**Información general:**  En el primer código que aparece a continuación, mostramos cómo trabajar con qubits en Q#.  Introduciremos dos operaciones, `M` y `X`, que transforman el estado de un qubit. 
+**Información general:**  En el primer código que aparece a continuación, mostramos cómo trabajar con cúbits en Q#.  Introduciremos dos operaciones, `M` y `X`, que transforman el estado de un cúbit. 
 
-En este fragmento de código, se define una operación `Set` que toma como parámetro un qubit y otro parámetro, `desired`, que representa el estado en el que queremos que esté el qubit.  La operación `Set` toma una medida en el qubit con la operación `M`.  En Q#, la medida de un qubit siempre devuelve `Zero` o `One`.  Si la medida devuelve un valor distinto del deseado, Set "invierte" el qubit; es decir, ejecuta una operación `X` que cambia el estado del qubit a un nuevo estado en el que las probabilidades de que una medida devuelva `Zero` y `One` se invierten.  Para mostrar el efecto de la operación `Set`, se agrega una operación `TestBellState`.  Esta operación toma como entrada un `Zero` o `One`, llama a la operación `Set` un número determinado de veces con esa entrada y cuenta el número de veces que la medida del qubit devolvió `Zero` y el número de veces que se devolvió `One`. Por supuesto, en esta primera simulación de la operación `TestBellState` esperamos que la salida muestre que todas las medidas de un qubit establecidas con `Zero` como entrada del parámetro devolverán `Zero`, y todas las medidas de un qubit establecidas con `One` como entrada del parámetro devolverán `One`.  Más adelante, agregaremos código a `TestBellState` para demostrar la superposición y el entrelazamiento.
+En este fragmento de código, se define una operación `Set` que toma como parámetro un cúbit y otro parámetro, `desired`, que representa el estado en el que queremos que esté el cúbit.  La operación `Set` toma una medida en el cúbit con la operación `M`.  En Q#, la medida de un cúbit siempre devuelve `Zero` o `One`.  Si la medida devuelve un valor distinto del deseado, Set "invierte" el cúbit; es decir, ejecuta una operación `X` que cambia el estado del cúbit a un nuevo estado en el que las probabilidades de que una medida devuelva `Zero` y `One` se invierten.  Para mostrar el efecto de la operación `Set`, se agrega una operación `TestBellState`.  Esta operación toma como entrada un `Zero` o `One`, llama a la operación `Set` un número determinado de veces con esa entrada y cuenta el número de veces que la medida del cúbit devolvió `Zero` y el número de veces que se devolvió `One`. Por supuesto, en esta primera simulación de la operación `TestBellState` esperamos que la salida muestre que todas las medidas de un cúbit establecidas con `Zero` como entrada del parámetro devolverán `Zero`, y todas las medidas de un cúbit establecidas con `One` como entrada del parámetro devolverán `One`.  Más adelante, agregaremos código a `TestBellState` para demostrar la superposición y el entrelazamiento.
 
 
 ### <a name="q-operation-code"></a>Código de operación de Q#
@@ -114,10 +116,10 @@ En este fragmento de código, se define una operación `Set` que toma como pará
     }
     ```
 
-    Ahora se puede llamar a esta operación para establecer un qubit en un estado clásico, ya sea devolviendo `Zero` el 100 % del tiempo o devolviendo `One` el 100 % del tiempo.  `Zero` y `One` son constantes que representan los únicos dos resultados posibles de la medida de un qubit.
+    Ahora se puede llamar a esta operación para establecer un cúbit en un estado clásico, ya sea devolviendo `Zero` el 100 % del tiempo o devolviendo `One` el 100 % del tiempo.  `Zero` y `One` son constantes que representan los únicos dos resultados posibles de la medida de un cúbit.
 
-    La operación `Set` mide el qubit.
-    Si el qubit está en el estado que queremos, `Set` lo deja así; de lo contrario, al ejecutar la operación `X`, cambiamos el estado del qubit al estado deseado.
+    La operación `Set` mide el cúbit.
+    Si el cúbit está en el estado que queremos, `Set` lo deja así; de lo contrario, al ejecutar la operación `X`, cambiamos el estado del cúbit al estado deseado.
 
 ### <a name="about-q-operations"></a>Acerca de las operaciones de Q#
 
@@ -129,10 +131,10 @@ El tipo de valor devuelto de la operación se especifica después de un signo de
 
 Ha usado dos operaciones cuánticas en la primera operación de Q#:
 
-* La operación [M](xref:microsoft.quantum.intrinsic.m), que mide el estado del qubit.
-* La operación [x](xref:microsoft.quantum.intrinsic.x), que invierte el estado de un qubit.
+* La operación [M](xref:microsoft.quantum.intrinsic.m), que mide el estado del cúbit.
+* La operación [x](xref:microsoft.quantum.intrinsic.x), que invierte el estado de un cúbit.
 
-Una operación cuántica transforma el estado de un qubit. Algunos usuarios hablan de puertas cuánticas en lugar de operaciones, por analogía con las puertas lógicas clásicas. Esto tiene su origen en los primeros tiempos de la computación cuántica, cuando los algoritmos eran una simple construcción teórica y se visualizaban como diagramas, de forma similar a los diagramas de circuitos de la computación clásica.
+Una operación cuántica transforma el estado de un cúbit. Algunos usuarios hablan de puertas cuánticas en lugar de operaciones, por analogía con las puertas lógicas clásicas. Esto tiene su origen en los primeros tiempos de la computación cuántica, cuando los algoritmos eran una simple construcción teórica y se visualizaban como diagramas, de forma similar a los diagramas de circuitos de la computación clásica.
 
 ### <a name="add-q-test-code"></a>Agregar código de prueba de Q#
 
@@ -161,7 +163,7 @@ Una operación cuántica transforma el estado de un qubit. Algunos usuarios habl
     }
     ```
 
-    Esta operación (`TestBellState`) creará un bucle para `count` iteraciones, establecerá un valor de `initial` especificado en qubits y, a continuación, medirá (`M`) el resultado. Recopilará estadísticas sobre cuántos ceros y unos se han medido y los devolverá al autor de la llamada. Realiza otra operación necesaria. Restablece el qubit a un estado conocido (`Zero`) antes de devolverlo, lo que permite que otros usuarios asignen este qubit en un estado conocido. Esto es necesario para la instrucción `using`.
+    Esta operación (`TestBellState`) creará un bucle para `count` iteraciones, establecerá un valor de `initial` especificado en cúbits y, a continuación, medirá (`M`) el resultado. Recopilará estadísticas sobre cuántos ceros y unos se han medido y los devolverá al autor de la llamada. Realiza otra operación necesaria. Restablece el cúbit a un estado conocido (`Zero`) antes de devolverlo, lo que permite que otros usuarios asignen este cúbit en un estado conocido. Esto es necesario para la instrucción `using`.
 
 ### <a name="about-variables-in-q"></a>Acerca de las variables en Q#
 
@@ -173,7 +175,7 @@ En ambos casos, el compilador deduce el tipo de una variable. Para las variables
 
 ### <a name="about-using-statements-in-q"></a>Acerca de las instrucciones `using` en Q#
 
-La instrucción también es especial para Q#. Se usa para asignar qubits para su uso en un bloque de código. En Q#, todos los qubits se asignan y liberan dinámicamente, en lugar de ser recursos fijos que están disponibles para toda la duración de un algoritmo complejo. Una instrucción `using` asigna un conjunto de qubits al principio y libera esos qubits al final del bloque.
+La instrucción `using` también es especial para Q#. Se usa para asignar cúbits para su uso en un bloque de código. En Q#, todos los cúbits se asignan y liberan dinámicamente, en lugar de ser recursos fijos que están disponibles para toda la duración de un algoritmo complejo. Una instrucción `using` asigna un conjunto de cúbits al principio y libera esos cúbits al final del bloque.
 
 ## <a name="create-the-host-application-code"></a>Cree el código de aplicación host
 
@@ -241,7 +243,7 @@ La instrucción también es especial para Q#. Se usa para asignar qubits para su
 
 La aplicación host de Python consta de tres partes:
 
-* Calcule los argumentos necesarios para el algoritmo cuántico. En el ejemplo, `count` se fija en 1000 y `initial` es el valor inicial del qubit.
+* Calcule los argumentos necesarios para el algoritmo cuántico. En el ejemplo, `count` se fija en 1000 y `initial` es el valor inicial del cúbit.
 * Ejecute el algoritmo cuántico llamando al método `simulate()` de la operación Q# importada.
 * Procesamiento del resultado de la operación. En el ejemplo, `res` recibe el resultado de la operación. Aquí, el resultado es una tupla del número de ceros (`num_zeros`) y el número de unos (`num_ones`) que el simulador mide. Deconstruimos la tupla para obtener los dos campos e imprimir los resultados.
 
@@ -250,7 +252,7 @@ La aplicación host de Python consta de tres partes:
 La aplicación host de C# tiene cuatro partes:
 
 * Construya un simulador cuántico. En el ejemplo, `qsim` es el simulador.
-* Calcule los argumentos necesarios para el algoritmo cuántico. En el ejemplo, `count` se fija en 1000 y `initial` es el valor inicial del qubit.
+* Calcule los argumentos necesarios para el algoritmo cuántico. En el ejemplo, `count` se fija en 1000 y `initial` es el valor inicial del cúbit.
 * Ejecute el algoritmo cuántico. Cada operación de Q# genera una clase C# con el mismo nombre. Esta clase tiene un método `Run` que ejecuta la operación **de forma asincrónica**. La ejecución es asincrónica debido a que la ejecución en el hardware real será asincrónica. Dado que el método `Run` es asincrónico, se captura la propiedad `Result`. Esto bloquea la ejecución hasta que la tarea se completa y devuelve el resultado de forma sincrónicamente.
 * Procesamiento del resultado de la operación. En el ejemplo, `res` recibe el resultado de la operación. Aquí, el resultado es una tupla del número de ceros (`numZeros`) y el número de unos (`numOnes`) que el simulador mide. Esto se devuelve como ValueTuple en C#. Deconstruimos la tupla para obtener los dos campos, imprimir los resultados y esperar una keypress.
 
@@ -317,9 +319,9 @@ El programa se cerrará después de presionar una tecla.
 
 ## <a name="prepare-superposition"></a>Preparar la superposición
 
-**Introducción** Ahora veremos cómo expresa Q# las maneras de colocar los qubits en superposición.  Recuerde que el estado de un qubit puede ser una superposición de 0 y 1.  Usaremos la operación `Hadamard` para hacerlo. Si el qubit está en cualquiera de los estados clásicos (al medir devuelve `Zero` siempre o `One` siempre), las operaciones `Hadamard` o `H` pondrán el qubit en un estado tal que al medirlo, devolverá `Zero` el 50 % del tiempo y devolverá `One` el otro 50 % del tiempo.  Conceptualmente, el qubit se puede considerar a medio camino entre `Zero` y `One`.  Ahora, cuando simulemos la operación `TestBellState`, veremos que los resultados devolverán aproximadamente un número igual de `Zero` y `One` después de medir.  
+**Introducción** Ahora veremos cómo expresa Q# las maneras de colocar los cúbits en superposición.  Recuerde que el estado de un cúbit puede ser una superposición de 0 y 1.  Usaremos la operación `Hadamard` para hacerlo. Si el cúbit está en cualquiera de los estados clásicos (al medir devuelve `Zero` siempre o `One` siempre), las operaciones `Hadamard` o `H` pondrán el cúbit en un estado tal que al medirlo, devolverá `Zero` el 50 % del tiempo y devolverá `One` el otro 50 % del tiempo.  Conceptualmente, el cúbit se puede considerar a medio camino entre `Zero` y `One`.  Ahora, cuando simulemos la operación `TestBellState`, veremos que los resultados devolverán aproximadamente un número igual de `Zero` y `One` después de medir.  
 
-En primer lugar, intentaremos invertir el qubit (si el qubit está en estado `Zero` se invertirá a `One` y viceversa). Esto se logra con una operación `X` antes de medirlo en `TestBellState`:
+En primer lugar, intentaremos invertir el cúbit (si el cúbit está en estado `Zero` se invertirá a `One` y viceversa). Esto se logra con una operación `X` antes de medirlo en `TestBellState`:
 
 ```qsharp
 X(qubit);
@@ -333,7 +335,7 @@ Init:Zero 0s=0    1s=1000
 Init:One  0s=1000 1s=0
 ```
 
-Sin embargo, todo lo que hemos visto hasta ahora es clásico. Ahora obtengamos un resultado cuántico. Lo único que tenemos que hacer es reemplazar la operación `X` de la ejecución anterior por una operación `H` o Hadamard. En lugar de voltear totalmente el qubit de 0 a 1, solo lo voltearemos a la mitad. Las líneas reemplazadas en `TestBellState` ahora tienen el siguiente aspecto:
+Sin embargo, todo lo que hemos visto hasta ahora es clásico. Ahora obtengamos un resultado cuántico. Lo único que tenemos que hacer es reemplazar la operación `X` de la ejecución anterior por una operación `H` o Hadamard. En lugar de voltear totalmente el cúbit de 0 a 1, solo lo voltearemos a la mitad. Las líneas reemplazadas en `TestBellState` ahora tienen el siguiente aspecto:
 
 ```qsharp
 H(qubit);
@@ -347,13 +349,13 @@ Init:Zero 0s=484  1s=516
 Init:One  0s=522  1s=478
 ```
 
-Cada vez que medimos, solicitamos un valor clásico, pero el qubit se encuentra a medio camino entre 0 y 1, por lo que obtenemos (estadísticamente) 0 la mitad del tiempo y 1 la otra mitad del tiempo. Esto se conoce como __superposición__ y nos proporciona nuestra primera vista real en un estado cuántico.
+Cada vez que medimos, solicitamos un valor clásico, pero el cúbit se encuentra a medio camino entre 0 y 1, por lo que obtenemos (estadísticamente) 0 la mitad del tiempo y 1 la otra mitad del tiempo. Esto se conoce como __superposición__ y nos proporciona nuestra primera vista real en un estado cuántico.
 
 ## <a name="prepare-entanglement"></a>Preparación del entrelazamiento
 
-**Información general:**  Ahora veamos cómo expresa Q# las maneras de entrelazar los qubits.  En primer lugar, establecemos el primer qubit en el estado inicial y después usamos la operación `H` para ponerlo en superposición.  Luego, antes de medir el primer qubit, usamos una nueva operación (`CNOT`), que significa Controlled-Not.  El resultado de ejecutar esta operación en dos qubits es la inversión del segundo qubit si el primero es `One`.  Ahora, los dos qubits están entrelazados.  Nuestras estadísticas del primer qubit no han cambiado (50-50 de probabilidades de `Zero` o `One` después de medir) pero ahora, cuando medimos el segundo qubit, es __siempre__ igual que lo que se midió para el primer qubit. Nuestro `CNOT` ha hecho el entrelazamiento de los dos qubits, de modo que lo que le suceda a uno, le sucede al otro. Si invirtió las medidas (hizo la del segundo qubit antes del primero), sucedería lo mismo. La primera medida sería aleatoria y la segunda sería en el paso de bloqueo con lo que se haya descubierto en primer lugar.
+**Información general:**  Ahora veamos cómo expresa Q# las maneras de entrelazar los cúbits.  En primer lugar, establecemos el primer cúbit en el estado inicial y después usamos la operación `H` para ponerlo en superposición.  Luego, antes de medir el primer cúbit, usamos una nueva operación (`CNOT`), que significa Controlled-Not.  El resultado de ejecutar esta operación en dos cúbits es la inversión del segundo cúbit si el primero es `One`.  Ahora, los dos cúbits están entrelazados.  Nuestras estadísticas del primer cúbit no han cambiado (50-50 de probabilidades de `Zero` o `One` después de medir) pero ahora, cuando medimos el segundo cúbit, es __siempre__ igual que lo que se midió para el primer cúbit. Nuestro `CNOT` ha hecho el entrelazamiento de los dos cúbits, de modo que lo que le suceda a uno, le sucede al otro. Si invirtió las medidas (hizo la del segundo cúbit antes del primero), sucedería lo mismo. La primera medida sería aleatoria y la segunda sería en el paso de bloqueo con lo que se haya descubierto en primer lugar.
 
-Lo primero que debemos hacer es asignar 2 qubits en lugar de uno en `TestBellState`:
+Lo primero que debemos hacer es asignar 2 cúbits en lugar de uno en `TestBellState`:
 
 ```qsharp
 using ((q0, q1) = (Qubit(), Qubit())) {
@@ -370,9 +372,9 @@ CNOT(q0, q1);
 let res = M(q0);
 ```
 
-Hemos agregado otra operación `Set` para inicializar el primer qubit para asegurarnos de que siempre está en `Zero` cuando se inicia.
+Hemos agregado otra operación `Set` para inicializar el primer cúbit para asegurarnos de que siempre está en `Zero` cuando se inicia.
 
-También necesitamos restablecer el segundo qubit antes de liberarlo.
+También necesitamos restablecer el segundo cúbit antes de liberarlo.
 
 ```qsharp
 Set(Zero, q0);
@@ -409,7 +411,7 @@ La rutina completa se ve ahora así:
     }
 ```
 
-Si la ejecutamos, obtendremos exactamente el mismo resultado 50-50 que obtuvimos antes. Sin embargo, ahora nos interesa cómo reacciona el segundo qubit al primero que se mide. Agregaremos esta estadística con una nueva versión de la operación `TestBellState`:
+Si la ejecutamos, obtendremos exactamente el mismo resultado 50-50 que obtuvimos antes. Sin embargo, ahora nos interesa cómo reacciona el segundo cúbit al primero que se mide. Agregaremos esta estadística con una nueva versión de la operación `TestBellState`:
 
 ```qsharp
     operation TestBellState(count : Int, initial : Result) : (Int, Int, Int) {
@@ -443,7 +445,7 @@ Si la ejecutamos, obtendremos exactamente el mismo resultado 50-50 que obtuvimos
     }
 ```
 
-El nuevo valor devuelto (`agree`) realiza un seguimiento de cada vez que la medida del primer qubit coincide con la medida del segundo. También tenemos que actualizar la aplicación host, según corresponda:
+El nuevo valor devuelto (`agree`) realiza un seguimiento de cada vez que la medida del primer cúbit coincide con la medida del segundo. También tenemos que actualizar la aplicación host, según corresponda:
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -492,13 +494,13 @@ Init:Zero 0s=499  1s=501  agree=1000
 Init:One  0s=490  1s=510  agree=1000
 ```
 
-Tal y como se indicó en la introducción, nuestras estadísticas del primer qubit no han cambiado (50-50 de probabilidades de 0 o 1 después de medir) pero ahora, cuando medimos el segundo qubit, es __siempre__ igual que lo que se midió para el primer qubit, porque están entrelazados.
+Tal y como se indicó en la introducción, nuestras estadísticas del primer cúbit no han cambiado (50-50 de probabilidades de 0 o 1 después de medir) pero ahora, cuando medimos el segundo cúbit, es __siempre__ igual que lo que se midió para el primer cúbit, porque están entrelazados.
 
 Enhorabuena, ha escrito su primer programa cuántico.
 
 ## <a name="whats-next"></a>¿Qué sigue?
 
-El inicio rápido sobre la [búsqueda de Grover](xref:microsoft.quantum.quickstarts.search) muestra cómo compilar y ejecutar una búsqueda de Grover, uno de los algoritmos de computación cuántica más populares, y es un buen ejemplo de un programa de Q# que se puede usar para resolver problemas reales con la computación cuántica.  
+El tutorial sobre la [búsqueda de Grover](xref:microsoft.quantum.quickstarts.search) muestra cómo compilar y ejecutar una búsqueda de Grover, uno de los algoritmos de computación cuántica más populares, y es un buen ejemplo de un programa de Q# que se puede usar para resolver problemas reales con la computación cuántica.  
 
-En [Introducción a Quantum Development Kit](xref:microsoft.quantum.welcome) se recomiendan más formas de aprender Q# y programación cuántica.
+En [Introducción al kit de desarrollo de Microsoft Quantum](xref:microsoft.quantum.welcome) se recomiendan más formas de aprender Q# y programación cuántica.
 
