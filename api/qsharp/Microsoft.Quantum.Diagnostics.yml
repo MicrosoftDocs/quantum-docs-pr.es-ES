@@ -6,6 +6,8 @@ functions:
   summary: Valida que dos matrices de valores booleanos son iguales.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: Valida que dos matrices de valores enteros son iguales.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: Declara que una condición clásica es falsa.
 - uid: microsoft.quantum.diagnostics.dumpmachine
   summary: Vuelca el estado actual del equipo de destino.
 - uid: microsoft.quantum.diagnostics.dumpregister
@@ -34,15 +36,15 @@ functions:
   summary: Valida que un valor de punto flotante clásico tenga el valor esperado hasta una pequeña tolerancia de 1E-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: La aserción de que qubits dado está en el{0}estado $ \ket $.
+  summary: La aserción de que qubits dado está en el {0} Estado $ \ket $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: La aserción de que los qubits proporcionados están{0}todos en $ \ket $ State hasta una tolerancia determinada.
+  summary: La aserción de que los qubits proporcionados están todos en $ \ket {0} $ State hasta una tolerancia determinada.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Dadas dos operaciones, garantiza que actúan de forma idéntica para todos los Estados de entrada.
 
 
-    Esta aserción se implementa comprobando la acción de las operaciones en todos los Estados del formulario $V _0 \otimes... \otimes v_ {n-1} $, donde $V _k $ es uno de los Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ y $ \ket{i} $ (+ 1 eigenstate del operador Pauli Y).
+    Esta aserción se implementa comprobando la acción de las operaciones en todos los Estados del formulario $V _0 \otimes... \otimes V_ {n-1} $, donde $V _k $ es uno de los Estados $ \ket {0} $, $ \ket {1} $, $ \ket{+} $ y $ \ket{i} $ (+ 1 eigenstate del operador Pauli Y).
 
 
     Esta aserción usa $n $ qubits y requiere varias llamadas de las operaciones que se van a comparar.
@@ -82,9 +84,9 @@ newtypes:
   summary: Atributo reconocido por el compilador que se usa para marcar una prueba unitaria.
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones y operaciones útiles para fines de diagnóstico, incluidas operaciones de aserción y funciones de notificaciones."
 metadata:
-  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676954"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326598"

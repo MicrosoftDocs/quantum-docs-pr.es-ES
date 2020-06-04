@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: Dada una matriz y un predicado definidos para los elementos de la matriz, devuelve una matriz que consta de los elementos que cumplen el predicado.
 - uid: microsoft.quantum.arrays.fold
-  summary: Recorre en iteración una `f` función `array`a través `f(f(f(initialState, array[0]), array[1]), ...)`de una matriz y devuelve.
+  summary: Recorre en iteración una función `f` a través de una matriz `array` y devuelve `f(f(f(initialState, array[0]), array[1]), ...)` .
 - uid: microsoft.quantum.arrays.head
   summary: Devuelve el primer elemento de la matriz.
 - uid: microsoft.quantum.arrays.indexof
@@ -29,6 +29,8 @@ functions:
   summary: Dada una matriz, devuelve un intervalo sobre los índices de esa matriz, adecuado para su uso en un bucle for.
 - uid: microsoft.quantum.arrays.isempty
   summary: Devuelve true si y solo si una matriz está vacía.
+- uid: microsoft.quantum.arrays.ispermutation
+  summary: Devuelve true si y solo si una matriz determinada representa una permutación.
 - uid: microsoft.quantum.arrays.lookupfunction
   summary: Dada una matriz, devuelve una función que devuelve elementos de esa matriz.
 - uid: microsoft.quantum.arrays.mapped
@@ -69,9 +71,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada una matriz y una operación que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la operación.
 metadata:
-  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673400"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326717"
