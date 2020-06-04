@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 93432cef9711b6780192cd59e92b09647a264b5c
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431213"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327312"
 ---
 # <a name="type-expressions-in-q"></a>Expresiones de tipo en Q #
 
@@ -221,7 +221,6 @@ let g = Foo(arg)!;      // Syntax error
 Un literal de matriz es una secuencia de una o varias expresiones de elemento, separadas por comas, entre `[` y `]` .
 Todos los elementos deben ser compatibles con el mismo tipo.
 
-
 Dadas dos matrices del mismo tipo, `+` se puede utilizar el operador binario para formar una nueva matriz que es la concatenación de las dos matrices.
 Por ejemplo, `[1,2,3] + [4,5,6]` es `[1,2,3,4,5,6]` .
 
@@ -229,6 +228,9 @@ Por ejemplo, `[1,2,3] + [4,5,6]` es `[1,2,3,4,5,6]` .
 
 Dado un tipo y una `Int` expresión, el `new` operador se puede utilizar para asignar una nueva matriz del tamaño especificado.
 Por ejemplo, `new Int[i + 1]` asignaría una nueva `Int` matriz con `i + 1` elementos.
+
+No se permiten literales de matriz vacíos, `[]` ,.
+En lugar `new ★[0]` de usar, donde `★` es un marcador de posición para un tipo adecuado, permite crear la matriz deseada de longitud cero.
 
 Los elementos de una nueva matriz se inicializan en un valor predeterminado dependiente del tipo.
 En la mayoría de los casos, se trata de una variación de cero.
@@ -373,8 +375,7 @@ Por ejemplo, si `Op1` , `Op2` y `Op3` todos son `Qubit[] => Unit` , pero `Op1` a
 - `[Op1, Op3]`es una matriz de `(Qubit[] => Unit is Adj)` operaciones.
 - `[Op2, Op3]`es una matriz de `(Qubit[] => Unit is Ctl)` operaciones.
 
-No se permiten literales de matriz vacíos, `[]` ,.
-En lugar `new ★[0]` de usar, donde `★` es un marcador de posición para un tipo adecuado, permite crear la matriz deseada de longitud cero.
+Sin embargo, `(Qubit[] => Unit is Adj)` mientras `(Qubit[] => Unit is Ctl)` que las operaciones y tienen el tipo base común de `(Qubit[] => Unit)` , tenga en cuenta que las matrices *de* estos operadores no comparten un tipo base común. Por ejemplo, `[[Op1], [Op2]]` generaría un error en este momento porque está intentando crear una matriz de los tipos de matriz incompatibles `(Qubit[] => Unit is Adj)[]` y `(Qubit[] => Unit is Ctl)[]` .
 
 
 ## <a name="conditional-expressions"></a>Expresiones condicionales
@@ -492,5 +493,6 @@ Operador | Polaridad | Descripción | Tipos de operando
  `?` `|` | Ternario | Condicional | `Bool`para el lado izquierdo
 `w/` `<-` | Ternario | Copiar y actualizar | vea [expresiones de copia y actualización](#copy-and-update-expressions)
 
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="next-steps"></a>Pasos siguientes
+
 Ahora que puede trabajar con expresiones en Q #, puede empezar a usar [operaciones y funciones en q #](xref:microsoft.quantum.guide.operationsfunctions) para obtener información sobre cómo definir y llamar a operaciones y funciones.

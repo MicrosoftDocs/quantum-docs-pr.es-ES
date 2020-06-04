@@ -9,19 +9,19 @@ operations:
 - uid: microsoft.quantum.measurement.measurewithscratch
   summary: Mide el operador de Pauli dado mediante un qubit de tachado explícito para realizar la medida.
 - uid: microsoft.quantum.measurement.mresetx
-  summary: Mide un único qubit en X y lo restablece en el estado de base estándar | 0 〉 después de la medida.
+  summary: Mide un único qubit en X y lo restablece a un estado inicial fijo después de la medición.
 - uid: microsoft.quantum.measurement.mresety
-  summary: Mide un qubit único en la base y y lo restablece en el estado de base estándar | 0 〉 después de la medida.
+  summary: Mide un qubit único en la base y y lo restablece en un estado inicial fijo después de la medición.
 - uid: microsoft.quantum.measurement.mresetz
-  summary: Mide un único qubit en `Z` base y lo restablece en el estado de base estándar | 0 〉 después de la medida.
+  summary: Mide un único qubit en la Z y lo restablece a un estado inicial fijo después de la medición.
 - uid: microsoft.quantum.measurement.multim
   summary: Mide cada qubit en una matriz determinada en función del estándar.
 - uid: microsoft.quantum.measurement.settobasisstate
   summary: Establece un qubit en un estado de base de cálculo determinado midiendo el qubit y aplicando un volteo de bits si es necesario.
 metadata:
-  ms.openlocfilehash: 8e0910bf53734ffe65aa12b06321ec9b3403133f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 894c0bb7f0b57e9fe04837b89cd57345745df6c5
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673142"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326632"

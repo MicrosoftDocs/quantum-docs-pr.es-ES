@@ -3,7 +3,11 @@ uid: microsoft.quantum.measurement.mresety
 name: MResetY
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: Mide un qubit único en la base y y lo restablece en el estado de base estándar | 0 〉 después de la medida.
+summary: >-
+  Mide un qubit único en la base y y lo restablece en un estado inicial fijo después de la medición.
+
+
+  Realiza una medición de un solo qubit en el $Y $-Basis y garantiza que el qubit se devuelve a $ \ket {0} $ después de la medida.
 syntax: 'operation MResetY (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
@@ -19,9 +23,9 @@ output:
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 2c06d14133399c5afd7d09b67deaa6e63953f1c0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c177d035a949e700023cf8a89ec0b5d25aac645
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682692"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84327431"

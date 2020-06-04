@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: f42e3e4492f934d7a8f03d4fec6fa0de765401d7
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909932"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327652"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Clasificación básica: clasificación de datos con QDK
 
@@ -19,10 +19,10 @@ En esta guía de inicio rápido, obtendrá información sobre cómo ejecutar un 
 
 En esta guía, usaremos el conjunto de caracteres de media luna con una estructura de clasificador definida en Q #.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
-- Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- [Creación de un proyecto de Q#](xref:microsoft.quantum.howto.createproject)
+- [Kit de desarrollo de Microsoft Quantum](xref:microsoft.quantum.install).
+- Cree un proyecto de Q # para un [programa host de Python](xref:microsoft.quantum.install.python) o un [programa host de C#](xref:microsoft.quantum.install.cs).
 
 ## <a name="host-program"></a>Programa host
 
@@ -34,7 +34,7 @@ El programa host consta de tres partes:
 
     ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python con Visual Studio Code o la línea de comandos](#tab/tabid-python)
 
-    Para ejecutarlo es el clasificador de preguntas y respuestas de Python, guarde el código siguiente como `host.py`. Recuerde que también necesita el archivo Q # `Training.qs` que se explica más adelante en este tutorial.
+    Para ejecutarlo es el clasificador de preguntas y respuestas de Python, guarde el código siguiente como `host.py` . Recuerde que también necesita el archivo Q # `Training.qs` que se explica más adelante en este tutorial.
 
     :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="3-42":::
 
@@ -49,7 +49,7 @@ El programa host consta de tres partes:
 
     ### <a name="c-with-visual-studio-code-or-the-command-line"></a>[C# con Visual Studio Code o la línea de comandos](#tab/tabid-csharp)
 
-    Para ejecutarlo es el clasificador de C#preguntas y respuestas, guarde el código siguiente como `Host.cs`. Recuerde que también necesita el archivo Q # `Training.qs` que se explica más adelante en este tutorial.
+    Para ejecutarlo es el clasificador de preguntas y respuestas de C#, guarde el código siguiente como `Host.cs` . Recuerde que también necesita el archivo Q # `Training.qs` que se explica más adelante en este tutorial.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -63,7 +63,7 @@ El programa host consta de tres partes:
 
     ### <a name="c-with-visual-studio-2019"></a>[C# con Visual Studio 2019](#tab/tabid-vs2019)
 
-    Para ejecutar el nuevo programa de preguntas # C# desde en Visual Studio, modifique `Host.cs` para incluir el C# código siguiente. Recuerde que también necesita el archivo Q # `Training.qs` que se explica más adelante en este tutorial.
+    Para ejecutar el nuevo programa de preguntas # desde C# en Visual Studio, modifique `Host.cs` para que incluya el siguiente código de c#. Recuerde que también necesita el archivo Q # `Training.qs` que se explica más adelante en este tutorial.
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
@@ -76,17 +76,17 @@ El programa host consta de tres partes:
     ```
     ***
 
-## <a name="q-classifier-code"></a>Q\# código clasificador
+## <a name="q-classifier-code"></a>Q ( \# código de clasificador)
 
 Ahora veamos cómo se definen las operaciones invocadas por el programa host en Q #.
-Guardamos el siguiente código en un archivo denominado `Training.qs`.
+Se guarda el código siguiente en un archivo denominado `Training.qs` .
 
 :::code language="qsharp" source="~/quantum/samples/machine-learning/half-moons/Training.qs" range="4-116":::
 
 Las funciones y operaciones más importantes definidas en el código anterior son:
 
 - `ClassifierStructure() : ControlledRotation[]`: en esta función se establece la estructura de nuestro modelo de circuito agregando las capas de las puertas controladas que se consideran. Este paso es análogo a la declaración de capas de neuronas en un modelo de aprendizaje profundo secuencial.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: esta operación es la parte principal del código y define el entrenamiento. Aquí se cargan los ejemplos del conjunto de DataSet incluido en la biblioteca, se establecen los parámetros de hiperparámetros y los parámetros iniciales para el entrenamiento y se inicia el entrenamiento mediante una llamada a la operación `TrainSequentialClassifier` incluye en la biblioteca. Genera los parámetros y la diferencia que determinan el clasificador.
+- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: esta operación es la parte principal del código y define el entrenamiento. Aquí se cargan los ejemplos del conjunto de DataSet incluido en la biblioteca, se establecen los parámetros de hiperparámetros y los parámetros iniciales para el entrenamiento y se inicia el entrenamiento mediante una llamada a la operación `TrainSequentialClassifier` incluida en la biblioteca. Genera los parámetros y la diferencia que determinan el clasificador.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: esta operación define el proceso de validación para evaluar el modelo. Aquí se cargan los ejemplos de validación, el número de medidas por muestra y la tolerancia. Genera el número de clasificaciones incorrectas en el lote elegido de ejemplos para la validación.
 
 ## <a name="next-steps"></a>Pasos siguientes

@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: c534e016fcb8b50e66c11ca29c253ba0512acc6e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 1f1b641563fe35879abeee32b4f0aeeb7001b1a0
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430958"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84326547"
 ---
 # <a name="control-flow-in-q"></a>Flujo de control en Q #
 
@@ -54,7 +54,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-o
+or
 ```qsharp
 if (i == 1) {
     X(target);
@@ -178,11 +178,11 @@ Por ejemplo,
 ```qsharp
 return 1;
 ```
-o
+or
 ```qsharp
 return ();
 ```
-o
+or
 ```qsharp
 return (results, qubits);
 ```
@@ -329,5 +329,6 @@ Las características de programación más importantes que se muestran en esta o
 Vea también [pruebas y depuración](xref:microsoft.quantum.guide.testingdebugging) para obtener más información sobre las [`Assert`](xref:microsoft.quantum.intrinsic.assert) [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operaciones y.
 
 
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="next-steps"></a>Pasos siguientes
+
 Obtenga información sobre las [pruebas y la depuración](xref:microsoft.quantum.guide.testingdebugging) en preguntas y respuestas.

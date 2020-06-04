@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
-ms.openlocfilehash: fd0ea47f00b1456ec460808ef7d451c8427677cd
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: e77b52d1a6eb7e2f62ab12dedd75d00ac8fec4be
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431162"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327329"
 ---
 # <a name="q-basics"></a>Conceptos básicos de preguntas y respuestas
 
@@ -91,7 +91,7 @@ let count = 5;
 ```
 
 Un ejemplo ligeramente más interesante es la `for` instrucción que admite la iteración e incluye un *bloque de instrucciones*.
-Supongamos que `qubits` el símbolo está enlazado a un registro de qubits (técnicamente de tipo `Qubit[]` , es decir, una matriz de `Qubit` tipos). A continuación
+Supongamos que `qubits` el símbolo está enlazado a un registro de qubits (técnicamente de tipo `Qubit[]` , es decir, una matriz de `Qubit` tipos). Entonces
 ```qsharp
 for (qubit in qubits) {
     H(qubit);
@@ -106,8 +106,7 @@ Las instrucciones de evaluación de expresiones requieren un punto y coma de fin
 Casi todos los aspectos de un programa de preguntas y respuestas se compilan mediante instrucciones, por lo que ninguna página puede abarcar toda la información relacionada con ellos.
 Sin embargo, su estructura léxica y su formato se describen en la página [estructura de archivo q #](xref:microsoft.quantum.guide.filestructure) , la asignación de enlace de símbolos y el ámbito en [las variables en q #](xref:microsoft.quantum.guide.variables), y los bucles de flujo de control, como `for` en el [flujo de control en Q #](xref:microsoft.quantum.guide.controlflow).
 
-
-## <a name="whats-next"></a>Pasos adicionales
+## <a name="next-steps"></a>Pasos siguientes
 En el resto de esta guía, le mostraremos cómo usar Q # para construir programas Quantum complejos a través de los bloques de creación básicos de operaciones, funciones y tipos.
 
 Para empezar, puede empezar a obtener información sobre los [tipos en preguntas y respuestas](xref:microsoft.quantum.guide.types).

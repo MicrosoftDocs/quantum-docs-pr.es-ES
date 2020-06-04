@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: 4a551ee90a0abb6e42953cf04c7f5a8ca3573f26
-ms.sourcegitcommit: 682a4a5f5dd23ca58a4addf62aea4086bb308552
+ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83609148"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327295"
 ---
 # <a name="types-in-q"></a>Tipos en Q#
 
@@ -63,7 +63,8 @@ En el segundo ejemplo, tenga en cuenta que esto representa una matriz potencialm
 Q # no proporciona compatibilidad con matrices multidimensionales rectangulares.
 
 Un valor de matriz se puede escribir en el código fuente de Q # mediante el uso de corchetes alrededor de los elementos de una matriz, como en `[PauliI, PauliX, PauliY, PauliZ]` .
-El tipo de un literal de matriz viene determinado por el tipo base común de todos los elementos de la matriz. 
+El tipo de un literal de matriz viene determinado por el tipo base común de todos los elementos de la matriz. Por lo tanto, si se intenta construir una matriz con elementos que no tienen un tipo base común, se producirá un error.  
+Consulte [matrices de llamadas](xref:microsoft.quantum.guide.expressions#arrays-of-callables) a las que se puede llamar para obtener un ejemplo de esto.
 
 > [!WARNING]
 > Los elementos de una matriz no se pueden cambiar una vez creada la matriz.
@@ -291,7 +292,8 @@ Al invocar un parámetro de tipo al que se puede llamar, todos los argumentos qu
 
 Q # no proporciona un mecanismo para restringir los tipos posibles que se pueden sustituir por un parámetro de tipo.
 
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="next-steps"></a>Pasos siguientes
+
 Ahora que ha visto todos los tipos que componen el lenguaje de preguntas y respuestas, puede ver las [expresiones de tipo en q #](xref:microsoft.quantum.guide.expressions) para ver cómo crear y manipular expresiones de estos diversos tipos.
 
 

@@ -7,8 +7,8 @@ summary: >-
   Agregación reversible, en contexto, de dos enteros.
 
 
-  Dados dos $n enteros de $ bits codificados en registros de `xs` LittleEndian y `ys`, y un transporte de qubit, la operación calcula la suma de los dos enteros donde se conservan los bits $n $ menos significativos del resultado en `ys` y el bit de transporte es XORed a qubit. `carry`
-remarks: Esta operación tiene la misma funcionalidad que RippleCarryAdderD, pero solo usa un ancilla qubit en lugar de $n $.
+  Dados dos $n enteros de $ bits codificados en registros de LittleEndian `xs` y `ys` , y un transporte de qubit, la operación calcula la suma de los dos enteros donde se conservan los bits $n $ menos significativos del resultado en `ys` y el bit de transporte es XORed a qubit `carry` .
+remarks: Esta operación tiene la misma funcionalidad que RippleCarryAdderD, pero solo usa un qubit auxiliar en lugar de $n $.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
   - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "un nuevo circuito de adición del transporte de onda de Quantum", 2004.
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d75313cbc70643bc9cb96967c1b2eb928296f8d7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a72b9fe01846bbdb0b3cb6079a681104904747df
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675129"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326513"

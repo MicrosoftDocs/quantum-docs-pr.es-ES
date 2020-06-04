@@ -33,19 +33,19 @@ operations:
 - uid: microsoft.quantum.arithmetic.addfxp
   summary: Agrega dos números de punto fijo almacenados en registros de Quantum.
 - uid: microsoft.quantum.arithmetic.addi
-  summary: Elige entre agregar y sin, automáticamente, en función del tamaño del registro de `ys`.
+  summary: Elige entre agregar y sin, automáticamente, en función del tamaño del registro de `ys` .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
-  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.phaselittleendian> registro como entrada en un registro de destino de <xref:microsoft.quantum.arithmetic.littleendian>tipo.
+  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.phaselittleendian> registro como entrada en un registro de destino de tipo <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
-  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.phaselittleendian> registro como entrada en un registro de destino de <xref:microsoft.quantum.arithmetic.littleendian>tipo.
+  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.phaselittleendian> registro como entrada en un registro de destino de tipo <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
-  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.phaselittleendian> registro como entrada en un registro de destino de <xref:microsoft.quantum.arithmetic.littleendian>tipo.
+  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.phaselittleendian> registro como entrada en un registro de destino de tipo <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
-  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.phaselittleendian> registro como entrada en un registro de destino de <xref:microsoft.quantum.arithmetic.littleendian>tipo.
+  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.phaselittleendian> registro como entrada en un registro de destino de tipo <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applymajorityinplace
   summary: Aplica la operación de mayoría de tres qubit en contexto en un registro de qubits.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
-  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.littleendian> registro como entrada en un registro de destino de <xref:microsoft.quantum.arithmetic.phaselittleendian>tipo.
+  summary: Aplica una operación que toma un <xref:microsoft.quantum.arithmetic.littleendian> registro como entrada en un registro de destino de tipo <xref:microsoft.quantum.arithmetic.phaselittleendian> .
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
@@ -71,34 +71,29 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyxorinplace
   summary: Aplica una operación XOR bit a bit entre un entero clásico y un entero representado por un registro de qubits.
 - uid: microsoft.quantum.arithmetic.assertallzerofxp
-  summary: Función auxiliar para afirmar que un número de punto fijo Quantum se inicializa en cero, es decir, todos los qubits están en el estado ${0}\ket $.
+  summary: Función auxiliar para afirmar que un número de punto fijo Quantum se inicializa en cero, es decir, todos los qubits están en el estado $ \ket {0} $.
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbit
   summary: Valida que el valor de qubit más importante de un registro qubit que representa un entero sin signo está en un estado determinado.
 - uid: microsoft.quantum.arithmetic.assertphaselessthan
-  summary: Valida que la `number` codificación en PhaseLittleEndian es menor que `value`.
+  summary: Valida que la `number` codificación en PhaseLittleEndian es menor que `value` .
 - uid: microsoft.quantum.arithmetic.assertprobint
   summary: Valida que la probabilidad de un estado específico de un registro de Quantum tiene el valor esperado.
 - uid: microsoft.quantum.arithmetic.carry
-  summary: Implementa una puerta de transporte reversible. Dado un bit de transporte codificado `carryIn` en qubit y dos bits de sumando codificados en `summand1` y `summand2`, calcula la operación XOR bit a bit de `carryIn` `summand1` y `summand2` en el qubit `summand2` y el transporte se XORed a qubit. `carryOut`
-- uid: microsoft.quantum.arithmetic.cascadeccnot
-  summary: >-
-    Implementa una cascada de puertas de CCNOT controladas en los bits correspondientes de dos registros qubit, actuando en el siguiente qubit de uno de los registros.
-
-    A partir de qubits en la posición 0 en ambos registros como controles, CCNOT se aplica a qubit en la posición 1 del registro de destino y, a continuación, se controla mediante la qubits en la posición 1 que actúa en el qubit en la posición 2 del registro de destino, etc., que termina con `Length(nQubits)-1`una acción en el qubit de destino en la posición.
+  summary: Implementa una puerta de transporte reversible. Dado un bit de transporte codificado en qubit `carryIn` y dos bits de sumando codificados en `summand1` y `summand2` , calcula la operación XOR bit a bit de `carryIn` y `summand1` `summand2` en el qubit `summand2` y el transporte se XORed a qubit `carryOut` .
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   summary: Compara dos números de punto fijo almacenados en registros de Quantum y controla un volteo en el resultado.
 - uid: microsoft.quantum.arithmetic.comparegti
-  summary: Contenedor para la comparación de enteros `result = x > y`:.
+  summary: 'Contenedor para la comparación de enteros: `result = x > y` .'
 - uid: microsoft.quantum.arithmetic.comparegtsi
-  summary: Contenedor para la comparación de enteros con `result = xs > ys`signo:.
+  summary: 'Contenedor para la comparación de enteros con signo: `result = xs > ys` .'
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
   summary: Esta operación comprueba si un entero representado por un registro de qubits es mayor que otro entero, aplicando un XOR del resultado en una qubit de salida.
 - uid: microsoft.quantum.arithmetic.computereciprocalfxp
   summary: Calcula $1/x $ para un número de punto fijo $x $.
 - uid: microsoft.quantum.arithmetic.computereciprocali
-  summary: Calcula el recíproco 1/x para un entero x sin signo x mediante la división de enteros. El resultado, que se interpreta como un entero, será `floor(2^(2*n-1) / x)`.
+  summary: Calcula el recíproco 1/x para un entero x sin signo x mediante la división de enteros. El resultado, que se interpreta como un entero, será `floor(2^(2*n-1) / x)` .
 - uid: microsoft.quantum.arithmetic.copymostsignificantbit
-  summary: Copia el bit más significativo de un registro `from` qubit que representa un entero sin signo en el qubit. `target`
+  summary: Copia el bit más significativo de un registro qubit `from` que representa un entero sin signo en el qubit `target` .
 - uid: microsoft.quantum.arithmetic.dividei
   summary: Divide dos enteros de Quantum.
 - uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
@@ -124,7 +119,7 @@ operations:
 - uid: microsoft.quantum.arithmetic.measurefxp
   summary: Mida un número de punto fijo, devuelve su valor como Double y restablece el registro en cero.
 - uid: microsoft.quantum.arithmetic.measureinteger
-  summary: Mide el contenido de un registro de Quantum y lo convierte en un entero. La medida se realiza con respecto a la base de cálculo estándar, es decir, el eigenbasis `PauliZ`de.
+  summary: Mide el contenido de un registro de Quantum y lo convierte en un entero. La medida se realiza con respecto a la base de cálculo estándar, es decir, el eigenbasis de `PauliZ` .
 - uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
   summary: Realiza una multiplicación modular y agrega una constante de tipo entero en un registro qubit.
 - uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
@@ -134,9 +129,9 @@ operations:
 - uid: microsoft.quantum.arithmetic.multiplyfxp
   summary: Multiplica dos números de punto fijo en registros de Quantum.
 - uid: microsoft.quantum.arithmetic.multiplyi
-  summary: Multiplique el entero `xs` por un entero `ys` y almacene el resultado `result`en, que debe ser cero inicialmente.
+  summary: Multiplique el entero `xs` por un entero `ys` y almacene el resultado en `result` , que debe ser cero inicialmente.
 - uid: microsoft.quantum.arithmetic.multiplysi
-  summary: Multiplica un entero con `xs` signo por un entero `ys` con signo y almacena el `result`resultado en, que debe ser cero inicialmente.
+  summary: Multiplica un entero con signo `xs` por un entero con signo `ys` y almacena el resultado en `result` , que debe ser cero inicialmente.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: Inicializa un número de punto fijo Quantum en una constante clásica.
 - uid: microsoft.quantum.arithmetic.reflectaboutinteger
@@ -147,29 +142,29 @@ operations:
   summary: >-
     Agregación reversible, en contexto, de dos enteros.
 
-    Dados dos $n enteros de $ bits codificados en registros de `xs` LittleEndian y `ys`, y un transporte de qubit, la operación calcula la suma de los dos enteros donde se conservan los bits $n $ menos significativos del resultado en `ys` y el bit de transporte es XORed a qubit. `carry`
+    Dados dos $n enteros de $ bits codificados en registros de LittleEndian `xs` y `ys` , y un transporte de qubit, la operación calcula la suma de los dos enteros donde se conservan los bits $n $ menos significativos del resultado en `ys` y el bit de transporte es XORed a qubit `carry` .
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
   summary: La adición de una ondulación en contexto de dos enteros sin llevar a cabo.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
     Agregación reversible, en contexto, de dos enteros.
 
-    Dados dos $n enteros de $ bits codificados en registros de `xs` LittleEndian y `ys`, y un transporte de qubit, la operación calcula la suma de los dos enteros donde se conservan los bits $n $ menos significativos del resultado en `ys` y el bit de transporte es XORed a qubit. `carry`
+    Dados dos $n enteros de $ bits codificados en registros de LittleEndian `xs` y `ys` , y un transporte de qubit, la operación calcula la suma de los dos enteros donde se conservan los bits $n $ menos significativos del resultado en `ys` y el bit de transporte es XORed a qubit `carry` .
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: Eleva el cuadrado de un número de punto fijo.
 - uid: microsoft.quantum.arithmetic.squarei
-  summary: Calcula el cuadrado del entero `xs` en `result`, que debe ser cero inicialmente.
+  summary: Calcula el cuadrado del entero `xs` en `result` , que debe ser cero inicialmente.
 - uid: microsoft.quantum.arithmetic.squaresi
-  summary: Entero con signo cuadrado `xs` y almacene el resultado `result`en, que debe ser cero inicialmente.
+  summary: Entero con signo cuadrado `xs` y almacene el resultado en `result` , que debe ser cero inicialmente.
 - uid: microsoft.quantum.arithmetic.sum
-  summary: Implementa una puerta de suma reversible. Dado un bit de transporte codificado `carryIn` en qubit y dos bits de sumando codificados en `summand1` y `summand2`, calcula la operación XOR bit a bit de `carryIn` `summand1` y `summand2` en qubit. `summand2`
+  summary: Implementa una puerta de suma reversible. Dado un bit de transporte codificado en qubit `carryIn` y dos bits de sumando codificados en `summand1` y `summand2` , calcula la operación XOR bit a bit de `carryIn` y `summand1` `summand2` en qubit `summand2` .
 newtypes:
 - uid: microsoft.quantum.arithmetic.bigendian
-  summary: Registra que codifica un entero sin signo en orden Big-Endian. El qubit con el `0` índice codifica el bit más alto de un entero sin signo.
+  summary: Registra que codifica un entero sin signo en orden Big-Endian. El qubit con el índice `0` codifica el bit más alto de un entero sin signo.
 - uid: microsoft.quantum.arithmetic.fixedpoint
   summary: Representa un registro de qubits que codifica un número de punto fijo. Consta de un entero que es igual al número de qubits a la izquierda del punto binario, es decir, qubits de peso mayor o igual que 1 y un registro de Quantum.
 - uid: microsoft.quantum.arithmetic.littleendian
-  summary: Registra que codifica un entero sin signo en orden Little-Endian. El qubit con el `0` índice codifica el bit más bajo de un entero sin signo.
+  summary: Registra que codifica un entero sin signo en orden Little-Endian. El qubit con el índice `0` codifica el bit más bajo de un entero sin signo.
 - uid: microsoft.quantum.arithmetic.phaselittleendian
   summary: >-
     Enteros sin signo Little-endian en la base de QFT.
@@ -179,9 +174,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Tipo de un entero con signo almacenado en little endian (vea LittleEndian).
 metadata:
-  ms.openlocfilehash: eda1d6d9037caecd7a2f0d91acdc0e59d34efe41
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e43f31c738b48413ead40e16fbbfe4185b8a57d
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675494"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326734"

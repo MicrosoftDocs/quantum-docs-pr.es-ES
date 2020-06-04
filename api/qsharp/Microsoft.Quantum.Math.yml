@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: Devuelve el valor absoluto de un número complejo de tipo `Complex`.
+  summary: Devuelve el valor absoluto de un número complejo de tipo `Complex` .
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: Devuelve el valor absoluto de un número complejo de tipo `ComplexPolar`.
+  summary: Devuelve el valor absoluto de un número complejo de tipo `ComplexPolar` .
 - uid: microsoft.quantum.math.absd
   summary: Devuelve el valor absoluto de un número de punto flotante de precisión doble.
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: Devuelve el valor absoluto de un entero grande.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: Devuelve el valor absoluto cuadrado de un número complejo de tipo `Complex`.
+  summary: Devuelve el valor absoluto cuadrado de un número complejo de tipo `Complex` .
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: Devuelve el valor absoluto cuadrado de un número complejo de tipo `ComplexPolar`.
+  summary: Devuelve el valor absoluto cuadrado de un número complejo de tipo `ComplexPolar` .
 - uid: microsoft.quantum.math.arccos
   summary: Devuelve el ángulo cuyo coseno es el número especificado.
 - uid: microsoft.quantum.math.arccosh
@@ -31,35 +31,31 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: Calcula la tangente hiperbólica inversa de un número.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Devuelve la fase de un número complejo de tipo `Complex`.
+  summary: Devuelve la fase de un número complejo de tipo `Complex` .
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Devuelve la fase de un número complejo de tipo `ComplexPolar`.
+  summary: Devuelve la fase de un número complejo de tipo `ComplexPolar` .
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    Para un entero no negativo `a`, devuelve el número de bits necesarios para representar. `a`
+    Para un entero no negativo `a` , devuelve el número de bits necesarios para representar `a` .
 
 
     Es decir, devuelve el menor $n $ que $a < 2 ^ n $.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    Para un entero no negativo `a`, devuelve el número de bits necesarios para representar. `a`
+    Para un entero no negativo `a` , devuelve el número de bits necesarios para representar `a` .
 
 
     Es decir, devuelve el menor $n $ que $a < 2 ^ n $.
 - uid: microsoft.quantum.math.ceiling
   summary: Devuelve el número entero más pequeño mayor o igual que el número especificado.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Convierte un número complejo de tipo `Complex` en un número complejo de tipo. `ComplexPolar`
+  summary: Convierte un número complejo de tipo `Complex` en un número complejo de tipo `ComplexPolar` .
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Convierte un número complejo de tipo `ComplexPolar` en un número complejo de tipo. `Complex`
-- uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Obsoleto\n\nComplexPolarToComplex está en desuso. Use @\"microsoft.quantum.math.complexpolarascomplex\" en su lugar."
-- uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Obsoleto\n\nComplexToComplexPolar está en desuso. Use @\"microsoft.quantum.math.complexascomplexpolar\" en su lugar."
+  summary: Convierte un número complejo de tipo `ComplexPolar` en un número complejo de tipo `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Busca la fracción continua convergentes más cercana `fraction` a con el denominador menor o igual que`denominatorBound`
+  summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Busca la fracción continua convergentes más cercana `fraction` a con el denominador menor o igual que`denominatorBound`
+  summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que`denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Devuelve el coseno del ángulo especificado.
 - uid: microsoft.quantum.math.cosh
@@ -145,9 +141,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: Realiza una división modular en un número elevado a la potencia de otro número.
 - uid: microsoft.quantum.math.modulusi
-  summary: Calcula el residuo canónico del `value` módulo. `modulus`
+  summary: Calcula el residuo canónico del `value` módulo `modulus` .
 - uid: microsoft.quantum.math.modulusl
-  summary: Calcula el residuo canónico del `value` módulo. `modulus`
+  summary: Calcula el residuo canónico del `value` módulo `modulus` .
 - uid: microsoft.quantum.math.negationc
   summary: Devuelve la negación unaria de una entrada.
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +170,16 @@ functions:
   summary: Devuelve la suma de dos entradas.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    Devuelve la `L(p)` norma de un vector de `Double`s.
+    Devuelve la `L(p)` norma de un vector de `Double` s.
 
 
-    Es decir, dada una matriz $x $ de tipo `Double[]`, devuelve el $p $-Norm $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+    Es decir, dada una matriz $x $ de tipo `Double[]` , devuelve el $p $-Norm $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    Normaliza un vector de `Double`s en la `L(p)` norma.
+    Normaliza un vector de `Double` s en la `L(p)` norma.
 
 
-    Es decir, dada una matriz $x $ de tipo `Double[]`, devuelve una matriz donde todos los elementos se dividen por el $p $-Norm $\|x\|_P $.
+    Es decir, dada una matriz $x $ de tipo `Double[]` , devuelve una matriz donde todos los elementos se dividen por el $p $-Norm $ \| x \| _P $.
 - uid: microsoft.quantum.math.powc
   summary: Devuelve un número elevado a una potencia determinada.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +226,7 @@ functions:
   summary: Calcula la parte entera de un número.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: Representa un número racional del formulario `p/q`. Integer `p` es el primer elemento de la tupla y `q` es el segundo elemento de la tupla.
+  summary: Representa un número racional del formulario `p/q` . Integer `p` es el primer elemento de la tupla y `q` es el segundo elemento de la tupla.
 - uid: microsoft.quantum.math.complex
   summary: >-
     Representa un número complejo por sus componentes reales e imaginarios.
@@ -243,7 +239,7 @@ newtypes:
 
     La representación polar de un número complejo es $c = r e ^ {i t} $.
 - uid: microsoft.quantum.math.fraction
-  summary: Representa un número racional del formulario `p/q`. Integer `p` es el primer elemento de la tupla y `q` es el segundo elemento de la tupla.
+  summary: Representa un número racional del formulario `p/q` . Integer `p` es el primer elemento de la tupla y `q` es el segundo elemento de la tupla.
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones matemáticas clásicas y tipos de datos."
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +251,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Devuelve uno de los operadores de Pauli de un solo qubit de forma aleatoria.
 metadata:
-  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673156"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326506"

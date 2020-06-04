@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
-ms.openlocfilehash: 15e63ced6223759a332ce22a43c133a7899f482a
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: efa4a65a489446cbef48507d0b02a932da74c71c
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909966"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327669"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Carga y clasificación de sus propios conjuntos de valores
 
@@ -25,7 +25,7 @@ En concreto, se recomienda usar nuestra plantilla para cargar los datos, para qu
 
 Supongamos que tenemos un conjunto de elementos de entrenamiento $ (x, y) $ de size $N = $2, donde cada instancia $x _i $ de $x $ tiene tres características: $x _ {I1} $, $x _ {I2} $ y $x _ {i3} $.
 El conjunto de de validación tiene la misma estructura.
-Estos conjuntos se pueden representar mediante un archivo `data.json` similar al siguiente:
+Estos conjuntos se pueden representar con un `data.json` archivo similar al siguiente:
 
 ```json
 {
@@ -84,10 +84,10 @@ Supongamos que tenemos un conjunto de filas pequeño con los altos y pesos de lo
 El proceso es:
 
 - En primer lugar, es necesario separar el conjunto de conocimientos en entrenamiento y validación. En este caso, podemos realizar solo los tres primeros ejemplos de entrenamiento y el resto de ejemplos para la validación. En general, se recomienda obtener un ejemplo aleatorio del conjunto de datos de entrenamiento y validación para evitar los sesgos no deseados en los datos de entrenamiento.
-- En segundo lugar, es necesario asignar una etiqueta numérica a cada clase. Tenga en cuenta que, por el momento, la biblioteca QML solo tiene problemas de clasificación binaria. Por lo tanto, asignaremos la etiqueta 0 a la clase `Dog` y el número 1 a la clase `Cat`.
+- En segundo lugar, es necesario asignar una etiqueta numérica a cada clase. Tenga en cuenta que, por el momento, la biblioteca QML solo tiene problemas de clasificación binaria. Por lo tanto, asignaremos la etiqueta 0 a la clase `Dog` y el número 1 a la clase `Cat` .
 - Por último, se rellena la plantilla con los datos del conjunto de datos. Tenga en cuenta que para conjuntos de datos grandes, debe crear un script pequeño para generar automáticamente la plantilla a partir de su conjunto de datos concreto. Este script dependerá del formato original del conjunto de DataSet.
 
-Para nuestro conjunto de archivos, el archivo `data.json` es:
+Para nuestro conjunto de `data.json` archivos, el archivo es:
 
 ```json
 {
@@ -137,24 +137,24 @@ Para nuestro conjunto de archivos, el archivo `data.json` es:
 
 ```
 
-## <a name="loading-the-data"></a>Cargar los datos
+## <a name="loading-the-data"></a>Carga de los datos
 
 Una vez que los datos se serializan como un archivo JSON, puede cargarlos en mediante las bibliotecas JSON proporcionadas con el lenguaje de host que prefiera.
 
 ### <a name="python"></a>[Python](#tab/tabid-python)
 
-Python proporciona el [paquete de `json` integrado](https://docs.python.org/3.7/library/json.html) para trabajar con datos serializados de JSON:
+Python proporciona el [ `json` paquete integrado](https://docs.python.org/3.7/library/json.html) para trabajar con datos serializados de JSON:
 
 :::code language="python" source="~/quantum/samples/machine-learning/half-moons/host.py" range="4-5,20-22":::
 
 ### <a name="c"></a>[C#](#tab/tabid-csharp)
 
-La plataforma .NET Core proporciona el [paquete de`System.Text.Json`](https://www.nuget.org/packages/System.Text.Json) para trabajar con datos serializados de JSON:
+La plataforma .NET Core proporciona el [ `System.Text.Json` paquete](https://www.nuget.org/packages/System.Text.Json) para trabajar con datos serializados de JSON:
 
 :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="10,64-82":::
 
 ***
 
-## <a name="whats-next"></a>¿Qué sigue?
+## <a name="next-steps"></a>Pasos siguientes
 
 Ahora ya está listo para empezar a ejecutar sus propios experimentos con sus propios conjuntos de valores. Pruebe diferentes clasificadores y conjuntos de archivos y contribuya a la comunidad compartiendo sus resultados.

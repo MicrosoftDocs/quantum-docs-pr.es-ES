@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
-ms.openlocfilehash: bc9695b85b68807801225ccbc903a4622b450768
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 9e924b973c4f22a59dd862df3f4f0d70278a1b4e
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83431077"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327805"
 ---
 # <a name="operations-and-functions-in-q"></a>Operaciones y funciones en Q #
 
@@ -426,7 +426,7 @@ function Square(x : Double) : (Double) {
 }
 ```
 
-o 
+or 
 
 ```qsharp
 function DotProduct(a : Double[], b : Double[]) : Double {
@@ -670,5 +670,6 @@ Sin embargo, hay dos comentarios importantes sobre el uso de la recursividad:
 - Cuando se ejecuta en un dispositivo Quantum real, el espacio de pila puede estar limitado y, por tanto, la recursividad profunda puede provocar un error en tiempo de ejecución.
   En concreto, el compilador y el tiempo de ejecución de Q # no identifican y optimizan la recursividad del final.
 
-## <a name="whats-next"></a>¿Qué debe hacer a continuación?
+## <a name="next-steps"></a>Pasos siguientes
+
 Obtenga información sobre [las variables](xref:microsoft.quantum.guide.variables) en preguntas y respuestas.
