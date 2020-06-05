@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
-ms.openlocfilehash: f0b87936c9baf07555e76f295da58c0a6b9ecd17
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 05d3292e1c6e3c8c1163c460f2aaa51c591aa1d5
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84328602"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422247"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: escribir y simular programas de nivel de qubit en Q\#
 
@@ -386,7 +386,7 @@ En detalle para la primera fila de nuestro estado de entrada $ \ket {000} $:
 * **`    ---`**: Representación gráfica de la fase de amplitud.
 * **`[ 0.0000 rad ]`**: valor numérico de la fase (en radianes).
 
-Tanto la magnitud como la fase se muestran con una representación gráfica. La representación de la magnitud es sencilla: muestra una barra de `*` y cuanto mayor sea la probabilidad, mayor será la barra. Para la fase, consulte la sección DumpMachine [aquí](xref:microsoft.quantum.techniques.testing-and-debugging#dump-functions) para ver las representaciones de símbolos posibles en función de los intervalos de ángulo.
+Tanto la magnitud como la fase se muestran con una representación gráfica. La representación de la magnitud es sencilla: muestra una barra de `*` y cuanto mayor sea la probabilidad, mayor será la barra. Para la fase, consulte [pruebas y depuración: funciones de volcado](xref:microsoft.quantum.guide.testingdebugging#dump-functions) de memoria para las posibles representaciones de símbolos basadas en intervalos de ángulo.
 
 
 Por lo tanto, la salida impresa ilustra que nuestras puertas programadas transformaron nuestro estado desde
