@@ -6,12 +6,12 @@ ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 3e109553adc4d724733834e3660bfe7789052bcf
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 8fafbccfe2a94a824353221b5e7eb8bac16c42f2
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426818"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327363"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementación de un generador cuántico de números aleatorios en Q\#
 
@@ -20,7 +20,7 @@ Un ejemplo sencillo de un algoritmo cuántico escrito en Q# es un generador cuá
 ## <a name="prerequisites"></a>Prerrequisitos
 
 - [Kit de desarrollo de Microsoft Quantum](xref:microsoft.quantum.install).
-- [Creación de un proyecto de Q#](xref:microsoft.quantum.howto.createproject)
+- Cree un proyecto de Q# usando [Q# desde la línea de comandos](xref:microsoft.quantum.install.standalone) o con un [programa host de Python](xref:microsoft.quantum.install.python) o un [programa host de C#](xref:microsoft.quantum.install.cs).
 
 ## <a name="write-a-q-operation"></a>Escriba una operación de Q#
 
