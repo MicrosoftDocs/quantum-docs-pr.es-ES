@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 3245f587493ce12cfec15c8f932fd092d85f688e
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 89db1a671767b0cc083a251918bbeeed2b39b883
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327582"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578188"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Actualización del Microsoft Quantum Development Kit (QDK)
 
@@ -87,7 +87,7 @@ Ahora puede continuar con [la actualización de la extensión QDK de Visual Stud
 
 1. Navegue hasta la carpeta que contiene el archivo de proyecto principal.
 
-2. Ejecute el siguiente comando:
+2. Ejecute el comando siguiente:
 
     ```dotnetcli
     dotnet clean [project_name].csproj
@@ -175,7 +175,7 @@ Seleccione el entorno de desarrollo a continuación.
 
     Debería ver la siguiente salida:
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
@@ -184,19 +184,19 @@ Seleccione el entorno de desarrollo a continuación.
 
 3. Actualización del `qsharp` paquete
 
-    ```bash
+    ```
     pip install qsharp --upgrade
     ```
 
 4. Comprobar la `qsharp` versión
 
-    ```bash
+    ```
     pip show qsharp
     ```
 
     Debería ver la siguiente salida:
 
-    ```bash
+    ```
     Name: qsharp
     Version: 0.10.1912.501
     Summary: Python client for Q#, a domain-specific quantum programming language
@@ -205,7 +205,7 @@ Seleccione el entorno de desarrollo a continuación.
 
 5. Ejecute el siguiente comando desde la ubicación de los `.qs` archivos.
 
-    ```bash
+    ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
@@ -228,7 +228,7 @@ Seleccione el entorno de desarrollo a continuación.
 
     La salida debe ser similar a la siguiente:
 
-    ```bash
+    ```
     iqsharp: 0.10.1912.501
     Jupyter Core: 1.2.20112.0
     ```
