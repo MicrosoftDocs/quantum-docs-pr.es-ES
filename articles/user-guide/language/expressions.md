@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327312"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630000"
 ---
 # <a name="type-expressions-in-q"></a>Expresiones de tipo en Q #
 
@@ -201,7 +201,7 @@ Aparte de los literales, las únicas expresiones de un tipo definido por el usua
 En Q #, el operador Unwrap es un signo de exclamación final `!` .
 Por ejemplo, si `IntPair` es un tipo definido por el usuario con el tipo subyacente `(Int, Int)` y `s` era una variable con el valor `IntPair(2, 3)` , `s!` sería `(2, 3)` .
 
-Para los tipos definidos por el usuario definidos en términos de otros tipos definidos por el usuario. el operador Unwrap puede repetirse; por ejemplo, `s!!` indica el valor de doble desencapsulado de `s` .
+En el caso de los tipos definidos por el usuario definidos en términos de otros tipos definidos por el usuario, el operador Unwrap puede repetirse; por ejemplo, `s!!` indica el valor de doble desencapsulado de `s` .
 Por lo tanto, si `WrappedPair` es un tipo definido por el usuario con el tipo subyacente `IntPair` , y `t` es una variable con el valor `WrappedPair(IntPair(1,2))` , entonces `t!!` sería `(1,2)` .
 
 El `!` operador tiene mayor precedencia que el resto de operadores distintos de `[]` para la indización y segmentación de matrices.

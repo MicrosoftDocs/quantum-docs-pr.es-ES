@@ -6,18 +6,89 @@ uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 43f14d67db76dabda34bf881ccbfae0bfd1784ff
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 745f0570bf62c5d98c2896cdc893ec385abd7115
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426626"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630404"
 ---
 # <a name="quantum-circuits"></a>Circuitos Quantum
-Considere, por un momento, la transformación unitario $ \text{CNOT} _ {01} (H\otimes 1) $.
+Considere, por un momento, la transformación unitario $ \text { CNOT} _ {01 } (H \otimes 1) $.
 Esta secuencia de la puerta es de importancia fundamental para la informática de Quantum, ya que crea un estado de dos qubit con el máximo de supuestos:
 
-$ $ \mathrm{CNOT}_ {01} (H\otimes 1) \ket {00} = \frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right), $ $
+$ $ \mathrm{CNOT}_{01 } (H \otimes 1) \ket{00 } = \frac{1 } {\sqrt{2 } } \left (\ket{00 } + \ket{11 } \right), $ $
 
 Las operaciones con esta complejidad o mayor son ubicuas en los algoritmos Quantum y la corrección de errores Quantum, por lo que debe ser una buena forma de que hay un método simple para su visualización denominado *Diagrama de circuito Quantum*.
 El diagrama del circuito para preparar este estado de Quantum con el máximo grado de enredo es:
@@ -49,7 +120,7 @@ Es decir
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Diagrama de las puertas de Quantum aplicadas de izquierda a derecha](~/media/3.svg)
 
-es la matriz unitario $CBA $.
+es la matriz de unitario $CBA $ .
 La multiplicación de matrices obedece la Convención opuesta: primero se aplica la matriz que se encuentra más a la derecha. Sin embargo, en los diagramas de circuito Quantum, se aplica primero la puerta situada más a la izquierda.
 En ocasiones, esta diferencia puede llevar a confusión, por lo que es importante tener en cuenta esta diferencia significativa entre los diagramas de la notación algebraico lineal y del circuito de Quantum.
 
@@ -61,27 +132,27 @@ Si no tenían el mismo número de salidas que las entradas, no serían reversibl
 Por esta razón, todos los cuadros dibujados en un diagrama de circuitos deben tener exactamente el mismo número de cables que lo señalan.
 
 Los diagramas de circuitos de varios qubit siguen convenciones similares a las de qubit.
-Como ejemplo de clarificación, podemos definir una operación unitario de dos qubit $B $ para que sea $ (H S\otimes X) $ y expresar el circuito de forma equivalente.
+Como ejemplo de clarificación, podemos definir una operación de $B unitario de dos qubit $ para que sea $ (H S \otimes X) $ y expresar el circuito de forma equivalente.
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Diagrama de circuitos de una operación de unitario de dos qubit](~/media/4.svg)
 
-También podemos ver $B $ como si tuvieran una acción en un solo registro de dos qubit, en lugar de en 2 1-qubit, según el contexto en el que se use el circuito. Quizás la propiedad más útil de estos diagramas de circuitos abstractos es que permiten describir algoritmos Quantum complicados en un nivel alto sin tener que compilarlos en las puertas fundamentales.
+También podemos ver $B $ como si tuviera una acción en un solo registro de dos qubit, en lugar de en 2 1-qubit, en función del contexto en el que se use el circuito. Quizás la propiedad más útil de estos diagramas de circuitos abstractos es que permiten describir algoritmos Quantum complicados en un nivel alto sin tener que compilarlos en las puertas fundamentales.
 Esto significa que puede obtener un Intuition sobre el flujo de datos para un algoritmo Quantum grande sin necesidad de comprender todos los detalles de cómo funciona cada una de las subrutinas dentro del algoritmo.
 
 ## <a name="controlled-gates"></a>Puertas controladas
 La otra construcción que se integra en los diagramas del circuito de Quantum de varios qubit es control.
-La acción de una puerta de Quantum controlada por una vez, indicada como $ \Lambda (G) $, donde un valor de qubit único controla la aplicación de $G $, se puede entender examinando el ejemplo siguiente de una entrada de estado de producto $ \Lambda (G) (\alpha \ket {0} + \beta \ket {1} ) \ket{\psi} = \alpha \ket {0} \ket{\psi} + \beta \ket {1} G\ket {\ PSI} $.
-Es decir, la barrera controlada aplica $G $ al registro que contiene $ \psi $ si y solo si el control qubit toma el valor $1 $.
+La acción de una puerta de Quantum controlada por una vez, indicada como $ \Lambda (G) $, donde un valor de qubit único controla la aplicación de $G $ , se puede entender examinando el siguiente ejemplo de una entrada de estado de producto $ \Lambda (G) (\alpha \ket{0 } + \beta \ket{1 } ) \ket { \psi } = \alpha \ket{0 } \ket { \psi } + \beta \ket{1 } G \ket { \psi } $.
+Es decir, la barrera controlada se aplica $G $ al registro que contiene $ \psi $ si y solo si el control qubit toma el valor $1 $ .
 En general, se describen las operaciones controladas en diagramas de circuitos como
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Diagrama de circuitos de una puerta controlada por una sola vez](~/media/5.svg)
 
-Aquí el círculo negro denota el bit de Quantum en el que se controla la puerta y una conexión vertical denota la unitario que se aplica cuando el control qubit toma el valor $1 $.
-Para los casos especiales en los que $G = X $ y $G = Z $, presentamos la siguiente notación para describir la versión controlada de las puertas (tenga en cuenta que la puerta controlada-X es la [$CNOT $ Gate](xref:microsoft.quantum.intrinsic.cnot)):
+Aquí el círculo negro denota el bit de Quantum en el que se controla la puerta y una conexión vertical denota la unitario que se aplica cuando el control qubit toma el valor $1 $ .
+Para los casos especiales en los que $G = X $ y $G = Z $ , presentamos la siguiente notación para describir la versión controlada de las puertas (tenga en cuenta que la puerta controlada-X es la [ $ puerta $CNOT](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
@@ -115,7 +186,7 @@ Del mismo modo, el Subcircuito
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![Diagrama de circuito que representa una operación controlada](~/media/8.svg)
 
-proporciona una puerta controlada por clases, donde $G $ se aplica en el bit de control clásico que es el valor $1 $.
+proporciona una puerta controlada por clases, donde $G $ se aplica en el bit de control clásico que es el valor $1 $ .
 
 ## <a name="teleportation-circuit-diagram"></a>Diagrama del circuito de teleportabilidad
 La teleportabilidad de Quantum es quizás el mejor algoritmo Quantum para ilustrar estos componentes.

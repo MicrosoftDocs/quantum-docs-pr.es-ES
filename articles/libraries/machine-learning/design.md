@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/17/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.design
-ms.openlocfilehash: 4899336f437c1b7712a7831b97fd6ec1431b59a2
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: b304b9d1a15f164f4dfe758aaed31b7b2369b18c
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77909728"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630244"
 ---
 # <a name="design-your-own-classifier"></a>Diseñar su propio clasificador
 
@@ -23,11 +23,11 @@ Como en el aprendizaje profundo clásico, no hay ninguna regla general para eleg
 
 - La inestabilidad de las puertas entre qubits es esencial para capturar las correlaciones entre las características de Quantum.
 
-## <a name="how-to-build-a-classifier-with-q"></a>Cómo crear un clasificador con Q\#
+## <a name="how-to-build-a-classifier-with-q"></a>Cómo compilar un clasificador con Q\#
 
-Para crear un clasificador, vamos a concatenar rotaciones controladas por parametrizadas en nuestro modelo de circuito. Para ello, podemos usar el tipo [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) definido en la biblioteca de Quantum machine learning. Este tipo acepta cuatro argumentos que determinan: el índice del qubit de destino, la matriz de índices del control qubits, el eje de rotación y el índice del parámetro asociado en la matriz de parámetros que define el modelo.
+Para crear un clasificador, vamos a concatenar rotaciones controladas por parametrizadas en nuestro modelo de circuito. Para ello, podemos usar el tipo [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) definido en la biblioteca Quantum machine learning. Este tipo acepta cuatro argumentos que determinan: el índice del qubit de destino, la matriz de índices del control qubits, el eje de rotación y el índice del parámetro asociado en la matriz de parámetros que define el modelo.
 
-Vamos a ver un ejemplo de un clasificador. En el [ejemplo Half-lunas](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons), podemos encontrar el clasificador siguiente definido en el archivo `Training.qs`.
+Vamos a ver un ejemplo de un clasificador. En el [ejemplo Half-lunas](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons), podemos encontrar el clasificador siguiente definido en el archivo `Training.qs` .
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {
@@ -44,7 +44,7 @@ Vamos a ver un ejemplo de un clasificador. En el [ejemplo Half-lunas](https://gi
     }
  ```
 
-Lo que estamos definiendo aquí es una función que devuelve una matriz de elementos `ControlledRotation`, que, junto con una matriz de parámetros, y una diferencia definirán nuestro [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel). Este tipo es fundamental en la biblioteca de Machine Learning Quantum y define el clasificador. El circuito definido en la función anterior forma parte de un clasificador en el que cada muestra del conjunto de elementos contiene dos características. Por lo tanto, solo necesitamos dos qubits. La representación gráfica del circuito es la siguiente:
+Lo que estamos definiendo aquí es una función que devuelve una matriz de `ControlledRotation` elementos, que junto con una matriz de parámetros y una diferencia definirán nuestro [`SequentialModel`](xref:microsoft.quantum.machinelearning.sequentialmodel) . Este tipo es fundamental en la biblioteca de Machine Learning Quantum y define el clasificador. El circuito definido en la función anterior forma parte de un clasificador en el que cada muestra del conjunto de elementos contiene dos características. Por lo tanto, solo necesitamos dos qubits. La representación gráfica del circuito es la siguiente:
 
  ![Ejemplo de modelo de circuito](~/media/circuit_model_1.PNG)
 
@@ -54,8 +54,8 @@ Supongamos que tenemos un conjunto de elementos con 784 características por ins
 
  ![Capa de rotación local](~/media/local_rotations_layer.PNG)
 
-Le recomendamos que explore el [referenece de API de la biblioteca Quantum machine learning](xref:microsoft.quantum.machinelearning) para detectar todas las herramientas disponibles para optimizar el diseño del circuito.
+Le recomendamos que explore la [referencia de API de la biblioteca Quantum machine learning](xref:microsoft.quantum.machinelearning) para detectar todas las herramientas disponibles para optimizar el diseño del circuito.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
- Pruebe diferentes estructuras en los ejemplos proporcionados por los ejemplos. ¿Ve algún cambio en el rendimiento del modelo? En el siguiente tutorial, [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load), aprenderá a cargar conjuntos de información para probar y explorar nuevas arquitecturas de clasificadores.
+ Pruebe diferentes estructuras en los ejemplos proporcionados por los ejemplos. ¿Ve algún cambio en el rendimiento del modelo? En el siguiente tutorial, obtendrá [`Load your own datasets`](xref:microsoft.quantum.libraries.machine-learning.load) información sobre cómo cargar conjuntos de información para probar y explorar nuevas arquitecturas de clasificadores.

@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422230"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578141"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -25,6 +25,12 @@ Para obtener instrucciones de actualización, consulte la [guía de actualizaci�
 
 *Fecha de lanzamiento: 4 de junio de 2020*
 
+En esta versión se corrige un error que afecta a la compilación de proyectos de Q#.
+
+## <a name="version-0112006207"></a>Versión 0.11.2006.207
+
+*Fecha de lanzamiento: 3 de junio de 2020*
+
 Esta versión contiene lo siguiente:
 
 - Dejarán de producirse errores en los cuadernos de Q# y en los programas de host de Python cuando haya un punto de entrada de Q#
@@ -33,6 +39,9 @@ Esta versión contiene lo siguiente:
 - Se han quitado varias funciones y operaciones en desuso siguiendo la programación descrita en los [principios de la API ](xref:microsoft.quantum.contributing.api-design). Los programas y bibliotecas de Q# que se compilan sin advertencias en la versión 0.11.2004.2825 seguirán funcionando sin modificar.
 
 Consulte la lista completa de solicitudes de incorporación de cambios cerradas para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiladores](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtimes](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) y [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+> [!NOTE]
+> Esta versión contiene un error que afecta a la compilación de proyectos de Q#. Se recomienda actualizar a una versión posterior.
 
 ## <a name="version-01120042825"></a>Versión 0.11.2004.2825
 

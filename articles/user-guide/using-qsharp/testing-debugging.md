@@ -6,12 +6,12 @@ ms.author: mamykhai@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: 374ac42255ab6b2c5eff8ab7879b3a5103181f7f
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: dd6c7ae8a016423f26c37f3eedf0ae9c1d126b78
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630030"
 ---
 # <a name="testing-and-debugging"></a>Prueba y depuración
 
@@ -218,7 +218,7 @@ El resto de las filas describen la amplitud de probabilidad de medir el vector d
 
 * **`∣0❭:`** esta fila corresponde al `0` Estado de base de cálculo
 * **`0.707107 +  0.000000 i`**: la amplitud de probabilidad en formato cartesiano.
-* **` == `**: el `equal` signo tiene dos representaciones equivalentes.
+* **` == `**: el `equal` signo separa ambas representaciones equivalentes.
 * **`**********  `**: Una representación gráfica de la magnitud, el número de `*` es proporcional a la probabilidad de medir este vector de estado.
 * **`[ 0.500000 ]`**: el valor numérico de la magnitud
 * **`    ---`**: Representación gráfica de la fase de amplitud (vea más abajo).

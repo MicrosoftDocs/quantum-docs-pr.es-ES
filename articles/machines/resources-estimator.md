@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 01d242ed405bdd326f65e534f82ff378a464ee7d
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426874"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630128"
 ---
 # <a name="the-resources-estimator-target-machine"></a>El equipo de destino del estimador de recursos
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 Cuando los `ResourcesEstimator` encuentre `AssertProb` , registrará la medición `PauliZ` en `source` y `q` se le debe proporcionar un resultado de `Zero` con la probabilidad 0,5. Cuando se ejecute `M` más tarde, buscará los valores registrados de las probabilidades de resultado y `M` devolverá `Zero` o `One` con la probabilidad 0,5.
 
 
-## <a name="see-also"></a>Consulte también:
+## <a name="see-also"></a>Consulte también
 
 `ResourcesEstimator`Se basa en el [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de equipos Quantum, que proporciona un conjunto más completo de métricas, la capacidad de notificar métricas en el gráfico de llamadas completo y características como el [Comprobador de entradas distintas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) para ayudar a encontrar errores en los programas de preguntas y respuestas. Consulte la documentación del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) para obtener más información.
 

@@ -6,18 +6,89 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: 042e4e27ef4e42cfc0c24fbb0ae2232cf1bbfe36
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- $
+- $
+- '\cdots'
+- bmatrix
+- '\ddots'
+- '\equiv'
+- '\sum'
+- '\begin'
+- '\end'
+- '\sqrt'
+- '\otimes'
+- '{'
+- '}'
+- '\text'
+- '\phi'
+- '\kappa'
+- '\psi'
+- '\alpha'
+- '\beta'
+- '\gamma'
+- '\delta'
+- '\omega'
+- '\bra'
+- '\ket'
+- '\boldone'
+- '\\\\'
+- '\\'
+- =
+- '\frac'
+- '\text'
+- '\mapsto'
+- '\dagger'
+- '\to'
+- "\begin{cases}"
+- "\end{cases}"
+- '\operatorname'
+- '\braket'
+- '\id'
+- '\expect'
+- '\defeq'
+- '\variance'
+- '\dd'
+- '&'
+- "\begin{align}"
+- "\end{align}"
+- '\Lambda'
+- '\lambda'
+- '\Omega'
+- '\mathrm'
+- '\left'
+- '\right'
+- '\qquad'
+- '\times'
+- '\big'
+- '\langle'
+- '\rangle'
+- '\bigg'
+- '\Big'
+- '|'
+- '\mathbb'
+- '\vec'
+- '\in'
+- '\texttt'
+- '\ne'
+- <
+- '>'
+- '\leq'
+- '\geq'
+- ~~
+- "~"
+ms.openlocfilehash: 2a3b1fe480b9886d0c11255bb1b1e01402dce4f7
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630104"
 ---
 # <a name="quantum-computing-glossary"></a>Glosario de Quantum Computing
 
 ## <a name="adjoint"></a>Contiguo
 
-La transposición de conjugada compleja de una [operación](xref:microsoft.quantum.glossary#operation). En el caso de las operaciones que implementan un operador [unitario](xref:microsoft.quantum.glossary#unitary-operator) , el signo contiguo es el inverso de la operación y se indica mediante un símbolo Cruz. Por ejemplo, si la operación `U` representa el operador unitario $U $, `Adjoint U` representa $U ^ \dagger $. Para obtener más información, [vea el](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
+La transposición de conjugada compleja de una [operación](xref:microsoft.quantum.glossary#operation). En el caso de las operaciones que implementan un operador [unitario](xref:microsoft.quantum.glossary#unitary-operator) , el signo contiguo es el inverso de la operación y se indica mediante un símbolo Cruz. Por ejemplo, si la operación `U` representa el operador unitario $U $ , `Adjoint U` representa $U ^ \dagger $ . Para obtener más información, [vea el](xref:microsoft.quantum.guide.operationsfunctions#controlled-and-adjoint-operations).
 
 ## <a name="ancilla"></a>Ancilla
 
@@ -25,7 +96,7 @@ Un [qubit](xref:microsoft.quantum.glossary#qubit) que actúa como memoria tempor
 
 ## <a name="bell-state"></a>Estado de campana
 
-Uno de los cuatro Estados de [entangled](xref:microsoft.quantum.glossary#entanglement) [Quantum](xref:microsoft.quantum.glossary#quantum-state) con un estado máximo de dos qubits. Los cuatro Estados se definen como $ \ket{\ beta_ {ij}} = (\mathbb{I} \otimes X ^ iZ ^ j) (\ket {00} + \ket {11} )/\sqrt {2} $. Un estado de campana también se conoce como un [par de EPR](xref:microsoft.quantum.glossary#epr-pair).
+Uno de los cuatro Estados de [entangled](xref:microsoft.quantum.glossary#entanglement) [Quantum](xref:microsoft.quantum.glossary#quantum-state) con un estado máximo de dos qubits. Los cuatro Estados se definen como $ \ket { \ beta_ {ij } } = (\Mathbb{I } \Otimes X ^ iz ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. Un estado de campana también se conoce como un [par de EPR](xref:microsoft.quantum.glossary#epr-pair).
 
 ## <a name="bloch-sphere"></a>Esfera Bloch
 
@@ -37,7 +108,7 @@ Representación gráfica de un [Estado de cuanto](xref:microsoft.quantum.glossar
 
 ## <a name="clifford-group"></a>Grupo Clifford
 
-Conjunto de operaciones que ocupan el octants de la [esfera Bloch](xref:microsoft.quantum.glossary#bloch-sphere) y las permutaciones de efecto de los [operadores Pauli](xref:microsoft.quantum.glossary#pauli-operators). Entre ellas se incluyen las operaciones [$X $](xref:microsoft.quantum.intrinsic.x), [$Y $](xref:microsoft.quantum.intrinsic.y), [$Z $](xref:microsoft.quantum.intrinsic.z), [$H $](xref:microsoft.quantum.intrinsic.h) y [$S $](xref:microsoft.quantum.intrinsic.s).
+Conjunto de operaciones que ocupan el octants de la [esfera Bloch](xref:microsoft.quantum.glossary#bloch-sphere) y las permutaciones de efecto de los [operadores Pauli](xref:microsoft.quantum.glossary#pauli-operators). Entre ellas se incluyen las operaciones [$X $ ](xref:microsoft.quantum.intrinsic.x), [$Y $ ](xref:microsoft.quantum.intrinsic.y), [$Z $ ](xref:microsoft.quantum.intrinsic.z), [$H $ ](xref:microsoft.quantum.intrinsic.h) y [$S $ ](xref:microsoft.quantum.intrinsic.s).
 
 ## <a name="controlled"></a>Regula
 
@@ -45,15 +116,15 @@ Una [operación](xref:microsoft.quantum.glossary#operation) Quantum que toma uno
 
 ## <a name="dirac-notation"></a>Notación Dirac
 
-Una abreviatura simbólica que simplifica la representación de [los Estados de Quantum](xref:microsoft.quantum.glossary#quantum-state), también denominada notación *bra-les* .  La parte *Bra* representa un vector de fila, por ejemplo $ \bra{A} = \begin{bmatrix} a {_ 1} & a {_2} \end{bmatrix} $ y la parte *les* representa un vector de columna, $ \ket{B} = \begin{bmatrix} B {_ 1} \\ \\ B {_2} \end{bmatrix} $. Para obtener más información, consulte [notación Dirac](xref:microsoft.quantum.concepts.dirac).
+Una abreviatura simbólica que simplifica la representación de [los Estados de Quantum](xref:microsoft.quantum.glossary#quantum-state), también denominada notación *bra-les* .  La parte *Bra* representa un vector de fila, por ejemplo $ \bra{A } = \begin{ bmatrix } a {_ 1 } & a {_2 } \end{ bmatrix } $ y la parte *les* representa un vector de columna, $ \ket{B } = \begin{ bmatrix } b {_ 1 } \\ \\ b {_2 } \end{ bmatrix } $. Para obtener más información, consulte [notación Dirac](xref:microsoft.quantum.concepts.dirac).
 
 ## <a name="eigenvalue"></a>Eigenvalue
 
-Factor por el que la aplicación de la transformación cambia el tamaño de una [Eigenvector](xref:microsoft.quantum.glossary#eigenvector) de una transformación determinada.  Dada una matriz cuadrada $M $ y una Eigenvector $v $, $Mv = CV $, donde $c $ es el eigenvalue y puede ser un número complejo de cualquier argumento. Para obtener más información, vea [conceptos de matriz avanzada](xref:microsoft.quantum.concepts.matrix-advanced).
+Factor por el que la aplicación de la transformación cambia el tamaño de una [Eigenvector](xref:microsoft.quantum.glossary#eigenvector) de una transformación determinada.  Dada una matriz cuadrada $M $ y una $v Eigenvector $ , $MV = CV $ , donde $c $ es el eigenvalue y puede ser un número complejo de cualquier argumento. Para obtener más información, vea [conceptos de matriz avanzada](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="eigenvector"></a>Eigenvector
 
-Vector cuya dirección no cambia en una transformación determinada y cuya magnitud cambia por un factor que corresponde a [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)de ese vector. Dada una matriz cuadrada $M $ y una eigenvalue $c $, $Mv = CV $, donde $v $ es un Eigenvector de la matriz y puede ser un número complejo de cualquier argumento. Para obtener más información, vea [conceptos de matriz avanzada](xref:microsoft.quantum.concepts.matrix-advanced).
+Vector cuya dirección no cambia en una transformación determinada y cuya magnitud cambia por un factor que corresponde a [eigenvalue](xref:microsoft.quantum.glossary#eigenvalue)de ese vector. Dada una matriz cuadrada $M $ y una $c eigenvalue $ , $MV = CV $ , donde $v $ es un Eigenvector de la matriz y puede ser un número complejo de cualquier argumento. Para obtener más información, vea [conceptos de matriz avanzada](xref:microsoft.quantum.concepts.matrix-advanced).
 
 ## <a name="entanglement"></a>Entrelazamiento
 
@@ -61,7 +132,7 @@ Las partículas Quantum, como [qubits](xref:microsoft.quantum.glossary#qubit), p
 
 ## <a name="epr-pair"></a>Par de EPR
 
-Uno de los cuatro Estados de Quantum con un [Estado](xref:microsoft.quantum.glossary#quantum-state) máximo de dos [qubits](xref:microsoft.quantum.glossary#qubit). Los cuatro Estados se definen como $ \ket{\ beta_ {ij}} = (\mathbb {1} \Otimes X ^ iz ^ j) (\ket {00} + \ket {11} )/\sqrt {2} $. Un par de EPR también se conoce como [Estado de campana](xref:microsoft.quantum.glossary#bell-state)
+Uno de los cuatro Estados de Quantum con un [Estado](xref:microsoft.quantum.glossary#quantum-state) máximo de dos [qubits](xref:microsoft.quantum.glossary#qubit). Los cuatro Estados se definen como $ \ket { \ beta_ {ij } } = (\Mathbb{1 } \Otimes X ^ iz ^ j) (\ket{00 } + \ket{11 } )/\sqrt{2 } $. Un par de EPR también se conoce como [Estado de campana](xref:microsoft.quantum.glossary#bell-state)
 
 ## <a name="evolution"></a>Calidad
 
@@ -76,11 +147,11 @@ Un término heredado para una [operación](xref:microsoft.quantum.glossary#opera
 
 ## <a name="global-phase"></a>Fase global
 
-Cuando dos [Estados](xref:microsoft.quantum.glossary#quantum-state) son idénticos a un múltiplo de un número complejo $e ^ {i\phi} $, se dice que se diferencian en una fase global. A diferencia de las fases locales, las fases globales no se pueden observar a través de cualquier [measurment](xref:microsoft.quantum.glossary#measurement). Para obtener más información, consulte [qubit](xref:microsoft.quantum.concepts.qubit).
+Cuando dos [Estados](xref:microsoft.quantum.glossary#quantum-state) son idénticos a un múltiplo de un número complejo $e ^ {i \phi } $, se dice que se diferencian en una fase global. A diferencia de las fases locales, las fases globales no se pueden observar a través de cualquier [measurment](xref:microsoft.quantum.glossary#measurement). Para obtener más información, consulte [qubit](xref:microsoft.quantum.concepts.qubit).
 
 ## <a name="hadamard"></a>Hadamard
 
-La operación Hadamard (a la que también se hace referencia como la puerta Hadamard o la transformación) actúa en una sola [qubit](xref:microsoft.quantum.glossary#qubit) y la coloca en una [superposición](xref:microsoft.quantum.glossary#superposition) uniforme de $ \ket {0} $ o $ \ket {1} $ si el qubit está inicialmente en el estado $ \ket {0} $. En Q #, esta operación se aplica mediante la operación predefinida [`H`](xref:microsoft.quantum.intrinsic.h) .
+La operación Hadamard (a la que también se hace referencia como la puerta Hadamard o la transformación) actúa en una sola [qubit](xref:microsoft.quantum.glossary#qubit) y la coloca en una [superposición](xref:microsoft.quantum.glossary#superposition) uniforme de $ \ket{0 } $ o $ \ket{1 } $ si el qubit está inicialmente en el estado $ \ket{0 } $. En Q #, esta operación se aplica mediante la operación predefinida [`H`](xref:microsoft.quantum.intrinsic.h) .
 
 ## <a name="immutable"></a>Inmutable
 
@@ -116,7 +187,7 @@ Llamar a una [función](xref:microsoft.quantum.glossary#function) u [operación]
 
 ## <a name="pauli-operators"></a>Operadores Pauli
 
-Un conjunto de tres matrices unitarios de 2 x 2 conocidas como las `X` `Y` operaciones, y `Z` Quantum. La matriz de identidad, $I $, suele incluirse también en el conjunto.  $I = \begin{bmatrix} 1 & 0 \\ \\ 0 & 1 \end{bmatrix} $, $X = \begin{bmatrix} 0 & 1 \\ \\ 1 & 0 \end{bmatrix} $, $Y = \begin{bmatrix} 0 &-i \\ \\ & 0 \end{bmatrix} $, $Z = \begin{bmatrix} 1 & 0 \\ \\ 0 &-1 \end{bmatrix} $.   Para obtener más información, consulte [operaciones de un solo qubit](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
+Un conjunto de tres matrices unitarios de 2 x 2 conocidas como las `X` `Y` operaciones, y `Z` Quantum. La matriz de identidad, $I $ , suele incluirse también en el conjunto.  $I = \begin{ bmatrix } 1 & 0 \\ \\ 0 & 1 \end{ bmatrix } $, $X = \begin{ bmatrix } 0 & 1 \\ \\ 1 & 0 \end{ bmatrix } $, $Y = \begin{ bmatrix } 0 &-i \\ \\ & 0 \end{ bmatrix } $, $Z = \begin{ bmatrix } 1 & 0 \\ \\ 0 &-1 \end{ bmatrix } $.   Para obtener más información, consulte [operaciones de un solo qubit](xref:microsoft.quantum.concepts.qubit#single-qubit-operations).
 
 ## <a name="quantum-circuit-diagram"></a>Diagrama del circuito de Quantum
 
@@ -148,7 +219,7 @@ Un algoritmo Quantum que se ejecuta con probabilidad de éxito. En caso de error
 
 ## <a name="superposition"></a>Superposición
 
-El concepto de Quantum Computing que [qubit](xref:microsoft.quantum.glossary#qubit) es una combinación lineal de dos Estados, $ \ket {0} $ y $ \ket {1} $, hasta que se [mida](xref:microsoft.quantum.glossary#measurement).  Para obtener más información, vea Descripción de la [informática Quantum](xref:microsoft.quantum.overview.understanding).
+El concepto de Quantum Computing que [qubit](xref:microsoft.quantum.glossary#qubit) es una combinación lineal de dos Estados, $ \ket{0 } $ y $ \ket{1 } $, hasta que se [mida](xref:microsoft.quantum.glossary#measurement).  Para obtener más información, vea Descripción de la [informática Quantum](xref:microsoft.quantum.overview.understanding).
 
 ## <a name="target-machine"></a>Máquina de destino
 
@@ -164,7 +235,7 @@ Colección de valores separados por comas que actúa como un valor único. El *t
 
 ## <a name="unitary-operator"></a>Operador unitario
 
-Un operador cuyo inverso es igual a su signo [contiguo](xref:microsoft.quantum.glossary#adjoint), es decir, $UU ^ {\dagger} = \id $.
+Un operador cuyo inverso es igual a su signo [contiguo](xref:microsoft.quantum.glossary#adjoint), es decir, $UU ^ {\dagger } = \id $ .
 
 ## <a name="user-defined-type"></a>Tipo definido por el usuario
 
