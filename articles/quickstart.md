@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 271eb7f496835f152573be930d0fe24e59f2d15d
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327380"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630087"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Exploración del entrelazamiento con Q\#
 
@@ -21,7 +21,7 @@ Incluye instrucciones para instalar QDK, compilar el programa y ejecutarlo en un
 Escribirá una aplicación llamada Bell para demostrar el entrelazamiento cuántico.
 El nombre Bell hace referencia a los estados de Bell, que son estados cuánticos específicos de dos cúbits que se usan para representar los ejemplos más sencillos de la superposición y el entrelazamiento cuántico.
 
-## <a name="pre-requisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Requisitos previos
 
 Si está listo para empezar a codificar, siga estos pasos antes de continuar: 
 
@@ -59,7 +59,7 @@ En este tutorial, se usan programas host y se compone de dos partes:
 
 1. Cree un nuevo proyecto de Q#
 
-    ```bash
+    ```
     dotnet new console -lang Q# --output Bell
     cd Bell
     ```
@@ -68,7 +68,7 @@ En este tutorial, se usan programas host y se compone de dos partes:
 
 1. Cambie el nombre del archivo Q#
 
-    ```bash
+    ```
     mv Operation.qs Bell.qs
     ```
 
@@ -282,7 +282,7 @@ Init:1    0s=0    1s=1000
 
 1. Ejecute lo siguiente en su terminal:
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
