@@ -1,0 +1,24 @@
+---
+title: Bibliotecas del kit de desarrollo de Microsoft Quantum
+description: Información general de las bibliotecas estándar, química y de valores numéricos incluidas en el kit de desarrollo de Microsoft Quantum.
+author: cgranade
+ms.author: chgranad@microsoft.com
+ms.date: 10/17/2018
+ms.topic: article
+uid: microsoft.quantum.libraries
+ms.openlocfilehash: 89612aaa5c11e1a5e0d418256e96366953fdd3fe
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85273883"
+---
+# <a name="overview-of-q-libraries"></a><span data-ttu-id="b0fec-103">Introducción a las bibliotecas de Q#</span><span class="sxs-lookup"><span data-stu-id="b0fec-103">Overview of Q# Libraries</span></span>
+<span data-ttu-id="b0fec-104">Quantum Development Kit se proporciona con varias bibliotecas para facilitar el desarrollo de aplicaciones cuánticas en Q#.</span><span class="sxs-lookup"><span data-stu-id="b0fec-104">The Quantum Development Kit is provided with several libraries to make it easier to develop quantum applications in Q#.</span></span>
+<span data-ttu-id="b0fec-105">En esta sección de la documentación, se describen estas bibliotecas y cómo usarlas en los programas.</span><span class="sxs-lookup"><span data-stu-id="b0fec-105">In this section of the documentation, we describe these libraries and how to use them in your programs.</span></span>
+
+- <span data-ttu-id="b0fec-106">[**Bibliotecas estándar**](xref:microsoft.quantum.libraries.standard.intro): En esta sección se describe el preludio, que define la interfaz entre los programas de Q# y las máquinas de destino, y el canon, una biblioteca de Q# que proporciona operaciones y funciones de uso general para usarlas al escribir programas de Q#.</span><span class="sxs-lookup"><span data-stu-id="b0fec-106">[**Standard libraries**](xref:microsoft.quantum.libraries.standard.intro): This section describes the prelude, which defines the interface between Q# programs and target machines, and the canon, a Q# library that provides general-purpose operations and functions for use in writing Q# programs.</span></span>
+- <span data-ttu-id="b0fec-107">[**Biblioteca de química cuántica**](xref:microsoft.quantum.chemistry.concepts.intro): En esta sección se describe la biblioteca de química cuántica, que proporciona un modelo de datos para cargar representaciones de funciones de Hamilton fermiónicas y funciones y operaciones de simulación cuántica que actúan en estas representaciones.</span><span class="sxs-lookup"><span data-stu-id="b0fec-107">[**Quantum chemistry library**](xref:microsoft.quantum.chemistry.concepts.intro): This section describes the quantum chemistry library, which provides a data model for loading representations of fermionic Hamiltonians and quantum simulation operations and functions which act on these representations.</span></span>
+- <span data-ttu-id="b0fec-108">[**Biblioteca de valores numéricos cuánticos**](xref:microsoft.quantum.numerics.intro): En esta sección se describe la biblioteca de valores numéricos cuánticos, que proporciona implementaciones para un host de funciones matemáticas.</span><span class="sxs-lookup"><span data-stu-id="b0fec-108">[**Quantum numerics library**](xref:microsoft.quantum.numerics.intro): This section describes the quantum numerics library, which provides implementations for a host of mathematical functions.</span></span> <span data-ttu-id="b0fec-109">Admite representaciones de enteros (con y sin signo) y de punto fijo.</span><span class="sxs-lookup"><span data-stu-id="b0fec-109">It supports integer (signed & unsigned) and fixed-point representations.</span></span>
+
+<span data-ttu-id="b0fec-110">Los orígenes de las bibliotecas y los ejemplos de código se pueden obtener de GitHub.</span><span class="sxs-lookup"><span data-stu-id="b0fec-110">Sources of the libraries as well as code samples can be obtained from GitHub.</span></span> <span data-ttu-id="b0fec-111">Consulte también la sección de [licencias](xref:microsoft.quantum.libraries.licensing) para más información.</span><span class="sxs-lookup"><span data-stu-id="b0fec-111">See also the [licensing](xref:microsoft.quantum.libraries.licensing) section for further information.</span></span> <span data-ttu-id="b0fec-112">Tenga en cuenta que las referencias de paquete ("archivos binarios") también están disponibles para las bibliotecas que ofrecen otra manera de incluir las bibliotecas en los proyectos.</span><span class="sxs-lookup"><span data-stu-id="b0fec-112">It should be noted that package references ("binaries") are available also for the libraries which offers another way of including the libraries in projects.</span></span> <span data-ttu-id="b0fec-113">Se pueden obtener fácilmente mediante [nuget](https://nuget.org).</span><span class="sxs-lookup"><span data-stu-id="b0fec-113">A convenient way of obtaining them is via [nuget](https://nuget.org).</span></span>

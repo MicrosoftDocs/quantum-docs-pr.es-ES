@@ -7,6 +7,8 @@
 - name: "Uso de\_Q#"
   href: using-qsharp/toc.yml
 - name: Simuladores y calculadoras de recursos
-  href: ../machines/toc.yml
+  href: machines/toc.yml
+- name: Bibliotecas de Q#
+  href: libraries/toc.yml
 - name: Referencia rápida
   href: quickref/toc.yml
