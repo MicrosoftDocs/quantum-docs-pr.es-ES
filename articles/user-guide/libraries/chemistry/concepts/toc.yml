@@ -1,0 +1,16 @@
+- name: Dinámica cuántica
+  href: quantum-dynamics.md
+- name: Modelos cuánticos para sistemas electrónicos
+  href: quantum-models.md
+- name: Cuantificación secundaria
+  href: second-quantization.md
+- name: Simetrías de integrales moleculares
+  href: symmetries-molecular.md
+- name: Representación de Jordan-Wigner
+  href: jordan-wigner.md
+- name: Simulación de dinámicas de Hamilton
+  href: algorithms.md
+- name: Teoría de Hartree-Fock
+  href: hartree-fock.md
+- name: Funciones de onda correlacionadas
+  href: multireference.md

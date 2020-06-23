@@ -1,0 +1,9 @@
+- name: Glosario
+  href: glossary.md
+- name: Contribución a Quantum Developer Kit
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: Notas de la versión de Quantum Developer Kit
+  href: relnotes.md
+- name: Lecturas adicionales
+  href: further-reading.md
