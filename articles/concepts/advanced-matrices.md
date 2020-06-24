@@ -9,6 +9,13 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
+- $$
+- $$
+- $$
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +84,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 8d3c646715f13c454e51b9295cbfdabf6a236ffc
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 71923247121eae6a1d4e26d2664d8e547370ba3a
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630149"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269463"
 ---
 # <a name="advanced-matrix-concepts"></a>Conceptos de matriz avanzada #
 
@@ -104,7 +114,7 @@ $$
 
 Vectores
 
-$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ 0 \end { bmatrix } y \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1 \end {bmatrix}$$
+$ $ \begin{ bmatrix } 1 \\ \\ 0 \\ \\ 0 \end{ bmatrix } , \begin{ bmatrix } 0 \\ \\ 1 \\ \\ \end{bmatrix} y \begin{ bmatrix } 0 \\ \\ 0 \\ \\ 1\end{bmatrix}$$
 
 son vectores propios de esta matriz con vectores propios $d _ 1, $ $d _2 $ y $d _3 $ , respectivamente. Si $d _ 1 $ , $d _2 $ y $d _3 $ son números distintos, estos vectores (y sus múltiplos) son los únicos vectores propios de la matriz $D $ . En general, para una matriz diagonal es fácil leer las vectores propios y vectores propios. Los vectores propios son todos los números que aparecen en la diagonal, y sus respectivas vectores propios son los vectores de unidad con una entrada igual a $1 $ y las entradas restantes son iguales a $0 $ .
 

@@ -1,17 +1,17 @@
 ---
 title: Macros LaTeX compatibles para la creación
 description: Lista de macros de LaTeX admitidas para la documentación de Microsoft Quantum Development Kit.
-author: natke
-ms.author: nakersha
+author: bradben
+ms.author: bradben
 ms.date: 09/04/2019
 ms.topic: article
 uid: microsoft.quantum.contribute.macros
-ms.openlocfilehash: 2866ae3de43280914ffe51739d76ac10d28e9124
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: e6d84d294e28eadb70dc8049e7d9edaee15dcc6f
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906923"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269259"
 ---
 # <a name="supported-macros"></a>Macros admitidas
 
