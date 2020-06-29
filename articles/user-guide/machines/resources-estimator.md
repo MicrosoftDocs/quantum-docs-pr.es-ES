@@ -6,12 +6,12 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: b0c800c3946d2e4ba4457127fb9495dc9dcf2934
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: cbb1c274b64738cc4b47869563d7d02eb717afbc
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275549"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415271"
 ---
 # <a name="the-resources-estimator-target-machine"></a>El equipo de destino del estimador de recursos
 
@@ -98,8 +98,8 @@ A continuación se muestra la lista de métricas estimadas por `ResourcesEstimat
 * __Measure__: el recuento de cualquier medida ejecutada.
 * __R__: el recuento de cualquier rotación de qubit única ejecutada, excluidas las puertas T, Clifford y Pauli.
 * __T__: el recuento de t puertas y sus conjugados, incluida la puerta t, T_x = H. T. h y T_y = HY. t. HY, ejecutada.
-* __Depth__: profundidad del circuito de Quantum ejecutado por la operación Q #. De forma predeterminada, solo se cuentan las puertas T en la profundidad; vea [contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) para obtener más información.
-* __Width__: número máximo de qubits asignados durante la ejecución de la operación Q #.
+* __Depth__: límite inferior para la profundidad del circuito de Quantum ejecutado por la operación Q #. De forma predeterminada, solo se cuentan las puertas T en la profundidad; vea [contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) para obtener más información.
+* __Width__: límite inferior para el número máximo de qubits asignado durante la ejecución de la operación Q #. Es posible que no sea posible conseguir límites inferiores de __profundidad__ y __ancho__ simultáneamente.
 * __BorrowedWidth__: número máximo de qubits prestado dentro de la operación Q #.
 
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 Cuando los `ResourcesEstimator` encuentre `AssertProb` , registrará la medición `PauliZ` en `source` y `q` se le debe proporcionar un resultado de `Zero` con la probabilidad 0,5. Cuando se ejecute `M` más tarde, buscará los valores registrados de las probabilidades de resultado y `M` devolverá `Zero` o `One` con la probabilidad 0,5.
 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 `ResourcesEstimator`Se basa en el [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de equipos Quantum, que proporciona un conjunto más completo de métricas, la capacidad de notificar métricas en el gráfico de llamadas completo y características como el [Comprobador de entradas distintas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) para ayudar a encontrar errores en los programas de preguntas y respuestas. Consulte la documentación del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) para obtener más información.
 

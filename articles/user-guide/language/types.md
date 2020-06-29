@@ -6,118 +6,121 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.types
-ms.openlocfilehash: f7a3ac3813966c0ef695068297ce4d9949ead554
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: e37ce6e3a2dfad5395cdecf06178d64ec51b79f1
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327295"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415293"
 ---
 # <a name="types-in-q"></a>Tipos en Q#
 
-Esta página dispone del modelo de tipo Q # y describe la sintaxis para especificar y trabajar con tipos.
-La página siguiente, [expresiones de tipo](xref:microsoft.quantum.guide.expressions), detalla cómo crear y operar en expresiones de estos tipos.
+En este artículo se describe el modelo de tipo Q # y la sintaxis para especificar y trabajar con tipos. Para obtener más información sobre cómo crear y operar en expresiones de estos tipos, vea [expresiones de tipo](xref:microsoft.quantum.guide.expressions).
 
 Tenemos en cuenta que Q # es un lenguaje *fuertemente tipado* , de modo que el uso meticuloso de estos tipos puede ayudar al compilador a proporcionar garantías sólidas sobre los programas de Q # en tiempo de compilación.
-Con el fin de proporcionar las garantías más fuertes posibles, las conversiones entre los tipos en Q # deben ser explícitas mediante llamadas a funciones que expresan esa conversión. Se proporcionan varias funciones como parte del <xref:microsoft.quantum.convert> espacio de nombres.
-Las conversiones de tipos compatibles por otro lado se producen implícitamente. 
+Para proporcionar las garantías más fuertes posibles, las conversiones entre tipos en Q # deben ser explícitas mediante llamadas a funciones que expresan esa conversión. Q # proporciona una gran variedad de funciones como parte del espacio de <xref:microsoft.quantum.convert> nombres.
+Las reversiones a tipos compatibles, por otro lado, se producen implícitamente. 
 
-Q # proporciona ambos tipos primitivos, que se pueden usar directamente, y varias maneras de generar nuevos tipos a partir de otros tipos.
-En el resto de esta sección se describe cada uno de ellos.
+Q # proporciona ambos tipos primitivos, que se utilizan directamente, y diversas maneras de generar nuevos tipos a partir de otros tipos.
+En el resto de este artículo se describe cada uno de ellos.
 
 ## <a name="primitive-types"></a>Tipos primitivos
 
-El lenguaje Q # proporciona varios *tipos primitivos*, de los que se pueden construir otros tipos:
+El lenguaje de preguntas y respuestas proporciona los siguientes *tipos primitivos*, que se pueden usar directamente en los programas de preguntas y respuestas. También puede usar estos tipos primitivos para construir nuevos tipos.
 
-- El `Int` tipo representa un entero con signo de 64 bits, por ejemplo: `2` , `107` , `-5` .
-- El `BigInt` tipo representa un entero con signo de tamaño arbitrario, por ejemplo `2L` , `107L` , `-5L` .
+- El `Int` tipo representa un entero con signo de 64 bits, por ejemplo, `2` , `107` , `-5` .
+- El `BigInt` tipo representa un entero con signo de tamaño arbitrario, por ejemplo, `2L` , `107L` , `-5L` .
    Este tipo se basa en .NET<xref:System.Numerics.BigInteger>
    automáticamente.
-- El `Double` tipo representa un número de punto flotante de precisión doble, por ejemplo: `0.0` , `-1.3` , `4e-7` .
-- El `Bool` tipo representa un valor booleano que puede ser `true` o `false` .
+
+- El `Double` tipo representa un número de punto flotante de precisión doble, por ejemplo, `0.0` , `-1.3` , `4e-7` .
+- El `Bool` tipo representa un valor booleano de `true` o `false` .
 - El `Range` tipo representa una secuencia de enteros, indicada por `start..step..stop` , donde la indicación del paso es opcional. 
-   Esto se `start .. stop` corresponde con `start..1..stop` y, por ejemplo, `1..2..7` representa la secuencia $ \{ 1, 3, 5, 7 \} $.
+   Por ejemplo, `start .. stop` corresponde a `start..1..stop` y `1..2..7` representa la secuencia $ \{ 1, 3, 5, 7 \} $.
 - El `String` tipo es una secuencia de caracteres Unicode que es opaca para el usuario una vez creado.
-  Este tipo se utiliza para notificar mensajes a un host clásico en caso de un error o un evento de diagnóstico.
-- El `Unit` tipo es el tipo que solo permite un valor `()` . 
-  Este tipo se usa para indicar que la operación o la función Q # no devuelve ninguna información. 
+  Use el `string` tipo para notificar mensajes a un host clásico en caso de un error o un evento de diagnóstico.
+- El `Unit` tipo solo puede tener un valor, `()` . 
+  Utilice este tipo para indicar que una función u operación de Q # no devuelve información. 
 - El `Qubit` tipo representa un bit de Quantum o qubit.
-   `Qubit`s son opacos para el usuario; la única operación posible con ellos, aparte de pasarlos a otra operación, es comprobar la identidad (igualdad).
-   En última instancia, las acciones en `Qubit` s se implementan llamando a instrucciones intrínsecas en un procesador Quantum (o en una simulación de la misma).
+   `Qubit`los s son opacos para el usuario. La única operación posible con ellos, aparte de pasarlos a otra operación, es comprobar la identidad (igualdad).
+   En última instancia, se implementan acciones en `Qubit` s llamando a instrucciones intrínsecas en un procesador Quantum (o un simulador Quantum).
 - El `Pauli` tipo representa uno de los cuatro operadores de Pauli de qubit único.
-   Este tipo se utiliza para denotar la operación base para los giros y para especificar el objeto observable que se va a medir.
-   Se trata de un tipo enumerado que tiene cuatro valores posibles: `PauliI` , `PauliX` , `PauliY` y `PauliZ` , que son constantes de tipo `Pauli` .
+   Utilice este tipo para indicar la operación base para los giros y especificar el objeto observable que se va a medir.
+   Es un tipo enumerado que tiene cuatro valores posibles: `PauliI` , `PauliX` , `PauliY` y `PauliZ` , que son constantes de tipo `Pauli` .
 - El `Result` tipo representa el resultado de una medida.
-   Se trata de un tipo enumerado con dos valores posibles: `One` y `Zero` , que son constantes de tipo `Result` .
-   `Zero`indica que se ha medido + 1 eigenvalue; `One`indica-1 eigenvalue.
+   Es un tipo enumerado con dos valores posibles: `One` y `Zero` , que son constantes de tipo `Result` .
+   `Zero`indica que se ha medido + 1 eigenvalue; `One`indica que se midió-1 eigenvalue.
 
 Las constantes, `true` `false` , `PauliI` , `PauliX` , `PauliY` , `PauliZ` , `One` y `Zero` son símbolos reservados en Q #.
 
 ## <a name="array-types"></a>Tipos de matriz
 
-Dado cualquier tipo de Q # válido `'T` , existe un tipo que representa una matriz de valores de tipo `'T` .
-Este tipo de matriz se representa como `'T[]` ; por ejemplo, `Qubit[]` o `Int[][]` .
-Por ejemplo, se denota una colección de enteros `Int[]` , mientras que se denota una matriz de `(Bool, Pauli)` valores `(Bool, Pauli)[][]` .
+* Para cualquier tipo de Q # válido, hay un tipo que representa una matriz de valores de ese tipo.
+    Por ejemplo, `Qubit[]` y `(Bool, Pauli)[]` representan matrices de `Qubit` valores y `(Bool, Pauli)` valores de tupla.
 
-En el segundo ejemplo, tenga en cuenta que esto representa una matriz potencialmente escalonada de matrices, y no una matriz bidimensional rectangular.
-Q # no proporciona compatibilidad con matrices multidimensionales rectangulares.
+* Una matriz de matrices también es válida. Al expandir el ejemplo anterior, se denota una matriz de `(Bool, Pauli)` matrices `(Bool, Pauli)[][]` .
 
-Un valor de matriz se puede escribir en el código fuente de Q # mediante el uso de corchetes alrededor de los elementos de una matriz, como en `[PauliI, PauliX, PauliY, PauliZ]` .
-El tipo de un literal de matriz viene determinado por el tipo base común de todos los elementos de la matriz. Por lo tanto, si se intenta construir una matriz con elementos que no tienen un tipo base común, se producirá un error.  
-Consulte [matrices de llamadas](xref:microsoft.quantum.guide.expressions#arrays-of-callables) a las que se puede llamar para obtener un ejemplo de esto.
+> [!NOTE] 
+> En este ejemplo, `(Bool, Pauli)[][]` , representa una matriz de matrices potencialmente escalonada y no una matriz bidimensional rectangular. Q # no es compatible con matrices multidimensionales rectangulares.
 
-> [!WARNING]
-> Los elementos de una matriz no se pueden cambiar una vez creada la matriz.
-> Las [instrucciones Update-and-resign](xref:microsoft.quantum.guide.variables#update-and-reassign-statements) y/o las [expresiones de copia y actualización](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) se pueden usar para construir una matriz modificada.
+* Un valor de matriz se puede escribir en el código fuente de Q # mediante el uso de corchetes alrededor de los elementos de una matriz, como en `[PauliI, PauliX, PauliY, PauliZ]` .
+El tipo base común de todos los elementos de la matriz determina el tipo de un literal de matriz. Por lo tanto, la construcción de una matriz con elementos que no tienen un tipo base común produce un error.  
+Para obtener un ejemplo, consulte [matrices de llamadas](xref:microsoft.quantum.guide.expressions#arrays-of-callables).
 
-Como alternativa, se puede crear una matriz a partir de su tamaño mediante la `new` palabra clave:
+    > [!WARNING]
+    > Una vez creados, no se pueden cambiar los elementos de una matriz.
+    > Para construir una matriz modificada, use [instrucciones Update-and-resign](xref:microsoft.quantum.guide.variables#update-and-reassign-statements) o [expresiones de copia y actualización](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions).
 
-```qsharp
-let zeros = new Int[13];
-// new also allows for creating empty arrays:
-let emptyRegister = new Qubit[0];
-```
+* Como alternativa, se puede crear una matriz a partir de su tamaño mediante la `new` palabra clave:
 
-En cualquier caso, una vez construida una matriz, `Length` se puede utilizar la función principal para obtener el número de elementos como `Int` .
-Las matrices se pueden incluir entre corchetes, con los subíndices de tipo `Int` o tipo `Range` , para obtener elementos individuales o matrices nuevas que contengan un subconjunto de los elementos de una matriz.
-Los subíndices de las matrices son de base cero:
+    ```qsharp
+    let zeros = new Int[13];
+    // you can also use new for creating empty arrays:
+    let emptyRegister = new Qubit[0];
+    ```
 
-```qsharp
-let arr = [10, 11, 36, 49];
-let ten = arr[0]; // 10
-let odds = arr[1..2..4]; // [11, 49]
-```
+* Utilice la función Core `Length` para obtener el número de elementos de una matriz como `Int` .
+* Las matrices pueden ser de subíndice para obtener elementos individuales o matrices nuevas que contengan un subconjunto de los elementos de una matriz.
+Los subíndices de las matrices tienen una base cero y deben ser de tipo `Int` o tipo `Range` :
+
+    ```qsharp
+    let arr = [10, 11, 36, 49];
+    let ten = arr[0]; // 10
+    let odds = arr[1..2..4]; // [11, 49]
+    ```
 
 ## <a name="tuple-types"></a>Tipos de tupla
 
-Dado cero o más tipos diferentes `T0` , `T1` ,..., `Tn` , podemos denotar un nuevo *tipo de tupla* como `(T0, T1, ..., Tn)` .
+Las tuplas son un concepto eficaz que se usa en Q # para recopilar valores en un único valor, lo que facilita su paso.
+En concreto, mediante la notación de tupla, puede expresar que cada operación y invocable toma exactamente una entrada y devuelve exactamente una salida.
+
+* Dado cero o más tipos diferentes `T0` , `T1` ,..., `Tn` , puede denotar un nuevo *tipo de tupla* como `(T0, T1, ..., Tn)` .
 Los tipos usados para construir un nuevo tipo de tupla pueden ser tuplas, como en `(Int, (Qubit, Qubit))` .
 Sin embargo, este anidamiento siempre es finito, ya que los tipos de tupla no pueden incluirse en ningún caso.
 
-Los valores del nuevo tipo de tupla son tuplas formadas por secuencias de valores de cada tipo de la tupla.
+* Los valores del nuevo tipo de tupla son tuplas formadas por secuencias de valores de cada tipo de la tupla.
 Por ejemplo, `(3, false)` es una tupla cuyo tipo es el tipo de tupla `(Int, Bool)` .
-Es posible crear matrices de tuplas, tuplas de matrices, tuplas de subtuplas, etc.
+Es posible crear matrices de tuplas, tuplas de matrices, tuplas de subtuplas y así sucesivamente.
 
-A partir de Q # 0,3, `Unit` es el nombre del *tipo* de la tupla vacía; `()` se usa para el *valor*de tupla vacío.
+* A partir de Q # 0,3, `Unit` es el nombre del *tipo* de la tupla vacía; `()` se usa para el *valor* de la tupla vacía.
 
-Las instancias de tupla son inmutables.
+* Las instancias de tupla son inmutables.
 Q # no proporciona un mecanismo para cambiar el contenido de una tupla una vez creada.
 
-Las tuplas son un concepto eficaz que se usa en Q # para recopilar valores en un único valor, lo que facilita su paso.
-En concreto, mediante la notación de tupla, podemos expresar que cada operación y a la que se puede llamar toma exactamente una entrada y devuelve exactamente una salida.
+
 
 ### <a name="singleton-tuple-equivalence"></a>Equivalencia de tupla singleton
 
-Es posible crear una tupla singleton (elemento único), `('T1)` , como `(5)` o `([1,2,3])` .
-Sin embargo, Q # trata una tupla singleton como totalmente equivalente a un valor del tipo delimitado.
+Es posible crear una tupla singleton (elemento único) `('T1)` , como `(5)` o `([1,2,3])` .
+Sin embargo, Q # trata una tupla singleton como equivalente a un valor del tipo delimitado.
 Es decir, no hay ninguna diferencia entre `5` y `(5)` , o entre `5` y `(((5)))` , o entre `(5, (6))` y `(5, 6)` .
-Es como válido escribir `(5)+3` como para escribir `5+3` y ambas expresiones se evaluarán como `8` .
+Es como válido escribir `(5)+3` como para escribir `5+3` ; ambas expresiones se evalúan como `8` .
 
 Esta equivalencia se aplica a todos los propósitos, incluidas las asignaciones y las expresiones.
 Dada cualquier expresión, esa misma expresión entre paréntesis es una expresión del mismo tipo.
-Por ejemplo, `(7)` es una expresión `Int` , `([1,2,3])` es una expresión de tipo matriz de `Int` s y `((1,2))` es una expresión con tipo `(Int, Int)` .
+Por ejemplo, `(7)` es una expresión de tipo `Int` , `([1,2,3])` es una expresión de tipo `Int[]` y `((1,2))` es una expresión de tipo `(Int, Int)` .
 
-En concreto, esto significa que una operación o función cuyo tipo de tupla de entrada o de salida tiene un campo se puede considerar como tomar un único argumento o devolver un valor único.
+En concreto, esto significa que puede ver una operación o función cuyo tipo de tupla de entrada o de salida tiene un campo que toma un solo argumento o devuelve un valor único.
 
 Hacemos referencia a esta propiedad como _equivalencia de tupla singleton_.
 
@@ -131,17 +134,16 @@ Por ejemplo:
 ```qsharp
 newtype PairOfInts = (Int, Int);
 ```
-
-Cada archivo de código fuente de Q # puede declarar cualquier número de tipos definidos por el usuario.
-Los nombres de tipo deben ser únicos dentro de un espacio de nombres y no pueden entrar en conflicto con los nombres de operación y función.
-
-Los tipos definidos por el usuario son distintos aunque los tipos base sean idénticos.
+    
+* Cada archivo de código fuente de Q # puede declarar cualquier número de tipos definidos por el usuario.
+* Los nombres de tipo deben ser únicos dentro de un espacio de nombres y no pueden entrar en conflicto con los nombres de operación y función.
+* Los tipos definidos por el usuario son distintos, aunque los tipos base sean idénticos.
 En concreto, no hay ninguna conversión automática entre los valores de dos tipos definidos por el usuario, aunque los tipos subyacentes sean idénticos.
 
 ### <a name="named-vs-anonymous-items"></a>Elementos con nombre frente a elementos anónimos
 
 Un archivo de preguntas # puede definir un nuevo tipo con nombre que contenga un valor único de cualquier tipo válido.
-Para cualquier tipo `T` de tupla, se puede declarar un nuevo tipo definido por el usuario que sea un subtipo de `T` con la `newtype` instrucción.
+Para cualquier tipo `T` de tupla, puede declarar un nuevo tipo definido por el usuario que sea un subtipo de `T` con la `newtype` instrucción.
 En el @"microsoft.quantum.math" espacio de nombres, por ejemplo, los números complejos se definen como un tipo definido por el usuario:
 
 ```qsharp
@@ -149,13 +151,13 @@ newtype Complex = (Double, Double);
 ```
 Esta instrucción crea un nuevo tipo con dos elementos anónimos de tipo `Double` .   
 
-Además de los elementos anónimos, los tipos definidos por el usuario también admiten *elementos con nombre* a partir de la versión 0,7 o posterior. Por ejemplo, podríamos haber llamado a items `Re` para el Double que representa la parte real de un número complejo y `Im` para la parte imaginaria: 
+Además de los elementos anónimos, los tipos definidos por el usuario también admiten *elementos con nombre* a partir de la versión 0,7 o posterior. Por ejemplo, podría asignar un nombre a los elementos para `Re` el valor Double que representa la parte real de un número complejo y `Im` para la parte imaginaria: 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 ```
 Asignar un nombre a un elemento de un tipo definido por el usuario no implica que todos los elementos deban tener nombre; se admite cualquier combinación de elementos con nombre y sin nombre. Además, los elementos internos también se pueden denominar.
-El tipo `Nested` tal y como se define a continuación, por ejemplo, tiene un tipo subyacente `(Double, (Int, String))` , del que solo se denomina el elemento de tipo `Int` y todos los demás elementos son anónimos. 
+El tipo `Nested` , como se define a continuación, por ejemplo, tiene un tipo subyacente `(Double, (Int, String))` , del que solo se denomina el elemento de tipo `Int` , y todos los demás elementos son anónimos. 
 
 ```qsharp
 newtype Nested = (Double, (ItemName : Int, String)); 
@@ -177,13 +179,11 @@ newtype Polar = (Radius : Double, Phase : Double);
 ```
 
 Aunque ambos `Complex` `Polar` tienen un tipo subyacente `(Double, Double)` , los dos tipos son totalmente incompatibles en Q #, lo que minimiza el riesgo de llamar accidentalmente a una función matemática compleja con coordenadas polares y viceversa.
-De esta manera, los tipos definidos por el usuario tienen un rol similar como registros en F #, por ejemplo. 
-
 
 #### <a name="access-anonymous-items-with-the-unwrap-operator"></a>Obtener acceso a elementos anónimos con el operador Unwrap
 
-Para tener acceso a los elementos anónimos por otro lado, el valor ajustado primero debe extraerse mediante el operador postfijo `!` .
-El operador "Unwrap", `!` , permite extraer el valor contenido en un tipo definido por el usuario.
+Para obtener acceso a los elementos anónimos, extraiga primero el valor ajustado mediante el operador postfijo `!` .
+Con el operador "Unwrap", `!` , puede extraer el valor contenido en un tipo definido por el usuario.
 El tipo de una expresión "Unwrap" es el tipo subyacente del tipo definido por el usuario. 
 
 ```qsharp
@@ -193,8 +193,7 @@ function PrintedMessage(value : Nested) : Unit {
 }
 ```
 
-El operador Unwrap desencapsula exactamente una capa de ajuste.
-Se pueden usar varios operadores Unwrap para tener acceso a un valor de ajuste de multiplicación.
+Un único operador Unwrap desencapsula un nivel de ajuste. Use varios operadores Unwrap para tener acceso a un valor de ajuste de multiplicación.
 
 Por ejemplo:
 
@@ -212,18 +211,18 @@ newtype DoublyWrappedInt = WrappedInt;
 ...
 ```
 
-Puede encontrar más detalles sobre el operador Unwrap en [expresiones de tipo en Q #](xref:microsoft.quantum.guide.expressions).
+Para obtener más información sobre el operador Unwrap, vea [expresiones de tipo en Q #](xref:microsoft.quantum.guide.expressions).
 
 ### <a name="creating-values-of-user-defined-types"></a>Crear valores de tipos definidos por el usuario
 
-Los valores de un tipo definido por el usuario se pueden crear llamando al constructor de tipo correspondiente:
+Cree valores de un tipo definido por el usuario mediante una llamada al constructor de tipo correspondiente:
 
-```
+```qsharp
 let realUnit = Complex(1.0, 0.0);
 let imaginaryUnit = Complex(0.0, 1.0);
 ```
 
-Como alternativa, se pueden crear nuevos valores a partir de los existentes mediante [expresiones de copiar y actualizar](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions). Al igual que en el caso de las matrices, estas expresiones copian todos los valores de los elementos de la expresión original, con la excepción de los elementos con nombre especificados. Estos valores se establecen en los que se definen en el lado derecho de la expresión. Cualquier otra construcción de lenguaje, como por ejemplo [instrucciones Update-and-resign](xref:microsoft.quantum.guide.variables#update-and-reassign-statements), que están disponibles para los elementos de matriz existen también para los elementos con nombre en los tipos definidos por el usuario.
+Como alternativa, puede crear nuevos valores a partir de los existentes mediante [expresiones de copiar y actualizar](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions). Del mismo modo que con las matrices, las expresiones de copiar y actualizar copian todos los valores de los elementos de la expresión original, excepto los elementos con nombre especificados. Para estas excepciones, los valores de estos elementos son los valores definidos en el lado derecho de la expresión. Cualquier otra construcción de lenguaje que esté disponible para los elementos de matriz, por ejemplo [instrucciones Update-and-resign](xref:microsoft.quantum.guide.variables#update-and-reassign-statements), existe también para los elementos con nombre de tipos definidos por el usuario.
 
 ```qsharp
 newtype ComplexArray = (Count : Int, Data : Complex[]);
@@ -238,62 +237,65 @@ function AsComplexArray (data : Double[]) : ComplexArray {
 }
 ```
 
-Los tipos definidos por el usuario se pueden usar en cualquier otro tipo que se pueda usar.
+* Puede usar tipos definidos por el usuario en cualquier lugar en el que use cualquier otro tipo.
 En concreto, es posible definir una matriz de un tipo definido por el usuario y incluir un tipo definido por el usuario como elemento de un tipo de tupla.
 
-Nota no es posible crear estructuras de tipo recursivas.
+* No es posible crear estructuras de tipo recursivas.
 Es decir, el tipo que define un tipo definido por el usuario no puede ser un tipo de tupla que incluya un elemento del tipo definido por el usuario.
-En general, los tipos definidos por el usuario no pueden tener dependencias cíclicas entre sí, por lo que el siguiente conjunto de definiciones de tipo no sería válido:
+En general, los tipos definidos por el usuario no pueden tener dependencias cíclicas entre sí, por lo que el siguiente conjunto de definiciones de tipo no es válido:
 
-```qsharp
-newtype TypeA = (Int, TypeB);
-newtype TypeB = (Double, TypeC);
-newtype TypeC = (TypeA, Range);
-```
+    ```qsharp
+    newtype TypeA = (Int, TypeB);
+    newtype TypeB = (Double, TypeC);
+    newtype TypeC = (TypeA, Range);
+    ```
 
 
 ## <a name="operation-and-function-types"></a>Tipos de operación y función
 
-El tipo básico de cualquier que se pueda llamar se escribe como `('Tinput => 'Tresult)` o `('Tinput -> 'Tresult)` , donde `'Tinput` y `'Tresult` son tipos.
+Dados los tipos `'Tinput` y `'Tresult` :
+
+* `('Tinput => 'Tresult)`es el tipo básico de cualquier *operación*, por ejemplo `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)`es el tipo básico de cualquier *función*, por ejemplo `(Int -> Int)` . 
+
 Estos se denominan la *firma* de que se puede llamar.
 
-Todas las llamadas a Q # pueden tomar un valor único como entrada y devolver un valor único como salida.
-Los valores de entrada y salida pueden ser tuplas.
-Se puede llamar a que no se devuelve ningún resultado `Unit` .
-Las invocaciones que no tienen ninguna entrada toman la tupla vacía como entrada.
+* Todas las llamadas a Q # toman un valor único como entrada y devuelven un valor único como salida.
+* Puede usar tuplas para los valores de entrada y salida.
+* Llamadas que no tienen ningún resultado, devuelven `Unit` .
+* Las invocaciones que no tienen ninguna entrada toman la tupla vacía como entrada.
+
+### <a name="functors"></a>Funciones
+
+Los tipos de *función* se especifican completamente mediante su firma. Por ejemplo, una función que calcula el seno de un ángulo tendría el tipo `(Double -> Double)` . 
+
+*Las operaciones* tienen ciertas características adicionales que se expresan como parte del tipo de operación. Estas características incluyen información sobre los *inactivos* que admite la operación.
+Por ejemplo, si la ejecución de la operación se basa en el estado de otros qubits, debe admitir el `Controlled` functor; si la operación tiene un inverso, debe admitir el `Adjoint` functor.
 
 > [!NOTE]
-> El primer formulario, con `=>` , se utiliza para las operaciones; el segundo formulario, con `->` , para las funciones.
-> Por ejemplo, `((Qubit, Pauli) => Result)` representa la firma de una posible operación de medición de un solo qubit.
-Los tipos de *función* se especifican completamente mediante su firma.
-Por ejemplo, una función que calcula el seno de un ángulo tendría el tipo `(Double -> Double)` .
+> En este artículo solo se explica cómo los funcers modifican la firma de la operación. Para obtener más información sobre los inactivos y las operaciones, vea [operaciones y funciones en Q #](xref:microsoft.quantum.guide.operationsfunctions). 
 
-*Las operaciones*---pero no las funciones---tienen ciertas características adicionales que se expresan como parte del tipo de operación. Estas características incluyen información *sobre los elementos que admite* la operación.
-Por ejemplo, si la ejecución de la operación se puede condicionar en el estado de otros qubits, debe admitir el `Controlled` functor; si la operación tiene un inverso, debe admitir el `Adjoint` functor. Los funcdores y las operaciones se describen en detalle en [operaciones y funciones en Q #](xref:microsoft.quantum.guide.operationsfunctions), pero aquí simplemente se describe cómo modifica la firma de la operación.
+Para requerir la compatibilidad con `Controlled` y/o `Adjoint` functor en un tipo de operación, debe agregar una anotación que indique las características correspondientes.
+La anotación `is Ctl` (por ejemplo, `(Qubit => Unit is Ctl)` ) indica que la operación es controlable. Es decir, su ejecución se basa en el estado de otro qubit o qubits. Del mismo modo, la anotación `is Adj` indica que la operación tiene un uncontiguo, es decir, se puede "invertir" de modo que la aplicación de una operación sucesivamente y después su contigua a un estado deja el estado sin cambios. 
 
-Para requerir la compatibilidad con `Controlled` y/o `Adjoint` functor en un tipo de operación, es necesario agregar una anotación que indique las características correspondientes.
-Una anotación `is Ctl` (por ejemplo `(Qubit => Unit is Ctl)` ,) indica que la operación es controlable---es decir, su ejecución se condiciona en el estado de otro qubit o qubits. Del mismo modo, `is Adj` indica que la operación tiene un tipo contiguo, o simplemente, se puede "invertir" de modo que la aplicación sucesiva de una operación y, a continuación, su unjoin a un estado deja el estado sin cambios. 
-
-Si queremos requerir que una operación de ese tipo admita el `Adjoint` y el `Controlled` functor, podemos expresar esto como `(Qubit => Unit is Adj + Ctl)` . Por ejemplo, la operación Pauli integrada <xref:microsoft.quantum.intrinsic.x> tiene el tipo `(Qubit => Unit is Adj + Ctl)` . 
+Si desea exigir que una operación de ese tipo admita `Adjoint` y el `Controlled` functor, puede expresarlo como `(Qubit => Unit is Adj + Ctl)` . Por ejemplo, la operación Pauli integrada <xref:microsoft.quantum.intrinsic.x> tiene el tipo `(Qubit => Unit is Adj + Ctl)` . 
 
 Un tipo de operación que no admita ningún functor se especifica solo por su tipo de entrada y salida, sin ninguna anotación adicional.
 
 ### <a name="type-parameterized-functions-and-operations"></a>Operaciones y funciones con parámetros de tipo
 
-Los tipos a los que se puede llamar pueden contener parámetros de tipo.
-Los parámetros de tipo se indican mediante un símbolo precedido por una comilla simple; por ejemplo, `'A` es un parámetro de tipo válido.
-En las [operaciones y funciones de la página de preguntas y respuestas](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) , se proporcionan detalles sobre cómo definir llamadas parametrizadas con parámetros de tipo.
+Los tipos a los que se puede llamar pueden contener *parámetros de tipo*.
+Use un símbolo con una comilla simple como prefijo para indicar un parámetro de tipo; por ejemplo, `'A` es un parámetro de tipo válido.
+Para obtener más información y detalles sobre cómo definir las invocaciones con parámetros de tipo, vea [operaciones y funciones en Q #](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
 
 Un parámetro de tipo puede aparecer más de una vez en una sola firma.
-Por ejemplo, una función que aplica otra función a cada elemento de una matriz y devuelve los resultados recopilados tendría la firma `(('A[], 'A->'A) -> 'A[])` .
-Del mismo modo, una función que devuelve la composición de dos operaciones podría tener la firma `((('A=>'B), ('B=>'C)) -> ('A=>'C))` .
+Por ejemplo, una función que aplica otra función a cada elemento de una matriz y devuelve los resultados recopilados tiene la firma `(('A[], 'A->'A) -> 'A[])` .
+Del mismo modo, una función que devuelve la composición de dos operaciones tiene la firma `((('A=>'B), ('B=>'C)) -> ('A=>'C))` .
 
 Al invocar un parámetro de tipo al que se puede llamar, todos los argumentos que tienen el mismo parámetro de tipo deben ser del mismo tipo.
 
-Q # no proporciona un mecanismo para restringir los tipos posibles que se pueden sustituir por un parámetro de tipo.
+Q # no proporciona un mecanismo para restringir los tipos posibles que un usuario podría sustituir por un parámetro de tipo.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que ha visto todos los tipos que componen el lenguaje de preguntas y respuestas, puede ver las [expresiones de tipo en q #](xref:microsoft.quantum.guide.expressions) para ver cómo crear y manipular expresiones de estos diversos tipos.
-
-
+Ahora que ha visto todos los tipos que componen el lenguaje de preguntas y respuestas, consulte [expresiones de tipo en Q #](xref:microsoft.quantum.guide.expressions) para obtener información sobre cómo crear y manipular expresiones de estos diversos tipos.

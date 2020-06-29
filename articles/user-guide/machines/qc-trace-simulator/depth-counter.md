@@ -6,17 +6,17 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0029a00e6a3563dc542daeda2afa7cabf42441fb
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275629"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415275"
 ---
 # <a name="depth-counter"></a>Contador de profundidad
 
 La `Depth Counter` forma parte del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de equipos Quantum.
-Se usa para recopilar recuentos de la profundidad de cada operación invocada en un programa Quantum. Todas las operaciones de <xref:microsoft.quantum.intrinsic> se expresan en términos de rotaciones de un solo qubit, de T, de qubit Clifford, de CNOT y de qubit Pauli. Los usuarios pueden establecer la profundidad de cada una de las operaciones primitivas a través del `gateTimes` campo de <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+Se utiliza para recopilar recuentos que representan el límite inferior de la profundidad de cada operación invocada en un programa Quantum. Todas las operaciones de <xref:microsoft.quantum.intrinsic> se expresan en términos de rotaciones de un solo qubit, de T, de qubit Clifford, de CNOT y de qubit Pauli. Los usuarios pueden establecer la profundidad de cada una de las operaciones primitivas a través del `gateTimes` campo de <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
 
 De forma predeterminada, todas las operaciones tienen la profundidad 0 excepto la puerta T que tiene la profundidad 1. Esto significa que, de forma predeterminada, solo se calcula la profundidad T de las operaciones (lo que suele ser deseable). Las estadísticas recopiladas se agregan a todos los bordes del gráfico de llamadas de operaciones. 
 
@@ -61,6 +61,6 @@ Por último, para generar todas las estadísticas recopiladas por `Depth Counter
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a>Vea también ##
+## <a name="see-also"></a>Consulte también ##
 
 - Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) de equipos Quantum.
