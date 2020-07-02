@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 4cf6cce870c7661a7fffc21dcb60dd53cf281ddd
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327601"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415450"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Álgebra lineal para la computación cuántica
 
@@ -62,8 +62,7 @@ En los ejemplos anteriores, el estado de un cúbit se describía usando una matr
 
 Recuerde que cada cúbit es un espacio vectorial, por lo que no se puede multiplicar sin más. En su lugar, se usa un **producto de tensores**, que es una operación relacionada que crea un nuevo espacio vectorial a partir de espacios vectoriales individuales, y se representa mediante el símbolo $\otimes$. Por ejemplo, se calcula el producto de tensores de dos estados de cúbit $\begin{bmatrix} a \\\\  b \end{bmatrix}$ and $\begin{bmatrix} c \\\\  d \end{bmatrix}$
 
-$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}.
-$$
+$$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
 El resultado es una matriz de cuatro dimensiones, en la que cada elemento representa una probabilidad. Por ejemplo, $ac$ es la probabilidad de que los dos cúbits colapsen en 0 y 0, $ad$ es la probabilidad de 0 y 1, y así sucesivamente. 
 
