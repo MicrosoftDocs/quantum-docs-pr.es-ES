@@ -6,12 +6,12 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: bcc26f66a4ba3e861800ceca122b38b8d3ef6ad5
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275373"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884151"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Más recursos de aprendizaje de procesamiento de Quantum
 
@@ -24,6 +24,14 @@ En esta sección se incluyen las referencias seleccionadas a la cobertura profun
 + Kitaev, A. Y., Shen, A., & Vyalyi, M. N. (2002). Cálculo clásico y de Quantum (Vol. 47). Ofrece: American matemática Society.
 + Kaye, P., Laflamme, R., & mosca, M. (2007). Una introducción a Quantum Computing. Oxford University Press.
 + Rieffel, E. G., & Polak, W. H. (2011). Informática Quantum: una introducción suave. MIT Press.
++ Sarah C. Kaiser y Christopher E. Granade (Manning programa de acceso temprano comenzó la publicación de abril de 2019 en 2020). [Conozca Quantum Computing con Python y el enfoque práctico #-](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp)a.
+
+## <a name="online-courses"></a>Cursos en línea ##
+
++ [MS: información sobre los módulos de Quantum Computing](https://docs.microsoft.com/users/buildcollections2020-6557/collections/1o2iogrmn8x4r). Un tutorial de Ste a paso de conceptos y prácticas de la informática Quantum. 
++ [Informática Quantum: excelente curso](https://brilliant.org/courses/quantum-computing/). Aprenda a crear algoritmos Quantum desde cero con un equipo Quantum simulado en el explorador.
++ [Introducción a Quantum Computing: LinkedIn Learning](https://www.linkedin.com/learning/introduction-to-quantum-computing). vídeo de introducción a 1h25m. 
++ [Procesamiento de quantums hasta cómics](https://hackaday.io/project/168554-introduction-to-quantum-computing). Clase de comunidad práctica semanal de domingo. 
 
 ## <a name="elementary-techniques-for-building-controlled-gates"></a>Técnicas básicas para la creación de puertas controladas ##
 

@@ -6,19 +6,19 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: f8e398b5c9932a5079222fed7ad20e54de814eb8
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275378"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884188"
 ---
 # <a name="q-style-guide"></a>Guía de estilo de preguntas y respuestas #
 ## <a name="general-conventions"></a>Convenciones generales ##
 
 Las convenciones sugeridas en esta guía están pensadas para facilitar la lectura y comprensión de los programas y las bibliotecas escritos en preguntas y respuestas.
 
-## <a name="guidance"></a>Orientación
+## <a name="guidance"></a>Instrucciones
 
 Sugerimos:
 
@@ -67,7 +67,7 @@ Otros verbos también pueden resultar útiles en este caso, como en `IterateThro
 | Presupuesto | Se devuelve un valor clásico que representa una estimación dibujada a partir de una o más medidas |
 | Measure | Se realiza una medición de cuanto y el resultado se devuelve al usuario. |
 | Preparación | Un registro determinado de qubits se inicializa en un estado determinado. |
-| Muestra | Un valor clásico se devuelve de forma aleatoria desde alguna distribución |
+| Ejemplo | Un valor clásico se devuelve de forma aleatoria desde alguna distribución |
 
 En el caso de las funciones, se recomienda evitar el uso de verbos en favor de los nombres comunes (vea las instrucciones sobre los nombres adecuados a continuación) o adjetivos:
 
@@ -105,6 +105,31 @@ Sugerimos:
 | ☑ | `newtype GeneratorTerm` | El uso de la frase se refiere claramente al resultado de llamar al constructor UDT. |
 | ☒ | <s>`@Attribute() newtype RunOnce()`</s> | El uso de la frase verbal sugiere que el constructor UDT es una operación. |
 | ☑ | `@Attribute() newtype Deprecated(Reason : String)` | El uso de nombre de frase comunica el uso del atributo. |
+
+***
+
+### <a name="entry-points"></a>Puntos de entrada
+
+Al definir un punto de entrada en un programa de preguntas y respuestas, el compilador de preguntas y respuestas reconoce el [ `@EntryPoint()` atributo](xref:microsoft.quantum.core.entrypoint) , en lugar de requerir que los puntos de entrada tengan un nombre determinado (por ejemplo `main` ,:, `Main` o `__main__` ).
+Es decir, desde la perspectiva de un desarrollador de preguntas y respuestas, los puntos de entrada son operaciones ordinarias anotadas con `@EntryPoint()` .
+Además, los puntos de entrada de Q # pueden ser puntos de entrada para toda una aplicación (es decir, en archivos ejecutables de Q # independientes) o pueden ser una interfaz entre un programa de preguntas y el programa host para una aplicación (es decir, cuando se usa Q # con Python o .NET), de modo que el nombre "principal" puede ser engañoso cuando se aplica a un punto
+
+Se recomienda usar puntos de entrada de nombres para reflejar el uso del `@EntryPoint()` atributo mediante el uso de los consejos generales para las operaciones de nomenclatura enumeradas anteriormente.
+
+
+# <a name="guidance"></a>[Guía](#tab/guidance)
+
+Sugerimos:
+
+- No asigne un nombre a las operaciones de punto de entrada como "principal".
+- Nombre las operaciones de punto de entrada como operaciones ordinarias.
+
+# <a name="examples"></a>[Ejemplos](#tab/examples)
+
+|   | Nombre | Descripción |
+|---|------|-------------|
+| ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente el propósito del punto de entrada a través del nombre de la operación. |
+| ☒ | <s>`@EntryPoint() operation Main`</s> | El uso de `Main` no comunica claramente el propósito del punto de entrada y es redundante con el `@EntryPoint()` atributo. |
 
 ***
 

@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 0fcdec1a304730b593224283421539ea3ca9c913
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: d10f81a1e49235be8e02661dcd6d3c839485af6e
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415462"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885038"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -20,6 +20,27 @@ Este artículo contiene información sobre cada versión de Quantum Development 
 Para obtener instrucciones de instalación, consulte la [guía de instalación](xref:microsoft.quantum.install).
 
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
+
+## <a name="version-01220070124"></a>Versión 0.12.20070124
+
+*Fecha de lanzamiento: 2 de julio de 2020*
+
+Esta versión contiene lo siguiente:
+
+- Nueva `qdk-chem` herramienta para convertir formatos de serialización de problemas de estructura electrónica heredada (p. ej.: FCIDUMP) a [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
+- Nuevas funciones y operaciones en el [ `Microsoft.Quantum.Synthesis` espacio de nombres](xref:microsoft.quantum.synthesis) para aplicar de forma coherente Oracle clásico con algoritmos de síntesis basados en la transformación y la descomposición.
+- IQ # ahora permite argumentos para `%simulate` , `%estimate` y otros comandos mágicos. Vea la [ `%simulate` referencia de comandos mágicos](xref:microsoft.quantum.iqsharp.magic-ref.simulate) para obtener más detalles.
+- Nuevas opciones de presentación de la fase en IQ #. Vea la [ `%config` referencia de comandos mágicos](xref:microsoft.quantum.iqsharp.magic-ref.config) para obtener más detalles.
+- IQ # y el `qsharp` paquete de Python ahora se proporcionan a través de paquetes Conda ([qsharp](https://anaconda.org/quantum-engineering/qsharp) y [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) para simplificar la instalación local de la funcionalidad de Q # Jupyter y Python en un entorno de CONDA. Para más información, consulte las guías de instalación de [preguntas # Jupyter notebooks](xref:microsoft.quantum.install.jupyter) y [preguntas # con Python](xref:microsoft.quantum.install.python) .
+- Al usar el simulador, qubits ya no necesita estar en el estado | 0 ⟩ en la versión, pero se puede restablecer automáticamente si se midieron inmediatamente antes de la liberación.
+- Actualizaciones para facilitar a los usuarios de IQ # el consumo de paquetes de biblioteca con diferentes versiones de QDK, que requieren solo números de versión principales & secundarias, en lugar de la misma versión.
+- Espacio de nombres desusado quitado `Microsoft.Quantum.Primitive.*`
+- Operaciones movidas:
+  - `Microsoft.Quantum.Intrinsic.Assert` ahora es `Microsoft.Quantum.Diagnostics.AssertMeasurement`
+  - `Microsoft.Quantum.Intrinsic.AssertProb` ahora es `Microsoft.Quantum.Diagnostics.AssertMeasurementProbability`
+- Corrección de errores 
+
+Consulte la lista completa de solicitudes de incorporación de cambios cerradas para [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compiladores](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtimes](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) y [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-0112006403"></a>Versión 0.11.2006.403
 
@@ -425,7 +446,7 @@ Esta versión es solo una corrección rápida del [problema 48 que se muestra en
 
 *Fecha de lanzamiento: 22 de junio de 2018*
 
-Esta versión incluye varias contribuciones de la comunidad, así como una experiencia de depuración mejorada y mejor rendimiento.  Concretamente:
+Esta versión incluye varias contribuciones de la comunidad, así como una experiencia de depuración mejorada y mejor rendimiento.  De manera específica:
 
 * Mejoras de rendimiento en simulaciones pequeñas y grandes para el equipo de destino de QuantumSimulator.
 * Funcionalidad de depuración mejorada.
