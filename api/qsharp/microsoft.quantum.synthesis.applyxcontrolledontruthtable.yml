@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applyxcontrolledontruthtable
+name: ApplyXControlledOnTruthTable
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  Aplica la @"microsoft.quantum.intrinsic.x" operación en `target` , si la función booleana se `func` evalúa como true para la asignación clásica en `controlRegister` .
+
+
+  La operación implementa la operación unitario \begin{align} U\ket {x} \ les {y} = \ket{x}\ket{y \oplus f (x)} \end{align} donde $x $ y $y $ representan `controlRegister` y `target` , respectivamente.
+
+
+  La función booleana $f $ se representa como una tabla de verdad en términos de un entero grande.
+
+  Por ejemplo, la función mayoritario en tres entradas se representa mediante bitstring `11101000` , donde el bit más significativo `1` corresponde a la asignación de entrada `(1, 1, 1)` y el bit menos significativo `0` corresponde a la asignación de entrada `(0, 0, 0)` .
+
+  Se puede representar mediante el número entero grande `0xE8L` en notación hexadecimal o como `232L` en notación decimal.  El `L` sufijo indica que la constante es de tipo `BigInt` .
+
+  También se pueden encontrar más detalles sobre esta representación en las [tablas reales Kata](https://github.com/microsoft/QuantumKatas/tree/master/TruthTables).
+
+
+  La implementación de hace uso de las @"microsoft.quantum.intrinsic.cnot" puertas de y @"microsoft.quantum.intrinsic.r1" .
+syntax: 'operation ApplyXControlledOnTruthTable (func : BigInt, controlRegister : Qubit[], target : Qubit) : Unit'
+references: >-
+  - [*N. Schuch*, *J. Siewert*, PRL 91, no. 027902, 2003, arXiv: Quant-pH/0303063](https://arxiv.org/abs/quant-ph/0303063)
+
+  - [*Dittrich Soeken*, *Martin Roetteler*, arXiv: 2005.12310](https://arxiv.org/abs/2005.12310)
+input:
+  content: '(func : BigInt, controlRegister : Qubit[], target : Qubit)'
+  types:
+  - name: func
+    summary: Tabla de verdad booleana representada como Big Integer
+    isPrimitive: true
+    uid: BigInt
+  - name: controlRegister
+    summary: Registro de qubits de control
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Qubit de destino
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applyxcontrolledontruthtablewithcleantarget
+metadata:
+  ms.openlocfilehash: c15037917da8101270d3888ec0f335ad7986cbf2
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887077"

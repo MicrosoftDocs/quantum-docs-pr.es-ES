@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.machinelearning
 name: Microsoft.Quantum.MachineLearning
-summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres proporciona funciones y operaciones que se usan en aplicaciones Quantum machine learning.\n\n # <a name=\"references\"></a>Referencias\n - María Schuld, Alex Bocharov, KRYSTA Svore, Nathan Wiebe, \"clasificadores de Quantum centrados en circuitos https://arxiv.org/abs/1804.00633\",."
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres proporciona funciones y operaciones que se usan en aplicaciones Quantum machine learning.\n\n # <a name=\"references\"></a>Referencias\n - María Schuld, Alex Bocharov, KRYSTA Svore, Nathan Wiebe, \"clasificadores de Quantum centrados en circuitos\", https://arxiv.org/abs/1804.00633 ."
 functions:
 - uid: microsoft.quantum.machinelearning.approximateinputencoder
   summary: Dado un conjunto de coeficientes y una tolerancia, devuelve una operación de preparación del estado que prepara cada coeficiente como la amplitud correspondiente del estado de la base de cálculo, hasta la tolerancia especificada.
@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: Los resultados de haber validado un clasificador con un conjunto de ejemplos.
 metadata:
-  ms.openlocfilehash: 43b40489e34a2483ff9331b34b6cd289e3a7bb56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 85728552e323a640d5abd78f6a2bada5c37e6919
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673180"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885245"

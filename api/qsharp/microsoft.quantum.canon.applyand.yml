@@ -7,17 +7,17 @@ summary: >-
   Invierte un qubit de destino determinado si y solo si ambos qubits de control están en el estado 1, utilizando la medida para realizar la operación de la función de la función.
 
 
-  Invierte `target` si y solo si ambos controles son 1, pero supone que `target` está en el estado 0.  La operación tiene T-Count 4, T-Depth 2 y no requiere qubit auxiliar y, por tanto, puede ser preferible a una operación CCNOT, `target` si se sabe que es 0.  El contiguo de esta operación se basa en medidas y no requiere ninguna de T.
+  Invierte `target` si y solo si ambos controles son 1, pero supone que `target` está en el estado 0.  La operación tiene T-Count 4, T-Depth 2 y no requiere qubit auxiliar y, por tanto, puede ser preferible a una operación CCNOT, si `target` se sabe que es 0.  El contiguo de esta operación se basa en medidas y no requiere ninguna de T.
 
 
-  La aplicación controlada de esta operación no requiere ningún qubit auxiliar, `2^c` `Rz` las puertas y no está optimizada para la `c` profundidad, donde es el número de qubits de control general, incluidos `ApplyAnd` los dos controles de la operación.  La aplicación controlada por el valor `2^c - 1` `Rz` contiguo requiere las puertas (con un ángulo dos veces el tamaño de la operación no contigua), no qubit de la aplicación auxiliar y no está optimizada para la profundidad.
+  La aplicación controlada de esta operación no requiere ningún qubit auxiliar, las `2^c` `Rz` puertas y no está optimizada para la profundidad, donde `c` es el número de qubits de control general, incluidos los dos controles de la `ApplyAnd` operación.  La aplicación controlada por el valor contiguo requiere las `2^c - 1` `Rz` puertas (con un ángulo dos veces el tamaño de la operación no contigua), no qubit de la aplicación auxiliar y no está optimizada para la profundidad.
 syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
   - Cody Jones: "nuevas construcciones para la puerta de Toffoli tolerante a errores", físico Rev. A 87, 022328, 2013 [arXiv: 1212.5069](https://arxiv.org/abs/1212.5069) doi: 10.1103/PhysRevA. 87.022328
 
   - Craig Gidney: "en la mitad del costo de la suma de Quantum", Quantum 2, página 74, 2018 [arXiv: 1709.06648](https://arxiv.org/abs/1709.06648) doi: 10.1103/PhysRevA. 85.044302
 
-  - Dittrich Soeken: "Quantum Oracle los circuitos y el patrón de árbol de Navidad", [artículo de blog de Decemer 19, 2019](https://msoeken.github.io/blog_qac.html) (Nota: explica la construcción controlada múltiple)
+  - Dittrich Soeken: "Quantum Oracle los circuitos y el patrón de árbol de Navidad", [artículo de blog del 19 de diciembre de 2019](https://msoeken.github.io/blog_qac.html) (Nota: explica la construcción controlada múltiple)
 input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
@@ -30,7 +30,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Destino auxiliar qubit; debe estar en el estado 0
+    summary: Destino de qubit auxiliar; debe estar en el estado 0
     isPrimitive: true
     uid: Qubit
 output:
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 973f7f618154720396be0bb4a01b52d763ccdd1c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2f040fd932236547baecaba241d44a8b9842bbe2
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680537"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884591"

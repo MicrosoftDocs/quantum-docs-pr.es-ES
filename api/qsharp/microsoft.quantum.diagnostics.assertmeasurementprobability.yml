@@ -1,0 +1,63 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+name: AssertMeasurementProbability
+type: operation
+namespace: Microsoft.Quantum.Diagnostics
+summary: Las aserciones que midan el qubits determinado en la base de Pauli determinada tendrán el resultado dado con la probabilidad especificada, dentro de cierta tolerancia.
+remarks: Tenga en cuenta que las versiones contiguas y controladas de esta operación no comprobarán la condición.
+examples: >-
+  ```qsharp
+
+  using (register = Qubit()) {
+      H(register);
+      AssertProb([PauliZ], [register], One, 0.5,
+          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
+  }
+
+  ```
+syntax: 'operation AssertMeasurementProbability (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
+input:
+  content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
+  types:
+  - name: bases
+    summary: Un efecto de medición para imponer la probabilidad de, expresado como un operador Pauli de varios qubit.
+    isArray: true
+    isPrimitive: true
+    uid: Pauli
+  - name: qubits
+    summary: Registro en el que se va a realizar la aserción.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: result
+    summary: Resultado esperado de `Measure(bases, qubits)` .
+    isPrimitive: true
+    uid: Result
+  - name: prob
+    summary: La probabilidad con la que se espera el resultado especificado.
+    isPrimitive: true
+    uid: Double
+  - name: msg
+    summary: Mensaje que se va a mostrar si se produce un error en la aserción.
+    isPrimitive: true
+    uid: String
+  - name: tol
+    isPrimitive: true
+    uid: Double
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.diagnostics.assertmeasurement
+metadata:
+  ms.openlocfilehash: 6663722ae72cc8dd984e6422029db5a0bfad5d39
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887579"

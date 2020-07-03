@@ -39,6 +39,10 @@ operations:
   summary: La aserción de que qubits dado está en el {0} Estado $ \ket $.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: La aserción de que los qubits proporcionados están todos en $ \ket {0} $ State hasta una tolerancia determinada.
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: Las aserciones que midan el qubits determinado en la base de Pauli determinada siempre tendrán el resultado especificado.
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: Las aserciones que midan el qubits determinado en la base de Pauli determinada tendrán el resultado dado con la probabilidad especificada, dentro de cierta tolerancia.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Dadas dos operaciones, garantiza que actúan de forma idéntica para todos los Estados de entrada.
@@ -79,14 +83,14 @@ operations:
   summary: Valida que qubit `q` está en el eigenstate esperado del operador Pauli Z hasta una tolerancia determinada.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
-  summary: El compilador reconoció el atributo a través del cual se puede definir un nombre alternativo que se puede usar al cargar un tipo o llamar a para realizar pruebas.
+  summary: Atributo reconocido por el compilador a través del cual se puede definir un nombre alternativo que se puede usar al cargar un tipo o ser invocable para fines de prueba.
 - uid: microsoft.quantum.diagnostics.test
   summary: Atributo reconocido por el compilador que se usa para marcar una prueba unitaria.
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones y operaciones útiles para fines de diagnóstico, incluidas operaciones de aserción y funciones de notificaciones."
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326598"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884571"
