@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Las aserciones que midan el qubits determinado en la base de Pauli determinada tendrán el resultado dado con la probabilidad especificada, dentro de cierta tolerancia.
-remarks: Tenga en cuenta que las versiones contiguas y controladas de esta operación no comprobarán la condición.
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: AssertProb está en desuso. Use @"microsoft.quantum.diagnostics.assertmeasurementprobability" en su lugar.
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: Un efecto de medición para imponer la probabilidad de, expresado como un operador Pauli de varios qubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Registro en el que se va a realizar la aserción.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Resultado esperado de `Measure(bases, qubits)`.
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: La probabilidad con la que se espera el resultado especificado.
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: Mensaje que se va a mostrar si se produce un error en la aserción.
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674163"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885728"

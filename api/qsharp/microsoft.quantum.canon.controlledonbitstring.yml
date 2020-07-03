@@ -9,20 +9,22 @@ summary: >-
 
   La salida de esta función es una operación que se puede representar mediante una transformación unitario $U $ como \begin{align} U \ket{b_0 b_1 \cdots b_ {n-1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_ {n-1}} \otimes \begin{Cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_ {n-1}) = \texttt{bits} \\ \\ \ket{\psi} & \textrm{otherwise} \end{Cases}, \end{align} donde $V $ es una transformación de unitario que representa la acción de la `oracle` operación.
 remarks: >-
-  La longitud de `bits` y `controlRegister` debe ser igual.
+  El patrón proporcionado por `bits` puede ser más corto que `controlRegister` , en cuyo caso se omiten los qubits de control adicionales (es decir, no se controlan en $ \ket {0} $ ni $ \ket {1} $).
+
+  Si `bits` es mayor que `controlRegister` , se genera un error.
 
 
-  Dada una matriz `bits` booleana y una operación `oracle`unitario, la salida de esta función es una operación que realiza los pasos siguientes:
+  Dada una matriz booleana `bits` y una operación unitario `oracle` , la salida de esta función es una operación que realiza los pasos siguientes:
 
 
-  * Aplique una `X` operación a cada qubit del registro de control que se corresponda con `false` el `bits`elemento de;
+  * Aplique una `X` operación a cada qubit del registro de control que se corresponda con `false` el elemento de `bits` ;
 
-  * se `Controlled oracle` aplican a los registros de control y de destino;
+  * se aplican `Controlled oracle` a los registros de control y de destino;
 
-  * Aplique una `X` operación a cada qubit del registro de control que se corresponda con `false` el `bits` elemento de de nuevo para devolver el registro de control al estado original.
+  * Aplique una `X` operación a cada qubit del registro de control que se corresponda con el `false` elemento de de `bits` nuevo para devolver el registro de control al estado original.
 
 
-  La salida `Controlled` del functor es un caso especial `ControlledOnBitString` de donde `bits` es igual a. `[true, ..., true]`
+  La salida del `Controlled` functor es un caso especial de `ControlledOnBitString` donde `bits` es igual a `[true, ..., true]` .
 examples: >-
   Los siguientes fragmentos de código son equivalentes:
 
@@ -48,7 +50,7 @@ examples: >-
   ```
 
 
-  En el código siguiente se prepara un estado ${1}{2}\frac ({00} \ket-{01} \ket +{10} \ket +{11}\ket) $:
+  En el código siguiente se prepara un estado $ \frac {1} {2} (\ket {00} -\ket {01} + \ket {10} + \ket {11} ) $:
 
 
   ```qsharp
@@ -85,7 +87,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Operación de unitario que se `oracle` aplica en el registro de destino si el estado del registro de control corresponde `bits`a la máscara de bits.
+  - summary: Operación de unitario que se aplica `oracle` en el registro de destino si el estado del registro de control corresponde a la máscara de bits `bits` .
     isOperation: true
     input:
       types:
@@ -102,9 +104,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98bb8a9d5770e34257cd2fbc5456bcf70139af07
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680356"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885511"

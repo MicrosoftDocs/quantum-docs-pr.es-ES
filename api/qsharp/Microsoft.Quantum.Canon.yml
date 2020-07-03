@@ -198,6 +198,10 @@ operations:
   summary: Calcula la paridad de un registro de qubits en contexto.
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Calcula la paridad de una matriz de qubits en un qubit de destino.
+- uid: microsoft.quantum.canon.applycontrolledonbitstring
+  summary: Aplica una operación de unitario en el registro de destino, controlada en un estado especificado por una máscara de bits determinada.
+- uid: microsoft.quantum.canon.applycontrolledonint
+  summary: Aplica una operación de unitario en el registro de destino si el estado del registro de control corresponde a un entero positivo especificado.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: Aplica una matriz de fases complejas a Estados de base numéricos de un registro de qubits.
 - uid: microsoft.quantum.canon.applyfermionicswap
@@ -565,6 +569,14 @@ operations:
 
 
     $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+- uid: microsoft.quantum.canon.repeat
+  summary: Repite una operación un número determinado de veces.
+- uid: microsoft.quantum.canon.repeata
+  summary: Repite una operación un número determinado de veces.
+- uid: microsoft.quantum.canon.repeatc
+  summary: Repite una operación un número determinado de veces.
+- uid: microsoft.quantum.canon.repeatca
+  summary: Repite una operación un número determinado de veces.
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Usa las puertas de intercambio para invertir el orden de los qubits en un registro.
 newtypes:
@@ -573,9 +585,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Obsoleto\n\nResultStack está en desuso."
 metadata:
-  ms.openlocfilehash: 97975236f3824d63c0cc75e5be847c5eef47485b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326683"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884666"

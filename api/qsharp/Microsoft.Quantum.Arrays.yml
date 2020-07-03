@@ -1,7 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arrays
 name: Microsoft.Quantum.Arrays
-summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones para crear y manipular matrices de datos."
 functions:
 - uid: microsoft.quantum.arrays.all
   summary: Dada una matriz y un predicado definidos para los elementos de la matriz, y comprueba si todos los elementos de la matriz satisfacen el predicado.
@@ -67,13 +66,16 @@ functions:
   summary: Dadas tres matrices, devuelve una nueva matriz de 3 tuplas, de modo que cada una de estas tres tuplas contiene un elemento de cada matriz original.
 - uid: microsoft.quantum.arrays.zip4
   summary: Dadas cuatro matrices, devuelve una nueva matriz de 4 tuplas, de modo que cada tupla de 4 contiene un elemento de cada matriz original.
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones para crear y manipular matrices de datos."
 operations:
+- uid: microsoft.quantum.arrays.drawmany
+  summary: Repite una operación para un número determinado de muestras, recopilando sus resultados en una matriz.
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada una matriz y una operación que se define para los elementos de la matriz, devuelve una nueva matriz que consta de las imágenes de la matriz original en la operación.
 metadata:
-  ms.openlocfilehash: 92eb956a1387a9765354f45e27eb084c6d73f51b
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 32aeecb419739a89792bdf1e9761e3821abcf380
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326717"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884694"
