@@ -2,6 +2,13 @@
 
 | Comando magic | Resumen |
 |---------------|---------|
+| [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect) | Se conecta a un área de trabajo de Azure Quantum o muestra el estado de la conexión actual. |
+| [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute) | Ejecuta un trabajo en un área de trabajo de Azure Quantum. |
+| [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs) | Muestra una lista de trabajos en el área de trabajo actual de Azure Quantum. |
+| [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output) | Muestra los resultados de un trabajo en el área de trabajo actual de Azure Quantum. |
+| [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status) | Muestra el estado de un trabajo en el área de trabajo actual de Azure Quantum. |
+| [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit) | Envía un trabajo a un área de trabajo de Azure Quantum. |
+| [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target) | Establece o muestra el destino de ejecución activo para el envío de trabajos de Q# en un área de trabajo de Azure Quantum. |
 | [`%check_kata`](xref:microsoft.quantum.iqsharp.magic-ref.check_kata) | Comprueba la implementación de referencia en una prueba individual de Kata. |
 | [`%chemistry.broombridge`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.broombridge) | Carga y devuelve la representación del problema de estructura electrónica de Broombridge a partir de un archivo. yaml dado. |
 | [`%chemistry.encode`](xref:microsoft.quantum.iqsharp.magic-ref.chemistry.encode) | Codifica un hamiltoniano fermiónico con un formato que Q# pueda consumir. |
@@ -12,9 +19,9 @@
 | [`%estimate`](xref:microsoft.quantum.iqsharp.magic-ref.estimate) | Ejecuta una función o una operación determinada en el equipo de destino ResourcesEstimator. |
 | [`%kata`](xref:microsoft.quantum.iqsharp.magic-ref.kata) | Ejecuta una prueba individual. |
 | [`%lsmagic`](xref:microsoft.quantum.iqsharp.magic-ref.lsmagic) | Devuelve una lista de todos los comandos magic disponibles actualmente. |
-| [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Permite cargar un paquete de NuGet. El paquete debe estar disponible en la lista de orígenes de NuGet; normalmente incluye nuget.org. |
+| [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Permite cargar un paquete de NuGet. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Notifica las métricas de rendimiento actuales de este kernel. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Ejecuta una función o una operación determinada en el equipo de destino QuantumSimulator. |
-| [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | Ejecuta una función o una operación determinada en el equipo de destino del simulador ToffoliSimulator. |
-| [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | Proporciona acciones relacionadas con el área de trabajo actual. |
-| [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | Devuelve una lista de todas las operaciones y funciones definidas en la sesión actual, ya sea de forma interactiva o cargadas desde el área de trabajo actual. |
+| [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | Ejecuta una función u operación determinada en el equipo de destino de ToffoliSimulator. |
+| [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | Enumera las operaciones de Q# disponibles en la sesión actual. |
+| [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | Proporciona acciones relacionadas con el área de trabajo actual. |

@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 5c613d29c03525d29893307684f13ccd32d4d4eb
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 8a878e8f930f4b898f4de35751e4a39cc8716cec
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274160"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85884268"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Desarrollo con cuadernos en Q# de Jupyter Notebook
 
@@ -19,18 +19,40 @@ Instale el QDK para desarrollar operaciones de Q# en cuadernos en Q# de Jupyter 
 
 Jupyter Notebook permite la ejecución de código en contexto junto con instrucciones, notas y otro contenido. Este entorno es idóneo para escribir código de Q# con explicaciones insertadas o tutoriales interactivos sobre computación cuántica. Esto es lo que tiene que hacer para empezar a crear sus propios cuadernos de Q#.
 
+> [!NOTE]
+> * En los cuadernos en Q# de Jupyter Notebook solo se puede ejecutar código de Q#, y no se puede llamar a las operaciones desde programas host externos (por ejemplo, archivos de Python o C#). Este entorno no es adecuado si su objetivo es combinar un programa host clásico externo con el programa cuántico.
+
+## <a name="install-the-iq-jupyter-kernel"></a>Instalación del kernel de IQ# para Jupyter
+
 IQ# (pronunciado i-q-sharp) es una extensión del SDK de .NET Core usada principalmente por Jupyter y Python que proporciona funcionalidad básica para compilar y simular operaciones de Q#.
 
-> [!NOTE]
-> * En los cuadernos en Q# de Jupyter Notebook solo se puede ejecutar código de Q# y no se puede llamar a las operaciones desde programas host externos (por ejemplo, archivos de Python o C#). Este entorno no es adecuado si su objetivo es combinar un programa host clásico externo con el programa cuántico.
+### <a name="install-using-conda-recommended"></a>[Instalación mediante Conda (recomendado)](#tab/tabid-conda)
 
-1. Requisitos previos
+1. Instale [Miniconda](https://docs.conda.io/en/latest/miniconda.html) o [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+
+1. Abra un símbolo del sistema de Anaconda.
+
+   - O bien, si prefiere usar PowerShell o pwsh, abra un shell, ejecute `conda init powershell`, luego cierre y vuelva a abrir el shell.
+
+1. Cree y active un nuevo entorno de Conda llamado `qsharp-env` con los paquetes necesarios (incluidos Jupyter Notebook e IQ#) mediante la ejecución de los siguientes comandos:
+
+    ```
+    conda create -n qsharp-env -c quantum-engineering qsharp notebook
+
+    conda activate qsharp-env
+    ```
+
+1. Ejecute `python -c "import qsharp"` desde el mismo terminal para comprobar la instalación y rellenar la memoria caché del paquete local con todos los componentes del QDK necesarios.
+
+### <a name="install-using-net-cli-advanced"></a>[Instalación mediante la CLI de .NET (avanzado)](#tab/tabid-dotnetcli)
+
+1. Requisitos previos:
 
     - [Python](https://www.python.org/downloads/) 3.6 o versiones posteriores
     - [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html)
     - [SDK de .NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-1. Instalar el paquete `iqsharp`
+1. Instale el paquete `Microsoft.Quantum.IQSharp`.
 
     ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -45,42 +67,44 @@ IQ# (pronunciado i-q-sharp) es una extensión del SDK de .NET Core usada princi
     > ```
     > donde `/path/to/dotnet-iqsharp` debe reemplazarse por la ruta de acceso absoluta a la herramienta `dotnet-iqsharp` en el sistema de archivos.
     > Normalmente, estará en `.dotnet/tools`, en la carpeta de perfil de usuario.
+    
+***
 
-1. Cree una aplicación `Hello World` para comprobar la instalación.
+Eso es todo. Ahora tiene el kernel de IQ# para Jupyter, que proporciona la funcionalidad básica para compilar y ejecutar operaciones de Q# desde cuadernos en Q# de Jupyter Notebook.
 
-    - Ejecute el siguiente comando para iniciar el servidor de cuadernos:
+## <a name="create-your-first-q-notebook"></a>Creación del primer cuaderno de Q#
 
-        ```
-        jupyter notebook
-        ```
+Ahora ya puede comprobar la instalación del cuaderno en Q# de Jupyter Notebook; para ello, escriba y ejecute una sencilla operación de Q#.
 
-    - Para abrir el cuaderno de Jupyter Notebook, copie y pegue en el explorador la dirección URL proporcionada por la línea de comandos.
+1. En el entorno que creó durante la instalación (es decir, en el entorno de Conda que creó, o en el entorno de Python donde instaló Jupyter), ejecute el siguiente comando para iniciar el servidor de Jupyter Notebook:
 
-    - Cree un cuaderno de Jupyter Notebook con un kernel de Q# y agregue el código siguiente a la primera celda del cuaderno:
+    ```
+    jupyter notebook
+    ```
 
-        ```qsharp
-        operation SayHello () : Unit {
-            Message("Hello from quantum world!");
-        }
-        ```
+    - Si el cuaderno de Jupyter Notebook no se abre automáticamente en su explorador, copie y pegue en el explorador la dirección URL proporcionada por la línea de comandos.
 
-    - Ejecute esta celda del cuaderno:
+1. Seleccione "Nuevo" → "Q#" para crear un cuaderno de Jupyter Notebook con un kernel de Q# y agregue el código siguiente a la primera celda del cuaderno:
 
-        ![Celda del cuaderno de Jupyter Notebook con código de Q#](~/media/install-guide-jupyter.png)
+    :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
-        Debe aparecer `SayHello` en la salida de la celda. Cuando se ejecuta en cuadernos de Jupyter Notebook, el código de Q# se compila y la salida del cuaderno es el nombre de las operaciones que encuentra.
+1. Ejecute esta celda del cuaderno:
 
+    ![Celda del cuaderno de Jupyter Notebook con código de Q#](~/media/install-guide-jupyter.png)
 
-    - En una nueva celda, ejecute la operación que acaba de crear (en un simulador) mediante el comando `%simulate`:
+    Debe aparecer `SampleQuantumRandomNumberGenerator` en la salida de la celda. Cuando se ejecuta en cuadernos de Jupyter Notebook, el código de Q# se compila y la salida de la celda es el nombre de las operaciones que encuentra.
 
-        ![Celda del cuaderno de Jupyter Notebook con el magic %simulate](~/media/install-guide-jupyter-simulate.png)
+1. En una nueva celda, ejecute la operación que acaba de crear (en un simulador) mediante el comando `%simulate`:
 
-        Verá el mensaje en pantalla junto con el resultado de la operación invocada. En este caso, vemos la tupla vacía `()` porque nuestra operación simplemente devuelve un tipo `Unit`.
+    ![Celda del cuaderno de Jupyter Notebook con el magic %simulate](~/media/install-guide-jupyter-simulate.png)
+
+    Verá el resultado de la operación que ha invocado. En este caso, como la operación genera un resultado aleatorio, verá `Zero` o `One` en la pantalla. Si ejecuta la celda varias veces, verá cada resultado aproximadamente la mitad del tiempo.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 Ahora que ha instalado el QDK para los cuadernos en Q# de Jupyter Notebook, puede escribir y ejecutar [su primer programa cuántico](xref:microsoft.quantum.quickstarts.qrng) escribiendo código de Q# directamente en el entorno de Jupyter Notebook.
 
 Para ver más ejemplos de lo que puede hacer con los cuadernos en Q# de Jupyter Notebook, eche un vistazo a:
-- [Introducción a Q# y Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Allí encontrará un cuaderno en Q# de Jupyter Notebook que muestra cómo usar Q# en este entorno.
+
+- [Introducción a Q# y Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Ahí encontrará un cuaderno en Q# de Jupyter Notebook con más información sobre cómo usar Q# en el entorno de Jupyter.
 - [Quantum Katas](xref:microsoft.quantum.overview.katas), una colección de código abierto de tutoriales autoguiados y ejercicios de programación en forma de cuadernos en Q# de Jupyter Notebook. Los [cuadernos de tutoriales de Quantum Katas](https://github.com/microsoft/QuantumKatas#tutorial-topics) son un buen punto de partida. Quantum Katas es una serie de tutoriales de código abierto autoguiados para la enseñanza de elementos de la computación cuántica y de la programación con Q#. Son un ejemplo excelente del tipo de contenido que se puede crear con cuadernos en Q# de Jupyter Notebook.
