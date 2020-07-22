@@ -1,22 +1,35 @@
 ---
-title: Ancho (contador)
-description: Obtenga información sobre el contador de ancho de QDK de Microsoft, que cuenta el número de qubits asignado y prestado por cada operación en un programa Quantum.
+title: 'Contador de ancho: kit de desarrollo de Quantum'
+description: Obtenga información sobre el contador de ancho de QDK de Microsoft, que usa el simulador de seguimiento de Quantum para contar el número de operaciones de qubits asignadas y en préstamo en un programa de preguntas y respuestas.
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
-ms.openlocfilehash: a76292222950310acc90dded02980e4a5b792e76
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: af8609dc5c05f7a19b8d21755281427feb29b84c
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275565"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871529"
 ---
-# <a name="width-counter"></a>Ancho (contador)
+# <a name="quantum-trace-simulator-width-counter"></a>Simulador de seguimiento de Quantum: contador de ancho
 
-`Width Counter`Cuenta el número de qubits asignados y prestados por cada operación.
-Todas las operaciones del `Microsoft.Quantum.Intrinsic` espacio de nombres se expresan en términos de rotaciones de un solo qubit, de T, de qubit Clifford, de CNOT de qubit Pauli. Algunas de las operaciones primitivas pueden asignar qubits adicionales. Por ejemplo, multiplique las `X` puertas controladas o las puertas controladas `T` . Vamos a calcular el número de qubits adicionales asignados por la implementación de una puerta controlada por multiplicación `X` :
+El contador de ancho forma parte del [simulador de seguimiento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)del kit de desarrollo de Quantum. Puede usarlo para contar el número de qubits asignados y prestados por cada operación en un programa de preguntas y respuestas. Algunas operaciones primitivas pueden asignar qubits adicionales, por ejemplo, las operaciones controladas de multiplicación `X` o `T` las operaciones controladas.
+
+## <a name="invoking-the-width-counter"></a>Invocar el contador de ancho
+
+Para ejecutar el simulador de seguimiento de Quantum con el contador de ancho, debe crear una <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instancia de, establecer la `UseWidthCounter` propiedad en **true**y, a continuación, crear una nueva <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instancia de con `QCTraceSimulatorConfiguration` como parámetro. 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseWidthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-width-counter-in-a-c-host-program"></a>Usar el contador de ancho en un programa host de C#
+
+En el ejemplo de C# que se muestra a continuación en esta sección se calcula el número de qubits adicionales asignados por la implementación de una operación controlada multiplicación <xref:microsoft.quantum.intrinsic.x> , basada en el siguiente código de ejemplo de Q #:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -28,13 +41,11 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-## <a name="using-width-counter-within-a-c-program"></a>Usar el contador de ancho en un programa de C#
-
-La multiplicación controlada `X` por un total de 5 qubits asignará 2 qubits auxiliares y el ancho de entrada será 5. Para comprobar que este es el caso, podemos usar el siguiente programa de C#:
+La operación de multiplicación controlada <xref:microsoft.quantum.intrinsic.x> actúa en un total de cinco qubits, asigna dos [qubits auxiliares](xref:microsoft.quantum.glossary#ancilla)y tiene un ancho de entrada de **5**. Use el siguiente programa de C# para comprobar los recuentos:
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
-config.useWidthCounter = true;
+config.UseWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 int totalNumberOfQubits = 5;
 var res = ApplyMultiControlledX.Run(sim, totalNumberOfQubits).Result;
@@ -50,13 +61,16 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-Se ejecuta la primera parte del programa `ApplyMultiControlledX` . En la segunda parte usamos el método `QCTraceSimulator.GetMetric` para obtener el número de qubits asignados, así como el número de qubits que se `X` han controlado como entrada. 
+La primera parte del programa ejecuta la `ApplyMultiControlledX` operación. La segunda parte usa el [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) método para recuperar el número de qubits asignados, así como el número de qubits que la `Controlled X` operación recibió como entrada. 
 
-Por último, para generar todas las estadísticas recopiladas por el contador de ancho en formato CSV, podemos usar lo siguiente:
+Por último, puede generar todas las estadísticas recopiladas por el contador de ancho en formato CSV con lo siguiente:
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>Vea también ##
+## <a name="see-also"></a>Consulta también
 
-- Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) de equipos Quantum.
+- Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Quantum del kit de desarrollo de Quantum.
+- Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API.
+- Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API.
+- Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API.

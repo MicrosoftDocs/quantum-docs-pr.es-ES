@@ -1,21 +1,25 @@
 ---
-title: Comprobador de entradas DISTINCT
-description: Obtenga información sobre el comprobador de entradas de Microsoft QDK DISTINCT, que comprueba el código de preguntas y respuestas potenciales con qubits compartidas.
+title: 'Comprobador de entradas DISTINCT: kit de desarrollo de Quantum'
+description: Obtenga información sobre el comprobador de entradas distintas de Microsoft QDK, que usa el simulador de seguimiento de Quantum para comprobar el código de preguntas y respuestas potenciales con qubits compartidas.
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 11a0573242c8afb12f242aa3be5f9cff18290452
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 49a1ccc5f37acfeaa1ee08bd974be45a40a76f93
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275618"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871151"
 ---
-# <a name="distinct-inputs-checker"></a>Comprobador de entradas DISTINCT
+# <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Simulador de seguimiento de Quantum: Comprobador de entradas distintas
 
-La `Distinct Inputs Checker` forma parte del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de equipos Quantum. Está diseñado para detectar posibles errores en el código. Tenga en cuenta la siguiente parte del código de preguntas y respuestas para ilustrar los problemas detectados por este paquete:
+El comprobador de entradas DISTINCT es una parte del [simulador de seguimiento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de Quantum Development Kit. Puede usarlo para detectar posibles errores en el código causados por conflictos con qubits compartidos. 
+
+## <a name="conflicts-with-shared-qubits"></a>Conflictos con qubits compartidos
+
+Considere el siguiente fragmento de código de preguntas y respuestas para ilustrar los problemas detectados por el comprobador de entradas distintivo:
 
 ```qsharp
 operation ApplyBoth(
@@ -29,7 +33,9 @@ operation ApplyBoth(
 }
 ```
 
-Cuando el usuario examina este programa, se da por hecho que el orden en el que `op1` se llama a y no es `op2` importante porque `q1` y `q2` son diferentes qubits y operaciones que actúan en diferentes qubits de desactivación. Ahora veamos un ejemplo en el que se usa esta operación:
+Al examinar este programa, puede suponer que el orden en el que llama a `op1` y no `op2` importa, ya que `q1` y `q2` son diferentes qubits y operaciones que actúan en diferentes desactivaciones de qubits. 
+
+Ahora, considere este ejemplo:
 
 ```qsharp
 operation ApplyWithNonDistinctInputs() : Unit {
@@ -41,11 +47,21 @@ operation ApplyWithNonDistinctInputs() : Unit {
 }
 ```
 
-Ahora `op1` y `op2` se obtienen mediante la aplicación parcial y comparten un qubit. Cuando el usuario llama a `ApplyBoth` en el ejemplo anterior, el resultado de la operación dependerá del orden de `op1` y dentro de `op2` `ApplyBoth` . Esto no es lo que el usuario esperaría que ocurriera. `Distinct Inputs Checker`Detectará tales situaciones cuando se habilite y producirá una excepción `DistinctInputsCheckerException` . Consulte la documentación de la API en [DistinctInputsCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException) para obtener más información.
+Tenga en cuenta que `op1` y `op2` se obtienen mediante la aplicación parcial y comparten un qubit. Cuando se llama a `ApplyBoth` en este ejemplo, el resultado de la operación depende del orden de `op1` y `op2` dentro `ApplyBoth` de lo que se espera que suceda. Al habilitar el comprobador de entradas DISTINCT, detecta esas situaciones y produce una excepción `DistinctInputsCheckerException` . Para obtener más información, consulte <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> en la biblioteca de la API de Q #.
 
-## <a name="using-the-distinct-inputs-checker-in-your-c-program"></a>Usar el comprobador de entradas DISTINCT en el programa de C#
+## <a name="invoking-the-distinct-inputs-checker"></a>Invocar el comprobador de entradas DISTINCT
 
-A continuación se proporciona un ejemplo de código de controlador C# para usar el simulador de seguimiento de equipo Quantum con `Distinct Inputs Checker` habilitado:
+Para ejecutar el simulador de seguimiento de Quantum con el comprobador de entradas DISTINCT, debe crear una <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instancia de, establecer la `UseDistinctInputsChecker` propiedad en **true**y, a continuación, crear una nueva <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instancia de con `QCTraceSimulatorConfiguration` como parámetro. 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseDistinctInputsChecker = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-distinct-inputs-checker-in-a-c-host-program"></a>Usar el comprobador de entradas DISTINCT en un programa host de C#
+
+A continuación se proporciona un ejemplo de un programa host de C# que usa el simulador de seguimiento de Quantum con el comprobador de entradas distintivos habilitado:
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -59,7 +75,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             var traceSimCfg = new QCTraceSimulatorConfiguration();
-            traceSimCfg.useDistinctInputsChecker = true; //enables distinct inputs checker
+            traceSimCfg.UseDistinctInputsChecker = true; //enables distinct inputs checker
             QCTraceSimulator sim = new QCTraceSimulator(traceSimCfg);
             var res = MyQuantumProgram.Run().Result;
             System.Console.WriteLine("Press any key to continue...");
@@ -69,8 +85,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-La clase `QCTraceSimulatorConfiguration` almacena la configuración del simulador de seguimiento de equipo Quantum y se puede proporcionar como argumento para el `QCTraceSimulator` constructor. Cuando `useDistinctInputsChecker` se establece en true, el `Distinct Inputs Checker` está habilitado. Consulte la documentación de la API en [QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) y [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration?) para obtener más información.
+## <a name="see-also"></a>Consulta también
 
-## <a name="see-also"></a>Vea también
-
-- Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) de equipos Quantum.
+- Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Quantum del kit de desarrollo de Quantum.
+- Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API.
+- Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API.
+- Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.DistinctInputsCheckerException> API.

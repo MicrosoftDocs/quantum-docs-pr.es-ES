@@ -1,87 +1,35 @@
 ---
-title: 'Instalación y validación de la biblioteca de química de Microsoft Q #'
+title: 'Instalación de la biblioteca de Microsoft Q # química'
 description: Aprenda a instalar la biblioteca de química de Microsoft Quantum y a usarla con la plataforma de Química computacional de NWChem.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.installation
-ms.openlocfilehash: 48bf7bc980e238e622053f5c2bdd09604c572596
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0e870bb3421dddb632375a2fc8633249954f8c8b
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276100"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871541"
 ---
-# <a name="chemistry-library-installation-and-validation"></a>Instalación y validación de la biblioteca de química
+# <a name="chemistry-library-installation"></a>Instalación de la biblioteca de química
 
-El kit de desarrollo de Quantum proporciona compatibilidad con aplicaciones de química de Quantum a través del [`Microsoft.Quantum.Chemistry`](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) paquete de NuGet.
-Al igual que con otros paquetes NuGet, es sencillo agregar la biblioteca de química a su proyecto.
-
-**Visual Studio 2019:** Si usa Visual Studio 2019, puede Agregar los paquetes de Quantum química mediante el administrador de paquetes NuGet.
-Para abrir el administrador de paquetes, haga clic con el botón derecho en el proyecto al que desea agregar la biblioteca de química y seleccione "administrar paquetes NuGet...", como se muestra en la captura de pantalla siguiente.
-
-![Usar el administrador de paquetes NuGet en Visual Studio 2019](~/media/vs2017-nuget-manage-packages.png)
-
-En la pestaña examinar, busque el nombre del paquete "Microsoft. Quantum. química".
-
-> [!NOTE]
-> Asegúrese de marcar "incluir versión preliminar".
-
-![Casilla incluir versión preliminar](~/media/vs2017-nuget-package-search.png)
-
-Se enumerarán los paquetes disponibles para su descarga.
-Haga clic en "Microsoft. Quantum. química en el panel izquierdo, seleccione la última versión preliminar en el panel derecho y haga clic en" instalar ":
-
-![Instale el paquete Microsoft. Quantum. química más reciente](~/media/vs2017-nuget-select-chem.png)
-
-Para obtener más información, vea la guía de la [interfaz de usuario del administrador de paquetes](https://docs.microsoft.com/nuget/tools/package-manager-ui).
-
-Como alternativa, puede usar la consola del administrador de paquetes para agregar la biblioteca de química de Quantum al proyecto con una interfaz de línea de comandos.
-
-![Usar la consola del administrador de paquetes desde la línea de comandos](~/media/vs2017-nuget-console-menu.png)
-
-En la consola del administrador de paquetes, ejecute lo siguiente:
-
-```
-Install-Package Microsoft.Quantum.Chemistry
-```
-
-Para obtener más información, consulte la guía de la [consola del administrador de paquetes](https://docs.microsoft.com/nuget/tools/package-manager-console).
-
-**Línea de comandos o Visual Studio Code:** Con la línea de comandos por su cuenta o desde Visual Studio Code, puede usar el `dotnet` comando para agregar la referencia de paquete NuGet al proyecto:
-
-```dotnetcli
-dotnet add package Microsoft.Quantum.Chemistry
-```
-
-## <a name="verifying-your-installation"></a>Comprobación de la instalación 
-
-Al igual que el resto del kit de desarrollo de Quantum, la biblioteca de química de Quantum incluye una serie de ejemplos totalmente documentados para ayudarle a ponerse en marcha rápidamente.
-Para probar la instalación con estos ejemplos, Clone el [repositorio de ejemplos principal](https://github.com/Microsoft/Quantum)y, a continuación, ejecute uno de los ejemplos.  Por ejemplo, para ejecutar el [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) ejemplo:
-
-```bash
-git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/samples/chemistry/MolecularHydrogen
-dotnet run
-```
-
-Para comprobar la instalación de la biblioteca de química de Quantum mediante Microsoft Visual Studio después de clonar el repositorio:
-    1. Abra la solución ChemistrySamples. sln en la carpeta química.  
-    2. Seleccione samples/1. Moléculas simples/MolecularHydrogen como proyecto de inicio.
-    3. Presione F5 para ejecutar la demostración de estimación de la fase de hidrógeno molecular.
-
-Vea [obtener estimaciones de nivel de energía](xref:microsoft.quantum.chemistry.examples.energyestimate) para obtener más información sobre la estimación de los valores de los niveles de energía.   
-
-
-## <a name="using-the-quantum-development-kit-with-nwchem"></a>Uso del kit de desarrollo de Quantum con NWChem ##
-
-El ejemplo MolecularHydrogen usa datos de entrada moleculares que se configuran manualmente.  Aunque esto es adecuado para pequeños ejemplos, la química de Quantum a escala requiere Hamiltonians con millones o miles de millones de términos. Tales Hamiltonians, generados por paquetes de química de cálculo escalables, son demasiado grandes para importarlos a mano. 
+El [ejemplo **MolecularHydrogen** ](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) usa datos de entrada moleculares que se configuran manualmente.
+Aunque esto es adecuado para pequeños ejemplos, la química de Quantum a escala requiere Hamiltonians con millones o miles de millones de términos.
+Tales Hamiltonians, generados por paquetes de Química computacional escalables, son demasiado grandes para importarlos manualmente.
 
 La biblioteca de química de Quantum para el kit de desarrollo de Quantum se ha diseñado para funcionar bien con paquetes de Química computacional, en particular la plataforma química de cómputo de [**NWChem**](http://www.nwchem-sw.org/) desarrollada por el laboratorio de Ciencias moleculares del entorno (emsl) en el laboratorio nacional de Asia noroccidental.
-En concreto, el `Microsoft.Quantum.Chemistry` paquete proporciona herramientas para cargar instancias de problemas de simulación de química de Quantum representados en el [esquema de Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), que también se admiten para la exportación de versiones recientes de NWChem.
+En concreto, el [paquete **Microsoft. Quantum. química** ](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) proporciona herramientas para cargar instancias de problemas de simulación de química de Quantum representados en el [esquema de Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), que también se admiten para la exportación de versiones recientes de NWChem.
 
-Para empezar a trabajar con NWChem junto con el kit de desarrollo de Quantum, se recomienda uno de los métodos siguientes:
+La biblioteca de química del kit de desarrollo de Quantum también proporciona una herramienta de línea de comandos, `qdk-chem` , para la conversión entre formatos heredados y [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge).
+
+En esta sección se detalla cómo usar el kit de desarrollo de Quantum con NWChem y Broombridge, o con formatos heredados y `qdk-chem` .
+
+## <a name="using-the-quantum-development-kit-with-nwchem"></a>Uso del kit de desarrollo de Quantum con NWChem
+
+Para empezar a trabajar con NWChem junto con el kit de desarrollo de Quantum, use uno de los métodos siguientes:
+
 - Comience a usar los archivos de Broombridge existentes que se proporcionan con los ejemplos en [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
 - Use el [generador de flechas emsl para el Microsoft Quantum Development Kit](https://arrows.emsl.pnnl.gov/api/qsharp_chem) , que es un front-end basado en web para NWChem, para generar nuevos archivos de entrada molecular con formato Broombridge.  
 - Use la [imagen de Docker](https://hub.docker.com/r/nwchemorg/nwchem-qc/) que proporciona PNNL para ejecutar NWChem, o bien
@@ -171,4 +119,27 @@ Puede obtener más información mediante el uso de la funcionalidad de ayuda int
 ```powershell
 Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
+```
+
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>Uso del kit de desarrollo de Quantum con`qdk-chem`
+
+Para instalar `qdk-chem` , puede usar el SDK de .net Core en la línea de comandos:
+
+```dotnetcli
+dotnet tool install --global Microsoft.Quantum.Chemistry.Tools
+```
+
+Una vez que haya instalado `qdk-chem` , puede usar la `--help` opción para obtener más detalles sobre la funcionalidad que ofrece la `qdk-chem` herramienta.
+
+Para convertir a y desde Broombridge, puede usar el `qdk-chem convert` comando:
+
+```
+qdk-chem convert --from fcidump --to broombridge data.fcidump --out data.yml
+```
+
+El `qdk-chem convert` comando también puede aceptar sus datos de la entrada estándar y puede escribir en la salida estándar; esto es especialmente útil en scripts y para la integración con herramientas que exportan a formatos heredados.
+Por ejemplo, en Bash:
+
+```bash
+cat data.fcidump | qdk-convert --from fcidump --to broombridge - > data.yml
 ```
