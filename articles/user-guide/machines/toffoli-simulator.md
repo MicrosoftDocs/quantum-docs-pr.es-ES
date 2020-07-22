@@ -1,28 +1,33 @@
 ---
-title: Simulador Toffoli del kit de desarrollo de Quantum
+title: 'Simulador de Quantum Toffoli: kit de desarrollo de Quantum'
 description: Obtenga información sobre el simulador de Toffoli de Microsoft QDK, un simulador de Quantum de uso especial que se puede usar con millones de qubits.
 author: alan-geller
 ms.author: ageller@microsoft.com
-ms.date: 01/16/2019
+ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: 8a29caaa0fa058600a74e7d130e644374cbfa19c
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276028"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870624"
 ---
-# <a name="quantum-development-kit-toffoli-simulator"></a><span data-ttu-id="219d4-103">Simulador Toffoli del kit de desarrollo de Quantum</span><span class="sxs-lookup"><span data-stu-id="219d4-103">Quantum Development Kit Toffoli Simulator</span></span>
+# <a name="quantum-development-kit-qdk-toffoli-simulator"></a><span data-ttu-id="2e805-103">Simulador de Quantum Development Kit (QDK) Toffoli</span><span class="sxs-lookup"><span data-stu-id="2e805-103">Quantum Development Kit (QDK) Toffoli simulator</span></span>
 
-<span data-ttu-id="219d4-104">El kit de desarrollo de Quantum proporciona un simulador de Toffoli, que es un simulador especial que puede simular algoritmos de Quantum que están limitados a las operaciones x, CNOT y X Quantum con control múltiple (todos los cálculos y lógica clásicas están disponibles).</span><span class="sxs-lookup"><span data-stu-id="219d4-104">The Quantum Development Kit provides a Toffoli simulator, which is a special-purpose simulator that can simulate quantum algorithms that are limited to X, CNOT, and multi-controlled X quantum operations (all classical logic and computations are available).</span></span>
+<span data-ttu-id="2e805-104">El simulador de Toffoli de QDK es un simulador especial con un ámbito limitado y solo admite `X` `CNOT` operaciones de Quantum de control múltiple, y `X` .</span><span class="sxs-lookup"><span data-stu-id="2e805-104">The QDK Toffoli simulator is a special-purpose simulator with a limited scope and only supports `X`, `CNOT`, and multi-controlled `X` quantum operations.</span></span> <span data-ttu-id="2e805-105">Está disponible toda la lógica clásica y los cálculos.</span><span class="sxs-lookup"><span data-stu-id="2e805-105">All classical logic and computations are available.</span></span>
 
-<span data-ttu-id="219d4-105">Aunque el simulador Toffoli está mucho más restringido en la operación que el [simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator), puede simular mucho más qubits.</span><span class="sxs-lookup"><span data-stu-id="219d4-105">While the Toffoli simulator is much more restricted in operation than the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator), it can simulate far more qubits.</span></span>
-<span data-ttu-id="219d4-106">El simulador Toffoli se puede usar con millones de qubits, mientras que el simulador de estado completo suele estar limitado a unos 30.</span><span class="sxs-lookup"><span data-stu-id="219d4-106">The Toffoli simulator can be used with millions of qubits, while the full state simulator is generally limited to about 30.</span></span>
-<span data-ttu-id="219d4-107">Puede ejecutar y depurar un conjunto limitado de algoritmos Quantum escritos en Q # en el equipo; por ejemplo, las Oracle que evalúan funciones booleanas se pueden implementar mediante estas puertas y, por tanto, deben comprobarse con un gran número de qubits con este simulador.</span><span class="sxs-lookup"><span data-stu-id="219d4-107">It can execute and debug a limited set of quantum algorithms written in Q# on your computer; for instance, oracles that evaluate Boolean functions can be implemented using these gates and so tested on vary large numbers of qubits using this simulator.</span></span>
+<span data-ttu-id="2e805-106">Aunque el simulador Toffoli está más restringido en funcionalidad que el [simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator), tiene la ventaja de poder simular mucho más qubits.</span><span class="sxs-lookup"><span data-stu-id="2e805-106">While the Toffoli simulator is more restricted in functionality than the [full state simulator](xref:microsoft.quantum.machines.full-state-simulator), it has the advantage of being able to simulate far more qubits.</span></span> <span data-ttu-id="2e805-107">El simulador Toffoli se puede usar con millones de qubits, mientras que el simulador de estado completo se limita a unos 30 qubits.</span><span class="sxs-lookup"><span data-stu-id="2e805-107">The Toffoli simulator can be used with millions of qubits, while the full state simulator is limited to about 30 qubits.</span></span> <span data-ttu-id="2e805-108">Esto resulta útil, por ejemplo, con Oracle que evalúan funciones booleanas, que se pueden implementar con el conjunto limitado de algoritmos admitidos y que se han probado en un gran número de qubits.</span><span class="sxs-lookup"><span data-stu-id="2e805-108">This is useful, for example, with oracles that evaluate Boolean functions - they can be implemented using the limited set of supported algorithms and tested on a large number of qubits.</span></span>
 
-<span data-ttu-id="219d4-108">Este simulador de Quantum se expone a través de la `ToffoliSimulator` clase.</span><span class="sxs-lookup"><span data-stu-id="219d4-108">This quantum simulator is exposed via the `ToffoliSimulator` class.</span></span>
-<span data-ttu-id="219d4-109">Para usar el simulador, solo tiene que crear una instancia de esta clase y pasarla al `Run` método de la operación Quantum que desea ejecutar junto con el resto de los parámetros:</span><span class="sxs-lookup"><span data-stu-id="219d4-109">To use the simulator, simply create an instance of this class and pass it to the `Run` method of the quantum operation you want to execute along with the rest of the parameters:</span></span>
+## <a name="invoking-the-toffoli-simulator"></a><span data-ttu-id="2e805-109">Invocar el simulador Toffoli</span><span class="sxs-lookup"><span data-stu-id="2e805-109">Invoking the Toffoli simulator</span></span>
+
+<span data-ttu-id="2e805-110">El simulador Toffoli se expone a través de la `ToffoliSimulator` clase.</span><span class="sxs-lookup"><span data-stu-id="2e805-110">You expose the Toffoli simulator via the `ToffoliSimulator` class.</span></span> <span data-ttu-id="2e805-111">Para obtener más información, consulte [formas de ejecutar un programa de preguntas y respuestas](xref:microsoft.quantum.guide.host-programs).</span><span class="sxs-lookup"><span data-stu-id="2e805-111">For additional details, see [Ways to run a Q# program](xref:microsoft.quantum.guide.host-programs).</span></span>
+
+### <a name="invoking-the-toffoli-simulator-from-c"></a><span data-ttu-id="2e805-112">Invocar el simulador Toffoli de C #</span><span class="sxs-lookup"><span data-stu-id="2e805-112">Invoking the Toffoli simulator from C#</span></span>
+
+<span data-ttu-id="2e805-113">Como con otras máquinas de destino, primero se crea una instancia de la `ToffoliSimulator` clase y, a continuación, se pasa como el primer parámetro del método de una operación `Run` .</span><span class="sxs-lookup"><span data-stu-id="2e805-113">As with other target machines, you first create an instance of the `ToffoliSimulator` class and then pass it as the first parameter of an operation's `Run` method.</span></span>
+
+<span data-ttu-id="2e805-114">Tenga en cuenta que, a diferencia de la `QuantumSimulator` clase, la `ToffoliSimulator` clase no implementa la <xref:System.IDisposable> interfaz y, por tanto, no es necesario encerrarla dentro de una `using` instrucción.</span><span class="sxs-lookup"><span data-stu-id="2e805-114">Note that, unlike the `QuantumSimulator` class, the `ToffoliSimulator` class does not implement the <xref:System.IDisposable> interface, and thus you do not need to enclose it within a `using` statement.</span></span>
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -30,25 +35,54 @@ ms.locfileid: "85276028"
     ///...
 ```
 
-## <a name="other-operations"></a><span data-ttu-id="219d4-110">Otras operaciones</span><span class="sxs-lookup"><span data-stu-id="219d4-110">Other Operations</span></span>
+### <a name="invoking-the-toffoli-simulator-from-python"></a><span data-ttu-id="2e805-115">Invocar el simulador Toffoli desde Python</span><span class="sxs-lookup"><span data-stu-id="2e805-115">Invoking the Toffoli simulator from Python</span></span>
 
-<span data-ttu-id="219d4-111">`ToffoliSimulator`Admite rotaciones y un exponente Paulis, como `R` y `Exp` , cuando la operación resultante es igual a `X` o a la identidad.</span><span class="sxs-lookup"><span data-stu-id="219d4-111">The `ToffoliSimulator` supports rotations and exponentiated Paulis, such as `R` and `Exp`, when the resulting operation is equal to `X` or to the identity.</span></span>
+<span data-ttu-id="2e805-116">Use el método [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) de la biblioteca de Python con la operación Q # importada:</span><span class="sxs-lookup"><span data-stu-id="2e805-116">Use the [toffoli_simulate()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) method from the Python library with the imported Q# operation:</span></span>
 
-<span data-ttu-id="219d4-112">Se admiten las medidas y las aserciones, pero solo en la base de Pauli `Z` .</span><span class="sxs-lookup"><span data-stu-id="219d4-112">Measurement and assert are supported, but only in the Pauli `Z` basis.</span></span>
-<span data-ttu-id="219d4-113">Tenga en cuenta que la probabilidad de alguna medida siempre es 0 o 1; no hay aleatoriedad en el simulador Toffoli.</span><span class="sxs-lookup"><span data-stu-id="219d4-113">Note that the probability of some measurement is always either 0 or 1; there is no randomness in the Toffoli simulator.</span></span>
+```python
+qubit_result = myOperation.toffoli_simulate()
+```
 
-<span data-ttu-id="219d4-114">Se admiten `DumpMachine` y `DumpRegister`.</span><span class="sxs-lookup"><span data-stu-id="219d4-114">`DumpMachine` and `DumpRegister` are supported.</span></span>
-<span data-ttu-id="219d4-115">Ambos generan el `Z` Estado de base actual de cada qubit, un qubit por línea.</span><span class="sxs-lookup"><span data-stu-id="219d4-115">They both output the current `Z`-basis state of each qubit, one qubit per line.</span></span>
+### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a><span data-ttu-id="2e805-117">Invocar el simulador Toffoli desde la línea de comandos</span><span class="sxs-lookup"><span data-stu-id="2e805-117">Invoking the Toffoli simulator from the command line</span></span>
 
-## <a name="qubitcount"></a><span data-ttu-id="219d4-116">QubitCount</span><span class="sxs-lookup"><span data-stu-id="219d4-116">QubitCount</span></span>
+<span data-ttu-id="2e805-118">Al ejecutar un programa de preguntas y respuestas desde la línea de comandos, use el parámetro **--Simulator** (o **-s** Shortcut) para especificar el equipo de destino del simulador Toffoli.</span><span class="sxs-lookup"><span data-stu-id="2e805-118">When running a Q# program from the command line, use the **--simulator** (or **-s** shortcut) parameter to specify the Toffoli simulator target machine.</span></span> <span data-ttu-id="2e805-119">El siguiente comando ejecuta un programa mediante el estimador de recursos:</span><span class="sxs-lookup"><span data-stu-id="2e805-119">The following command runs a program using the resources estimator:</span></span> 
 
-<span data-ttu-id="219d4-117">De forma predeterminada, asigna `ToffoliSimulator` espacio para 65.536 qubits.</span><span class="sxs-lookup"><span data-stu-id="219d4-117">By default, the `ToffoliSimulator` allocates space for 65,536 qubits.</span></span>
-<span data-ttu-id="219d4-118">Si el algoritmo requiere más que esto, puede cambiar el número de qubit proporcionando un valor para el `qubitCount` parámetro al constructor.</span><span class="sxs-lookup"><span data-stu-id="219d4-118">If your algorithm requires more than this, you can change the qubit count by providing a value for the `qubitCount` parameter to the constructor.</span></span>
-<span data-ttu-id="219d4-119">Cada qubit adicional requiere un byte de memoria adicional, por lo que no hay ningún costo significativo en la estimación del número de qubits que necesitará.</span><span class="sxs-lookup"><span data-stu-id="219d4-119">Each additional qubit requires an additional byte of memory, so there is no significant cost to overestimating the number of qubits you'll need.</span></span>
+```dotnetcli
+dotnet run -s ToffoliSimulator
+```
 
-<span data-ttu-id="219d4-120">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="219d4-120">For example:</span></span>
+### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a><span data-ttu-id="2e805-120">Invocación del simulador de Toffoli desde cuadernos de Juptyer</span><span class="sxs-lookup"><span data-stu-id="2e805-120">Invoking the Toffoli simulator from Juptyer Notebooks</span></span>
+
+<span data-ttu-id="2e805-121">Use el comando IQ # Magic [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) para ejecutar la operación Q #.</span><span class="sxs-lookup"><span data-stu-id="2e805-121">Use the IQ# magic command [%toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) to run the Q# operation.</span></span>
+
+```
+%toffoli myOperation
+```
+
+## <a name="supported-operations"></a><span data-ttu-id="2e805-122">Operaciones compatibles</span><span class="sxs-lookup"><span data-stu-id="2e805-122">Supported operations</span></span>
+
+<span data-ttu-id="2e805-123">El simulador Toffoli admite:</span><span class="sxs-lookup"><span data-stu-id="2e805-123">The Toffoli simulator supports:</span></span>
+
+* <span data-ttu-id="2e805-124">Rotations y un exponente Paulis, como `R` y `Exp` , cuando la operación resultante es igual `X` o la matriz de identidad.</span><span class="sxs-lookup"><span data-stu-id="2e805-124">Rotations and exponentiated Paulis, such as `R` and `Exp`, when the resulting operation equals `X` or the identity matrix.</span></span>
+* <span data-ttu-id="2e805-125">Operaciones de medición y [aserción](xref:microsoft.quantum.diagnostics.assertmeasurement) , pero solo en la `Z` base de Pauli.</span><span class="sxs-lookup"><span data-stu-id="2e805-125">Measurement and [assert](xref:microsoft.quantum.diagnostics.assertmeasurement) operations, but only in the Pauli `Z` basis.</span></span> <span data-ttu-id="2e805-126">Tenga en cuenta que la probabilidad de una operación de medición siempre es **0** o **1**; no hay aleatoriedad en el simulador Toffoli.</span><span class="sxs-lookup"><span data-stu-id="2e805-126">Note that a measurement operation's probability is always either **0** or **1**; there is no randomness in the Toffoli simulator.</span></span>
+* <span data-ttu-id="2e805-127">`DumpMachine``DumpRegister`funciones y.</span><span class="sxs-lookup"><span data-stu-id="2e805-127">`DumpMachine` and `DumpRegister` functions.</span></span>
+<span data-ttu-id="2e805-128">Ambas funciones generan el `Z` Estado de base actual de cada qubit, un qubit por línea.</span><span class="sxs-lookup"><span data-stu-id="2e805-128">Both functions output the current `Z`-basis state of each qubit, one qubit per line.</span></span>
+
+## <a name="specifying-the-number-of-qubits"></a><span data-ttu-id="2e805-129">Especificar el número de qubits</span><span class="sxs-lookup"><span data-stu-id="2e805-129">Specifying the number of qubits</span></span>
+
+<span data-ttu-id="2e805-130">De forma predeterminada, una `ToffoliSimulator` instancia de asigna espacio para 65.536 qubits.</span><span class="sxs-lookup"><span data-stu-id="2e805-130">By default, a `ToffoliSimulator` instance allocates space for 65,536 qubits.</span></span>
+<span data-ttu-id="2e805-131">Si el algoritmo requiere más qubits que este, puede especificar el recuento de qubit proporcionando un valor para el `qubitCount` parámetro al constructor.</span><span class="sxs-lookup"><span data-stu-id="2e805-131">If your algorithm requires more qubits than this, you can specify the qubit count by providing a value for the `qubitCount` parameter to the constructor.</span></span>
+<span data-ttu-id="2e805-132">Cada qubit adicional requiere un solo byte de memoria, por lo que no hay ningún costo significativo en la estimación del número de qubits que necesitará.</span><span class="sxs-lookup"><span data-stu-id="2e805-132">Each additional qubit requires only one byte of memory, so there is no significant cost to overestimating the number of qubits you'll need.</span></span>
+
+<span data-ttu-id="2e805-133">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="2e805-133">For example:</span></span>
 
 ```csharp
     var sim = new ToffoliSimulator(qubitCount: 1000000);
     var res = myLargeOperation.Run(sim).Result;
 ```
+
+## <a name="see-also"></a><span data-ttu-id="2e805-134">Consulte también</span><span class="sxs-lookup"><span data-stu-id="2e805-134">See also</span></span>
+
+- [<span data-ttu-id="2e805-135">Estimador de recursos Quantum</span><span class="sxs-lookup"><span data-stu-id="2e805-135">Quantum Resources Estimator</span></span>](xref:microsoft.quantum.machines.resources-estimator)
+- [<span data-ttu-id="2e805-136">Simulador de seguimiento de Quantum</span><span class="sxs-lookup"><span data-stu-id="2e805-136">Quantum Trace simulator</span></span>](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
+- [<span data-ttu-id="2e805-137">Simulador de estado completo de Quantum</span><span class="sxs-lookup"><span data-stu-id="2e805-137">Quantum Full State simulator</span></span>](xref:microsoft.quantum.machines.full-state-simulator) 
