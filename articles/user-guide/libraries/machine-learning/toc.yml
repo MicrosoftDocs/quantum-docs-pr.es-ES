@@ -1,5 +1,5 @@
 - name: Introducción al aprendizaje automático cuántico
-  href: introduction.md
+  href: intro.md
 - name: Clasificación básica
   href: basic-classification.md
 - name: Diseño de su propio clasificador
