@@ -1,53 +1,32 @@
 ---
-title: Simulador de seguimiento de equipos cuánticos
-description: Obtenga información sobre cómo usar el simulador de seguimiento de equipos de Microsoft Quantum para depurar código clásico y calcular los requisitos de recursos de un programa cuántico.
+title: 'Simulador de seguimiento cuántico: Kit de desarrollo de Microsoft Quantum'
+description: Obtenga información sobre cómo usar el simulador de seguimiento cuántico de Microsoft para depurar código clásico y calcular los requisitos de recursos de un programa de Q#.
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 4cec688da35951271d87396d9b6a8fed744defc6
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: c01f01973ea08153cbfa35d87a588a4eae46f1b7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273771"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871117"
 ---
-# <a name="quantum-trace-simulator"></a>Simulador de seguimiento de equipos cuánticos
+# <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Simulador de seguimiento cuántico del kit de desarrollo de Microsoft Quantum (QDK)
 
-El simulador de seguimiento de equipos cuánticos de Microsoft ejecuta un programa cuántico sin simular realmente el estado de un equipo cuántico.  Por esta razón, el simulador de seguimiento puede ejecutar programas cuánticos que usan miles de qubits.  Esto tiene dos propósitos principales: 
+La clase <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> de QDK ejecuta un programa cuántico sin simular realmente el estado de un equipo cuántico. Por esta razón, el simulador de seguimiento cuántico puede ejecutar programas cuánticos que usan miles de cúbits.  Esto tiene dos propósitos principales: 
 
 * Depurar código clásico que forma parte de un programa cuántico. 
-* Calcular los recursos necesarios para ejecutar una determinada instancia de un programa cuántico en un equipo cuántico.
+* Calcular los recursos necesarios para ejecutar una determinada instancia de un programa cuántico en un equipo cuántico. De hecho, el [estimador de recursos](xref:microsoft.quantum.machines.resources-estimator), que proporciona un conjunto de métricas más limitado, se basa en el simulador de seguimiento.
 
-El simulador de seguimiento se basa en la información adicional que proporciona el usuario cuando se deben realizar medidas. Consulte la sección [Proporcionar la probabilidad de los resultados de medidas](#providing-the-probability-of-measurement-outcomes) para obtener más detalles. 
+## <a name="invoking-the-quantum-trace-simulator"></a>Invocación del simulador de seguimiento cuántico
 
-## <a name="providing-the-probability-of-measurement-outcomes"></a>Proporcionar la probabilidad de los resultados de medidas
+Puede usar el simulador de seguimiento cuántico para ejecutar cualquier operación de Q#.
 
-Hay dos tipos de medidas que aparecen en los algoritmos cuánticos. El primer tipo juega un papel auxiliar en el que el usuario normalmente conoce la probabilidad de los resultados. En este caso, el usuario puede escribir <xref:microsoft.quantum.intrinsic.assertprob> en el espacio de nombres <xref:microsoft.quantum.intrinsic> para expresar este conocimiento. Esto se ilustra en el ejemplo siguiente:
+Al igual que con otras máquinas de destino, primero se crea una instancia de la clase `QCTraceSimulator` y, a continuación, se pasa como el primer parámetro del método `Run` de una operación.
 
-```qsharp
-operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
-    using (qubit = Qubit()) {
-        H(qubit);
-        CNOT(qubit, target);
-        CNOT(source, qubit);
-        H(source);
-
-        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-
-        if (M(source) == One)  { Z(target); X(source); }
-        if (M(q) == One) { X(target); X(q); }
-    }
-}
-```
-
-Si el simulador de seguimiento ejecuta `AssertProb`, este registrará que a la medida `PauliZ` en `source` y `q` se le debe dar un resultado de `Zero` con una probabilidad de 0,5. Si el simulador ejecuta `M` posteriormente, encontrará los valores registrados de las probabilidades de resultados y `M` devolverá `Zero` o `One` con una probabilidad de 0,5. Si se ejecuta el mismo código en un simulador que realiza un seguimiento del estado cuántico, ese simulador comprobará que las probabilidades que se proporcionan en `AssertProb` son correctas.
-
-## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>Ejecución del programa con el simulador de seguimiento de equipos cuánticos 
-
-El simulador de seguimiento de equipos cuánticos se puede considerar simplemente como otra máquina de destino. El programa del controlador de C# para usarlo es muy similar al de cualquier otro simulador cuántico: 
+Tenga en cuenta que, a diferencia de la clase `QuantumSimulator`, la clase `QCTraceSimulator` no implementa la interfaz <xref:System.IDisposable> y, por lo tanto, no es necesario encerrarla dentro de una instrucción `using`.
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -69,18 +48,53 @@ namespace Quantum.MyProgram
 }
 ```
 
-Tenga en cuenta que si hay alguna medida que no se haya anotado mediante `AssertProb`, el simulador devolverá `UnconstrainedMeasurementException` desde el espacio de nombres `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators`. Consulte la documentación de la API sobre [UnconstrainedMeasurementException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.UnconstrainedMeasurementException) para más información.
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Probabilidad de los resultados de una medición
 
-Además de ejecutar programas cuánticos, el simulador de seguimiento incluye cinco componentes para detectar errores en los programas y realizar cálculos sobre los recursos que necesitan los programas cuánticos. 
+Como el simulador de seguimiento cuántico no simula el estado cuántico real, no puede calcular la probabilidad de los resultados de una medición dentro de una operación. 
 
-* [Comprobador de entradas únicas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)
-* [Comprobador de uso de qubits invalidado](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)
-* [Contador de operaciones primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)
-* [Contador de profundidad del circuito](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)
-* [Contador de anchura del circuito](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)
+Por consiguiente, si una operación incluye mediciones, debe proporcionar explícitamente estas probabilidades con la operación <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> del espacio de nombres <xref:microsoft.quantum.diagnostics>. Esto se ilustra en el ejemplo siguiente:
 
-Cada uno de estos componentes se puede habilitar mediante el establecimiento de las marcas adecuadas en `QCTraceSimulatorConfiguration`. Se puede encontrar más información sobre cada uno de estos componentes en los archivos de referencia correspondientes. Consulte la documentación de la API sobre [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) para obtener detalles más específicos.
+```qsharp
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
+        H(source);
+
+        AssertMeasurementProbability([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertMeasurementProbability([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+
+        if (M(source) == One)  { Z(target); X(source); }
+        if (M(q) == One) { X(target); X(q); }
+    }
+}
+```
+
+Si el simulador de seguimiento cuántico se encuentra con `AssertMeasurementProbability`, registrará que la medición de `PauliZ` en `source` y `q` dará un resultado de `Zero`, con una probabilidad de **0,5**. Más adelante, cuando ejecuta la operación `M`, busca los valores registrados de las probabilidades de resultado y `M` devuelve `Zero` o `One`, con una probabilidad de **0,5**. Si se ejecuta el mismo código en un simulador que realiza un seguimiento del estado cuántico, ese simulador comprueba que las probabilidades que se proporcionan en `AssertMeasurementProbability` sean correctas.
+
+Tenga en cuenta que si hay al menos una operación de medición que no se haya anotado mediante `AssertMeasurementProbability`, el simulador activará [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception).
+
+## <a name="quantum-trace-simulator-tools"></a>Herramientas del simulador de seguimiento cuántico
+
+El QDK incluye cinco herramientas que se pueden usar con el simulador de seguimiento cuántico para detectar errores en los programas y calcular los recursos de los programas cuánticos: 
+
+|Herramienta | Descripción |
+|-----| -----|
+|[Comprobador de entradas únicas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Comprueba posibles conflictos con los cúbits compartidos |
+|[Comprobador de uso de cúbits invalidado](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Comprueba si el programa aplica una operación a un cúbit que ya se ha liberado. |
+|[Contador de operaciones primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Cuenta el número de ejecuciones primitivas utilizadas por cada operación invocada en un programa cuántico.  |
+|[Contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Recopila recuentos que representan el límite inferior de la profundidad de cada operación invocada en un programa cuántico.   |
+|[Contador de ancho](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Cuenta el número de cúbits asignados y prestados por cada operación en un programa cuántico. |
+
+Para habilitar cada una de estas herramientas, hay que establecer las marcas correspondientes en `QCTraceSimulatorConfiguration` y, a continuación, pasar la configuración a la declaración de `QCTraceSimulator`. Para más información sobre el uso de cada una de estas herramientas, consulte los vínculos de la lista anterior. Para más información sobre la configuración de `QCTraceSimulator`, consulte [QCTraceSimulatorConfiguration](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration).
+
+## <a name="qctracesimulator-methods"></a>Métodos de QCTraceSimulator
+
+`QCTraceSimulator` tiene varios métodos integrados para recuperar los valores de las métricas de las que se realiza un seguimiento durante una operación cuántica. Se pueden encontrar ejemplos de los métodos [QCTraceSimulator.GetMetric](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) y [QCTraceSimulator.ToCSV](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.tocsv) en los artículos [Contador de operaciones primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter), [Contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter) y [Contador de ancho](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter). Para más información sobre todos los métodos disponibles, consulte [QCTraceSimulator](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) en la referencia de la API de Q#.  
 
 ## <a name="see-also"></a>Consulte también
-Referencia de C# sobre el [simulador de seguimiento](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) de equipos cuánticos 
 
+- [Estimador de recursos cuánticos](xref:microsoft.quantum.machines.resources-estimator)
+- [Simulador cuántico de Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)
+- [Simulador cuántico de estado completo](xref:microsoft.quantum.machines.full-state-simulator) 

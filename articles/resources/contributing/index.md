@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 108a50302422e5ae41e14b30ef22169370c2a35a
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273725"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871423"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Contribución a Quantum Development Kit
 
@@ -61,10 +61,9 @@ Cada una de estas partes diferentes encuentra su lugar en un repositorio distint
 > [!NOTE]
 > Lamentablemente, por el momento no podemos aceptar contribuciones de código y documentación en el repositorio [**microsoft/Quantum-NC**](https://github.com/microsoft/Quantum-NC), pero de todos modos apreciamos los informes de errores.
 
-También hay otros repositorios más especializados que se centran en eventos diferentes o en una funcionalidad auxiliar relacionada con Quantum Development Kit.
+También hay otros repositorios más especializados que se centran en una funcionalidad auxiliar relacionada con el kit de desarrollo de Microsoft Quantum.
 
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): compatibilidad del formato LaTex con la sintaxis de Q#.
-- [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): tutorial de IQ# Notebook para Deutsch–Jozsa del taller para practicantes de 2019.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
