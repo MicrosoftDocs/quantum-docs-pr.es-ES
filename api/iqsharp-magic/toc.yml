@@ -32,6 +32,8 @@
   name: '%kata (comando magic)'
 - href: lsmagic.md
   name: '%lsmagic (comando magic)'
+- href: lsopen.md
+  name: '%lsopen (comando magic)'
 - href: package.md
   name: '%package (comando magic)'
 - href: performance.md
