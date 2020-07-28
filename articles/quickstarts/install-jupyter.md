@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 8a878e8f930f4b898f4de35751e4a39cc8716cec
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884268"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871457"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Desarrollo con cuadernos en Q# de Jupyter Notebook
 
@@ -28,7 +28,7 @@ IQ# (pronunciado i-q-sharp) es una extensión del SDK de .NET Core usada princi
 
 ### <a name="install-using-conda-recommended"></a>[Instalación mediante Conda (recomendado)](#tab/tabid-conda)
 
-1. Instale [Miniconda](https://docs.conda.io/en/latest/miniconda.html) o [Anaconda](https://www.anaconda.com/products/individual#Downloads).
+1. Instale [Miniconda](https://docs.conda.io/en/latest/miniconda.html) o [Anaconda](https://www.anaconda.com/products/individual#Downloads). **Nota:** Se necesita una instalación de 64 bits.
 
 1. Abra un símbolo del sistema de Anaconda.
 
