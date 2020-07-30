@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275762"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436528"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterización y estadísticas de Quantum #
 
@@ -96,7 +96,7 @@ La inferencia bayesiana exacta es inestable.
 Para ver este Imagine, queremos obtener información sobre una variable de $-bit $n $x $.
 La distribución anterior $ \Pr (x) $ admite más de $2 ^ n $ valores hipotéticos de $x $.
 Esto significa que, si necesitamos una estimación muy precisa de $x $, la estimación de la fase bayesiana puede requerir memoria y tiempo de procesamiento prohibidos.
-En el caso de algunas aplicaciones, como la simulación de Quantum, la precisión limitted requerida no impide que otros métodos, como el algoritmo de mé, no puedan usar la inferencia de Bayesiano exacta en el paso de estimación de fase.  Por esta razón, también proporcionamos implementaciones para los métodos bayesiana aproximados, como la [estimación de fases de recorrido aleatorio (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) y los enfoques no Bayesiana, como la [sólida estimación de fase](xref:microsoft.quantum.characterization.robustphaseestimation).
+En el caso de algunas aplicaciones, como la simulación de Quantum, la precisión limitted requerida no impide que otros métodos, como el algoritmo de mé, no puedan usar la inferencia de Bayesiano exacta en el paso de estimación de fase.  Por esta razón, también proporcionamos implementaciones para los métodos bayesiana aproximados, como la [estimación de fases de recorrido aleatorio (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) y los enfoques no Bayesiana, como la [sólida estimación de fase](xref:microsoft.quantum.characterization.robustphaseestimation).
 
 ### <a name="robust-phase-estimation"></a>Estimación de fase sólida ###
 
