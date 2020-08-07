@@ -1,17 +1,20 @@
 ---
-title: Estructuras de datos de las bibliotecas estándar de preguntas y respuestas
-description: Obtenga información sobre las estructuras de datos, Oracle y generadores dinámicos en las bibliotecas de preguntas y respuestas estándar de Microsoft.
+title: Estructuras de datos en las Q# bibliotecas estándar
+description: Obtenga información sobre las estructuras de datos, Oracle y generadores dinámicos en las Q# bibliotecas estándar de Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275730"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868531"
 ---
 # <a name="data-structures-and-modeling"></a>Modelado y estructuras de datos #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>Matrices ###
 
 La Canon proporciona varias funciones para manipular matrices.
-Estas funciones son con parámetros de tipo y, por tanto, se pueden usar con matrices de cualquier tipo de Q #.
+Estas funciones son con parámetros de tipo y, por tanto, se pueden usar con matrices de cualquier Q# tipo.
 Por ejemplo, la <xref:microsoft.quantum.arrays.reversed> función devuelve una nueva matriz cuyos elementos están en orden inverso al de su entrada.
 Se puede usar para cambiar el modo en que se representa un registro de Quantum cuando se llama a las operaciones:
 
@@ -72,7 +75,7 @@ En la literatura de estimación de la [fase](https://en.wikipedia.org/wiki/Quant
 Aquí el término Oracle hace referencia a una subrutina caja negra Quantum que actúa sobre un conjunto de qubits y devuelve la respuesta como una fase.
 Esta subrutina a menudo se puede considerar como una entrada a un algoritmo Quantum que acepta Oracle, además de otros parámetros, y aplica una serie de operaciones Quantum y el tratamiento de una llamada a esta subrutina Quantum como si fuera una puerta fundamental.
 Obviamente, para implementar el algoritmo más grande, se debe proporcionar una descomposición concreta de Oracle en las puertas fundamentales, pero no es necesaria una descomposición para comprender el algoritmo que llama a Oracle.
-En Q #, esta abstracción se representa mediante el uso de que las operaciones son valores de primera clase, de modo que las operaciones se pueden pasar a las implementaciones de los algoritmos Quantum de manera negra.
+En Q# , esta abstracción se representa mediante el uso de que las operaciones son valores de primera clase, de modo que las operaciones se pueden pasar a implementaciones de algoritmos Quantum de manera negra.
 Además, los tipos definidos por el usuario se usan para etiquetar las distintas representaciones de Oracle de una manera con seguridad de tipos, lo que dificulta la creación accidental de diferentes tipos de operaciones de caja negra.
 
 Estas Oracle aparecen en varios contextos diferentes, incluidos ejemplos famosos como los algoritmos [de búsqueda y de simulación de Quantum de Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
@@ -189,7 +192,7 @@ La unitario que describe la dinámica de este tipo es $U (t) = R_z (2 \ Omega t)
 En este contexto, se puede simular $U (t) $ para cualquier $t $ mediante un solo $R _z $ Gate y, como tal, no es necesario restringir solo las consultas discretas a la unitario.
 Este modelo continuo también tiene la propiedad cuya frecuencia es mayor que $2 \ PI $ se puede obtener de los procesos de estimación de fase que usan consultas continuas, ya que la información de fase que, de otro modo, se enmascararía por las ramas de la función logarítmica se puede revelar a partir de los resultados de los experimentos realizados en valores no proporcionales de $t $.
 Por lo tanto, para problemas como estos modelos de consulta continua para la estimación de fase, Oracle no solo es adecuado, sino que también son preferibles al modelo de consulta discreto.
-Por esta razón, Q # tiene funcionalidad para ambas formas de consultas y la deja al usuario para decidir si un algoritmo de estimación de fase se ajusta a sus necesidades y el tipo de Oracle que está disponible.
+Por esta razón Q# , tiene funcionalidad para ambas formas de consultas y la deja al usuario para decidir sobre un algoritmo de estimación de fase para ajustarse a sus necesidades y el tipo de Oracle que está disponible.
 
 ## <a name="dynamical-generator-modeling"></a>Modelado dinámico de generadores ##
 

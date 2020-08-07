@@ -1,6 +1,8 @@
 ---
 title: vectores y matrices en Quantum Computing Description: Conozca los conceptos básicos sobre cómo trabajar con vectores y matrices.
 Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vectores ms. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 ms. topic: article no-LOC:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ Algunos conocimientos sobre vectores y matrices son esenciales para comprender l
 
 Un vector de columna (o simplemente [*Vector*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics))) $ v $ de dimensión (o tamaño) $ n $ es una colección de $ n $ números complejos $ (V_1, v_2, \ldots, v_n) $ organizados como una columna:
 
-$$v=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\

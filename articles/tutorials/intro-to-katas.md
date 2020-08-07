@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 06/02/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.katas
-ms.openlocfilehash: 1c4dfa5c47aa38935cd5936cd256e357b6605371
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b2a3b25bf90109468f02c98c6c687befb83648bc
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276219"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869688"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Conozca la computación cuántica con Quantum Katas
 
-[Los katas Quantum](https://github.com/Microsoft/QuantumKatas/) son tutoriales de código abierto, tutoriales autoguiados y ejercicios de programación destinados a la enseñanza de elementos de Quantum Computing y la programación de Q # al mismo tiempo.
+[Los katas Quantum](https://github.com/Microsoft/QuantumKatas/) son tutoriales de código abierto y de programación que se han diseñado para enseñar los elementos de la informática Quantum y Q# la programación al mismo tiempo.
 
 ## <a name="learning-by-doing"></a>Aprendizaje práctico
 
@@ -42,15 +45,15 @@ Explore los aspectos básicos y los fundamentos de la informática Quantum o pro
 |[Álgebra lineal](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)|El álgebra lineal se usa para representar los Estados y las operaciones de Quantum en la informática Quantum. En este tutorial se tratan los conceptos básicos, incluidas matrices y vectores.|
 |[Concepto de cúbit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/Qubit)|Más información sobre qubits: uno de los conceptos principales de la informática Quantum. |
 |[Puertas cuánticas de un solo cúbit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates)|En este tutorial se presentan las puertas de Quantum de un solo qubit, que actúan como los bloques de creación de los algoritmos Quantum y transforman los Estados qubit Quantum de varias maneras.|
-|[Sistemas de varios cúbits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|En este tutorial se presentan sistemas de varios qubit, su representación en notación matemática y en código de Q #, y el concepto de inenredo.|
+|[Sistemas de varios cúbits](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitSystems)|En este tutorial se presentan sistemas de varios qubit, su representación en notación matemática y en Q# el código, así como el concepto de inenredo.|
 |[Puertas de Quantum multiqubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/MultiQubitGates)|Este tutorial sigue el tutorial de las [puertas de Quantum de un solo qubit](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/SingleQubitGates) y se centra en la aplicación de las puertas de Quantum a sistemas de varios qubit.|
 
 ### <a name="quantum-computing-fundamentals"></a>Conceptos básicos de la computación cuántica
 
 | Kata | Descripción |
 |:-----|-------------|
-|[Reconocimiento de puertas cuánticas](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Una serie de ejercicios diseñados para ayudarle a familiarizarse con las puertas de Quantum básicas en Q #. Incluye ejercicios para las puertas básicas de un solo qubit y de varios qubit, el método contiguo y las puertas controladas, y cómo usar las puertas para modificar el estado de una qubit.|
-|[Creación de una superposición cuántica](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Use estos ejercicios para familiarizarse con el concepto de superposición y programación en Q #. Incluye ejercicios para puertas de qubit único y multiqubit básicas, superposición y control de flujo y recursividad en Q #.|
+|[Reconocimiento de puertas cuánticas](https://github.com/microsoft/QuantumKatas/tree/master/BasicGates)|Una serie de ejercicios diseñados para ayudarle a familiarizarse con las puertas de Quantum básicas en Q# . Incluye ejercicios para las puertas básicas de un solo qubit y de varios qubit, el método contiguo y las puertas controladas, y cómo usar las puertas para modificar el estado de una qubit.|
+|[Creación de una superposición cuántica](https://github.com/microsoft/QuantumKatas/tree/master/Superposition)|Utilice estos ejercicios para familiarizarse con el concepto de superposición y programación en Q# . Incluye ejercicios para puertas de qubit único y multiqubit básicas, superposición y control de flujo y recursividad en Q# .|
 |[Distinción de los estados cuánticos mediante medidas](https://github.com/microsoft/QuantumKatas/tree/master/Measurements)|Solucione estos ejercicios mientras aprende sobre la medición de Quantum y los Estados ortogonal y no ortogonal. |
 |[Medidas combinadas](https://github.com/microsoft/QuantumKatas/tree/master/JointMeasurements)|Obtenga información sobre las medidas de paridad juntas y cómo usar la operación [Measure](xref:microsoft.quantum.intrinsic.measure) para distinguir los Estados de Quantum.|
 
@@ -72,7 +75,7 @@ Explore los aspectos básicos y los fundamentos de la informática Quantum o pro
 |:-----|-------------|
 |[Protocolo BB84 para la distribución cuántica de claves](https://github.com/microsoft/QuantumKatas/tree/master/KeyDistribution_BB84)|Aprenda e implemente un protocolo de distribución de claves Quantum, [BB84](https://en.wikipedia.org/wiki/BB84), con qubits para intercambiar claves criptográficas. |
 |[Error de volteo del código de corrección de bits](https://github.com/microsoft/QuantumKatas/tree/master/QEC_BitFlipCode)|Explore la corrección de errores de Quantum con los códigos de corrección de errores de Quantum (QEC) más sencillos (el código de tres qubit bits-Flip).|
-|[Estimación de la fase](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Los algoritmos de estimación de fase son algunos de los bloques de creación más fundamentales de la informática Quantum. Obtenga información sobre la estimación de fase con estos ejercicios que cubren la estimación de la fase Quantum y cómo preparar y ejecutar rutinas de estimación de fase en Q #.|
+|[Estimación de la fase](https://github.com/microsoft/QuantumKatas/blob/master/PhaseEstimation)|Los algoritmos de estimación de fase son algunos de los bloques de creación más fundamentales de la informática Quantum. Obtenga información sobre la estimación de fase con estos ejercicios que cubren la estimación de la fase Quantum y cómo preparar y ejecutar rutinas de estimación de fases en Q# .|
 |[Aritmética de Quantum: creación de agregados de rizo](https://github.com/microsoft/QuantumKatas/blob/master/RippleCarryAdder)|Una serie detallada de ejercicios que exploran la adición de [rizo](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder) en un equipo Quantum. Cree un agregador de Quantum en contexto, expándalo con un algoritmo diferente y, por último, cree un Subtractor de Quantum en contexto.   |
 
 ### <a name="entanglement-games"></a>Juegos de entrelazamiento

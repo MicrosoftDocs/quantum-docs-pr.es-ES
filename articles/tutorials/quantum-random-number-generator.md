@@ -1,30 +1,33 @@
 ---
 title: Creación de un generador cuántico de números aleatorios
-description: Cree un proyecto de Q# para crear un generador cuántico de números aleatorios con el fin de mostrar los conceptos cuánticos fundamentales tales como la superposición.
+description: Cree un Q# proyecto que muestre conceptos fundamentales de Quantum como la superposición mediante la creación de un generador de números aleatorios Quantum.
 author: bromeg
 ms.author: megbrow@microsoft.com
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
-ms.openlocfilehash: 18e8975e513a87c0a67a6dbb5586cc7dab5a93fb
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275282"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869773"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementación de un generador cuántico de números aleatorios en Q\#
 
-Un ejemplo sencillo de un algoritmo cuántico escrito en Q# es un generador cuántico de números aleatorios. Este algoritmo aprovecha la naturaleza de la mecánica cuántica para generar un número aleatorio.
+Un ejemplo sencillo de un algoritmo Quantum escrito en Q# es un generador de números aleatorios Quantum. Este algoritmo aprovecha la naturaleza de la mecánica cuántica para generar un número aleatorio.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
 - [Kit de desarrollo de Microsoft Quantum](xref:microsoft.quantum.install).
-- Cree un proyecto de Q# usando [Q# desde la línea de comandos](xref:microsoft.quantum.install.standalone) o con un [programa host de Python](xref:microsoft.quantum.install.python) o un [programa host de C#](xref:microsoft.quantum.install.cs).
+- Cree un Q# proyecto para [usar Q# desde la línea de comandos](xref:microsoft.quantum.install.standalone)o con un [programa host de Python](xref:microsoft.quantum.install.python) o un [programa host de C#](xref:microsoft.quantum.install.cs).
 
-## <a name="write-a-q-operation"></a>Escriba una operación de Q#
+## <a name="write-a-no-locq-operation"></a>Escribir una Q# operación
 
-### <a name="q-operation-code"></a>Código de operación de Q#
+### <a name="no-locq-operation-code"></a>Q#código de operación
 
 1. Reemplace el contenido del archivo Program.qs por el código siguiente:
 
@@ -32,7 +35,7 @@ Un ejemplo sencillo de un algoritmo cuántico escrito en Q# es un generador cuá
 
 Tal y como se mencionó en nuestro artículo [Descripción de la computación cuántica](xref:microsoft.quantum.overview.understanding), un cúbit es una unidad de información cuántica que puede estar en superposición. Cuando se mide, un cúbit solo puede ser 0 o 1. Sin embargo, durante la ejecución, el estado del cúbit representa la probabilidad de leer un 0 o un 1 al tomar una medida. Este estado probabilístico se conoce como superposición. Podemos usar esta probabilidad para generar números aleatorios.
 
-En nuestra operación de Q#, presentamos el tipo de datos `Qubit`, nativo de Q#. Solo se puede asignar un `Qubit` con una instrucción `using`. Cuando se asigna un cúbit, siempre está en el estado `Zero`. 
+En nuestra Q# operación, se introduce el tipo de la forma `Qubit` , nativo en Q# . Solo se puede asignar un `Qubit` con una instrucción `using`. Cuando se asigna un cúbit, siempre está en el estado `Zero`. 
 
 Con la operación `H`, podemos poner nuestro `Qubit` en superposición. Para medir un cúbit y leer su valor, se usa la operación intrínseca `M`.
 
@@ -61,13 +64,13 @@ Como el resultado de la medida es completamente aleatorio, hemos obtenido un bit
 
 ## <a name="creating-a-complete-random-number-generator"></a>Creación de un generador completo de números aleatorios
 
-Ahora que tenemos una operación de Q# que genera bits aleatorios, podemos usarlo para crear un generador completo de números cuánticos aleatorios. Podemos usar las aplicaciones de línea de comandos de Q# o usar un programa host.
+Ahora que tenemos una Q# operación que genera bits aleatorios, se puede usar para crear un generador de números aleatorios Quantum completo. Podemos usar las Q# aplicaciones de línea de comandos o usar un programa host.
 
 
 
-### <a name="q-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Aplicaciones de línea de comandos de Q# con Visual Studio o Visual Studio Code](#tab/tabid-qsharp)
+### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#aplicaciones de línea de comandos con Visual Studio o Visual Studio Code](#tab/tabid-qsharp)
 
-Para crear la aplicación de línea de comandos de Q# completa, agregue el siguiente punto de entrada al programa de Q#: 
+Para crear la Q# aplicación de línea de comandos completa, agregue el siguiente punto de entrada al Q# programa: 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -91,7 +94,7 @@ dotnet run --no-build
 
 ### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python con Visual Studio Code o la línea de comandos](#tab/tabid-python)
 
-Para ejecutar el nuevo programa de Q# desde Python, guarde el código siguiente como `host.py`:
+Para ejecutar el nuevo Q# programa desde Python, guarde el código siguiente como `host.py` :
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
@@ -105,7 +108,7 @@ Preparing Q# environment...
 
 ### <a name="c-with-visual-studio-code-or-visual-studio"></a>[C# con Visual Studio Code o Visual Studio](#tab/tabid-csharp)
 
-Para ejecutar el nuevo programa de Q# desde C#, modifique `Driver.cs` para incluir el siguiente código de C#:
+Para ejecutar el nuevo Q# programa desde C#, modifique `Driver.cs` para incluir el siguiente código de c#:
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 

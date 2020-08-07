@@ -6,12 +6,15 @@ ms.author: ageller@microsoft.com
 ms.date: 6/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.toffoli-simulator
-ms.openlocfilehash: a6ceee592e628215511ec83475d9e25bf54674f7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870624"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868107"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Simulador de Quantum Development Kit (QDK) Toffoli
 
@@ -21,13 +24,13 @@ Aunque el simulador Toffoli está más restringido en funcionalidad que el [simu
 
 ## <a name="invoking-the-toffoli-simulator"></a>Invocar el simulador Toffoli
 
-El simulador Toffoli se expone a través de la `ToffoliSimulator` clase. Para obtener más información, consulte [formas de ejecutar un programa de preguntas y respuestas](xref:microsoft.quantum.guide.host-programs).
+El simulador Toffoli se expone a través de la `ToffoliSimulator` clase. Para obtener más información, consulte [formas de ejecutar un Q# programa](xref:microsoft.quantum.guide.host-programs).
 
 ### <a name="invoking-the-toffoli-simulator-from-c"></a>Invocar el simulador Toffoli de C #
 
-Como con otras máquinas de destino, primero se crea una instancia de la `ToffoliSimulator` clase y, a continuación, se pasa como el primer parámetro del método de una operación `Run` .
+Al igual que con otras máquinas de destino, primero se crea una instancia de la clase `ToffoliSimulator` y, a continuación, se pasa como el primer parámetro del método `Run` de una operación.
 
-Tenga en cuenta que, a diferencia de la `QuantumSimulator` clase, la `ToffoliSimulator` clase no implementa la <xref:System.IDisposable> interfaz y, por tanto, no es necesario encerrarla dentro de una `using` instrucción.
+Tenga en cuenta que, a diferencia de la clase `QuantumSimulator`, la clase `ToffoliSimulator` no implementa la interfaz <xref:System.IDisposable> y, por lo tanto, no es necesario encerrarla dentro de una instrucción `using`.
 
 ```csharp
     var sim = new ToffoliSimulator();
@@ -37,7 +40,7 @@ Tenga en cuenta que, a diferencia de la `QuantumSimulator` clase, la `ToffoliSim
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Invocar el simulador Toffoli desde Python
 
-Use el método [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) de la biblioteca de Python con la operación Q # importada:
+Use el método [toffoli_simulate ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) de la biblioteca de Python con la Q# operación importada:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -45,7 +48,7 @@ qubit_result = myOperation.toffoli_simulate()
 
 ### <a name="invoking-the-toffoli-simulator-from-the-command-line"></a>Invocar el simulador Toffoli desde la línea de comandos
 
-Al ejecutar un programa de preguntas y respuestas desde la línea de comandos, use el parámetro **--Simulator** (o **-s** Shortcut) para especificar el equipo de destino del simulador Toffoli. El siguiente comando ejecuta un programa mediante el estimador de recursos: 
+Al ejecutar un Q# programa desde la línea de comandos, use el parámetro **--Simulator** (o **-s** Shortcut) para especificar el equipo de destino del simulador Toffoli. El siguiente comando ejecuta un programa mediante el estimador de recursos: 
 
 ```dotnetcli
 dotnet run -s ToffoliSimulator
@@ -53,7 +56,7 @@ dotnet run -s ToffoliSimulator
 
 ### <a name="invoking-the-toffoli-simulator-from-juptyer-notebooks"></a>Invocación del simulador de Toffoli desde cuadernos de Juptyer
 
-Use el comando IQ # Magic [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) para ejecutar la operación Q #.
+Use el Q# comando "Magic" [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) para ejecutar la Q# operación.
 
 ```
 %toffoli myOperation
@@ -81,7 +84,7 @@ Por ejemplo:
     var res = myLargeOperation.Run(sim).Result;
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Estimador de recursos Quantum](xref:microsoft.quantum.machines.resources-estimator)
 - [Simulador de seguimiento de Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)

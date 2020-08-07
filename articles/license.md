@@ -4,12 +4,15 @@ description: Términos de licencia, Disclaimers y derechos de usuario para el Mi
 author: QuantumWriter
 ms.author: cpalmer
 ms.date: 11/04/2019
-ms.openlocfilehash: 0d3aa9ae9e4f232ba2403512ff6e2394ecedeb22
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 33b36e5619c62c9e2306441f55b244caa3214e98
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907127"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866730"
 ---
 # <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DEL SOFTWARE DE MICROSOFT 
 ## <a name="microsoft-quantum-development-kit-preview"></a>KIT DE DESARROLLO DE QUANTUM DE MICROSOFT (VERSIÓN PRELIMINAR)
@@ -21,7 +24,7 @@ ms.locfileid: "77907127"
 
 * * *
 
-Los presentes términos de licencia constituyen un contrato entre usted y Microsoft Corporation (o alguna de sus filiales). Se aplican al software de versión preliminar mencionado anteriormente y a cualquier servicio o actualización de software de Microsoft (excepto en la medida en que tales servicios o actualizaciones están acompañados de términos nuevos o adicionales, en cuyo caso se aplican los distintos términos y no modifican su o los derechos de Microsoft relacionados con el software o los servicios actualizados previamente.
+Los presentes términos de licencia constituyen un contrato entre usted y Microsoft Corporation (o alguna de sus filiales). Se aplican al software de versión preliminar mencionado anteriormente y a cualquier servicio o actualización de software de Microsoft (salvo en la medida en que tales servicios o actualizaciones están acompañados de términos nuevos o adicionales, en cuyo caso los distintos términos se aplican de manera potencial y no modifican los derechos de Microsoft o de los que están relacionados con el software o los servicios actualizados previamente).
 
 SI CUMPLE ESTOS TÉRMINOS DE LICENCIA, TENDRÁ LOS DERECHOS SIGUIENTES. AL USAR ESTE SOFTWARE, ACEPTA ESTOS TÉRMINOS.
 
@@ -31,7 +34,7 @@ SI CUMPLE ESTOS TÉRMINOS DE LICENCIA, TENDRÁ LOS DERECHOS SIGUIENTES. AL USAR 
 
      b. **Third Party software**. El software puede incluir aplicaciones de terceros cuya licencia se le otorga en virtud del presente contrato o de sus propios términos. Es posible que se pueda tener acceso a los términos de licencia, los avisos y las confirmaciones de las aplicaciones de terceros en los [avisos de terceros](https://3rdpartysource.microsoft.com/) o en un archivo de avisos acompañante. Incluso si dichas aplicaciones se rigen por otros contratos, también se les aplican la exclusión de responsabilidad y las limitaciones y exclusiones de indemnizaciones en la medida que lo permita la ley aplicable. Kernel desarrollado por ETH Zurich (Suiza), grupo de Prof. Troya.
  
-2. **SOFTWARE DEPENDIENTE DEL TIEMPO.**
+2. **SOFTWARE SUJETO A LIMITACIÓN TEMPORAL.**
 
      a. **Período**. El software es dependiente del tiempo y puede dejar de ejecutarse en una fecha definida en el software.
 
@@ -42,21 +45,21 @@ SI CUMPLE ESTOS TÉRMINOS DE LICENCIA, TENDRÁ LOS DERECHOS SIGUIENTES. AL USAR 
 1. **software de versión preliminar**. El software es una versión preliminar. Es posible que no funcione correctamente. Puede ser diferente de la versión comercial.
 
 
-1. **Comentarios**. Si proporciona comentarios sobre el software a Microsoft, concede a Microsoft el derecho de usar, compartir y comercializar sus comentarios de cualquier forma y para cualquier fin sin cargo alguno. No enviará comentarios sujetos a una licencia que obliguen a Microsoft a licenciar su software o documentación a terceros porque Microsoft incluye sus comentarios en ellos. Estos derechos perdurarán con independencia de este contrato.
+1. **COMENTARIOS**. Si proporciona comentarios sobre el software a Microsoft, concede a Microsoft el derecho de usar, compartir y comercializar sus comentarios de cualquier forma y para cualquier fin sin cargo alguno. No enviará comentarios sujetos a una licencia que obliguen a Microsoft a licenciar su software o documentación a terceros porque Microsoft incluye sus comentarios en ellos. Estos derechos perdurarán con independencia de este contrato.
 
-1. **recopilación de datos**. El software puede recopilar información acerca de usted y del uso que hace del software y enviarla a Microsoft. Microsoft puede usar esta información para proporcionar servicios y mejorar los productos y servicios de Microsoft. Sus derechos de renuncia, si los hubiera, se describen en la documentación del producto. Algunas características del software pueden habilitar la recopilación de datos de los usuarios de sus aplicaciones que accedan o usen el software. Si usa estas características para habilitar la recopilación de datos en sus aplicaciones, debe cumplir la legislación aplicable, incluso en cuanto a la obtención del consentimiento preciso del usuario, así como al mantenimiento de una directiva de privacidad destacada que informe con precisión a los usuarios acerca de cómo usar sus datos, recopilarlos y compartirlos. Puede obtener más información sobre el uso y la recopilación de datos de Microsoft en la documentación del producto y la declaración de privacidad de Microsoft en https://go.microsoft.com/fwlink/?LinkId=521839. Se compromete a cumplir con todas las disposiciones aplicables de la declaración de privacidad de Microsoft.
+1. **recopilación de datos**. El software puede recopilar información acerca de usted y del uso que hace del software y enviarla a Microsoft. Microsoft puede usar esta información para proporcionar servicios y mejorar los productos y servicios de Microsoft. Sus derechos de renuncia, si los hubiera, se describen en la documentación del producto. Algunas características del software pueden habilitar la recopilación de datos de los usuarios de sus aplicaciones que accedan o usen el software. Si usa estas características para habilitar la recopilación de datos en sus aplicaciones, debe cumplir la legislación aplicable, incluso en cuanto a la obtención del consentimiento preciso del usuario, así como al mantenimiento de una directiva de privacidad destacada que informe con precisión a los usuarios acerca de cómo usar sus datos, recopilarlos y compartirlos. Puede obtener más información sobre el uso y la recopilación de datos de Microsoft en la documentación del producto y la declaración de privacidad de Microsoft en https://go.microsoft.com/fwlink/?LinkId=521839. Usted acuerda cumplir todas las disposiciones aplicables de la Declaración de privacidad de Microsoft.
 
 1. **ámbito de la licencia** El software se concede bajo licencia, no se vende. Microsoft se reserva todos los demás derechos. A menos que la ley aplicable le otorgue más derechos a pesar de esta limitación, usted no hará lo siguiente (y no tiene derecho a ello):
 
-    a. solucionar las limitaciones técnicas del software que solo le permiten usarlo de ciertas maneras:
+    a. Eludir las limitaciones técnicas del software que únicamente le permitan utilizarlo de determinadas formas.
 
-    b. aplicar técnicas de ingeniería inversa, descompilar o desensamblar el software;
+    b. Efectuar ingeniería inversa, descompilar o desensamblar el software.
 
-    c. quitar, minimizar, bloquear o modificar los avisos de Microsoft o sus proveedores en el software;
+    c. Quitar, minimizar, bloquear o modificar cualquier aviso de Microsoft o sus proveedores incluido en el software.
 
-    d. usar el software de cualquier manera que esté contra la ley o crear o propagar malware; de
+    d. Usar el software de cualquier forma que vaya en contra de la ley o para crear o propagar malware; o
     
-    e. compartir, publicar, distribuir o prestar el software, proporcionar el software como una solución hospedada independiente para que otros usuarios lo utilicen o transferir el software o este contrato a terceros.
+    e. Compartir, publicar, distribuir o ceder el software, proporcionarlo como una solución hospedada independiente para que otros usuarios la utilicen o transferir el software o este contrato a terceros.
 
 1. **restricciones de exportación**. El usuario debe cumplir con todas las normas y las leyes de exportación nacionales e internacionales que se aplican al software, lo que incluye restricciones sobre los destinos, los usuarios finales y el uso final. Para más información sobre las restricciones a la exportación, visite https://aka.ms/exporting.
 
@@ -82,7 +85,7 @@ SI CUMPLE ESTOS TÉRMINOS DE LICENCIA, TENDRÁ LOS DERECHOS SIGUIENTES. AL USAR 
 <p style="margin-left: 60px">Sujeto a la anterior cláusula ii., Microsoft solo será responsable de negligencia leve, si Microsoft incumple tales obligaciones contractuales materiales, el cumplimiento de las cuales facilita el debido cumplimiento de este contrato. Su incumplimiento pondría en peligro el propósito de este contrato y la conformidad, con la que una tercera parte podría contar siempre (denominadas "obligaciones cardinales"). En otros casos de negligencia leve, Microsoft no será responsable.</p>
 
 <blockquote>
-<p>14. <strong>exclusión de garantía. EL SOFTWARE SE CONCEDE BAJO LICENCIA "TAL CUAL". USTED ASUME EL RIESGO DE USARLA. MICROSOFT NO OFRECE NINGUNA GARANTÍA NI CONDICIÓN EXPLÍCITA. en la medida en que lo permita la legislación aplicable, MICROSOFT excluye todas las garantías implícitas, incluida la comerciabilidad, la IDONEidad para un fin determinado y la ausencia de infracción.</strong>
+<p>14. <strong>EXCLUSIÓN DE GARANTÍA. EL SOFTWARE SE CONCEDE BAJO LICENCIA "TAL CUAL". USTED ASUME EL RIESGO DE USARLA. MICROSOFT NO OFRECE NINGUNA GARANTÍA NI CONDICIÓN EXPLÍCITA. EN LA MEDIDA EN QUE LO PERMITA LA LEGISLACIÓN APLICABLE, MICROSOFT EXCLUYE TODAS LAS GARANTÍAS IMPLÍCITAS, INCLUIDA LA COMERCIABILIDAD, LA IDONEIDAD PARA UN FIN DETERMINADO Y LA AUSENCIA DE INFRACCIÓN.</strong>
 
 <p>15. <strong>LIMITACIÓN Y EXCLUSIÓN DE DAÑOS. SI TIENE ALGUNA BASE PARA LA RECUPERACIÓN DE DAÑOS A PESAR DE LA RENUNCIA ANTERIOR DE GARANTÍA, PUEDE RECUPERAR DE MICROSOFT Y SUS PROVEEDORES SOLO LOS DAÑOS DIRECTOS HASTA EL $5,00 DE EE. UU. NO SE PUEDE RECUPERAR NINGÚN OTRO DAÑO, INCLUIDOS LOS CONSECUENTES, PÉRDIDAS DE BENEFICIOS, ESPECIALES, INDIRECTOS O INCIDENTALES.</strong>
 

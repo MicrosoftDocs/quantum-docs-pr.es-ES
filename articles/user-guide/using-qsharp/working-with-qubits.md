@@ -6,18 +6,21 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885296"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867869"
 ---
 # <a name="working-with-qubits"></a>Trabajo con qubits
 
 Qubits son el objeto fundamental de la información en la informática Quantum. Para obtener una introducción general a qubits, consulte [Descripción de Quantum Computing](xref:microsoft.quantum.overview.understanding)y para profundizar más en su representación matemática, vea [qubit](xref:microsoft.quantum.concepts.qubit). 
 
-En este artículo se explica cómo usar y trabajar con qubits en un programa de preguntas y respuestas. 
+En este artículo se explica cómo usar qubits en un Q# programa. 
 
 > [!IMPORTANT]
 >Ninguna de las instrucciones que se describen en este artículo son válidas dentro del cuerpo de una función. Solo son válidos dentro de las operaciones.
@@ -25,7 +28,7 @@ En este artículo se explica cómo usar y trabajar con qubits en un programa de 
 ## <a name="allocating-qubits"></a>Asignar qubits
 
 Dado que los qubits físicos son recursos valiosos en un equipo Quantum, parte del trabajo del compilador es asegurarse de que se usan de la forma más eficaz posible.
-Como tal, debe indicar a Q # que *asigne* qubits para su uso dentro de un bloque de instrucciones determinado.
+Como tal, debe indicar a que Q# *asigne* qubits para su uso dentro de un bloque de instrucciones determinado.
 Puede asignar qubits como un qubit único o como una matriz de qubits, que se conoce como *registro*. 
 
 ### <a name="clean-qubits"></a>Limpiar qubits
@@ -82,17 +85,17 @@ Al tomar prestado qubits, el sistema primero intenta rellenar la solicitud de qu
 Si no hay suficiente qubits, asignará nuevo qubits para completar la solicitud.
 
 Entre los casos de uso conocidos de qubits sucios se encuentran las implementaciones de las puertas de CNOT de varios controlados que solo requieren muy pocas qubits e implementaciones de incrementos.
-Para ver un ejemplo de su uso en Q #, consulte el [ejemplo de qubits de préstamos](#borrowing-qubits-example) de este artículo, o la factorización de papel que [*usa 2N + 2 qubits con multiplicación modular basada en Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler y Svore 2017) para un algoritmo que utiliza qubits prestado.
+Para ver un ejemplo de su uso en Q# , consulte el [ejemplo de qubits de préstamos](#borrowing-qubits-example) de este artículo, o la factorización de papel que [*usa 2N + 2 qubits con multiplicación modular basada en Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler y Svore 2017) para un algoritmo que utiliza qubits prestado.
 
 ## <a name="intrinsic-operations"></a>Operaciones intrínsecas
 
 Una vez asignada, puede pasar un qubit a las funciones y operaciones.
-En cierto sentido, esto es todo lo que puede hacer un programa de Q # con un qubit, ya que las acciones que se pueden realizar se definen como operaciones.
+En cierto sentido, esto es todo lo que un Q# programa puede hacer con un qubit, ya que las acciones que se pueden realizar se definen como operaciones.
 
-En este artículo se describen algunas operaciones de Q # útiles que puede usar para interactuar con qubits.
+En este artículo se describen algunas Q# operaciones útiles que puede usar para interactuar con qubits.
 Para obtener más información sobre estos y otros, consulte [operaciones y funciones intrínsecas](xref:microsoft.quantum.libraries.standard.prelude). 
 
-En primer lugar, los operadores de Pauli de qubit único $X $, $Y $ y $Z $ se representan en Q # mediante las operaciones intrínsecas [`X`](xref:microsoft.quantum.intrinsic.x) , [`Y`](xref:microsoft.quantum.intrinsic.y) y [`Z`](xref:microsoft.quantum.intrinsic.z) , cada una de las cuales tiene el tipo `(Qubit => Unit is Adj + Ctl)` .
+En primer lugar, los operadores de Pauli de qubit único $X $, $Y $ y $Z $ se representan en Q# mediante las operaciones intrínsecas [`X`](xref:microsoft.quantum.intrinsic.x) , [`Y`](xref:microsoft.quantum.intrinsic.y) y [`Z`](xref:microsoft.quantum.intrinsic.z) , cada una de las cuales tiene el tipo `(Qubit => Unit is Adj + Ctl)` .
 
 Como se describe en [operaciones y funciones intrínsecas](xref:microsoft.quantum.libraries.standard.prelude), piense en $X $ y `X` , por tanto, en una operación de volteo de bits o no en una puerta.
 Puede usar la `X` operación para preparar estados con el formato $ \ket{s_0 s_1 \dots s_n} $ para algunas cadenas de bits clásicas $s $:
@@ -124,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Más adelante, verá formas más compactas de escribir esta operación que no requieren el flujo de control manual.
 
-También puede preparar estados como $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ y $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt $ mediante {2} el uso de la transformación Hadamard $H $, que se representa en Q # mediante la operación intrínseca [`H`](xref:microsoft.quantum.intrinsic.h) (también de tipo (qubit => unidad es ADJ + CTL) '):
+También puede preparar estados como $ \ket{+} = \left (\ket {0} + \ket {1} \right)/\sqrt {2} $ y $ \ket {-} = \left (\ket {0} -\ket {1} \right)/\sqrt $ mediante {2} la transformación Hadamard $H $, que se representa en Q# mediante la operación intrínseca [`H`](xref:microsoft.quantum.intrinsic.h) (también de tipo (qubit => unidad es ADJ + CTL) '):
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -242,4 +245,4 @@ Es instructivo comparar este código con otra función `MultiControlledXClean` d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Obtenga información sobre el [flujo de control](xref:microsoft.quantum.guide.controlflow) en Q #.
+Obtenga información sobre el [flujo de control](xref:microsoft.quantum.guide.controlflow) en Q# .

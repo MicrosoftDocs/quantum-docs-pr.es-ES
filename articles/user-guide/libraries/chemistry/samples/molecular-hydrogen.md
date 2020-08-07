@@ -1,17 +1,20 @@
 ---
 title: Obtención de estimaciones de nivel de energía
-description: Recorra un programa de ejemplo de preguntas y respuestas que calcula los valores de nivel de energía de hidrógeno molecular.
+description: Recorra un programa de ejemplo Q# que calcula los valores de nivel de energía de hidrógeno molecular.
 author: guanghaolow
 ms.author: gulow
 ms.date: 07/02/2020
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: b26538980366cf4cbe01fc2ef59580ae182f1e8a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a2df4b829a3f4946c6de6e6b80ad72a5bc192b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871575"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869212"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Obtención de estimaciones de nivel de energía
 La estimación de los valores de los niveles de energía es una de las aplicaciones principales de la química de Quantum. En este artículo se describe cómo puede realizar este procedimiento para el ejemplo canónico de hidrógeno molecular. El ejemplo al que se hace referencia en esta sección se encuentra [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) en el repositorio de ejemplos de química. Un ejemplo más visual que representa la salida es la [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogenGUI) demostración.
@@ -121,7 +124,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-Ahora puede invocar el código de preguntas y respuestas desde el programa host. El siguiente código de C# crea un simulador de estado completo y se ejecuta `GetEnergyByTrotterization` para obtener la energía de estado de la alimentación.
+Ahora puede invocar el Q# código desde el programa host. El siguiente código de C# crea un simulador de estado completo y se ejecuta `GetEnergyByTrotterization` para obtener la energía de estado de la alimentación.
 
 ```csharp
 using (var qsim = new QuantumSimulator())

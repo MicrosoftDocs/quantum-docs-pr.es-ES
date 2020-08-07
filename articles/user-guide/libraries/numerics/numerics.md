@@ -1,17 +1,20 @@
 ---
-title: Usar la biblioteca de preguntas y respuestas de Microsoft
+title: Usar la Q# biblioteca de valores numéricos de Microsoft
 description: Obtenga información sobre los tipos y las operaciones disponibles en la biblioteca de valores numéricos de Microsoft Quantum.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276118"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868804"
 ---
 # <a name="using-the-numerics-library"></a>Usar la biblioteca de valores numéricos
 
@@ -36,7 +39,7 @@ La biblioteca de valores numéricos admite los siguientes tipos
 1. **`SignedLittleEndian`**: Igual que, `LittleEndian` salvo que representa un entero con signo almacenado en el complemento de dos.
 1. **`FixedPoint`**: Representa un número real que consta de una matriz de qubit `qArr2 : Qubit[]` y una posición de punto binario `pos` , que cuenta el número de dígitos binarios a la izquierda del punto binario. `qArr2`se almacena de la misma manera que `SignedLittleEndian` .
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Operaciones
 
 Para cada uno de los tres tipos anteriores, hay disponible una variedad de operaciones:
 
@@ -64,7 +67,7 @@ Para cada uno de los tres tipos anteriores, hay disponible una variedad de opera
     - Recíproco (1/x)
     - Medida (doble clásico)
 
-Para obtener más información y documentación detallada sobre cada una de estas operaciones, vea los documentos de referencia de la biblioteca de Q # en [docs.Microsoft.com](https://docs.microsoft.com/quantum)
+Para obtener más información y documentación detallada sobre cada una de estas operaciones, consulte los documentos de referencia de la Q# biblioteca en [docs.Microsoft.com](https://docs.microsoft.com/quantum)
 
 ## <a name="sample-integer-addition"></a>Ejemplo: suma de enteros
 
@@ -99,7 +102,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 El resultado, $P (x) = 1 + 2x $, se almacenará en `yFxP` .
 
 La segunda, `EvaluateEvenPolynomialFxP` y la tercera,, `EvaluateOddPolynomialFxP` son especializaciones para los casos de las funciones pares e impares, respectivamente. Es decir, para una función par/impar $f (x) $ y $ $ P_ {Even} (x) = a_0 + a_1 x ^ 2 + a_2 x ^ 4 + \cdots + a_d x ^ {2D}, $ $ $f (x) $ se aproxima bien mediante $P _ {Even} (x) $ o $P _ {impares} (x): = x\cdot P_ {Even} (x) $, respectivamente.
-En Q #, estos dos casos se pueden administrar de la siguiente manera:
+En Q# , estos dos casos se pueden administrar de la siguiente manera:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```

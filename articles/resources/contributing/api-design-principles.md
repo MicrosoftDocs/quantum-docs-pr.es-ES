@@ -1,32 +1,35 @@
 ---
-title: 'Principios de diseño de la API de Q #'
-description: 'Principios de diseño de la API de Q #'
+title: Q#Principios de diseño de API
+description: Q#Principios de diseño de API
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
-ms.openlocfilehash: def6a9f12accfa399fd4db3783b9899fc743f025
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 580fcaea575ff544ed2c5f31eba7e963bea4534b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275490"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866900"
 ---
-# <a name="q-api-design-principles"></a>Principios de diseño de la API de Q #
+# <a name="no-locq-api-design-principles"></a>Q#Principios de diseño de API
 
 ## <a name="introduction"></a>Introducción
 
-Como lenguaje y como plataforma, Q # permite a los usuarios escribir, ejecutar, comprender y explorar aplicaciones Quantum.
-Con el fin de permitir a los usuarios, cuando diseñamos bibliotecas de preguntas y respuestas, seguimos un conjunto de principios de diseño de la API para guiarnos en nuestros diseños y para ayudarnos a hacer bibliotecas que se puedan usar para la comunidad de desarrollo de Quantum.
-En este artículo se enumeran estos principios y se proporcionan ejemplos para ayudarle a aplicarlos al diseñar API de preguntas y respuestas.
+Como lenguaje y como plataforma, Q# permite a los usuarios escribir, ejecutar, comprender y explorar aplicaciones Quantum.
+Con el fin de permitir a los usuarios, cuando diseñamos Q# bibliotecas, seguimos un conjunto de principios de diseño de la API para guiarnos en nuestros diseños y para ayudarnos a hacer bibliotecas que se pueden usar para la comunidad de desarrollo de Quantum.
+En este artículo se enumeran estos principios y se proporcionan ejemplos para ayudarle a aplicarlos al diseñar las Q# API.
 
 > [!TIP]
 > Se trata de un documento bastante detallado que está pensado para ayudar a guiar el desarrollo de la biblioteca y las contribuciones de la biblioteca en profundidad.
-> Probablemente le resulte más útil si está escribiendo sus propias bibliotecas en Q # o si está aportando características más grandes al repositorio de las [bibliotecas de q #](https://github.com/microsoft/QuantumLibraries).
+> Probablemente le resulte más útil si está escribiendo sus propias bibliotecas en Q# o si está aportando características más grandes al [ Q# repositorio de bibliotecas](https://github.com/microsoft/QuantumLibraries).
 >
 > Por otro lado, si desea obtener información sobre cómo contribuir al kit de desarrollo de Quantum de forma más general, se recomienda empezar por la [Guía de contribución](xref:microsoft.quantum.contributing).
-> Si busca más información general sobre cómo se recomienda dar formato a su código de preguntas y respuestas, puede que le interese desproteger la [Guía de estilo](xref:microsoft.quantum.contributing.style).
+> Si busca más información general sobre cómo se recomienda dar formato a su Q# código, puede que le interese desproteger la [Guía de estilo](xref:microsoft.quantum.contributing.style).
 
 ## <a name="general-principles"></a>Principios generales
 
@@ -81,7 +84,7 @@ En este artículo se enumeran estos principios y se proporcionan ejemplos para a
 - ✅**Diseñe funciones** y operaciones de diseño bien con otras funciones y operaciones, tanto en la misma API como en las bibliotecas existentes anteriormente.
 
   *Ejemplos:*
-  - La @"microsoft.quantum.canon.delay" operación realiza suposiciones mínimas sobre su entrada y, por lo tanto, se puede usar para retrasar las aplicaciones de cualquiera de las dos operaciones en la biblioteca de Q # Standard o según lo definido por los usuarios.
+  - La @"microsoft.quantum.canon.delay" operación realiza suposiciones mínimas sobre su entrada y, por tanto, se puede usar para retrasar las aplicaciones de cualquiera de las operaciones en la Q# biblioteca estándar o según lo definido por los usuarios.
     <!-- TODO: define bad example. -->
 
 - ✅**Exponga la** lógica clásica puramente determinista como funciones en lugar de operaciones.

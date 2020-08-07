@@ -1,22 +1,25 @@
 ---
-title: Conversiones de tipos en las bibliotecas estándar de preguntas y respuestas
-description: Obtenga información sobre las funciones de conversión de tipos comunes y definidas por el usuario en las bibliotecas de preguntas y respuestas.
+title: Conversiones de tipos en las Q# bibliotecas estándar
+description: Obtenga información sobre las funciones de conversión de tipos comunes y definidas por el usuario en las Q# bibliotecas estándar.
 author: cgranade
 uid: microsoft.quantum.libraries.convert
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: e941d7e3d76459546861410e91a03d7315183867
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2319bf453f5fbf6bd068859ea65562423d3ff4d0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275741"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868526"
 ---
 # <a name="type-conversions"></a>Conversiones de tipos #
 
-Q # es un lenguaje **fuertemente tipado** .
-En concreto, Q # no se convierte implícitamente entre tipos distintos. Por ejemplo, `1 + 2.0` no es una expresión de Q # válida.
-En su lugar, Q # proporciona una variedad de funciones de conversión de tipos para construir nuevos valores de un tipo determinado.
+Q#es un lenguaje **fuertemente tipado** .
+En concreto, no se Q# convierte implícitamente entre tipos distintos. Por ejemplo, `1 + 2.0` no es una Q# expresión válida.
+En su lugar, Q# proporciona una variedad de funciones de conversión de tipos para crear nuevos valores de un tipo determinado.
 
 Por ejemplo, <xref:microsoft.quantum.core.length> tiene un tipo de salida de `Int` , por lo que su salida debe convertirse primero en un objeto `Double` antes de que se pueda utilizar como parte de una expresión de punto flotante.
 Esto puede hacerse mediante la <xref:microsoft.quantum.convert.intasdouble> función:
@@ -39,7 +42,7 @@ let indices = Convert.RangeAsIntArray(0..4); // [0, 1, 2, 3, 4]
 
 El <xref:microsoft.quantum.convert> espacio de nombres también proporciona algunas conversiones más exóticas, como `FunctionAsOperation` , que convierte funciones `'T -> 'U` en nuevas operaciones `'T => 'U` .
 
-Por último, la biblioteca estándar de preguntas y respuestas proporciona una serie de tipos definidos por el usuario como <xref:microsoft.quantum.math.complex> y <xref:microsoft.quantum.arithmetic.littleendian> .
+Por último, la Q# biblioteca estándar proporciona varios tipos definidos por el usuario como <xref:microsoft.quantum.math.complex> y <xref:microsoft.quantum.arithmetic.littleendian> .
 Junto con estos tipos, la biblioteca estándar proporciona funciones como <xref:microsoft.quantum.arithmetic.bigendianaslittleendian> :
 
 ```Q#

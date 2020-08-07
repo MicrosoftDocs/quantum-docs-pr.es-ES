@@ -1,19 +1,22 @@
 ---
-title: 'Flujo de control en Q #'
+title: Flujo de control enQ#
 description: Bucles, condicionales, etc.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870998"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867954"
 ---
-# <a name="control-flow-in-q"></a>Flujo de control en Q #
+# <a name="control-flow-in-no-locq"></a>Flujo de control enQ#
 
 Dentro de una operación o función, cada instrucción se ejecuta en orden, de forma similar a otros lenguajes imperativos habituales.
 Sin embargo, puede modificar el flujo de control de tres maneras distintas:
@@ -52,7 +55,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-o
+or
 ```qsharp
 if (i == 1) {
     X(target);
@@ -104,12 +107,12 @@ Tenga en cuenta que al final, usamos el operador binario de desplazamiento aritm
 
 ## <a name="repeat-until-success-loop"></a>Bucle repeat-Until-Success
 
-El lenguaje Q # permite que el flujo de control clásico dependa de los resultados de la medición de qubits.
+El Q# lenguaje permite que el flujo de control clásico dependa de los resultados de la medición de qubits.
 Esta capacidad, a su vez, habilita la implementación de gadgets de probabilística eficaces que pueden reducir el costo computacional de la implementación de unitaries.
-Ejemplos de esto son los patrones de *repetición hasta la correcta* (RU) en Q #.
+Ejemplos de esto son los patrones de *repetición hasta la correcta* (RU) en Q# .
 Estos patrones de RUS son programas probabilística que tienen un costo bajo *previsto* en cuanto a las puertas elementales. el costo incurrido depende de la ejecución real y del entrelazado de las distintas ramas posibles.
 
-Para facilitar los patrones de repetición hasta la correcta (RU), Q # admite las construcciones
+Para facilitar los patrones de repetición hasta éxito (RU), Q# admite las construcciones
 
 ```qsharp
 repeat {
@@ -147,9 +150,9 @@ Para obtener más ejemplos y detalles, consulte los [ejemplos de repetición has
 
 ## <a name="while-loop"></a>While (bucle)
 
-Los patrones de repetición hasta el éxito tienen una connotación específica de Quantum. Se usan ampliamente en clases concretas de algoritmos Quantum; por lo tanto, la construcción de lenguaje dedicada en Q #. Sin embargo, los bucles que se interrumpen en función de una condición y cuya longitud de ejecución se desconoce en tiempo de compilación, se controlan con especial atención en un tiempo de ejecución de Quantum. Sin embargo, su uso dentro de las funciones es inproblemático, ya que estos bucles solo contienen código que se ejecuta en hardware convencional (no Quantum). 
+Los patrones de repetición hasta el éxito tienen una connotación específica de Quantum. Se usan ampliamente en clases concretas de algoritmos Quantum; por lo tanto, la construcción de lenguaje dedicada en Q# . Sin embargo, los bucles que se interrumpen en función de una condición y cuya longitud de ejecución se desconoce en tiempo de compilación, se controlan con especial atención en un tiempo de ejecución de Quantum. Sin embargo, su uso dentro de las funciones es inproblemático, ya que estos bucles solo contienen código que se ejecuta en hardware convencional (no Quantum). 
 
-P #, por lo tanto, admite el uso de bucles while solo dentro de funciones. Una `while` instrucción consta de la palabra clave `while` , una expresión booleana entre paréntesis y un bloque de instrucciones.
+Q#, por lo tanto, admite el uso de bucles while solo dentro de funciones. Una `while` instrucción consta de la palabra clave `while` , una expresión booleana entre paréntesis y un bloque de instrucciones.
 El bloque de instrucciones (el cuerpo del bucle) se ejecuta siempre que la condición se evalúe como `true` .
 
 ```qsharp
@@ -170,7 +173,7 @@ Por ejemplo,
 ```qsharp
 return 1;
 ```
-o
+or
 ```qsharp
 return (results, qubits);
 ```
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>Patrón de RU para la rotación de un solo qubit sobre un eje de irracional 
 
-En un caso de uso típico, la siguiente operación de Q # implementa una rotación alrededor de un eje irracional de $ (I + 2i Z)/\sqrt {5} $ en la esfera Bloch. La implementación usa un patrón de RU conocido:
+En un caso de uso típico, la Q# operación siguiente implementa una rotación alrededor de un eje irracional de $ (I + 2i Z)/\sqrt {5} $ en la esfera Bloch. La implementación usa un patrón de RU conocido:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ Para obtener más información, vea [ejemplo de pruebas unitarias que se proporc
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Obtenga información sobre las [pruebas y la depuración](xref:microsoft.quantum.guide.testingdebugging) en preguntas y respuestas.
+Obtenga información sobre las [pruebas y la depuración](xref:microsoft.quantum.guide.testingdebugging) en Q# .

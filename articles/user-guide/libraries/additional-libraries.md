@@ -1,36 +1,39 @@
 ---
-title: Usar bibliotecas de preguntas y respuestas adicionales
-description: Obtenga información sobre cómo agregar bibliotecas de preguntas y respuestas adicionales a las aplicaciones Quantum.
+title: Uso de Q# bibliotecas adicionales
+description: Obtenga información sobre cómo agregar Q# bibliotecas adicionales a las aplicaciones Quantum.
 author: cgranade
 ms.author: chgranad
 ms.date: 06/30/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.using
-ms.openlocfilehash: b82113b925870d07c8a28aecd50176e009826062
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ef88ca765a394a7092eb0a60bf6f3615c082ef6a
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86872641"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869586"
 ---
-# <a name="using-additional-q-libraries"></a>Usar bibliotecas de preguntas y respuestas adicionales
+# <a name="using-additional-no-locq-libraries"></a>Uso de Q# bibliotecas adicionales
 
-El kit de desarrollo de Quantum proporciona una funcionalidad adicional específica del dominio a través de _paquetes NuGet_ que se pueden agregar a los proyectos de preguntas y respuestas.
+El kit de desarrollo de Quantum proporciona una funcionalidad adicional específica del dominio a través de _paquetes NuGet_ que se pueden agregar a los Q# proyectos.
 
-| Biblioteca de preguntas y respuestas  | Paquete de NuGet | Notas |
+| Q#Biblioteca  | Detección de | Notas |
 |---------|---------|--------|
-| [Biblioteca estándar de preguntas y respuestas](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Se incluye de manera predeterminada |
+| [Q#biblioteca estándar](xref:microsoft.quantum.libraries.standard.intro) | [**Microsoft. Quantum. Standard**](https://www.nuget.org/packages/Microsoft.Quantum.Standard) | Se incluye de manera predeterminada |
 | [Biblioteca de química cuántica](xref:microsoft.quantum.chemistry.concepts.intro) | [**Microsoft.Quantum.Chemistry**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) | |
 | [Biblioteca de valores numéricos cuánticos](xref:microsoft.quantum.numerics.intro) | [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) | |
 | [Biblioteca de aprendizaje automático cuántico](xref:microsoft.quantum.libraries.machine-learning.intro) | [**Microsoft.Quantum.MachineLearning**](https://www.nuget.org/packages/Microsoft.Quantum.MachineLearning) | |
 
-Una vez que haya instalado el kit de desarrollo de Quantum para usarlo con el entorno preferido y el idioma del host, puede agregar fácilmente bibliotecas a proyectos de preguntas y respuestas individuales sin necesidad de realizar ninguna instalación adicional.
+Una vez que haya instalado el kit de desarrollo de Quantum para usarlo con el entorno y el lenguaje de host preferidos, puede agregar fácilmente bibliotecas a Q# proyectos individuales sin necesidad de realizar ninguna instalación adicional.
 
 > [!NOTE]
-> Algunas bibliotecas de preguntas y respuestas pueden funcionar bien con herramientas adicionales que funcionan junto con los programas de preguntas y respuestas, o que se integran con las aplicaciones host.
+> Algunas Q# bibliotecas pueden funcionar bien con herramientas adicionales que funcionan con sus Q# programas o que se integran con las aplicaciones host.
 > Por ejemplo, las [instrucciones de instalación](xref:microsoft.quantum.chemistry.concepts.installation) de la biblioteca de química describen cómo usar el [paquete **Microsoft. Quantum. química** ](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) junto con la plataforma de Química computacional de NWChem y cómo instalar las `qdk-chem` herramientas de línea de comandos para trabajar con datos de química de Quantum.
 
-## <a name="q-command-line-applications-or-net-interopability"></a>[Aplicaciones de línea de comandos de Q # o interoperabilidad de .NET](#tab/tabid-csproj)
+## <a name="no-locq-command-line-applications-or-net-interopability"></a>[Q#aplicaciones de línea de comandos o interoperabilidad de .NET](#tab/tabid-csproj)
 
 **Línea de comandos o Visual Studio Code:** Con la línea de comandos por su cuenta o desde Visual Studio Code, puede usar el `dotnet` comando para agregar una referencia de paquete NuGet al proyecto.
 Por ejemplo, para agregar el paquete [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) , ejecute el siguiente comando:
@@ -39,7 +42,7 @@ Por ejemplo, para agregar el paquete [**Microsoft. Quantum. Numerics**](https://
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
-**Visual Studio:** Si usa Visual Studio 2019 o una versión posterior, puede agregar paquetes Q # adicionales mediante el administrador de paquetes NuGet.
+**Visual Studio:** Si usa Visual Studio 2019 o una versión posterior, puede agregar paquetes adicionales Q# mediante el administrador de paquetes NuGet.
 Para cargar un paquete: 
 1. Con un proyecto abierto en Visual Studio, seleccione **administrar paquetes NuGet...** en el menú **proyecto** .
 
@@ -61,17 +64,17 @@ Install-Package Microsoft.Quantum.Numerics
 
 Para obtener más información, consulte la guía de la [consola del administrador de paquetes](https://docs.microsoft.com/nuget/tools/package-manager-console).
 
-## <a name="iq-notebooks"></a>[Cuadernos de IQ # Notebook](#tab/tabid-notebook)
+## <a name="ino-locq-notebooks"></a>[I Q# notebooks](#tab/tabid-notebook)
 
-Puede hacer que los paquetes adicionales estén disponibles para su uso en un cuaderno de IQ # mediante el [ `%package` comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.package).
-Por ejemplo, para agregar el paquete [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) para su uso en un cuaderno IQ # Notebook, ejecute el siguiente comando en una celda del cuaderno:
+Puede hacer que los paquetes adicionales estén disponibles para su uso en un bloc de notas de I Q# mediante el [ `%package` comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.package).
+Por ejemplo, para agregar el paquete [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) para su uso en un Q# Bloc de notas I, ejecute el siguiente comando en una celda del cuaderno:
 
 ```
 %package Microsoft.Quantum.Numerics
 ```
 
 Después de este comando, el paquete está disponible para todas las celdas del Bloc de notas.
-Para que el paquete esté disponible desde el código de preguntas y respuestas en el área de trabajo actual, vuelva a cargar el área de trabajo después de agregar el paquete:
+Para que el paquete esté disponible desde Q# el código en el área de trabajo actual, vuelva a cargar el área de trabajo después de agregar el paquete:
 
 ```
 %workspace reload
@@ -81,15 +84,15 @@ Para que el paquete esté disponible desde el código de preguntas y respuestas 
 
 
 Puede hacer que los paquetes adicionales estén disponibles para su uso en un programa host de Python mediante el [`qsharp.packages.add`](https://docs.microsoft.com/python/qsharp/qsharp.packages.packages) método.
-Por ejemplo, para agregar el paquete [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) para su uso en un cuaderno de IQ #, ejecute el siguiente código de Python:
+Por ejemplo, para agregar el paquete [**Microsoft. Quantum. Numerics**](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) para su uso en un Q# Bloc de notas I, ejecute el siguiente código de Python:
 
 ```python
 import qsharp
 qsharp.packages.add("Microsoft.Quantum.Numerics")
 ```
 
-Después de este comando, el paquete estará disponible para cualquier código de Q # compilado mediante `qsharp.compile` .
-Para que el paquete esté disponible desde el código de preguntas y respuestas en el área de trabajo actual, vuelva a cargar el área de trabajo después de agregar el paquete:
+Después de este comando, el paquete estará disponible para cualquier Q# código compilado mediante `qsharp.compile` .
+Para que el paquete esté disponible desde Q# el código en el área de trabajo actual, vuelva a cargar el área de trabajo después de agregar el paquete:
 
 ```python
 qsharp.reload()

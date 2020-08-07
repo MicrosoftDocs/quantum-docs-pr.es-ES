@@ -1,17 +1,20 @@
 ---
 title: 'Comprobador de uso de qubits invalidado: kit de desarrollo de Quantum'
-description: Obtenga información sobre el comprobador de uso de qubits de Microsoft QDK invalidado, que usa el simulador de seguimiento de Quantum para comprobar el código de preguntas y respuestas de qubits no válidos.
+description: Obtenga información sobre el comprobador de uso invalidado de qubits de Microsoft QDK, que usa el simulador de seguimiento de Quantum para comprobar el Q# código en busca de qubits no válidos.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871100"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868294"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Simulador de seguimiento de Quantum: Comprobador de uso de qubits invalidado
 
@@ -19,7 +22,7 @@ El comprobador de uso de qubits invalidado forma parte del [simulador de seguimi
 
 ## <a name="invalid-qubits"></a>Qubits no válido
 
-Considere el siguiente fragmento de código de preguntas y respuestas para ilustrar los problemas detectados por el comprobador de uso de qubits invalidado:
+Considere el siguiente fragmento de Q# código para ilustrar los problemas detectados por el comprobador de uso de qubits invalidado:
 
 ```qsharp
 operation UseReleasedQubit() : Unit {
@@ -70,7 +73,7 @@ namespace Quantum.MyProgram
 }
 ```
 
-## <a name="see-also"></a>Consulta también
+## <a name="see-also"></a>Vea también
 
 - Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Quantum del kit de desarrollo de Quantum.
 - Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API.

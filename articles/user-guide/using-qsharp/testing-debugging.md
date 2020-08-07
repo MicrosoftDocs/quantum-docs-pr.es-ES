@@ -6,30 +6,33 @@ ms.author: mamykhai@microsoft.com
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
-ms.openlocfilehash: db6e49e94e5ceb3b1b0b2d6ab57391618084072b
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870981"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867920"
 ---
 # <a name="testing-and-debugging"></a>Prueba y depuración
 
 Al igual que con la programación clásica, es esencial poder comprobar que los programas Quantum funcionan según lo previsto y para poder diagnosticar un comportamiento incorrecto.
-En esta sección, trataremos las herramientas que ofrece Q # para probar y depurar programas Quantum.
+En esta sección, trataremos las herramientas que ofrece Q# para probar y depurar programas Quantum.
 
 ## <a name="unit-tests"></a>Pruebas unitarias
 
 Un enfoque común para probar programas clásico es escribir programas pequeños denominados *pruebas unitarias*, que ejecutan código en una biblioteca y comparan su salida con alguna salida esperada.
 Por ejemplo, puede asegurarse de que `Square(2)` devuelve `4` desde que conoce *un priori* que es $2 ^ 2 = $4.
 
-Q # admite la creación de pruebas unitarias para programas Quantum y que se pueden ejecutar como pruebas en el marco de pruebas unitarias de [xUnit](https://xunit.github.io/) .
+Q#admite la creación de pruebas unitarias para programas Quantum y que se pueden ejecutar como pruebas en el marco de pruebas unitarias de [xUnit](https://xunit.github.io/) .
 
 ### <a name="creating-a-test-project"></a>Crear un proyecto de prueba
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Abra Visual Studio 2019. Vaya al menú **archivo** y seleccione **nuevo > proyecto..**.. En la esquina superior derecha, busque `Q#` y seleccione la plantilla de **proyecto de prueba de Q #** .
+Abra Visual Studio 2019. Vaya al menú **archivo** y seleccione **nuevo > proyecto..**.. En la esquina superior derecha, busque `Q#` y seleccione la plantilla ** Q# proyecto de prueba** .
 
 #### <a name="command-line--visual-studio-code"></a>[Línea de comandos/Visual Studio Code](#tab/tabid-vscode)
 
@@ -42,7 +45,7 @@ $ code . # To open in Visual Studio Code
 
 ****
 
-El nuevo proyecto tiene un único archivo `Tests.qs` , lo que proporciona un lugar cómodo para definir nuevas pruebas unitarias de Q #.
+El nuevo proyecto tiene un único archivo `Tests.qs` , lo que proporciona un lugar cómodo para definir nuevas Q# pruebas unitarias.
 Inicialmente, este archivo contiene una prueba unitaria `AllocateQubit` de ejemplo que comprueba que una qubit recién asignada se encuentra en el estado $ \ket {0} $ e imprime un mensaje:
 
 ```qsharp
@@ -57,7 +60,7 @@ Inicialmente, este archivo contiene una prueba unitaria `AllocateQubit` de ejemp
     }
 ```
 
-Cualquier operación Q # o función que toma un argumento de tipo `Unit` y devuelve `Unit` se puede marcar como una prueba unitaria mediante el `@Test("...")` atributo. En el ejemplo anterior, el argumento para ese atributo, `"QuantumSimulator"` , especifica el destino en el que se ejecuta la prueba. Una sola prueba puede ejecutarse en varios destinos. Por ejemplo, agregue un atributo `@Test("ResourcesEstimator")` delante de `AllocateQubit` . 
+Cualquier Q# operación o función que toma un argumento de tipo `Unit` y devuelve `Unit` se puede marcar como una prueba unitaria mediante el `@Test("...")` atributo. En el ejemplo anterior, el argumento para ese atributo, `"QuantumSimulator"` , especifica el destino en el que se ejecuta la prueba. Una sola prueba puede ejecutarse en varios destinos. Por ejemplo, agregue un atributo `@Test("ResourcesEstimator")` delante de `AllocateQubit` . 
 ```qsharp
     @Test("QuantumSimulator")
     @Test("ResourcesEstimator")
@@ -66,9 +69,9 @@ Cualquier operación Q # o función que toma un argumento de tipo `Unit` y devue
 ```
 Guarde el archivo y ejecute todas las pruebas. Ahora debería haber dos pruebas unitarias, una en `AllocateQubit` la que se ejecuta en `QuantumSimulator` y otra en la que se ejecuta en `ResourcesEstimator` . 
 
-El compilador de Q # reconoce los destinos integrados `"QuantumSimulator"` , `"ToffoliSimulator"` y `"ResourcesEstimator"` como destinos de ejecución válidos para las pruebas unitarias. También es posible especificar cualquier nombre completo para definir un destino de ejecución personalizado. 
+El Q# compilador reconoce los destinos integrados `"QuantumSimulator"` , `"ToffoliSimulator"` y `"ResourcesEstimator"` como destinos de ejecución válidos para las pruebas unitarias. También es posible especificar cualquier nombre completo para definir un destino de ejecución personalizado. 
 
-### <a name="running-q-unit-tests"></a>Ejecutar pruebas unitarias de Q #
+### <a name="running-no-locq-unit-tests"></a>Ejecutar Q# pruebas unitarias
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
@@ -137,9 +140,9 @@ En el caso de las pruebas con errores, las salidas también se imprimen en la co
 
 ## <a name="facts-and-assertions"></a>Hechos y aserciones
 
-Dado que las funciones de Q # no tienen efectos secundarios _lógicos_ , nunca puede observar, desde dentro de un programa de q #, cualquier otro tipo de efecto de ejecutar una función cuyo tipo de salida sea la tupla vacía `()` .
-Es decir, una máquina de destino puede optar por no ejecutar ninguna función que devuelva `()` con la garantía de que esta omisión no modificará el comportamiento de ningún código de Q # siguiente.
-Este comportamiento hace que las funciones devuelvan `()` (como `Unit` ) una herramienta útil para insertar aserciones y lógica de depuración en programas de preguntas y respuestas. 
+Dado que las funciones de Q# no tienen efectos secundarios _lógicos_ , nunca puede observar, desde dentro de un Q# programa, cualquier otro tipo de efecto de ejecutar una función cuyo tipo de salida sea la tupla vacía `()` .
+Es decir, una máquina de destino puede elegir no ejecutar ninguna función que devuelva `()` con la garantía de que esta omisión no modificará el comportamiento de ningún Q# código siguiente.
+Este comportamiento hace que las funciones devuelvan `()` (como `Unit` ) una herramienta útil para insertar aserciones y lógica de depuración en Q# programas. 
 
 Veamos un ejemplo sencillo:
 
@@ -153,8 +156,8 @@ function PositivityFact(value : Double) : Unit
 }
 ```
 
-Aquí, la palabra clave `fail` indica que el cálculo no debe continuar y genera una excepción en el equipo de destino que ejecuta el programa de preguntas y respuestas.
-Por definición, un error de este tipo no se puede observar desde Q #, ya que el equipo de destino ya no ejecuta el código de preguntas y respuestas después de alcanzar una `fail` instrucción.
+Aquí, la palabra clave `fail` indica que el cálculo no debe continuar y genera una excepción en el equipo de destino que ejecuta el Q# programa.
+Por definición, un error de este tipo no se puede observar desde dentro Q# , ya que el equipo de destino ya no ejecuta el Q# código después de alcanzar una `fail` instrucción.
 Por lo tanto, si continuamos después de una llamada a `PositivityFact` , podemos estar seguros de que su entrada fue positiva.
 
 Tenga en cuenta que se puede implementar el mismo comportamiento que `PositivityFact` el uso [`Fact`](xref:microsoft.quantum.diagnostics.fact) de la función del <xref:microsoft.quantum.diagnostics> espacio de nombres:
@@ -354,7 +357,7 @@ En general, el estado de un registro que está inenredado con otro registro es u
 Qubits provided (0;) are entangled with some other qubit.
 ```
 
-En el ejemplo siguiente se muestra cómo puede usar tanto <xref:microsoft.quantum.diagnostics.dumpregister> como <xref:microsoft.quantum.diagnostics.dumpmachine> en el código de Q #:
+En el ejemplo siguiente se muestra cómo puede usar <xref:microsoft.quantum.diagnostics.dumpregister> y <xref:microsoft.quantum.diagnostics.dumpmachine> en el Q# código:
 
 ```qsharp
 namespace app
@@ -381,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Depuración
 
-En la parte superior de `Assert` `Dump` las funciones y y las operaciones, Q # admite un subconjunto de las funcionalidades de depuración estándar de Visual Studio: [establecer puntos de interrupción de línea](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), recorrer el [código mediante F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)y [inspeccionar valores de variables clásicas](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) es posible durante la ejecución del código en el simulador.
+Sobre `Assert` `Dump` las funciones y y las operaciones, Q# admite un subconjunto de capacidades de depuración estándar de Visual Studio: [establecer puntos de interrupción de línea](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [recorrer paso a paso el código mediante F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)y [inspeccionar los valores de las variables clásicas](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) es posible durante la ejecución del código en el simulador.
 
 La depuración en Visual Studio Code aprovecha las capacidades de depuración proporcionadas por C# para la extensión de Visual Studio Code con tecnología de OmniSharp y requiere la instalación de la [versión más reciente](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

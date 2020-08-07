@@ -6,12 +6,15 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: 14d0a703a20a801dcee9678a113a33404859a1a9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 35c16e622a390b730ad7385efcc365c212e981fe
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275884"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869331"
 ---
 # <a name="obtaining-resource-counts"></a>Obtención de recuentos de recursos
 
@@ -83,7 +86,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-Ahora se configura el simulador de seguimiento para realizar un seguimiento de los recursos que le interesan. En este caso, se cuentan las operaciones de Quantum primitivas estableciendo la `usePrimitiveOperationsCounter` marca en `true` . Un detalle técnico `throwOnUnconstraintMeasurement` se establece en `false` para evitar excepciones en los casos en los que el código de Q # no valida correctamente la probabilidad de los resultados de la medición, en caso de que se realice alguna.
+Ahora se configura el simulador de seguimiento para realizar un seguimiento de los recursos que le interesan. En este caso, se cuentan las operaciones de Quantum primitivas estableciendo la `usePrimitiveOperationsCounter` marca en `true` . Un detalle técnico `throwOnUnconstraintMeasurement` se establece en `false` para evitar excepciones en los casos en los que el Q# código no valida correctamente la probabilidad de los resultados de la medición, en caso de que se realice alguna.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()

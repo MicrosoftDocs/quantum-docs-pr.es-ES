@@ -6,12 +6,15 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275245"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869246"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Carga de una función de Hamilton desde un archivo
 Anteriormente, construimos Hamiltonians agregando términos individuales. Aunque esto es adecuado para pequeños ejemplos, la química de Quantum a escala requiere Hamiltonians con millones o miles de millones de términos. Tales Hamiltonians, generados por paquetes de química como NWChem, son demasiado grandes para importar a mano. En este ejemplo, se muestra cómo `FermionHamiltonian` se puede generar automáticamente una instancia a partir de una molécula representada por el [esquema Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Como referencia, puede inspeccionar el `LithiumHydrideGUI` ejemplo proporcionado o el `RunSimulation` ejemplo. También hay compatibilidad limitada para importar desde el formato utilizado por [LIQUi |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
@@ -40,7 +43,7 @@ var fermionHamiltonian = orbitalIntegralHamiltonian.ToFermionHamiltonian(IndexCo
 var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 ```
 
-El esquema Broombridge también contiene sugerencias para el estado inicial que se va a preparar. Las etiquetas, por ejemplo `"|G⟩"` `"|E1⟩"` , o, para estos Estados pueden verse mediante la inspección del archivo. Con el fin de preparar estos estados iniciales, el `qSharpData` consumido por los algoritmos Q # Quantum se obtiene de forma similar a la [sección anterior](xref:microsoft.quantum.chemistry.examples.energyestimate), pero con un parámetro adicional que selecciona el estado inicial deseado. Por ejemplo,
+El esquema Broombridge también contiene sugerencias para el estado inicial que se va a preparar. Las etiquetas, por ejemplo `"|G⟩"` `"|E1⟩"` , o, para estos Estados pueden verse mediante la inspección del archivo. Con el fin de preparar estos estados iniciales, el `qSharpData` consumido por los Q# algoritmos Quantum se obtiene de forma similar a la [sección anterior](xref:microsoft.quantum.chemistry.examples.energyestimate), pero con un parámetro adicional que selecciona el estado inicial deseado. Por ejemplo,
 ```csharp
 // The desired initial state, assuming that a description of it is present in the
 // Broombridge schema.

@@ -6,12 +6,15 @@ uid: microsoft.quantum.more-information
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: d3c252c6579e1286aae71a0f18ac7b6b02a5c1ed
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 7c5063fccbe73478aeb917e0cd2fe2f7fe51c070
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884151"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866849"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Más recursos de aprendizaje de procesamiento de Quantum
 
@@ -24,7 +27,7 @@ En esta sección se incluyen las referencias seleccionadas a la cobertura profun
 + Kitaev, A. Y., Shen, A., & Vyalyi, M. N. (2002). Cálculo clásico y de Quantum (Vol. 47). Ofrece: American matemática Society.
 + Kaye, P., Laflamme, R., & mosca, M. (2007). Una introducción a Quantum Computing. Oxford University Press.
 + Rieffel, E. G., & Polak, W. H. (2011). Informática Quantum: una introducción suave. MIT Press.
-+ Sarah C. Kaiser y Christopher E. Granade (Manning programa de acceso temprano comenzó la publicación de abril de 2019 en 2020). [Conozca Quantum Computing con Python y el enfoque práctico #-](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp)a.
++ Sarah C. Kaiser y Christopher E. Granade (Manning programa de acceso temprano comenzó la publicación de abril de 2019 en 2020). [Conozca Quantum Computing con Python y Q# un enfoque práctico](https://www.manning.com/books/learn-quantum-computing-with-python-and-q-sharp).
 
 ## <a name="online-courses"></a>Cursos en línea ##
 

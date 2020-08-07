@@ -1,19 +1,22 @@
 ---
-title: Aplicaciones de las bibliotecas estándar de preguntas y respuestas
+title: Aplicaciones en las Q# bibliotecas estándar
 description: 'Obtenga información sobre dos aplicaciones fundamentales en Quantum Computing: Hamiltonian Simulation y el algoritmo de búsqueda de mé.'
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 25b06ac697c958b15a756191fb8a4ac49644edd7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4caacaad127f8a4d3b6f77efe35ebe7d3b97cacf
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275794"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868770"
 ---
-# <a name="applications"></a>APLICACIONES #
+# <a name="applications"></a>Aplicaciones #
 
 ## <a name="hamiltonian-simulation"></a>Simulación de Hamilton ##
 

@@ -1,29 +1,32 @@
 ---
-title: 'Expresiones de tipo en Q #'
-description: 'Aprenda a especificar, hacer referencia y combinar constantes, variables, operadores, operaciones y funciones como expresiones en Q #.'
+title: Expresiones enQ#
+description: Aprenda a especificar, hacer referencia y combinar constantes, variables, operadores, operaciones y funciones como expresiones en Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415395"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869620"
 ---
-# <a name="type-expressions-in-q"></a>Expresiones de tipo en Q #
+# <a name="expressions-in-no-locq"></a>Expresiones enQ#
 
 ## <a name="numeric-expressions"></a>Expresiones numéricas
 
 Las expresiones numéricas son expresiones de tipo `Int` , `BigInt` o `Double` .
 Es decir, son números enteros o de punto flotante.
 
-`Int`los literales en Q # se escriben como una secuencia de dígitos.
+`Int`los literales de Q# se escriben como una secuencia de dígitos.
 Los enteros hexadecimales y binarios se admiten y se escriben con un `0x` `0b` prefijo y, respectivamente.
 
-`BigInt`los literales de Q # tienen un `l` sufijo o final `L` .
+`BigInt`los literales de Q# tienen un `l` sufijo o final `L` .
 Los enteros Big hexadecimales se admiten y se escriben con un prefijo "0x".
 Por lo tanto, los siguientes son usos válidos de los `BigInt` literales:
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`los literales de Q # son números de punto flotante escritos con dígitos decimales.
+`Double`los literales de Q# son números de punto flotante escritos con dígitos decimales.
 Se pueden escribir con o sin un separador decimal, `.` o una parte exponencial indicada con ' e ' o ' e ' (después de los cuales solo hay un posible signo negativo y dígitos decimales válidos).
 Los siguientes son `Double` literales válidos: `0.0` , `1.2e5` , `1e-5` .
 
@@ -86,7 +89,7 @@ Los dos `Bool` valores literales son `true` y `false` .
 Dadas dos expresiones cualesquiera del mismo tipo primitivo, `==` `!=` se pueden usar los operadores binarios y para construir una `Bool` expresión.
 La expresión es true si las dos expresiones son iguales y false en caso contrario.
 
-No se pueden comparar los valores de los tipos definidos por el usuario, solo se pueden comparar los valores desencapsulados. Por ejemplo, mediante el operador "Unwrap" `!` (que se explica en detalle en [tipos en Q #](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
+No se pueden comparar los valores de los tipos definidos por el usuario, solo se pueden comparar los valores desencapsulados. Por ejemplo, mediante el operador "desencapsular" (que se `!` explica en detalle en los [tipos de Q# ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -100,7 +103,7 @@ La comparación de igualdad para `Qubit` los valores es la igualdad de identidad
 Esta comparación no compara, tiene acceso, mide o modifica los Estados de los dos qubits.
 
 La comparación de igualdad de `Double` los valores puede ser engañosa debido a efectos de redondeo.
-Por ejemplo, `49.0 * (1.0/49.0) != 1.0`.
+Por ejemplo: `49.0 * (1.0/49.0) != 1.0`.
 
 Dadas dos expresiones numéricas, los operadores binarios `>` ,, `<` `>=` y `<=` se pueden usar para crear una nueva expresión booleana que es true si la primera expresión es respectivamente mayor que, menor que, mayor o igual que, o menor o igual que la segunda expresión.
 
@@ -110,9 +113,9 @@ Dada cualquier expresión booleana, el `not` operador unario se puede usar para 
 
 ## <a name="string-expressions"></a>Expresiones de cadena
 
-Q # permite usar cadenas en la `fail` instrucción (explicadas en el [flujo de control](xref:microsoft.quantum.guide.controlflow#fail-statement)) y en la [`Message`](xref:microsoft.quantum.intrinsic.message) función estándar. El comportamiento específico de este último depende del simulador utilizado, pero normalmente escribe un mensaje en la consola del host cuando se llama durante un programa de preguntas y respuestas.
+Q#permite usar cadenas en la `fail` instrucción (explicada en el [flujo de control](xref:microsoft.quantum.guide.controlflow#fail-statement)) y en la [`Message`](xref:microsoft.quantum.intrinsic.message) función estándar. El comportamiento específico de este último depende del simulador utilizado, pero normalmente escribe un mensaje en la consola del host cuando se llama durante un Q# programa.
 
-Las cadenas en Q # son literales o cadenas interpoladas.
+Las cadenas de Q# son literales o cadenas interpoladas.
 
 Los literales de cadena son similares a los literales de cadena simples en la mayoría de los lenguajes: una secuencia de caracteres Unicode entre comillas dobles `" "` .
 Dentro de una cadena, use el carácter de barra diagonal inversa `\` para escapar un carácter de comilla doble ( `\"` ) o para insertar una nueva línea ( `\n` ), un retorno de carro ( `\r` ) o una tabulación ( `\t` ).
@@ -123,11 +126,11 @@ Por ejemplo:
 ```
 ### <a name="interpolated-strings"></a>Cadenas interpoladas
 
-La sintaxis de Q # para las interpolaciones de cadenas es un subconjunto de la sintaxis de C#. A continuación se muestran los puntos clave en lo que respecta a preguntas y respuestas:
+La Q# Sintaxis de las interpolaciones de cadenas es un subconjunto de la sintaxis de C#. A continuación se enumeran los puntos clave en los que se relacionan Q# :
 
 * Para distinguir un literal de cadena como una cadena interpolada, antepóngale el símbolo `$`. No puede haber ningún espacio en blanco entre `$` y `"` que inicia un literal de cadena.
 
-* El siguiente es un ejemplo básico que usa la [`Message`](xref:microsoft.quantum.intrinsic.message) función para escribir el resultado de una medida en la consola, junto con otras expresiones de Q #.
+* El siguiente es un ejemplo básico que usa la [`Message`](xref:microsoft.quantum.intrinsic.message) función para escribir el resultado de una medida en la consola, junto con otras Q# expresiones.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ La sintaxis de Q # para las interpolaciones de cadenas es un subconjunto de la s
     Message($"Number: {num}, Result: {res}");
 ```
 
-* Cualquier expresión Q # válida puede aparecer en una cadena interpolada.
+* Cualquier Q# expresión válida puede aparecer en una cadena interpolada.
 
-* Las expresiones incluidas en una cadena interpolada siguen la sintaxis de Q #, no la sintaxis de C#. La diferencia más notable es que Q # no admite cadenas interpoladas textuales (multilínea).
+* Las expresiones dentro de una cadena interpolada siguen la Q# sintaxis, no la sintaxis de C#. La diferencia más notable es que no Q# admite cadenas interpoladas textuales (multilínea).
 
 Para obtener más información sobre la sintaxis de C#, vea [*cadenas interpoladas*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
@@ -197,7 +200,7 @@ Aparte de los literales, las únicas expresiones de un tipo definido por el usua
 
 ## <a name="unwrap-expressions"></a>Desencapsular expresiones
 
-En Q #, el operador Unwrap es un signo de exclamación final `!` .
+En Q# , el operador Unwrap es un signo de exclamación final `!` .
 Por ejemplo, si `IntPair` es un tipo definido por el usuario con el tipo subyacente `(Int, Int)` y `s` es una variable con el valor `IntPair(2, 3)` , entonces `s!` es `(2, 3)` .
 
 En el caso de los tipos definidos por el usuario definidos en términos de otros tipos definidos por el usuario, puede repetir el operador Unwrap. Por ejemplo, `s!!` indica el valor de doble desencapsulado de `s` .
@@ -270,7 +273,7 @@ Por ejemplo, si `a` y `b` son matrices de tipo `Int` , un elemento de la concate
 (a + b)[13]
 ```
 
-Todas las matrices en Q # son de base cero.
+Todas las matrices de Q# están basadas en cero.
 Es decir, el primer elemento de una matriz `a` siempre es `a[0]` .
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Expresiones de copia y actualización
 
-Dado que todos los tipos de Q # son tipos de valor (con el qubits que toma un rol en cierto modo especial), se crea formalmente una "copia" cuando un valor se enlaza a un símbolo o cuando se reenlaza un símbolo. Es decir, el comportamiento de Q # es el mismo que si se creara una copia mediante un operador de asignación. 
+Dado que todos los Q# tipos son tipos de valor (con el qubits que toma un rol en cierto modo especial), se crea formalmente una "copia" cuando un valor se enlaza a un símbolo o cuando se reenlaza un símbolo. Es decir, el comportamiento de Q# es el mismo que si se creara una copia mediante un operador de asignación. 
 
 Por supuesto, en la práctica, solo se recrean las piezas relevantes según sea necesario. Esto afecta al modo en que se copian las matrices, ya que no es posible actualizar los elementos de la matriz. Para modificar una matriz existente, es necesario aprovechar un mecanismo de *copia y actualización* .
 
@@ -381,7 +384,7 @@ Sin embargo, mientras que las operaciones `(Qubit[] => Unit is Adj)` y `(Qubit[]
 
 Por ejemplo, `[[Op1], [Op2]]` generaría un error en este momento porque intenta crear una matriz de los dos tipos de matriz incompatibles `(Qubit[] => Unit is Adj)[]` y `(Qubit[] => Unit is Ctl)[]` .
 
-Para obtener más información sobre las llamadas Invocables, vea [expresiones Invocables](#callable-expressions) en esta página u [operaciones y funciones en Q #](xref:microsoft.quantum.guide.operationsfunctions).
+Para obtener más información sobre las llamadas Invocables, vea [expresiones Invocables](#callable-expressions) en esta página u [ Q# operaciones y funciones en ](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="conditional-expressions"></a>Expresiones condicionales
 
@@ -446,7 +449,7 @@ Por lo tanto, para invocar el resultado de llamar a `Builder` desde el párrafo 
 ```
 
 Al invocar un [parámetro de tipo](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) al que se puede llamar, se pueden especificar los parámetros de tipo reales entre corchetes angulares `< >` después de la expresión que se puede llamar.
-Normalmente, esta acción no es necesaria, ya que el compilador de Q # infiere los tipos reales.
+Normalmente, esta acción no es necesaria, ya que el Q# compilador deduce los tipos reales.
 Sin embargo, *es* necesario para la [aplicación parcial](xref:microsoft.quantum.guide.operationsfunctions#partial-application) si no se especifica un argumento con parámetros de tipo.
 También resulta útil cuando se pasan operaciones con un funcr diferente a una que se puede llamar.
 
@@ -469,7 +472,7 @@ La especificación de tipo es necesaria porque `Op3` y `Op1` tienen tipos difere
 
 * Los paréntesis para la invocación de la operación y la función también se enlazan antes que cualquier operador, pero después de la indización de matriz y los funcdores.
 
-Operadores de Q # en orden de prioridad, de mayor a menor:
+Q#operadores en orden de prioridad, de mayor a menor:
 
 Operador | Polaridad | Descripción | Tipos de operando
 ---------|----------|---------|---------------
@@ -492,4 +495,4 @@ Operador | Polaridad | Descripción | Tipos de operando
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que puede trabajar con expresiones en Q #, continúe con [las operaciones y las funciones de q #](xref:microsoft.quantum.guide.operationsfunctions) para obtener información sobre cómo definir y llamar a operaciones y funciones.
+Ahora que puede trabajar con expresiones en Q# , vaya a [operaciones y funciones en Q# ](xref:microsoft.quantum.guide.operationsfunctions) para obtener información sobre cómo definir y llamar a operaciones y funciones.

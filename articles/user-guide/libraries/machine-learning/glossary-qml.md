@@ -5,12 +5,15 @@ ms.author: alexei.bocharov@microsoft.com
 ms.date: 2/27/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.training
-ms.openlocfilehash: f9b33a607a892179795d0700ba3080f9a24ab94a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 52c3f69fb99384270a27e57c4f32212d18bee1a4
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276208"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868906"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Glosario de Machine Learning Quantum
 
@@ -48,7 +51,7 @@ Como regla general, el número de mediciones iniciales podría ser aproximadamen
 
 ### <a name="training-threads"></a>Entrenamiento de subprocesos
 
-La función de probabilidad, que es la utilidad de entrenamiento del clasificador, es muy rara vez convexa, lo que significa que normalmente tiene una gran cantidad de optimación local en el espacio de parámetros que puede diferir significativamente en la calidad. Dado que el proceso SGD puede converger solo en un óptimo específico, es importante explorar varios vectores de parámetro de inicio. Una práctica común en el aprendizaje automático es inicializar los vectores iniciales de forma aleatoria. La API de entrenamiento de Q # acepta una matriz arbitraria de tales vectores de inicio, pero el código subyacente los explora secuencialmente. En un equipo multinúcleo o de hecho en cualquier arquitectura de computación en paralelo, es aconsejable realizar varias llamadas a la API de aprendizaje de Q # en paralelo con diferentes inicializaciones de parámetros en las llamadas.
+La función de probabilidad, que es la utilidad de entrenamiento del clasificador, es muy rara vez convexa, lo que significa que normalmente tiene una gran cantidad de optimación local en el espacio de parámetros que puede diferir significativamente en la calidad. Dado que el proceso SGD puede converger solo en un óptimo específico, es importante explorar varios vectores de parámetro de inicio. Una práctica común en el aprendizaje automático es inicializar los vectores iniciales de forma aleatoria. La Q# API de entrenamiento acepta una matriz arbitraria de tales vectores de inicio, pero el código subyacente los explora secuencialmente. En un equipo multinúcleo o de hecho en cualquier arquitectura de computación en paralelo, es aconsejable realizar varias llamadas a Q# la API de entrenamiento en paralelo con inicializaciones de parámetros diferentes en las llamadas.
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Cómo modificar los hiperparámetros
 

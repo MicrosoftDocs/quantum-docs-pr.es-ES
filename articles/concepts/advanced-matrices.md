@@ -1,6 +1,8 @@
 ---
 title: conceptos de matriz avanzada Descripción: Obtenga información sobre vectores propios, vectores propios y exponencial de la matriz, las herramientas fundamentales que se usan para describir y simular algoritmos Quantum.
 Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix: avanzado ms. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 ms. topic: article no-LOC:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e ^ A = \boldone + a + \frac { a ^ 2 } { 2! } + \frac { A ^ 3 } { 3!}+\cdots
 $$
 
-Esto es importante porque la evolución del tiempo mecánico de Quantum se describe mediante una matriz de la forma $ e ^ { IB } $ para la matriz de Hermitian $ B $ .  Por esta razón, la realización de la exponenciación de matriz es una parte fundamental de la informática Quantum y como tal # ofrece rutinas intrínsecas para describir estas operaciones.
+Esto es importante porque la evolución del tiempo mecánico de Quantum se describe mediante una matriz de la forma $ e ^ { IB } $ para la matriz de Hermitian $ B $ .  Por esta razón, la realización de la exponenciación de matriz es una parte fundamental de la informática Quantum y, como tal, Q# ofrece rutinas intrínsecas para describir estas operaciones.
 Hay muchas maneras de calcular una matriz exponencial en un equipo clásico y, en general, la aproximación numérica de este tipo exponencial es llena con peligros.  Vea el [*topo de Cleve y el préstamo de Charles van. "Diecinueve maneras dudosas de calcular el valor exponencial de una matriz". SIAM revisión 20,4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) para obtener más información sobre los desafíos implicados.
 
 La forma más fácil de entender cómo calcular el valor exponencial de una matriz es a través de vectores propios y vectores propios de esa matriz.  En concreto, los teorema espectrales descritos anteriormente indican que, para cada matriz de Hermitian o unitario $ $ , existe una matriz de unidad de la $ unidad $ $ $ $ = \dagger $ de  Debido a las propiedades de Unitarity, tenemos $ un ^ 2 = u ^ \dagger d ^ 2 u $ y similar para cualquier potencia $ p $ $ A ^ p = u ^ \dagger d ^ p u $ .  Si se sustituye por la definición de operador del operador exponencial se obtiene:
