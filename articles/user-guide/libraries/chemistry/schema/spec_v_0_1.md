@@ -6,74 +6,77 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
-ms.openlocfilehash: 618892b6cb01855d17522b06e47f72f68595ab38
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: abbc63b8801c774e6ba06cff99b7382d64424b2c
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276046"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869144"
 ---
-# <a name="broombridge-specification-v01"></a><span data-ttu-id="b1b84-103">Especificación de Broombridge v 0.1</span><span class="sxs-lookup"><span data-stu-id="b1b84-103">Broombridge Specification v0.1</span></span> #
+# <a name="broombridge-specification-v01"></a><span data-ttu-id="030ac-103">Especificación de Broombridge v 0.1</span><span class="sxs-lookup"><span data-stu-id="030ac-103">Broombridge Specification v0.1</span></span> #
 
-<span data-ttu-id="b1b84-104">Las palabras clave "debe", "no debe", "Required", "", "no debe", "no debería", "no debería", "recomendado", "puede" y "opcional" en este documento se deben interpretar como se describe en [RFC 2119](https://tools.ietf.org/html/rfc2119).</span><span class="sxs-lookup"><span data-stu-id="b1b84-104">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).</span></span>
+<span data-ttu-id="030ac-104">Las palabras clave "debe", "no debe", "Required", "", "no debe", "no debería", "no debería", "recomendado", "puede" y "opcional" en este documento se deben interpretar como se describe en [RFC 2119](https://tools.ietf.org/html/rfc2119).</span><span class="sxs-lookup"><span data-stu-id="030ac-104">The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).</span></span>
 
-<span data-ttu-id="b1b84-105">Cualquier barra lateral con los títulos "Nota", "información" o "ADVERTENCIA" es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-105">Any sidebar with the headings "NOTE," "INFORMATION," or "WARNING" is informative.</span></span>
+<span data-ttu-id="030ac-105">Cualquier barra lateral con los títulos "Nota", "información" o "ADVERTENCIA" es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-105">Any sidebar with the headings "NOTE," "INFORMATION," or "WARNING" is informative.</span></span>
 
-## <a name="introduction"></a><span data-ttu-id="b1b84-106">Introducción</span><span class="sxs-lookup"><span data-stu-id="b1b84-106">Introduction</span></span> ##
+## <a name="introduction"></a><span data-ttu-id="030ac-106">Introducción</span><span class="sxs-lookup"><span data-stu-id="030ac-106">Introduction</span></span> ##
 
-<span data-ttu-id="b1b84-107">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-107">This section is informative.</span></span>
+<span data-ttu-id="030ac-107">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-107">This section is informative.</span></span>
 
-<span data-ttu-id="b1b84-108">Los documentos de Broombridge están diseñados para comunicar instancias de problemas de simulación en la química Quantum para su procesamiento mediante la simulación de Quantum y la programación de cadenas.</span><span class="sxs-lookup"><span data-stu-id="b1b84-108">Broombridge documents are intended to communicate instances of simulation problems in quantum chemistry for processing using quantum simulation and programming toolchains.</span></span>
+<span data-ttu-id="030ac-108">Los documentos de Broombridge están diseñados para comunicar instancias de problemas de simulación en la química Quantum para su procesamiento mediante la simulación de Quantum y la programación de cadenas.</span><span class="sxs-lookup"><span data-stu-id="030ac-108">Broombridge documents are intended to communicate instances of simulation problems in quantum chemistry for processing using quantum simulation and programming toolchains.</span></span>
 
-## <a name="serialization"></a><span data-ttu-id="b1b84-109">Serialización</span><span class="sxs-lookup"><span data-stu-id="b1b84-109">Serialization</span></span> ##
+## <a name="serialization"></a><span data-ttu-id="030ac-109">Serialización</span><span class="sxs-lookup"><span data-stu-id="030ac-109">Serialization</span></span> ##
 
-<span data-ttu-id="b1b84-110">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-110">This section is normative.</span></span>
+<span data-ttu-id="030ac-110">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-110">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-111">Un documento de Broombridge debe serializarse como un [documento YAML 1,2](http://yaml.org/spec/) que represente un objeto JSON, tal como se describe en la sección 2,2 de [RFC 4627](https://tools.ietf.org/html/rfc4627) .</span><span class="sxs-lookup"><span data-stu-id="b1b84-111">A Broombridge document MUST be serialized as a [YAML 1.2 document](http://yaml.org/spec/) representing a JSON object as described in [RFC 4627](https://tools.ietf.org/html/rfc4627) section 2.2.</span></span>
-<span data-ttu-id="b1b84-112">El objeto serializado a YAML debe tener una propiedad `"$schema"` cuyo valor sea `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.1.schema.json"` , y debe ser válido de acuerdo con las especificaciones de draft-06 del esquema JSON [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)[[1,2](https://tools.ietf.org/html/draft-wright-json-schema-01)].</span><span class="sxs-lookup"><span data-stu-id="b1b84-112">The object serialized to YAML MUST have a property `"$schema"` whose value is `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.1.schema.json"`, and MUST be valid according to the JSON Schema draft-06 specifications [[1](https://tools.ietf.org/html/draft-wright-json-schema-01), [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)].</span></span>
+<span data-ttu-id="030ac-111">Un documento de Broombridge debe serializarse como un [documento YAML 1,2](http://yaml.org/spec/) que represente un objeto JSON, tal como se describe en la sección 2,2 de [RFC 4627](https://tools.ietf.org/html/rfc4627) .</span><span class="sxs-lookup"><span data-stu-id="030ac-111">A Broombridge document MUST be serialized as a [YAML 1.2 document](http://yaml.org/spec/) representing a JSON object as described in [RFC 4627](https://tools.ietf.org/html/rfc4627) section 2.2.</span></span>
+<span data-ttu-id="030ac-112">El objeto serializado a YAML debe tener una propiedad `"$schema"` cuyo valor sea `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.1.schema.json"` , y debe ser válido de acuerdo con las especificaciones de draft-06 del esquema JSON [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)[[1,2](https://tools.ietf.org/html/draft-wright-json-schema-01)].</span><span class="sxs-lookup"><span data-stu-id="030ac-112">The object serialized to YAML MUST have a property `"$schema"` whose value is `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.1.schema.json"`, and MUST be valid according to the JSON Schema draft-06 specifications [[1](https://tools.ietf.org/html/draft-wright-json-schema-01), [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)].</span></span>
 
-<span data-ttu-id="b1b84-113">En el resto de esta especificación, "el objeto Broombridge" hará referencia al objeto JSON deserializado de un documento YAML de Broombridge.</span><span class="sxs-lookup"><span data-stu-id="b1b84-113">For the remainder of this specification, "the Broombridge object" will refer to the JSON object deserialized from a Broombridge YAML document.</span></span>
+<span data-ttu-id="030ac-113">En el resto de esta especificación, "el objeto Broombridge" hará referencia al objeto JSON deserializado de un documento YAML de Broombridge.</span><span class="sxs-lookup"><span data-stu-id="030ac-113">For the remainder of this specification, "the Broombridge object" will refer to the JSON object deserialized from a Broombridge YAML document.</span></span>
 
-<span data-ttu-id="b1b84-114">A menos que se indique lo contrario explícitamente, los objetos no deben tener propiedades adicionales más allá de las especificadas explícitamente en este documento.</span><span class="sxs-lookup"><span data-stu-id="b1b84-114">Unless otherwise explicitly noted, objects MUST NOT have additional properties beyond those specified explicitly in this document.</span></span>
+<span data-ttu-id="030ac-114">A menos que se indique lo contrario explícitamente, los objetos no deben tener propiedades adicionales más allá de las especificadas explícitamente en este documento.</span><span class="sxs-lookup"><span data-stu-id="030ac-114">Unless otherwise explicitly noted, objects MUST NOT have additional properties beyond those specified explicitly in this document.</span></span>
 
-## <a name="additional-definitions"></a><span data-ttu-id="b1b84-115">Definiciones adicionales</span><span class="sxs-lookup"><span data-stu-id="b1b84-115">Additional Definitions</span></span> ##
+## <a name="additional-definitions"></a><span data-ttu-id="030ac-115">Definiciones adicionales</span><span class="sxs-lookup"><span data-stu-id="030ac-115">Additional Definitions</span></span> ##
 
-<span data-ttu-id="b1b84-116">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-116">This section is normative.</span></span>
+<span data-ttu-id="030ac-116">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-116">This section is normative.</span></span>
 
-### <a name="quantity-objects"></a><span data-ttu-id="b1b84-117">Objetos quantity</span><span class="sxs-lookup"><span data-stu-id="b1b84-117">Quantity Objects</span></span> ###
+### <a name="quantity-objects"></a><span data-ttu-id="030ac-117">Objetos quantity</span><span class="sxs-lookup"><span data-stu-id="030ac-117">Quantity Objects</span></span> ###
 
-<span data-ttu-id="b1b84-118">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-118">This section is normative.</span></span>
+<span data-ttu-id="030ac-118">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-118">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-119">Un _objeto quantity_ es un objeto JSON y debe tener una propiedad `units` cuyo valor sea uno de los valores permitidos enumerados en la tabla 1.</span><span class="sxs-lookup"><span data-stu-id="b1b84-119">A _quantity object_ is a JSON object, and MUST have a property `units` whose value is one of the allowed values listed in Table 1.</span></span>
+<span data-ttu-id="030ac-119">Un _objeto quantity_ es un objeto JSON y debe tener una propiedad `units` cuyo valor sea uno de los valores permitidos enumerados en la tabla 1.</span><span class="sxs-lookup"><span data-stu-id="030ac-119">A _quantity object_ is a JSON object, and MUST have a property `units` whose value is one of the allowed values listed in Table 1.</span></span>
 
-<span data-ttu-id="b1b84-120">Un objeto quantity es un _objeto quantity simple_ si tiene una propiedad única además de `value` su `units` propiedad.</span><span class="sxs-lookup"><span data-stu-id="b1b84-120">A quantity object is a _simple quantity object_ if it has a single property `value` in addition to its `units` property.</span></span>
-<span data-ttu-id="b1b84-121">El valor de la `value` propiedad debe ser un número.</span><span class="sxs-lookup"><span data-stu-id="b1b84-121">The value of the `value` property MUST be a number.</span></span>
+<span data-ttu-id="030ac-120">Un objeto quantity es un _objeto quantity simple_ si tiene una propiedad única además de `value` su `units` propiedad.</span><span class="sxs-lookup"><span data-stu-id="030ac-120">A quantity object is a _simple quantity object_ if it has a single property `value` in addition to its `units` property.</span></span>
+<span data-ttu-id="030ac-121">El valor de la `value` propiedad debe ser un número.</span><span class="sxs-lookup"><span data-stu-id="030ac-121">The value of the `value` property MUST be a number.</span></span>
 
-<span data-ttu-id="b1b84-122">Un objeto quantity es un _objeto quantity limitado_ si tiene las propiedades `lower` y además de `upper` su `units` propiedad.</span><span class="sxs-lookup"><span data-stu-id="b1b84-122">A quantity object is a _bounded quantity object_ if it has the properties `lower` and `upper` in addition to its `units` property.</span></span>
-<span data-ttu-id="b1b84-123">Los valores de las `lower` `upper` propiedades y deben ser números.</span><span class="sxs-lookup"><span data-stu-id="b1b84-123">The values of the `lower` and `upper` properties MUST be numbers.</span></span>
-<span data-ttu-id="b1b84-124">Un objeto quantity limitado puede tener una propiedad `value` cuyo valor es un número.</span><span class="sxs-lookup"><span data-stu-id="b1b84-124">A bounded quantity object MAY have a property `value` whose value is a number.</span></span>
+<span data-ttu-id="030ac-122">Un objeto quantity es un _objeto quantity limitado_ si tiene las propiedades `lower` y además de `upper` su `units` propiedad.</span><span class="sxs-lookup"><span data-stu-id="030ac-122">A quantity object is a _bounded quantity object_ if it has the properties `lower` and `upper` in addition to its `units` property.</span></span>
+<span data-ttu-id="030ac-123">Los valores de las `lower` `upper` propiedades y deben ser números.</span><span class="sxs-lookup"><span data-stu-id="030ac-123">The values of the `lower` and `upper` properties MUST be numbers.</span></span>
+<span data-ttu-id="030ac-124">Un objeto quantity limitado puede tener una propiedad `value` cuyo valor es un número.</span><span class="sxs-lookup"><span data-stu-id="030ac-124">A bounded quantity object MAY have a property `value` whose value is a number.</span></span>
 
-<span data-ttu-id="b1b84-125">Un objeto quantity es un _objeto de cantidad de matriz dispersa_ si tiene la propiedad `format` y una propiedad `values` además de su `units` propiedad.</span><span class="sxs-lookup"><span data-stu-id="b1b84-125">A quantity object is a _sparse array quantity object_ if it has the property `format` and a property `values` in addition to its `units` property.</span></span>
-<span data-ttu-id="b1b84-126">El valor de `format` debe ser la cadena `sparse` .</span><span class="sxs-lookup"><span data-stu-id="b1b84-126">The value of `format` MUST be the string `sparse`.</span></span>
-<span data-ttu-id="b1b84-127">El valor de la `values` propiedad debe ser una matriz.</span><span class="sxs-lookup"><span data-stu-id="b1b84-127">The value of the `values` property MUST be an array.</span></span>
-<span data-ttu-id="b1b84-128">Cada elemento de `values` debe ser una matriz que represente los índices y el valor de la cantidad de la matriz dispersa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-128">Each element of `values` MUST be an array representing the indices and value of the sparse array quantity.</span></span>
+<span data-ttu-id="030ac-125">Un objeto quantity es un _objeto de cantidad de matriz dispersa_ si tiene la propiedad `format` y una propiedad `values` además de su `units` propiedad.</span><span class="sxs-lookup"><span data-stu-id="030ac-125">A quantity object is a _sparse array quantity object_ if it has the property `format` and a property `values` in addition to its `units` property.</span></span>
+<span data-ttu-id="030ac-126">El valor de `format` debe ser la cadena `sparse` .</span><span class="sxs-lookup"><span data-stu-id="030ac-126">The value of `format` MUST be the string `sparse`.</span></span>
+<span data-ttu-id="030ac-127">El valor de la `values` propiedad debe ser una matriz.</span><span class="sxs-lookup"><span data-stu-id="030ac-127">The value of the `values` property MUST be an array.</span></span>
+<span data-ttu-id="030ac-128">Cada elemento de `values` debe ser una matriz que represente los índices y el valor de la cantidad de la matriz dispersa.</span><span class="sxs-lookup"><span data-stu-id="030ac-128">Each element of `values` MUST be an array representing the indices and value of the sparse array quantity.</span></span>
 
-<span data-ttu-id="b1b84-129">Los índices de cada elemento de un objeto de cantidad de matriz dispersa deben ser únicos en todo el objeto de cantidad de matriz dispersa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-129">The indices for each element of a sparse array quantity object MUST be unique across the entire sparse array quantity object.</span></span>
-<span data-ttu-id="b1b84-130">Si un índice está presente con un valor de `0` , un analizador debe tratar el objeto de cantidad de matriz dispersa de forma idéntica a un objeto de cantidad de matriz dispersa en el que ese índice no está presente en absoluto.</span><span class="sxs-lookup"><span data-stu-id="b1b84-130">If an index is present with a value of `0`, a parser MUST treat the sparse array quantity object identically to a sparse array quantity object in which that index is not present at all.</span></span>
-
-
-<span data-ttu-id="b1b84-131">Un objeto quantity debe ser</span><span class="sxs-lookup"><span data-stu-id="b1b84-131">A quantity object MUST either be</span></span>
-
-- <span data-ttu-id="b1b84-132">un objeto quantity simple,</span><span class="sxs-lookup"><span data-stu-id="b1b84-132">a simple quantity object,</span></span>
-- <span data-ttu-id="b1b84-133">objeto quantity limitado, o bien</span><span class="sxs-lookup"><span data-stu-id="b1b84-133">a bounded quantity object, or</span></span>
-- <span data-ttu-id="b1b84-134">objeto de cantidad de matriz dispersa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-134">a sparse array quantity object.</span></span>
+<span data-ttu-id="030ac-129">Los índices de cada elemento de un objeto de cantidad de matriz dispersa deben ser únicos en todo el objeto de cantidad de matriz dispersa.</span><span class="sxs-lookup"><span data-stu-id="030ac-129">The indices for each element of a sparse array quantity object MUST be unique across the entire sparse array quantity object.</span></span>
+<span data-ttu-id="030ac-130">Si un índice está presente con un valor de `0` , un analizador debe tratar el objeto de cantidad de matriz dispersa de forma idéntica a un objeto de cantidad de matriz dispersa en el que ese índice no está presente en absoluto.</span><span class="sxs-lookup"><span data-stu-id="030ac-130">If an index is present with a value of `0`, a parser MUST treat the sparse array quantity object identically to a sparse array quantity object in which that index is not present at all.</span></span>
 
 
-### <a name="examples"></a><span data-ttu-id="b1b84-135">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="b1b84-135">Examples</span></span> ###
+<span data-ttu-id="030ac-131">Un objeto quantity debe ser</span><span class="sxs-lookup"><span data-stu-id="030ac-131">A quantity object MUST either be</span></span>
 
-<span data-ttu-id="b1b84-136">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-136">This section is informative.</span></span>
+- <span data-ttu-id="030ac-132">un objeto quantity simple,</span><span class="sxs-lookup"><span data-stu-id="030ac-132">a simple quantity object,</span></span>
+- <span data-ttu-id="030ac-133">objeto quantity limitado, o bien</span><span class="sxs-lookup"><span data-stu-id="030ac-133">a bounded quantity object, or</span></span>
+- <span data-ttu-id="030ac-134">objeto de cantidad de matriz dispersa.</span><span class="sxs-lookup"><span data-stu-id="030ac-134">a sparse array quantity object.</span></span>
 
-<span data-ttu-id="b1b84-137">Una cantidad simple que representa $1.9844146837 \, \mathrm{ha} $:</span><span class="sxs-lookup"><span data-stu-id="b1b84-137">A simple quantity representing $1.9844146837\,\mathrm{Ha}$:</span></span>
+
+### <a name="examples"></a><span data-ttu-id="030ac-135">Ejemplos</span><span class="sxs-lookup"><span data-stu-id="030ac-135">Examples</span></span> ###
+
+<span data-ttu-id="030ac-136">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-136">This section is informative.</span></span>
+
+<span data-ttu-id="030ac-137">Una cantidad simple que representa $1.9844146837 \, \mathrm{ha} $:</span><span class="sxs-lookup"><span data-stu-id="030ac-137">A simple quantity representing $1.9844146837\,\mathrm{Ha}$:</span></span>
 
 ```yaml
 coulomb_repulsion:
@@ -81,7 +84,7 @@ coulomb_repulsion:
     units: hartree
 ```
 
-<span data-ttu-id="b1b84-138">Una cantidad limitada que representa una distribución uniforme en el intervalo $ [-7,-6] \, \mathrm{ha} $:</span><span class="sxs-lookup"><span data-stu-id="b1b84-138">A bounded quantity representing a uniform distribution over the interval $[-7, -6]\,\mathrm{Ha}$:</span></span>
+<span data-ttu-id="030ac-138">Una cantidad limitada que representa una distribución uniforme en el intervalo $ [-7,-6] \, \mathrm{ha} $:</span><span class="sxs-lookup"><span data-stu-id="030ac-138">A bounded quantity representing a uniform distribution over the interval $[-7, -6]\,\mathrm{Ha}$:</span></span>
 
 ```yaml
 fci_energy:
@@ -90,7 +93,7 @@ fci_energy:
     units: hartree
 ```
 
-<span data-ttu-id="b1b84-139">Lo siguiente es una cantidad de matriz dispersa con un elemento `[1, 2]` igual a `hello` y un elemento `[3, 4]` igual a `world` :</span><span class="sxs-lookup"><span data-stu-id="b1b84-139">The following is a sparse array quantity with an element `[1, 2]` equal to `hello` and an element `[3, 4]` equal to `world`:</span></span>
+<span data-ttu-id="030ac-139">Lo siguiente es una cantidad de matriz dispersa con un elemento `[1, 2]` igual a `hello` y un elemento `[3, 4]` igual a `world` :</span><span class="sxs-lookup"><span data-stu-id="030ac-139">The following is a sparse array quantity with an element `[1, 2]` equal to `hello` and an element `[3, 4]` equal to `world`:</span></span>
 
 ```yaml
 sparse_example:
@@ -101,86 +104,86 @@ sparse_example:
     - [3, 4, "world"]
 ```
 
-## <a name="format-section"></a><span data-ttu-id="b1b84-140">Sección de formato</span><span class="sxs-lookup"><span data-stu-id="b1b84-140">Format Section</span></span> ##
+## <a name="format-section"></a><span data-ttu-id="030ac-140">Sección de formato</span><span class="sxs-lookup"><span data-stu-id="030ac-140">Format Section</span></span> ##
 
-<span data-ttu-id="b1b84-141">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-141">This section is normative.</span></span>
+<span data-ttu-id="030ac-141">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-141">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-142">El objeto Broombridge debe tener una propiedad `format` cuyo valor sea un objeto JSON con una propiedad denominada `version` .</span><span class="sxs-lookup"><span data-stu-id="b1b84-142">The Broombridge object MUST have a property `format` whose value is a JSON object with one property called `version`.</span></span>
-<span data-ttu-id="b1b84-143">La `version` propiedad debe tener el valor `"0.1"` .</span><span class="sxs-lookup"><span data-stu-id="b1b84-143">The `version` property MUST have the value `"0.1"`.</span></span>
+<span data-ttu-id="030ac-142">El objeto Broombridge debe tener una propiedad `format` cuyo valor sea un objeto JSON con una propiedad denominada `version` .</span><span class="sxs-lookup"><span data-stu-id="030ac-142">The Broombridge object MUST have a property `format` whose value is a JSON object with one property called `version`.</span></span>
+<span data-ttu-id="030ac-143">La `version` propiedad debe tener el valor `"0.1"` .</span><span class="sxs-lookup"><span data-stu-id="030ac-143">The `version` property MUST have the value `"0.1"`.</span></span>
 
-### <a name="example"></a><span data-ttu-id="b1b84-144">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b1b84-144">Example</span></span> ###
+### <a name="example"></a><span data-ttu-id="030ac-144">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="030ac-144">Example</span></span> ###
 
-<span data-ttu-id="b1b84-145">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-145">This section is informative.</span></span>
+<span data-ttu-id="030ac-145">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-145">This section is informative.</span></span>
 
 ```yaml
 format:                        # required
     version: "0.1"             # must match exactly
 ```
 
-## <a name="integral-sets-section"></a><span data-ttu-id="b1b84-146">Sección de conjuntos enteros</span><span class="sxs-lookup"><span data-stu-id="b1b84-146">Integral Sets Section</span></span> ##
+## <a name="integral-sets-section"></a><span data-ttu-id="030ac-146">Sección de conjuntos enteros</span><span class="sxs-lookup"><span data-stu-id="030ac-146">Integral Sets Section</span></span> ##
 
-<span data-ttu-id="b1b84-147">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-147">This section is normative.</span></span>
+<span data-ttu-id="030ac-147">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-147">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-148">El objeto Broombridge debe tener una propiedad `integral_sets` cuyo valor sea una matriz JSON.</span><span class="sxs-lookup"><span data-stu-id="b1b84-148">The Broombridge object MUST have a property `integral_sets` whose value is a JSON array.</span></span>
-<span data-ttu-id="b1b84-149">Cada elemento del valor de la `integral_sets` propiedad debe ser un objeto JSON que describe un conjunto de enteros, como se describe en el resto de esta sección.</span><span class="sxs-lookup"><span data-stu-id="b1b84-149">Each item in the value of the `integral_sets` property MUST be a JSON object describing one set of integrals, as described in the remainder of this section.</span></span>
-<span data-ttu-id="b1b84-150">En el resto de esta sección, el término "objeto de conjunto entero" hará referencia a un elemento en el valor de la `integral_sets` propiedad del objeto Broombridge.</span><span class="sxs-lookup"><span data-stu-id="b1b84-150">In the remainder of this section, the term "integral set object" will refer to an item in the value of the `integral_sets` property of the Broombridge object.</span></span>
+<span data-ttu-id="030ac-148">El objeto Broombridge debe tener una propiedad `integral_sets` cuyo valor sea una matriz JSON.</span><span class="sxs-lookup"><span data-stu-id="030ac-148">The Broombridge object MUST have a property `integral_sets` whose value is a JSON array.</span></span>
+<span data-ttu-id="030ac-149">Cada elemento del valor de la `integral_sets` propiedad debe ser un objeto JSON que describe un conjunto de enteros, como se describe en el resto de esta sección.</span><span class="sxs-lookup"><span data-stu-id="030ac-149">Each item in the value of the `integral_sets` property MUST be a JSON object describing one set of integrals, as described in the remainder of this section.</span></span>
+<span data-ttu-id="030ac-150">En el resto de esta sección, el término "objeto de conjunto entero" hará referencia a un elemento en el valor de la `integral_sets` propiedad del objeto Broombridge.</span><span class="sxs-lookup"><span data-stu-id="030ac-150">In the remainder of this section, the term "integral set object" will refer to an item in the value of the `integral_sets` property of the Broombridge object.</span></span>
 
-<span data-ttu-id="b1b84-151">Cada objeto de conjunto entero debe tener una propiedad `metadata` cuyo valor sea un objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="b1b84-151">Each integral set object MUST have a property `metadata` whose value is a JSON object.</span></span>
-<span data-ttu-id="b1b84-152">El valor de `metadata` puede ser el objeto JSON vacío (es decir, `{}` ) o puede contener propiedades adicionales definidas por el implementador.</span><span class="sxs-lookup"><span data-stu-id="b1b84-152">The value of `metadata` MAY be the empty JSON object (that is, `{}`), or MAY contain additional properties defined by the implementor.</span></span>
+<span data-ttu-id="030ac-151">Cada objeto de conjunto entero debe tener una propiedad `metadata` cuyo valor sea un objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="030ac-151">Each integral set object MUST have a property `metadata` whose value is a JSON object.</span></span>
+<span data-ttu-id="030ac-152">El valor de `metadata` puede ser el objeto JSON vacío (es decir, `{}` ) o puede contener propiedades adicionales definidas por el implementador.</span><span class="sxs-lookup"><span data-stu-id="030ac-152">The value of `metadata` MAY be the empty JSON object (that is, `{}`), or MAY contain additional properties defined by the implementor.</span></span>
 
-### <a name="hamiltonian-section"></a><span data-ttu-id="b1b84-153">Sección Hamiltonian</span><span class="sxs-lookup"><span data-stu-id="b1b84-153">Hamiltonian Section</span></span> ###
+### <a name="hamiltonian-section"></a><span data-ttu-id="030ac-153">Sección Hamiltonian</span><span class="sxs-lookup"><span data-stu-id="030ac-153">Hamiltonian Section</span></span> ###
 
-#### <a name="overview"></a><span data-ttu-id="b1b84-154">Información general</span><span class="sxs-lookup"><span data-stu-id="b1b84-154">Overview</span></span> ####
+#### <a name="overview"></a><span data-ttu-id="030ac-154">Información general</span><span class="sxs-lookup"><span data-stu-id="030ac-154">Overview</span></span> ####
 
-<span data-ttu-id="b1b84-155">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-155">This section is informative.</span></span>
+<span data-ttu-id="030ac-155">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-155">This section is informative.</span></span>
 
-<span data-ttu-id="b1b84-156">La `hamiltonian` propiedad de cada objeto de conjunto entero describe el valor de Hamiltonian para un problema de química de Quantum determinado enumerando sus términos de uno y dos cuerpos como matrices dispersas de números reales.</span><span class="sxs-lookup"><span data-stu-id="b1b84-156">The `hamiltonian` property of each integral set object describes the Hamiltonian for a particular quantum chemistry problem by listing out its one- and two-body terms as sparse arrays of real numbers.</span></span>
-<span data-ttu-id="b1b84-157">Los operadores Hamiltonian descritos por cada objeto de conjunto entero tienen el formato</span><span class="sxs-lookup"><span data-stu-id="b1b84-157">The Hamiltonian operators described by each integral set object take the form</span></span>
+<span data-ttu-id="030ac-156">La `hamiltonian` propiedad de cada objeto de conjunto entero describe el valor de Hamiltonian para un problema de química de Quantum determinado enumerando sus términos de uno y dos cuerpos como matrices dispersas de números reales.</span><span class="sxs-lookup"><span data-stu-id="030ac-156">The `hamiltonian` property of each integral set object describes the Hamiltonian for a particular quantum chemistry problem by listing out its one- and two-body terms as sparse arrays of real numbers.</span></span>
+<span data-ttu-id="030ac-157">Los operadores Hamiltonian descritos por cada objeto de conjunto entero tienen el formato</span><span class="sxs-lookup"><span data-stu-id="030ac-157">The Hamiltonian operators described by each integral set object take the form</span></span>
 
-<span data-ttu-id="b1b84-158">$ $ H = \sum \_ \{ i, j \} \sum \_ {\sigma\in \\ {\uparrow, \downarrow \\ }} H \_ \{ \} a ^ \{ \dagger \} \_ {i, \sigma} a \_ {j, \sigma} + \frac {1} {2} \sum \_ \{ i, j, k, l \} \sum \_ {\sigma, \rho\in \\ {\uparrow, \downarrow \\ }} H \_ {ijkl} a ^ \dagger \_ {i, \sigma} a ^ \dagger \_ {k, \rho} a \_ {l, \rho} a \_ {j, \sigma}, $ $</span><span class="sxs-lookup"><span data-stu-id="b1b84-158">$$ H = \sum\_\{i,j\}\sum\_{\sigma\in\\{\uparrow,\downarrow\\}} h\_\{ij\} a^\{\dagger\}\_{i,\sigma} a\_{j,\sigma} + \frac{1}{2}\sum\_\{i,j,k,l\}\sum\_{\sigma,\rho\in\\{\uparrow,\downarrow\\}} h\_{ijkl} a^\dagger\_{i,\sigma} a^\dagger\_{k,\rho} a\_{l,\rho} a\_{j,\sigma}, $$</span></span>
+<span data-ttu-id="030ac-158">$ $ H = \sum \_ \{ i, j \} \sum \_ {\sigma\in \\ {\uparrow, \downarrow \\ }} H \_ \{ \} a ^ \{ \dagger \} \_ {i, \sigma} a \_ {j, \sigma} + \frac {1} {2} \sum \_ \{ i, j, k, l \} \sum \_ {\sigma, \rho\in \\ {\uparrow, \downarrow \\ }} H \_ {ijkl} a ^ \dagger \_ {i, \sigma} a ^ \dagger \_ {k, \rho} a \_ {l, \rho} a \_ {j, \sigma}, $ $</span><span class="sxs-lookup"><span data-stu-id="030ac-158">$$ H = \sum\_\{i,j\}\sum\_{\sigma\in\\{\uparrow,\downarrow\\}} h\_\{ij\} a^\{\dagger\}\_{i,\sigma} a\_{j,\sigma} + \frac{1}{2}\sum\_\{i,j,k,l\}\sum\_{\sigma,\rho\in\\{\uparrow,\downarrow\\}} h\_{ijkl} a^\dagger\_{i,\sigma} a^\dagger\_{k,\rho} a\_{l,\rho} a\_{j,\sigma}, $$</span></span>
 
-<span data-ttu-id="b1b84-159">Aquí $h _ {ijkl} = (ij | KL) $ in Mulliken Convention.</span><span class="sxs-lookup"><span data-stu-id="b1b84-159">here $h_{ijkl}= (ij|kl)$ in Mulliken convention.</span></span>
+<span data-ttu-id="030ac-159">Aquí $h _ {ijkl} = (ij | KL) $ in Mulliken Convention.</span><span class="sxs-lookup"><span data-stu-id="030ac-159">here $h_{ijkl}= (ij|kl)$ in Mulliken convention.</span></span>
 
-<span data-ttu-id="b1b84-160">Para mayor claridad, el término de un electrones es</span><span class="sxs-lookup"><span data-stu-id="b1b84-160">For clarity, the one-electron term is</span></span>
+<span data-ttu-id="030ac-160">Para mayor claridad, el término de un electrones es</span><span class="sxs-lookup"><span data-stu-id="030ac-160">For clarity, the one-electron term is</span></span>
 
-<span data-ttu-id="b1b84-161">$ $ h_ {ij} = \int {\mathrm d} x \psi ^ \* \_ i (x) \left (\frac {1} {2} \nabla ^ 2 + \sum \_ {a} \frac{Z \_ a} {| x-x \_ a |}  \right) \psi \_ j (x), $ $</span><span class="sxs-lookup"><span data-stu-id="b1b84-161">$$ h_{ij} = \int {\mathrm d}x \psi^\*\_i(x) \left(\frac{1}{2}\nabla^2 + \sum\_{A}\frac{Z\_A}{|x-x\_A|}  \right) \psi\_j(x), $$</span></span>
+<span data-ttu-id="030ac-161">$ $ h_ {ij} = \int {\mathrm d} x \psi ^ \* \_ i (x) \left (\frac {1} {2} \nabla ^ 2 + \sum \_ {a} \frac{Z \_ a} {| x-x \_ a |}  \right) \psi \_ j (x), $ $</span><span class="sxs-lookup"><span data-stu-id="030ac-161">$$ h_{ij} = \int {\mathrm d}x \psi^\*\_i(x) \left(\frac{1}{2}\nabla^2 + \sum\_{A}\frac{Z\_A}{|x-x\_A|}  \right) \psi\_j(x), $$</span></span>
 
-<span data-ttu-id="b1b84-162">y el término de dos electrones es</span><span class="sxs-lookup"><span data-stu-id="b1b84-162">and the two-electron term is</span></span>
+<span data-ttu-id="030ac-162">y el término de dos electrones es</span><span class="sxs-lookup"><span data-stu-id="030ac-162">and the two-electron term is</span></span>
 
-<span data-ttu-id="b1b84-163">$ $ h \_ \{ ijkl \} = \iint \{ \mathrm d \} x ^ 2 \psi ^ \{ \* \} \_ i (x \_ 1) \psi \_ j (x \_ 1) \frac \{ 1 \} \{ \| x \_ 1-x \_ 2 \| \} \psi \_ k ^ \{ \* \} (x \_ 2) \psi \_ l (x \_ 2).</span><span class="sxs-lookup"><span data-stu-id="b1b84-163">$$ h\_\{ijkl\} = \iint \{\mathrm d\}x^2 \psi^\{\*\}\_i(x\_1)\psi\_j(x\_1) \frac\{1\}\{\|x\_1 -x\_2\|\}\psi\_k^\{\*\}(x\_2) \psi\_l(x\_2).</span></span>
+<span data-ttu-id="030ac-163">$ $ h \_ \{ ijkl \} = \iint \{ \mathrm d \} x ^ 2 \psi ^ \{ \* \} \_ i (x \_ 1) \psi \_ j (x \_ 1) \frac \{ 1 \} \{ \| x \_ 1-x \_ 2 \| \} \psi \_ k ^ \{ \* \} (x \_ 2) \psi \_ l (x \_ 2).</span><span class="sxs-lookup"><span data-stu-id="030ac-163">$$ h\_\{ijkl\} = \iint \{\mathrm d\}x^2 \psi^\{\*\}\_i(x\_1)\psi\_j(x\_1) \frac\{1\}\{\|x\_1 -x\_2\|\}\psi\_k^\{\*\}(x\_2) \psi\_l(x\_2).</span></span>
 $$
 
-<span data-ttu-id="b1b84-164">Como se indicó en la descripción de la [ `basis_set` propiedad](#basis-set-object) de cada elemento de la `integral_sets` propiedad, se supone explícitamente que las funciones de base utilizadas son de valor real.</span><span class="sxs-lookup"><span data-stu-id="b1b84-164">As noted in our description of the [`basis_set` property](#basis-set-object) of each element of the `integral_sets` property, we further explicitly assume that the basis functions used are real-valued.</span></span>
-<span data-ttu-id="b1b84-165">Esto nos permite usar los siguientes Symmetries entre los términos para comprimir la representación de la Hamiltonian.</span><span class="sxs-lookup"><span data-stu-id="b1b84-165">This allows us to use the following symmetries between the terms to compress the representation of the Hamiltonian.</span></span>
+<span data-ttu-id="030ac-164">Como se indicó en la descripción de la [ `basis_set` propiedad](#basis-set-object) de cada elemento de la `integral_sets` propiedad, se supone explícitamente que las funciones de base utilizadas son de valor real.</span><span class="sxs-lookup"><span data-stu-id="030ac-164">As noted in our description of the [`basis_set` property](#basis-set-object) of each element of the `integral_sets` property, we further explicitly assume that the basis functions used are real-valued.</span></span>
+<span data-ttu-id="030ac-165">Esto nos permite usar los siguientes Symmetries entre los términos para comprimir la representación de la Hamiltonian.</span><span class="sxs-lookup"><span data-stu-id="030ac-165">This allows us to use the following symmetries between the terms to compress the representation of the Hamiltonian.</span></span>
 
-<span data-ttu-id="b1b84-166">$ $ h_ {ijkl} = h_ {ijlk} = h_ {jikl} = h_ {JILK} = h_ {klij} = h_ {klji} = h_ {lkij} = h_ {lkji}.</span><span class="sxs-lookup"><span data-stu-id="b1b84-166">$$ h_{ijkl} = h_{ijlk}=h_{jikl}=h_{jilk}=h_{klij}=h_{klji}=h_{lkij}=h_{lkji}.</span></span>
+<span data-ttu-id="030ac-166">$ $ h_ {ijkl} = h_ {ijlk} = h_ {jikl} = h_ {JILK} = h_ {klij} = h_ {klji} = h_ {lkij} = h_ {lkji}.</span><span class="sxs-lookup"><span data-stu-id="030ac-166">$$ h_{ijkl} = h_{ijlk}=h_{jikl}=h_{jilk}=h_{klij}=h_{klji}=h_{lkij}=h_{lkji}.</span></span>
 $$
 
 
-#### <a name="contents"></a><span data-ttu-id="b1b84-167">Contenido</span><span class="sxs-lookup"><span data-stu-id="b1b84-167">Contents</span></span> ####
+#### <a name="contents"></a><span data-ttu-id="030ac-167">Contenido</span><span class="sxs-lookup"><span data-stu-id="030ac-167">Contents</span></span> ####
 
-<span data-ttu-id="b1b84-168">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-168">This section is normative.</span></span>
+<span data-ttu-id="030ac-168">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-168">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-169">Cada conjunto entero debe tener una propiedad `hamiltonian` cuyo valor sea un objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="b1b84-169">Each integral set MUST have a property `hamiltonian` whose value is a JSON object.</span></span>
-<span data-ttu-id="b1b84-170">El valor de la `hamiltonian` propiedad se conoce como objeto Hamiltonian y debe tener las propiedades y, `one_electron_integrals` `two_electron_integrals` tal y como se describe en el resto de esta sección.</span><span class="sxs-lookup"><span data-stu-id="b1b84-170">The value of the `hamiltonian` property is known as a Hamiltonian object, and MUST have the properties `one_electron_integrals` and `two_electron_integrals` as described in the remainder of this section.</span></span>
-<span data-ttu-id="b1b84-171">Un objeto Hamiltonian también puede tener una propiedad `particle_hole_representation` .</span><span class="sxs-lookup"><span data-stu-id="b1b84-171">A Hamiltonian object MAY also have a property `particle_hole_representation`.</span></span>
-<span data-ttu-id="b1b84-172">Si está presente, el valor de `particle_hole_representation` debe seguir el formato descrito en el resto de esta sección.</span><span class="sxs-lookup"><span data-stu-id="b1b84-172">If present, the value of `particle_hole_representation` MUST follow the format described in the remainder of this section.</span></span>
+<span data-ttu-id="030ac-169">Cada conjunto entero debe tener una propiedad `hamiltonian` cuyo valor sea un objeto JSON.</span><span class="sxs-lookup"><span data-stu-id="030ac-169">Each integral set MUST have a property `hamiltonian` whose value is a JSON object.</span></span>
+<span data-ttu-id="030ac-170">El valor de la `hamiltonian` propiedad se conoce como objeto Hamiltonian y debe tener las propiedades y, `one_electron_integrals` `two_electron_integrals` tal y como se describe en el resto de esta sección.</span><span class="sxs-lookup"><span data-stu-id="030ac-170">The value of the `hamiltonian` property is known as a Hamiltonian object, and MUST have the properties `one_electron_integrals` and `two_electron_integrals` as described in the remainder of this section.</span></span>
+<span data-ttu-id="030ac-171">Un objeto Hamiltonian también puede tener una propiedad `particle_hole_representation` .</span><span class="sxs-lookup"><span data-stu-id="030ac-171">A Hamiltonian object MAY also have a property `particle_hole_representation`.</span></span>
+<span data-ttu-id="030ac-172">Si está presente, el valor de `particle_hole_representation` debe seguir el formato descrito en el resto de esta sección.</span><span class="sxs-lookup"><span data-stu-id="030ac-172">If present, the value of `particle_hole_representation` MUST follow the format described in the remainder of this section.</span></span>
 
-##### <a name="one-electron-integrals-object"></a><span data-ttu-id="b1b84-173">Objeto integral de un solo electrones</span><span class="sxs-lookup"><span data-stu-id="b1b84-173">One-Electron Integrals Object</span></span> #####
+##### <a name="one-electron-integrals-object"></a><span data-ttu-id="030ac-173">Objeto integral de un solo electrones</span><span class="sxs-lookup"><span data-stu-id="030ac-173">One-Electron Integrals Object</span></span> #####
 
-<span data-ttu-id="b1b84-174">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-174">This section is normative.</span></span>
+<span data-ttu-id="030ac-174">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-174">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-175">La `one_electron_integrals` propiedad del objeto HAMILTONIAN debe ser una cantidad de matriz dispersa cuyos índices son dos enteros y cuyos valores son números.</span><span class="sxs-lookup"><span data-stu-id="b1b84-175">The `one_electron_integrals` property of the Hamiltonian object MUST be a sparse array quantity whose indices are two integers and whose values are numbers.</span></span>
-<span data-ttu-id="b1b84-176">Cada término debe tener índices `[i, j]` donde `i >= j` .</span><span class="sxs-lookup"><span data-stu-id="b1b84-176">Every term MUST have indices `[i, j]` where `i >= j`.</span></span>
+<span data-ttu-id="030ac-175">La `one_electron_integrals` propiedad del objeto HAMILTONIAN debe ser una cantidad de matriz dispersa cuyos índices son dos enteros y cuyos valores son números.</span><span class="sxs-lookup"><span data-stu-id="030ac-175">The `one_electron_integrals` property of the Hamiltonian object MUST be a sparse array quantity whose indices are two integers and whose values are numbers.</span></span>
+<span data-ttu-id="030ac-176">Cada término debe tener índices `[i, j]` donde `i >= j` .</span><span class="sxs-lookup"><span data-stu-id="030ac-176">Every term MUST have indices `[i, j]` where `i >= j`.</span></span>
 
-> <span data-ttu-id="b1b84-177">Tenga en cuenta Esto refleja la simetría que $h _ {ij} = h_ {ji} $, que es una consecuencia del hecho de que Hamiltonian es Hermitian.</span><span class="sxs-lookup"><span data-stu-id="b1b84-177">[NOTE] This reflects the symmetry that $h_{ij} = h_{ji}$ which is a consequence of the fact that the Hamiltonian is Hermitian.</span></span>
+> <span data-ttu-id="030ac-177">Tenga en cuenta Esto refleja la simetría que $h _ {ij} = h_ {ji} $, que es una consecuencia del hecho de que Hamiltonian es Hermitian.</span><span class="sxs-lookup"><span data-stu-id="030ac-177">[NOTE] This reflects the symmetry that $h_{ij} = h_{ji}$ which is a consequence of the fact that the Hamiltonian is Hermitian.</span></span>
 
 
-###### <a name="example"></a><span data-ttu-id="b1b84-178">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b1b84-178">Example</span></span> ######
+###### <a name="example"></a><span data-ttu-id="030ac-178">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="030ac-178">Example</span></span> ######
 
-<span data-ttu-id="b1b84-179">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-179">This section is informative.</span></span>
+<span data-ttu-id="030ac-179">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-179">This section is informative.</span></span>
 
-<span data-ttu-id="b1b84-180">La siguiente cantidad de matriz dispersa representa el Hamiltonian $ $ H = \left (-5,0 (a ^ \{ \dagger \} \_ {1, \uparrow} a \_ {1, \uparrow} + a ^ \{ \dagger \} \_ {1, \downarrow} a \_ {1, \downarrow}) + 0,17 (a ^ \{ \dagger \} \_ {2, \uparrow} a \_ {1, \uparrow} + a ^ \{ \dagger \} \_ {1, \uparrow} a \_ {2, \uparrow} + a ^ \{ \dagger \} \_ {2, \downarrow} a \_ {1, \downarrow} + a ^ \{ \dagger \} \_ {1, \downarrow} a \_ {2, \downarrow}) \right) \\ , \mathrm{ha}.</span><span class="sxs-lookup"><span data-stu-id="b1b84-180">The following sparse array quantity represents the Hamiltonian $$ H = \left(-5.0  (a^\{\dagger\}\_{1,\uparrow} a\_{1,\uparrow}+a^\{\dagger\}\_{1,\downarrow} a\_{1,\downarrow})+ 0.17 (a^\{\dagger\}\_{2,\uparrow} a\_{1,\uparrow}+ a^\{\dagger\}\_{1,\uparrow} a\_{2,\uparrow}+a^\{\dagger\}\_{2,\downarrow} a\_{1,\downarrow}+ a^\{\dagger\}\_{1,\downarrow} a\_{2,\downarrow})\right)\\,\mathrm{Ha}.</span></span>
+<span data-ttu-id="030ac-180">La siguiente cantidad de matriz dispersa representa el Hamiltonian $ $ H = \left (-5,0 (a ^ \{ \dagger \} \_ {1, \uparrow} a \_ {1, \uparrow} + a ^ \{ \dagger \} \_ {1, \downarrow} a \_ {1, \downarrow}) + 0,17 (a ^ \{ \dagger \} \_ {2, \uparrow} a \_ {1, \uparrow} + a ^ \{ \dagger \} \_ {1, \uparrow} a \_ {2, \uparrow} + a ^ \{ \dagger \} \_ {2, \downarrow} a \_ {1, \downarrow} + a ^ \{ \dagger \} \_ {1, \downarrow} a \_ {2, \downarrow}) \right) \\ , \mathrm{ha}.</span><span class="sxs-lookup"><span data-stu-id="030ac-180">The following sparse array quantity represents the Hamiltonian $$ H = \left(-5.0  (a^\{\dagger\}\_{1,\uparrow} a\_{1,\uparrow}+a^\{\dagger\}\_{1,\downarrow} a\_{1,\downarrow})+ 0.17 (a^\{\dagger\}\_{2,\uparrow} a\_{1,\uparrow}+ a^\{\dagger\}\_{1,\uparrow} a\_{2,\uparrow}+a^\{\dagger\}\_{2,\downarrow} a\_{1,\downarrow}+ a^\{\dagger\}\_{1,\downarrow} a\_{2,\downarrow})\right)\\,\mathrm{Ha}.</span></span>
 $$
 
 ```yaml
@@ -193,25 +196,25 @@ one_electron_integrals:     # required
         - [2, 1,  0.17]
 ```
 > [!NOTE]
-> <span data-ttu-id="b1b84-181">Broombridge usa una indización basada en 1.</span><span class="sxs-lookup"><span data-stu-id="b1b84-181">Broombridge uses 1-based indexing.</span></span>
+> <span data-ttu-id="030ac-181">Broombridge usa una indización basada en 1.</span><span class="sxs-lookup"><span data-stu-id="030ac-181">Broombridge uses 1-based indexing.</span></span>
 
 
-##### <a name="two-electron-integrals-object"></a><span data-ttu-id="b1b84-182">Objeto integral de dos electrones</span><span class="sxs-lookup"><span data-stu-id="b1b84-182">Two-Electron Integrals Object</span></span> #####
+##### <a name="two-electron-integrals-object"></a><span data-ttu-id="030ac-182">Objeto integral de dos electrones</span><span class="sxs-lookup"><span data-stu-id="030ac-182">Two-Electron Integrals Object</span></span> #####
 
-<span data-ttu-id="b1b84-183">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-183">This section is normative.</span></span>
+<span data-ttu-id="030ac-183">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-183">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-184">La `two_electron_integrals` propiedad del objeto HAMILTONIAN debe ser una cantidad de matriz dispersa con una propiedad adicional denominada `index_convention` .</span><span class="sxs-lookup"><span data-stu-id="b1b84-184">The `two_electron_integrals` property of the Hamiltonian object MUST be a sparse array quantity with one additional property called `index_convention`.</span></span>
-<span data-ttu-id="b1b84-185">Cada elemento del valor de `two_electron_integrals` debe tener cuatro índices.</span><span class="sxs-lookup"><span data-stu-id="b1b84-185">Each element of the value of `two_electron_integrals` MUST have four indices.</span></span>
+<span data-ttu-id="030ac-184">La `two_electron_integrals` propiedad del objeto HAMILTONIAN debe ser una cantidad de matriz dispersa con una propiedad adicional denominada `index_convention` .</span><span class="sxs-lookup"><span data-stu-id="030ac-184">The `two_electron_integrals` property of the Hamiltonian object MUST be a sparse array quantity with one additional property called `index_convention`.</span></span>
+<span data-ttu-id="030ac-185">Cada elemento del valor de `two_electron_integrals` debe tener cuatro índices.</span><span class="sxs-lookup"><span data-stu-id="030ac-185">Each element of the value of `two_electron_integrals` MUST have four indices.</span></span>
 
-<span data-ttu-id="b1b84-186">Cada `two_electron_integrals` propiedad debe tener una `index_convention` propiedad.</span><span class="sxs-lookup"><span data-stu-id="b1b84-186">Each `two_electron_integrals` property MUST have a `index_convention` property.</span></span>
-<span data-ttu-id="b1b84-187">El valor de la `index_convention` propiedad debe ser uno de los valores permitidos enumerados en la tabla 1.</span><span class="sxs-lookup"><span data-stu-id="b1b84-187">The value of the `index_convention` property MUST be one of the allowed values listed in Table 1.</span></span>
-<span data-ttu-id="b1b84-188">Si el valor de `index_convention` es `mulliken` , para cada elemento de la `two_electron_integrals` cantidad de matriz dispersa, un analizador que carga un documento de Broombridge debe crear una instancia de un término Hamiltonian igual al operador de dos electrones $h _ {i, j, k, l} a ^ \ dagger_i a ^ \ dagger_j a_k A_L $, donde $i $, $j $, $k $ y $l $ deben ser enteros en el intervalo inclusivo comprendido entre 1 y el número de electrones especificado por la `n_electrons` propiedad del objeto de conjunto entero, y donde $h _ {i, j, k, l} $ es el elemento `[i, j, k, l, h(i, j, k, l)]` de la cantidad de matriz dispersa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-188">If the value of `index_convention` is `mulliken`, then for each element of the `two_electron_integrals` sparse array quantity, a parser loading a Broombridge document MUST instantiate a Hamiltonian term equal to the two-electron operator $h_{i, j, k, l} a^\dagger_i a^\dagger_j a_k a_l$, where $i$, $j$, $k$, and $l$ MUST be integers in the inclusive range from 1 to the number of electrons specified by the `n_electrons` property of the integral set object, and where $h_{i, j, k, l}$ is the element `[i, j, k, l, h(i, j, k, l)]` of the sparse array quantity.</span></span>
+<span data-ttu-id="030ac-186">Cada `two_electron_integrals` propiedad debe tener una `index_convention` propiedad.</span><span class="sxs-lookup"><span data-stu-id="030ac-186">Each `two_electron_integrals` property MUST have a `index_convention` property.</span></span>
+<span data-ttu-id="030ac-187">El valor de la `index_convention` propiedad debe ser uno de los valores permitidos enumerados en la tabla 1.</span><span class="sxs-lookup"><span data-stu-id="030ac-187">The value of the `index_convention` property MUST be one of the allowed values listed in Table 1.</span></span>
+<span data-ttu-id="030ac-188">Si el valor de `index_convention` es `mulliken` , para cada elemento de la `two_electron_integrals` cantidad de matriz dispersa, un analizador que carga un documento de Broombridge debe crear una instancia de un término Hamiltonian igual al operador de dos electrones $h _ {i, j, k, l} a ^ \ dagger_i a ^ \ dagger_j a_k A_L $, donde $i $, $j $, $k $ y $l $ deben ser enteros en el intervalo inclusivo comprendido entre 1 y el número de electrones especificado por la `n_electrons` propiedad del objeto de conjunto entero, y donde $h _ {i, j, k, l} $ es el elemento `[i, j, k, l, h(i, j, k, l)]` de la cantidad de matriz dispersa.</span><span class="sxs-lookup"><span data-stu-id="030ac-188">If the value of `index_convention` is `mulliken`, then for each element of the `two_electron_integrals` sparse array quantity, a parser loading a Broombridge document MUST instantiate a Hamiltonian term equal to the two-electron operator $h_{i, j, k, l} a^\dagger_i a^\dagger_j a_k a_l$, where $i$, $j$, $k$, and $l$ MUST be integers in the inclusive range from 1 to the number of electrons specified by the `n_electrons` property of the integral set object, and where $h_{i, j, k, l}$ is the element `[i, j, k, l, h(i, j, k, l)]` of the sparse array quantity.</span></span>
 
-###### <a name="symmetries"></a><span data-ttu-id="b1b84-189">Symmetries</span><span class="sxs-lookup"><span data-stu-id="b1b84-189">Symmetries</span></span> ######
+###### <a name="symmetries"></a><span data-ttu-id="030ac-189">Symmetries</span><span class="sxs-lookup"><span data-stu-id="030ac-189">Symmetries</span></span> ######
 
-<span data-ttu-id="b1b84-190">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-190">This section is normative.</span></span>
+<span data-ttu-id="030ac-190">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-190">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-191">Si la `index_convention` propiedad de un `two_electron_integrals` objeto es igual a `mulliken` , si hay un elemento con índices `[i, j, k, l]` , los índices siguientes no deben estar presentes a menos que sean iguales a `[i, j, k, l]` :</span><span class="sxs-lookup"><span data-stu-id="b1b84-191">If the `index_convention` property of a `two_electron_integrals` object is equal to `mulliken`, then if an element with indices `[i, j, k, l]` is present, the following indices MUST NOT be present unless they are equal to `[i, j, k, l]`:</span></span>
+<span data-ttu-id="030ac-191">Si la `index_convention` propiedad de un `two_electron_integrals` objeto es igual a `mulliken` , si hay un elemento con índices `[i, j, k, l]` , los índices siguientes no deben estar presentes a menos que sean iguales a `[i, j, k, l]` :</span><span class="sxs-lookup"><span data-stu-id="030ac-191">If the `index_convention` property of a `two_electron_integrals` object is equal to `mulliken`, then if an element with indices `[i, j, k, l]` is present, the following indices MUST NOT be present unless they are equal to `[i, j, k, l]`:</span></span>
 
 - `[i, j, l, k]`
 - `[j, i, k, l]`
@@ -221,19 +224,19 @@ one_electron_integrals:     # required
 - `[l, k, j, i]`
 
 > [!NOTE]
-> <span data-ttu-id="b1b84-192">Dado `index_convention` que la propiedad es un objeto quantity disperso, no se pueden repetir índices en elementos diferentes.</span><span class="sxs-lookup"><span data-stu-id="b1b84-192">Because the `index_convention` property is a sparse quantity object, no indices may be repeated on different elements.</span></span>
-> <span data-ttu-id="b1b84-193">En concreto, si un elemento con índices `[i, j, k, l]` está presente, ningún otro elemento puede tener esos índices.</span><span class="sxs-lookup"><span data-stu-id="b1b84-193">In particular, if an element with indices `[i, j, k, l]` is present, no other element may have those indices.</span></span>
+> <span data-ttu-id="030ac-192">Dado `index_convention` que la propiedad es un objeto quantity disperso, no se pueden repetir índices en elementos diferentes.</span><span class="sxs-lookup"><span data-stu-id="030ac-192">Because the `index_convention` property is a sparse quantity object, no indices may be repeated on different elements.</span></span>
+> <span data-ttu-id="030ac-193">En concreto, si un elemento con índices `[i, j, k, l]` está presente, ningún otro elemento puede tener esos índices.</span><span class="sxs-lookup"><span data-stu-id="030ac-193">In particular, if an element with indices `[i, j, k, l]` is present, no other element may have those indices.</span></span>
 
 
 <!-- h_{ijkl} = h_{ijlk}=h_{jikl}=h_{jilk}=h_{klij}=h_{klji}=h_{lkji}. -->
 
-###### <a name="example"></a><span data-ttu-id="b1b84-194">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b1b84-194">Example</span></span> #######
+###### <a name="example"></a><span data-ttu-id="030ac-194">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="030ac-194">Example</span></span> #######
 
-<span data-ttu-id="b1b84-195">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-195">This section is informative.</span></span>
+<span data-ttu-id="030ac-195">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-195">This section is informative.</span></span>
 
-<span data-ttu-id="b1b84-196">El siguiente objeto especifica Hamiltonian</span><span class="sxs-lookup"><span data-stu-id="b1b84-196">The following object specifies the Hamiltonian</span></span>
+<span data-ttu-id="030ac-196">El siguiente objeto especifica Hamiltonian</span><span class="sxs-lookup"><span data-stu-id="030ac-196">The following object specifies the Hamiltonian</span></span>
 
-<span data-ttu-id="b1b84-197">$ $ H = \frac12 \sum \_ {\sigma, \rho\in \\ {\uparrow, \downarrow \\ }} \Biggr (1,6 a ^ {\dagger} \_ {1, \sigma} a ^ {\dagger} \_ {1, \rho} a \_ {1, \rho} a \_ {1, \sigma}-0,1 a ^ {\dagger} \_ {6, \sigma} a ^ {\dagger} { \_ 1, \rho} a \_ {3, \rho} a \_ {2, \sigma}-0,1 a ^ {\dagger} \_ {6, \sigma} a ^ {\dagger} \_ {1, \rho} a \_ {2, \rho} a \_ {3, \sigma}-0,1 a ^ {\dagger} \_ {1, \sigma} a ^ {\dagger} \_ {6, \rho} \_ {3, \rho} a \_ {2, \sigma}-0,1 a ^ {\dagger} \_ {1, \sigma} a ^ {\dagger} \_ {6, \rho} a \_ {2, \rho} a \_ {3, \sigma} $ $ $ $-0,1 a ^ {\dagger} \_ {3, \sigma} a ^ {\dagger} \_ {2, \rho} a \_ {6, \rho} a \_ {1, \sigma}-0,1 a ^ {\dagger} \_ {3, \sigma} a ^ {\dagger} \_ {2, \rho} a \_ {1, \rho} a \_ {6, \sigma}-0,1 a ^ {\dagger} \_ {2, \sigma} a ^ {\dagger} \_ {3 , \rho} a \_ {6, \rho} a \_ {1, \sigma}-0,1 a ^ {\dagger} \_ {2, \sigma} a ^ {\dagger} \_ {3, \rho} a \_ {1, \Rho} a \_ {6, \sigma}\Biggr) \\ , \textrm{ha}.</span><span class="sxs-lookup"><span data-stu-id="b1b84-197">$$ H = \frac12 \sum\_{\sigma,\rho\in\\{\uparrow,\downarrow\\}}\Biggr( 1.6 a^{\dagger}\_{1,\sigma} a^{\dagger}\_{1,\rho} a\_{1,\rho} a\_{1,\sigma}- 0.1 a^{\dagger}\_{6,\sigma} a^{\dagger}\_{1,\rho} a\_{3,\rho} a\_{2,\sigma}- 0.1 a^{\dagger}\_{6,\sigma} a^{\dagger}\_{1,\rho} a\_{2,\rho} a\_{3,\sigma}- 0.1 a^{\dagger}\_{1,\sigma} a^{\dagger}\_{6,\rho} a\_{3,\rho} a\_{2,\sigma}- 0.1 a^{\dagger}\_{1,\sigma} a^{\dagger}\_{6,\rho} a\_{2,\rho} a\_{3,\sigma} $$ $$- 0.1 a^{\dagger}\_{3,\sigma} a^{\dagger}\_{2,\rho} a\_{6,\rho} a\_{1,\sigma}- 0.1 a^{\dagger}\_{3,\sigma} a^{\dagger}\_{2,\rho} a\_{1,\rho} a\_{6,\sigma}- 0.1 a^{\dagger}\_{2,\sigma} a^{\dagger}\_{3,\rho} a\_{6,\rho} a\_{1,\sigma}- 0.1 a^{\dagger}\_{2,\sigma} a^{\dagger}\_{3,\rho} a\_{1,\rho} a\_{6,\sigma}\Biggr)\\,\textrm{Ha}.</span></span>
+<span data-ttu-id="030ac-197">$ $ H = \frac12 \sum \_ {\sigma, \rho\in \\ {\uparrow, \downarrow \\ }} \Biggr (1,6 a ^ {\dagger} \_ {1, \sigma} a ^ {\dagger} \_ {1, \rho} a \_ {1, \rho} a \_ {1, \sigma}-0,1 a ^ {\dagger} \_ {6, \sigma} a ^ {\dagger} { \_ 1, \rho} a \_ {3, \rho} a \_ {2, \sigma}-0,1 a ^ {\dagger} \_ {6, \sigma} a ^ {\dagger} \_ {1, \rho} a \_ {2, \rho} a \_ {3, \sigma}-0,1 a ^ {\dagger} \_ {1, \sigma} a ^ {\dagger} \_ {6, \rho} \_ {3, \rho} a \_ {2, \sigma}-0,1 a ^ {\dagger} \_ {1, \sigma} a ^ {\dagger} \_ {6, \rho} a \_ {2, \rho} a \_ {3, \sigma} $ $ $ $-0,1 a ^ {\dagger} \_ {3, \sigma} a ^ {\dagger} \_ {2, \rho} a \_ {6, \rho} a \_ {1, \sigma}-0,1 a ^ {\dagger} \_ {3, \sigma} a ^ {\dagger} \_ {2, \rho} a \_ {1, \rho} a \_ {6, \sigma}-0,1 a ^ {\dagger} \_ {2, \sigma} a ^ {\dagger} \_ {3 , \rho} a \_ {6, \rho} a \_ {1, \sigma}-0,1 a ^ {\dagger} \_ {2, \sigma} a ^ {\dagger} \_ {3, \rho} a \_ {1, \Rho} a \_ {6, \sigma}\Biggr) \\ , \textrm{ha}.</span><span class="sxs-lookup"><span data-stu-id="030ac-197">$$ H = \frac12 \sum\_{\sigma,\rho\in\\{\uparrow,\downarrow\\}}\Biggr( 1.6 a^{\dagger}\_{1,\sigma} a^{\dagger}\_{1,\rho} a\_{1,\rho} a\_{1,\sigma}- 0.1 a^{\dagger}\_{6,\sigma} a^{\dagger}\_{1,\rho} a\_{3,\rho} a\_{2,\sigma}- 0.1 a^{\dagger}\_{6,\sigma} a^{\dagger}\_{1,\rho} a\_{2,\rho} a\_{3,\sigma}- 0.1 a^{\dagger}\_{1,\sigma} a^{\dagger}\_{6,\rho} a\_{3,\rho} a\_{2,\sigma}- 0.1 a^{\dagger}\_{1,\sigma} a^{\dagger}\_{6,\rho} a\_{2,\rho} a\_{3,\sigma} $$ $$- 0.1 a^{\dagger}\_{3,\sigma} a^{\dagger}\_{2,\rho} a\_{6,\rho} a\_{1,\sigma}- 0.1 a^{\dagger}\_{3,\sigma} a^{\dagger}\_{2,\rho} a\_{1,\rho} a\_{6,\sigma}- 0.1 a^{\dagger}\_{2,\sigma} a^{\dagger}\_{3,\rho} a\_{6,\rho} a\_{1,\sigma}- 0.1 a^{\dagger}\_{2,\sigma} a^{\dagger}\_{3,\rho} a\_{1,\rho} a\_{6,\sigma}\Biggr)\\,\textrm{Ha}.</span></span>
 $$
 
 ```yaml
@@ -246,31 +249,31 @@ two_electron_integrals:
         - [6, 1, 3, 2, -0.1]
 ```
 
-##### <a name="particlehole-representation-object"></a><span data-ttu-id="b1b84-198">Partícula: objeto de representación de taladro</span><span class="sxs-lookup"><span data-stu-id="b1b84-198">Particle–Hole Representation Object</span></span> #####
+##### <a name="particlehole-representation-object"></a><span data-ttu-id="030ac-198">Partícula: objeto de representación de taladro</span><span class="sxs-lookup"><span data-stu-id="030ac-198">Particle–Hole Representation Object</span></span> #####
 
-<span data-ttu-id="b1b84-199">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-199">This section is normative.</span></span>
+<span data-ttu-id="030ac-199">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-199">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-200">El objeto de representación de partícula-agujero especifica que los enteros almacenados se definen con respecto a la representación del orificio de partículas, donde los operadores de creación y Annihilation describen las desplazamientos fuera del estado de referencia usado, como un estado de Hartree – Fock.</span><span class="sxs-lookup"><span data-stu-id="b1b84-200">The particle–hole representation object specifies that the integrals stored are defined with respect to particle hole representation wherein the creation and annihilation operators describe excitations away from the reference state used, such as a Hartree–Fock state.</span></span>
-<span data-ttu-id="b1b84-201">El objeto es opcional.</span><span class="sxs-lookup"><span data-stu-id="b1b84-201">The object is OPTIONAL.</span></span>
-<span data-ttu-id="b1b84-202">Si no se especifica el objeto, el Hamiltonian se interpretará como no dado en la representación del agujero de partículas.</span><span class="sxs-lookup"><span data-stu-id="b1b84-202">If the object is not specified then the Hamiltonian is to be interpreted as not given in particle-hole representation.</span></span>
-<span data-ttu-id="b1b84-203">Si está presente, el valor de `particle_hole_representation` debe ser un objeto de cantidad de matriz dispersa cuyos índices son de cuatro enteros y cuyos valores son un número y una cadena.</span><span class="sxs-lookup"><span data-stu-id="b1b84-203">If present, the value of `particle_hole_representation` MUST be a sparse array quantity object whose indices are four integers, and whose values are a number and a string.</span></span>
-<span data-ttu-id="b1b84-204">La parte de la cadena del valor de cada elemento debe contener solo los caracteres `'+'` y `'-'` que especifica si un factor determinado en el término es un operador de creación o Annihilation en la representación de partícula-agujero.</span><span class="sxs-lookup"><span data-stu-id="b1b84-204">The string portion of the value of each element MUST contain only the characters `'+'` and `'-'` which specifies whether a given factor in the term is a creation or annihilation operator in the particle–hole representation.</span></span>  <span data-ttu-id="b1b84-205">Por ejemplo `"-+++"` , coresponden a un hueco que se crea en el sitio $i $ y a las partículas que se crean en sitios $j, k $ y $l $.</span><span class="sxs-lookup"><span data-stu-id="b1b84-205">For example `"-+++"` coresponds to a hole being created at site $i$ and particles being created at sites $j,k$ and $l$.</span></span>
+<span data-ttu-id="030ac-200">El objeto de representación de partícula-agujero especifica que los enteros almacenados se definen con respecto a la representación del orificio de partículas, donde los operadores de creación y Annihilation describen las desplazamientos fuera del estado de referencia usado, como un estado de Hartree – Fock.</span><span class="sxs-lookup"><span data-stu-id="030ac-200">The particle–hole representation object specifies that the integrals stored are defined with respect to particle hole representation wherein the creation and annihilation operators describe excitations away from the reference state used, such as a Hartree–Fock state.</span></span>
+<span data-ttu-id="030ac-201">El objeto es opcional.</span><span class="sxs-lookup"><span data-stu-id="030ac-201">The object is OPTIONAL.</span></span>
+<span data-ttu-id="030ac-202">Si no se especifica el objeto, el Hamiltonian se interpretará como no dado en la representación del agujero de partículas.</span><span class="sxs-lookup"><span data-stu-id="030ac-202">If the object is not specified then the Hamiltonian is to be interpreted as not given in particle-hole representation.</span></span>
+<span data-ttu-id="030ac-203">Si está presente, el valor de `particle_hole_representation` debe ser un objeto de cantidad de matriz dispersa cuyos índices son de cuatro enteros y cuyos valores son un número y una cadena.</span><span class="sxs-lookup"><span data-stu-id="030ac-203">If present, the value of `particle_hole_representation` MUST be a sparse array quantity object whose indices are four integers, and whose values are a number and a string.</span></span>
+<span data-ttu-id="030ac-204">La parte de la cadena del valor de cada elemento debe contener solo los caracteres `'+'` y `'-'` que especifica si un factor determinado en el término es un operador de creación o Annihilation en la representación de partícula-agujero.</span><span class="sxs-lookup"><span data-stu-id="030ac-204">The string portion of the value of each element MUST contain only the characters `'+'` and `'-'` which specifies whether a given factor in the term is a creation or annihilation operator in the particle–hole representation.</span></span>  <span data-ttu-id="030ac-205">Por ejemplo `"-+++"` , coresponden a un hueco que se crea en el sitio $i $ y a las partículas que se crean en sitios $j, k $ y $l $.</span><span class="sxs-lookup"><span data-stu-id="030ac-205">For example `"-+++"` coresponds to a hole being created at site $i$ and particles being created at sites $j,k$ and $l$.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b1b84-206">Como el valor de `particle_hole_representation` es un objeto de cantidad de matriz dispersa, `unit` `format` se deben especificar las propiedades y.</span><span class="sxs-lookup"><span data-stu-id="b1b84-206">As the value of the `particle_hole_representation` is a sparse array quantity object, the `unit` and `format` properties must be specified.</span></span>
-> <span data-ttu-id="b1b84-207">Las unidades aceptables se incluyen en la tabla 1.</span><span class="sxs-lookup"><span data-stu-id="b1b84-207">Acceptable units include are listed in Table 1.</span></span>
-> <span data-ttu-id="b1b84-208">La `format` propiedad es obligatoria e indica si los coeficientes de Hamiltonian se especifican como una matriz densa o dispersa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-208">The `format` property is required, and indicates whether the Hamiltonian coefficients are specified as a dense or sparse array.</span></span>
-> <span data-ttu-id="b1b84-209">En la versión actual, solo se admiten matrices dispersas, con la interpretación de que todos los elementos no especificados son $0 $, pero las versiones futuras pueden agregar compatibilidad con valores adicionales de la `format` propiedad.</span><span class="sxs-lookup"><span data-stu-id="b1b84-209">In the current version, only sparse arrays are supported, with interpretation that all unspecified elements are $0$, but future versions may add support for additional values of the `format` property.</span></span>
+> <span data-ttu-id="030ac-206">Como el valor de `particle_hole_representation` es un objeto de cantidad de matriz dispersa, `unit` `format` se deben especificar las propiedades y.</span><span class="sxs-lookup"><span data-stu-id="030ac-206">As the value of the `particle_hole_representation` is a sparse array quantity object, the `unit` and `format` properties must be specified.</span></span>
+> <span data-ttu-id="030ac-207">Las unidades aceptables se incluyen en la tabla 1.</span><span class="sxs-lookup"><span data-stu-id="030ac-207">Acceptable units include are listed in Table 1.</span></span>
+> <span data-ttu-id="030ac-208">La `format` propiedad es obligatoria e indica si los coeficientes de Hamiltonian se especifican como una matriz densa o dispersa.</span><span class="sxs-lookup"><span data-stu-id="030ac-208">The `format` property is required, and indicates whether the Hamiltonian coefficients are specified as a dense or sparse array.</span></span>
+> <span data-ttu-id="030ac-209">En la versión actual, solo se admiten matrices dispersas, con la interpretación de que todos los elementos no especificados son $0 $, pero las versiones futuras pueden agregar compatibilidad con valores adicionales de la `format` propiedad.</span><span class="sxs-lookup"><span data-stu-id="030ac-209">In the current version, only sparse arrays are supported, with interpretation that all unspecified elements are $0$, but future versions may add support for additional values of the `format` property.</span></span>
 
-### <a name="initial-state-section"></a><span data-ttu-id="b1b84-210">Sección de estado inicial</span><span class="sxs-lookup"><span data-stu-id="b1b84-210">Initial State Section</span></span> ###
+### <a name="initial-state-section"></a><span data-ttu-id="030ac-210">Sección de estado inicial</span><span class="sxs-lookup"><span data-stu-id="030ac-210">Initial State Section</span></span> ###
 
-<span data-ttu-id="b1b84-211">El objeto initial_state_suggestion especifica los Estados iniciales de Quantum de interés para el Hamiltonian especificado.</span><span class="sxs-lookup"><span data-stu-id="b1b84-211">The initial_state_suggestion object specifies initial quantum states of interest to the specified Hamiltonian.</span></span> <span data-ttu-id="b1b84-212">Este objeto debe ser una matriz de `state` objetos JSON.</span><span class="sxs-lookup"><span data-stu-id="b1b84-212">This object must be an array of JSON `state` objects.</span></span>
+<span data-ttu-id="030ac-211">El objeto initial_state_suggestion especifica los Estados iniciales de Quantum de interés para el Hamiltonian especificado.</span><span class="sxs-lookup"><span data-stu-id="030ac-211">The initial_state_suggestion object specifies initial quantum states of interest to the specified Hamiltonian.</span></span> <span data-ttu-id="030ac-212">Este objeto debe ser una matriz de `state` objetos JSON.</span><span class="sxs-lookup"><span data-stu-id="030ac-212">This object must be an array of JSON `state` objects.</span></span>
 
-#### <a name="state-object"></a><span data-ttu-id="b1b84-213">Objeto de estado</span><span class="sxs-lookup"><span data-stu-id="b1b84-213">State object</span></span> ####
+#### <a name="state-object"></a><span data-ttu-id="030ac-213">Objeto de estado</span><span class="sxs-lookup"><span data-stu-id="030ac-213">State object</span></span> ####
 
-<span data-ttu-id="b1b84-214">Cada Estado representa una superposición de órbitas ocupadas.</span><span class="sxs-lookup"><span data-stu-id="b1b84-214">Each states represents a superposition of occupied orbitals.</span></span> <span data-ttu-id="b1b84-215">Cada objeto de Estado debe tener una `label` propiedad que contenga una cadena.</span><span class="sxs-lookup"><span data-stu-id="b1b84-215">Each state object MUST have a `label` property containing a string.</span></span> <span data-ttu-id="b1b84-216">Cada objeto de Estado debe tener una `superposition` propiedad que contenga una matriz de Estados de base y sus amplitudes no normalizadas.</span><span class="sxs-lookup"><span data-stu-id="b1b84-216">Each state object MUST have a `superposition` property containing an array of basis states and their unnormalized amplitudes.</span></span>
+<span data-ttu-id="030ac-214">Cada Estado representa una superposición de órbitas ocupadas.</span><span class="sxs-lookup"><span data-stu-id="030ac-214">Each states represents a superposition of occupied orbitals.</span></span> <span data-ttu-id="030ac-215">Cada objeto de Estado debe tener una `label` propiedad que contenga una cadena.</span><span class="sxs-lookup"><span data-stu-id="030ac-215">Each state object MUST have a `label` property containing a string.</span></span> <span data-ttu-id="030ac-216">Cada objeto de Estado debe tener una `superposition` propiedad que contenga una matriz de Estados de base y sus amplitudes no normalizadas.</span><span class="sxs-lookup"><span data-stu-id="030ac-216">Each state object MUST have a `superposition` property containing an array of basis states and their unnormalized amplitudes.</span></span>
 
-<span data-ttu-id="b1b84-217">Por ejemplo, los Estados iniciales $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger} \_ {1, \uparrow}a ^ {\dagger} \_ {2, \uparrow}a ^ {\dagger} \_ {2, \downarrow}) \ket {0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger} \_ {1, \uparrow}a ^ {\dagger} \_ {2, \uparrow}a ^ {\dagger} \_ {2, \downarrow}) + 0,2 (a ^ {\dagger} \_ {1, \uparrow}a ^ {\dagger} \_ {3, \uparrow}a ^ {\dagger} \_ {2, \downarrow})} {\sqrt{| 0.1 | ^ 2 + | 0,2 | ^ 2}} \ket {0} $ $ se representan mediante</span><span class="sxs-lookup"><span data-stu-id="b1b84-217">For example, the initial states $$ \ket{G0}=\ket{G1}=\ket{G2}=(a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})\ket{0} $$ $$ \ket{E}=\frac{0.1 (a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})+0.2 (a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{3,\uparrow}a^{\dagger}\_{2,\downarrow})}{\sqrt{|0.1|^2+|0.2|^2}}\ket{0} $$ are represented by</span></span>
+<span data-ttu-id="030ac-217">Por ejemplo, los Estados iniciales $ $ \ket{G0} = \ket{G1} = \ket{G2} = (a ^ {\dagger} \_ {1, \uparrow}a ^ {\dagger} \_ {2, \uparrow}a ^ {\dagger} \_ {2, \downarrow}) \ket {0} $ $ $ $ \ket{E} = \frac{0.1 (a ^ {\dagger} \_ {1, \uparrow}a ^ {\dagger} \_ {2, \uparrow}a ^ {\dagger} \_ {2, \downarrow}) + 0,2 (a ^ {\dagger} \_ {1, \uparrow}a ^ {\dagger} \_ {3, \uparrow}a ^ {\dagger} \_ {2, \downarrow})} {\sqrt{| 0.1 | ^ 2 + | 0,2 | ^ 2}} \ket {0} $ $ se representan mediante</span><span class="sxs-lookup"><span data-stu-id="030ac-217">For example, the initial states $$ \ket{G0}=\ket{G1}=\ket{G2}=(a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})\ket{0} $$ $$ \ket{E}=\frac{0.1 (a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{2,\uparrow}a^{\dagger}\_{2,\downarrow})+0.2 (a^{\dagger}\_{1,\uparrow}a^{\dagger}\_{3,\uparrow}a^{\dagger}\_{2,\downarrow})}{\sqrt{|0.1|^2+|0.2|^2}}\ket{0} $$ are represented by</span></span>
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
     - state:
@@ -292,48 +295,48 @@ initial_state_suggestions: # optional. If not provided, spin-orbitals will be fi
             - [0.2, "(1a)+","(3a)+","(2b)+","|vacuum>"]
 ```
 
-#### <a name="basis-set-object"></a><span data-ttu-id="b1b84-218">Objeto de conjunto de base</span><span class="sxs-lookup"><span data-stu-id="b1b84-218">Basis Set Object</span></span> ####
+#### <a name="basis-set-object"></a><span data-ttu-id="030ac-218">Objeto de conjunto de base</span><span class="sxs-lookup"><span data-stu-id="030ac-218">Basis Set Object</span></span> ####
 
-<span data-ttu-id="b1b84-219">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-219">This section is normative.</span></span>
+<span data-ttu-id="030ac-219">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-219">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-220">Cada objeto de conjunto entero puede tener una `basis_set` propiedad.</span><span class="sxs-lookup"><span data-stu-id="b1b84-220">Each integral set object MAY have a `basis_set` property.</span></span>
-<span data-ttu-id="b1b84-221">Si está presente, el valor de la `basis_set` propiedad debe ser un objeto con dos propiedades, `type` y `name` .</span><span class="sxs-lookup"><span data-stu-id="b1b84-221">If present, the value of the `basis_set` property MUST be an object with two properties, `type` and `name`.</span></span>
+<span data-ttu-id="030ac-220">Cada objeto de conjunto entero puede tener una `basis_set` propiedad.</span><span class="sxs-lookup"><span data-stu-id="030ac-220">Each integral set object MAY have a `basis_set` property.</span></span>
+<span data-ttu-id="030ac-221">Si está presente, el valor de la `basis_set` propiedad debe ser un objeto con dos propiedades, `type` y `name` .</span><span class="sxs-lookup"><span data-stu-id="030ac-221">If present, the value of the `basis_set` property MUST be an object with two properties, `type` and `name`.</span></span>
 
-<span data-ttu-id="b1b84-222">Las funciones de base identificadas por el valor de la `basis_set` propiedad deben ser de valor real.</span><span class="sxs-lookup"><span data-stu-id="b1b84-222">The basis functions identified by the value of the `basis_set` property MUST be real-valued.</span></span>
+<span data-ttu-id="030ac-222">Las funciones de base identificadas por el valor de la `basis_set` propiedad deben ser de valor real.</span><span class="sxs-lookup"><span data-stu-id="030ac-222">The basis functions identified by the value of the `basis_set` property MUST be real-valued.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b1b84-223">La suposición de que todas las funciones base son de valor real se pueden relajar en versiones futuras de esta especificación.</span><span class="sxs-lookup"><span data-stu-id="b1b84-223">The assumption that all basis functions are real-valued may be relaxed in future versions of this specification.</span></span>
+> <span data-ttu-id="030ac-223">La suposición de que todas las funciones base son de valor real se pueden relajar en versiones futuras de esta especificación.</span><span class="sxs-lookup"><span data-stu-id="030ac-223">The assumption that all basis functions are real-valued may be relaxed in future versions of this specification.</span></span>
 
-## <a name="tables-and-lists"></a><span data-ttu-id="b1b84-224">Tablas y listas</span><span class="sxs-lookup"><span data-stu-id="b1b84-224">Tables and Lists</span></span> ##
+## <a name="tables-and-lists"></a><span data-ttu-id="030ac-224">Tablas y listas</span><span class="sxs-lookup"><span data-stu-id="030ac-224">Tables and Lists</span></span> ##
 
-### <a name="table-1-allowed-physical-units"></a><span data-ttu-id="b1b84-225">Tabla 1.</span><span class="sxs-lookup"><span data-stu-id="b1b84-225">Table 1.</span></span> <span data-ttu-id="b1b84-226">Unidades físicas permitidas</span><span class="sxs-lookup"><span data-stu-id="b1b84-226">Allowed Physical Units</span></span> ###
+### <a name="table-1-allowed-physical-units"></a><span data-ttu-id="030ac-225">Tabla 1.</span><span class="sxs-lookup"><span data-stu-id="030ac-225">Table 1.</span></span> <span data-ttu-id="030ac-226">Unidades físicas permitidas</span><span class="sxs-lookup"><span data-stu-id="030ac-226">Allowed Physical Units</span></span> ###
 
-<span data-ttu-id="b1b84-227">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-227">This section is normative.</span></span>
+<span data-ttu-id="030ac-227">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-227">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-228">Cualquier cadena que especifique una unidad debe ser una de las siguientes:</span><span class="sxs-lookup"><span data-stu-id="b1b84-228">Any string specifying a unit MUST be one of the following:</span></span>
+<span data-ttu-id="030ac-228">Cualquier cadena que especifique una unidad debe ser una de las siguientes:</span><span class="sxs-lookup"><span data-stu-id="030ac-228">Any string specifying a unit MUST be one of the following:</span></span>
 
 - `hartree`
 - `ev`
 
-<span data-ttu-id="b1b84-229">Los analizadores y productores deben tratar los siguientes objetos de cantidad simple como equivalentes:</span><span class="sxs-lookup"><span data-stu-id="b1b84-229">Parsers and producers MUST treat the following simple quantity objects as equivalent:</span></span>
+<span data-ttu-id="030ac-229">Los analizadores y productores deben tratar los siguientes objetos de cantidad simple como equivalentes:</span><span class="sxs-lookup"><span data-stu-id="030ac-229">Parsers and producers MUST treat the following simple quantity objects as equivalent:</span></span>
 
 ```yaml
 - {"units": "hartree", "value": 1}
 - {"units": "ev", "value": 27.2113831301723}
 ```
 
-### <a name="table-2-allowed-index-conventions"></a><span data-ttu-id="b1b84-230">Tabla 2.</span><span class="sxs-lookup"><span data-stu-id="b1b84-230">Table 2.</span></span> <span data-ttu-id="b1b84-231">Convenciones de índice permitido</span><span class="sxs-lookup"><span data-stu-id="b1b84-231">Allowed Index Conventions</span></span> ###
+### <a name="table-2-allowed-index-conventions"></a><span data-ttu-id="030ac-230">Tabla 2.</span><span class="sxs-lookup"><span data-stu-id="030ac-230">Table 2.</span></span> <span data-ttu-id="030ac-231">Convenciones de índice permitido</span><span class="sxs-lookup"><span data-stu-id="030ac-231">Allowed Index Conventions</span></span> ###
 
-<span data-ttu-id="b1b84-232">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-232">This section is normative.</span></span>
+<span data-ttu-id="030ac-232">Esta sección es normativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-232">This section is normative.</span></span>
 
-<span data-ttu-id="b1b84-233">Cualquier cadena que especifique una Convención de índice debe ser una de las siguientes:</span><span class="sxs-lookup"><span data-stu-id="b1b84-233">Any string specifying an index convention MUST be one of the following:</span></span>
+<span data-ttu-id="030ac-233">Cualquier cadena que especifique una Convención de índice debe ser una de las siguientes:</span><span class="sxs-lookup"><span data-stu-id="030ac-233">Any string specifying an index convention MUST be one of the following:</span></span>
 
 - `mulliken`
 
-<span data-ttu-id="b1b84-234">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-234">This section is informative.</span></span>
+<span data-ttu-id="030ac-234">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-234">This section is informative.</span></span>
 
-<span data-ttu-id="b1b84-235">Se pueden introducir convenciones de índice adicionales en versiones futuras de esta especificación.</span><span class="sxs-lookup"><span data-stu-id="b1b84-235">Additional index conventions may be introduced in future versions of this specification.</span></span>
+<span data-ttu-id="030ac-235">Se pueden introducir convenciones de índice adicionales en versiones futuras de esta especificación.</span><span class="sxs-lookup"><span data-stu-id="030ac-235">Additional index conventions may be introduced in future versions of this specification.</span></span>
 
-#### <a name="interpretation-of-index-conventions"></a><span data-ttu-id="b1b84-236">Interpretación de las convenciones de índice</span><span class="sxs-lookup"><span data-stu-id="b1b84-236">Interpretation of Index Conventions</span></span> ####
+#### <a name="interpretation-of-index-conventions"></a><span data-ttu-id="030ac-236">Interpretación de las convenciones de índice</span><span class="sxs-lookup"><span data-stu-id="030ac-236">Interpretation of Index Conventions</span></span> ####
 
-<span data-ttu-id="b1b84-237">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="b1b84-237">This section is informative.</span></span>
+<span data-ttu-id="030ac-237">Esta sección es informativa.</span><span class="sxs-lookup"><span data-stu-id="030ac-237">This section is informative.</span></span>
