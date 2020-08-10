@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430788"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866985"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>Introducción a la computación cuántica y el kit de desarrollo de Microsoft Quantum
 
@@ -62,9 +65,9 @@ El aprendizaje automático en equipos clásicos está revolucionando el mundo de
 
 El kit de desarrollo de Microsoft Quantum incluye la [biblioteca de aprendizaje automático cuántico](xref:microsoft.quantum.machine-learning.concepts.intro), que ofrece la posibilidad de ejecutar experimentos de aprendizaje automático híbridos cuánticos-clásicos. La biblioteca incluye ejemplos y tutoriales, y ofrece las herramientas necesarias para implementar un nuevo algoritmo híbrido cuántico-clásico, el clasificador cuántico centrado en el circuito, para solucionar problemas de clasificación supervisada.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Instalación del kit de desarrollo de Microsoft Quantum (QDK)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Q# y el kit de desarrollo de Microsoft Quantum (QDK)
 
-Q# es el lenguaje de programación de código abierto de Microsoft para desarrollar y ejecutar algoritmos cuánticos. Forma parte de [QDK](https://docs.microsoft.com/quantum/), un kit de desarrollo completo para Q# que puede usar con herramientas y lenguajes estándar para desarrollar aplicaciones cuánticas que puede ejecutar en varios entornos, e integra el simulador cuántico de estado completo.
+Q# es el lenguaje de programación de código abierto de Microsoft para desarrollar y ejecutar algoritmos cuánticos. Forma parte de [QDK](https://docs.microsoft.com/quantum/), un kit de desarrollo completo para Q#que puede usar con herramientas y lenguajes estándar para desarrollar aplicaciones cuánticas que puede ejecutar en varios entornos, e integra el simulador cuántico de estado completo.
 
 Hay extensiones para Visual Studio y VS Code, y paquetes para su uso con Python y Jupyter Notebook.
 

@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: c5acd6c2b3163488a9b4c6e52e6d34489a8f4056
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 0fbbe127b9f4c6b98bdc2cf0e46098bf40a816e3
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436571"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866866"
 ---
 # <a name="contributing-to-the-quantum-development-kit"></a>Contribución a Quantum Development Kit
 
@@ -53,9 +56,9 @@ Cada una de estas partes diferentes encuentra su lugar en un repositorio distint
 - [**microsoft/Quantum**](https://github.com/Microsoft/Quantum): ejemplos y herramientas para empezar a usar Quantum Development Kit.
 - [**microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries): bibliotecas estándar y específicas del dominio para Quantum Development Kit.
 - [**microsoft/QuantumKatas**](https://github.com/Microsoft/QuantumKatas): ejercicios de programación autodirigidos para aprender la computación cuántica y el lenguaje de programación Q#.
-- [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): el compilador Q#, la extensión de Visual Studio y la extensión de Visual Studio Code.
+- [**microsoft/qsharp-compiler**](https://github.com/microsoft/qsharp-compiler): el compilador de Q#, la extensión de Visual Studio y la extensión de Visual Studio Code.
 - [**microsoft/qsharp-runtime**](https://github.com/microsoft/qsharp-runtime): marco de simulación, generación de código y máquinas de destino de simulación para Quantum Development Kit.
-- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): funcionalidad de host de Python y kernel de Jupyter para Q#, así como imágenes de Docker para usar IQ# en entornos de nube.
+- [**microsoft/iqsharp**](https://github.com/microsoft/iqsharp): funcionalidad de host de Python y kernel de Jupyter para Q#, así como imágenes de Docker para usar IQ# en entornos en la nube.
 - [**MicrosoftDocs/quantum-docs-pr**](https://github.com/MicrosoftDocs/quantum-docs-pr): código fuente para la documentación publicada en https://docs.microsoft.com/quantum.
 
 > [!NOTE]

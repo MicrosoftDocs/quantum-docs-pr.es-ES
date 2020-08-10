@@ -6,16 +6,19 @@ ms.author: Alan.Geller@microsoft.com
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871168"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868311"
 ---
 # <a name="quantum-simulators"></a>Simuladores cuánticos
 
-Los simuladores cuánticos son programas de software que se ejecutan en equipos clásicos y actúan como *máquina de destino* para programas de Q#. Permiten ejecutar y probar programas cuánticos en un entorno que predice cómo reaccionarán los cúbits a las distintas operaciones. En este artículo se describe qué simuladores cuánticos se incluyen con el kit de desarrollo de Microsoft Quantum (QDK) y diferentes maneras de pasar un programa de Q# a los simuladores cuánticos, por ejemplo, desde la línea de comandos o mediante código de controlador escrito en un lenguaje clásico.  
+Los simuladores cuánticos son programas de software que se ejecutan en equipos clásicos y actúan como *máquina de destino* para los programas de Q#. Permiten ejecutar y probar programas cuánticos en un entorno que predice cómo reaccionarán los cúbits a las distintas operaciones. En este artículo se describe qué simuladores cuánticos se incluyen con el kit de desarrollo de Microsoft Quantum (QDK) y diferentes maneras de pasar un programa de Q# a los simuladores cuánticos, por ejemplo, desde la línea de comandos o mediante código de controlador escrito en un lenguaje clásico.  
 
 
 

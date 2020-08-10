@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
-ms.openlocfilehash: 2f5345504ba31211c97493e78af1563d575881e4
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327754"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867716"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Simuladores y equipos cuánticos
 
@@ -54,7 +57,7 @@ Realizar cálculos en un equipo cuántico o en un simulador cuántico sigue un p
 La inicialización y transformación de los cúbits se realiza mediante **operaciones cuánticas** (también llamadas puertas cuánticas). Las operaciones cuánticas son similares a las operaciones lógicas de la informática clásica, como AND, OR, NOT y XOR. Una operación puede ser tan básica como cambiar el estado de un cúbit de 1 a 0 o entrelazar un par de cúbits, hasta usar varias operaciones en serie para influir en la probabilidad de que un cúbit superpuesto colapse en una forma o la otra.
 
 > [!NOTE] 
-> Las bibliotecas de [Q#](xref:microsoft.quantum.libraries) proporcionan operaciones integradas que definen combinaciones complejas de operaciones cuánticas de nivel inferior. Puede utilizar las operaciones de las bibliotecas para transformar cúbits y crear operaciones más complejas definidas por el usuario.  
+> Las [bibliotecas de Q#](xref:microsoft.quantum.libraries) proporcionan operaciones integradas que definen combinaciones complejas de operaciones cuánticas de nivel inferior. Puede utilizar las operaciones de las bibliotecas para transformar cúbits y crear operaciones más complejas definidas por el usuario.  
 
 La medición del resultado del cálculo nos da una respuesta, pero en el caso de algunos algoritmos cuánticos, no es necesariamente la respuesta correcta. Dado que el resultado de algunos algoritmos cuánticos se basa en la probabilidad configurada por las operaciones cuánticas, estos cálculos se ejecutan varias veces para obtener una distribución de la probabilidad y afinar la precisión de los resultados.  La garantía de que una operación devuelva una respuesta correcta se conoce como comprobación cuántica y es un desafío importante en la computación cuántica.
 

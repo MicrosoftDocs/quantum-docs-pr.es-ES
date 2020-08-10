@@ -6,14 +6,17 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327718"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866951"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>¿Qué son el QDK y el lenguaje de programación Q#?
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>¿Qué son el QDK y el lenguaje de programación Q#?
 
 Q# es el lenguaje de programación de código abierto de Microsoft para desarrollar y ejecutar algoritmos cuánticos. Forma parte del kit de desarrollo de Microsoft Quantum (QDK), que incluye [bibliotecas de Q#](xref:microsoft.quantum.libraries), [simuladores cuánticos](xref:microsoft.quantum.machines), [extensiones para otros entornos de programación](xref:microsoft.quantum.install) y [documentación de API](xref:microsoft.quantum.standardlibsintro). Además de la biblioteca de Q# estándar, el QDK incluye bibliotecas de química, aprendizaje automático y valores numéricos.
 
@@ -43,7 +46,7 @@ Ejecute los programas cuánticos en un simulador cuántico de estado completo o 
 | **Quiero profundizar más en el lenguaje Q#** | Explore los tipos, las expresiones, las variables y la estructura de los programas cuánticos en la [guía de usuario de Q#](xref:microsoft.quantum.guide).|
 | **Quiero empezar a escribir programas cuánticos** | Configure el entorno de Q# y empiece a escribir programas cuánticos con los [inicios rápidos](xref:microsoft.quantum.install).|
 
-## <a name="how-does-q-work"></a>¿Cómo funciona Q#?
+## <a name="how-does-no-locq-work"></a>¿Cómo funciona Q#?
 
 Un programa de Q# puede compilarse en una aplicación de línea de comandos independiente o se puede llamar desde un programa host escrito en Python o .NET.
 

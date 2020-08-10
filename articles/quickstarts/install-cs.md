@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885501"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867563"
 ---
-# <a name="develop-with-q-and-net"></a>Desarrollo con Q# y .NET
+# <a name="develop-with-no-locq-and-net"></a>Desarrollo con Q# y .NET
 
 Q# trabaja bien con lenguajes .NET como C# y F#.
 En esta guía, mostramos cómo usar Q# con un programa host escrito en un lenguaje .NET.
@@ -24,7 +27,7 @@ En primer lugar, se crea la aplicación de Q# y el host de .NET y, a continuaci�
 
 - Instale el kit de desarrollo de Quantum [para usarlo con proyectos de línea de comandos de Q#](xref:microsoft.quantum.install.standalone).
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Creación de una biblioteca de Q# y un host de .NET
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Creación de una biblioteca de Q# y un host de .NET
 
 El primer paso es crear proyectos para la biblioteca de Q# y para el host de .NET que llamará a las operaciones y funciones definidas en la biblioteca de Q#.
 
@@ -80,12 +83,12 @@ Si usa un editor que no sea Visual Studio o VS Code, solo tiene que seguir los
 
 ***
 
-## <a name="calling-into-q-from-net"></a>Llamada a Q# desde .NET
+## <a name="calling-into-no-locq-from-net"></a>Llamada a Q# desde .NET
 
 Una vez que haya configurado los proyectos siguiendo las instrucciones anteriores, puede llamar a Q# desde la aplicación de consola de .NET.
 El compilador de Q# creará clases de .NET para cada operación y función de Q# que le permita ejecutar programas cuánticos en un simulador.
 
-El [ejemplo de interoperabilidad con .NET](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) incluye la muestra siguiente de una operación de Q#:
+El [ejemplo de interoperabilidad con .NET](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) incluye el ejemplo siguiente de una operación de Q#:
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 

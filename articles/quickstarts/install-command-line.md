@@ -6,16 +6,19 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871440"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867614"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Desarrollo con aplicaciones de línea de comandos de Q#
+# <a name="develop-with-no-locq-command-line-applications"></a>Desarrollo con aplicaciones de línea de comandos de Q#
 
-Los programas de Q# se pueden ejecutar por sí solos, sin un controlador en un lenguaje host como C# , F# o Python.
+Los programas de Q# se pueden ejecutar por sí solos, sin un controlador en un lenguaje host como C#, F# o Python.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -48,7 +51,7 @@ Para instalar el QDK para otro entorno, escriba en la línea de comandos:
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Desarrollo con Q#
+## <a name="develop-with-no-locq"></a>Desarrollo con Q#
 
 Siga las instrucciones que aparecen en la pestaña correspondiente a su entorno.
 
@@ -76,7 +79,7 @@ Para ejecutar la aplicación:
 
 Cree una aplicación de Q# `Hello World` para comprobar la instalación de Visual Studio.
 
-Para crear una aplicación de Q#:
+Para crear una aplicación nueva de Q#:
 1. Abra Visual Studio y haga clic en **Archivo** -> **Nuevo** -> **Proyecto**.
 2. Escriba `Q#` en el cuadro de búsqueda, seleccione **Aplicación de Q#** y haga clic en **Siguiente**.
 3. Especifique un nombre y una ubicación para la aplicación, y haga clic en **Crear**.
@@ -93,7 +96,7 @@ Para ejecutar la aplicación:
 
 ### <a name="other-editors-with-the-command-line"></a>[Otros editores con la línea de comandos](#tab/tabid-cmdline)
 
-Cree una aplicación `Hello World` de Q# para comprobar su instalación.
+Cree una aplicación de Q# `Hello World` para comprobar su instalación.
 
 1. Instale las plantillas de proyecto.
 
@@ -111,7 +114,7 @@ Cree una aplicación `Hello World` de Q# para comprobar su instalación.
     cd runSayHello
     ```
 
-    El directorio contendrá un archivo `Program.qs`, que es un programa de Q# que define una operación sencilla para imprimir un mensaje en la consola. Puede modificar esta plantilla con un editor de texto y sobrescribirla con sus propias aplicaciones cuánticas. 
+    El directorio contendrá un archivo `Program.qs`, que es un programa de Q#que define una operación sencilla para imprimir un mensaje en la consola. Puede modificar esta plantilla con un editor de texto y sobrescribirla con sus propias aplicaciones cuánticas. 
 
 1. Ejecute el programa:
     ```dotnetcli

@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871457"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866815"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Desarrollo con cuadernos en Q# de Jupyter Notebook
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>Desarrollo con cuadernos en Q# de Jupyter Notebook
 
 Instale el QDK para desarrollar operaciones de Q# en cuadernos en Q# de Jupyter Notebook.
 
@@ -22,7 +25,7 @@ Jupyter Notebook permite la ejecución de código en contexto junto con instrucc
 > [!NOTE]
 > * En los cuadernos en Q# de Jupyter Notebook solo se puede ejecutar código de Q#, y no se puede llamar a las operaciones desde programas host externos (por ejemplo, archivos de Python o C#). Este entorno no es adecuado si su objetivo es combinar un programa host clásico externo con el programa cuántico.
 
-## <a name="install-the-iq-jupyter-kernel"></a>Instalación del kernel de IQ# para Jupyter
+## <a name="install-the-ino-locq-jupyter-kernel"></a>Instalación del kernel de IQ# para Jupyter
 
 IQ# (pronunciado i-q-sharp) es una extensión del SDK de .NET Core usada principalmente por Jupyter y Python que proporciona funcionalidad básica para compilar y simular operaciones de Q#.
 
@@ -72,7 +75,7 @@ IQ# (pronunciado i-q-sharp) es una extensión del SDK de .NET Core usada princi
 
 Eso es todo. Ahora tiene el kernel de IQ# para Jupyter, que proporciona la funcionalidad básica para compilar y ejecutar operaciones de Q# desde cuadernos en Q# de Jupyter Notebook.
 
-## <a name="create-your-first-q-notebook"></a>Creación del primer cuaderno de Q#
+## <a name="create-your-first-no-locq-notebook"></a>Creación del primer cuaderno de Q#
 
 Ahora ya puede comprobar la instalación del cuaderno en Q# de Jupyter Notebook; para ello, escriba y ejecute una sencilla operación de Q#.
 

@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
-ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87436554"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866747"
 ---
-# <a name="develop-with-q-and-python"></a>Desarrollo con Q# y Python
+# <a name="develop-with-no-locq-and-python"></a>Desarrollo con Q# y Python
 
 Instale el QDK para desarrollar programas host de Python para llamar a las operaciones de Q#.
 
@@ -83,7 +86,7 @@ Si desea usar VS Code:
 
 Si quiere usar un editor diferente, siga las instrucciones anteriores.
 
-## <a name="write-your-first-q-program"></a>Escritura del primer programa de Q#
+## <a name="write-your-first-no-locq-program"></a>Escribir el primer programa de Q#
 
 Ahora ya puede comprobar la instalación del paquete `qsharp` de Python; para ello, escriba y ejecute un sencillo programa de Q#.
 
@@ -91,7 +94,7 @@ Ahora ya puede comprobar la instalación del paquete `qsharp` de Python; para el
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="3-14":::
 
-1. En la misma carpeta que `Operation.qs`, cree un programa de Python llamado `host.py` para simular la operación `SampleQuantumRandomNumberGenerator()` de Q#:
+1. En la misma carpeta que `Operation.qs`, cree un programa de Python llamado `host.py` para simular la operación de Q# `SampleQuantumRandomNumberGenerator()`:
 
     ```python
     import qsharp
