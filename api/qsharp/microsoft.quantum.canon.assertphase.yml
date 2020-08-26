@@ -3,42 +3,18 @@ uid: microsoft.quantum.canon.assertphase
 name: AssertPhase
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: >-
-  Declara que la fase de un estado de superposición igual tiene el valor esperado.
-
-
-  En concreto, declara que la fase $ \phi $ de un estado de Quantum que se puede expresar como $ \frac{e ^ {i t}} {{2}\sqrt} (e ^ {i\phi} \{0} les + e ^ {-i\phi} \{1}les) $ para algún verdadero real arbitrario tiene el valor esperado.
-examples: >-
-  La siguiente aserción se realiza correctamente `qubit` : está en el estado $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2}{0}\ les + e ^ {i 0.5} \ sqrt {1/2}{1}\ les $;
-
-
-  - `AssertPhase(0.0,qubit,10e-10);`
-
-
-  `qubit`está en el estado $ \ket{\psi} = e ^ {i 0.5} \ sqrt {1/2} \{0}les + e ^ {-i 0.5} \ sqrt {1/2} \{1}les $;
-
-
-  - `AssertPhase(0.5,qubit,10e-10);`
-
-
-  `qubit`está en el estado $ \ket{\psi} = e ^ {-i 2.2} \ sqrt {1/2} \{0}les + e ^ {i 0,2} \ sqrt {1/2} \{1}les $;
-
-
-  - `AssertPhase(-1.2,qubit,10e-10);`
+summary: AssertPhase está en desuso. Use @"microsoft.quantum.diagnostics.assertphase" en su lugar.
 syntax: 'operation AssertPhase (expected : Double, qubit : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Double, qubit : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: El valor esperado de $ \phi \en (-\pi, \pi] $.
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: Qubit que almacena el estado esperado.
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: Tolerancia absoluta en la diferencia entre real y expected.
     isPrimitive: true
     uid: Double
 output:
@@ -47,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ecfc39806fb1ffe504c76889fb36949b4fee2ed4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 17fa383f5fd8e710f8c83920abe0727663506bfb
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674315"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863285"
