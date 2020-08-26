@@ -1,0 +1,45 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.random
+name: Microsoft.Quantum.Random
+functions:
+- uid: microsoft.quantum.random.categoricaldistribution
+  summary: Devuelve una distribución de categorías discretas, en la que se especifica explícitamente la probabilidad de cada una de las listas finitas de determinados resultados.
+- uid: microsoft.quantum.random.continuousuniformdistribution
+  summary: Devuelve una distribución uniforme en un intervalo inclusivo determinado.
+- uid: microsoft.quantum.random.discreteuniformdistribution
+  summary: Devuelve una distribución uniforme en un intervalo inclusivo determinado.
+- uid: microsoft.quantum.random.normaldistribution
+  summary: Devuelve una distribución normal con una media y una varianza determinadas.
+- uid: microsoft.quantum.random.standardnormaldistribution
+  summary: Devuelve una distribución normal con una media de 0 y una varianza de 1.
+- uid: microsoft.quantum.random.transformedcontinuousdistribution
+  summary: Dada una distribución continua, devuelve una nueva distribución que transforma el original por una función determinada.
+operations:
+- uid: microsoft.quantum.random.drawcategorical
+  summary: Dibuja un ejemplo aleatorio a partir de una distribución de categorías especificada por una lista de probablities.
+- uid: microsoft.quantum.random.drawrandombool
+  summary: Dada una probabilidad de éxito, devuelve una prueba de Bernoulli única que es verdadera con la probabilidad dada.
+- uid: microsoft.quantum.random.drawrandomdouble
+  summary: Dibuja un número real aleatorio en un intervalo inclusivo determinado.
+- uid: microsoft.quantum.random.drawrandomint
+  summary: Dibuja un entero aleatorio en un intervalo inclusivo determinado.
+- uid: microsoft.quantum.random.drawrandompauli
+  summary: Dibuja un valor Pauli aleatorio.
+- uid: microsoft.quantum.random.maybechooseelement
+  summary: Dada una matriz de datos y una distribución a través de sus índices, intenta elegir un elemento de forma aleatoria.
+newtypes:
+- uid: microsoft.quantum.random.bigdiscretedistribution
+  summary: Representa una distribución de probabilidad de univariante en enteros de tamaño arbitrario.
+- uid: microsoft.quantum.random.complexdistribution
+  summary: Representa una distribución de probabilidad de univariante en números complejos.
+- uid: microsoft.quantum.random.continuousdistribution
+  summary: Representa una distribución de probabilidad de univariante en números reales.
+- uid: microsoft.quantum.random.discretedistribution
+  summary: Representa una distribución de probabilidad de univariante en enteros.
+metadata:
+  ms.openlocfilehash: 04ceecba6c304e33452dd5eac014f59522a76e91
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864388"

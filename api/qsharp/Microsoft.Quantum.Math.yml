@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Convierte un número complejo de tipo `ComplexPolar` en un número complejo de tipo `Complex` .
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que`denominatorBound`
+  summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que`denominatorBound`
+  summary: Busca la fracción continua convergentes más cercana a `fraction` con el denominador menor o igual que `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Devuelve el coseno del ángulo especificado.
 - uid: microsoft.quantum.math.cosh
@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres contiene funciones matemáticas clásicas y tipos de datos."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Genera un entero aleatorio muestreado uniformemente mayor o igual que cero y menor que un límite superior proporcionado.
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nRandomInt está en desuso. Use @\"microsoft.quantum.random.drawrandomint\" en su lugar."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Genera un entero aleatorio muestreado uniformemente a partir de todos los enteros que se pueden representar en un número determinado de bits.
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nRandomIntPow2 está en desuso. Use @\"microsoft.quantum.random.drawrandomint\" en su lugar."
 - uid: microsoft.quantum.math.randomreal
-  summary: Devuelve un número real aleatorio en el intervalo mayor o igual que cero y menor que uno.
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nRandomReal está en desuso. Use @\"microsoft.quantum.random.drawrandomdouble\" en su lugar."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: Devuelve uno de los operadores de Pauli de un solo qubit de forma aleatoria.
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nRandomSingleQubitPauli está en desuso. Use @\"microsoft.quantum.random.drawrandompauli\" en su lugar."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326506"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863061"

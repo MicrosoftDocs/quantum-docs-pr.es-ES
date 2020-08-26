@@ -3,26 +3,23 @@ uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Genera un entero aleatorio muestreado uniformemente mayor o igual que cero y menor que un límite superior proporcionado.
-remarks: Esta función llama <xref:microsoft.quantum.intrinsic.random>a, por lo que su aleatoriedad depende de la `Random`implementación de.
+summary: RandomInt está en desuso. Use @"microsoft.quantum.random.drawrandomint" en su lugar.
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
-    summary: Entero que es mayor que el entero más grande que va a ser devuelto por esta operación.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Entero $x $ uniformemente a partir del intervalo especificado; es decir, con $ \Pr (x) = \frac{1}{\texttt{maxInt}} $.
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: aacaa92c47492e49544241bd7a47519ce8413fe8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682748"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863527"

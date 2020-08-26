@@ -450,11 +450,7 @@ operations:
 - uid: microsoft.quantum.canon.assertlessthanphasele
   summary: "\n> [!WARNING]\n> Obsoleto\n\nAssertLessThanPhaseLE está en desuso. Use @\"microsoft.quantum.arithmetic.assertphaselessthan\" en su lugar.\nUse @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
 - uid: microsoft.quantum.canon.assertphase
-  summary: >-
-    Declara que la fase de un estado de superposición igual tiene el valor esperado.
-
-
-    En concreto, declara que la fase $ \phi $ de un estado de Quantum que se puede expresar como $ \frac{e ^ {i t}} {\sqrt {2} } (e ^ {i\phi} \ les {0} + e ^ {-i\phi} \ les {1} ) $ para algún verdadero real arbitrario tiene el valor esperado.
+  summary: "\n> [!WARNING]\n> Obsoleto\n\nAssertPhase está en desuso. Use @\"microsoft.quantum.diagnostics.assertphase\" en su lugar."
 - uid: microsoft.quantum.canon.cascadeccnot
   summary: "\n> [!WARNING]\n> Obsoleto\n\nCascadeCCNOT está en desuso. Use @\"microsoft.quantum.canon.applyccnotchain\" en su lugar."
 - uid: microsoft.quantum.canon.cascadecnot
@@ -585,9 +581,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Obsoleto\n\nResultStack está en desuso."
 metadata:
-  ms.openlocfilehash: ab6e8a58dd163e4a9b2ea299e544a4e487d61e23
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 72e806d0a44fdcc372ab0d10edcaceb501713180
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884666"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88862947"
