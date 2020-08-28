@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d5338eb740716d9d7f408703347f572688bbccb2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868192"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992248"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimador de recursos del kit de desarrollo de Quantum (QDK)
 
@@ -69,7 +69,7 @@ BorrowedWidth   0
 
 ### <a name="invoking-the-resources-estimator-from-python"></a>Invocación del estimador de recursos desde Python
 
-Use el método [estimate_resources ()](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) de la biblioteca de Python con la Q# operación importada:
+Use el método [estimate_resources ()](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) de la biblioteca de Python con la Q# operación importada:
 
 ```python
 qubit_result = myOperation.estimate_resources()
@@ -127,7 +127,7 @@ El estimador de recursos realiza un seguimiento de las métricas siguientes:
 |----|----|
 |__CNOT__    |Recuento de ejecuciones de `CNOT` operaciones (también conocidas como operaciones Pauli X controladas).|
 |__QubitClifford__ |El recuento de ejecuciones de todas las operaciones qubit Clifford y Pauli.|
-|__medida__    |Recuento de ejecuciones de cualquier medida.  |
+|__Medida__    |Recuento de ejecuciones de cualquier medida.  |
 |__R__    |Recuento de ejecuciones de cualquier rotación de un solo qubit, excluidas `T` las operaciones Clifford y Pauli.  |
 |__T__    |El recuento de ejecuciones de `T` operaciones y sus conjugaciones, incluidas las `T` operaciones, T_x = H. T. h y T_y = HY. t. HY.  |
 |__Profundidad__|Límite inferior de la profundidad del circuito de Quantum ejecutado por la Q# operación. De forma predeterminada, la métrica de profundidad solo cuenta las `T` puertas. Para obtener más información, vea [contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
@@ -138,7 +138,7 @@ El estimador de recursos realiza un seguimiento de las métricas siguientes:
 
 Puede usar <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> desde el <xref:microsoft.quantum.diagnostics> espacio de nombres para proporcionar información sobre la probabilidad esperada de una operación de medición. Para obtener más información, consulte [simulador de seguimiento de Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Simulador de seguimiento de Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Simulador cuántico de Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)
