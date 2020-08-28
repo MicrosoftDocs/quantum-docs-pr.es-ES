@@ -38,10 +38,14 @@
   name: '%package (comando magic)'
 - href: performance.md
   name: '%performance (comando magic)'
+- href: project.md
+  name: '%project (comando magic)'
 - href: simulate.md
   name: '%simulate (comando magic)'
 - href: toffoli.md
   name: '%toffoli (comando magic)'
+- href: trace.md
+  name: '%trace (comando magic)'
 - href: who.md
   name: '%who (comando magic)'
 - href: workspace.md
