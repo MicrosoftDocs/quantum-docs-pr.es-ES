@@ -9,12 +9,12 @@ ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 06198f3b5b806bab49abf9fca38b5d2f15cfb65f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867528"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863753"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Introducción al kit de desarrollo de Microsoft Quantum (QDK)
 
@@ -36,7 +36,7 @@ Para empezar a trabajar con la eficacia de la computación cuántica, pruebe nue
 * [Exploración del entrelazamiento con Q#](xref:microsoft.quantum.write-program): este tutorial contiene instrucciones para escribir un programa de Q# que muestra algunos de los conceptos básicos de la programación cuántica.
     Si no está listo para empezar a codificar, puede seguir sin instalar QDK y consultar la información general sobre el lenguaje de programación Q# y los primeros conceptos de la computación cuántica.
 * [Algoritmo de búsqueda de Grover](xref:microsoft.quantum.quickstarts.search): examine este ejemplo de un programa de Q# para que se haga una idea de la capacidad de Q# para expresar el algoritmo cuántico de forma que abstraiga las operaciones cuánticas de bajo nivel.
-    Este tutorial le guía por el desarrollo del programa como una aplicación de línea de comandos de Q# con Visual Studio o Visual Studio Code.
+    Este tutorial le guía por el desarrollo del programa como una aplicación de Q# con Visual Studio o Visual Studio Code.
 
 ### <a name="learning-further"></a>Más información
 * Los [módulos de Microsoft Learn sobre computación cuántica](https://docs.microsoft.com/learn/browse/?term=quantum) le ayudarán a dominar los conceptos principales a su ritmo. Para más información sobre los conceptos básicos de la creación de programas cuánticos con el QDK, consulte el [primer módulo](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).
