@@ -2,7 +2,7 @@
 uid: microsoft.quantum.diagnostics.allowatmostncallsca
 name: AllowAtMostNCallsCA
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Entre una llamada a esta operación y su método contiguo, se declara que se llama a una operación determinada a lo sumo un número determinado de veces.
 remarks: Esta operación se puede reemplazar por una no operativa en destinos que no la admitan.
 examples: >-
@@ -56,9 +56,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 05a5791a9ec42aad2a2e90bb048204c642e68511
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 70c12ee6d605a6132770ec07f69a889e46eecdc1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864418"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337882"

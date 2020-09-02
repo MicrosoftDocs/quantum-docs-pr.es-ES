@@ -2,9 +2,9 @@
 uid: microsoft.quantum.arrays.any
 name: Any
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dada una matriz y un predicado definidos para los elementos de la matriz, comprueba si al menos un elemento de la matriz satisface el predicado.
-remarks: "La función se define para tipos genéricos, es decir, cada vez que tenemos `'T[]` una matriz y `predicate: 'T -> Bool` una función, podemos `Bool` generar un valor que indica si algún elemento `predicate`satisface."
+remarks: "La función se define para tipos genéricos, es decir, cada vez que tenemos una matriz `'T[]` y una función, `predicate: 'T -> Bool` podemos generar un `Bool` valor que indica si algún elemento satisface `predicate` ."
 examples: >-
   ```qsharp
 
@@ -41,7 +41,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Matriz de elementos sobre `'T`.
+    summary: Matriz de elementos sobre `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
@@ -55,9 +55,9 @@ typeParameters:
 - uid: "'T"
   summary: Tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb61be88ccba6392ca70c75f6c506b9b6c1c8bbd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676555"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352604"
