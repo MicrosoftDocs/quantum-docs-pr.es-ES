@@ -2,7 +2,7 @@
 uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
 name: StatePreparationPositiveCoefficients
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
   Devuelve una operación que prepara el estado de cuanto dado.
 
@@ -13,9 +13,9 @@ summary: >-
   La acción de U en un registro recién asignado viene determinada por $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
   \end{align} $ $
-remarks: Los coeficientes de entrada negativos $ \ alpha_j < $0 se tratarán como positivos con el valor $ | \ alpha_j | $. `coefficients`se rellenará con los elementos $ \ alpha_j = $0,0 si se especifican menos de $2 ^ n $.
+remarks: Los coeficientes de entrada negativos $ \ alpha_j < $0 se tratarán como positivos con el valor $ | \ alpha_j | $. `coefficients` se rellenará con los elementos $ \ alpha_j = $0,0 si se especifican menos de $2 ^ n $.
 examples: >-
-  El siguiente fragmento de código prepara el estado de Quantum $ \ket{\psi} = \ sqrt {1/8}{0}\ les + \ sqrt {7/8}{2}\ les $ en el `qubitsLE`registro de qubit.
+  El siguiente fragmento de código prepara el estado de Quantum $ \ket{\psi} = \ sqrt {1/8} \ les {0} + \ sqrt {7/8} \ les {2} $ en el registro de qubit `qubitsLE` .
 
 
   ```qsharp
@@ -55,9 +55,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: d419fd88ed037001cc51dbd354b5c89dbe334246
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7f801c02044195aa2b85bf6fd941923cf474a36b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686460"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331235"
