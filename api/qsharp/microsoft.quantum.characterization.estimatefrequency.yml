@@ -2,8 +2,8 @@
 uid: microsoft.quantum.characterization.estimatefrequency
 name: EstimateFrequency
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Dada una preparación y medida, calcula la frecuencia con la que la medida se realiza correctamente `Zero`(devuelve) mediante la realización de un número determinado de pruebas.
+namespace: microsoft.quantum.characterization
+summary: Dada una preparación y medida, calcula la frecuencia con la que la medida se realiza correctamente (devuelve `Zero` ) mediante la realización de un número determinado de pruebas.
 syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
@@ -44,16 +44,16 @@ output:
   content: Double
   types:
   - summary: >-
-      Una estimación de $ \hat{p} $ de la frecuencia con la que $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) `Zero`$ devuelve, obtenida mediante el estimador binomial no sesgado $ \hat{p}\_= n {\uparrow}\_/n {\text{Measurements}} $,\_donde $n {\uparrow} $ es el `Zero` número de resultados observados.
+      Una estimación de $ \hat{p} $ de la frecuencia con la que $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ devuelve `Zero` , obtenida mediante el estimador binomial no sesgado $ \hat{p} = n \_ {\uparrow}/n \_ {\text{Measurements}} $, donde $n \_ {\uparrow} $ es el número de `Zero` resultados observados.
 
 
       Esto es especialmente importante en las máquinas de destino que respetan las limitaciones físicas, de modo que no se pueden medir las probabilidades.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 973ab328d11410fee400659f18a99d50c1883156
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 008a3276e0df9c587f3262f4b5358a0831260ae4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677728"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354593"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
 name: EstimateOverlapBetweenStates
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Dadas dos operaciones que preparan copias de un estado, calcula la superposición cuadrada entre los Estados preparados por cada operación.
-remarks: Esta operación usa la prueba de intercambio para encontrar $ $ \begin{align} \left | \braket{00\cdots 0 | V ^ {\dagger} U | 00 \ cdots 0} \right | ^ 2 \end{align} $ $, donde $U $ es la representación unitario de la acción `preparation1`de y donde $V $ corresponde a `preparation2`.
+remarks: Esta operación usa la prueba de intercambio para encontrar $ $ \begin{align} \left | \braket{00\cdots 0 | V ^ {\dagger} U | 00 \ cdots 0} \right | ^ 2 \end{align} $ $, donde $U $ es la representación unitario de la acción de `preparation1` y donde $V $ corresponde a `preparation2` .
 syntax: 'operation EstimateOverlapBetweenStates (preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int)'
@@ -38,7 +38,7 @@ input:
     functors:
     - Adjoint
   - name: nQubits
-    summary: El número de qubits en el `commonPreparation`que `preparation1`todos los `preparation2` actos, y.
+    summary: El número de qubits en el `commonPreparation` que `preparation1` `preparation2` todos los actos, y.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -54,9 +54,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 6eefd9b32b73d3f73bb31ff81509466e754e20d6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 968b8ec3ba5822475ffea0439a9c1cc84ac995ba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677691"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354491"
