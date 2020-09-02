@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.sumgeneratorsystems
 name: SumGeneratorSystems
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Agrega varios `GeneratorSystem`para crear un nuevo GeneratorSystem.
+namespace: microsoft.quantum.simulation
+summary: Agrega varios `GeneratorSystem` para crear un nuevo GeneratorSystem.
 syntax: 'function SumGeneratorSystems (generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[]) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
   content: '(generatorSystems : Microsoft.Quantum.Simulation.GeneratorSystem[])'
@@ -20,9 +20,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 metadata:
-  ms.openlocfilehash: 5474e35cb303a6f490794a77483aafd609724eaa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cf4fe3793578c1050f7a95773112985ad671a695
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687326"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328396"
