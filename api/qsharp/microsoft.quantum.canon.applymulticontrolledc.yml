@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applymulticontrolledc
 name: ApplyMultiControlledC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Aplica una versión con control de multiplicación de una operación controlada de una sola vez.
 
@@ -23,7 +23,7 @@ input:
 
       Se supone que el primer qubit en el argumento de la operación es un control y se supone que el resto es qubits de destino.
 
-      `ApplyMultiControlled`siempre llama `singlyControlledOp` a con un argumento de longitud de al menos 1.
+      `ApplyMultiControlled` siempre llama a `singlyControlledOp` con un argumento de longitud de al menos 1.
     isOperation: true
     input:
       types:
@@ -39,7 +39,7 @@ input:
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >-
-      Qubits en el `singlyControlledOp` que se va a controlar.
+      Qubits en el que `singlyControlledOp` se va a controlar.
 
       La longitud de `controls` debe ser al menos 1.
     isArray: true
@@ -60,9 +60,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledca
 metadata:
-  ms.openlocfilehash: 3b4398dd3845d8767842acb23da3b7c67c210b78
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a8fe743affaa0fda26b4e17e4c5f129b43b7331
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672547"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358129"
