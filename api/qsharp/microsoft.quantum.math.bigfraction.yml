@@ -2,13 +2,13 @@
 uid: microsoft.quantum.math.bigfraction
 name: BigFraction
 type: newtype
-namespace: Microsoft.Quantum.Math
-summary: Representa un número racional del formulario `p/q`. Integer `p` es el primer elemento de la tupla y `q` es el segundo elemento de la tupla.
+namespace: microsoft.quantum.math
+summary: Representa un número racional del formulario `p/q` . Integer `p` es el primer elemento de la tupla y `q` es el segundo elemento de la tupla.
 syntax: newtype BigFraction = (BigInt, BigInt);
 metadata:
-  ms.openlocfilehash: d9da825f0317e9c51dd78f90ec7ee5b087d5dd43
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3ae7d6cf0f9bd200c0620caf8bce93403e18f9cf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684234"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344427"

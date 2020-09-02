@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexof
 name: IndexOf
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Devuelve el primer índice del primer elemento de una matriz que satisface un predicado determinado. Si no existe ningún elemento de este tipo, devuelve-1.
 examples: >-
-  Supongamos que `IsEven : Int -> Bool` es una función `true` que devuelve solo si su entrada es par. A continuación, se puede usar con `IndexOf` para buscar el primer elemento par en una matriz:
+  Supongamos que `IsEven : Int -> Bool` es una función que devuelve `true` solo si su entrada es par. A continuación, se puede usar con `IndexOf` para buscar el primer elemento par en una matriz:
 
 
   ```Q#
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: El índice `idx` más pequeño, tal que `predicate(arr[idx])` sea true, o-1 si no existe ese elemento.
+  - summary: El índice más pequeño, `idx` tal que `predicate(arr[idx])` sea true, o-1 si no existe ese elemento.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6b0097c4feb41a00f0d9c1fcb4c2b5dbcaa186ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680996"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352128"
