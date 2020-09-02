@@ -2,21 +2,21 @@
 uid: microsoft.quantum.simulation.generatorindex
 name: GeneratorIndex
 type: newtype
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Representa un término primitivo único en el conjunto de todos los generadores dinámicos, por ejemplo, los operadores Hermitian, para los que existe una asignación de ese generador a la evolución de tiempo de `EvolutionSet`ese generador, a través de.
+  Representa un término primitivo único en el conjunto de todos los generadores dinámicos, por ejemplo, los operadores Hermitian, para los que existe una asignación de ese generador a la evolución de tiempo de ese generador, a través de `EvolutionSet` .
 
 
   El primer elemento (int [], double []) es un índice que tiene un único término; por ejemplo, la cadena Pauli XXY con coeficiente 0,5 sería indexada por ([1, 1, 2], [0,5]). Como alternativa, Hamiltonians parametrizado mediante una variable continua, como X cos φ + Y sin φ, podría representarse por instancia ([], [φ]). El segundo elemento indiza el subsistema en el que actúa el generador.
 remarks: >-
   > [!WARNING]
 
-  > No se define la `GeneratorIndex` interpretación de un, excepto con referencia a un conjunto determinado de generadores.
+  > No se define la interpretación de un, `GeneratorIndex` excepto con referencia a un conjunto determinado de generadores.
 
 
   ### <a name="examples"></a>Ejemplos
 
-  Con <xref:microsoft.quantum.simulation.paulievolutionset>, el operador $ \pi X_2 X_5 Y_9 $ se representa como:
+  Con  <xref:microsoft.quantum.simulation.paulievolutionset> , el operador $ \pi X_2 X_5 Y_9 $ se representa como:
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b291cc0b0adc4799e49403fb76f0f47dbadcaf5c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655162"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330181"
