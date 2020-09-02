@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.applyifca
 name: ApplyIfCA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Aplica una operación de unitario condicionada en un bit clásico.
 
 
-  Dada una operación `op` y un valor `bit`de bit, `op` se aplica `target` a `bit` si `true`es. Si `false`es, no sucede nada `target`con.
+  Dada una operación `op` y un valor de bit `bit` , se aplica `op` a `target` si `bit` es `true` . Si es `false` , no sucede nada con `target` .
 
   El sufijo `CA` indica que la operación que se va a aplicar es la unitario (controlable y adjointable).
 examples: >-
-  Lo siguiente prepara un registro de qubits en un estado de base de cálculo representado por una cadena de bits clásica dada como una `Bool` matriz de valores:
+  Lo siguiente prepara un registro de qubits en un estado de base de cálculo representado por una cadena de bits clásica dada como una matriz de `Bool` valores:
 
 
   ```Q#
@@ -67,9 +67,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 2b716ef4a7d429176aa1359fb22b3ce24be0d5f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2d341b8628c8d81fddd480bf47324041d575f1e5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675054"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350513"

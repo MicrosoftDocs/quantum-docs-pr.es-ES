@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifzeroc
 name: ApplyIfZeroC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Aplica una operación controlable condicionada en un valor de resultado clásico a cero.
 
 
-  Dada una operación `op` y un valor `result`de resultado, `op` se aplica `target` a `result` si `Zero`es. Si `One`es, no sucede nada `target`con.
+  Dada una operación `op` y un valor de resultado `result` , se aplica `op` a `target` si `result` es `Zero` . Si es `One` , no sucede nada con `target` .
 
   El sufijo `C` indica que la operación que se va a aplicar es controlable.
 syntax: "operation ApplyIfZeroC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 12484848b3208dcb0a52e1f2084bbc3a5f4ec359
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e7963a6055306d00d6e7ec2d18f805f6e0fb3e11
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672595"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358146"

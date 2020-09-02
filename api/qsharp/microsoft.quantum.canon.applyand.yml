@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applyand
 name: ApplyAnd
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Invierte un qubit de destino determinado si y solo si ambos qubits de control están en el estado 1, utilizando la medida para realizar la operación de la función de la función.
 
@@ -42,9 +42,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 2f040fd932236547baecaba241d44a8b9842bbe2
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 7c507e8bf535802a4484535e4b608315eca70bba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85884591"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350870"
