@@ -1,7 +1,7 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.research.chemistry
 name: Microsoft.Quantum.Research.Chemistry
-summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres proporciona métodos de investigación avanzada para la simulación de la química de Quantum.\n\n # <a name=\"references\"></a>Referencias\n - Mejora de los algoritmos Quantum para la química Quantum, M. B. Hastings, D. Wecker, B. Bauer, M. Troya,https://arxiv.org/abs/1403.1539"
+summary: " # <a name=\"summary\"></a>Resumen\n Este espacio de nombres proporciona métodos de investigación avanzada para la simulación de la química de Quantum.\n\n # <a name=\"references\"></a>Referencias\n - Mejora de los algoritmos Quantum para la química Quantum, M. B. Hastings, D. Wecker, B. Bauer, M. Troya, https://arxiv.org/abs/1403.1539"
 functions:
 - uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
   summary: Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de Pauli.
@@ -17,9 +17,9 @@ operations:
 - uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
   summary: Preparación de estado simple del estado de prueba mediante la que se ocupan las órbitas
 metadata:
-  ms.openlocfilehash: aa1aa58d6e2dcee6f650714073b9a1386f0ed679
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 010fc81468a408782ac6549716f60f9b3671f4c3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675472"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340857"
