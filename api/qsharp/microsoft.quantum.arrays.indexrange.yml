@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexrange
 name: IndexRange
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dada una matriz, devuelve un intervalo sobre los índices de esa matriz, adecuado para su uso en un bucle for.
 examples: >-
-  Los bucles siguientes `for` son equivalentes:
+  Los `for` bucles siguientes son equivalentes:
 
 
   ```Q#
@@ -34,9 +34,9 @@ typeParameters:
 - uid: "'TElement"
   summary: Tipo de elementos de la matriz.
 metadata:
-  ms.openlocfilehash: 6c3135e07c65ddf6b7c61a4b9f412f5156e48e73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88b827a5fb9b0dcdaceb6392b14cce98bdd281f5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672785"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352094"

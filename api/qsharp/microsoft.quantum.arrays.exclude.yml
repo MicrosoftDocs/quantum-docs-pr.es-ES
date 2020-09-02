@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.exclude
 name: Exclude
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Devuelve una matriz que contiene los elementos de otra matriz, excluidos los elementos de una lista determinada de índices.
 examples: >-
   ```qsharp
@@ -31,7 +31,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Matriz `output` de tipo que `output[0]` es el primer elemento de `array` cuyo índice no aparece en `remove`, tal que `output[1]` es el segundo elemento de este tipo, y así sucesivamente.
+  - summary: Matriz de `output` tipo que `output[0]` es el primer elemento de `array` cuyo índice no aparece en `remove` , tal que `output[1]` es el segundo elemento de este tipo, y así sucesivamente.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -39,9 +39,9 @@ typeParameters:
 - uid: "'T"
   summary: El tipo de los elementos de la matriz.
 metadata:
-  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7e0f978f711962247c08c1b367f3ca62e16cad2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676471"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352349"
