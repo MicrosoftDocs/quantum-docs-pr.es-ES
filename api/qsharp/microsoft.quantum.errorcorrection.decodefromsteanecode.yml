@@ -2,11 +2,11 @@
 uid: microsoft.quantum.errorcorrection.decodefromsteanecode
 name: DecodeFromSteaneCode
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Una operación de codificación inversa que asigna un registro de Quantum sin codificar a un registro de Quantum codificado en el Código ⟦ 7, 1, 3 ⟧ Steane Quantum.
 remarks: El descodificador elegido usa la propiedad código CSS del Código ⟦ 7, 1, 3 ⟧ Steane, es decir, corrige los errores X y Z por separado. Una propiedad del código es que la ubicación de la corrección X, respectivamente, Z que se va a aplicar es la codificación de 3 bits del síndrome X, respectivamente, Z cuando se considera un entero.
 syntax: 'operation DecodeFromSteaneCode (logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : (Qubit[], Qubit[])'
-references: '- D. Gottesman, "códigos de estabilizador y corrección de errores de Quantum", "doctorado. tesis, Caltech, 1997;https://arxiv.org/abs/quant-ph/9705052'
+references: '- D. Gottesman, "códigos de estabilizador y corrección de errores de Quantum", "doctorado. tesis, Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052'
 input:
   content: '(logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
@@ -29,9 +29,9 @@ seeAlso:
 - steanecodedecoder
 - logicalregister
 metadata:
-  ms.openlocfilehash: 0256c1bf847009b6ea6f712aece34219f5c5ff8d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 498222c08ca292571c674b4e249004bd5ba56450
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685052"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336539"

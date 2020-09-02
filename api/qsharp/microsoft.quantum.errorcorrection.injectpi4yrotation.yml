@@ -2,15 +2,15 @@
 uid: microsoft.quantum.errorcorrection.injectpi4yrotation
 name: InjectPi4YRotation
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Gira un qubit único por π/4 sobre el eje Y.
 
 
-  Realiza una rotación de π/4 `Y`acerca de.
+  Realiza una rotación de π/4 acerca de `Y` .
 
 
-  La rotación se realiza mediante el consumo de un estado mágico; es decir, una copia del estado $ $ \begin{align}{8} \cos\frac{\pi} \ket{0} + \sin \frac{\pi}{8} \ket.{1}
+  La rotación se realiza mediante el consumo de un estado mágico; es decir, una copia del estado $ $ \begin{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} {8} \ket {1} .
 
   \end{align} $ $
 remarks: >-
@@ -48,7 +48,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: magic
-    summary: Un qubit inicialmente en el estado mágico. La siguiente aplicación de esta operación `magic` se devuelve al estado $ \ket{0}$.
+    summary: Un qubit inicialmente en el estado mágico. La siguiente aplicación de esta operación `magic` se devuelve al estado $ \ket {0} $.
     isPrimitive: true
     uid: Qubit
 output:
@@ -59,9 +59,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: cb0efd896b4d8f9b4b81c061b644a1e2f7f74e96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bf39fac578e364b5b228490484525f044d40b29d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684877"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336233"
