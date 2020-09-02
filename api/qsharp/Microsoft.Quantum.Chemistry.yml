@@ -3,11 +3,11 @@ uid: microsoft.quantum.chemistry
 name: Microsoft.Quantum.Chemistry
 functions:
 - uid: microsoft.quantum.chemistry.htermstogenidx
-  summary: Convierte un índice en un término Hamiltonian en formato `HTerm[]` de datos en un GeneratorIndex.
+  summary: Convierte un índice en un término Hamiltonian en `HTerm[]` formato de datos en un GeneratorIndex.
 - uid: microsoft.quantum.chemistry.htermstogensys
-  summary: Convierte un Hamiltonian en formato `HTerm[]` de datos en un GeneratorSystem.
+  summary: Convierte un Hamiltonian en `HTerm[]` formato de datos en un GeneratorSystem.
 - uid: microsoft.quantum.chemistry.htermtogenidx
-  summary: Convierte un término Hamiltonian en formato `HTerm` de datos en un GeneratorIndex.
+  summary: Convierte un término Hamiltonian en `HTerm` formato de datos en un GeneratorIndex.
 - uid: microsoft.quantum.chemistry.isnotzero
   summary: Comprueba si un `Double` número no es aproximadamente cero.
 newtypes:
@@ -17,9 +17,9 @@ newtypes:
 
     El significado de los datos representados viene determinado por el algoritmo que lo recibe.
 metadata:
-  ms.openlocfilehash: fda6e5c8daebeae115046771e85e0e49d057e666
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d39701c0e7ee50a064d24020298bef12406e5728
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677015"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340228"

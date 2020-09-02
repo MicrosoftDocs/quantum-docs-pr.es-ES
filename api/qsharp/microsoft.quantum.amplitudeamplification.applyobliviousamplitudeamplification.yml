@@ -2,15 +2,15 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Amplificación de amplitud de desconocen mediante la especificación de reflejos parciales.
 remarks: >-
-  Dado un estado de inicio auxiliar determinado $\_\ket{\text{Start}} a $, un estado de destino auxiliar determinado\_$ \ket{\text{Target}} a $ y cualquier estado del sistema\_$ \ket{\psi} s $, supongamos que \begin{align} O\ket {\ Text\_{Start}} a\ket\_{\ PSI\_} s =\_\lambda\ket{\text{Target}} a U \ket{\psi} s + \Sqrt{1-| \lambda | ^ 2\_} \ket{\text{Target} ^ \perp} a\cdots \end{align} para una unidad de $U $.
+  Dado un estado de inicio auxiliar determinado $ \ket{\text{Start}} \_ a $, un estado de destino auxiliar determinado $ \ket{\text{Target}} \_ a $ y cualquier estado del sistema $ \ket{\psi} \_ s $, supongamos que \begin{align} O\ket {\ Text {Start}} \_ a\ket {\ PSI} \_ s = \lambda\ket{\text{Target}} \_ a U \ket{\psi} \_ s + \sqrt{1-| \lambda | ^ 2} \Ket{\text{Target} ^ \perp} a\cdots \end{align} para una unidad \_ de $U $.
 
   Mediante una secuencia de reflexiones sobre los Estados de inicio y de destino en el registro auxiliar intercalados por las aplicaciones de `signalOracle` y su contiguo, se puede modificar la probabilidad de éxito de aplicar U.
 
 
-  En la mayoría de `auxiliaryRegister` los casos, se inicializa en el estado\_$ \ket{\text{Start}} a $.
+  En la mayoría de `auxiliaryRegister` los casos, se inicializa en el estado $ \ket{\text{Start}} \_ a $.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Vea
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21bdb88716a07c32673425fd4f5276559b56d266
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672960"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340534"
