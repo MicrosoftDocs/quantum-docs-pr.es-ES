@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.multiplybymodularinteger
 name: MultiplyByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Realiza una multiplicación modular por una constante de tipo entero en un registro qubit.
 
 
-  `modulus` Díganos $N $ y `constMultiplier` $a $.
+  Díganos `modulus` $N $ y `constMultiplier` $a $.
 
   Después, esta operación implementa una operación unitario definida por la siguiente asignación en la base de cálculo: $ $ \begin{align} \ket{y} \mapsto \ket{(a \cdot y) \operatorname{mod} N} \end{align} $ $ para todos los $y $ entre $0 $ y $N-$1.
 remarks: >-
@@ -23,7 +23,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: La operación de multiplicación se realiza `modulus`en módulo.
+    summary: La operación de multiplicación se realiza en módulo `modulus` .
     isPrimitive: true
     uid: Int
   - name: multiplier
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 48a0f19334f65a6b80003d90dc4dc216dc8dee98
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4ebbe9808772f51b1a7b2b3caf47379e74bd823e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676731"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353522"
