@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applyifonea
 name: ApplyIfOneA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Aplica una operación adjointable condicionada en un valor de resultado clásico a uno.
 
 
-  Dada una operación `op` y un valor `result`de resultado, `op` se aplica `target` a `result` si `One`es. Si `Zero`es, no sucede nada `target`con.
+  Dada una operación `op` y un valor de resultado `result` , se aplica `op` a `target` si `result` es `One` . Si es `Zero` , no sucede nada con `target` .
 
   El sufijo `A` indica que la operación que se va a aplicar es adjointable.
 syntax: "operation ApplyIfOneA (result : Result, (op : ('T => Unit is Adj), target : 'T)) : Unit"
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 041b9f1f97ec5fe615b6ff83fe7c69bf5a7d0894
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 55fb934d46e192337b911dc52f1d4f45e227bff2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672683"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358248"

@@ -2,18 +2,18 @@
 uid: microsoft.quantum.canon.decomposedintotimestepsca
 name: DecomposedIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Devuelve una operación que implementa el integrador Trotter – Suzuki para una operación determinada.
 remarks: >-
-  Cuando se llama `order` con igual `1`a, esta función devuelve una operación que se puede simular con el orden más bajo Trotter – Suzuki integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $, donde hemos seguido la notación de [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) y dejar que $ \lambda $ sea la hora de la evolución (representada por la primera entrada de la operación devuelta). y tienen que dejar que $\{H_j\}_ {j = 1} ^ {m} $ sea el conjunto de generadores dinámicos `op(j, lambda, _)` (sesgado-Hermitian) que se integran de forma que se simula mediante el operador unitario $e ^ {H_j \lambda} $.
+  Cuando se llama con `order` igual a `1` , esta función devuelve una operación que se puede simular con el orden más bajo Trotter – Suzuki Integrator $ $ \begin{align} S_1 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_j \lambda}, \end{align} $ $, donde hemos seguido la notación de [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139) y dejar que $ \lambda $ sea la hora de la evolución (representada por la primera entrada de la operación devuelta). y tienen que dejar que $ \{ H_j \} _ {j = 1} ^ {m} $ sea el conjunto de generadores dinámicos (sesgado-Hermitian) que se integran de forma que `op(j, lambda, _)` se simula mediante el operador unitario $e ^ {H_j \lambda} $.
 
 
-  De forma similar `order` , `2` un de devuelve el segundo orden simétrico Trotter – Suzuki integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m}{1} ^ e ^ {H_ {j '} \lambda/2}.
+  De forma similar, un `order` de `2` devuelve el segundo orden simétrico Trotter – Suzuki Integrator $ $ \begin{align} S_2 (\lambda) = \ prod_ {j = 1} ^ {m} e ^ {H_k \lambda/2} \ prod_ {j ' = m} ^ {1} e ^ {H_ {j '} \lambda/2}.
 
   \end{align} $ $
 
 
-  Los valores pares más `order` altos de se implementan mediante la construcción recursiva de [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139).
+  Los valores pares más altos de `order` se implementan mediante la construcción recursiva de [Quant-pH/0508139](https://arxiv.org/abs/quant-ph/0508139).
 syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
 references: '- [*D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
 input:
@@ -24,7 +24,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: op
-    summary: Una operación que acepta una entrada de índice ( `Int`tipo) y una entrada de hora `Double`(tipo) para la descomposición.
+    summary: Una operación que acepta una entrada de índice (tipo `Int` ) y una entrada de hora (tipo `Double` ) para la descomposición.
     isOperation: true
     input:
       types:
@@ -51,7 +51,7 @@ input:
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Devuelve una unitario que implementa el integrador Trotter – Suzuki, donde el `Double` primer parámetro es el tamaño del paso de integración y el segundo parámetro es el destino sobre el que se actuó.
+  - summary: Devuelve una unitario que implementa el integrador Trotter – Suzuki, donde el primer parámetro `Double` es el tamaño del paso de integración y el segundo parámetro es el destino sobre el que se actuó.
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: Tipo en el que debe actuar cada paso de tiempo; Normalmente, `Qubit[]` o `Qubit`.
+  summary: Tipo en el que debe actuar cada paso de tiempo; Normalmente, `Qubit[]` o `Qubit` .
 metadata:
-  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3febe45478ca86a36844d6af75884872cb12680
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680250"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356548"

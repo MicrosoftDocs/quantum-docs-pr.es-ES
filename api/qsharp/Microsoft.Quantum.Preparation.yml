@@ -8,17 +8,17 @@ functions:
     Calcula las coordenadas de la esfera Bloch para un estado de qubit único.
 
 
-    Dados dos números complejos $a 0, a1 $ que representan el estado qubit, calcula coordenadas en la esfera Bloch de forma que $a 0 \ket{0} + a1 \ket{1} = r e ^ {IT} (e ^ {-i \phi/2}\cos{(\ Theta/2)} \ket{0}+ e ^ {i \phi/2}\sin{(\ Theta/2)} \ket{1}) $.
+    Dados dos números complejos $a 0, a1 $ que representan el estado qubit, calcula coordenadas en la esfera Bloch de forma que $a 0 \ket {0} + a1 \ket {1} = r e ^ {IT} (e ^ {-i \phi/2}\cos{(\ Theta/2)} \ket {0} + e ^ {i \phi/2}\sin{(\ Theta/2)} \ket {1} ) $.
 - uid: microsoft.quantum.preparation.quantumrom
   summary: >-
     Usa la técnica de ROM Quantum para representar una matriz de densidad determinada.
 
 
-    Dada una lista de $N $ coeficientes $ \ alpha_j $, se devuelve un valor de unitario $U $ que usa la técnica Quantum-ROM para preparar una aproximación $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ de la depuración de la matriz de densidad $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. En esta aproximación, el error $ \epsilon $ es tal que $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ y $\|\tilde\rho-\rho\| \le \epsilon $. En otras palabras, $ $ \begin{align} U\ket{0}^ {\Lceil\ log_2 N\rceil} \ les{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage} _J}.
+    Dada una lista de $N $ coeficientes $ \ alpha_j $, se devuelve un valor de unitario $U $ que usa la técnica Quantum-ROM para preparar una aproximación $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ de la depuración de la matriz de densidad $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. En esta aproximación, el error $ \epsilon $ es tal que $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ y $ \| \tilde\rho-\rho \| \le \epsilon $. En otras palabras, $ $ \begin{align} U\ket {0} ^ {\lceil\ log_2 N\rceil} \ les {0} ^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\text{Garbage} _J}.
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.quantumromqubitcount
-  summary: Devuelve el número total de qubits que deben asignarse a la operación devuelta `QuantumROM`por.
+  summary: Devuelve el número total de qubits que deben asignarse a la operación devuelta por `QuantumROM` .
 - uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   summary: >-
     Devuelve una operación que prepara un estado de Quantum específico.
@@ -59,7 +59,7 @@ operations:
     En pares de dos registros qubit.
 
 
-    Es decir, dados dos registros, prepara el{1}estado de in\frac {\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ entre cada par de qubits en los respectivos registros, suponiendo que cada registro comienza en el estado $ \ket{0\cdots 0} $.
+    Es decir, dados dos registros, prepara el estado de in\frac {1} {\sqrt {2} } \left (\ket {00} + \ket {11} \right) $ entre cada par de qubits en los respectivos registros, suponiendo que cada registro comienza en el estado $ \ket{0\cdots 0} $.
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
     Dado un registro, prepara ese registro en el estado de máxima mezcla.
@@ -68,33 +68,33 @@ operations:
     El registro se prepara en el estado $ \boldone/2 ^ N $ aplicando el canal de depolaridad completo a cada qubit, donde $N $ es la longitud del registro.
 - uid: microsoft.quantum.preparation.preparequbit
   summary: >-
-    Prepara un qubit en el eigenstate + 1 (`Zero`) del operador Pauli especificado.
+    Prepara un qubit en el eigenstate + 1 ( `Zero` ) del operador Pauli especificado.
 
     Si se proporciona el operador de identidad, el qubit se prepara en el estado de mezcla máxima.
 
 
-    Si el qubit estaba inicialmente en el estado ${0}\ket $, esta operación prepara el qubit en el eigenstate $ + $1 de un operador Pauli determinado, o bien, para `PauliI`, en el estado de mezcla máxima en su lugar ( <xref:microsoft.quantum.preparation.preparesinglequbitidentity>vea).
+    Si el qubit estaba inicialmente en el estado $ \ket {0} $, esta operación prepara el qubit en el eigenstate $ + $1 de un operador Pauli determinado, o bien, para `PauliI` , en el estado de mezcla máxima en su lugar (vea <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ).
 
 
-    Si el qubit estaba en un Estado distinto de $ \ket{0}$, esta operación aplica las siguientes puertas: $H $ para `PauliX`, $HS $ para `PauliY`, $I $ para `PauliZ` y <xref:microsoft.quantum.preparation.preparesinglequbitidentity> para `PauliI`.
+    Si el qubit estaba en un Estado distinto de $ \ket {0} $, esta operación aplica las siguientes puertas: $H $ para `PauliX` , $HS $ para `PauliY` , $I $ para `PauliZ` y <xref:microsoft.quantum.preparation.preparesinglequbitidentity> para `PauliI` .
 - uid: microsoft.quantum.preparation.preparesinglequbitidentity
   summary: >-
     Prepara un qubit en el estado de máxima mezcla.
 
 
-    Prepara el qubit determinado en el estado $ \boldone/$2 mediante la aplicación del canal de despolar $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac{1} {4} \ \{sum_ {\mu \en 0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{align} $ $ Where $ \sigma\_i $ es el $i operador $ TH Pauli y donde $ \rho $ es un operador de densidad que representa un estado mixto.
+    Prepara el qubit determinado en el estado $ \boldone/$2 mediante la aplicación del canal de despolar $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac {1} {4} \ sum_ {\mu \en \{ 0, 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu} ^ {\dagger}, \end{align} $ $ Where $ \sigma \_ i $ es el $i operador $ TH Pauli y donde $ \rho $ es un operador de densidad que representa un estado mixto.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    Crea una superposición uniforme sobre los Estados que codifican 0 `nIndices`a.
+    Crea una superposición uniforme sobre los Estados que codifican 0 a `nIndices` .
 
 
-    Es decir, esta $U unitario $ crea una superposición uniforme sobre todos los Estados $0 $ en $M-$1, dado un estado de entrada $ \ket{0\cdots 0} $. En otras palabras, $ $ \begin{align} U\ket{0}= \Frac{1}{\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+    Es decir, esta $U unitario $ crea una superposición uniforme sobre todos los Estados $0 $ en $M-$1, dado un estado de entrada $ \ket{0\cdots 0} $. En otras palabras, $ $ \begin{align} U\ket {0} = \frac {1} {\sqrt{m}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
     \end{align} $ $.
 metadata:
-  ms.openlocfilehash: 25ebe80b64af0cfd50e5a32c1ef91f8a299cef04
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 46bed785972355044c9ef9765ab957ca6d31e5f1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673085"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339888"
