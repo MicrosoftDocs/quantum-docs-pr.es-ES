@@ -2,14 +2,14 @@
 uid: microsoft.quantum.intrinsic.measure
 name: Measure
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
   Realiza una medida conjunta de una o varias qubits en las bases de Pauli especificadas.
 
 
-  El resultado de la salida lo proporciona la distribución: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} donde $P _i $ es el elemento $i $ TH `bases`de y donde $N = \texttt{length} (\texttt{bases}) $.
+  El resultado de la salida lo proporciona la distribución: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} donde $P _i $ es el elemento $i $ TH de `bases` y donde $N = \texttt{length} (\texttt{bases}) $.
 
-  Es decir, la medida devuelve `Result` un $d $ de modo que el eigenvalue del efecto de medición observado es $ (-1) ^ d $.
+  Es decir, la medida devuelve un `Result` $d $ de modo que el eigenvalue del efecto de medición observado es $ (-1) ^ d $.
 remarks: Si la matriz base y la matriz qubit tienen longitudes diferentes, se producirá un error en la operación.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero`Si se observa el eigenvalue $ + $1 y `One` si se observa el eigenvalue $-$1.'
+  - summary: '`Zero` Si se observa el eigenvalue $ + $1 y `One` si se observa el eigenvalue $-$1.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 24392c0995ca21931d4fa80663f72398c7a9937b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682856"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346841"

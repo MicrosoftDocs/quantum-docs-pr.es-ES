@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.multiplysi
 name: MultiplySI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Multiplica un entero con `xs` signo por un entero `ys` con signo y almacena el `result`resultado en, que debe ser cero inicialmente.
+namespace: microsoft.quantum.arithmetic
+summary: Multiplica un entero con signo `xs` por un entero con signo `ys` y almacena el resultado en `result` , que debe ser cero inicialmente.
 syntax: 'operation MultiplySI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
@@ -15,7 +15,7 @@ input:
     summary: multiplicador de n bits (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: el resultado de bit 2N (SignedLittleEndian) debe estar en el estado ${0}\ket $ inicialmente.
+    summary: el resultado de bit 2N (SignedLittleEndian) debe estar en el estado $ \ket {0} $ inicialmente.
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -26,9 +26,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b8710ecce1986b43e50a8b0567ae4746bda1589e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e81995b6dfb20ddd3e3e3139831d3cc43bfd60da
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679452"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353403"

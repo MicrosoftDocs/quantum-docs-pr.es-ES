@@ -2,12 +2,12 @@
 uid: microsoft.quantum.math.pnorm
 name: PNorm
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  Devuelve la `L(p)` norma de un vector de `Double`s.
+  Devuelve la `L(p)` norma de un vector de `Double` s.
 
 
-  Es decir, dada una matriz $x $ de tipo `Double[]`, devuelve el $p $-Norm $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+  Es decir, dada una matriz $x $ de tipo `Double[]` , devuelve el $p $-Norm $ \| x \| \_ p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 syntax: 'function PNorm (p : Double, array : Double[]) : Double'
 input:
   content: '(p : Double, array : Double[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Double
   types:
-  - summary: El $p $-norma $\|x\|_P $.
+  - summary: El $p $-norma $ \| x \| _P $.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5583e7d14c7363538ca11f48564ebac7240f511b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0f267609a04e66b6a445a92473a223a776fdccda
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684043"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333513"
