@@ -2,17 +2,17 @@
 uid: microsoft.quantum.intrinsic.rfrac
 name: RFrac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
   Aplica un giro sobre el eje Pauli determinado mediante un ángulo especificado como fracción Dyadic.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} donde $ \mu \en \{i, X, y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} donde $ \mu \en \{ i, X, y, Z \} $.
 
 
   > [!WARNING]
 
-  > Esta operación utiliza la **opposite** Convención de signo opuesto @"microsoft.quantum.intrinsic.r"de.
+  > Esta operación utiliza la Convención de signo **opuesto** de @"microsoft.quantum.intrinsic.r" .
 remarks: >-
   Equivalente a:
 
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: dc9f0ca68e1528ee7a36ef1503785cf60c08567c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00baacab18c2fa77946abf1f0220da6016b688e6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683682"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346654"

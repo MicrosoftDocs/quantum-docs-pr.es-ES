@@ -2,7 +2,7 @@
 uid: microsoft.quantum.logical.conditioned
 name: Conditioned
 type: function
-namespace: Microsoft.Quantum.Logical
+namespace: microsoft.quantum.logical
 summary: Devuelve uno de dos valores, dependiendo del valor de una condición booleana.
 remarks: >-
   A diferencia del `?|` operador, esta función no cortocircuita, de modo que ambas entradas se evalúen por completo.
@@ -27,23 +27,23 @@ input:
     isPrimitive: true
     uid: Bool
   - name: ifTrue
-    summary: Valor que se va a devolver `condition` cuando `true`sea.
+    summary: Valor que se va a devolver cuando `condition` sea `true` .
     uid: "'T"
     isLocal: true
   - name: ifFalse
-    summary: Valor que se va a devolver `condition` cuando `false`sea.
+    summary: Valor que se va a devolver cuando `condition` sea `false` .
     uid: "'T"
     isLocal: true
 output:
   content: "'T"
   types:
-  - summary: '`ifTrue`Si `condition` es `true`, y `ifFalse` en caso contrario.'
+  - summary: '`ifTrue` Si `condition` es `true` , y `ifFalse` en caso contrario.'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98d1cf77257fc79ba12fe383c0c2e49a25bdee10
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674074"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346161"
