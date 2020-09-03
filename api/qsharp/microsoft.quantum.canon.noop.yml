@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.noop
 name: NoOp
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Realiza la operación de identidad (no OP) en un argumento.
 
@@ -11,10 +11,10 @@ summary: >-
 
   Esto puede ser útil siempre que se espera una entrada de un tipo de operación, pero no se debe realizar ninguna acción.
 
-  Por ejemplo, si un síndrome de corrección de errores determinado indica que no se ha `NoOp<Qubit[]>` producido ningún error, puede ser el procedimiento de recuperación correcto.
+  Por ejemplo, si un síndrome de corrección de errores determinado indica que no se ha producido ningún error, `NoOp<Qubit[]>` puede ser el procedimiento de recuperación correcto.
 
-  Del mismo modo, si una operación espera un procedimiento de preparación de estado `NoOp<Qubit[]>` como entrada, se puede usar para preparar el estado $ \ket{0 \cdots 0} $.
-remarks: En casi todos los casos, el parámetro de `NoOp` tipo de debe especificarse explícitamente. Por ejemplo, `NoOp<Qubit>` es idéntico a <xref:microsoft.quantum.intrinsic.i>.
+  Del mismo modo, si una operación espera un procedimiento de preparación de estado como entrada, `NoOp<Qubit[]>` se puede usar para preparar el estado $ \ket{0 \cdots 0} $.
+remarks: En casi todos los casos, el parámetro de tipo de `NoOp` debe especificarse explícitamente. Por ejemplo, `NoOp<Qubit>` es idéntico a <xref:microsoft.quantum.intrinsic.i> .
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9af76ff7f2c559aef0f940ff3c56e6f8d8cdbb60
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678717"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355988"
