@@ -2,12 +2,12 @@
 uid: microsoft.quantum.bitwise.and
 name: And
 type: function
-namespace: Microsoft.Quantum.Bitwise
+namespace: microsoft.quantum.bitwise
 summary: >-
   Devuelve el and bit a bit de dos enteros.
 
   Esto realiza el mismo cálculo que el `&&&` operador integrado.
-remarks: Vea el [operador &amp; de C#](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator) (binario) para obtener más detalles.
+remarks: Vea el [ &amp; operador de C#](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/and-operator) (binario) para obtener más detalles.
 examples: >-
   ```qsharp
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 502101daebe79aeb14732f6e484f96e45e65d089
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 74bc26f5b9f113573e51a0f3e066403d2bfbbb50
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680714"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351329"
