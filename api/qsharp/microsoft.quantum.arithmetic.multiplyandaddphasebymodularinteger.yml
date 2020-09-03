@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: Lo mismo que MultiplyAndAddByModularInteger, pero supone que sumando codifica enteros en QFT.
 remarks: >-
   Supone que `phaseSummand` tiene el bit más alto establecido en 0.
 
-  También se supone que el valor `phaseSummand` de es menor que $N $.
+  También se supone que el valor de `phaseSummand` es menor que $N $.
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -20,7 +20,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: Un registro de Quantum que representa un entero sin signo cuyo valor se va a agregar a cada etiqueta de estado de `summand`base de.
+    summary: Un registro de Quantum que representa un entero sin signo cuyo valor se va a agregar a cada etiqueta de estado de base de `summand` .
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
     summary: Un registro de Quantum que representa un entero sin signo que se va a usar como destino para esta operación.
@@ -36,9 +36,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: 029ff8fb767ae018b7462f19a5fe09e83e606c6e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c1a7fd9523ee9056215cfbd5f2c89134f250bf1c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672797"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353556"

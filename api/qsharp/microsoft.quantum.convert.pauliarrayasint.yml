@@ -2,7 +2,7 @@
 uid: microsoft.quantum.convert.pauliarrayasint
 name: PauliArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: Codifica un operador qubit de Pauli que se representa como una matriz de operadores de un solo qubit Pauli en un entero.
 remarks: >-
   Cada operador Pauli se puede codificar con dos bits: $ $ \begin{align} \boldone \mapsto 00, \quad X \mapsto 01, \quad Y \mapsto 11, \quad Z \mapsto 10.
@@ -10,7 +10,7 @@ remarks: >-
   \end{align} $ $
 
 
-  Dada una matriz de operadores `[P0, ..., Pn]`Pauli, esta función devuelve un entero con expansión binaria formada mediante la concatenación de las asignaciones de cada operador Pauli en orden `bits(Pn) ... bits(P0)`Big Endian.
+  Dada una matriz de operadores Pauli `[P0, ..., Pn]` , esta función devuelve un entero con expansión binaria formada mediante la concatenación de las asignaciones de cada operador Pauli en orden Big Endian `bits(Pn) ... bits(P0)` .
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
@@ -23,13 +23,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Un entero que identifica `paulis`de forma única, tal y como se describe a continuación.
+  - summary: Un entero `paulis` que identifica de forma única, tal y como se describe a continuación.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e0ec584f77489d019a501ff31074e730152218f7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677388"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338302"
