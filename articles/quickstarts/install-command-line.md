@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
+ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863659"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89358265"
 ---
 # <a name="develop-with-no-locq-applications"></a>Desarrollo con aplicaciones de Q#
 
@@ -41,7 +41,7 @@ Para configurar Visual Studio:
 Para configurar Visual Studio Codespaces:
 
 1. Cree una [cuenta de Azure](https://azure.microsoft.com/free/).
-2. Cree un entorno de Codespaces. Consulte la [guía de inicio rápido](https://docs.microsoft.com/visualstudio/online/quickstarts/browser). Al crear el entorno de Codespace, se recomienda especificar `microsoft/Quantum` en el campo "Git Repository" (Repositorio Git) para cargar la configuración específica del QDK.
+2. Cree un entorno de Codespaces. Consulte la [guía de inicio rápido](https://docs.microsoft.com/visualstudio/codespaces/quickstarts/browser). Al crear el entorno de Codespace, se recomienda especificar `microsoft/Quantum` en el campo "Git Repository" (Repositorio Git) para cargar la configuración específica del QDK.
 3. Ahora puede iniciar el nuevo entorno y empezar a desarrollar en el explorador mediante el [IDE en la nube de VS Codespaces](https://online.visualstudio.com/environments). También se puede usar la instalación local de VS Code y usar Codespaces como un [entorno remoto](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
 
