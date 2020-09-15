@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863441"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063247"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Exploración del entrelazamiento con Q\#
 
@@ -112,7 +112,7 @@ Una Q# operación es una subrutina Quantum. Es decir, es una rutina invocable qu
 
 Los argumentos de una operación se especifican como una tupla, entre paréntesis.
 
-El tipo de valor devuelto de la operación se especifica después de un signo de dos puntos. En este caso, la operación de `SetQubitState` no devuelve ningún valor, por lo que se marca como retorno `Unit`. Es el Q# equivalente de `unit` en F #, que es aproximadamente análogo a `void` en C#, y una tupla vacía ( `Tuple[()]` ) en Python.
+El tipo de valor devuelto de la operación se especifica después de un signo de dos puntos. En este caso, la operación de `SetQubitState` no devuelve ningún valor, por lo que se marca como retorno `Unit`. Es el Q# equivalente de `unit` en F #, que es aproximadamente análogo a `void` en C#, y una tupla vacía en Python ( `()` , representada por la sugerencia de tipo `Tuple[()]` ).
 
 Ha usado dos operaciones Quantum en la primera Q# operación:
 
