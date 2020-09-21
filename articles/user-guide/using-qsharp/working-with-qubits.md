@@ -1,20 +1,20 @@
 ---
 title: Trabajo con qubits
-description: Descripción de relleno
+description: Más información sobre cómo trabajar con qubits en Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6808a852ee0de7d3a38ea44e9637eeaa6bea382a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867869"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835866"
 ---
 # <a name="working-with-qubits"></a>Trabajo con qubits
 
@@ -150,7 +150,7 @@ La *base de cálculo* se refiere a la `PauliZ` base y es la base más común que
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Medir un único qubit de `PauliZ` base
 
 Use la [`M`](xref:microsoft.quantum.intrinsic.m) operación, que es una operación intrínseca no unitario integrada, para medir un único qubit en `PauliZ` base y asignar un valor clásico al resultado.
-`M`tiene un tipo de valor devuelto reservado, `Result` , que solo puede tomar valores `Zero` o `One` que corresponden a los Estados medidos $ \ket {0} $ o $ \ket {1} $-, lo que indica que el resultado ya no es un estado Quantum.
+`M` tiene un tipo de valor devuelto reservado, `Result` , que solo puede tomar valores `Zero` o `One` que corresponden a los Estados medidos $ \ket {0} $ o $ \ket {1} $-, lo que indica que el resultado ya no es un estado Quantum.
 
 Un ejemplo sencillo es la siguiente operación, que asigna una qubit en el estado $ \ket {0} $, después le aplica una operación Hadamard `H` y mide el resultado de la `PauliZ` base.
 

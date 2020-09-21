@@ -2,18 +2,18 @@
 title: Programa Quantum de ejemplo NWChem
 description: Con una baraja de entrada de NWChem, recorra un ejemplo de obtención de recuentos de puertas para la simulación de química de Quantum.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 986ff2c2ff144c57bd01ddeea0467d0168fd9334
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759722"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835764"
 ---
 # <a name="end-to-end-with-nwchem"></a>De un extremo a otro con NWChem #
 
@@ -46,14 +46,14 @@ Import-Module InvokeNWChem.psm1
 ```
 
 > [!NOTE]
-> De forma predeterminada, Windows impide la ejecución de cualquier script o módulo como medida de seguridad.
-> Para permitir que los módulos como `Invoke-NWChem.psm1` se ejecuten en Windows, es posible que tenga que cambiar la Directiva de ejecución.
+> De forma predeterminada, Windows impide la ejecución de los scripts o módulos como medida de seguridad.
+> Para permitir que los módulos como `Invoke-NWChem.psm1` se ejecuten en Windows, es posible que deba cambiar la Directiva.
 > Para ello, ejecute el `Set-ExecutionPolicy` comando:
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope Process
 > ```
-> La Directiva de ejecución se revertirá al salir de PowerShell.
-> Si desea guardar la Directiva de ejecución, use un valor diferente para `-Scope` :
+> La Directiva se revertirá al salir de PowerShell.
+> Si desea guardar la Directiva, use un valor diferente para `-Scope` :
 > ```powershell
 > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```

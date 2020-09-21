@@ -2,19 +2,19 @@
 title: Prueba y depuración
 description: Aprenda a usar pruebas unitarias, hechos y aserciones y funciones de volcado para probar y depurar programas Quantum.
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867920"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833167"
 ---
 # <a name="testing-and-debugging"></a>Prueba y depuración
 
@@ -26,7 +26,7 @@ En esta sección, trataremos las herramientas que ofrece Q# para probar y depura
 Un enfoque común para probar programas clásico es escribir programas pequeños denominados *pruebas unitarias*, que ejecutan código en una biblioteca y comparan su salida con alguna salida esperada.
 Por ejemplo, puede asegurarse de que `Square(2)` devuelve `4` desde que conoce *un priori* que es $2 ^ 2 = $4.
 
-Q#admite la creación de pruebas unitarias para programas Quantum y que se pueden ejecutar como pruebas en el marco de pruebas unitarias de [xUnit](https://xunit.github.io/) .
+Q# admite la creación de pruebas unitarias para programas Quantum y que se pueden ejecutar como pruebas en el marco de pruebas unitarias de [xUnit](https://xunit.github.io/) .
 
 ### <a name="creating-a-test-project"></a>Crear un proyecto de prueba
 
@@ -127,7 +127,7 @@ La función intrínseca <xref:microsoft.quantum.intrinsic.message> tiene el tipo
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Después de ejecutar una prueba en el explorador de pruebas y hacer clic en la prueba, se muestra un panel con información sobre la ejecución de pruebas: estado de superación/error, tiempo transcurrido y vínculo a la salida. Haga clic en **salida** para abrir la salida de la prueba en una nueva ventana.
+Después de ejecutar una prueba en el explorador de pruebas y hacer clic en la prueba, se muestra un panel con información sobre la serie de pruebas: estado de superación/error, tiempo transcurrido y un vínculo a la salida. Haga clic en **salida** para abrir la salida de la prueba en una nueva ventana.
 
 ![resultados de la prueba](~/media/unit-test-output.png)
 
@@ -314,7 +314,7 @@ Los ejemplos siguientes muestran `DumpMachine` para algunos Estados comunes:
 
 ***
 
-Dado que <xref:microsoft.quantum.diagnostics.dumpmachine> forma parte del <xref:microsoft.quantum.diagnostics> espacio de nombres, debe agregar una `open` instrucción para tener acceso a ella:
+Dado que <xref:microsoft.quantum.diagnostics.dumpmachine> forma parte del  <xref:microsoft.quantum.diagnostics> espacio de nombres, debe agregar una `open` instrucción para tener acceso a ella:
 
 ```qsharp
 namespace Samples {
@@ -333,7 +333,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>funciona como <xref:microsoft.quantum.diagnostics.dumpmachine> , salvo que también toma una matriz de qubits para limitar la cantidad de información a solo el correspondiente qubits.
+<xref:microsoft.quantum.diagnostics.dumpregister> funciona como <xref:microsoft.quantum.diagnostics.dumpmachine> , salvo que también toma una matriz de qubits para limitar la cantidad de información a solo el correspondiente qubits.
 
 Como con <xref:microsoft.quantum.diagnostics.dumpmachine> , la información generada por <xref:microsoft.quantum.diagnostics.dumpregister> depende del equipo de destino. Para el simulador de Quantum de estado completo, escribe en el archivo la función Wave hasta una fase global del subsistema Quantum generada por el qubits proporcionado en el mismo formato que <xref:microsoft.quantum.diagnostics.dumpmachine> .  Por ejemplo, vuelva a realizar una máquina con solo dos qubits asignados y en el estado Quantum $ $ \begin{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} -\frac{(1 + i)} {2} \ket {10} =-e ^ {-i \ PI/4} ((\frac {1} {\sqrt {2} } \ket {0} -\frac{(1 + i)} {2} \ket {1} ) \otimes \frac{-(1 + i)} {\sqrt {2} } \ket {0} ) la llamada de \end{align} $ $ que llama <xref:microsoft.quantum.diagnostics.dumpregister> a `qubit[0]` genera este resultado:
 
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Depuración
 
-Sobre `Assert` `Dump` las funciones y y las operaciones, Q# admite un subconjunto de capacidades de depuración estándar de Visual Studio: [establecer puntos de interrupción de línea](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [recorrer paso a paso el código mediante F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)y [inspeccionar los valores de las variables clásicas](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) es posible durante la ejecución del código en el simulador.
+Sobre `Assert` `Dump` las funciones y y las operaciones, Q# admite un subconjunto de capacidades de depuración estándar de Visual Studio: [establecer puntos de interrupción de línea](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints), [recorrer paso a paso el código mediante F10](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)y [inspeccionar los valores de las variables clásicas](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) es posible al ejecutar el código en el simulador.
 
 La depuración en Visual Studio Code aprovecha las capacidades de depuración proporcionadas por C# para la extensión de Visual Studio Code con tecnología de OmniSharp y requiere la instalación de la [versión más reciente](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

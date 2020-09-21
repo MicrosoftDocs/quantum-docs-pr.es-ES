@@ -1,22 +1,22 @@
 ---
-title: Q#Conceptos básicos
-description: Conceptos básicos deQ#
+title: Q# Conceptos básicos
+description: Conceptos básicos de Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869654"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835526"
 ---
-# <a name="no-locq-basics"></a>Q#Conceptos básicos
+# <a name="no-locq-basics"></a>Q# Conceptos básicos
 
 En este artículo se presenta una breve introducción a los bloques de creación básicos de Q# .
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 Para obtener más información sobre cómo inicializar, o *asignar*, qubits, consulte [trabajar con qubits](xref:microsoft.quantum.guide.qubits).
 
-## <a name="quantum-states-in-no-locq"></a>Estados de Quantum enQ#
+## <a name="quantum-states-in-no-locq"></a>Estados de Quantum en Q#
 
 Lo importante es que el programa anterior no hace referencia explícitamente al estado en, Q# pero describe cómo el programa *transformó* el estado.
 Con este enfoque, puede ser totalmente independiente de lo que *es* un estado de Quantum incluso en cada máquina de destino, lo que puede tener interpretaciones diferentes en función del equipo. 
@@ -53,7 +53,7 @@ Pero en el futuro, cuando el equipo de destino es un equipo Quantum real, llamar
 Un Q# programa vuelve a combinar estas operaciones definidas por un equipo de destino para crear nuevas operaciones de nivel superior para expresar el cálculo de Quantum.
 De esta manera, facilita Q# la rápida expresión de Quantum subyacente de la lógica y los algoritmos de Quantum híbridos, mientras que también es general con respecto a la estructura de un equipo o simulador de destino.
 
-## <a name="no-locq-operations-and-functions"></a>Q#operaciones y funciones
+## <a name="no-locq-operations-and-functions"></a>Q# operaciones y funciones
 
 Concretamente, un Q# programa consta de *operaciones*, *funciones*y cualquier tipo definido por el usuario. 
 
@@ -65,13 +65,13 @@ En este caso, `Measure` es una *operación* que indica al equipo de destino que 
 Juntas, las operaciones y las funciones se conocen como *Invocables*. La estructura y el comportamiento subyacentes se presentan y detallan en [operaciones y funciones en Q# ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
-## <a name="no-locq-syntax-overview"></a>Q#Información general sobre la sintaxis
+## <a name="no-locq-syntax-overview"></a>Q# Información general sobre la sintaxis
 
 En la sintaxis de un lenguaje se describen las distintas combinaciones de símbolos que forman un programa sintácticamente correcto.
 En Q# , los elementos de sintaxis se clasifican en tres grupos distintos: tipos, expresiones e instrucciones.
 
 ### <a name="types"></a>Tipos
-Q#es un lenguaje fuertemente tipado, de modo que el uso cuidadoso de los tipos puede ayudar al compilador a proporcionar garantías seguras sobre los Q# programas en tiempo de compilación.
+Q# es un lenguaje fuertemente tipado, de modo que el uso cuidadoso de los tipos puede ayudar al compilador a proporcionar garantías seguras sobre los Q# programas en tiempo de compilación.
 Además de los tipos primitivos estándar y específicos de Quantum, como, por ejemplo,,, `Int` `Bool` `Qubit` y `Result` , proporciona compatibilidad con los Q# tipos definidos por el usuario.
 
 Para obtener descripciones de todos los tipos primitivos, detalles de tipos de matriz y tupla, y pasos para definir nuevos tipos dentro de un Q# archivo, vea [tipos en Q# ](xref:microsoft.quantum.guide.types).

@@ -2,19 +2,19 @@
 title: Operaciones y funciones en Q#
 description: Cómo definir y llamar a las operaciones y funciones, así como a las especializaciones de la operación controlada y de la función contigua.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759431"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833478"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Operaciones y funciones en Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 Si una operación implementa una transformación unitario, como es el caso de muchas operaciones en Q# , es posible definir cómo actúa la operación cuando se *adjointed* o *controla*. Una *especialización inversa de una operación* especifica cómo actúa el "inverso" de la operación, mientras que una especialización *controlada* especifica cómo actúa una operación cuando su aplicación está condicionada en el estado de un registro de Quantum determinado.
 
-Los elementos contiguos de las operaciones Quantum son cruciales para muchos aspectos de la informática Quantum. Para ver un ejemplo de una situación de este tipo que Q# se describe en una técnica de programación útil, consulte [conjugados](#conjugations) en este artículo. 
-
-La versión controlada de una operación es una operación nueva que aplica eficazmente la operación base solo si todos los qubits de control están en un estado especificado.
+Los elementos contiguos de las operaciones Quantum son cruciales para muchos aspectos de la informática Quantum. Para obtener un ejemplo de una situación de este tipo que se trata junto con una Q# técnica de programación útil, vea [flujo de control: conjugations](xref:microsoft.quantum.guide.controlflow#conjugations). La versión controlada de una operación es una operación nueva que aplica eficazmente la operación base solo si todos los qubits de control están en un estado especificado.
 Si el control qubits se encuentra en la superposición, la operación base se aplica de forma coherente a la parte adecuada de la superposición.
 Por lo tanto, las operaciones controladas suelen usarse para generar el inenredo.
 
@@ -366,46 +364,6 @@ Los tipos definidos por el usuario se tratan como una versión ajustada del tipo
 Esto significa que un valor de un tipo definido por el usuario no se puede usar cuando se espera que un valor del tipo subyacente sea.
 
 
-### <a name="conjugations"></a>Conjugaciones
-
-A diferencia de los bits clásico, la liberación de la memoria de Quantum es ligeramente más complicada, ya que el restablecimiento de qubits ciegamente puede tener efectos no deseados en el cálculo restante si el qubits todavía está inscrito. Estos efectos se pueden evitar al "deshacer" correctamente los cálculos realizados antes de liberar la memoria. Un patrón común en la informática Quantum es, por lo tanto, lo siguiente: 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-A partir de la versión 0,9, Q# admite una instrucción de conjugación que implementa la transformación anterior. Con esa instrucción, la operación `ApplyWith` se puede implementar de la siguiente manera:
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-Este tipo de instrucción de conjugación resulta mucho más útil si las transformaciones externas e internas no están disponibles como operaciones, sino que son más cómodas de describir en un bloque que consta de varias instrucciones. 
-
-El compilador genera automáticamente la transformación inversa para las instrucciones definidas en el bloque dentro de y se ejecuta después de que se complete el bloque Apply.
-Dado que las variables mutables usadas como parte del bloque interior no se pueden volver a enlazar en el bloque Apply, se garantiza que la transformación generada es el elemento contiguo del cálculo en el bloque dentro de. 
-
-
 ## <a name="defining-new-functions"></a>Definir nuevas funciones
 
 Las funciones son rutinas puramente deterministas en Q# , que son distintas de las operaciones en que no se les permite tener ningún efecto más allá del cálculo de un valor de salida.
@@ -663,7 +621,7 @@ Es decir, una operación o función se puede llamar a sí misma, o puede llamar 
 Sin embargo, hay dos comentarios importantes sobre el uso de la recursividad:
 
 - Es probable que el uso de la recursividad en las operaciones interfiera con ciertas optimizaciones.
-  Estas interferencias pueden tener un impacto considerable en el tiempo de ejecución del algoritmo.
+  Estas interferencias pueden tener un impacto sustancial en el tiempo de ejecución del algoritmo.
 - Cuando se ejecuta en un dispositivo Quantum real, el espacio de pila podría estar limitado y, por tanto, la recursividad profunda puede provocar un error en tiempo de ejecución.
   En concreto, el Q# compilador y el runtime no identifican ni optimizan la recursividad del final.
 

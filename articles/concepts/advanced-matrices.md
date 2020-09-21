@@ -1,6 +1,6 @@
 ---
 title: conceptos de matriz avanzada Descripción: Obtenga información sobre vectores propios, vectores propios y exponencial de la matriz, las herramientas fundamentales que se usan para describir y simular algoritmos Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix: avanzado ms. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 ms. topic: article no-LOC:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix: avanzado ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: article no-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ Ahora ampliamos nuestra manipulación de matrices a [*vectores propios, vectores
 
 Permita que $ M $ sea una matriz cuadrada y $ v $ sea un vector que no sea el vector todo ceros (es decir, el vector con todas las entradas igual a $ 0 $ ).
 
-Decimos que $ v $ es una [*Eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) de $ M $ si $ MV = CV $ para algún número $ c $ . Decimos $ $ que c es el [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) correspondiente a Eigenvector $ v $ . En general, una matriz $ M $ puede transformar un vector en cualquier otro Vector, pero un Eigenvector es especial porque se deja sin modificar, salvo que se multiplica por un número. Tenga en cuenta que si $ v $ es un Eigenvector con eigenvalue $ c $ , $ AV $ también es Eigenvector (para cualquier valor distinto de cero $ $ ) con la misma eigenvalue.
+Decimos que $ v $ es una [*Eigenvector*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) de  $ M $ si $ MV = CV $ para algún número $ c $ . Decimos $ $ que c es el [*eigenvalue*](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors) correspondiente a Eigenvector $ v $ . En general, una matriz $ M $ puede transformar un vector en cualquier otro Vector, pero un Eigenvector es especial porque se deja sin modificar, salvo que se multiplica por un número. Tenga en cuenta que si $ v $ es un Eigenvector con eigenvalue $ c $ , $ AV $ también es Eigenvector (para cualquier valor distinto de cero $ $ ) con la misma eigenvalue.
 
 Por ejemplo, para la matriz de identidad, cada vector $ v $ es un Eigenvector con eigenvalue $ 1 $ .
 
@@ -108,7 +108,7 @@ Vectores
 
 $$\begin{bmatrix}1 \\\\ 0 \\\\ 0 \end{bmatrix} , \begin{bmatrix} 0 \\\\ 1 \\\\ 0 \end{bmatrix} y \begin{bmatrix} 0 \\\\ 0 \\\\ 1\end{bmatrix}$$
 
-son vectores propios de esta matriz con vectores propios $ d_1 $ , $ d_2 $ y $ d_3 $ , respectivamente. Si $ d_1 $ , $ d_2 $ y $ d_3 $ son números distintos, estos vectores (y sus múltiplos) son los únicos vectores propios de la matriz $ d $ . En general, para una matriz diagonal es fácil leer las vectores propios y vectores propios. Los vectores propios son todos los números que aparecen en la diagonal, y sus respectivas vectores propios son los vectores de unidad con una entrada igual a $ 1 $ y las entradas restantes son iguales a $ 0 $ .
+son vectores propios de esta matriz con vectores propios  $ d_1 $ , $ d_2 $ y $ d_3 $ , respectivamente. Si $ d_1 $ , $ d_2 $ y $ d_3 $ son números distintos, estos vectores (y sus múltiplos) son los únicos vectores propios de la matriz $ d $ . En general, para una matriz diagonal es fácil leer las vectores propios y vectores propios. Los vectores propios son todos los números que aparecen en la diagonal, y sus respectivas vectores propios son los vectores de unidad con una entrada igual a $ 1 $ y las entradas restantes son iguales a $ 0 $ .
 
 Observe en el ejemplo anterior que el vectores propios de $ D $ forma una base para $ los $ vectores de tres dimensiones. Una base es un conjunto de vectores, de modo que cualquier vector se puede escribir como una combinación lineal de ellos. Más explícitamente, $ V_1 $ , $ v_2 $ y $ v_3 $ forman una base si cualquier vector $ v $ se puede escribir como $ v = a_1 v_1 + a_2 v_2 + a_3 v_3 $ para algunos números $ a_1 $ , $ a_2 $ y $ a_3 $ .
 

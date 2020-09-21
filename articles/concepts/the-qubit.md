@@ -1,6 +1,6 @@
 ---
 title: qubit en Quantum Computing Description: Obtenga información sobre qubits, la unidad fundamental de información en la informática Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit ms. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 ms. topic: article no-LOC:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. qubit ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: article no-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -100,7 +100,7 @@ Los vectores de estado de Quantum $ \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} $ y $
 
 Tomamos estos dos Estados de Quantum para que se correspondan con los dos Estados de un bit clásico, es decir, $ 0 $ y $ 1 $ . La Convención estándar es elegir
 
-$$0 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} ,$$
+$$0 \equiv \begin{bmatrix} 1 \\\\  0 \end{bmatrix} , \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix} ,$$
 
 Aunque la opción opuesta se podría tomar igualmente bien. Por lo tanto, fuera del número infinito de vectores de estado de Quantum de un solo qubit posible, solo dos se corresponden con los Estados de los bits clásico; el resto de Estados de Quantum no lo hacen.
 
@@ -120,7 +120,7 @@ Qubits también se puede mostrar en $ 3 $ D mediante la representación de la [*
 ![Esfera Bloch](~/media/concepts_bloch.png)
 
 Las flechas de este diagrama muestran la dirección en la que apunta el vector de estado de Quantum y cada transformación de la flecha puede considerarse como una rotación sobre uno de los ejes cardinales.
-Aunque pensar en un cálculo de Quantum como una secuencia de giros es un Intuition eficaz, es difícil usar este Intuition para diseñar y describir algoritmos. Q#alivia este problema proporcionando un lenguaje para describir tales giros.
+Aunque pensar en un cálculo de Quantum como una secuencia de giros es un Intuition eficaz, es difícil usar este Intuition para diseñar y describir algoritmos. Q# alivia este problema proporcionando un lenguaje para describir tales giros.
 
 ## <a name="single-qubit-operations"></a>Operaciones de qubit único
 
@@ -128,7 +128,7 @@ Los equipos Quantum procesan los datos aplicando un conjunto universal de las pu
 Esta noción de universalidad es similar a la noción de universalidad para la informática tradicional (es decir, clásica) en la que se considera que un conjunto de puertas es universal si se pueden realizar todas las transformaciones de los bits de entrada mediante un circuito de longitud finita.
 En el cálculo de Quantum Computing, las transformaciones válidas que se pueden realizar en un qubit son las transformaciones y la medida de la unitario.
 La *operación* de "contiguo" o la transposición de conjugada compleja es de importancia fundamental para la informática Quantum porque es necesario invertir transformaciones Quantum.
-Q#refleja esto proporcionando métodos para compilar automáticamente las secuencias de la puerta en su método contiguo, lo que evita que el programador tenga que controlar los contiguos de código en muchos casos. A continuación se muestra un ejemplo de esto:
+Q# refleja esto proporcionando métodos para compilar automáticamente las secuencias de la puerta en su método contiguo, lo que evita que el programador tenga que controlar los contiguos de código en muchos casos. A continuación se muestra un ejemplo de esto:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ En cuanto a la universalidad, es necesario que un equipo Quantum solo *aproxime*
 En otras palabras, un conjunto de puertas es un conjunto de puerta universal si cualquier transformación de cuantificación se puede escribir aproximadamente como un producto de las puertas de este conjunto. Se requiere que, en el caso de los errores prescritos, existan $ las puertas G_ { 1 } , G_ { 2 } , \ldots, G_N $ desde el conjunto de puertas, tal que
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1 \approx U.$$
+G_N G_ { N-1 } \cdots G_2 G_1 \approx U. $$
 
 Tenga en cuenta que, dado que la Convención para la multiplicación de matrices es multiplicar de derecha a izquierda la primera operación de la puerta en esta secuencia, $ G_N $ , es realmente la última aplicada al vector de estado de Quantum. Lo que es más formal, suponemos que este conjunto de puertas es universal si para cada tolerancia a errores $ \epsilon > 0 $ existe $ G_1, \ldots G_N, de $ modo que la distancia entre $ G_N \ldots G_1 $ y $ U $ es como máximo $ \epsilon $ . Idealmente, el valor de $ N $ necesario para alcanzar esta distancia de $ \epsilon se $ debe escalar de poliles con $ 1/\ épsilon $ .
 

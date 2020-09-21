@@ -3,17 +3,17 @@ title: Diagnósticos en las Q# bibliotecas estándar
 description: Obtenga información sobre las funciones de diagnóstico y las operaciones de las Q# bibliotecas estándar que se usan para detectar errores o errores en los programas Quantum.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868549"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835577"
 ---
 # <a name="diagnostics"></a>Diagnóstico #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`tiene `(String -> Unit)` una firma, de nuevo que no se puede observar la emisión de un mensaje de registro de depuración desde Q# .
+> `Message` tiene `(String -> Unit)` una firma, de nuevo que no se puede observar la emisión de un mensaje de registro de depuración desde Q# .
 
 Las <xref:microsoft.quantum.diagnostics.dumpmachine> <xref:microsoft.quantum.diagnostics.dumpregister> invocaciones de y indican a los equipos de destino que proporcionen información de diagnóstico sobre todos los qubits asignados actualmente o sobre un registro específico de qubits, respectivamente.
 Cada máquina de destino varía en función de la información de diagnóstico que se proporciona en respuesta a una instrucción de volcado.
@@ -69,14 +69,14 @@ En los equipos de destino que no permiten la evaluación de aserciones, las llam
 En general, la <xref:microsoft.quantum.diagnostics.assertmeasurement> operación afirma que la medición del qubits determinado en la base de Pauli determinada siempre tendrá el resultado especificado.
 Si se produce un error en la aserción, la ejecución finaliza mediante una llamada `fail` a con el mensaje especificado.
 De forma predeterminada, esta operación no está implementada. los simuladores que pueden admitirlo deben proporcionar una implementación que realice la comprobación en tiempo de ejecución.
-`AssertMeasurement`tiene una firma `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` tiene una firma `((Pauli[], Qubit[], Result, String) -> ())` .
 Dado que `AssertMeasurement` es una función con una tupla vacía como su tipo de salida, ningún efecto de haber llamado a `AssertMeasurement` se observa dentro de un Q# programa.
 
 La <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> función de operación valida que la medición del qubits determinado en la base de Pauli determinada tendrá el resultado dado con la probabilidad determinada, dentro de cierta tolerancia.
 La tolerancia es aditiva (por ejemplo, `abs(expected-actual) < tol` ).
 Si se produce un error en la aserción, la ejecución finaliza mediante una llamada `fail` a con el mensaje especificado.
 De forma predeterminada, esta operación no está implementada. los simuladores que pueden admitirlo deben proporcionar una implementación que realice la comprobación en tiempo de ejecución.
-`AssertMeasurementProbability`tiene una firma `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . El primero de `Double` los parámetros proporciona la probabilidad deseada del resultado y la tolerancia.
+`AssertMeasurementProbability` tiene una firma `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . El primero de `Double` los parámetros proporciona la probabilidad deseada del resultado y la tolerancia.
 
 Podemos hacer más que imponer una sola medida, con lo que la información clásica que usa un simulador para representar el estado interno de un qubit es receptiva a la copia, de modo que no es necesario realizar realmente una medida para probar nuestra aserción.
 En concreto, esto nos permite pensar en las mediciones *incompatibles* que serían imposibles en el hardware real.

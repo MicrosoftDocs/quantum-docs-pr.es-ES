@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0090fb2b9ac5f3c9d195a3ab02dcd21c848d8ef7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b226f355771f2b65399ebe00cc3de9429a3cebb0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868634"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759916"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterización y estadísticas de Quantum #
 
@@ -74,7 +74,7 @@ La estimación de fase por este motivo aparece dentro de varios algoritmos Quant
 ### <a name="bayesian-phase-estimation"></a>Estimación de la fase bayesiana ###
 
 > [!TIP]
-> Para obtener más información sobre la estimación de la fase bayesiana en la práctica, consulte el ejemplo de [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation) .
+> Para obtener más información sobre la estimación de la fase bayesiana en la práctica, consulte el ejemplo de [**PhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation) .
 
 La idea de la estimación de la fase bayesiana es sencilla.
 Se recopilan estadísticas de medidas del Protocolo de estimación de fase y, a continuación, se procesan los resultados mediante la inferencia bayesiana y se proporciona una estimación del parámetro.
@@ -112,7 +112,7 @@ La característica más importante de una estimación de fase sólida, que se co
 Otros detalles relevantes incluyen, por ejemplo, la sobrecarga de espacio pequeña de solo $1 $ ancilla qubit, o que el procedimiento no es adaptable, lo que significa que la secuencia requerida de experimentos de Quantum es independiente de los resultados de la medida intermedia. En este y en los próximos ejemplos en los que la elección del algoritmo de estimación de fase es importante, uno debería hacer referencia a la documentación como @"microsoft.quantum.characterization.robustphaseestimation" y a las publicaciones a las que se hace referencia para obtener más información y para su implementación.
 
 > [!TIP]
-> Hay muchos ejemplos en los que se usa una estimación de fase sólida. Para estimar la fase en la extracción de la energía de estado de la alimentación de varios sistemas físicos, consulte el ejemplo de [ **simulación de H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line), el [ejemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/simple)y el ejemplo de [ **Modelo Hubbard** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/hubbard).
+> Hay muchos ejemplos en los que se usa una estimación de fase sólida. Para estimar la fase en la extracción de la energía de estado de la alimentación de varios sistemas físicos, consulte el ejemplo de [ **simulación de H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line), el [ejemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/simple)y el ejemplo de [ **Modelo Hubbard** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/hubbard).
 
 
 ### <a name="continuous-oracles"></a>Oracle continuos ###
@@ -130,7 +130,7 @@ Por lo tanto, el uso de la estimación de fase con consultas continuas nos permi
 
 ### <a name="random-walk-phase-estimation"></a>Estimación de fase de recorrido aleatorio ###
 
-Q#proporciona una aproximación útil de la estimación de la fase bayesiana diseñada para el uso de dispositivos cercanos a Quantum que funcionan mediante el acondicionamiento de un recorrido aleatorio en el registro de datos Obtenido de la estimación de la fase iterativa.
+Q# proporciona una aproximación útil de la estimación de la fase bayesiana diseñada para el uso de dispositivos cercanos a Quantum que funcionan mediante el acondicionamiento de un recorrido aleatorio en el registro de datos Obtenido de la estimación de la fase iterativa.
 Este método es tanto adaptable como completamente determinista, lo que permite un escalado casi óptimo de errores en la fase estimada $ \hat{\phi} $ con sobrecargas de memoria muy bajas.
 
 El protocolo utiliza un método de inferencia Bayesiano aproximado que supone que la distribución anterior es Gaussiano.

@@ -2,19 +2,19 @@
 title: 'Comprobador de uso de qubits invalidado: kit de desarrollo de Quantum'
 description: Obtenga información sobre el comprobador de uso invalidado de qubits de Microsoft QDK, que usa el simulador de seguimiento de Quantum para comprobar el Q# código en busca de qubits no válidos.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 18371b3798d0eaa12d4e7107f58f44379594619f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868294"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90836002"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Simulador de seguimiento de Quantum: Comprobador de uso de qubits invalidado
 

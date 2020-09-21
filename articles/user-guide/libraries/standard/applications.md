@@ -9,14 +9,14 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4caacaad127f8a4d3b6f77efe35ebe7d3b97cacf
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a3380627aa196a749dd9487ad603aad29f34ae29
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868770"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759935"
 ---
-# <a name="applications"></a>Aplicaciones #
+# <a name="applications"></a>APLICACIONES #
 
 ## <a name="hamiltonian-simulation"></a>Simulación de Hamilton ##
 
@@ -52,9 +52,9 @@ En el caso especial en el que Hamiltonian se descomponga en una suma de partes d
 
 > [!TIP]
 > Las aplicaciones del algoritmo de simulación Trotter-Suzuki se describen en los ejemplos.
-> Para el modelo Ising usando solo las operaciones intrínsecas proporcionadas por cada equipo de destino, consulte el [ejemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
-> Para el modelo Ising que usa la estructura de control de la biblioteca Trotter-Suzuki, consulte el [ejemplo **IsingTrotter** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
-> Para el hidrógeno molecular mediante la estructura de control de la biblioteca Trotter-Suzuki, consulte el ejemplo de [ **simulación de H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
+> Para el modelo Ising usando solo las operaciones intrínsecas proporcionadas por cada equipo de destino, consulte el [ejemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
+> Para el modelo Ising que usa la estructura de control de la biblioteca Trotter-Suzuki, consulte el [ejemplo **IsingTrotter** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
+> Para el hidrógeno molecular mediante la estructura de control de la biblioteca Trotter-Suzuki, consulte el ejemplo de [ **simulación de H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
 En muchos casos, nos gustaría implementar el algoritmo de simulación, pero no le interesan los detalles de su implementación. Por ejemplo, el integrador de segundo orden se aproxima a $ $ \begin{align} U (t) & = \left (e ^ {-admitir \_ 0 t/2R} e ^ {-admitir \_ 1 t/2R} \cdots e ^ {-admitir \_ {d-1} t/2R} e ^ {-admitir \_ {d-1} t/2R} \cdots e ^ {-admitir \_ 1 t/2R} e ^ {-admitir \_ 0 t/2R} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j \\ | H \_ j \\ | ^ 3 t ^ 3/r ^ 2), \end{align} $ $ mediante un producto de $2rd $ terms. Los pedidos más grandes implicarán aún más términos y las variantes optimizadas pueden requerir pedidos muy no triviales en el exponencial. Otros algoritmos avanzados también pueden implicar el uso de ancilla qubits en pasos intermedios. Por lo tanto, empaquetamos algoritmos de simulación en la Canon como el tipo definido por el usuario.
 
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> Las aplicaciones de la biblioteca de simulación se describen en los ejemplos. Para la estimación de fase en el modelo Ising con `SimulationAlgorithm` , consulte el [ejemplo **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
-> Para la preparación del estado de adiabatic en el modelo de Ising con `TimeDependentSimulationAlgorithm` , consulte el [ejemplo **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
+> Las aplicaciones de la biblioteca de simulación se describen en los ejemplos. Para la estimación de fase en el modelo Ising con `SimulationAlgorithm` , consulte el [ejemplo **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
+> Para la preparación del estado de adiabatic en el modelo de Ising con `TimeDependentSimulationAlgorithm` , consulte el [ejemplo **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Preparación del estado de la Adiabatic & estimación de fase ###
@@ -129,14 +129,14 @@ operation EstimateAdiabaticStateEnergy(
 }
 ```
 
-`nQubits`es el número de qubits que se usa para codificar el estado de cuanto inicial. `statePrepUnitary`prepara el estado de inicio de la base de cálculo $ \ket{0\cdots 0} $. `adiabaticUnitary`es la operación unitario que implementa la preparación del estado de Adiabatic, como la generada por la `InterpolatedEvolution` función. `qpeUnitary`es la operación unitario que se utiliza para realizar una estimación de la fase en el estado de cuanto resultante. `phaseEstAlgorithm`es nuestra elección del algoritmo de estimación de fase.
+`nQubits` es el número de qubits que se usa para codificar el estado de cuanto inicial. `statePrepUnitary` prepara el estado de inicio de la base de cálculo $ \ket{0\cdots 0} $. `adiabaticUnitary` es la operación unitario que implementa la preparación del estado de Adiabatic, como la generada por la  `InterpolatedEvolution` función. `qpeUnitary` es la operación unitario que se utiliza para realizar una estimación de la fase en el estado de cuanto resultante. `phaseEstAlgorithm` es nuestra elección del algoritmo de estimación de fase.
 
 > [!TIP]
-> Las aplicaciones de preparación del estado de Adiabatic se describen en los ejemplos. Para el modelo Ising mediante una implementación manual de la preparación del estado de adiabatic en lugar de usar la `AdiabaticEvolution` función, consulte el [ejemplo **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
-> Para la estimación de la fase y la preparación del estado de adiabatic en el modelo Ising, consulte el [ejemplo **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> Las aplicaciones de preparación del estado de Adiabatic se describen en los ejemplos. Para el modelo Ising mediante una implementación manual de la preparación del estado de adiabatic en lugar de usar la `AdiabaticEvolution` función, consulte el [ejemplo **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
+> Para la estimación de la fase y la preparación del estado de adiabatic en el modelo Ising, consulte el [ejemplo **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
-> La [simulación de hidrógeno molecular](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) es un ejemplo interesante y breve. El modelo y los resultados experimentales que se muestran en [O'Malley et. al.](https://arxiv.org/abs/1512.06860) solo requiere matrices Pauli y tiene el formato $ \hat H = g \_ {0} I \_ 0I \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {Y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $. Se trata de un Hamiltonian efectivo que solo requiere 2 qubits, donde las constantes $g $ se calculan a partir de la distancia $R $ entre los dos átomos de hidrógeno. Con las funciones de Canon, Paulis se convierte en unitaries y, a continuación, evolucionó durante breves períodos de tiempo mediante la descomposición Trotter-Suzuki. Se puede crear una buena aproximación a la $H _2 $ de la alimentación sin usar la preparación del estado de Adiabatic y, por tanto, la energía del estado de la base se puede encontrar directamente mediante la estimación de fase de la Canon.
+> La [simulación de hidrógeno molecular](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) es un ejemplo interesante y breve. El modelo y los resultados experimentales que se muestran en [O'Malley et. al.](https://arxiv.org/abs/1512.06860) solo requiere matrices Pauli y tiene el formato $ \hat H = g \_ {0} I \_ 0I \_ 1 + g \_ 1 {z \_ 0} + g \_ 2 {Z \_ 1} + g \_ 3 {z \_ 0} {z \_ 1} + g \_ 4 {Y \_ 0} {y \_ 1} + g \_ 5 {x \_ 0} {x \_ 1} $. Se trata de un Hamiltonian efectivo que solo requiere 2 qubits, donde las constantes $g $ se calculan a partir de la distancia $R $ entre los dos átomos de hidrógeno. Con las funciones de Canon, Paulis se convierte en unitaries y, a continuación, evolucionó durante breves períodos de tiempo mediante la descomposición Trotter-Suzuki. Se puede crear una buena aproximación a la $H _2 $ de la alimentación sin usar la preparación del estado de Adiabatic y, por tanto, la energía del estado de la base se puede encontrar directamente mediante la estimación de fase de la Canon.
 
 ## <a name="shors-algorithm"></a>Algoritmo de Shor ##
 El algoritmo de mé sigue siendo uno de los progresos más importantes de la informática Quantum porque mostró que los equipos Quantum podrían usarse para resolver problemas importantes, que actualmente se pueden deducir.

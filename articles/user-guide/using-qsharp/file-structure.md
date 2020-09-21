@@ -1,22 +1,22 @@
 ---
-title: Q#Estructura de archivos
+title: Q# Estructura de archivos
 description: Describe la estructura y la sintaxis de un Q# archivo.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867937"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833307"
 ---
-# <a name="no-locq-file-structure"></a>Q#Estructura de archivos
+# <a name="no-locq-file-structure"></a>Q# Estructura de archivos
 
 Un Q# archivo consta de una secuencia de *declaraciones de espacios de nombres*.
 Cada declaración de espacio de nombres contiene declaraciones para tipos, operaciones y funciones definidos por el usuario, y puede contener cualquier número de cada tipo de declaración y en cualquier orden.
@@ -76,7 +76,7 @@ Por ejemplo, dada una operación denominada `Op` del `X.Y` espacio de nombres:
 Normalmente es mejor incluir un espacio de nombres mediante una `open` Directiva.
 Se requiere el uso de un nombre completo si dos espacios de nombres definen construcciones con el mismo nombre y el origen actual utiliza construcciones de ambos.
 
-Q#sigue las mismas reglas para asignar nombres a otros lenguajes de .NET.
+Q# sigue las mismas reglas para asignar nombres a otros lenguajes de .NET.
 Sin embargo, no Q# admite referencias relativas a espacios de nombres.
 Por ejemplo, si el espacio de nombres `a.b` está abierto, una referencia a una operación denominada no se `c.d` resuelve como una operación con el nombre completo *not* `a.b.c.d` .
 
@@ -91,7 +91,7 @@ Evite colocar varias instrucciones en una sola línea.
 
 ## <a name="statement-blocks"></a>Bloques de instrucciones
 
-Q#las instrucciones se agrupan en bloques de instrucciones, que se incluyen entre llaves `{ }` . Un bloque de instrucciones comienza con una apertura `{` y termina con un cierre `}` .
+Q# las instrucciones se agrupan en bloques de instrucciones, que se incluyen entre llaves `{ }` . Un bloque de instrucciones comienza con una apertura `{` y termina con un cierre `}` .
 
 Un bloque de instrucciones que se adjunta léxicamente dentro de otro bloque se considera un subbloque del bloque contenedor; los bloques que contienen y también se denominan bloques externos e internos.
 

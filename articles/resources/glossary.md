@@ -1,6 +1,6 @@
 ---
 Título: Quantum Computing Glossary Description: un glosario de términos comunes, acciones y objetos que se usan en la informática Quantum.
-Autor: QuantumWriter ms. Author: Alan.Geller@microsoft.com MS. Date: 12/11/2017 ms. topic: artículo UID: Microsoft. Quantum. Glossary no-LOC:
+Autor: bradben ms. Author: v-benbra ms. Date: 9/1/2020 ms. topic: artículo UID: Microsoft. Quantum. Glossary no-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@ Uno de los cuatro Estados de [entangled](xref:microsoft.quantum.glossary#entangl
 
 ## <a name="bloch-sphere"></a>Esfera Bloch
 
-Representación gráfica de un [Estado de cuanto](xref:microsoft.quantum.glossary#quantum-state) de un solo[qubit](xref:microsoft.quantum.glossary#qubit) como punto en una esfera de unidad tridimensional. Para obtener más información, vea [visualizar qubits y transformaciones mediante la esfera Bloch](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Representación gráfica de un [Estado de cuanto](xref:microsoft.quantum.glossary#quantum-state) de un solo[qubit](xref:microsoft.quantum.glossary#qubit) como punto en una esfera de unidad tridimensional. Para obtener más información, vea  [visualizar qubits y transformaciones mediante la esfera Bloch](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 ## <a name="callable"></a>Llamadas
 
@@ -170,7 +170,7 @@ Etiqueta para una colección de nombres relacionados (es decir, [operaciones](xr
 
 ## <a name="operation"></a>Operación
 
-Unidad básica de ejecución de Quantum en Q# . Es aproximadamente equivalente a una función de C, C++ o Python, o a un método estático en C# o Java. Para obtener más información, vea [operaciones y funciones](xref:microsoft.quantum.guide.operationsfunctions).
+Unidad básica del cálculo de Quantum en Q# . Es aproximadamente equivalente a una función de C, C++ o Python, o a un método estático en C# o Java. Para obtener más información, vea [operaciones y funciones](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="operator-application"></a>Operador Application
 

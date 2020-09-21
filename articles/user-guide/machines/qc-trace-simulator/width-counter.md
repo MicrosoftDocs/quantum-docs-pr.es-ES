@@ -2,19 +2,19 @@
 title: 'Contador de ancho: kit de desarrollo de Quantum'
 description: Obtenga información sobre el contador de ancho de QDK de Microsoft, que usa el simulador de seguimiento de Quantum para contar el número de operaciones de qubits asignadas y prestadas por el Q# programa.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 02f4937aaccf7bf49d6450355c6b42b273071b2e
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 701c36dd8c8b087a2728cd935aee0c2ffc4f59f9
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868209"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835951"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Simulador de seguimiento de Quantum: contador de ancho
 

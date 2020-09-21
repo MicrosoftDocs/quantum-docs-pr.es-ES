@@ -1,20 +1,20 @@
 ---
-title: Algoritmos Quantum enQ#
+title: Algoritmos Quantum en Q#
 description: Obtenga información acerca de los algoritmos de cálculo de Quantum fundamentales, como amplificación de amplitud, transformación de Fourier, agregadores de Draper y Beauregard y estimación de fases.
 author: QuantumWriter
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0b5972480061c460345057285bbfe53305acc122
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 7ce13c5df3795656156cccf28640c0a4b0dcba2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868821"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835679"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quantum #
 
@@ -30,7 +30,7 @@ La lógica que subyace a la amplificación de amplitud sigue directamente desde 
 
 Otra propiedad útil que sale de esto es que eigenvalue $ \theta $ está directamente relacionado con la probabilidad de que el estado inicial se marcara (en el caso de que $P _0 $ sea un proyector solo en el estado inicial).  Dado que el eigenphases de $Q $ son $2 \ Theta = 2 \ sin ^ {-1} (\sqrt{\Pr (Success)}) $, después, si aplicamos la estimación de fase a $Q $, podremos conocer la probabilidad de éxito de un procedimiento de Quantum unitario.  Esto resulta útil porque requiere menos aplicaciones del procedimiento Quantum de forma cuadrática para conocer la probabilidad de éxito que, de lo contrario, sería necesaria.
 
-Q#introduce amplificación de amplitud como una especialización de amplificación de amplitud desconocen.  La amplificación de amplitud desconocen gana este moniker porque el proyector en el eigenspace inicial no debe ser un proyector en el estado inicial.  En este sentido, el protocolo se desconocen al estado inicial.  La aplicación clave de la amplificación de amplitud de desconocen es en determinadas *combinaciones lineales de métodos de simulación de Hamiltonian unitarios* , donde el estado inicial es desconocido, pero se pone inactiva con un registro ancilla en el protocolo de simulación.  Si este registro ancilla se mediera como un valor fijo, por ejemplo, $0 $, estos métodos de simulación aplican la transformación unitario deseada al Qubits restante (denominado registro del sistema).  Sin embargo, el resto de los resultados de medición conducen a errores.  La amplificación de amplitud desconocen permite aumentar la probabilidad de éxito de esta medida hasta $100 \\ % $ mediante el razonamiento anterior.  Además, la amplificación de amplitud normal se corresponde con el caso en el que el registro del sistema está vacío.  Este es el motivo por el Q# que usa la amplificación de amplitud desconocen como subrutina de amplificación de amplitud fundamental.
+Q# introduce amplificación de amplitud como una especialización de amplificación de amplitud desconocen.  La amplificación de amplitud desconocen gana este moniker porque el proyector en el eigenspace inicial no debe ser un proyector en el estado inicial.  En este sentido, el protocolo se desconocen al estado inicial.  La aplicación clave de la amplificación de amplitud de desconocen es en determinadas *combinaciones lineales de métodos de simulación de Hamiltonian unitarios* , donde el estado inicial es desconocido, pero se pone inactiva con un registro ancilla en el protocolo de simulación.  Si este registro ancilla se mediera como un valor fijo, por ejemplo, $0 $, estos métodos de simulación aplican la transformación unitario deseada al Qubits restante (denominado registro del sistema).  Sin embargo, el resto de los resultados de medición conducen a errores.  La amplificación de amplitud desconocen permite aumentar la probabilidad de éxito de esta medida hasta $100 \\ % $ mediante el razonamiento anterior.  Además, la amplificación de amplitud normal se corresponde con el caso en el que el registro del sistema está vacío.  Este es el motivo por el Q# que usa la amplificación de amplitud desconocen como subrutina de amplificación de amplitud fundamental.
 
 La rutina general ( `AmpAmpObliviousByReflectionPhases` ) tiene dos registros a los que llamamos `ancillaRegister` y `systemRegister` . También acepta dos Oracle para las reflexiones necesarias. `ReflectionOracle`Actúa solo en el `ancillaRegister` mientras que `ObliviousOracle` actúa conjuntamente en ambos registros. La entrada a `ancillaRegister` debe inicializarse en un eigenstate-1 del primer operador de reflexión $ \boldone-2P_1 $.
 

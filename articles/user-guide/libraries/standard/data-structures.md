@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332d9f3134f2b69113668629857af32c814d3263
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868531"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759891"
 ---
 # <a name="data-structures-and-modeling"></a>Modelado y estructuras de datos #
 
@@ -160,8 +160,8 @@ Esta unitario se describe habitualmente mediante uno de dos tipos de Oracle.
 
 > [!TIP]
 > Los dos tipos de Oracle descritos a continuación se describen en los ejemplos.
-> Para obtener más información acerca de las Oracle de consulta continua, consulte el ejemplo de [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
-> Para obtener más información sobre Oracle de consultas discretas, consulte el [ejemplo de **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> Para obtener más información acerca de las Oracle de consulta continua, consulte el ejemplo de [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> Para obtener más información sobre Oracle de consultas discretas, consulte el [ejemplo de **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 El primer tipo de Oracle, que llamamos una consulta discreta de Oracle y que se representa con el tipo definido por el usuario <xref:microsoft.quantum.oracles.discreteoracle> , simplemente implica una matriz unitario.
 Si $U $ es la unitario cuyo vectores propios desea calcular, Oracle para $U $ es simplemente un producto para una subrutina que implementa $U $.
@@ -211,8 +211,8 @@ donde el entero $r > $0 controla el error de aproximación.
 La biblioteca de modelado de generación dinámica proporciona un marco para codificar sistemáticamente generadores complicados en términos de generadores más sencillos. Una descripción de este tipo se puede pasar a, por ejemplo, a la biblioteca de simulación para implementar la evolución del tiempo mediante un algoritmo de simulación de elección, con muchos detalles que se deben tener en cuenta automáticamente.
 
 > [!TIP]
-> La biblioteca de generadores dinámicos que se describe a continuación se incluye en los ejemplos. Para ver un ejemplo basado en el modelo Ising, consulte el [ejemplo **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
-> Para ver un ejemplo basado en hidrógeno molecular, consulte los ejemplos de [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) y [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) .
+> La biblioteca de generadores dinámicos que se describe a continuación se incluye en los ejemplos. Para ver un ejemplo basado en el modelo Ising, consulte el [ejemplo **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> Para ver un ejemplo basado en hidrógeno molecular, consulte los ejemplos de [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) y [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Descripción completa de un generador ###
 

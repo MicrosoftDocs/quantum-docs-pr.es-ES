@@ -3,18 +3,18 @@ title: Control de flujo en el Q# libararies estándar
 description: Obtenga información sobre las operaciones y las funciones de control de flujo en la Q# biblioteca estándar de Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868583"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835628"
 ---
 # <a name="higher-order-control-flow"></a>Flujo de control de orden superior #
 
@@ -86,7 +86,7 @@ En concreto, esto significa que las llamadas a `ApplyToEachCA` pueden aparecer e
 Del mismo modo, <xref:microsoft.quantum.canon.applytoeachindex> resulta útil para representar patrones del formulario `U(0, targets[0]); U(1, targets[1]); ...` y ofrece versiones para cada combinación de funciones que admite la entrada.
 
 > [!TIP]
-> `ApplyToEach`tiene parámetros de tipo, de modo que se puede utilizar con operaciones que toman entradas distintas de `Qubit` .
+> `ApplyToEach` tiene parámetros de tipo, de modo que se puede utilizar con operaciones que toman entradas distintas de `Qubit` .
 > Por ejemplo, supongamos que `codeBlocks` es una matriz de <xref:microsoft.quantum.errorcorrection.logicalregister> valores que deben recuperarse.
 > A continuación, `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` aplicará el código de corrección de errores `code` y la función de recuperación `recoveryFn` a cada bloque de forma independiente.
 > Esto se mantiene incluso para las entradas clásicas: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` aplicará un giro de $ \pi/$2 sobre $X $ seguido de un giro de $PI/$3 sobre $Y $.
@@ -120,7 +120,7 @@ Puesto que el control de las operaciones puede ser costoso en general, el uso de
 
 > [!NOTE]
 > Otra consecuencia de la división de $U $ es que no es necesario incluso saber cómo aplicar el `Controlled` functor a `U` .
-> `ApplyWithCA`por lo tanto, tiene una firma más débil de lo que cabría esperar:
+> `ApplyWithCA` por lo tanto, tiene una firma más débil de lo que cabría esperar:
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
