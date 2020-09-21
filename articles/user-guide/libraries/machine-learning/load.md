@@ -2,19 +2,19 @@
 title: Carga de datos de clásica
 description: Aprenda a cargar su propio conjunto de información para entrenar un modelo clasificador con el Microsoft Quantum Development Kit (QDK).
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 26ba7411c9ade1d6c4b606e8c12c10ade18fc584
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868838"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833702"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Carga y clasificación de sus propios conjuntos de valores
 
@@ -82,7 +82,7 @@ Supongamos que tenemos un conjunto de filas pequeño con los altos y pesos de lo
 | 0,91      | 44         | Foto    |
 | 0,86      | 31          | Foto    |
 | 0,32      | 5         | Catalítica    |
-| 0,25      | 4          | Catalítica    |
+| 0,25 %      | 4          | Catalítica    |
 
 El proceso es:
 

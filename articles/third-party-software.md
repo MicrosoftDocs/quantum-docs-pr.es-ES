@@ -4,18 +4,18 @@ description: Microsoft Quantum Development Kit información y avisos de software
 services: service-name-with-dashes-AZURE-ONLY
 keywords: No agregue ni edite palabras clave sin consultar a su responsable de SEO Champ.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869756"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834132"
 ---
 # <a name="third-party-software-notices-and-information"></a>AVISOS E INFORMACIÓN DE SOFTWARE DE TERCEROS
 
@@ -195,7 +195,7 @@ Un “colaborador” es cualquier persona que distribuye su contribución en vir
 
 (D) Si usted distribuye una parte del software en forma de código fuente, solo puede hacerlo en virtud de esta licencia si incluye una copia completa de esta licencia con su distribución. Si usted distribuye cualquier parte del software en forma de código objeto o compilado, solo puede hacerlo en virtud de una licencia que cumpla con esta licencia.
 
-(E) El Software se licencia “TAL CUAL”. El usuario asume el riesgo de su uso. Los colaboradores no ofrecen garantías ni condiciones expresas. Es posible que las leyes locales le otorguen derechos adicionales como consumidor que esta licencia no pueda modificar. En la medida en que así lo permitan las leyes locales, los colaboradores excluyen toda garantía implícita de comerciabilidad, idoneidad para un propósito específico y ausencia de infracción de derechos.
+(E) El Software se licencia “TAL CUAL”. Usted asume el riesgo de utilizarla. Los colaboradores no ofrecen garantías ni condiciones expresas. Es posible que las leyes locales le otorguen derechos adicionales como consumidor que esta licencia no pueda modificar. En la medida en que así lo permitan las leyes locales, los colaboradores excluyen toda garantía implícita de comerciabilidad, idoneidad para un propósito específico y ausencia de infracción de derechos.
 
 ## <a name="fsharpcore-notices-and-information"></a>INFORMACIÓN y avisos de FSharp. Core
 ---------------------------------------
@@ -268,7 +268,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Excepto donde se indique lo contrario, la biblioteca FParsec en formato binario y de origen se distribuye con la licencia BSD simplificada. La licencia BSD simplificada (también conocida como "2 ‐ de la cláusula BSD") es una licencia permisiva y sencilla que es compatible con OSI ‐. 
 
-FParsec incorpora datos derivados de la base de datos de caracteres Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., que se distribuye en virtud de los siguientes términos:http://www.unicode.org/terms_of_use.html#Exhibit1 
+FParsec incorpora datos derivados de la base de datos de caracteres Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., que se distribuye en virtud de los siguientes términos: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 La documentación de la carpeta doc tiene licencia en la licencia de Creative Commons Atribution ‐ discommercialon 3,0 no migrada. Esta licencia de Creative Commons no le permite usar la documentación con fines comerciales sin permiso. Esto significa, por ejemplo, que no puede vender la documentación en forma de libro para el beneficio o ponerlo en una granja de contenido web para ganar dinero con anuncios. Sin embargo, puede usar la documentación en un contexto comercial (por ejemplo, ponerlo en la intranet de una corporación comercial), siempre que no esté intentando obtener dinero directamente del texto de la documentación. 
 
@@ -284,6 +284,6 @@ Este software lo proporcionan los titulares de la propiedad intelectual "tal cua
 
 2,2 de la atribución de Creative Commons 3,0 ‐ sin la licencia
 
-Sumidohttps://creativecommons.org/licenses/by-nc/3.0/
+Sumido https://creativecommons.org/licenses/by-nc/3.0/
 
-El texto completo de la licencia:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+El texto completo de la licencia: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

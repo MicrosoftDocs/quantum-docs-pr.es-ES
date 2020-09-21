@@ -2,19 +2,19 @@
 title: Escribir y simular programas de nivel de qubit en Q#
 description: Tutorial paso a paso sobre cómo escribir y simular un programa Quantum que opere en el nivel de qubit individual
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863332"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834965"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: escribir y simular programas de nivel de qubit en Q\#
 
@@ -116,7 +116,7 @@ Con `using` , los qubits se asignan automáticamente en el estado $ \ket {0} $. 
 A continuación, se aplican las puertas que componen la propia operación.
 Q# ya contiene muchas de las puertas de Quantum básicas como operaciones en el [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) espacio de nombres y no son excepciones. 
 
-Dentro de una Q# operación, las instrucciones que invocan llamadas se ejecutarán en orden secuencial.
+Dentro de una Q# operación, las instrucciones que invocan las llamadas a, por supuesto, se ejecutarán en orden secuencial.
 Por lo tanto, la primera puerta que se va a aplicar es [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) al primer qubit:
 
 <br/>
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Una Q# vez completado el archivo y la operación, el programa Quantum está listo para ser llamado y simulado.
 
-## <a name="execute-the-program"></a>Ejecución del programa
+## <a name="run-the-program"></a>Ejecución del programa
 
 Una vez definida Q# la operación en un `.qs` archivo, ahora es necesario llamar a esa operación y observar cualquier dato clásico devuelto.
 Por ahora, no se devuelve nada (Recuerde que la operación definida anteriormente devuelve `Unit` ), pero, cuando se modifica posteriormente la Q# operación para devolver una matriz de resultados de la medición ( `Result[]` ), se solucionará este error.
@@ -269,7 +269,7 @@ Para ejecutar el programa, abra el terminal en la carpeta del proyecto y escriba
 dotnet run
 ```
 
-Tras la ejecución, debería ver los `Message` `DumpMachine` resultados y siguientes impresos en la consola.
+Al finalizar, debería ver los `Message` resultados y `DumpMachine` siguientes impresos en la consola.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,8 +314,8 @@ El host de C# tiene cuatro partes:
     En este ejemplo no hay ninguno.
 3. Ejecute el algoritmo cuántico. 
     Cada Q# operación genera una clase de C# con el mismo nombre. 
-    Esta clase tiene un método `Run` que ejecuta la operación **de forma asincrónica**.
-    La ejecución es asincrónica debido a que la ejecución en el hardware real será asincrónica. 
+    Esta clase tiene un `Run` método que ejecuta la operación de **forma asincrónica**.
+    La ejecución es asincrónica porque su ejecución en el hardware real será asincrónica. 
     Dado que el `Run` método es asincrónico, llamamos al `Wait()` método; Esto bloquea la ejecución hasta que la tarea se completa y devuelve el resultado sincrónicamente. 
 4. Procesa el resultado devuelto de la operación.
     Por ahora, la operación no devuelve nada.
@@ -396,7 +396,7 @@ Por lo tanto, la salida impresa ilustra que nuestras puertas programadas transfo
 
 $ $ \ket{\psi} \_ {Initial} = \ket {000} $ $
 
-to 
+en 
 
 $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -499,7 +499,7 @@ El código de operación final debería ser similar al siguiente:
 }
 ```
 
-Si está trabajando desde el símbolo del sistema, la matriz devuelta se imprimirá directamente en la consola al final de la ejecución.
+Si está trabajando desde el símbolo del sistema, la matriz devuelta se mostrará simplemente directamente en la consola al final de la ejecución.
 De lo contrario, actualice el programa host para procesar la matriz devuelta.
 
 #### <a name="command-prompt"></a>[Símbolo del sistema](#tab/tabid-cmdline)

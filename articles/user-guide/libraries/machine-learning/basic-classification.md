@@ -1,24 +1,24 @@
 ---
 title: Clasificación básica con la biblioteca Quantum Machine Learning
-description: Obtenga información sobre cómo ejecutar un clasificador secuencial Quantum escrito en Q# mediante la biblioteca quantum machine learning de Microsoft QDK.
+description: Obtenga información sobre cómo ejecutar un clasificador secuencial de Quantum escrito en Q# mediante la biblioteca quantum machine learning de Microsoft QDK.
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f9c3e7ab85c0f0d1a6063e593607d35c5cb76936
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868974"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833726"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Clasificación básica: clasificación de datos con QDK
 
-En esta guía de inicio rápido, obtendrá información sobre cómo ejecutar un clasificador secuencial Quantum escrito en Q# mediante la biblioteca de quantum machine learning de QDK. 
+En esta guía de inicio rápido, obtendrá información sobre cómo ejecutar un clasificador secuencial de Quantum escrito en Q# mediante la biblioteca de quantum machine learning de QDK. 
 
 En esta guía, usaremos el conjunto de caracteres de media luna con una estructura de clasificador definida en Q# .
 
@@ -70,7 +70,7 @@ El programa host consta de tres partes:
 
     :::code language="csharp" source="~/quantum/samples/machine-learning/half-moons/Host.cs" range="4-86":::
 
-    Después, presione F5; el programa iniciará la ejecución y se mostrará una nueva ventana con los siguientes resultados: 
+    Presione F5 y el programa comenzará a ejecutarse. Se mostrarán los siguientes resultados en una nueva ventana: 
 
     ```bash
     $ dotnet run
@@ -88,9 +88,9 @@ Se guarda el código siguiente en un archivo denominado `Training.qs` .
 
 Las funciones y operaciones más importantes definidas en el código anterior son:
 
-- `ClassifierStructure() : ControlledRotation[]`: en esta función se establece la estructura de nuestro modelo de circuito agregando las capas de las puertas controladas que se consideran. Este paso es análogo a la declaración de capas de neuronas en un modelo de aprendizaje profundo secuencial.
-- `TrainHalfMoonModel() : (Double[], Double)`: esta operación es la parte principal del código y define el entrenamiento. Aquí se cargan los ejemplos del conjunto de DataSet incluido en la biblioteca, se establecen los parámetros de hiperparámetros y los parámetros iniciales para el entrenamiento y se inicia el entrenamiento mediante una llamada a la operación `TrainSequentialClassifier` incluida en la biblioteca. Genera los parámetros y la diferencia que determinan el clasificador.
-- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: esta operación define el proceso de validación para evaluar el modelo. Aquí se cargan los ejemplos de validación, el número de medidas por muestra y la tolerancia. Genera el número de clasificaciones incorrectas en el lote elegido de ejemplos para la validación.
+- `ClassifierStructure() : ControlledRotation[]` : en esta función se establece la estructura de nuestro modelo de circuito agregando las capas de las puertas controladas que se consideran. Este paso es análogo a la declaración de capas de neuronas en un modelo de aprendizaje profundo secuencial.
+- `TrainHalfMoonModel() : (Double[], Double)` : esta operación es la parte principal del código y define el entrenamiento. Aquí se cargan los ejemplos del conjunto de DataSet incluido en la biblioteca, se establecen los parámetros de hiperparámetros y los parámetros iniciales para el entrenamiento y se inicia el entrenamiento mediante una llamada a la operación `TrainSequentialClassifier` incluida en la biblioteca. Genera los parámetros y la diferencia que determinan el clasificador.
+- `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : esta operación define el proceso de validación para evaluar el modelo. Aquí se cargan los ejemplos de validación, el número de medidas por muestra y la tolerancia. Genera el número de clasificaciones incorrectas en el lote elegido de ejemplos para la validación.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

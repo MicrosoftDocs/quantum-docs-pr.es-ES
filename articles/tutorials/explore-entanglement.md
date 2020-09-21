@@ -2,19 +2,19 @@
 title: Explore el incumplimiento con Q#
 description: Aprenda a escribir un programa Quantum en Q# . Desarrolle una aplicación de estado Bell mediante el kit de desarrollo de Microsoft Quantum (QDK)
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063247"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834030"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Exploración del entrelazamiento con Q\#
 
@@ -104,7 +104,7 @@ Reemplace el contenido de `Program.qs` por el código siguiente:
 Ahora se puede llamar a esta operación para establecer un cúbit en un estado clásico, ya sea devolviendo `Zero` el 100 % del tiempo o devolviendo `One` el 100 % del tiempo.
 `Zero` y `One` son constantes que representan los únicos dos resultados posibles de la medida de un cúbit.
 
-La operación `SetQubitState` mide el cúbit. Si el cúbit está en el estado que queremos, `SetQubitState` lo deja así; de lo contrario, al ejecutar la operación `X`, cambiamos el estado del cúbit al estado deseado.
+La operación `SetQubitState` mide el cúbit. Si el qubit está en el estado deseado, lo `SetQubitState` deja por sí solo; de lo contrario, al ejecutar la `X` operación, cambiamos el estado de qubit al estado deseado.
 
 #### <a name="about-no-locq-operations"></a>Acerca de Q# las operaciones
 
@@ -300,7 +300,7 @@ Esto se conoce como **superposición** y nos proporciona nuestra primera vista r
 ## <a name="prepare-entanglement"></a>Preparación del entrelazamiento
 
 Ahora veremos cómo expresa las Q# maneras de entangle qubits.
-En primer lugar, establecemos el primer cúbit en el estado inicial y después usamos la operación `H` para ponerlo en superposición.  A continuación, antes de que se mida el primer qubit, usamos una nueva operación ( `CNOT` ), que significa controlada por.  El resultado de ejecutar esta operación en dos cúbits es la inversión del segundo cúbit si el primero es `One`.  Ahora, los dos cúbits están entrelazados.  Nuestras estadísticas del primer cúbit no han cambiado (50-50 de probabilidades de `Zero` o `One` después de medir) pero ahora, cuando medimos el segundo cúbit, es __siempre__ igual que lo que se midió para el primer cúbit. Nuestro `CNOT` ha hecho el entrelazamiento de los dos cúbits, de modo que lo que le suceda a uno, le sucede al otro. Si invirtió las medidas (hizo la del segundo cúbit antes del primero), sucedería lo mismo. La primera medida sería aleatoria y la segunda sería en el paso de bloqueo con lo que se haya descubierto en primer lugar.
+En primer lugar, establecemos el primer cúbit en el estado inicial y después usamos la operación `H` para ponerlo en superposición.  A continuación, antes de que se mida el primer qubit, usamos una nueva operación ( `CNOT` ), que significa *controlada*por.  El resultado de la ejecución de esta operación en dos qubits es voltear el segundo qubit si el primer qubit es `One` .  Ahora, los dos cúbits están entrelazados.  Nuestras estadísticas del primer cúbit no han cambiado (50-50 de probabilidades de `Zero` o `One` después de medir) pero ahora, cuando medimos el segundo cúbit, es __siempre__ igual que lo que se midió para el primer cúbit. Nuestro `CNOT` ha hecho el entrelazamiento de los dos cúbits, de modo que lo que le suceda a uno, le sucede al otro. Si invirtió las medidas (hizo la del segundo cúbit antes del primero), sucedería lo mismo. La primera medida sería aleatoria y la segunda sería en el paso de bloqueo con lo que se haya descubierto en primer lugar.
 
 Lo primero que debemos hacer es asignar dos qubits en lugar de uno en `TestBellState` :
 

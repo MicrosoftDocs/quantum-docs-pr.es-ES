@@ -2,19 +2,19 @@
 title: 'Comprobador de entradas DISTINCT: kit de desarrollo de Quantum'
 description: Obtenga información sobre el comprobador de entradas distintas de Microsoft QDK, que usa el simulador de seguimiento de Quantum para comprobar el Q# código en busca de posibles conflictos con qubits compartidas.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 750c94e7f861678d37f051619ff5b29bf4fd3d3e
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bcb0bc92a546279496d27ad9b8c5f943ac133e2a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868277"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833463"
 ---
 # <a name="quantum-trace-simulator-distinct-inputs-checker"></a>Simulador de seguimiento de Quantum: Comprobador de entradas distintas
 

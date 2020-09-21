@@ -2,24 +2,24 @@
 title: Macros LaTeX compatibles para la creación
 description: Lista de macros de LaTeX admitidas para la documentación de Microsoft Quantum Development Kit.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 09/04/2019
 ms.topic: article
 uid: microsoft.quantum.contribute.macros
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 98abb324490f8eead37ffe70c406610d78fc2050
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: ee078666c6a727d50b295ff6179af2b71c836d85
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869790"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834115"
 ---
 # <a name="supported-macros"></a>Macros admitidas
 
 <table>
-<tr><th>Nombre de macro</th><th>Sintaxis</th><th>Results</th></tr>
+<tr><th>Nombre de macro</th><th>Syntax</th><th>Resultados</th></tr>
 <tr><td>les</td><td>\ket{\psi}</td><td>$ \ket{\psi} $</td></tr>
 <tr><td>Bra</td><td>\bra{\phi}</td><td>$ \bra{\phi} $</td></tr>
 <tr><td>freno</td><td>\braket{\phi | \psi}</td><td>$ \braket{\phi | \psi} $</td></tr>

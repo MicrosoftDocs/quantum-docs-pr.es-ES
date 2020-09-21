@@ -9,12 +9,12 @@ uid: microsoft.quantum.install.cs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 24318380e0e63957a51961762a33446fe0121b21
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 96a1d0d75f3ff7de11407fd76479cbae86ce7571
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863676"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759279"
 ---
 # <a name="develop-with-no-locq-and-net"></a>Desarrollo con Q# y .NET
 
@@ -88,7 +88,7 @@ Si usa un editor que no sea Visual Studio o VS Code, solo tiene que seguir los
 Una vez que haya configurado los proyectos siguiendo las instrucciones anteriores, puede llamar a Q# desde la aplicación de consola de .NET.
 El compilador de Q# creará clases de .NET para cada operación y función de Q# que le permita ejecutar programas cuánticos en un simulador.
 
-El [ejemplo de interoperabilidad con .NET](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) incluye el ejemplo siguiente de una operación de Q#:
+El [ejemplo de interoperabilidad con .NET](https://github.com/microsoft/Quantum/tree/main/samples/interoperability/dotnet) incluye el ejemplo siguiente de una operación de Q#:
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 

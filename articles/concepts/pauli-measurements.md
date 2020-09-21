@@ -1,6 +1,6 @@
 ---
 Título: Descripción de las medidas de Pauli: Aprenda a trabajar con operaciones de medición Pauli de un solo qubit.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Pauli ms. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 ms. topic: article no-LOC:
+Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: article no-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ También es equivalente a aplicar $ HS ^ \dagger $ al vector de estado de Quantu
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -223,14 +223,14 @@ Una nota adicional: aunque puede ser tentador asumir que la medida z $ \otimes z
 La razón es que medir $ z \otimes z $ proyecta el estado de cuanto en el $ eigenstate + 1 $ o $ -1 $ de estos operadores.
 $La medida \otimes \mathbb { de z 1 } $ y, a continuación, $ \mathbb { 1 } \otimes Z $ proyecta el vector de estado de Quantum primero en un espacio medio de $ Z \otimes \mathbb { 1 } $ y, a continuación, en un espacio medio de $ \mathbb { 1 } \otimes Z $ . Como hay cuatro vectores de base de cálculo, al realizar ambas mediciones se reduce el estado a un cuarto de espacio y, por tanto, se reduce a un vector de base de cálculo único.
 
-## <a name="correlations-between-qubits"></a>Correlaciones entre qubits
+## <a name="correlations-between-qubits"></a>Correlaciones entre bits cuánticos
 Otra forma de ver los productos de tensores de matrices de Pauli como $ x \otimes x $ o $ z \otimes z $ es que estas medidas permiten examinar la información almacenada en las correlaciones entre las dos qubits.
 $La medición \otimes \id $ de X permite examinar la información que se almacena localmente en el primer qubit.
 Aunque ambos tipos de medidas son igualmente valiosos en la informática Quantum, el primero ilumina la potencia de la informática Quantum.
 Revela que, con frecuencia, la información que desea aprender no se almacena en ningún qubit único, sino que se almacena de forma no local en todas las qubits a la vez y, por lo tanto, solo al examinarla a través de una medida conjunta (por ejemplo, $ z \otimes z $ ) hace que esta información se convierta en manifiesto.
 
 Por ejemplo, en la corrección de errores, a menudo queremos obtener información sobre el error que se produjo al no aprender nada sobre el estado que estamos intentando proteger.
-El [ejemplo de código bit-Flip](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) muestra un ejemplo de cómo puede hacerlo con medidas como $ z \otimes z \otimes \id $ y $ \id \otimes z \otimes z $ . < --TODO: cámbielo a un vínculo al explorador de ejemplos en cuanto se incorpora el ejemplo de código bit-flip. -->
+El [ejemplo de código bit-Flip](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) muestra un ejemplo de cómo puede hacerlo con medidas como $ z \otimes z \otimes \id $ y $ \id \otimes z \otimes z $ . < --TODO: cámbielo a un vínculo al explorador de ejemplos en cuanto se incorpora el ejemplo de código bit-flip. -->
 
 $ \otimes \otimes \otimes \boldone $ También se pueden medir los operadores de Pauli arbitrarios como X Y Z.
 Todos estos productos tensores de los operadores Pauli tienen solo dos vectores propios $ \pm 1 $ y ambos eigenspaces constituyen caracteres de medio ancho del espacio vectorial completo.

@@ -1,6 +1,6 @@
 ---
 title: vectores y matrices en Quantum Computing Description: Conozca los conceptos básicos sobre cómo trabajar con vectores y matrices.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vectores ms. Author: nawiebe@microsoft.com MS. Date: 12/11/2017 ms. topic: article no-LOC:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vectores ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: article no-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 La norma de un vector $ v $ se define como $ \sqrt { \sum \_ i | v \_ i | ^ 2 } $ . Se dice que un vector es de norma unitaria (o, como alternativa, se denomina [*Vector de unidad*](https://en.wikipedia.org/wiki/Unit_vector)) si su norma es $ 1 $ . El [*contiguo de un vector*](https://en.wikipedia.org/wiki/Adjoint_matrix) $ v $ se indica $ como v ^ \dagger $ y se define como el siguiente vector de fila donde $ \* $ denota el conjugado complejo.
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \vdots\\\\
 u_n \end{bmatrix} ~ \mathrm { y}~
-v=\begin{bmatrix}
+v =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \vdots\\\\
     v_n \end{bmatrix} , ~ \mathrm {}~
-au + BV=\begin{bmatrix}
+au + BV =\begin{bmatrix}
 au_1 + bv_1\\\\
 au_2 + bv_2\\\\
 \vdots\\\\
@@ -128,7 +128,7 @@ $$
 
 Una [*matriz*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) de tamaño $ m \times n $ es una colección de $ MN $ Complex Numbers organizada en $ m $ Rows y $ n $ columnas, como se muestra a continuación:
 
-$$F= 
+$$F = 
 \begin{bmatrix}
 M_ { 11 } ~~ m_ { 12 } ~~ \cdots ~~ m_ { 1N}\\\\
 M_ { 21 } ~~ m_ { 22 } ~~ \cdots ~~ m_ { 2N}\\\\
@@ -183,7 +183,7 @@ $ $ Se dice que una matriz M es [*Hermitian*](https://en.wikipedia.org/wiki/Herm
 Por último, el [*producto tensores*](https://en.wikipedia.org/wiki/Tensor_product) (o producto Kronecker) de dos $ matrices $ de tamaño $ m \times n $ y $ n $ de tamaño $ p \times q $ es una matriz mayor $ = de tamaño p M \otimes n $ de $ MP \times NQ $ , y se obtiene de $ M y n de la $ $ $ manera siguiente:
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ m_ { 1N }\\\\
         \ddots\\\\
@@ -221,26 +221,26 @@ y
 
 $$
     \begin{bmatrix}
-        a \ b \\\\ c \ d\end{bmatrix}
+        a \ b \\\\ c \ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e \ f \\\\ g \ h\end{bmatrix}
+        e \ f \\\\ g \ h \end{bmatrix}
      =
     \begin{bmatrix}
     un\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     b\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     d\begin{bmatrix}
-    e \ f \\\\ g \ h\end{bmatrix}
+    e \ f \\\\ g \ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    AE \ AF \ \ BF\\\\
-    AG \ ah \ BG \ BH\\\\
-    CE \ CF \ de \ DF\\\\
+    AE \ AF \ \ BF \\\\
+    AG \ ah \ BG \ BH \\\\
+    CE \ CF \ de \ DF \\\\
     CG \ CH \ DG \ DH \end{bmatrix} .
 $$
 

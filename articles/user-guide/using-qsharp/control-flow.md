@@ -1,38 +1,39 @@
 ---
-title: Flujo de control enQ#
+title: Flujo de control en Q#
 description: Bucles, condicionales, etc.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867954"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833512"
 ---
-# <a name="control-flow-in-no-locq"></a>Flujo de control enQ#
+# <a name="control-flow-in-no-locq"></a>Flujo de control en Q#
 
 Dentro de una operación o función, cada instrucción se ejecuta en orden, de forma similar a otros lenguajes imperativos habituales.
 Sin embargo, puede modificar el flujo de control de tres maneras distintas:
 
-* `if`afirma
-* `for`bucles
-* `repeat-until-success`bucles
+* `if` afirma
+* `for` bucles
+* `repeat-until-success` bucles
+* conjugados ( `apply-within` instrucciones)
 
-Las `if` `for` construcciones de flujo de control y continúan en un sentido familiar para la mayoría de los lenguajes de programación clásicas. [`Repeat-until-success`](#repeat-until-success-loop)los bucles se describen más adelante en este artículo.
+Las `if` `for` construcciones de flujo de control y continúan en un sentido familiar para la mayoría de los lenguajes de programación clásicas. [`Repeat-until-success`](#repeat-until-success-loop) los bucles y [conjugaciones](#conjugations) se describen más adelante en este artículo.
 
 Lo importante es `for` que los bucles y `if` las instrucciones se pueden usar en operaciones para las que se generan automáticamente [especializaciones](xref:microsoft.quantum.guide.operationsfunctions) . En ese escenario, el contiguo de un `for` bucle invierte la dirección y toma el contiguo de cada iteración.
 Esta acción sigue el principio "zapatos-y-Socks": Si desea deshacer la colocación en Socks y después zapatos, debe deshacer los zapatos y, a continuación, deshacer la colocación en SOCKS. 
 
 ## <a name="if-else-if-else"></a>If, else-if, else
 
-La `if` instrucción admite la ejecución condicional.
+La `if` instrucción admite el procesamiento condicional.
 Consta de la palabra clave `if` , una expresión booleana entre paréntesis y un bloque de instrucciones (el bloque _then_ ).
 Opcionalmente, puede seguir cualquier número de cláusulas else-if, cada una de las cuales consta de la palabra clave `elif` , una expresión booleana entre paréntesis y un bloque de instrucciones (el bloque _else-if_ ).
 Por último, la instrucción puede terminar opcionalmente con una cláusula else, que consta de la palabra clave `else` seguida de otro bloque de instrucciones (el bloque _else_ ).
@@ -55,7 +56,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-or
+o
 ```qsharp
 if (i == 1) {
     X(target);
@@ -148,11 +149,12 @@ Para obtener más ejemplos y detalles, consulte los [ejemplos de repetición has
 > [!TIP]   
 > Evite el uso de bucles de repetición hasta la ejecución correcta dentro de las funciones. Use bucles *While* para proporcionar la funcionalidad correspondiente dentro de las funciones. 
 
-## <a name="while-loop"></a>While (bucle)
+## <a name="while-loop"></a>Bucle while
 
 Los patrones de repetición hasta el éxito tienen una connotación específica de Quantum. Se usan ampliamente en clases concretas de algoritmos Quantum; por lo tanto, la construcción de lenguaje dedicada en Q# . Sin embargo, los bucles que se interrumpen en función de una condición y cuya longitud de ejecución se desconoce en tiempo de compilación, se controlan con especial atención en un tiempo de ejecución de Quantum. Sin embargo, su uso dentro de las funciones es inproblemático, ya que estos bucles solo contienen código que se ejecuta en hardware convencional (no Quantum). 
 
-Q#, por lo tanto, admite el uso de bucles while solo dentro de funciones. Una `while` instrucción consta de la palabra clave `while` , una expresión booleana entre paréntesis y un bloque de instrucciones.
+Q#, por lo tanto, admite el uso de bucles while solo dentro de funciones.
+Una `while` instrucción consta de la palabra clave `while` , una expresión booleana entre paréntesis y un bloque de instrucciones.
 El bloque de instrucciones (el cuerpo del bucle) se ejecuta siempre que la condición se evalúe como `true` .
 
 ```qsharp
@@ -164,6 +166,45 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
+## <a name="conjugations"></a>Conjugaciones
+
+A diferencia de los bits clásico, la liberación de la memoria de Quantum es ligeramente más complicada, ya que el restablecimiento de qubits ciegamente puede tener efectos no deseados en el cálculo restante si el qubits todavía está inscrito. Estos efectos se pueden evitar al "deshacer" correctamente los cálculos realizados antes de liberar la memoria. Un patrón común en la informática Quantum es, por lo tanto, lo siguiente: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# admite una instrucción de conjugación que implementa la transformación anterior. Con esa instrucción, la operación `ApplyWith` se puede implementar de la siguiente manera:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Esta instrucción de conjugación resulta útil si las transformaciones externas e internas no están disponibles como operaciones, sino que son más convenientes de describir en un bloque que consta de varias instrucciones. 
+
+El compilador genera automáticamente la transformación inversa para las instrucciones definidas en el bloque dentro de y se ejecuta después de que se complete el bloque Apply.
+Dado que las variables mutables usadas como parte del bloque interior no se pueden volver a enlazar en el bloque Apply, se garantiza que la transformación generada es el elemento contiguo del cálculo en el bloque dentro de. 
+
 ## <a name="return-statement"></a>Instrucción Return
 
 La instrucción return finaliza la ejecución de una operación o función y devuelve un valor al autor de la llamada.
@@ -173,7 +214,7 @@ Por ejemplo,
 ```qsharp
 return 1;
 ```
-or
+o
 ```qsharp
 return (results, qubits);
 ```
@@ -248,7 +289,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>RU sin`fixup`
+### <a name="rus-without-fixup"></a>RU sin `fixup`
 
 En este ejemplo se muestra un bucle RUS sin el paso de corrección. El código es un circuito probabilística que implementa una puerta de rotación importante $V _3 = (\boldone + 2 i Z)/\sqrt {5} $ usando las `H` `T` puertas y.
 El bucle finaliza en las repeticiones de $ \frac {8} {5} $ en promedio.
@@ -330,7 +371,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Para obtener más información, vea [ejemplo de pruebas unitarias que se proporciona con la biblioteca estándar](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
+Para obtener más información, vea [ejemplo de pruebas unitarias que se proporciona con la biblioteca estándar](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs):
 
 ## <a name="next-steps"></a>Pasos siguientes
 
