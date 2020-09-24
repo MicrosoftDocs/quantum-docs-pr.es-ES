@@ -2,19 +2,19 @@
 title: Simuladores cuánticos y programas de Q#
 description: Describe los simuladores cuánticos disponibles como máquinas de destino para los programas de Q#.
 author: QuantumWriter
-ms.author: Alan.Geller@microsoft.com
+ms.author: v-benbra
 ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 77401ca3642b89d708f338f852dc60bf7346b87b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868311"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833423"
 ---
 # <a name="quantum-simulators"></a>Simuladores cuánticos
 

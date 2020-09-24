@@ -2,19 +2,19 @@
 title: 'Simulador de seguimiento cuántico: Kit de desarrollo de Microsoft Quantum'
 description: Obtenga información sobre cómo usar el simulador de seguimiento cuántico de Microsoft para depurar código clásico y calcular los requisitos de recursos de un programa de Q#.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868226"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833360"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Simulador de seguimiento cuántico del kit de desarrollo de Microsoft Quantum (QDK)
 
@@ -86,7 +86,7 @@ El QDK incluye cinco herramientas que se pueden usar con el simulador de seguimi
 |-----| -----|
 |[Comprobador de entradas únicas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Comprueba posibles conflictos con los cúbits compartidos |
 |[Comprobador de uso de cúbits invalidado](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Comprueba si el programa aplica una operación a un cúbit que ya se ha liberado. |
-|[Contador de operaciones primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Cuenta el número de ejecuciones primitivas utilizadas por cada operación invocada en un programa cuántico.  |
+|[Contador de operaciones primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Cuenta el número de procesos primitivos utilizados por cada operación invocada en un programa cuántico.  |
 |[Contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Recopila recuentos que representan el límite inferior de la profundidad de cada operación invocada en un programa cuántico.   |
 |[Contador de ancho](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Cuenta el número de cúbits asignados y prestados por cada operación en un programa cuántico. |
 
