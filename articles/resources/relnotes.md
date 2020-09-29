@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834149"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492360"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -23,6 +23,24 @@ Este artículo contiene información sobre cada versión de Quantum Development 
 Para obtener instrucciones de instalación, consulte la [guía de instalación](xref:microsoft.quantum.install).
 
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
+
+## <a name="version-01220092803"></a>Versión 0.12.20092803
+
+*Fecha de lanzamiento: 29 de septiembre de 2020*
+
+Esta versión contiene lo siguiente:
+
+- Presentación y borrador de la especificación de la [representación intermedia Quantum (Qir)](https://github.com/microsoft/qsharp-language/tree/main/Specifications/QIR#quantum-intermediate-representation-qir) pensada como un formato común en los distintos servidores front-end. Vea también nuestra [entrada de blog](https://devblogs.microsoft.com/qsharp/introducing-quantum-intermediate-representation-qir) en Qir.
+- Inicio de nuestro nuevo [ Q# repositorio de lenguajes](https://github.com/microsoft/qsharp-language) que contiene también la [ Q# documentación](https://github.com/microsoft/qsharp-language/tree/main/Specifications/Language#q-language)completa.
+- Mejoras de rendimiento para QuantumSimulator para programas que implican un gran número de qubits: mejor aplicación de decisiones de fusión de puertas; paralelismo mejorado en el sistema Linux; se ha agregado la programación inteligente de la ejecución de la puerta. correcciones de errores.
+- Ahora se admiten las características de IntelliSense para Q# los archivos de Visual Studio y Visual Studio Code incluso sin un archivo de proyecto.
+- Varias Q# mejoras de interoperabilidad de/Python y correcciones de errores, incluida una mejor compatibilidad con los tipos de datos de NumPy.
+- Mejoras en el espacio de nombres Microsoft. Quantum. arrays (vea [Microsoft/QuantumLibraries # 313](https://github.com/microsoft/QuantumLibraries/issues/313)).
+- Se ha agregado un nuevo [ejemplo de repetición hasta el éxito](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/repeat-until-success) que solo usa dos qubits.
+
+Desde la última versión, el nombre de la rama predeterminada de cada uno de los repositorios de código abierto se ha cambiado a `main` .
+
+Vea la lista completa de los PR cerrados de las [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), el [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), el [Runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), los [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24) y [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-08-24..2020-09-24).
 
 ## <a name="version-01220082513"></a>Versión 0.12.20082513
 
