@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.mappedoverrange
+name: MappedOverRange
+type: function
+namespace: microsoft.quantum.arrays
+summary: Dado un intervalo y una función que toma un entero como entrada, devuelve una nueva matriz que consta de las imágenes de los valores de intervalo de la función.
+remarks: "La función se define para tipos genéricos, es decir, cada vez que se tiene una función, `mapper: Int -> 'T` se pueden asignar los valores del intervalo y generar una matriz de tipo `'T[]` ."
+examples: >-
+  En este ejemplo se suma 1 a un intervalo de números pares:
+
+
+  ```Q#
+
+  let numbers = MappedOverRange(PlusI(1, _), 0..2..10);
+
+  // numbers = [1, 3, 5, 7, 9, 11]
+
+  ```
+syntax: "function MappedOverRange (mapper : (Int -> 'T), range : Range) : 'T[]"
+input:
+  content: "(mapper : (Int -> 'T), range : Range)"
+  types:
+  - name: mapper
+    summary: Función de `Int` a `'T` que se utiliza para asignar valores de intervalo.
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Int
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+  - name: range
+    summary: Un intervalo de enteros.
+    isPrimitive: true
+    uid: Range
+output:
+  content: "'T[]"
+  types:
+  - summary: Matriz `'T[]` de elementos que se asignan mediante la `mapper` función.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: El tipo de resultado de la `mapper` función.
+seeAlso:
+- microsoft.quantum.arrays.mapped
+metadata:
+  ms.openlocfilehash: fe918a8f7e74d49834f992442344e99dbcd33422
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494627"
