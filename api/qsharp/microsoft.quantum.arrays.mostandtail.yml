@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.mostandtail
+name: MostAndTail
+type: function
+namespace: microsoft.quantum.arrays
+summary: Devuelve una tupla de todos menos uno y el último elemento de la matriz.
+syntax: "function MostAndTail (array : 'A[]) : ('A[], 'A)"
+input:
+  content: "(array : 'A[])"
+  types:
+  - name: array
+    summary: Matriz con al menos un elemento.
+    isArray: true
+    uid: "'A"
+    isLocal: true
+output:
+  content: ('A[], 'A)
+  types:
+  - summary: Una tupla de todos menos uno y el último elemento de la matriz.
+    types:
+    - isArray: true
+      uid: "'A"
+      isLocal: true
+    - uid: "'A"
+      isLocal: true
+typeParameters:
+- uid: "'A"
+  summary: El tipo de los elementos de la matriz.
+metadata:
+  ms.openlocfilehash: e8a8f21bef51af60339c4178873b52439516bf37
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494622"
