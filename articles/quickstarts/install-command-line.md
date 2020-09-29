@@ -1,22 +1,25 @@
 ---
 title: Desarrollo con aplicaciones de Q#
-author: KittyYeungQ
-ms.author: kitty
-ms.date: 4/24/2020
+description: Obtenga información sobre cómo crear una aplicación de Q# que se ejecute desde el símbolo del sistema.
+author: bradben
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a630b2307f5d95321fb26f480d7a441ddba846fc
-ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+ms.openlocfilehash: 68f530d80e5c5f40dc2bcbb185879c3cb6f93f91
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89358265"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834421"
 ---
 # <a name="develop-with-no-locq-applications"></a>Desarrollo con aplicaciones de Q#
+
+Siga las instrucciones que aparecen en la pestaña correspondiente a su entorno.
 
 Los programas de Q# se pueden ejecutar por sí solos, sin un controlador en un lenguaje host como C#, F# o Python.
 
@@ -45,7 +48,7 @@ Para configurar Visual Studio Codespaces:
 3. Ahora puede iniciar el nuevo entorno y empezar a desarrollar en el explorador mediante el [IDE en la nube de VS Codespaces](https://online.visualstudio.com/environments). También se puede usar la instalación local de VS Code y usar Codespaces como un [entorno remoto](https://docs.microsoft.com/visualstudio/online/how-to/vscode).
 
 
-Para instalar el QDK para otro entorno, escriba en el símbolo del sistema:
+Para instalar el QDK para otro entorno, escriba lo siguiente en el símbolo del sistema:
 
 ```dotnetcli
 dotnet new -i Microsoft.Quantum.ProjectTemplates
@@ -63,14 +66,14 @@ Para crear un nuevo proyecto:
 2. Haga clic en **Aplicación de consola independiente**.
 3. Vaya a la ubicación para guardar el proyecto y haga clic en **Crear proyecto**.
 4. Cuando el proyecto se haya creado correctamente, haga clic en **Abrir nuevo proyecto...** abajo a la derecha.
-        
+
 Inspeccione el proyecto. Verá un archivo de código fuente llamado `Program.qs`, que es un programa de Q# que define una operación sencilla para imprimir un mensaje en la consola.
 
 Para ejecutar la aplicación:
+
 1. Haga clic en **Terminal** -> **Nuevo terminal**.
 2. En el símbolo del sistema del terminal, escriba `dotnet run`.
 3. Debería ver el texto siguiente en la ventana de salida: `Hello quantum world!`.
-
 
 > [!NOTE]
 > Actualmente no se admiten áreas de trabajo con varias carpetas raíz en la extensión Q# para Visual Studio Code. Si tiene varios proyectos en un área de trabajo VS Code, todos los proyectos deben estar contenidos en la misma carpeta raíz.
@@ -80,6 +83,7 @@ Para ejecutar la aplicación:
 Cree una aplicación de Q# `Hello World` para comprobar la instalación de Visual Studio.
 
 Para crear una aplicación nueva de Q#:
+
 1. Abra Visual Studio y haga clic en **Archivo** -> **Nuevo** -> **Proyecto**.
 2. Escriba `Q#` en el cuadro de búsqueda, seleccione **Aplicación de Q#** y haga clic en **Siguiente**.
 3. Especifique un nombre y una ubicación para la aplicación, y haga clic en **Crear**.
@@ -88,6 +92,7 @@ Para crear una aplicación nueva de Q#:
 Inspeccione el proyecto. Verá un archivo de código fuente llamado `Program.qs`, que es un programa de Q# que define una operación sencilla para imprimir un mensaje en la consola.
 
 Para ejecutar la aplicación:
+
 1. Seleccione **Depurar** -> **Iniciar sin depurar**.
 2. Debería ver el texto `Hello quantum world!` impreso en una ventana de la consola.
 
@@ -105,11 +110,13 @@ Cree una aplicación de Q# `Hello World` para comprobar su instalación.
     ```
 
 1. Cree una aplicación:
+
     ```dotnetcli
     dotnet new console -lang Q# -o runSayHello
     ```
 
 1. Vaya al directorio de la aplicación:
+
     ```dotnetcli
     cd runSayHello
     ```
@@ -117,6 +124,7 @@ Cree una aplicación de Q# `Hello World` para comprobar su instalación.
     El directorio contendrá un archivo `Program.qs`, que es un programa de Q#que define una operación sencilla para imprimir un mensaje en la consola. Puede modificar esta plantilla con un editor de texto y sobrescribirla con sus propias aplicaciones cuánticas. 
 
 1. Ejecute el programa:
+
     ```dotnetcli
     dotnet run
     ```

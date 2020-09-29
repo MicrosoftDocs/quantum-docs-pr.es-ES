@@ -2,23 +2,23 @@
 title: Descripción de la computación cuántica
 description: ¿Qué son los equipos cuánticos y cómo usan los principios de la mecánica cuántica?
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866968"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834999"
 ---
 # <a name="understanding-quantum-computing"></a>Descripción de la computación cuántica
 
-La computación cuántica usa los principios de la mecánica cuántica para procesar la información. Por este motivo, la computación cuántica requiere un enfoque diferente de la computación clásica.  Un ejemplo de esta diferencia es el procesador que usan los equipos cuánticos.  Los equipos clásicos usan los conocidos chips de silicio, mientras que los equipos cuánticos usan materiales cuánticos como átomos, iones o electrones.  
+La computación cuántica usa los principios de la mecánica cuántica para procesar la información. Por este motivo, la computación cuántica requiere un enfoque diferente de la computación clásica. Un ejemplo de esta diferencia es el procesador que usan los equipos cuánticos. Los equipos clásicos usan los conocidos chips de silicio, mientras que los equipos cuánticos usan sistemas cuánticos como átomos, iones o electrones. Usan sus propiedades cuánticas para representar bits que se pueden preparar en diferentes superposiciones cuánticas de 1 y 0.  
 
 El material cuántico se comporta de acuerdo con las leyes de las mecánicas cuántica, lo que permite aprovechar conceptos como la computación probabilística, la superposición y el entrelazamiento. Estos conceptos son la base de los algoritmos cuánticos, que aprovechan la eficacia de la computación cuántica para solucionar problemas complejos. En este artículo se describen algunos de los conceptos esenciales de la mecánica cuántica en la que se basa la computación cuántica.
 

@@ -2,19 +2,19 @@
 title: Simuladores y equipos cuánticos
 description: Obtenga información sobre el hardware cuántico, simuladores cuánticos y cómo funcionan las operaciones cuánticas.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867716"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835016"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Simuladores y equipos cuánticos
 
@@ -33,7 +33,7 @@ Los equipos cuánticos se enfrentan a numerosos desafíos para funcionar correct
 
 ## <a name="quantum-simulators"></a>Simuladores cuánticos
 
-Los simuladores cuánticos que se ejecutan en equipos clásicos permiten simular la ejecución de algoritmos cuánticos en un sistema cuántico.  El kit de desarrollo de Microsoft Quantum (QDK) incluye un simulador de vectores de estado completo junto con otros simuladores cuánticos especializados.
+Los simuladores cuánticos que se ejecutan en equipos clásicos permiten simular el procesamiento de algoritmos cuánticos en un sistema cuántico.  El kit de desarrollo de Microsoft Quantum (QDK) incluye un simulador de vectores de estado completo junto con otros simuladores cuánticos especializados.
 
 ## <a name="topological-qubit"></a>Cúbit topológico
 

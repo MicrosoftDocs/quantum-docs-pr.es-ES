@@ -1,20 +1,21 @@
 ---
 title: Desarrollo con Q# y Python
+description: Obtenga información sobre cómo crear una aplicación de Q# con Python.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 01a5c31a7a920a69f4f90701d370f3a772d2c4d2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866747"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834166"
 ---
 # <a name="develop-with-no-locq-and-python"></a>Desarrollo con Q# y Python
 
@@ -116,4 +117,4 @@ Ahora ya puede comprobar la instalación del paquete `qsharp` de Python; para el
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que ha instalado el kit de desarrollo de Microsoft Quantum en su entorno preferido, siga este tutorial para escribir y ejecutar [su primer programa cuántico](xref:microsoft.quantum.quickstarts.qrng).
+Ahora que ha probado el kit de desarrollo de Microsoft Quantum en su entorno preferido, siga este tutorial para escribir y ejecutar [su primer programa cuántico](xref:microsoft.quantum.quickstarts.qrng).

@@ -1,29 +1,27 @@
 ---
 title: Desarrollo con cuadernos en Q# de Jupyter Notebook
+description: Obtenga información sobre cómo crear una aplicación de Q# con Jupyter Notebook.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866815"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834319"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Desarrollo con cuadernos en Q# de Jupyter Notebook
 
 Instale el QDK para desarrollar operaciones de Q# en cuadernos en Q# de Jupyter Notebook.
 
-Jupyter Notebook permite la ejecución de código en contexto junto con instrucciones, notas y otro contenido. Este entorno es idóneo para escribir código de Q# con explicaciones insertadas o tutoriales interactivos sobre computación cuántica. Esto es lo que tiene que hacer para empezar a crear sus propios cuadernos de Q#.
-
-> [!NOTE]
-> * En los cuadernos en Q# de Jupyter Notebook solo se puede ejecutar código de Q#, y no se puede llamar a las operaciones desde programas host externos (por ejemplo, archivos de Python o C#). Este entorno no es adecuado si su objetivo es combinar un programa host clásico externo con el programa cuántico.
+Jupyter Notebook permite el procesamiento de código en contexto junto con instrucciones, notas y otro contenido. Este entorno es idóneo para escribir código de Q# con explicaciones insertadas o tutoriales interactivos sobre computación cuántica. Esto es lo que tiene que hacer para empezar a crear sus propios cuadernos de Q#.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Instalación del kernel de IQ# para Jupyter
 
@@ -62,14 +60,14 @@ IQ# (pronunciado i-q-sharp) es una extensión del SDK de .NET Core usada princi
     dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > Si recibe un error durante el paso `dotnet iqsharp install`, abra una nueva ventana de terminal e inténtelo de nuevo.
-    > Si aún así no funciona, intente buscar la herramienta `dotnet-iqsharp` instalada (en Windows, `dotnet-iqsharp.exe`) y ejecute:
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > donde `/path/to/dotnet-iqsharp` debe reemplazarse por la ruta de acceso absoluta a la herramienta `dotnet-iqsharp` en el sistema de archivos.
-    > Normalmente, estará en `.dotnet/tools`, en la carpeta de perfil de usuario.
+> [!NOTE]
+> Si recibe un error durante el paso `dotnet iqsharp install`, abra una nueva ventana de terminal e inténtelo de nuevo.
+> Si aún así no funciona, intente buscar la herramienta `dotnet-iqsharp` instalada (en Windows, `dotnet-iqsharp.exe`) y ejecute:
+> ```
+> /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+> ```
+> donde `/path/to/dotnet-iqsharp` debe reemplazarse por la ruta de acceso absoluta a la herramienta `dotnet-iqsharp` en el sistema de archivos.
+> Normalmente, estará en `.dotnet/tools`, en la carpeta de perfil de usuario.
     
 ***
 
@@ -87,7 +85,7 @@ Ahora ya puede comprobar la instalación del cuaderno en Q# de Jupyter Notebook;
 
     - Si el cuaderno de Jupyter Notebook no se abre automáticamente en su explorador, copie y pegue en el explorador la dirección URL proporcionada por la línea de comandos.
 
-1. Seleccione "Nuevo" → "Q#" para crear un cuaderno de Jupyter Notebook con un kernel de Q# y agregue el código siguiente a la primera celda del cuaderno:
+1. Seleccione **Nuevo → Q#** para crear un cuaderno de Jupyter Notebook con un kernel de Q# y agregue el código siguiente a la primera celda del cuaderno:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
