@@ -45,6 +45,8 @@ functions:
   summary: Devuelve true si y solo si un número es menor o igual que otro número.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: Devuelve true si y solo si un número es menor o igual que otro número.
+- uid: microsoft.quantum.logical.lexographiccomparison
+  summary: Dada una función de comparación, devuelve una nueva función que lexographically compara dos matrices.
 - uid: microsoft.quantum.logical.nearlyequald
   summary: Devuelve true si y solo si dos entradas son casi iguales (es decir, dentro de una tolerancia de 1E-12).
 - uid: microsoft.quantum.logical.not
@@ -70,9 +72,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: Devuelve la disyunción exclusiva booleana de dos valores.
 metadata:
-  ms.openlocfilehash: 0ab7077bc2cdf9bc76f3da701a88869f8bb9bf85
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 006100b659daedbcca30fe443756a185a965ee1e
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89340109"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464341"
