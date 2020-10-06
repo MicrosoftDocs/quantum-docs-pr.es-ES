@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 28e880445bf61150d7940730009a5482298adae2
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492360"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771327"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de la versión de Microsoft Quantum Development Kit
 
@@ -23,6 +23,12 @@ Este artículo contiene información sobre cada versión de Quantum Development 
 Para obtener instrucciones de instalación, consulte la [guía de instalación](xref:microsoft.quantum.install).
 
 Para obtener instrucciones de actualización, consulte la [guía de actualización](xref:microsoft.quantum.update).
+
+## <a name="version-01220100504"></a>Versión 0.12.20100504
+
+*Fecha de lanzamiento: 5 de octubre de 2020*
+
+En esta versión se corrige un error que afecta a la carga de Q# notebooks (vea [iqsharp # 331](https://github.com/microsoft/iqsharp/pull/331)).
 
 ## <a name="version-01220092803"></a>Versión 0.12.20092803
 
@@ -66,7 +72,7 @@ Vea la lista completa de los PR cerrados de las [bibliotecas](https://github.com
 
 Esta versión contiene lo siguiente:
 
-- Los espacios de nombres abiertos en Q# los cuadernos ahora están disponibles para todos los cálculos de celdas futuros. Esto permite, por ejemplo, que los espacios de nombres se abran una vez en una celda de la parte superior del cuaderno, en lugar de tener que abrir espacios de nombres relevantes en cada celda de código. Un nuevo `%lsopen` comando mágico muestra la lista de espacios de nombres abiertos actualmente.
+- Los espacios de nombres abiertos en Q# los cuadernos ahora están disponibles cuando se ejecutan todas las celdas futuras. Esto permite, por ejemplo, que los espacios de nombres se abran una vez en una celda de la parte superior del cuaderno, en lugar de tener que abrir espacios de nombres relevantes en cada celda de código. Un nuevo `%lsopen` comando mágico muestra la lista de espacios de nombres abiertos actualmente.
 
 Vea la lista completa de los PR cerrados de las [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), el [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), el [Runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), los [ejemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [ Q# I](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) y [katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 

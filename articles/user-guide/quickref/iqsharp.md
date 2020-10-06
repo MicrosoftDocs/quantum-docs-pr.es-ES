@@ -8,12 +8,12 @@ uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4549afb84bf0084160079e3cef3a7f94dffcda3e
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833558"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771352"
 ---
 # <a name="ino-locq-magic-commands"></a>Q#Comandos mágicos
 
@@ -34,7 +34,7 @@ ms.locfileid: "90833558"
 ### <a name="azure-quantum-integration"></a>Integración de Quantum de Azure
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Se conecta a un área de trabajo de Quantum de Azure o muestra el estado de la conexión actual.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Ejecuta un trabajo en un área de trabajo de Quantum de Azure.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Envía un trabajo a un área de trabajo de Quantum de Azure y espera a que finalice.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Muestra una lista de trabajos en el área de trabajo de Azure Quantum actual.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Muestra los resultados de un trabajo en el área de trabajo de Azure Quantum actual.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Muestra el estado de un trabajo en el área de trabajo de Azure Quantum actual.

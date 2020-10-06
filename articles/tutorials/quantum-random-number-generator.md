@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: cefe35a10dd89c14d2f1abc3080d52ab125236d1
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834047"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771270"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementación de un generador cuántico de números aleatorios en Q\#
 
@@ -33,7 +33,7 @@ Un ejemplo sencillo de un algoritmo Quantum escrito en Q# es un generador de nú
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Tal y como se mencionó en nuestro artículo [Descripción de la computación cuántica](xref:microsoft.quantum.overview.understanding), un cúbit es una unidad de información cuántica que puede estar en superposición. Cuando se mide, un cúbit solo puede ser 0 o 1. Sin embargo, cuando se está ejecutando una operación, el estado de qubit representa la probabilidad de leer un 0 o un 1 con una medida. Este estado probabilístico se conoce como superposición. Podemos usar esta probabilidad para generar números aleatorios.
+Tal y como se mencionó en nuestro artículo [Descripción de la computación cuántica](xref:microsoft.quantum.overview.understanding), un cúbit es una unidad de información cuántica que puede estar en superposición. Cuando se mide, un cúbit solo puede ser 0 o 1. Sin embargo, antes de la medida, el estado de qubit representa la probabilidad de leer un 0 o un 1 con una medida. Este estado probabilístico se conoce como superposición. Podemos usar esta probabilidad para generar números aleatorios.
 
 En nuestra Q# operación, se introduce el tipo de la forma `Qubit` , nativo en Q# . Solo se puede asignar un `Qubit` con una instrucción `using`. Cuando se asigna un cúbit, siempre está en el estado `Zero`. 
 
