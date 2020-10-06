@@ -9,12 +9,12 @@ uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
+ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868804"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764131"
 ---
 # <a name="using-the-numerics-library"></a>Usar la biblioteca de valores numéricos
 
@@ -37,9 +37,9 @@ La biblioteca de valores numéricos admite los siguientes tipos
 
 1. **`LittleEndian`**: Una matriz de qubit `qArr : Qubit[]` que representa un entero en `qArr[0]` el que denota el bit menos significativo.
 1. **`SignedLittleEndian`**: Igual que, `LittleEndian` salvo que representa un entero con signo almacenado en el complemento de dos.
-1. **`FixedPoint`**: Representa un número real que consta de una matriz de qubit `qArr2 : Qubit[]` y una posición de punto binario `pos` , que cuenta el número de dígitos binarios a la izquierda del punto binario. `qArr2`se almacena de la misma manera que `SignedLittleEndian` .
+1. **`FixedPoint`**: Representa un número real que consta de una matriz de qubit `qArr2 : Qubit[]` y una posición de punto binario `pos` , que cuenta el número de dígitos binarios a la izquierda del punto binario. `qArr2` se almacena de la misma manera que `SignedLittleEndian` .
 
-## <a name="operations"></a>Operaciones
+## <a name="operations"></a>Operations
 
 Para cada uno de los tres tipos anteriores, hay disponible una variedad de operaciones:
 
@@ -120,7 +120,7 @@ Para empezar, Clone el repositorio y abra la `Numerics` subcarpeta:
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics
+cd Quantum/samples/numerics
 ```
 
 A continuación, `cd` en una de las carpetas de ejemplo y ejecute el ejemplo a través de
