@@ -4,17 +4,17 @@ title: Introducción al kit de desarrollo de Microsoft Quantum (QDK)
 description: Aprenda cómo empezar a programar proyectos cuánticos en Q# con el kit de desarrollo de Microsoft Quantum.
 author: bradben
 ms.author: v-benbra
-ms.date: 5/10/2020
+ms.date: 9/29/2020
 ms.topic: overview
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e56b0e0455773481fbff6cfb7f4a6817cfc93d1a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8a60888bbf7dce1b85bce7a2aa8c994bb8570964
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834506"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771213"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Introducción al kit de desarrollo de Microsoft Quantum (QDK)
 
@@ -34,13 +34,11 @@ Para empezar a trabajar con la eficacia de la computación cuántica, pruebe nue
 
 * [Generador de números cuánticos aleatorios](xref:microsoft.quantum.quickstarts.qrng): comience con aplicación de Q# del estilo "Hola mundo", que ofrece una breve introducción a los conceptos cuánticos y permite crear y ejecutar una aplicación cuántica en minutos.
 * [Exploración del entrelazamiento con Q#](xref:microsoft.quantum.write-program): este tutorial contiene instrucciones para escribir un programa de Q# que muestra algunos de los conceptos básicos de la programación cuántica. Si no está listo para empezar a codificar, puede seguir sin instalar QDK y consultar la información general sobre el lenguaje de programación Q# y los primeros conceptos de la computación cuántica.
-* [Algoritmo de búsqueda de Grover](xref:microsoft.quantum.quickstarts.search): examine este ejemplo de un programa de Q# para que se haga una idea de la capacidad de Q# para expresar el algoritmo cuántico de forma que abstraiga las operaciones cuánticas de bajo nivel.
-    Este tutorial le guía por el desarrollo del programa como una aplicación de Q# con Visual Studio o Visual Studio Code.
+* [Algoritmo de búsqueda de Grover](xref:microsoft.quantum.quickstarts.search): examine este ejemplo de un programa de Q# para que se haga una idea de la capacidad de Q# para expresar el algoritmo cuántico de forma que abstraiga las operaciones cuánticas de bajo nivel. Este tutorial le guía por el desarrollo del programa como una aplicación de Q# con Visual Studio o Visual Studio Code.
 
-### <a name="learning-further"></a>Más información
-* Los [módulos de Microsoft Learn sobre computación cuántica](https://docs.microsoft.com/learn/browse/?term=quantum) le ayudarán a dominar los conceptos principales a su ritmo. Para más información sobre los conceptos básicos de la creación de programas cuánticos con el QDK, consulte el [primer módulo](https://docs.microsoft.com/learn/modules/qsharp-create-first-quantum-development-kit/).
-* Si desea profundizar más en la programación con Q#, consulte [Quantum Katas](https://github.com/Microsoft/QuantumKatas), una colección de ejercicios de programación en Q# autoguiados que presentan la computación cuántica.
-    Muchos de estos katas también están disponibles como cuadernos de Q#. 
+## <a name="learning-further"></a>Más información
+* Microsoft Learn ofrece cursos en línea gratuitos para la computación cuántica. La ruta de aprendizaje [Fundamentos de la computación cuántica](https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/) introduce los conceptos fundamentales de la computación cuántica y los algoritmos cuánticos, y ayuda a empezar a crear programas cuánticos con Q#.
+* Si desea profundizar más en la programación con Q#, consulte [Quantum Katas](https://github.com/Microsoft/QuantumKatas), una colección de ejercicios de programación en Q# autoguiados que presentan la computación cuántica. Muchos de estos katas también están disponibles como cuadernos de Q#. 
 * En el [repositorio de ejemplos](https://github.com/Microsoft/Quantum), hay varios ejemplos de cómo escribir programas cuánticos con Q#. La mayoría de estos ejemplos están escritos con nuestras [bibliotecas cuánticas](https://github.com/Microsoft/QuantumLibraries) de código abierto, incluidas las bibliotecas [estándar](xref:microsoft.quantum.libraries.standard.intro) y de [química](xref:microsoft.quantum.chemistry.concepts.intro) (más información a continuación).
 
 ## <a name="key-concepts-for-quantum-computing"></a>Conceptos clave de la computación cuántica
@@ -59,7 +57,7 @@ La documentación actual incluye los temas adicionales siguientes.
 ### <a name="no-locq-developer-guides"></a>Guías para desarrolladores de Q#
 
 * [En la guía del usuario de Q#](xref:microsoft.quantum.guide) se detallan los conceptos básicos que se usan para crear programas cuánticos en Q#.
-* En [Simuladores cuánticos y aplicaciones host](xref:microsoft.quantum.machines) se describe cómo se procesan los algoritmos cuánticos, qué máquinas cuánticas hay disponibles y cómo escribir un controlador que no sea de Q# para el programa cuántico.
+* En [Simuladores cuánticos y aplicaciones host](xref:microsoft.quantum.machines) se describe cómo se ejecutan los algoritmos cuánticos, qué máquinas cuánticas hay disponibles y cómo escribir un controlador que no sea de Q# para el programa cuántico.
 
 ### <a name="no-locq-libraries"></a>Bibliotecas de Q#
 

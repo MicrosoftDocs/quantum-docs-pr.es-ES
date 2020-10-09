@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833423"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771316"
 ---
 # <a name="quantum-simulators"></a>Simuladores cuánticos
 
@@ -24,7 +24,7 @@ Los simuladores cuánticos son programas de software que se ejecutan en equipos 
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Simuladores cuánticos del kit de desarrollo de Microsoft Quantum (QDK)
 
-El simulador cuántico es responsable de proporcionar las implementaciones de las primitivas cuánticas de un algoritmo. Esto incluye operaciones primitivas como `H`, `CNOT` y `Measure`, así como el seguimiento y la administración de cúbits. El QDK incluye distintas clases de simuladores cuánticos que representan modelos de ejecución diferentes para el mismo algoritmo cuántico. 
+El simulador cuántico es responsable de proporcionar las implementaciones de las primitivas cuánticas de un algoritmo. Esto incluye operaciones primitivas como `H`, `CNOT` y `Measure`, así como el seguimiento y la administración de cúbits. El QDK incluye distintas clases de simuladores cuánticos que representan diferentes maneras de simular el mismo algoritmo cuántico. 
 
 
 Cada tipo de simulador cuántico puede ofrecer distintas implementaciones de estas operaciones primitivas. Por ejemplo, para ejecutar el algoritmo cuántico, el [simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator) realiza una simulación completa del [vector de estado cuántico](xref:microsoft.quantum.glossary#quantum-state), mientras que el [simulador de seguimiento de equipos cuánticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro) no tiene en cuenta el estado cuántico real. En su lugar, hace un seguimiento del uso de puertas, cúbits y otros recursos para el algoritmo.

@@ -1,3 +1,5 @@
+- name: Desarrollo de aptitudes con MS Learn
+  href: 'https://docs.microsoft.com/learn/paths/quantum-computing-fundamentals/'
 - name: Glosario
   href: glossary.md
 - name: Contribución a Quantum Developer Kit
