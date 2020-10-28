@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7f5e25aa7b58277642783e03d03854cd75ff4ca3
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 2e2d9f8494d8709fba34123793cecce4011b609a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771285"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690839"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Simulador de seguimiento cuántico del kit de desarrollo de Microsoft Quantum (QDK)
 
@@ -55,7 +55,7 @@ namespace Quantum.MyProgram
 
 Como el simulador de seguimiento cuántico no simula el estado cuántico real, no puede calcular la probabilidad de los resultados de una medición dentro de una operación. 
 
-Por consiguiente, si una operación incluye mediciones, debe proporcionar explícitamente estas probabilidades con la operación <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> del espacio de nombres <xref:microsoft.quantum.diagnostics>. Esto se ilustra en el ejemplo siguiente:
+Por consiguiente, si una operación incluye mediciones, debe proporcionar explícitamente estas probabilidades con la operación <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> del espacio de nombres <xref:Microsoft.Quantum.Diagnostics>. Esto se ilustra en el ejemplo siguiente:
 
 ```qsharp
 operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
@@ -74,7 +74,7 @@ operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
 }
 ```
 
-Si el simulador de seguimiento cuántico se encuentra con `AssertMeasurementProbability`, registrará que la medición de `PauliZ` en `source` y `q` dará un resultado de `Zero`, con una probabilidad de **0,5**. Más adelante, cuando ejecuta la operación `M`, busca los valores registrados de las probabilidades de resultado y `M` devuelve `Zero` o `One`, con una probabilidad de **0,5**. Si se ejecuta el mismo código en un simulador que realiza un seguimiento del estado cuántico, ese simulador comprueba que las probabilidades que se proporcionan en `AssertMeasurementProbability` sean correctas.
+Si el simulador de seguimiento cuántico se encuentra con `AssertMeasurementProbability`, registrará que la medición de `PauliZ` en `source` y `q` dará un resultado de `Zero`, con una probabilidad de **0,5** . Más adelante, cuando ejecuta la operación `M`, busca los valores registrados de las probabilidades de resultado y `M` devuelve `Zero` o `One`, con una probabilidad de **0,5** . Si se ejecuta el mismo código en un simulador que realiza un seguimiento del estado cuántico, ese simulador comprueba que las probabilidades que se proporcionan en `AssertMeasurementProbability` sean correctas.
 
 Tenga en cuenta que si hay al menos una operación de medición que no se haya anotado mediante `AssertMeasurementProbability`, el simulador activará [`UnconstrainedMeasurementException`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.unconstrainedmeasurementexception).
 
