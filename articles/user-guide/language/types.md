@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835832"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691610"
 ---
 # <a name="types-in-no-locq"></a>Tipos de Q#
 
@@ -22,7 +22,7 @@ En este artículo se describe el Q# modelo de tipo y la sintaxis para especifica
 
 Tenemos en cuenta que Q# es un lenguaje *fuertemente tipado* , de modo que el uso meticuloso de estos tipos puede ayudar al compilador a proporcionar garantías sólidas sobre los Q# programas en tiempo de compilación.
 Para proporcionar las garantías más fuertes posibles, las conversiones entre los tipos de Q# deben ser explícitas mediante llamadas a funciones que expresan esa conversión. 
-Q# proporciona una gran variedad de funciones como parte del espacio de <xref:microsoft.quantum.convert> nombres.
+Q# proporciona una gran variedad de funciones como parte del espacio de <xref:Microsoft.Quantum.Convert> nombres.
 Las reversiones a tipos compatibles, por otro lado, se producen implícitamente. 
 
 Q# proporciona ambos tipos primitivos, que se utilizan directamente, y diversas maneras de generar nuevos tipos a partir de otros tipos.
@@ -30,7 +30,7 @@ En el resto de este artículo se describe cada uno de ellos.
 
 ## <a name="primitive-types"></a>Tipos primitivos
 
-El Q# lenguaje proporciona los siguientes *tipos primitivos*, que se pueden usar directamente en los Q# programas. También puede usar estos tipos primitivos para construir nuevos tipos.
+El Q# lenguaje proporciona los siguientes *tipos primitivos* , que se pueden usar directamente en los Q# programas. También puede usar estos tipos primitivos para construir nuevos tipos.
 
 - El `Int` tipo representa un entero con signo de 64 bits, por ejemplo, `2` , `107` , `-5` .
 - El `BigInt` tipo representa un entero con signo de tamaño arbitrario, por ejemplo, `2L` , `107L` , `-5L` .
@@ -126,7 +126,7 @@ Por ejemplo, `(7)` es una expresión de tipo `Int` , `([1,2,3])` es una expresi�
 
 En concreto, esto significa que puede ver una operación o función cuyo tipo de tupla de entrada o de salida tiene un campo que toma un solo argumento o devuelve un valor único.
 
-Hacemos referencia a esta propiedad como _equivalencia de tupla singleton_.
+Hacemos referencia a esta propiedad como _equivalencia de tupla singleton_ .
 
 
 ## <a name="user-defined-types"></a>Tipos definidos por el usuario
@@ -259,8 +259,8 @@ En general, los tipos definidos por el usuario no pueden tener dependencias cíc
 
 Dados los tipos `'Tinput` y `'Tresult` :
 
-* `('Tinput => 'Tresult)` es el tipo básico de cualquier *operación*, por ejemplo `((Qubit, Pauli) => Result)` .
-* `('Tinput -> 'Tresult)` es el tipo básico de cualquier *función*, por ejemplo `(Int -> Int)` . 
+* `('Tinput => 'Tresult)` es el tipo básico de cualquier *operación* , por ejemplo `((Qubit, Pauli) => Result)` .
+* `('Tinput -> 'Tresult)` es el tipo básico de cualquier *función* , por ejemplo `(Int -> Int)` . 
 
 Estos se denominan la *firma* de que se puede llamar.
 
@@ -282,13 +282,13 @@ Por ejemplo, si la ejecución de la operación se basa en el estado de otros qub
 Para requerir la compatibilidad con `Controlled` y/o `Adjoint` functor en un tipo de operación, debe agregar una anotación que indique las características correspondientes.
 La anotación `is Ctl` (por ejemplo, `(Qubit => Unit is Ctl)` ) indica que la operación es controlable. Es decir, su ejecución se basa en el estado de otro qubit o qubits. Del mismo modo, la anotación `is Adj` indica que la operación tiene un uncontiguo, es decir, se puede "invertir" de modo que la aplicación de una operación sucesivamente y después su contigua a un estado deja el estado sin cambios. 
 
-Si desea exigir que una operación de ese tipo admita `Adjoint` y el `Controlled` functor, puede expresarlo como `(Qubit => Unit is Adj + Ctl)` . Por ejemplo, la operación Pauli integrada <xref:microsoft.quantum.intrinsic.x> tiene el tipo `(Qubit => Unit is Adj + Ctl)` . 
+Si desea exigir que una operación de ese tipo admita `Adjoint` y el `Controlled` functor, puede expresarlo como `(Qubit => Unit is Adj + Ctl)` . Por ejemplo, la operación Pauli integrada <xref:Microsoft.Quantum.Intrinsic.X> tiene el tipo `(Qubit => Unit is Adj + Ctl)` . 
 
 Un tipo de operación que no admita ningún functor se especifica solo por su tipo de entrada y salida, sin ninguna anotación adicional.
 
-### <a name="type-parameterized-functions-and-operations"></a>Operaciones y funciones con parámetros de tipo
+### <a name="type-parameterized-functions-and-operations"></a>Funciones y operaciones de Type-Parameterized
 
-Los tipos a los que se puede llamar pueden contener *parámetros de tipo*.
+Los tipos a los que se puede llamar pueden contener *parámetros de tipo* .
 Use un símbolo con una comilla simple como prefijo para indicar un parámetro de tipo; por ejemplo, `'A` es un parámetro de tipo válido.
 Para obtener más información y detalles sobre cómo definir las llamadas a parámetros de tipo, vea [operaciones y funciones en Q# ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
 

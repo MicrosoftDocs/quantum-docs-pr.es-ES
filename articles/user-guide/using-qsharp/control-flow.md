@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833512"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691089"
 ---
 # <a name="control-flow-in-no-locq"></a>Flujo de control en Q#
 
@@ -38,10 +38,10 @@ Consta de la palabra clave `if` , una expresión booleana entre paréntesis y un
 Opcionalmente, puede seguir cualquier número de cláusulas else-if, cada una de las cuales consta de la palabra clave `elif` , una expresión booleana entre paréntesis y un bloque de instrucciones (el bloque _else-if_ ).
 Por último, la instrucción puede terminar opcionalmente con una cláusula else, que consta de la palabra clave `else` seguida de otro bloque de instrucciones (el bloque _else_ ).
 
-La `if` condición se evalúa y, si es *true*, se ejecuta el bloque *then* .
-Si la condición es *false*, se evalúa la primera condición else-if; Si es true, se ejecuta el bloque *else-if* .
+La `if` condición se evalúa y, si es *true* , se ejecuta el bloque *then* .
+Si la condición es *false* , se evalúa la primera condición else-if; Si es true, se ejecuta el bloque *else-if* .
 De lo contrario, el segundo bloque else-if evalúa y, a continuación, el tercero, y así sucesivamente hasta que se encuentre una cláusula con una condición verdadera o no haya más cláusulas else-if.
-Si la condición *If* original y todas las cláusulas else-if se evalúan como *false*, se ejecuta el bloque *else* , si se proporciona.
+Si la condición *If* original y todas las cláusulas else-if se evalúan como *false* , se ejecuta el bloque *else* , si se proporciona.
 
 Tenga en cuenta que cualquier bloque se ejecuta, se ejecuta dentro de su propio ámbito.
 Los enlaces realizados dentro de un `if` `elif` bloque, o `else` no están visibles una vez finalizado el bloque.
@@ -56,7 +56,7 @@ if (result == One) {
 } 
 // n is not bound
 ```
-o
+or
 ```qsharp
 if (i == 1) {
     X(target);
@@ -69,7 +69,7 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>Bucle For
+## <a name="for-loop"></a>Bucle for
 
 La `for` instrucción admite la iteración sobre un intervalo de enteros o una matriz.
 La instrucción consta de la palabra clave `for` , seguida de una tupla de símbolos o símbolos, la palabra clave `in` y una expresión de tipo `Range` o matriz, todos entre paréntesis y un bloque de instrucciones.
@@ -129,7 +129,7 @@ donde `expression` es cualquier expresión válida que se evalúe como un valor 
 El cuerpo del bucle se ejecuta y, a continuación, se evalúa la condición.
 Si la condición es true, la instrucción se completa; de lo contrario, se ejecuta la corrección y la instrucción se ejecuta de nuevo, comenzando por el cuerpo del bucle.
 
-Las tres partes de un bucle RUS (el cuerpo, la prueba y la corrección) se tratan como un solo ámbito *para cada repetición*, por lo que los símbolos que están enlazados en el cuerpo están disponibles tanto en la prueba como en la corrección.
+Las tres partes de un bucle RUS (el cuerpo, la prueba y la corrección) se tratan como un solo ámbito *para cada repetición* , por lo que los símbolos que están enlazados en el cuerpo están disponibles tanto en la prueba como en la corrección.
 Sin embargo, al finalizar la ejecución de la corrección finaliza el ámbito de la instrucción, de modo que los enlaces de símbolos realizados durante el cuerpo o la corrección no estén disponibles en las repeticiones posteriores.
 
 Además, la `fixup` instrucción suele ser útil pero no siempre es necesaria.
@@ -214,7 +214,7 @@ Por ejemplo,
 ```qsharp
 return 1;
 ```
-o
+or
 ```qsharp
 return (results, qubits);
 ```
@@ -324,7 +324,7 @@ Las características de programación más importantes que se muestran en esta o
 * Una parte más compleja `fixup` del bucle, que implica operaciones Quantum. 
 * El uso de `AssertMeasurementProbability` instrucciones para determinar la probabilidad de medir el estado de Quantum en determinados puntos especificados en el programa.
 
-Para obtener más información sobre [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) las [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operaciones y, vea [probar y depurar](xref:microsoft.quantum.guide.testingdebugging).
+Para obtener más información sobre [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) las [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) operaciones y, vea [probar y depurar](xref:microsoft.quantum.guide.testingdebugging).
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

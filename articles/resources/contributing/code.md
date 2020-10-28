@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91489772"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691809"
 ---
 # <a name="contributing-code"></a>Contribución de código
 
@@ -36,7 +36,7 @@ Cuando se abre una nueva solicitud de incorporación de cambios, por ejemplo, la
 
 Con la versión más reciente Q# , las pruebas unitarias se definen mediante el `@Test("QuantumSimulator")` atributo. El argumento puede ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" o cualquier nombre completo que especifique el destino de la ejecución. Varios atributos que definen diferentes destinos de ejecución se pueden adjuntar a la misma. Algunas de nuestras pruebas siguen usando el paquete [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) en desuso que expone todas Q# las funciones y operaciones que terminan en `Test` el marco de [xUnit](https://xunit.github.io/) . Este paquete ya no es necesario para definir pruebas unitarias. 
 
-La siguiente función se usa para garantizar que las <xref:microsoft.quantum.canon.fst> <xref:microsoft.quantum.canon.snd> funciones y devuelven los resultados correctos en un ejemplo representativo.
+La siguiente función se usa para garantizar que las <xref:Microsoft.Quantum.Canon.Fst> <xref:Microsoft.Quantum.Canon.Snd> funciones y devuelven los resultados correctos en un ejemplo representativo.
 Si la salida de `Fst` o `Snd` es incorrecta, la `fail` instrucción se utiliza para hacer que la prueba genere un error.
 
 ```qsharp
@@ -57,7 +57,7 @@ function PairTest () : Unit {
 ```
 
 Se pueden comprobar condiciones más complicadas mediante las técnicas de la [sección pruebas](xref:microsoft.quantum.libraries.diagnostics) de la guía de bibliotecas estándar.
-Por ejemplo, las siguientes comprobaciones de prueba que `H(q); X(q); H(q);` , como llama, <xref:microsoft.quantum.canon.applywith> hace lo mismo que `Z(q)` .
+Por ejemplo, las siguientes comprobaciones de prueba que `H(q); X(q); H(q);` , como llama, <xref:Microsoft.Quantum.Canon.ApplyWith> hace lo mismo que `Z(q)` .
 
 ```Q#
 @Test("QuantumSimulator")

@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91492343"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691674"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Exploración del entrelazamiento con Q\#
 
@@ -32,7 +32,7 @@ Si está listo para empezar a codificar, siga estos pasos antes de continuar:
 
 También puede seguir con la narrativa sin instalar QDK, revisando la información general del Q# lenguaje de programación y los primeros conceptos de la informática Quantum.
 
-## <a name="in-this-tutorial-youll-learn-how-to"></a>En este tutorial aprenderá lo siguiente:
+## <a name="in-this-tutorial-youll-learn-how-to"></a>En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 > * Operaciones de creación y combinación en Q\#
@@ -56,9 +56,9 @@ Lo primero que tenemos que hacer es crear un nuevo Q# proyecto. En este tutorial
 
 Para crear un nuevo proyecto, en VS Code: 
 
-1. Haga clic en **Ver** -> **Paleta de comandos** y seleccione **Q#: Crear nuevo proyecto**.
-2. Haga clic en **Aplicación de consola independiente**.
-3. Vaya a la ubicación para guardar el proyecto y haga clic en **Crear proyecto**.
+1. Haga clic en **Ver** -> **Paleta de comandos** y seleccione **Q#: Crear nuevo proyecto** .
+2. Haga clic en **Aplicación de consola independiente** .
+3. Vaya a la ubicación para guardar el proyecto y haga clic en **Crear proyecto** .
 4. Cuando el proyecto se haya creado correctamente, haga clic en **Abrir nuevo proyecto...** abajo a la derecha.
 
 En este caso, se ha llamado al proyecto `Bell` . Esto genera dos archivos: `Bell.csproj` , el archivo de proyecto y `Program.qs` , una plantilla de una Q# aplicación que se va a usar para escribir la aplicación. El contenido de `Program.qs` debe ser:
@@ -83,7 +83,7 @@ Nuestro objetivo es preparar dos qubits en un estado de Quantum específico, mos
 
 ### <a name="initialize-qubit-using-measurement"></a>Inicializar qubit mediante medición
 
-En el primer fragmento de código siguiente, le mostramos cómo trabajar con qubits en Q# .  Introduciremos dos operaciones [`M`](xref:microsoft.quantum.intrinsic.m) y [`X`](xref:microsoft.quantum.intrinsic.x) que transformarán el estado de un qubit. En este fragmento de código, se define una operación `SetQubitState` que toma como parámetro un cúbit y otro parámetro, `desired`, que representa el estado en el que queremos que esté el cúbit.  La operación `SetQubitState` toma una medida en el cúbit con la operación `M`.  En Q# , una medida qubit siempre devuelve `Zero` o `One` .  Si la medida devuelve un valor que no es igual al valor deseado, `SetQubitState` "voltea" el qubit; es decir, ejecuta una `X` operación, que cambia el estado de qubit a un nuevo estado en el que las probabilidades de una medida devuelven `Zero` y `One` se invierten. De este modo, `SetQubitState` siempre coloca el qubit de destino en el estado deseado.
+En el primer fragmento de código siguiente, le mostramos cómo trabajar con qubits en Q# .  Introduciremos dos operaciones [`M`](xref:Microsoft.Quantum.Intrinsic.m) y [`X`](xref:Microsoft.Quantum.Intrinsic.X) que transformarán el estado de un qubit. En este fragmento de código, se define una operación `SetQubitState` que toma como parámetro un cúbit y otro parámetro, `desired`, que representa el estado en el que queremos que esté el cúbit.  La operación `SetQubitState` toma una medida en el cúbit con la operación `M`.  En Q# , una medida qubit siempre devuelve `Zero` o `One` .  Si la medida devuelve un valor que no es igual al valor deseado, `SetQubitState` "voltea" el qubit; es decir, ejecuta una `X` operación, que cambia el estado de qubit a un nuevo estado en el que las probabilidades de una medida devuelven `Zero` y `One` se invierten. De este modo, `SetQubitState` siempre coloca el qubit de destino en el estado deseado.
 
 Reemplace el contenido de `Program.qs` por el código siguiente:
 
@@ -116,8 +116,8 @@ El tipo de valor devuelto de la operación se especifica después de un signo de
 
 Ha usado dos operaciones Quantum en la primera Q# operación:
 
-* La [`M`](xref:microsoft.quantum.intrinsic.m) operación, que mide el estado de qubit
-* La [`X`](xref:microsoft.quantum.intrinsic.x) operación, que voltea el estado de un qubit
+* La [`M`](xref:Microsoft.Quantum.Intrinsic.m) operación, que mide el estado de qubit
+* La [`X`](xref:Microsoft.Quantum.Intrinsic.X) operación, que voltea el estado de un qubit
 
 Una operación cuántica transforma el estado de un cúbit. Algunos usuarios hablan de puertas cuánticas en lugar de operaciones, por analogía con las puertas lógicas clásicas. Esto tiene su origen en los primeros tiempos de la computación cuántica, cuando los algoritmos eran una simple construcción teórica y se visualizaban como diagramas, de forma similar a los diagramas de circuitos de la computación clásica.
 
@@ -300,7 +300,7 @@ Esto se conoce como **superposición** y nos proporciona nuestra primera vista r
 ## <a name="prepare-entanglement"></a>Preparación del entrelazamiento
 
 Ahora veremos cómo expresa las Q# maneras de entangle qubits.
-En primer lugar, establecemos el primer cúbit en el estado inicial y después usamos la operación `H` para ponerlo en superposición.  A continuación, antes de que se mida el primer qubit, usamos una nueva operación ( `CNOT` ), que significa *controlada*por.  El resultado de la ejecución de esta operación en dos qubits es voltear el segundo qubit si el primer qubit es `One` .  Ahora, los dos cúbits están entrelazados.  Nuestras estadísticas del primer cúbit no han cambiado (50-50 de probabilidades de `Zero` o `One` después de medir) pero ahora, cuando medimos el segundo cúbit, es __siempre__ igual que lo que se midió para el primer cúbit. Nuestro `CNOT` ha hecho el entrelazamiento de los dos cúbits, de modo que lo que le suceda a uno, le sucede al otro. Si invirtió las medidas (hizo la del segundo cúbit antes del primero), sucedería lo mismo. La primera medida sería aleatoria y la segunda sería en el paso de bloqueo con lo que se haya descubierto en primer lugar.
+En primer lugar, establecemos el primer cúbit en el estado inicial y después usamos la operación `H` para ponerlo en superposición.  A continuación, antes de que se mida el primer qubit, usamos una nueva operación ( `CNOT` ), que significa *controlada* por.  El resultado de la ejecución de esta operación en dos qubits es voltear el segundo qubit si el primer qubit es `One` .  Ahora, los dos cúbits están entrelazados.  Nuestras estadísticas del primer cúbit no han cambiado (50-50 de probabilidades de `Zero` o `One` después de medir) pero ahora, cuando medimos el segundo cúbit, es __siempre__ igual que lo que se midió para el primer cúbit. Nuestro `CNOT` ha hecho el entrelazamiento de los dos cúbits, de modo que lo que le suceda a uno, le sucede al otro. Si invirtió las medidas (hizo la del segundo cúbit antes del primero), sucedería lo mismo. La primera medida sería aleatoria y la segunda sería en el paso de bloqueo con lo que se haya descubierto en primer lugar.
 
 Lo primero que debemos hacer es asignar dos qubits en lugar de uno en `TestBellState` :
 

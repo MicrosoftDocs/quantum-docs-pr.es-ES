@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1bb66ae0fe7de785c417b0bef480e52adea5534d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834965"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691712"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: escribir y simular programas de nivel de qubit en Q\#
 
@@ -58,7 +58,7 @@ La ejecución de un programa Quantum con el kit de desarrollo de Quantum de Micr
 
 La primera parte de este tutorial consiste en definir la Q# operación `Perform3qubitQFT` , que realiza la transformación de Fourier de Quantum en tres qubits. 
 
-Además, usaremos la [`DumpMachine`](xref:microsoft.quantum.diagnostics.dumpmachine) función para observar cómo evoluciona el WaveFunction simulado de nuestro sistema qubit en la operación.
+Además, usaremos la [`DumpMachine`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) función para observar cómo evoluciona el WaveFunction simulado de nuestro sistema qubit en la operación.
 
 El primer paso es crear el Q# proyecto y el archivo.
 Los pasos para ello dependen del entorno que se utilizará para llamar al programa, y puede encontrar los detalles en las guías de [instalación](xref:microsoft.quantum.install)correspondientes.
@@ -104,32 +104,32 @@ Dentro de nuestra Q# operación, asignamos primero un registro de tres qubits co
         }
 ```
 
-Con `using` , los qubits se asignan automáticamente en el estado $ \ket {0} $. Podemos comprobarlo mediante [`Message(<string>)`](xref:microsoft.quantum.intrinsic.message) y [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) , que imprimen una cadena y el estado actual del sistema en la consola.
+Con `using` , los qubits se asignan automáticamente en el estado $ \ket {0} $. Podemos comprobarlo mediante [`Message(<string>)`](xref:Microsoft.Quantum.Intrinsic.Message) y [`DumpMachine()`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) , que imprimen una cadena y el estado actual del sistema en la consola.
 
 > [!NOTE]
-> Las `Message(<string>)` `DumpMachine()` funciones y (desde [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) y [`Microsoft.Quantum.Diagnostics`](xref:microsoft.quantum.diagnostics) , respectivamente) se imprimen directamente en la consola. Al igual que un cálculo de Quantum real, Q# no nos permite acceder directamente a los Estados de qubit.
+> Las `Message(<string>)` `DumpMachine()` funciones y (desde [`Microsoft.Quantum.Intrinsic`](xref:Microsoft.Quantum.Intrinsic) y [`Microsoft.Quantum.Diagnostics`](xref:Microsoft.Quantum.Diagnostics) , respectivamente) se imprimen directamente en la consola. Al igual que un cálculo de Quantum real, Q# no nos permite acceder directamente a los Estados de qubit.
 > Sin embargo, como `DumpMachine` imprime el estado actual del equipo de destino, puede proporcionar información valiosa para la depuración y el aprendizaje cuando se usa junto con el simulador de estado completo.
 
 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Aplicación de una sola qubit y de las puertas controladas
 
 A continuación, se aplican las puertas que componen la propia operación.
-Q# ya contiene muchas de las puertas de Quantum básicas como operaciones en el [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) espacio de nombres y no son excepciones. 
+Q# ya contiene muchas de las puertas de Quantum básicas como operaciones en el [`Microsoft.Quantum.Intrinsic`](xref:Microsoft.Quantum.Intrinsic) espacio de nombres y no son excepciones. 
 
 Dentro de una Q# operación, las instrucciones que invocan las llamadas a, por supuesto, se ejecutarán en orden secuencial.
-Por lo tanto, la primera puerta que se va a aplicar es [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) al primer qubit:
+Por lo tanto, la primera puerta que se va a aplicar es [`H`](xref:Microsoft.Quantum.Intrinsic.H) (Hadamard) al primer qubit:
 
 <br/>
 <img src="../media/qft_firstH.PNG" alt="Circuit diagram for three qubit QFT through first Hadamard" width="120">
 
 Para aplicar una operación a un qubit específico desde un registro (es decir, un único `Qubit` de una matriz `Qubit[]` ) usamos la notación de índice estándar.
-Por lo tanto, aplicar el [`H`](xref:microsoft.quantum.intrinsic.h) al primer qubit de nuestro registro `qs` tiene el siguiente formato:
+Por lo tanto, aplicar el [`H`](xref:Microsoft.Quantum.Intrinsic.H) al primer qubit de nuestro registro `qs` tiene el siguiente formato:
 
 ```qsharp
             H(qs[0]);
 ```
 
-Además de aplicar la `H` puerta (Hadamard) a qubits individuales, el circuito QFT se compone principalmente de [`R1`](xref:microsoft.quantum.intrinsic.r1) rotaciones controladas.
+Además de aplicar la `H` puerta (Hadamard) a qubits individuales, el circuito QFT se compone principalmente de [`R1`](xref:Microsoft.Quantum.Intrinsic.R1) rotaciones controladas.
 Una `R1(θ, <qubit>)` operación en general deja el componente $ \ket {0} $ de la qubit sin modificar, mientras se aplica un giro de $e ^ {i\theta} $ al componente $ \ket {1} $.
 
 #### <a name="controlled-operations"></a>Operaciones controladas
@@ -153,7 +153,7 @@ Lo llamamos con
             Controlled R1([qs[2]], (PI()/4.0, qs[0]));
 ```
 
-Tenga en cuenta que usamos la [`PI()`](xref:microsoft.quantum.math.pi) función del [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) espacio de nombres para definir los giros en términos de PI radianes.
+Tenga en cuenta que usamos la [`PI()`](xref:Microsoft.Quantum.Math.PI) función del [`Microsoft.Quantum.Math`](xref:microsoft.quantum.math) espacio de nombres para definir los giros en términos de PI radianes.
 Además, se divide por un `Double` (por ejemplo, `2.0` ) porque la división por un entero `2` produciría un error de tipo. 
 
 > [!TIP]
@@ -171,7 +171,7 @@ Después de aplicar las `H` operaciones pertinentes y las rotaciones controladas
             H(qs[2]);
 ```
 
-solo necesitamos aplicar una [`SWAP`](xref:microsoft.quantum.intrinsic.swap) puerta para completar el circuito:
+solo necesitamos aplicar una [`SWAP`](xref:Microsoft.Quantum.Intrinsic.SWAP) puerta para completar el circuito:
 
 ```qsharp
             SWAP(qs[2], qs[0]);
@@ -188,7 +188,7 @@ Nuestro qubits estaba en el estado $ \ket {0} $ cuando lo hemos asignado y, en g
 
 ### <a name="deallocate-qubits"></a>Desasignar qubits
 
-Se llama de [`DumpMachine()`](xref:microsoft.quantum.diagnostics.dumpmachine) nuevo para ver el estado posterior a la operación y, por último, se aplica [`ResetAll`](xref:microsoft.quantum.intrinsic.resetall) al registro qubit para restablecer el qubits en $ \ket {0} $ antes de completar la operación:
+Se llama de [`DumpMachine()`](xref:Microsoft.Quantum.Diagnostics.DumpMachine) nuevo para ver el estado posterior a la operación y, por último, se aplica [`ResetAll`](xref:Microsoft.Quantum.Intrinsic.resetall) al registro qubit para restablecer el qubits en $ \ket {0} $ antes de completar la operación:
 
 ```qsharp
             Message("After:");
@@ -314,7 +314,7 @@ El host de C# tiene cuatro partes:
     En este ejemplo no hay ninguno.
 3. Ejecute el algoritmo cuántico. 
     Cada Q# operación genera una clase de C# con el mismo nombre. 
-    Esta clase tiene un `Run` método que ejecuta la operación de **forma asincrónica**.
+    Esta clase tiene un `Run` método que ejecuta la operación de **forma asincrónica** .
     La ejecución es asincrónica porque su ejecución en el hardware real será asincrónica. 
     Dado que el `Run` método es asincrónico, llamamos al `Wait()` método; Esto bloquea la ejecución hasta que la tarea se completa y devuelve el resultado sincrónicamente. 
 4. Procesa el resultado devuelto de la operación.
@@ -347,12 +347,12 @@ namespace NamespaceQFT
 ```
 Ejecute la aplicación y la salida debe coincidir con la que aparece a continuación.
 El programa se cerrará después de presionar una tecla.
-***
+**_
 
 ```Output
 Initial state |000>:
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|0>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |3>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
@@ -362,14 +362,14 @@ Initial state |000>:
 |7>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 After:
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 ```
 
 Cuando se llama en el simulador de estado completo, `DumpMachine()` proporciona estas representaciones múltiples del WaveFunction del estado de Quantum. Los Estados posibles de una $n sistema $-qubit pueden estar representados por los Estados de base de $2 ^ n $ computacional, cada uno con un coeficiente complejo correspondiente (simplemente una amplitud y una fase).
@@ -380,14 +380,13 @@ Qubit `2` es el "más importante" simplemente significa que en la representació
 
 
 El resto de las filas describen la amplitud de probabilidad de medir el vector de estado de base $ \ket{i} $ en formatos cartesianos y polares.
-En detalle para la primera fila de nuestro estado de entrada $ \ket {000} $:
-* **`|0>:`** esta fila corresponde al `0` Estado de base de cálculo (dado que la asignación posterior de estado inicial era $ \ket {000} $, esperamos que este sea el único estado con amplitud de probabilidad en este momento).
-* **`1.000000 +  0.000000 i`**: la amplitud de probabilidad en formato cartesiano.
-* **` == `**: el `equal` signo separa ambas representaciones equivalentes.
-* **`********************`**: Una representación gráfica de la magnitud, el número de `*` es proporcional a la probabilidad de medir este vector de estado. 
-* **`[ 1.000000 ]`**: el valor numérico de la magnitud
-* **`    ---`**: Representación gráfica de la fase de amplitud.
-* **`[ 0.0000 rad ]`**: valor numérico de la fase (en radianes).
+En detalle para la primera fila de nuestro estado de entrada $ \ket {000} $: _ **`|0>:`** esta fila corresponde al `0` Estado de base de cálculo (dado que la asignación posterior de estado inicial era $ \ket {000} $, esperamos que este sea el único estado con amplitud de probabilidad en este momento).
+* **`1.000000 +  0.000000 i`** : la amplitud de probabilidad en formato cartesiano.
+* **` == `** : el `equal` signo separa ambas representaciones equivalentes.
+* **`********************`** : Una representación gráfica de la magnitud, el número de `*` es proporcional a la probabilidad de medir este vector de estado. 
+* **`[ 1.000000 ]`** : el valor numérico de la magnitud
+* **`    ---`** : Representación gráfica de la fase de amplitud.
+* **`[ 0.0000 rad ]`** : valor numérico de la fase (en radianes).
 
 Tanto la magnitud como la fase se muestran con una representación gráfica. La representación de la magnitud es sencilla: muestra una barra de `*` y cuanto mayor sea la probabilidad, mayor será la barra. Para la fase, consulte [pruebas y depuración: funciones de volcado](xref:microsoft.quantum.guide.testingdebugging#dump-functions) de memoria para las posibles representaciones de símbolos basadas en intervalos de ángulo.
 
@@ -396,7 +395,7 @@ Por lo tanto, la salida impresa ilustra que nuestras puertas programadas transfo
 
 $ $ \ket{\psi} \_ {Initial} = \ket {000} $ $
 
-en 
+por 
 
 $ $ \begin{align} \ket{\psi} \_ {final} &= \frac {1} {\sqrt {8} } \left (\ket {000} + \ket {001} + \ket {010} + \ket {011} + \ket {100} + \ket {101} + \ket {110} + \ket {111} \right) \\ \\ &= \frac {1} {\sqrt{2 ^ n}} \sum \_ {j = 0} ^ {2 ^ n-1} \ket{j}, \end{align} $ $
 
@@ -437,7 +436,7 @@ Después de las operaciones de transformación de Fourier dentro del `using` blo
                 set resultArray w/= i <- M(qs[i]);
             }
 ```
-La [`IndexRange`](xref:microsoft.quantum.arrays.indexrange) función a la que se llama en una matriz (por ejemplo, nuestra matriz de qubits `qs` ) devuelve un intervalo sobre los índices de la matriz. Aquí se usa en nuestro `for` bucle para medir secuencialmente cada qubit mediante la `M(qs[i])` instrucción.
+La [`IndexRange`](xref:Microsoft.Quantum.Arrays.IndexRange) función a la que se llama en una matriz (por ejemplo, nuestra matriz de qubits `qs` ) devuelve un intervalo sobre los índices de la matriz. Aquí se usa en nuestro `for` bucle para medir secuencialmente cada qubit mediante la `M(qs[i])` instrucción.
 Cada `Result` tipo medido ( `Zero` o `One` ) se agrega a continuación a la posición de índice correspondiente en `resultArray` con una instrucción Update-and-resign.
 
 > [!NOTE]
@@ -517,19 +516,19 @@ Ejecute el proyecto y el resultado debe ser similar al siguiente:
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement:
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
@@ -565,20 +564,20 @@ Ejecute el archivo y el resultado debe ser similar al siguiente:
 ```Output
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]                   
@@ -642,20 +641,20 @@ Ejecute el proyecto y el resultado debe ser similar al siguiente:
 ```Output
 Before measurement: 
 # wave function for qubits with ids (least to most significant): 0;1;2
-|0>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|1>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|2>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|3>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|4>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|5>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|6>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
-|7>:     0.353553 +  0.000000 i  ==     ***                  [ 0.125000 ]     --- [  0.00000 rad ]
+|0>:     0.353553 +  0.000000 i  ==     **_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|1>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|2>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|3>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|4>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|5>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|6>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
+|7>:     0.353553 +  0.000000 i  ==     _*_                  [ 0.125000 ]     --- [  0.00000 rad ]
 After measurement:
 # wave function for qubits with ids (least to most significant): 0;1;2
 |0>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |1>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |2>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
-|3>:     1.000000 +  0.000000 i  ==     ******************** [ 1.000000 ]     --- [  0.00000 rad ]
+|3>:     1.000000 +  0.000000 i  ==     _******************* [ 1.000000 ]     --- [  0.00000 rad ]
 |4>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |5>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
 |6>:     0.000000 +  0.000000 i  ==                          [ 0.000000 ]
@@ -677,7 +676,7 @@ Esta salida muestra algunos aspectos diferentes:
 2. A partir de la medición posterior `DumpMachine` , vemos que la medida _cambia_ el estado en sí, lo que lo proyecta desde la superposición inicial sobre los Estados de base hasta el estado de base única que corresponde al valor medido.
 
 Si fuera a repetir esta operación muchas veces, veremos que las estadísticas de resultados comenzarán a ilustrar la superposición igualmente ponderada del estado posterior a la QFT que da lugar a un resultado aleatorio en cada captura.
-_Sin embargo_, además de ser ineficaces y seguir siendo imperfectos, esto solo reproduciría las amplitudes relativas de los Estados de base, no las fases relativas entre ellas.
+_Sin embargo_ , además de ser ineficaces y seguir siendo imperfectos, esto solo reproduciría las amplitudes relativas de los Estados de base, no las fases relativas entre ellas.
 Esto último no es un problema en este ejemplo, pero veremos que las fases relativas aparecen si se proporciona una entrada más compleja a QFT de $ \ket {000} $.
 
 #### <a name="partial-measurements"></a>Medidas parciales 
@@ -701,13 +700,13 @@ En la salida resultante, verá la proyección gradual en subespacios a medida qu
 Tal y como se mencionó en la introducción, gran parte de la Q# capacidad de los demás tiene en cuenta que le permite abstraer las preocupaciones de trabajar con qubits individuales.
 En realidad, si desea desarrollar programas Quantum de gran tamaño aplicables, preocuparse de si una `H` operación va antes o después de que una rotación determinada solo le ralentice. 
 
-Las Q# bibliotecas contienen la operación [QFT](xref:microsoft.quantum.canon.qft) , que se puede realizar simplemente y aplicar para cualquier número de qubits.
+Las Q# bibliotecas contienen la operación [QFT](xref:Microsoft.Quantum.Canon.QFT) , que se puede realizar simplemente y aplicar para cualquier número de qubits.
 Para probarlo, defina una nueva operación en el Q# archivo que tenga el mismo contenido de `Perform3QubitQFT` , pero con todo lo que haya entre el primero `H` y el `SWAP` reemplazado por dos líneas sencillas:
 ```qsharp
             let register = BigEndian(qs);    //from Microsoft.Quantum.Arithmetic
             QFT(register);                   //from Microsoft.Quantum.Canon
 ```
-La primera línea simplemente crea una [`BigEndian`](xref:microsoft.quantum.arithmetic.bigendian) expresión de la matriz asignada de qubits, `qs` , que es lo que la operación [QFT](xref:microsoft.quantum.canon.qft) toma como argumento.
+La primera línea simplemente crea una [`BigEndian`](xref:Microsoft.Quantum.Arithmetic.BigEndian) expresión de la matriz asignada de qubits, `qs` , que es lo que la operación [QFT](xref:Microsoft.Quantum.Canon.QFT) toma como argumento.
 Esto corresponde al orden de índice de qubits en el registro.
 
 Para tener acceso a estas operaciones, agregue `open` instrucciones para sus respectivos espacios de nombres al principio del Q# archivo:
@@ -720,7 +719,7 @@ Ahora, ajuste el programa host para que llame al nombre de la nueva operación (
 
 Para ver las ventajas reales del uso de las Q# operaciones de biblioteca, cambie el número de qubits a algo distinto de `3` :
 ```qsharp
-        mutable resultArray = new Result[4]; 
+        mutable resultArray = new Result[4];
 
         using (qs = Qubit[4]) {
             //...
@@ -729,16 +728,3 @@ Para ver las ventajas reales del uso de las Q# operaciones de biblioteca, cambie
 Por tanto, puede aplicar el QFT adecuado para cualquier número determinado de qubits, sin tener que preocuparse por el desorden de nuevas `H` operaciones y giros en cada qubit.
 
 Tenga en cuenta que el simulador de Quantum tarda más tiempo en ejecutarse a medida que aumenta el número de qubits---exactamente por qué le parecemos el hardware Quantum real.
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 476e93e3737dee6ad8f3a97e8ffbcfb9b0012ee1
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833906"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691508"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Glosario de Machine Learning Quantum
 
@@ -30,7 +30,7 @@ Dado un vector de parámetro candidato y una diferencia del clasificador, su *pu
 
 ## <a name="hyperparameters"></a>Hiperparámetros
 
-El proceso de entrenamiento del modelo se rige por ciertos valores preestablecidos denominados *hiperparámetros*:
+El proceso de entrenamiento del modelo se rige por ciertos valores preestablecidos denominados *hiperparámetros* :
 
 ### <a name="learning-rate"></a>Velocidad de aprendizaje
 
@@ -56,9 +56,10 @@ La función de probabilidad, que es la utilidad de entrenamiento del clasificado
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Cómo modificar los hiperparámetros
 
-En la biblioteca QML, la mejor manera de modificar los hiperparámetros es invalidar los valores predeterminados del UDT [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) . Para ello, se llama con la función [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) y se aplica el operador `w/` para invalidar los valores predeterminados. Por ejemplo, para usar medidas 100.000 y una velocidad de aprendizaje de 0,01:
- ```qsharp
+En la biblioteca QML, la mejor manera de modificar los hiperparámetros es invalidar los valores predeterminados del UDT [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions) . Para ello, se llama con la función [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) y se aplica el operador `w/` para invalidar los valores predeterminados. Por ejemplo, para usar medidas 100.000 y una velocidad de aprendizaje de 0,01:
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

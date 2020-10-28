@@ -89,7 +89,7 @@ Esta secuencia de la puerta es de importancia fundamental para la informática d
 
 $$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$
 
-Las operaciones con esta complejidad o mayor son ubicuas en los algoritmos Quantum y la corrección de errores Quantum, por lo que debe ser una buena forma de que hay un método simple para su visualización denominado *Diagrama de circuito Quantum*.
+Las operaciones con esta complejidad o mayor son ubicuas en los algoritmos Quantum y la corrección de errores Quantum, por lo que debe ser una buena forma de que hay un método simple para su visualización denominado *Diagrama de circuito Quantum* .
 El diagrama del circuito para preparar este estado de Quantum con el máximo grado de enredo es:
 
 <!--- ![](.\media\1.svg) --->
@@ -109,7 +109,7 @@ Por ejemplo, el símbolo
 <!--No encuentra una manera de centrar esto fácilmente... probablemente se trate de una extensión necesaria:-->
 ![Símbolo para una operación de Hadamard que actúa en un registro de un solo qubit](~/media/2.svg)
 
-es una operación de [Hadamard](xref:microsoft.quantum.intrinsic.h) que actúa en un registro de un solo qubit.
+es una operación de [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) que actúa en un registro de un solo qubit.
 
 Las puertas de Quantum se ordenan cronológicamente con la puerta situada más a la izquierda como la puerta que se aplica primero a qubits.
 En otras palabras, si se imagen de los cables como que contienen el estado de Quantum, los cables llevan el estado de Quantum a través de cada una de las puertas del diagrama de izquierda a derecha.
@@ -150,7 +150,7 @@ En general, se describen las operaciones controladas en diagramas de circuitos c
 ![Diagrama de circuitos de una puerta controlada por una sola vez](~/media/5.svg)
 
 Aquí el círculo negro denota el bit de Quantum en el que se controla la puerta y una conexión vertical denota la unitario que se aplica cuando el control qubit toma el valor $ 1 $ .
-Para los casos especiales en los que $ g = X $ y $ g = Z $ presentamos la siguiente notación para describir la versión controlada de las puertas (tenga en cuenta que la puerta controlada-X es la [ $ $ puerta CNOT](xref:microsoft.quantum.intrinsic.cnot)):
+Para los casos especiales en los que $ g = X $ y $ g = Z $ presentamos la siguiente notación para describir la versión controlada de las puertas (tenga en cuenta que la puerta controlada-X es la [ $ $ puerta CNOT](xref:Microsoft.Quantum.Intrinsic.CNOT)):
 
 <!--- ![](.\media\6.svg) --->
 <!--No encuentra una manera de centrar esto fácilmente... probablemente se trate de una extensión necesaria:-->
@@ -175,7 +175,7 @@ En concreto, este Subcircuito tiene el siguiente aspecto:
 <!--No encuentra una manera de centrar esto fácilmente... probablemente se trate de una extensión necesaria:-->
 ![Símbolo que representa una operación de medición](~/media/7.svg)
 
-Q# implementa un [operador de medida](xref:microsoft.quantum.intrinsic.measure) para este fin.
+Q# implementa un [operador de medida](xref:Microsoft.Quantum.Intrinsic.Measure) para este fin.
 Vea la [sección sobre medidas](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obtener más información.
 
 Del mismo modo, el Subcircuito

@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835934"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691864"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimador de recursos del kit de desarrollo de Quantum (QDK)
 
@@ -127,18 +127,45 @@ El estimador de recursos realiza un seguimiento de las métricas siguientes:
 |----|----|
 |__CNOT__    |Recuento de ejecuciones de `CNOT` operaciones (también conocidas como operaciones Pauli X controladas).|
 |__QubitClifford__ |El recuento de ejecuciones de todas las operaciones qubit Clifford y Pauli.|
-|__Medi__    |Recuento de ejecuciones de cualquier medida.  |
+|__Measure__ (Medida)    |Recuento de ejecuciones de cualquier medida.  |
 |__R__    |Recuento de ejecuciones de cualquier rotación de un solo qubit, excluidas `T` las operaciones Clifford y Pauli.  |
 |__T__    |El recuento de ejecuciones de `T` operaciones y sus conjugaciones, incluidas las `T` operaciones, T_x = H. T. h y T_y = HY. t. HY.  |
-|__Profundidad__|Límite inferior de la profundidad del circuito de Quantum ejecutado por la Q# operación. De forma predeterminada, la métrica de profundidad solo cuenta las `T` puertas. Para obtener más información, vea [contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
-|__Width__    |Límite inferior para el número máximo de qubits asignado durante la ejecución de la Q# operación. Es posible que no sea posible conseguir límites inferiores de __profundidad__ y __ancho__ simultáneamente.  |
+|__Profundidad__|Profundidad del circuito de Quantum ejecutado por la Q# operación (vea [más abajo](#depth-width-and-qubitcount)). De forma predeterminada, la métrica de profundidad solo cuenta las `T` puertas. Para obtener más información, vea [contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Width__|Ancho del circuito de Quantum ejecutado por la Q# operación (vea [más abajo](#depth-width-and-qubitcount)). De forma predeterminada, la métrica de profundidad solo cuenta las `T` puertas. Para obtener más información, vea [contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__QubitCount__    |Límite inferior para el número máximo de qubits asignado durante la ejecución de la Q# operación. Es posible que esta métrica no sea compatible con la __profundidad__ (consulte a continuación).  |
 |__BorrowedWidth__    |Número máximo de qubits prestado dentro de la Q# operación.  |
+
+
+## <a name="depth-width-and-qubitcount"></a>Profundidad, ancho y QubitCount
+
+Las estimaciones de profundidad y ancho detectadas son compatibles entre sí.
+(Anteriormente, ambos números eran factibles, pero se necesitarían circuitos diferentes para la profundidad y el ancho). Actualmente, las métricas de este par se pueden lograr mediante el mismo circuito al mismo tiempo.
+
+Se muestran las siguientes métricas:
+
+__Profundidad:__ Para la operación raíz: tiempo que se tarda en ejecutarse suponiendo tiempos de puerta específicos.
+Para las operaciones a las que se llama o la diferencia de tiempo de operación posterior entre la última hora de disponibilidad de qubit al principio y el final de la operación.
+
+__Ancho:__ Para la operación raíz: el número de qubits que se usa realmente para ejecutarlo (y la operación a la que llama).
+En el caso de las operaciones llamadas o las operaciones posteriores, el número de qubits que se usaron además de los qubits ya usados al principio de la operación.
+
+Tenga en cuenta que la qubits reusada no contribuye a este número.
+Es decir, si se han lanzado algunos qubits antes de que se inicie la operación A, y todos los qubit solicitados por esta operación (y las operaciones a las que se llama desde) se cumplieron mediante la reutilización de la versión anterior de qubits, el ancho de la operación A se muestra como 0. El qubits prestado correctamente no contribuye al ancho.
+
+__QubitCount:__ Para la operación raíz: número mínimo de qubits que serían suficientes para ejecutar esta operación (y las operaciones a las que se llama desde ella).
+En el caso de las operaciones llamadas o posteriores: número mínimo de qubits que serían suficientes para ejecutar esta operación por separado. Este número no incluye qubits de entrada. Incluye qubits prestado.
+
+Se admiten dos modos de operación. El modo se selecciona estableciendo QCTraceSimulatorConfiguration. OptimizeDepth.
+
+__OptimizeDepth = true:__ QubitManager se desaconseja de la reutilización de qubit y asigna un nuevo qubit cada vez que se le pide una qubit. Para la __profundidad__ de la operación raíz se convierte en la profundidad mínima (límite inferior). Se ha proporcionado un __ancho__ compatible para esta profundidad (ambos se pueden lograr al mismo tiempo). Tenga en cuenta que es probable que este ancho no sea óptimo dado esta profundidad. __QubitCount__ puede ser menor que el ancho de la operación raíz porque supone reutilización.
+
+__OptimizeDepth = false:__ Se recomienda a QubitManager reutilizar qubits y volverá a usar qubits liberado antes de asignar nuevos. El __ancho__ de la operación raíz se convierte en el ancho mínimo (límite inferior). Se registra la __profundidad__ compatible en la que se puede lograr. __QubitCount__ será el mismo que el __ancho__ de la operación raíz, suponiendo que no haya ningún préstamo.
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Probabilidad de los resultados de una medición
 
-Puede usar <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> desde el <xref:microsoft.quantum.diagnostics> espacio de nombres para proporcionar información sobre la probabilidad esperada de una operación de medición. Para obtener más información, consulte [simulador de seguimiento de Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
+Puede usar <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> desde el <xref:Microsoft.Quantum.Diagnostics> espacio de nombres para proporcionar información sobre la probabilidad esperada de una operación de medición. Para obtener más información, consulte [simulador de seguimiento de Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro) .
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Simulador de seguimiento de Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Simulador cuántico de Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)

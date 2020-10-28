@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834200"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691734"
 ---
 # <a name="no-locq-style-guide"></a>Q# Guía de estilo #
 ## <a name="general-conventions"></a>Convenciones generales ##
@@ -70,7 +70,7 @@ Otros verbos también pueden resultar útiles en este caso, como en `IterateThro
 | Presupuesto | Se devuelve un valor clásico que representa una estimación dibujada a partir de una o más medidas |
 | Measure | Se realiza una medición de cuanto y el resultado se devuelve al usuario. |
 | Preparación | Un registro determinado de qubits se inicializa en un estado determinado. |
-| Ejemplo | Un valor clásico se devuelve de forma aleatoria desde alguna distribución |
+| Muestra | Un valor clásico se devuelve de forma aleatoria desde alguna distribución |
 
 En el caso de las funciones, se recomienda evitar el uso de verbos en favor de los nombres comunes (vea las instrucciones sobre los nombres adecuados a continuación) o adjetivos:
 
@@ -113,7 +113,7 @@ Sugerimos:
 
 ### <a name="entry-points"></a>Puntos de entrada
 
-Al definir un punto de entrada en un Q# programa, el Q# compilador reconoce el [ `@EntryPoint()` atributo](xref:microsoft.quantum.core.entrypoint) en lugar de requerir que los puntos de entrada tengan un nombre determinado (por ejemplo `main` ,:, `Main` o `__main__` ).
+Al definir un punto de entrada en un Q# programa, el Q# compilador reconoce el [ `@EntryPoint()` atributo](xref:Microsoft.Quantum.Core.EntryPoint) en lugar de requerir que los puntos de entrada tengan un nombre determinado (por ejemplo `main` ,:, `Main` o `__main__` ).
 Es decir, desde la perspectiva de un Q# desarrollador, los puntos de entrada son operaciones ordinarias anotadas con `@EntryPoint()` .
 Además, los Q# puntos de entrada pueden ser puntos de entrada para toda una aplicación (por ejemplo, en Q# programas ejecutables independientes) o pueden ser una interfaz entre un Q# programa y el programa host para una aplicación (es decir, cuando se usa Q# con Python o .net), de modo que el nombre "principal" puede ser engañoso cuando se aplica a un Q# punto de entrada.
 
@@ -134,7 +134,7 @@ Sugerimos:
 | ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente el propósito del punto de entrada a través del nombre de la operación. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | El uso de `Main` no comunica claramente el propósito del punto de entrada y es redundante con el `@EntryPoint()` atributo. |
 
-***
+**_
 
 ### <a name="shorthand-and-abbreviations"></a>Abreviaturas y abreviaturas ###
 
@@ -181,7 +181,7 @@ Sugerimos:
 
 
 
-***
+_*_
 
 
 ### <a name="proper-nouns-in-names"></a>Nombres correctos en nombres ###
@@ -208,14 +208,14 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-***
+_*_
 
 ### <a name="type-conversions"></a>Conversiones de tipos ###
 
 Dado que Q# es un lenguaje con establecimiento inflexible de tipos, un valor de un tipo solo se puede usar como un valor de otro tipo mediante una llamada explícita a una función de conversión de tipos.
 Esto contrasta con los lenguajes que permiten a los valores cambiar tipos de forma implícita (por ejemplo: promoción de tipos) o a través de la conversión.
 Como resultado, las funciones de conversión de tipos desempeñan un papel importante en Q# el desarrollo de bibliotecas y constituyen una de las decisiones más frecuentes sobre la nomenclatura.
-Sin embargo, tenemos en cuenta que, dado que las conversiones de tipo siempre son _deterministas_, se pueden escribir como funciones y, por lo tanto, se incluyen en el Consejo anterior.
+Sin embargo, tenemos en cuenta que, dado que las conversiones de tipo siempre son _deterministas_ , se pueden escribir como funciones y, por lo tanto, se incluyen en el Consejo anterior.
 En concreto, se recomienda que las funciones de conversión de tipos nunca se denominen como verbos (por ejemplo, `ConvertToX` ) o frases de preposición de adverbio ( `ToX` ), pero se deben denominar frases de preposicional de adjetivo que indiquen los tipos de origen y destino ( `XAsY` ).
 Al enumerar los tipos de matriz en los nombres de funciones de conversión de tipos, se recomienda la abreviatura `Arr` .
 Salvo en circunstancias excepcionales, recomendamos que todas las funciones de conversión de tipos se denominen con `As` para que se puedan identificar rápidamente.
@@ -235,7 +235,7 @@ Sugerimos:
 | ☒ | <s>`PauliArrFromBoolArr`</s> | Los tipos de entrada y salida aparecen en el orden equivocado. |
 | ☑ | `ResultArrAsBoolArr` | Tanto los tipos de entrada como los de salida están claros. |
 
-***
+_*_
 
 ### <a name="private-or-internal-names"></a>Nombres privados o internos ###
 
@@ -256,7 +256,7 @@ Sugerimos:
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | No utilice un carácter de subrayado `_` para indicar que esta operación solo es para uso interno. |
 | ☑ | `internal operation ApplyDecomposedOperation` | La `internal` palabra clave al principio indica claramente que esta operación solo es para uso interno. |
 
-***
+_*_
 ### <a name="variants"></a>Variantes ###
 
 Aunque es posible que esta limitación no se conserve en versiones futuras de Q# , es actualmente el caso de que a menudo haya grupos de operaciones o funciones relacionadas que se distinguen por los inconvenientes que admiten sus entradas, o por los tipos concretos de sus argumentos.
@@ -280,7 +280,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-***
+_*_
 
 ### <a name="arguments-and-variables"></a>Argumentos y variables ###
 
@@ -305,9 +305,9 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-***
+_*_
 
-### <a name="user-defined-type-named-items"></a>Tipo definido por el usuario denominado items ###
+### <a name="user-defined-type-named-items"></a>User-Defined tipo denominado items ###
 
 Los elementos con nombre de los tipos definidos por el usuario se deben denominar como `CamelCase` , incluso en la entrada a los constructores UDT.
 Esto ayuda a tener claramente separados los elementos con nombre de las referencias a variables de ámbito local al usar la notación de descriptor de acceso (por ejemplo: `callable::Apply` ) o la notación de copiar y actualizar ( `set arr w/= Data <- newData` ).
@@ -329,7 +329,7 @@ Sugerimos:
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Los elementos con nombre deben empezar con una letra mayúscula inicial. |
 | ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | Los elementos con nombre que se resuelven en funciones deben denominarse frases, no como frases verbales. |
 
-***
+_*_
 
 ## <a name="input-conventions"></a>Convenciones de entrada ##
 
@@ -379,7 +379,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-***
+_*_
 
 ## <a name="documentation-conventions"></a>Convenciones de documentación ##
 
@@ -451,7 +451,7 @@ is Adj + Ctl {
 }
 ```
 
-***
+_*_
 
 ## <a name="formatting-conventions"></a>Convenciones de formato ##
 
@@ -486,4 +486,4 @@ Sugerimos:
 | ☑ | `Example(a, b, c)` | Los elementos de la tupla de entrada se espacian correctamente para mejorar la legibilidad. |
 | ☒ | <s>`Example (a, b, c)`</s> | Los espacios se deben suprimir después de los nombres de función, operación o UDT. |
 
-***
+_**
