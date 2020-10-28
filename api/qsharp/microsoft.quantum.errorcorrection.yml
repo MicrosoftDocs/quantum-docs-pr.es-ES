@@ -1,0 +1,92 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Devuelve un valor de QECC que representa el codificador y descodificador de código de volteo de ⟦ 3, 1, 1 ⟧ bits con medición de síndrome en contexto.
+  uid: Microsoft.Quantum.ErrorCorrection.BitFlipCode
+- summary: Función para las operaciones de Pauli de recuperación de la medición de síndrome determinada por búsqueda de tabla para el código de volteo de bits ⟦ de 3, 1, 1 ⟧.
+  uid: Microsoft.Quantum.ErrorCorrection.BitFlipRecoveryFn
+- summary: Devuelve un valor de QECC que representa el codificador y descodificador de código ⟦ 5, 1, 3 ⟧ con una medida de síndrome en contexto.
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCode
+- summary: Devuelve la función que asigna las medidas del síndrome de error a los operadores de Pauli de corrección de errores adecuados por búsqueda de tabla para el código de Quantum ⟦ 5, 1, 3 ⟧.
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCodeRecoveryFn
+- summary: Devuelve un valor de CSS que representa el codificador y descodificador de código ⟦ 7, 1, 3 ⟧ Steane con medición de síndrome en contexto.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCode
+- summary: Descodificador para las partes X y Z combinadas del grupo estabilizador del Código ⟦ 7, 1, 3 ⟧ Steane Quantum.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryFns
+- summary: Descodificador para la parte X del grupo estabilizador del Código ⟦ 7, 1, 3 ⟧ Steane Quantum.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryX
+- summary: Descodificador para la parte Z del grupo estabilizador del Código ⟦ 7, 1, 3 ⟧ Steane Quantum.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeRecoveryZ
+- summary: Para una tabla determinada de operaciones de Pauli en un registro determinado de qubits, esta función devuelve un objeto de tipo `RecoveryFn` que contiene toda la información necesaria para realizar una descodificación de búsqueda de tabla con respecto a la matriz especificada de operaciones de Pauli.
+  uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecovery
+- summary: ''
+  uid: Microsoft.Quantum.ErrorCorrection.TableLookupRecoveryImpl
+name: Microsoft.Quantum.ErrorCorrection
+newtypes:
+- summary: Representa un código Calderbank – mé – Steane (CSS) tal y como lo define su codificador, descodificador y los procedimientos de medición del síndrome para los `X` `Z` errores y, respectivamente.
+  uid: Microsoft.Quantum.ErrorCorrection.CSS
+- summary: >-
+    Representa una operación que descodifica un registro codificado en un registro físico y el qubits temporal que se usa para registrar un síndrome.
+
+    El argumento para un DecodeOp es el mismo que el valor devuelto de un EncodeOp y viceversa.
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeOp
+- summary: >-
+    Representa una operación que codifica un registro físico en un registro lógico, utilizando el qubits temporal proporcionado.
+
+    El primer argumento se toma como el registro físico que se va a codificar, mientras que el segundo argumento se toma como el registro temporal que se va a usar.
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeOp
+- summary: Tipo para el registro de qubits físicos `Qubit[]` que codifican el qubits lógico.
+  uid: Microsoft.Quantum.ErrorCorrection.LogicalRegister
+- summary: Representa un código de corrección de errores según lo definido por su codificador, descodificador y procedimiento de medición del síndrome.
+  uid: Microsoft.Quantum.ErrorCorrection.QECC
+- summary: Tipo de función que asigna un síndrome de error a una secuencia de `Pauli[]` operaciones que corrigen el error detectado.
+  uid: Microsoft.Quantum.ErrorCorrection.RecoveryFn
+- summary: Tipo para los resultados de `Result[]` la medición que especifican un síndrome de error de un código Quantum.
+  uid: Microsoft.Quantum.ErrorCorrection.Syndrome
+- summary: Representa una operación que se utiliza para medir el síndrome de un bloque de código de corrección de errores.
+  uid: Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp
+operations:
+- summary: >-
+    Operación privada que se usa para implementar el codificador y descodificador de bits.
+
+    Tenga en cuenta que este codificador puede usar la recuperación coherente en contexto, en cuyo caso "causará" el error descrito por el estado inicial de `auxQubits` . En concreto, si `auxQubits` se encuentran inicialmente en el estado $ \ket {10} $, se producirá un error $X _ _ 1 $ en el qubit codificado.
+  uid: Microsoft.Quantum.ErrorCorrection.ApplyBitFlipEncoder
+- summary: Descodifica del código de volteo de bits [3, 1, 3]/⟦ 3, 1, 1 ⟧.
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromBitFlipCode
+- summary: Descodifica el código Quantum de ⟦ 5, 1, 3 ⟧.
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromFiveQubitCode
+- summary: Una operación de codificación inversa que asigna un registro de Quantum sin codificar a un registro de Quantum codificado en el Código ⟦ 7, 1, 3 ⟧ Steane Quantum.
+  uid: Microsoft.Quantum.ErrorCorrection.DecodeFromSteaneCode
+- summary: Codifica en el código de volteo de bits [3, 1, 3]/⟦ 3, 1, 1 ⟧.
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoBitFlipCode
+- summary: Codifica en el código de Quantum ⟦ 5, 1, 3 ⟧.
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoFiveQubitCode
+- summary: Una operación de codificación que asigna un registro de Quantum sin codificar a un registro de Quantum codificado en el Código ⟦ 7, 1, 3 ⟧ Steane Quantum.
+  uid: Microsoft.Quantum.ErrorCorrection.EncodeIntoSteaneCode
+- summary: Operación privada que se usa para implementar el codificador y el descodificador de 5 qubit.
+  uid: Microsoft.Quantum.ErrorCorrection.FiveQubitCodeEncoderImpl
+- summary: Gira un qubit único por π/4 sobre el eje Y.
+  uid: Microsoft.Quantum.ErrorCorrection.InjectPi4YRotation
+- summary: Implementa el algoritmo de destilación de estado mágico de Knill.
+  uid: Microsoft.Quantum.ErrorCorrection.KnillDistill
+- summary: Mide el conjunto dado de generadores de un grupo estabilizador.
+  uid: Microsoft.Quantum.ErrorCorrection.MeasureStabilizerGenerators
+- summary: Realiza una única ronda de corrección de errores mediante un código Quantum descrito por un `QECC` tipo.
+  uid: Microsoft.Quantum.ErrorCorrection.Recover
+- summary: Realiza una única ronda de corrección de errores mediante un código Quantum descrito por un `CSS` tipo.
+  uid: Microsoft.Quantum.ErrorCorrection.RecoverCSS
+- summary: Operación privada utilizada para implementar el codificador y descodificador de código Steane.
+  uid: Microsoft.Quantum.ErrorCorrection.SteaneCodeEncoderImpl
+- summary: >-
+    Medida del síndrome y el inverso de la incrustación.
+
+    $X $-y $Z $-los estabilizadores no se tratan de igual forma, lo que se debe a la elección concreta del circuito de codificación. Esta asimetría conduce a una rutina de extracción de síndrome diferente. Puede medir el síndrome midiendo el operador qubit de Pauli directamente en el estado del código, pero para el propósito de la deshabilitación, la qubit lógica se devuelve en un solo qubit, en el que se pueden realizar las medidas del síndrome sin más ancillas.
+  uid: Microsoft.Quantum.ErrorCorrection._ExtractLogicalQubitFromSteaneCode
+summary: Este espacio de nombres contiene funciones, operaciones y tipos definidos por el usuario para la corrección de errores de Quantum.
+uid: Microsoft.Quantum.ErrorCorrection
+metadata:
+  ms.openlocfilehash: ba16a793fc9389c7102047a6664c0338ea11314d
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92727148"

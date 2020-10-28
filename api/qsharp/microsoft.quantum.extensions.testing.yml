@@ -1,0 +1,100 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Extensions.Testing
+newtypes: []
+operations:
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZero está en desuso. Use <xref:Microsoft.Quantum.Diagnostics.AssertAllZero> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertallzero".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZero
+- summary: >+
+    > [!WARNING]
+
+    > AssertAllZeroTol está en desuso. Use <xref:Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertAllZeroTol
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlace está en desuso. Use <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlace> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+
+    > Tenga en cuenta que el orden de los argumentos de esta operación ha cambiado.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlace
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualInPlaceCompBasis está en desuso. Use <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualInPlaceCompBasis> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
+
+    > Tenga en cuenta que el orden de los argumentos de esta operación ha cambiado.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualInPlaceCompBasis
+- summary: >+
+    > [!WARNING]
+
+    > AssertOperationsEqualReferenced está en desuso. Use <xref:Microsoft.Quantum.Diagnostics.AssertOperationsEqualReferenced> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
+
+    > Tenga en cuenta que el orden de los argumentos de esta operación ha cambiado.
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubit está en desuso. Use <xref:Microsoft.Quantum.Diagnostics.AssertQubit> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertqubit".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubit
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitState está en desuso. Use <xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitState
+- summary: >+
+    > [!WARNING]
+
+    > AssertQubitTol está en desuso. Use <xref:Microsoft.Quantum.Diagnostics.AssertQubitWithinTolerance> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+
+  uid: Microsoft.Quantum.Extensions.Testing.AssertQubitTol
+summary: ''
+uid: Microsoft.Quantum.Extensions.Testing
+metadata:
+  ms.openlocfilehash: 717665e821b4e56b01664e6e0ed940cacd2a485c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92726956"
