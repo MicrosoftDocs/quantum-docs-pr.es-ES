@@ -1,0 +1,16 @@
+### YamlMime:QSharpNamespace
+functions: []
+name: Microsoft.Quantum.Targeting
+newtypes:
+- summary: Atributo reconocido por el compilador que se usa para marcar una función que se puede llamar con las capacidades de tiempo de ejecución que requiere.
+  uid: Microsoft.Quantum.Targeting.RequiresCapability
+operations: []
+summary: Este espacio de nombres proporciona funcionalidad para establecer como destino procesadores de Quantum específicos.
+uid: Microsoft.Quantum.Targeting
+metadata:
+  ms.openlocfilehash: 470a923d88c23857ef8b64cf2eb3de13c3c2cb4f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92733869"
