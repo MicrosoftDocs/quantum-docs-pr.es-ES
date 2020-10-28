@@ -1,0 +1,32 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Devuelve una instancia predeterminada del tipo especificado.
+  uid: Microsoft.Quantum.Core.Default
+- summary: Devuelve el número de elementos de una matriz.
+  uid: Microsoft.Quantum.Core.Length
+- summary: Devuelve el valor final definido del intervalo especificado, que no es necesariamente el último elemento de la secuencia.
+  uid: Microsoft.Quantum.Core.RangeEnd
+- summary: Devuelve un nuevo intervalo que es el inverso del intervalo de entrada.
+  uid: Microsoft.Quantum.Core.RangeReverse
+- summary: Devuelve el valor inicial definido del intervalo especificado.
+  uid: Microsoft.Quantum.Core.RangeStart
+- summary: Devuelve el entero que especifica cómo se calcula el siguiente valor de un intervalo.
+  uid: Microsoft.Quantum.Core.RangeStep
+name: Microsoft.Quantum.Core
+newtypes:
+- summary: Atributo reconocido por el compilador que se usa para marcar los tipos definidos por el usuario como atributos.
+  uid: Microsoft.Quantum.Core.Attribute
+- summary: Atributo reconocido por el compilador que se usa para marcar un tipo o que se puede llamar como desusado.
+  uid: Microsoft.Quantum.Core.Deprecated
+- summary: Atributo reconocido por el compilador que se usa para marcar el punto de entrada de un ejecutable.
+  uid: Microsoft.Quantum.Core.EntryPoint
+operations: []
+summary: 'Este espacio de nombres incluye funciones y operaciones de Q # Core.'
+uid: Microsoft.Quantum.Core
+metadata:
+  ms.openlocfilehash: 12de9824c55c72651f5b29cc806058be14343ec5
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92727646"

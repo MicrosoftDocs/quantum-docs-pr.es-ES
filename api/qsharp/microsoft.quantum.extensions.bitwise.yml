@@ -1,0 +1,84 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >+
+    > [!WARNING]
+
+    > Y ha quedado en desuso. Use <xref:Microsoft.Quantum.Bitwise.And> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.bitwise.and".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.And
+- summary: >+
+    > [!WARNING]
+
+    > Not quedó en desuso. Use <xref:Microsoft.Quantum.Bitwise.Not> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.bitwise.not".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Not
+- summary: >+
+    > [!WARNING]
+
+    > O ha quedado en desuso. Use <xref:Microsoft.Quantum.Bitwise.Or> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.bitwise.or".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Or
+- summary: >+
+    > [!WARNING]
+
+    > La paridad está en desuso. Use <xref:Microsoft.Quantum.Bitwise.Parity> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.bitwise.parity".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Parity
+- summary: >+
+    > [!WARNING]
+
+    > XBits está en desuso. Use <xref:Microsoft.Quantum.Bitwise.XBits> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.bitwise.xbits".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.XBits
+- summary: >+
+    > [!WARNING]
+
+    > XOR está en desuso. Use <xref:Microsoft.Quantum.Bitwise.Xor> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.bitwise.xor".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.Xor
+- summary: >+
+    > [!WARNING]
+
+    > ZBits está en desuso. Use <xref:Microsoft.Quantum.Bitwise.ZBits> en su lugar.
+
+    >
+
+    > Use @"microsoft.quantum.bitwise.zbits".
+
+  uid: Microsoft.Quantum.Extensions.Bitwise.ZBits
+name: Microsoft.Quantum.Extensions.Bitwise
+newtypes: []
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Extensions.Bitwise
+metadata:
+  ms.openlocfilehash: 4ae65fda1f41159bc876efbdade906c24892172c
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92727100"
