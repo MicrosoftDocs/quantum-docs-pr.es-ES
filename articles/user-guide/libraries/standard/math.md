@@ -8,18 +8,18 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 55b1ef70eed1eb47ab0c6b30e2b8203c38c9a67a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6de1574341d67c569cd2f040ec533e263fdd386e
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833596"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692066"
 ---
 # <a name="classical-mathematical-functions"></a>Funciones matemáticas clásicas #
 
 Estas funciones se utilizan principalmente para trabajar con los Q# tipos de datos integrados `Int` , `Double` y `Range` .
 
-La <xref:microsoft.quantum.intrinsic.random> operación tiene signatura `(Double[] => Int)` .
+La <xref:Microsoft.Quantum.Intrinsic.Random> operación tiene signatura `(Double[] => Int)` .
 Toma una matriz de valores double como entrada y devuelve un índice seleccionado aleatoriamente en la matriz como `Int` .
 La probabilidad de seleccionar un índice específico es proporcional al valor del elemento de la matriz en dicho índice. n los elementos de la matriz que son iguales a cero se omiten y sus índices nunca se devuelven.
 Si algún elemento de la matriz es menor que cero, o si ningún elemento de la matriz es mayor que cero, se produce un error en la operación.
