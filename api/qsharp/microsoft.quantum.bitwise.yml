@@ -1,0 +1,36 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Devuelve el and bit a bit de dos enteros. Esto realiza el mismo cálculo que el `&&&` operador integrado.
+  uid: Microsoft.Quantum.Bitwise.And
+- summary: Desplaza la representación bit a bit de un número a la izquierda de un número determinado de bits.
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedI
+- summary: Desplaza la representación bit a bit de un número a la izquierda de un número determinado de bits.
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedL
+- summary: Devuelve el NOT bit a bit de un entero. Esto realiza el mismo cálculo que el `~~~` operador integrado.
+  uid: Microsoft.Quantum.Bitwise.Not
+- summary: Devuelve la operación OR bit a bit de dos enteros. Esto realiza el mismo cálculo que el `|||` operador integrado.
+  uid: Microsoft.Quantum.Bitwise.Or
+- summary: Devuelve la paridad bit a bit de un entero (1 Si su representación binaria contiene un número impar de unos y 0 de lo contrario).
+  uid: Microsoft.Quantum.Bitwise.Parity
+- summary: Desplaza la representación bit a bit de un número a la derecha un número determinado de bits.
+  uid: Microsoft.Quantum.Bitwise.RightShiftedI
+- summary: Desplaza la representación bit a bit de un número a la derecha un número determinado de bits.
+  uid: Microsoft.Quantum.Bitwise.RightShiftedL
+- summary: Devuelve un entero que representa los bits X de una matriz de operadores Pauli.
+  uid: Microsoft.Quantum.Bitwise.XBits
+- summary: Devuelve la operación OR exclusiva bit a bit (XOR) de dos enteros. Esto realiza el mismo cálculo que el `^^^` operador integrado.
+  uid: Microsoft.Quantum.Bitwise.Xor
+- summary: Devuelve un entero que representa los bits Z de una matriz de operadores Pauli.
+  uid: Microsoft.Quantum.Bitwise.ZBits
+name: Microsoft.Quantum.Bitwise
+newtypes: []
+operations: []
+summary: Este espacio de nombres contiene funciones para actuar en la representación bit a bit de los tipos de datos clásico.
+uid: Microsoft.Quantum.Bitwise
+metadata:
+  ms.openlocfilehash: 6730a0350f56c2356b9c0851b37de1cd277da90f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92730245"

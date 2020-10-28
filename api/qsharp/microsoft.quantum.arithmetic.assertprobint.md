@@ -1,0 +1,59 @@
+---
+uid: Microsoft.Quantum.Arithmetic.AssertProbInt
+title: Operación AssertProbInt
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: operation
+qsharp.namespace: Microsoft.Quantum.Arithmetic
+qsharp.name: AssertProbInt
+qsharp.summary: Asserts that the probability of a specific state of a quantum register has the expected value.
+ms.openlocfilehash: a8e4217e18528adc0aa9923f1c0dcfb59e1d2488
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92731677"
+---
+# <a name="assertprobint-operation"></a>Operación AssertProbInt
+
+Espacio de nombres: [Microsoft. Quantum. aritmético](xref:Microsoft.Quantum.Arithmetic)
+
+Configura [](https://nuget.org/packages/)
+
+
+Valida que la probabilidad de un estado específico de un registro de Quantum tiene el valor esperado.
+
+```qsharp
+operation AssertProbInt (stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double) : Unit
+```
+
+
+## <a name="description"></a>Descripción
+
+Dado un $n $-qubit Quantum State $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, garantiza que la probabilidad $ | \ alpha_j | ^ 2 $ del estado $ \ket{j} $ indexada por $j $ tiene el valor esperado.
+
+## <a name="input"></a>Entrada
+
+### <a name="stateindex--int"></a>stateIndex: [int](xref:microsoft.quantum.lang-ref.int)
+
+Índice $j $ del estado $ \ket{j} $ representado por un `LittleEndian` registro.
+
+
+### <a name="expected--double"></a>se esperaba: [Double](xref:microsoft.quantum.lang-ref.double)
+
+El valor esperado de $ | \ alpha_j | ^ 2 $.
+
+
+### <a name="qubits--littleendian"></a>qubits: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)
+
+El registro qubit que almacena $ \ket{\psi} $ en formato Little-Endian.
+
+
+### <a name="tolerance--double"></a>tolerancia: [Double](xref:microsoft.quantum.lang-ref.double)
+
+Tolerancia absoluta en la diferencia entre real y expected.
+
+
+
+## <a name="output--unit"></a>Salida: [unidad](xref:microsoft.quantum.lang-ref.unit)
+

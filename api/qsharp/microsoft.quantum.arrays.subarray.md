@@ -1,0 +1,60 @@
+---
+uid: Microsoft.Quantum.Arrays.Subarray
+title: Subarray (función)
+ms.date: 10/26/2020 12:00:00 AM
+ms.topic: article
+qsharp.kind: function
+qsharp.namespace: Microsoft.Quantum.Arrays
+qsharp.name: Subarray
+qsharp.summary: Takes an array and a list of locations and produces a new array formed from the elements of the original array that match the given locations.
+ms.openlocfilehash: be7b6ee1a396d67ebc311d8d97f4bd751a32d171
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92729997"
+---
+# <a name="subarray-function"></a>Subarray (función)
+
+Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
+
+Configura [](https://nuget.org/packages/)
+
+
+Toma una matriz y una lista de ubicaciones y genera una nueva matriz formada a partir de los elementos de la matriz original que coinciden con las ubicaciones especificadas.
+
+```qsharp
+function Subarray<'T> (indices : Int[], array : 'T[]) : 'T[]
+```
+
+
+## <a name="input"></a>Entrada
+
+### <a name="indices--int"></a>índices: [int](xref:microsoft.quantum.lang-ref.int)[]
+
+Una lista de enteros que se utiliza para definir la submatriz.
+
+
+### <a name="array--t"></a>matriz: ' t []
+
+Matriz de elementos sobre `'T` .
+
+
+
+## <a name="output--t"></a>Salida: ' t []
+
+Matriz `out` de elementos cuyos índices corresponden a la submatriz, de modo que `out[idx] == array[indices[idx]]` .
+
+## <a name="type-parameters"></a>Parámetros de tipo
+
+### <a name="t"></a>Traslada
+
+Tipo de `array` elementos.
+
+## <a name="remarks"></a>Observaciones
+
+La función se define para tipos genéricos, es decir, cada vez que tenemos una matriz `'T[]` y una lista de ubicaciones que `Int[]` definen la submatriz.
+La construcción de la submatriz es un basado en la generación de una nueva copia en profundidad de la matriz determinada en lugar de mantener referencias.
+
+Si es `Length(indices) < Length(array)` , esta función devolverá un subconjunto de `array` . Por otro lado, si `indices` contiene elementos repetidos, los elementos correspondientes de también `array` se repetirán.
+Si `indices` y `array` tienen la misma longitud, esta función proporciona permutaciones de `array` .
