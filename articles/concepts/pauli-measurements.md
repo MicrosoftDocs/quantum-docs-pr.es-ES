@@ -87,7 +87,7 @@ Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli ms. Author: v-benbra ms.
 
 En las conversaciones anteriores, nos hemos centrado en las mediciones de base de cálculo.
 De hecho, hay otras medidas comunes que se producen en la informática Quantum que, desde una perspectiva de notación, son convenientes para expresar en términos de mediciones de base de cálculo.
-A medida que trabaje con Q# , el tipo más común de medidas en las que se ejecutará probablemente serán *mediciones Paulis*, que generalizan las mediciones de base de cálculo para incluir medidas en otras bases y de paridad entre diferentes qubits.
+A medida que trabaje con Q# , el tipo más común de medidas en las que se ejecutará probablemente serán *mediciones Paulis* , que generalizan las mediciones de base de cálculo para incluir medidas en otras bases y de paridad entre diferentes qubits.
 En tales casos, es habitual analizar un operador Pauli, en general un operador como $ X, Y, z $ o $ z \otimes z, x \otimes x, x y \otimes , etc $ .
 
 > [!TIP]
@@ -128,7 +128,7 @@ Estas medidas se proporcionan a continuación para mayor comodidad.
 |$ $ X | $H               $                    |
 |$ $ Y | $Hs ^               {\dagger}$         |
 
-Es decir, con este lenguaje, "Measure $ Y $ " es equivalente a aplicar $ HS ^ \dagger $ y luego medir en función del cálculo, donde [`S`](xref:microsoft.quantum.intrinsic.s) es una operación de Quantum intrínseca que a veces se denomina "puerta de fase" y se puede simular mediante la matriz de la unidad de medida.
+Es decir, con este lenguaje, "Measure $ Y $ " es equivalente a aplicar $ HS ^ \dagger $ y luego medir en función del cálculo, donde [`S`](xref:Microsoft.Quantum.Intrinsic.S) es una operación de Quantum intrínseca que a veces se denomina "puerta de fase" y se puede simular mediante la matriz de la unidad de medida.
 
 $$
 \begin{align}
@@ -194,7 +194,7 @@ Al igual que en el caso de una qubit, todas las medidas Pauli-qubit se pueden es
 >         0 & 1 & 0 & 0 \\\\
 >0 & 0 & 0 & 1 > \end { matriz } \right ) >     \end{align}
 > $$
-> se usa para simular la operación intrínseca [`SWAP`](xref:microsoft.quantum.intrinsic) .
+> se usa para simular la operación intrínseca [`SWAP`](xref:Microsoft.Quantum.Intrinsic) .
 
 |Pauli     | transformación unitario de medida  |
 |----------------------|------------------------|
@@ -214,7 +214,7 @@ Al igual que en el caso de una qubit, todas las medidas Pauli-qubit se pueden es
 |$X \otimes Y $ | $ \operatorname { CNOT } \_ { 10 } (H \otimes HS ^ \dagger ) $|
 |$Y \otimes S $ | $ \operatorname { CNOT } \_ { 10 } (HS ^ \dagger \otimes HS ^ \dagger ) $|
 
-En este caso, la [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) operación aparece por el siguiente motivo.
+En este caso, la [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) operación aparece por el siguiente motivo.
 Cada medida de Pauli que no incluya la $ \boldone $ matriz es equivalente a una unitario a $ z \otimes z $ por la razón anterior.
 El vectores propios de $ z \otimes z $ solo depende de la paridad de la qubits que conforman cada vector de base de cálculo y las operaciones controladas no sirven para calcular esta paridad y almacenarla en el primer bit.
 Después, una vez que se mide el primer bit, podemos recuperar la identidad del espacio medio resultante, que es equivalente a medir el operador Pauli.
@@ -240,16 +240,16 @@ En Q# , tales mediciones devuelven $ j $ si la medida produce un resultado en el
 Tener medidas de Pauli como característica integrada en Q# es útil porque la medición de estos operadores requiere largas cadenas de puertas y transformaciones controladas no para describir la puerta U de la estructura de la diagonal $ $ necesaria para expresar la operación como un producto tensores de $ Z $ y $ \id $ .
 Al poder especificar que desea realizar una de estas medidas predefinidas, no es necesario preocuparse por cómo transformar la base de forma que una medición de base de cálculo proporcione la información necesaria.
 Q# controla todas las transformaciones de base necesarias automáticamente.
-Para obtener más información, vea [`Measure`](xref:microsoft.quantum.intrinsic.measure) las [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) operaciones y.
+Para obtener más información, vea [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) las [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) operaciones y.
 
-## <a name="the-no-cloning-theorem"></a>Teorema sin clonación
+## <a name="the-no-cloning-theorem"></a>No-Cloning Teorema
 
 La información de Quantum es eficaz.
 Nos permite hacer cosas sorprendentes, como números de factor exponencialmente más rápidos que los mejores algoritmos clásicos conocidos, o simular eficazmente sistemas de electrones correlacionados que requieran el costo exponencial para simular con precisión.
 Sin embargo, existen limitaciones en cuanto a la eficacia de la informática Quantum.
-Una de estas limitaciones viene determinada por el *teorema sin clonación*.
+Una de estas limitaciones viene determinada por el *teorema sin clonación* .
 
-La teorema sin clonación tiene un nombre acertado.
+El No-Cloning teorema tiene un nombre apropiado.
 No permite la clonación de Estados de Quantum genéricos por un equipo Quantum.
 La prueba de Teorema es bastante sencilla.
 Aunque una prueba completa del teorema sin clonación es un poco muy técnico para nuestro debate aquí, la prueba, en el caso de que no haya ningún qubits auxiliar adicional, se encuentra dentro de nuestro ámbito (los qubits auxiliares son qubits que se usan para el espacio de desecho durante un cálculo y se usan y administran fácilmente en Q# , vea [qubits prestado](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
@@ -273,15 +273,15 @@ $$
 \end{align}
 $$
 
-Esto proporciona el Intuition fundamental detrás del teorema sin clonación: cualquier dispositivo que copie un estado de Quantum desconocido debe inducir errores en al menos algunos de los Estados que copia.
+Esto proporciona el Intuition fundamental detrás del No-Cloning teorema: cualquier dispositivo que copie un estado de Quantum desconocido debe inducir errores en al menos algunos de los Estados que copia.
 Aunque la principal suposición de que el Cloner actúa de forma lineal en el estado de la entrada se puede infringir a través de la adición y medición de qubits auxiliares, estas interacciones también pierden información sobre el sistema a través de las estadísticas de medida y evitan la clonación exacta en estos casos.
-Para obtener una prueba más completa de la teorema sin clonación, vea [para obtener más información](xref:microsoft.quantum.more-information).
+Para obtener una prueba más completa de los No-Cloning teorema vea [para obtener más información](xref:microsoft.quantum.more-information).
 
-La teorema sin clonación es importante para el conocimiento cualitativo de la informática Quantum, ya que si pudiera clonar los Estados de Quantum de forma económica, se le concederá una capacidad casi mágica para aprender de los Estados de Quantum.
+El No-Cloning Teorema es importante para el conocimiento cualitativo de la informática Quantum, ya que si pudiera clonar los Estados de Quantum de forma económica, se le concederá una capacidad casi mágica para aprender de los Estados de Quantum.
 En realidad, puede infringir el principio de incertidumbre de vaunted de Heisenberg.
 Como alternativa, puede usar una Cloner óptima para tomar una muestra única de una distribución de Quantum compleja y obtener información sobre todo lo que podría obtener más información sobre esa distribución desde un solo ejemplo.
 Esto sería similar a la forma de voltear una moneda y observar los cabezales y, a continuación, al decir a un amigo sobre el resultado de responder "Ah la distribución de esa moneda debe ser Bernoulli con $ p = 0.512643 \ ldots $ !".  Este tipo de instrucción sería no SENS, porque un bit de información (el resultado de los cabezales) simplemente no puede proporcionar los numerosos bits de información necesaria para codificar la distribución sin información importante de gran tamaño.
 Del mismo modo, sin información previa, no se puede clonar absolutamente un estado de Quantum, al igual que no se puede preparar un conjunto de esas monedas sin conocer $ p $ .
 
 La información no es gratuita en la informática Quantum.
-Cada qubit medido proporciona un único bit de información y el teorema sin clonación muestra que no hay ninguna puerta trasera que pueda aprovecharse para evitar el equilibrio fundamental entre la información obtenida sobre el sistema y la perturbación invocada.
+Cada qubit medida proporciona un único bit de información y el No-Cloning teorema muestra que no hay ninguna puerta trasera que pueda aprovecharse para evitar el equilibrio fundamental entre la información obtenida sobre el sistema y la perturbación invocada.
