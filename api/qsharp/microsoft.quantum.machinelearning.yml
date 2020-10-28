@@ -1,0 +1,116 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Dado un conjunto de coeficientes y una tolerancia, devuelve una operación de preparación del estado que prepara cada coeficiente como la amplitud correspondiente del estado de la base de cálculo, hasta la tolerancia especificada.
+  uid: Microsoft.Quantum.MachineLearning.ApproximateInputEncoder
+- summary: Dado una o más capas de rotaciones controladas, devuelve una sola capa con el índice del parámetro de modelo desplazado de modo que las capas distintas estén parametrizadas por parámetros de modelo distintos.
+  uid: Microsoft.Quantum.MachineLearning.CombinedStructure
+- summary: Devuelve una matriz de rotaciones de control individual a lo largo de un eje determinado, organizadas cíclicamente por un registro de qubits y parametrizado por parámetros de modelo distintos.
+  uid: Microsoft.Quantum.MachineLearning.CyclicEntanglingLayer
+- summary: Devuelve un conjunto predeterminado de opciones para los clasificadores de entrenamiento.
+  uid: Microsoft.Quantum.MachineLearning.DefaultTrainingOptions
+- summary: Devuelve el número de qubits necesarios para codificar un vector de característica determinado.
+  uid: Microsoft.Quantum.MachineLearning.FeatureRegisterSize
+- summary: Dado una de probabilidad de clasificación y una diferencia, devuelve la etiqueta deducida de esa probabilidad.
+  uid: Microsoft.Quantum.MachineLearning.InferredLabel
+- summary: Dada una matriz de probabilidades de clasificación y una diferencia, devuelve la etiqueta deducida de cada probabilidad.
+  uid: Microsoft.Quantum.MachineLearning.InferredLabels
+- summary: Dado un conjunto de coeficientes y una tolerancia, devuelve una operación de preparación del estado que prepara cada coeficiente como la amplitud correspondiente del estado de la base de cálculo.
+  uid: Microsoft.Quantum.MachineLearning.InputEncoder
+- summary: Devuelve una matriz de giros no controlados (qubit) a lo largo de un eje determinado, con un giro para cada qubit de un registro, parametrizado por parámetros de modelo distintos.
+  uid: Microsoft.Quantum.MachineLearning.LocalRotationsLayer
+- summary: Dado un conjunto de etiquetas inferido y un conjunto de etiquetas correctas, devuelve índices en los que difiere cada conjunto de etiquetas.
+  uid: Microsoft.Quantum.MachineLearning.Misclassifications
+- summary: Dado un conjunto de etiquetas inferido y un conjunto de etiquetas correctas, devuelve el número de índices en los que difiere cada conjunto de etiquetas.
+  uid: Microsoft.Quantum.MachineLearning.NMisclassifications
+- summary: Devuelve el número de qubits necesario para aplicar un clasificador secuencial determinado.
+  uid: Microsoft.Quantum.MachineLearning.NQubitsRequired
+- summary: Devuelve una matriz de giros de un solo qubit a lo largo de un eje determinado, parametrizado por parámetros de modelo distintos.
+  uid: Microsoft.Quantum.MachineLearning.PartialRotationsLayer
+- summary: Muestrea una matriz determinada, usando la programación especificada.
+  uid: Microsoft.Quantum.MachineLearning.Sampled
+- summary: Devuelve el número de elementos de una programación de muestreo determinada.
+  uid: Microsoft.Quantum.MachineLearning.ScheduleLength
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._AllNearlyEqualD
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._CallFlipped
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._CanApplyTwoQubitCase
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._EncodeSample
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Features
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Flipped
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Label
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._MisclassificationRate
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._NegativeLocations
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._TailMeasurement
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._UncontrolledSpanSequence
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._Unnegate
+- summary: Devuelve un valor de diferencia que conduce a una puntuación de clasificación incorrecta casi mínima.
+  uid: Microsoft.Quantum.MachineLearning._UpdatedBias
+name: Microsoft.Quantum.MachineLearning
+newtypes:
+- summary: Describe una rotación controlada en cuanto a sus índices de destino y de control, el eje de giro y el índice en un vector de parámetro de modelo.
+  uid: Microsoft.Quantum.MachineLearning.ControlledRotation
+- summary: Un ejemplo, etiquetado con una clase a la que pertenece el ejemplo.
+  uid: Microsoft.Quantum.MachineLearning.LabeledSample
+- summary: Una programación para dibujar lotes a partir de un conjunto de ejemplos.
+  uid: Microsoft.Quantum.MachineLearning.SamplingSchedule
+- summary: Describe un modelo de clasificador de Quantum compuesto por una secuencia de giros con parámetros y controlados, una asignación de ángulos de rotación y una diferencia entre las dos clases reconocidas por el modelo.
+  uid: Microsoft.Quantum.MachineLearning.SequentialModel
+- summary: Describe una operación que prepara una entrada determinada para un clasificador secuencial.
+  uid: Microsoft.Quantum.MachineLearning.StateGenerator
+- summary: Colección de opciones que se va a utilizar para entrenar clasificadores de Quantum.
+  uid: Microsoft.Quantum.MachineLearning.TrainingOptions
+- summary: Los resultados de haber validado un clasificador con un conjunto de ejemplos.
+  uid: Microsoft.Quantum.MachineLearning.ValidationResults
+operations:
+- summary: Dada la estructura y la parametrización de un clasificador secuencial, aplica el clasificador a un registro de qubits.
+  uid: Microsoft.Quantum.MachineLearning.ApplySequentialClassifier
+- summary: Dado un conjunto de ejemplos y un clasificador secuencial, calcula la probabilidad de clasificación para esos ejemplos midiendo repetidamente la salida del clasificador en cada ejemplo.
+  uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbabilities
+- summary: Dado un ejemplo y un clasificador secuencial, calcula la probabilidad de clasificación para ese ejemplo midiendo repetidamente la salida del clasificador en el ejemplo determinado.
+  uid: Microsoft.Quantum.MachineLearning.EstimateClassificationProbability
+- summary: Calcula el degradado de entrenamiento para un clasificador secuencial en un modelo determinado y para una entrada codificada determinada.
+  uid: Microsoft.Quantum.MachineLearning.EstimateGradient
+- summary: Dada la estructura de un clasificador secuencial, entrena el clasificador en un conjunto de entrenamiento con etiqueta determinado.
+  uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifier
+- summary: Dada la estructura de un clasificador secuencial, entrena el clasificador en un conjunto de entrenamiento con etiqueta determinado, empezando por un modelo determinado.
+  uid: Microsoft.Quantum.MachineLearning.TrainSequentialClassifierAtModel
+- summary: Valida un clasificador secuencial determinado con respecto a un conjunto determinado de muestras con etiqueta previa.
+  uid: Microsoft.Quantum.MachineLearning.ValidateSequentialClassifier
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ApplyLEOperationToRawRegister
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ApplyTwoQubitCase
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._EstimateDerivativeWithParameterShift
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._PrepareClassification
+- summary: Cambia el tamaño de una entrada de forma aleatoria para aumentar o reducir un factor determinado.
+  uid: Microsoft.Quantum.MachineLearning._RandomlyRescale
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._ReflectAboutNegativeCoefficients
+- summary: Realice un tiempo de aprendizaje de clasificador secuencial en un subconjunto de muestras de datos.
+  uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingEpoch
+- summary: intenta una actualización de un solo parámetro en la dirección del degradado del mini lote.
+  uid: Microsoft.Quantum.MachineLearning._RunSingleTrainingStep
+- summary: ''
+  uid: Microsoft.Quantum.MachineLearning._TrainSequentialClassifierAtModel
+summary: Este espacio de nombres proporciona funciones y operaciones que se usan en aplicaciones Quantum machine learning.
+uid: Microsoft.Quantum.MachineLearning
+metadata:
+  ms.openlocfilehash: 3e77526589c4224697d7f47a5a6dc7e7edf45ef8
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92731460"
