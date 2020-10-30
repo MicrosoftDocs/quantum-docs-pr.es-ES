@@ -26,6 +26,8 @@
   name: '%chemistry.inputstate.load (comando magic)'
 - href: config.md
   name: '%config (comando magic)'
+- href: debug.md
+  name: '%debug (comando magic)'
 - href: estimate.md
   name: '%estimate (comando magic)'
 - href: kata.md
