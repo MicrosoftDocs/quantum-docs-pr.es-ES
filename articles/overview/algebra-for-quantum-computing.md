@@ -9,18 +9,18 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835135"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692246"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Álgebra lineal para la computación cuántica
 
 El álgebra lineal es el lenguaje de la computación cuántica. Aunque no es necesario que sepa implementar o escribir programas cuánticos, se usa mucho para describir los estados de los cúbits y las operaciones cuánticas, y para predecir lo que hará un equipo cuántico en respuesta a una secuencia de instrucciones.
 
-Al igual que estar familiarizado con los [conceptos básicos de la física cuántica](xref:microsoft.quantum.overview.understanding) puede ayudarle a entender la computación cuántica, conocer algunos aspectos básicos del álgebra lineal puede ayudarle a comprender cómo funcionan los algoritmos cuánticos. Como mínimo, querrá estar familiarizado con los **vectores** y la **multiplicación de matrices**. Si necesita actualizar su conocimiento de estos conceptos de álgebra, estos tutoriales cubren los aspectos básicos:
+Al igual que estar familiarizado con los [conceptos básicos de la física cuántica](xref:microsoft.quantum.overview.understanding) puede ayudarle a entender la computación cuántica, conocer algunos aspectos básicos del álgebra lineal puede ayudarle a comprender cómo funcionan los algoritmos cuánticos. Como mínimo, querrá estar familiarizado con los **vectores** y la **multiplicación de matrices** . Si necesita actualizar su conocimiento de estos conceptos de álgebra, estos tutoriales cubren los aspectos básicos:
 
 - [Tutorial de Jupyter Notebook sobre álgebra lineal](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
 - [Tutorial de Jupyter Notebook sobre aritmética compleja](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
@@ -30,7 +30,7 @@ Al igual que estar familiarizado con los [conceptos básicos de la física cuán
 
 ## <a name="vectors-and-matrices-in-quantum-computing"></a>Vectores y matrices en la computación cuántica
 
-En el tema [Descripción de la computación cuántica](xref:microsoft.quantum.overview.understanding), vimos que un cúbit puede estar en un estado de 1 o 0, en una superposición o en ambos. Si utilizamos el álgebra lineal, el estado de un cúbit se describe como un vector y se representa mediante una **matriz** de una sola columna $\begin{bmatrix} a \\\\  b \end{bmatrix}$. También se conoce como **vector de estado cuántico**, y debe cumplir el requisito $|a|^2 + |b|^2 = 1$.  
+En el tema [Descripción de la computación cuántica](xref:microsoft.quantum.overview.understanding), vimos que un cúbit puede estar en un estado de 1 o 0, en una superposición o en ambos. Si utilizamos el álgebra lineal, el estado de un cúbit se describe como un vector y se representa mediante una **matriz** de una sola columna $\begin{bmatrix} a \\\\  b \end{bmatrix}$. También se conoce como **vector de estado cuántico** , y debe cumplir el requisito $|a|^2 + |b|^2 = 1$.  
 
 Los elementos de la matriz representan la probabilidad de que el cúbit colapse en una u otra forma, siendo $|a|^2$ la probabilidad de que colapse en cero y $|b|^2$ la probabilidad de que colapse en uno. Todas las matrices siguientes representan vectores de estado cuántico válidos:
 
@@ -41,7 +41,7 @@ También vimos que, en los [equipos y simuladores cuánticos](xref:microsoft.qua
 A continuación, se muestran dos operaciones cuánticas comunes representadas con multiplicación de matrices.
 
 
-La [operación `X`](xref:microsoft.quantum.intrinsic.x) se representa mediante la matriz de Pauli $X$,
+La [operación `X`](xref:Microsoft.Quantum.Intrinsic.X) se representa mediante la matriz de Pauli $X$,
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
     
@@ -49,7 +49,7 @@ y se usa para cambiar el estado de un cúbit de 0 a 1 (o viceversa); por ejemplo
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.$$
 
-La [operación "H"](xref:microsoft.quantum.intrinsic.h) está representada por la transformación de Hadamard $H$,
+La [operación "H"](xref:Microsoft.Quantum.Intrinsic.H) está representada por la transformación de Hadamard $H$,
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
@@ -57,13 +57,13 @@ $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
 $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=\left(\frac{1}{\sqrt{2}}\right)^2=\frac{1}{2}.$$
 
-Una matriz que representa una operación cuántica tiene un requisito: debe ser una matriz **unitaria**. Una matriz es unitaria si la **inversa** de la matriz es igual que la **traspuesta conjugada** de la matriz.
+Una matriz que representa una operación cuántica tiene un requisito: debe ser una matriz **unitaria** . Una matriz es unitaria si la **inversa** de la matriz es igual que la **traspuesta conjugada** de la matriz.
 
 ## <a name="representing-two-qubit-states"></a>Representación de dos estados de cúbit
 
 En los ejemplos anteriores, el estado de un cúbit se describía usando una matriz de una sola columna $\begin{bmatrix} a \\\\  b \end{bmatrix}$, y aplicarle una operación se describía multiplicando las dos matrices. Sin embargo, como los equipos cuánticos usan más de un cúbit, ¿cómo se describe el estado combinado de dos cúbits? 
 
-Recuerde que cada cúbit es un espacio vectorial, por lo que no se puede multiplicar sin más. En su lugar, se usa un **producto de tensores**, que es una operación relacionada que crea un nuevo espacio vectorial a partir de espacios vectoriales individuales, y se representa mediante el símbolo $\otimes$. Por ejemplo, se calcula el producto de tensores de dos estados de cúbit $\begin{bmatrix} a \\\\  b \end{bmatrix}$ and $\begin{bmatrix} c \\\\  d \end{bmatrix}$
+Recuerde que cada cúbit es un espacio vectorial, por lo que no se puede multiplicar sin más. En su lugar, se usa un **producto de tensores** , que es una operación relacionada que crea un nuevo espacio vectorial a partir de espacios vectoriales individuales, y se representa mediante el símbolo $\otimes$. Por ejemplo, se calcula el producto de tensores de dos estados de cúbit $\begin{bmatrix} a \\\\  b \end{bmatrix}$ and $\begin{bmatrix} c \\\\  d \end{bmatrix}$
 
 $$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
