@@ -1,14 +1,14 @@
 ---
 title: 'Contador de operación primitiva: kit de desarrollo de Quantum'
-description: 'Obtenga información sobre el contador de operaciones primitivas de Microsoft QDK, que usa el simulador de seguimiento de Quantum para realizar el seguimiento de los procesos primitivos que usan las operaciones en un :::no-loc(Q#)::: programa.'
+description: 'Obtenga información sobre el contador de operaciones primitivas de Microsoft QDK, que usa el simulador de seguimiento de Quantum para realizar el seguimiento de los procesos primitivos que usan las operaciones en un Q# programa.'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a><span data-ttu-id="36b80-110">Usar el contador de operaciones primitivas en un programa host de C#</span><span class="sxs-lookup"><span data-stu-id="36b80-110">Using the primitive operation counter in a C# host program</span></span>
 
-<span data-ttu-id="36b80-111">En el ejemplo de C# que se muestra en esta sección se cuenta el número de <xref:Microsoft.Quantum.Intrinsic.T> operaciones necesarias para implementar la <xref:Microsoft.Quantum.Intrinsic.ccnot> operación, basándose en el :::no-loc(Q#)::: código de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="36b80-111">The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="36b80-111">En el ejemplo de C# que se muestra en esta sección se cuenta el número de <xref:Microsoft.Quantum.Intrinsic.T> operaciones necesarias para implementar la <xref:Microsoft.Quantum.Intrinsic.ccnot> operación, basándose en el Q# código de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="36b80-111">The C# example that follows in this section counts how many <xref:Microsoft.Quantum.Intrinsic.T> operations are needed to implement the <xref:Microsoft.Quantum.Intrinsic.ccnot> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

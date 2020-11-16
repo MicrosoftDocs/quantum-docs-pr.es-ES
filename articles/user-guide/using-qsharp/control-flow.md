@@ -1,5 +1,5 @@
 ---
-title: 'Flujo de control en :::no-loc(Q#):::'
+title: 'Flujo de control en Q#'
 description: Bucles, condicionales, etc.
 author: gillenhaalb
 ms.author: a-gibec
@@ -7,8 +7,8 @@ ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,7 +16,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691089"
 ---
-# <a name="control-flow-in-no-locq"></a><span data-ttu-id="6a75e-103">Flujo de control en :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="6a75e-103">Control flow in :::no-loc(Q#):::</span></span>
+# <a name="control-flow-in-no-locq"></a><span data-ttu-id="6a75e-103">Flujo de control en Q#</span><span class="sxs-lookup"><span data-stu-id="6a75e-103">Control flow in Q#</span></span>
 
 <span data-ttu-id="6a75e-104">Dentro de una operación o función, cada instrucción se ejecuta en orden, de forma similar a otros lenguajes imperativos habituales.</span><span class="sxs-lookup"><span data-stu-id="6a75e-104">Within an operation or function, each statement runs in order, similar to other common imperative classical languages.</span></span>
 <span data-ttu-id="6a75e-105">Sin embargo, puede modificar el flujo de control de tres maneras distintas:</span><span class="sxs-lookup"><span data-stu-id="6a75e-105">However, you can modify the flow of control in three distinct ways:</span></span>
@@ -108,12 +108,12 @@ for ((index, measured) in results) { // iterates over the tuple values in result
 
 ## <a name="repeat-until-success-loop"></a><span data-ttu-id="6a75e-140">Bucle repeat-Until-Success</span><span class="sxs-lookup"><span data-stu-id="6a75e-140">Repeat-until-success loop</span></span>
 
-<span data-ttu-id="6a75e-141">El :::no-loc(Q#)::: lenguaje permite que el flujo de control clásico dependa de los resultados de la medición de qubits.</span><span class="sxs-lookup"><span data-stu-id="6a75e-141">The :::no-loc(Q#)::: language allows classical control flow to depend on the results of measuring qubits.</span></span>
+<span data-ttu-id="6a75e-141">El Q# lenguaje permite que el flujo de control clásico dependa de los resultados de la medición de qubits.</span><span class="sxs-lookup"><span data-stu-id="6a75e-141">The Q# language allows classical control flow to depend on the results of measuring qubits.</span></span>
 <span data-ttu-id="6a75e-142">Esta capacidad, a su vez, habilita la implementación de gadgets de probabilística eficaces que pueden reducir el costo computacional de la implementación de unitaries.</span><span class="sxs-lookup"><span data-stu-id="6a75e-142">This capability, in turn, enables implementing powerful probabilistic gadgets that can reduce the computational cost for implementing unitaries.</span></span>
-<span data-ttu-id="6a75e-143">Ejemplos de esto son los patrones de *repetición hasta la correcta* (RU) en :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="6a75e-143">Examples of this are the *repeat-until-success* (RUS) patterns in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="6a75e-143">Ejemplos de esto son los patrones de *repetición hasta la correcta* (RU) en Q# .</span><span class="sxs-lookup"><span data-stu-id="6a75e-143">Examples of this are the *repeat-until-success* (RUS) patterns in Q#.</span></span>
 <span data-ttu-id="6a75e-144">Estos patrones de RUS son programas probabilística que tienen un costo bajo *previsto* en cuanto a las puertas elementales. el costo incurrido depende de la ejecución real y del entrelazado de las distintas ramas posibles.</span><span class="sxs-lookup"><span data-stu-id="6a75e-144">These RUS patterns are probabilistic programs that have an *expected* low cost in terms of elementary gates; the incurred cost depends on the actual run and the interleaving of the multiple possible branchings.</span></span>
 
-<span data-ttu-id="6a75e-145">Para facilitar los patrones de repetición hasta éxito (RU), :::no-loc(Q#)::: admite las construcciones</span><span class="sxs-lookup"><span data-stu-id="6a75e-145">To facilitate repeat-until-success (RUS) patterns, :::no-loc(Q#)::: supports the constructs</span></span>
+<span data-ttu-id="6a75e-145">Para facilitar los patrones de repetición hasta éxito (RU), Q# admite las construcciones</span><span class="sxs-lookup"><span data-stu-id="6a75e-145">To facilitate repeat-until-success (RUS) patterns, Q# supports the constructs</span></span>
 
 ```qsharp
 repeat {
@@ -151,9 +151,9 @@ until (expression);
 
 ## <a name="while-loop"></a><span data-ttu-id="6a75e-157">Bucle while</span><span class="sxs-lookup"><span data-stu-id="6a75e-157">While loop</span></span>
 
-<span data-ttu-id="6a75e-158">Los patrones de repetición hasta el éxito tienen una connotación específica de Quantum.</span><span class="sxs-lookup"><span data-stu-id="6a75e-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="6a75e-159">Se usan ampliamente en clases concretas de algoritmos Quantum; por lo tanto, la construcción de lenguaje dedicada en :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="6a75e-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in :::no-loc(Q#):::.</span></span> <span data-ttu-id="6a75e-160">Sin embargo, los bucles que se interrumpen en función de una condición y cuya longitud de ejecución se desconoce en tiempo de compilación, se controlan con especial atención en un tiempo de ejecución de Quantum.</span><span class="sxs-lookup"><span data-stu-id="6a75e-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="6a75e-161">Sin embargo, su uso dentro de las funciones es inproblemático, ya que estos bucles solo contienen código que se ejecuta en hardware convencional (no Quantum).</span><span class="sxs-lookup"><span data-stu-id="6a75e-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
+<span data-ttu-id="6a75e-158">Los patrones de repetición hasta el éxito tienen una connotación específica de Quantum.</span><span class="sxs-lookup"><span data-stu-id="6a75e-158">Repeat-until-success patterns have a very quantum-specific connotation.</span></span> <span data-ttu-id="6a75e-159">Se usan ampliamente en clases concretas de algoritmos Quantum; por lo tanto, la construcción de lenguaje dedicada en Q# .</span><span class="sxs-lookup"><span data-stu-id="6a75e-159">They are widely used in particular classes of quantum algorithms - hence the dedicated language construct in Q#.</span></span> <span data-ttu-id="6a75e-160">Sin embargo, los bucles que se interrumpen en función de una condición y cuya longitud de ejecución se desconoce en tiempo de compilación, se controlan con especial atención en un tiempo de ejecución de Quantum.</span><span class="sxs-lookup"><span data-stu-id="6a75e-160">However, loops that break based on a condition and whose run length is thus unknown at compile-time, are handled with particular care in a quantum runtime.</span></span> <span data-ttu-id="6a75e-161">Sin embargo, su uso dentro de las funciones es inproblemático, ya que estos bucles solo contienen código que se ejecuta en hardware convencional (no Quantum).</span><span class="sxs-lookup"><span data-stu-id="6a75e-161">However, their use within functions is unproblematic since these loops only contain code that runs on conventional (non-quantum) hardware.</span></span> 
 
-<span data-ttu-id="6a75e-162">:::no-loc(Q#):::, por lo tanto, admite el uso de bucles while solo dentro de funciones.</span><span class="sxs-lookup"><span data-stu-id="6a75e-162">:::no-loc(Q#):::, therefore, supports to use of while loops within functions only.</span></span>
+<span data-ttu-id="6a75e-162">Q#, por lo tanto, admite el uso de bucles while solo dentro de funciones.</span><span class="sxs-lookup"><span data-stu-id="6a75e-162">Q#, therefore, supports to use of while loops within functions only.</span></span>
 <span data-ttu-id="6a75e-163">Una `while` instrucción consta de la palabra clave `while` , una expresión booleana entre paréntesis y un bloque de instrucciones.</span><span class="sxs-lookup"><span data-stu-id="6a75e-163">A `while` statement consists of the keyword `while`, a Boolean expression in parentheses, and a statement block.</span></span>
 <span data-ttu-id="6a75e-164">El bloque de instrucciones (el cuerpo del bucle) se ejecuta siempre que la condición se evalúe como `true` .</span><span class="sxs-lookup"><span data-stu-id="6a75e-164">The statement block (the body of the loop) runs as long as the condition evaluates to `true`.</span></span>
 
@@ -183,7 +183,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-<span data-ttu-id="6a75e-169">:::no-loc(Q#)::: admite una instrucción de conjugación que implementa la transformación anterior.</span><span class="sxs-lookup"><span data-stu-id="6a75e-169">:::no-loc(Q#)::: supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="6a75e-170">Con esa instrucción, la operación `ApplyWith` se puede implementar de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="6a75e-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
+<span data-ttu-id="6a75e-169">Q# admite una instrucción de conjugación que implementa la transformación anterior.</span><span class="sxs-lookup"><span data-stu-id="6a75e-169">Q# supports a conjugation statement that implements the preceding transformation.</span></span> <span data-ttu-id="6a75e-170">Con esa instrucción, la operación `ApplyWith` se puede implementar de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="6a75e-170">Using that statement, the operation `ApplyWith` can be implemented in the following way:</span></span>
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -249,7 +249,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a><span data-ttu-id="6a75e-193">Patrón de RU para la rotación de un solo qubit sobre un eje de irracional</span><span class="sxs-lookup"><span data-stu-id="6a75e-193">RUS pattern for single-qubit rotation about an irrational axis</span></span> 
 
-<span data-ttu-id="6a75e-194">En un caso de uso típico, la :::no-loc(Q#)::: operación siguiente implementa una rotación alrededor de un eje irracional de $ (I + 2i Z)/\sqrt {5} $ en la esfera Bloch.</span><span class="sxs-lookup"><span data-stu-id="6a75e-194">In a typical use case, the following :::no-loc(Q#)::: operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="6a75e-195">La implementación usa un patrón de RU conocido:</span><span class="sxs-lookup"><span data-stu-id="6a75e-195">The implementation uses a known RUS pattern:</span></span>
+<span data-ttu-id="6a75e-194">En un caso de uso típico, la Q# operación siguiente implementa una rotación alrededor de un eje irracional de $ (I + 2i Z)/\sqrt {5} $ en la esfera Bloch.</span><span class="sxs-lookup"><span data-stu-id="6a75e-194">In a typical use case, the following Q# operation implements a rotation around an irrational axis of $(I + 2i Z)/\sqrt{5}$ on the Bloch sphere.</span></span> <span data-ttu-id="6a75e-195">La implementación usa un patrón de RU conocido:</span><span class="sxs-lookup"><span data-stu-id="6a75e-195">The implementation uses a known RUS pattern:</span></span>
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -375,4 +375,4 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
 ## <a name="next-steps"></a><span data-ttu-id="6a75e-210">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="6a75e-210">Next steps</span></span>
 
-<span data-ttu-id="6a75e-211">Obtenga información sobre las [pruebas y la depuración](xref:microsoft.quantum.guide.testingdebugging) en :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="6a75e-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="6a75e-211">Obtenga información sobre las [pruebas y la depuración](xref:microsoft.quantum.guide.testingdebugging) en Q# .</span><span class="sxs-lookup"><span data-stu-id="6a75e-211">Learn about [Testing and Debugging](xref:microsoft.quantum.guide.testingdebugging) in Q#.</span></span>

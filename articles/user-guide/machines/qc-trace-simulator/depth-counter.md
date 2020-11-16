@@ -1,14 +1,14 @@
 ---
 title: 'Contador de profundidad: kit de desarrollo de Quantum'
-description: 'Obtenga información sobre el contador de profundidad de QDK de Microsoft, que usa el simulador de seguimiento de Quantum para recopilar recuentos de la profundidad de cada operación invocada en un :::no-loc(Q#)::: programa.'
+description: 'Obtenga información sobre el contador de profundidad de QDK de Microsoft, que usa el simulador de seguimiento de Quantum para recopilar recuentos de la profundidad de cada operación invocada en un Q# programa.'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 89d8a2c9f2ecd5c5332215cd4307bcf4a6422036
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -39,7 +39,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-depth-counter-in-a-c-host-program"></a><span data-ttu-id="f9228-114">Usar el contador de profundidad en un programa host de C#</span><span class="sxs-lookup"><span data-stu-id="f9228-114">Using the depth counter in a C# host program</span></span>
 
-<span data-ttu-id="f9228-115">En el ejemplo de C# que se muestra a continuación en esta sección se calcula la `T` profundidad de la `CCNOT` operación, basándose en el :::no-loc(Q#)::: código de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="f9228-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="f9228-115">En el ejemplo de C# que se muestra a continuación en esta sección se calcula la `T` profundidad de la `CCNOT` operación, basándose en el Q# código de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="f9228-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

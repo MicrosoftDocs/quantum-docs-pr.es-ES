@@ -1,14 +1,14 @@
 ---
-title: ':::no-loc(Q#)::: Principios de diseño de API'
-description: ':::no-loc(Q#)::: Principios de diseño de API'
+title: 'Q# Principios de diseño de API'
+description: 'Q# Principios de diseño de API'
 author: cgranade
 ms.author: chgranad
 ms.date: 3/9/2020
 ms.topic: article
 uid: microsoft.quantum.contributing.api-design
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,20 +16,20 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92691814"
 ---
-# <a name="no-locq-api-design-principles"></a><span data-ttu-id="0ebf8-103">:::no-loc(Q#)::: Principios de diseño de API</span><span class="sxs-lookup"><span data-stu-id="0ebf8-103">:::no-loc(Q#)::: API Design Principles</span></span>
+# <a name="no-locq-api-design-principles"></a><span data-ttu-id="0ebf8-103">Q# Principios de diseño de API</span><span class="sxs-lookup"><span data-stu-id="0ebf8-103">Q# API Design Principles</span></span>
 
 ## <a name="introduction"></a><span data-ttu-id="0ebf8-104">Introducción</span><span class="sxs-lookup"><span data-stu-id="0ebf8-104">Introduction</span></span>
 
-<span data-ttu-id="0ebf8-105">Como lenguaje y como plataforma, :::no-loc(Q#)::: permite a los usuarios escribir, ejecutar, comprender y explorar aplicaciones Quantum.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-105">As a language and as a platform, :::no-loc(Q#)::: empowers users to write, run, understand, and explore quantum applications.</span></span>
-<span data-ttu-id="0ebf8-106">Con el fin de permitir a los usuarios, cuando diseñamos :::no-loc(Q#)::: bibliotecas, seguimos un conjunto de principios de diseño de la API para guiarnos en nuestros diseños y para ayudarnos a hacer bibliotecas que se pueden usar para la comunidad de desarrollo de Quantum.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-106">In order to empower users, when we design :::no-loc(Q#)::: libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.</span></span>
-<span data-ttu-id="0ebf8-107">En este artículo se enumeran estos principios y se proporcionan ejemplos para ayudarle a aplicarlos al diseñar las :::no-loc(Q#)::: API.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-107">This article lists these principles, and gives examples to help guide how to apply them when designing :::no-loc(Q#)::: APIs.</span></span>
+<span data-ttu-id="0ebf8-105">Como lenguaje y como plataforma, Q# permite a los usuarios escribir, ejecutar, comprender y explorar aplicaciones Quantum.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-105">As a language and as a platform, Q# empowers users to write, run, understand, and explore quantum applications.</span></span>
+<span data-ttu-id="0ebf8-106">Con el fin de permitir a los usuarios, cuando diseñamos Q# bibliotecas, seguimos un conjunto de principios de diseño de la API para guiarnos en nuestros diseños y para ayudarnos a hacer bibliotecas que se pueden usar para la comunidad de desarrollo de Quantum.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-106">In order to empower users, when we design Q# libraries, we follow a set of API design principles to guide our designs and to help us make usable libraries for the the quantum development community.</span></span>
+<span data-ttu-id="0ebf8-107">En este artículo se enumeran estos principios y se proporcionan ejemplos para ayudarle a aplicarlos al diseñar las Q# API.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-107">This article lists these principles, and gives examples to help guide how to apply them when designing Q# APIs.</span></span>
 
 > [!TIP]
 > <span data-ttu-id="0ebf8-108">Se trata de un documento bastante detallado que está pensado para ayudar a guiar el desarrollo de la biblioteca y las contribuciones de la biblioteca en profundidad.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-108">This is a fairly detailed document that's intended to help guide library development and in-depth library contributions.</span></span>
-> <span data-ttu-id="0ebf8-109">Probablemente le resulte más útil si está escribiendo sus propias bibliotecas en :::no-loc(Q#)::: o si está aportando características más grandes al [ :::no-loc(Q#)::: repositorio de bibliotecas](https://github.com/microsoft/QuantumLibraries).</span><span class="sxs-lookup"><span data-stu-id="0ebf8-109">You'll probably find it most useful if you're writing your own libraries in :::no-loc(Q#):::, or if you're contributing larger features to the [:::no-loc(Q#)::: libraries repository](https://github.com/microsoft/QuantumLibraries).</span></span>
+> <span data-ttu-id="0ebf8-109">Probablemente le resulte más útil si está escribiendo sus propias bibliotecas en Q# o si está aportando características más grandes al [ Q# repositorio de bibliotecas](https://github.com/microsoft/QuantumLibraries).</span><span class="sxs-lookup"><span data-stu-id="0ebf8-109">You'll probably find it most useful if you're writing your own libraries in Q#, or if you're contributing larger features to the [Q# libraries repository](https://github.com/microsoft/QuantumLibraries).</span></span>
 >
 > <span data-ttu-id="0ebf8-110">Por otro lado, si desea obtener información sobre cómo contribuir al kit de desarrollo de Quantum de forma más general, se recomienda empezar por la [Guía de contribución](xref:microsoft.quantum.contributing).</span><span class="sxs-lookup"><span data-stu-id="0ebf8-110">On the other hand, if you're looking to learn how to contribute to the Quantum Development Kit more generally, we suggest starting with the [contribution guide](xref:microsoft.quantum.contributing).</span></span>
-> <span data-ttu-id="0ebf8-111">Si busca más información general sobre cómo se recomienda dar formato a su :::no-loc(Q#)::: código, puede que le interese desproteger la [Guía de estilo](xref:microsoft.quantum.contributing.style).</span><span class="sxs-lookup"><span data-stu-id="0ebf8-111">If you're looking for more general information about how we recommend formatting your :::no-loc(Q#)::: code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).</span></span>
+> <span data-ttu-id="0ebf8-111">Si busca más información general sobre cómo se recomienda dar formato a su Q# código, puede que le interese desproteger la [Guía de estilo](xref:microsoft.quantum.contributing.style).</span><span class="sxs-lookup"><span data-stu-id="0ebf8-111">If you're looking for more general information about how we recommend formatting your Q# code, you may be interested in checking out the [style guide](xref:microsoft.quantum.contributing.style).</span></span>
 
 ## <a name="general-principles"></a><span data-ttu-id="0ebf8-112">Principios generales</span><span class="sxs-lookup"><span data-stu-id="0ebf8-112">General Principles</span></span>
 
@@ -84,7 +84,7 @@ ms.locfileid: "92691814"
 - <span data-ttu-id="0ebf8-142">✅**Diseñe funciones** y operaciones de diseño bien con otras funciones y operaciones, tanto en la misma API como en las bibliotecas existentes anteriormente.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-142">✅ **DO** design functions and operations to compose well with other   functions and operations, both in the same API and in previously   existing libraries.</span></span>
 
   <span data-ttu-id="0ebf8-143">*Ejemplos:*</span><span class="sxs-lookup"><span data-stu-id="0ebf8-143">*Examples:*</span></span>
-  - <span data-ttu-id="0ebf8-144">La @"microsoft.quantum.canon.delay" operación realiza suposiciones mínimas sobre su entrada y, por tanto, se puede usar para retrasar las aplicaciones de cualquiera de las operaciones en la :::no-loc(Q#)::: biblioteca estándar o según lo definido por los usuarios.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-144">The @"microsoft.quantum.canon.delay" operation makes minimal assumptions about its input, and thus can be used to delay applications of either operations across the :::no-loc(Q#)::: standard library or as defined by users.</span></span>
+  - <span data-ttu-id="0ebf8-144">La @"microsoft.quantum.canon.delay" operación realiza suposiciones mínimas sobre su entrada y, por tanto, se puede usar para retrasar las aplicaciones de cualquiera de las operaciones en la Q# biblioteca estándar o según lo definido por los usuarios.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-144">The @"microsoft.quantum.canon.delay" operation makes minimal assumptions about its input, and thus can be used to delay applications of either operations across the Q# standard library or as defined by users.</span></span>
     <!-- TODO: define bad example. -->
 
 - <span data-ttu-id="0ebf8-145">✅**Exponga la** lógica clásica puramente determinista como funciones en lugar de operaciones.</span><span class="sxs-lookup"><span data-stu-id="0ebf8-145">✅ **DO** expose purely deterministic classical logic as   as functions rather than operations.</span></span>
