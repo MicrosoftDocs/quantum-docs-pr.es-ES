@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Testing.AssertOperationsEqualReferenced
 title: Operación AssertOperationsEqualReferenced
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Extensions.Testing
@@ -16,18 +16,18 @@ qsharp.summary: >-
   > Please use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
 
   > Note that the order of the arguments to this operation has changed.
-ms.openlocfilehash: 2d39f74c68e48d2f2b8003b76885c9444056f8d2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e6c5d4b0005cc0cf1fb62a52b4a75a0370dfa293
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726752"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212518"
 ---
 # <a name="assertoperationsequalreferenced-operation"></a>Operación AssertOperationsEqualReferenced
 
 Espacio de nombres: [Microsoft. Quantum. Extensions. Testing](xref:Microsoft.Quantum.Extensions.Testing)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
@@ -50,7 +50,7 @@ operation AssertOperationsEqualReferenced (actual : (Qubit[] => Unit), expected 
 
 
 
-### <a name="expected--qubit--unit-adj"></a>se esperaba: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] => ADJ de [unidad](xref:microsoft.quantum.lang-ref.unit)
+### <a name="expected--qubit--unit--is-adj"></a>se esperaba: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] = la [unidad](xref:microsoft.quantum.lang-ref.unit) > es ADJ
 
 
 

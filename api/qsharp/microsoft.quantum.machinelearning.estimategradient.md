@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.EstimateGradient
 title: Operación EstimateGradient
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: EstimateGradient
 qsharp.summary: Estimates the training gradient for a sequential classifier at a particular model and for a given encoded input.
-ms.openlocfilehash: f42cc30c98346a25f584d7527227a95cb413c32b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 79f4abdf131509d4948a3c114e631118329f88d8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730749"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211855"
 ---
 # <a name="estimategradient-operation"></a>Operación EstimateGradient
 
 Espacio de nombres: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Calcula el degradado de entrenamiento para un clasificador secuencial en un modelo determinado y para una entrada codificada determinada.
