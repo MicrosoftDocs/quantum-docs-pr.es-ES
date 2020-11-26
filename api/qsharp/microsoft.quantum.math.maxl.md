@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.MaxL
 title: MaxL función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: MaxL
 qsharp.summary: Returns the larger of two specified numbers.
-ms.openlocfilehash: 86a9c6eab00fa7b651c6415bcec289d13476932b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 356a7501c556112f6ddca7b1f9e8359ea268f348
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725870"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228073"
 ---
 # <a name="maxl-function"></a>MaxL función)
 
 Espacio de nombres: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Devuelve el mayor de dos números especificados.

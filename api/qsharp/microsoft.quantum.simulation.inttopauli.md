@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.IntToPauli
 title: IntToPauli función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: IntToPauli
 qsharp.summary: Converts a integer to a single-qubit Pauli operator.
-ms.openlocfilehash: f0f1186f14a0dc30bb34bd29f148cdc830fd1337
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 18edb600f7b5b33c7ad98e78e32903c570082225
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733701"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229212"
 ---
 # <a name="inttopauli-function"></a>IntToPauli función)
 
 Espacio de nombres: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Convierte un entero en un operador Pauli de un solo qubit.
