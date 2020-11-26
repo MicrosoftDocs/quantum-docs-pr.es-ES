@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorSystemImpl
 title: _JordanWignerClusterOperatorGeneratorSystemImpl función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerClusterOperatorGeneratorSystemImpl
 qsharp.summary: ''
-ms.openlocfilehash: d8fd5a55e63b5efdf3b8a789182cc08f1de91c58
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f81d7d4f2eb7fc3fdbd0b52d2c0f8c6eaa408bd8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728037"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203797"
 ---
-# <a name="_jordanwignerclusteroperatorgeneratorsystemimpl-function"></a><span data-ttu-id="77275-102">_JordanWignerClusterOperatorGeneratorSystemImpl función)</span><span class="sxs-lookup"><span data-stu-id="77275-102">_JordanWignerClusterOperatorGeneratorSystemImpl function</span></span>
+# <a name="_jordanwignerclusteroperatorgeneratorsystemimpl-function"></a><span data-ttu-id="d5e6b-102">_JordanWignerClusterOperatorGeneratorSystemImpl función)</span><span class="sxs-lookup"><span data-stu-id="d5e6b-102">_JordanWignerClusterOperatorGeneratorSystemImpl function</span></span>
 
-<span data-ttu-id="77275-103">Espacio de nombres: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="77275-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="d5e6b-103">Espacio de nombres: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="d5e6b-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="77275-104">Configura [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="77275-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="d5e6b-104">Paquete: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="d5e6b-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
 
@@ -28,18 +28,18 @@ function _JordanWignerClusterOperatorGeneratorSystemImpl (data : Microsoft.Quant
 ```
 
 
-## <a name="input"></a><span data-ttu-id="77275-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="77275-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="d5e6b-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="d5e6b-105">Input</span></span>
 
-### <a name="data--jordanwignerinputstate"></a><span data-ttu-id="77275-106">datos: [JordanWignerInputState](xref:Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState)[]</span><span class="sxs-lookup"><span data-stu-id="77275-106">data : [JordanWignerInputState](xref:Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState)[]</span></span>
-
-
-
-
-### <a name="idx--int"></a><span data-ttu-id="77275-107">IDX: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="77275-107">idx : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="data--jordanwignerinputstate"></a><span data-ttu-id="d5e6b-106">datos: [JordanWignerInputState](xref:Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState)[]</span><span class="sxs-lookup"><span data-stu-id="d5e6b-106">data : [JordanWignerInputState](xref:Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState)[]</span></span>
 
 
 
 
+### <a name="idx--int"></a><span data-ttu-id="d5e6b-107">IDX: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="d5e6b-107">idx : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-## <a name="output--generatorindex"></a><span data-ttu-id="77275-108">Salida: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="77275-108">Output : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
+
+
+
+
+## <a name="output--generatorindex"></a><span data-ttu-id="d5e6b-108">Salida: [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="d5e6b-108">Output : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
 
