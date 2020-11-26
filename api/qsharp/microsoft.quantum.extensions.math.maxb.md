@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.MaxB
 title: MaxB función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.maxl".
-ms.openlocfilehash: c74fe68a79c27f7a4f7b460a37ca25aa903a429c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4b5c9b171a28a052086191d79b99b2130bd2d703
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726158"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199581"
 ---
 # <a name="maxb-function"></a>MaxB función)
 
 Espacio de nombres: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.R
 title: Operación de R
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies a rotation about the given Pauli axis.
 
   \begin{align} R_{\mu}(\theta) \mathrel{:=} e^{-i \theta \sigma_{\mu} / 2}, \end{align} where $\mu \in \{I, X, Y, Z\}$.
-ms.openlocfilehash: 7d1d51031f4587b1c501feab459e614fc1530457
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 89aa5b2867068d4352a0b9550e8d22aa77439111
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731389"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199036"
 ---
 # <a name="r-operation"></a>Operación de R
 
 Espacio de nombres: [Microsoft. Quantum. Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Aplica un giro sobre el eje Pauli especificado.
@@ -29,7 +29,7 @@ Aplica un giro sobre el eje Pauli especificado.
 \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} donde $ \mu \en \{ i, X, Y, Z \} $.
 
 ```qsharp
-operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit
+operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
@@ -57,4 +57,4 @@ Qubit al que debe aplicarse la puerta.
 
 ## <a name="remarks"></a>Observaciones
 
-Cuando se llama con `pauli = PauliI` , esta operación aplica una *fase global* . Esta fase puede ser significativa cuando se usa con el `Controlled` functor.
+Cuando se llama con `pauli = PauliI` , esta operación aplica una *fase global*. Esta fase puede ser significativa cuando se usa con el `Controlled` functor.

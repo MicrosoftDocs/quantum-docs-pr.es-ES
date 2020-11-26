@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Convert.ToStringD
 title: ToStringd (función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Convert
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.convert.doubleasstring".
-ms.openlocfilehash: 0ffd94c56084abfc59393ad32c42352dab50291c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 58725eceb6cee8414099b8677818ee7ca2427273
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726843"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199955"
 ---
 # <a name="tostringd-function"></a>ToStringd (función)
 
 Espacio de nombres: [Microsoft. Quantum. Extensions. Convert](xref:Microsoft.Quantum.Extensions.Convert)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

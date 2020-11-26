@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Rz
 title: Operación RZ
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies a rotation about the $z$-axis by a given angle.
 
   \begin{align} R_z(\theta) \mathrel{:=} e^{-i \theta \sigma_z / 2} = \begin{bmatrix} e^{-i \theta / 2} & 0 \\\\ 0 & e^{i \theta / 2} \end{bmatrix}. \end{align}
-ms.openlocfilehash: 954b0b097d4bffcb8047a9f0c8a4c28445653c5d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d637abf3562eb60705da517467939dc588229c39
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731348"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198629"
 ---
 # <a name="rz-operation"></a>Operación RZ
 
 Espacio de nombres: [Microsoft. Quantum. Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Aplica un giro sobre el $z $ axis en un ángulo determinado.
@@ -30,7 +30,7 @@ Aplica un giro sobre el $z $ axis en un ángulo determinado.
 \end{align}
 
 ```qsharp
-operation Rz (theta : Double, qubit : Qubit) : Unit
+operation Rz (theta : Double, qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

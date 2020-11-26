@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Message
 title: Message (función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: Message
 qsharp.summary: Logs a message.
-ms.openlocfilehash: 0428a46bc639bc8a0697f5bd392f85b8b9f40ee5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4eb55dd4fd8d78e4b5a9bb289dacfbdb3aa4beb8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726668"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96199019"
 ---
 # <a name="message-function"></a>Message (función)
 
 Espacio de nombres: [Microsoft. Quantum. Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Registra un mensaje.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.CNOT
 title: Operación CNOT
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -12,18 +12,18 @@ qsharp.summary: >-
   \begin{align} \operatorname{CNOT} \mathrel{:=} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{bmatrix}, \end{align}
 
   where rows and columns are ordered as in the quantum concepts guide.
-ms.openlocfilehash: 2fb5b4df189fb3ab23b2ca5cb273b2451ffcc067
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 90e84f7d0ea7373498632474dfafa23335f0c78e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732460"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198984"
 ---
 # <a name="cnot-operation"></a>Operación CNOT
 
 Espacio de nombres: [Microsoft. Quantum. Intrinsic](xref:Microsoft.Quantum.Intrinsic)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Aplica la puerta controlada-NOT (CNOT) a un par de qubits.
@@ -33,7 +33,7 @@ Aplica la puerta controlada-NOT (CNOT) a un par de qubits.
 donde se ordenan las filas y las columnas como en la guía de conceptos de Quantum.
 
 ```qsharp
-operation CNOT (control : Qubit, target : Qubit) : Unit
+operation CNOT (control : Qubit, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
