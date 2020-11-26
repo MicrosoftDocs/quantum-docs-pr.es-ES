@@ -9,25 +9,25 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a1a49e18ac9330ca6e3cc89b3e58c96eccb91db
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4c73a070fea2ce69a0bce9bf293a4679727e27bc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691674"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192034"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Exploración del entrelazamiento con Q\#
 
-En este tutorial, se muestra cómo escribir un Q# programa que manipula y mide qubits y muestra los efectos de la superposición y el inenredo.
+En este tutorial, se muestra cómo escribir un Q# programa que manipula y mide qubits y muestra los efectos de la superposición y el inenredo. 
 
 Escribirá una aplicación llamada Bell para demostrar el entrelazamiento cuántico.
 El nombre Bell hace referencia a los estados de Bell, que son estados cuánticos específicos de dos cúbits que se usan para representar los ejemplos más sencillos de la superposición y el entrelazamiento cuántico.
 
 ## <a name="pre-requisites"></a>Requisitos previos
 
-Si está listo para empezar a codificar, siga estos pasos antes de continuar: 
+Si está listo para empezar a codificar, siga estos pasos antes de continuar:
 
-* [Instale](xref:microsoft.quantum.install) el kit de desarrollo de Quantum usando su entorno de desarrollo y lenguaje preferido.
+* [Instale](xref:microsoft.quantum.install) el kit de desarrollo de Quantum usando su entorno de desarrollo y lenguaje preferido. 
 * Si ya tiene instalado el QDK, asegúrese de que tiene [actualizada](xref:microsoft.quantum.update) la última versión
 
 También puede seguir con la narrativa sin instalar QDK, revisando la información general del Q# lenguaje de programación y los primeros conceptos de la informática Quantum.
@@ -56,9 +56,9 @@ Lo primero que tenemos que hacer es crear un nuevo Q# proyecto. En este tutorial
 
 Para crear un nuevo proyecto, en VS Code: 
 
-1. Haga clic en **Ver** -> **Paleta de comandos** y seleccione **Q#: Crear nuevo proyecto** .
-2. Haga clic en **Aplicación de consola independiente** .
-3. Vaya a la ubicación para guardar el proyecto y haga clic en **Crear proyecto** .
+1. Haga clic en **Ver** -> **Paleta de comandos** y seleccione **Q#: Crear nuevo proyecto**.
+2. Haga clic en **Aplicación de consola independiente**.
+3. Vaya a la ubicación para guardar el proyecto y haga clic en **Crear proyecto**.
 4. Cuando el proyecto se haya creado correctamente, haga clic en **Abrir nuevo proyecto...** abajo a la derecha.
 
 En este caso, se ha llamado al proyecto `Bell` . Esto genera dos archivos: `Bell.csproj` , el archivo de proyecto y `Program.qs` , una plantilla de una Q# aplicación que se va a usar para escribir la aplicación. El contenido de `Program.qs` debe ser:
@@ -83,7 +83,7 @@ Nuestro objetivo es preparar dos qubits en un estado de Quantum específico, mos
 
 ### <a name="initialize-qubit-using-measurement"></a>Inicializar qubit mediante medición
 
-En el primer fragmento de código siguiente, le mostramos cómo trabajar con qubits en Q# .  Introduciremos dos operaciones [`M`](xref:Microsoft.Quantum.Intrinsic.m) y [`X`](xref:Microsoft.Quantum.Intrinsic.X) que transformarán el estado de un qubit. En este fragmento de código, se define una operación `SetQubitState` que toma como parámetro un cúbit y otro parámetro, `desired`, que representa el estado en el que queremos que esté el cúbit.  La operación `SetQubitState` toma una medida en el cúbit con la operación `M`.  En Q# , una medida qubit siempre devuelve `Zero` o `One` .  Si la medida devuelve un valor que no es igual al valor deseado, `SetQubitState` "voltea" el qubit; es decir, ejecuta una `X` operación, que cambia el estado de qubit a un nuevo estado en el que las probabilidades de una medida devuelven `Zero` y `One` se invierten. De este modo, `SetQubitState` siempre coloca el qubit de destino en el estado deseado.
+En el primer fragmento de código siguiente, le mostramos cómo trabajar con qubits en Q# .  Introduciremos dos operaciones [`M`](xref:Microsoft.Quantum.Intrinsic.M) y [`X`](xref:Microsoft.Quantum.Intrinsic.X) que transformarán el estado de un qubit. En este fragmento de código, se define una operación `SetQubitState` que toma como parámetro un cúbit y otro parámetro, `desired`, que representa el estado en el que queremos que esté el cúbit.  La operación `SetQubitState` toma una medida en el cúbit con la operación `M`.  En Q# , una medida qubit siempre devuelve `Zero` o `One` .  Si la medida devuelve un valor que no es igual al valor deseado, `SetQubitState` "voltea" el qubit; es decir, ejecuta una `X` operación, que cambia el estado de qubit a un nuevo estado en el que las probabilidades de una medida devuelven `Zero` y `One` se invierten. De este modo, `SetQubitState` siempre coloca el qubit de destino en el estado deseado.
 
 Reemplace el contenido de `Program.qs` por el código siguiente:
 
@@ -116,7 +116,7 @@ El tipo de valor devuelto de la operación se especifica después de un signo de
 
 Ha usado dos operaciones Quantum en la primera Q# operación:
 
-* La [`M`](xref:Microsoft.Quantum.Intrinsic.m) operación, que mide el estado de qubit
+* La [`M`](xref:Microsoft.Quantum.Intrinsic.M) operación, que mide el estado de qubit
 * La [`X`](xref:Microsoft.Quantum.Intrinsic.X) operación, que voltea el estado de un qubit
 
 Una operación cuántica transforma el estado de un cúbit. Algunos usuarios hablan de puertas cuánticas en lugar de operaciones, por analogía con las puertas lógicas clásicas. Esto tiene su origen en los primeros tiempos de la computación cuántica, cuando los algoritmos eran una simple construcción teórica y se visualizaban como diagramas, de forma similar a los diagramas de circuitos de la computación clásica.

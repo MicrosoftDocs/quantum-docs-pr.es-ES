@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.AddI
 title: Operación AddI
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: AddI
 qsharp.summary: Automatically chooses between addition with carry and without, depending on the register size of `ys`.
-ms.openlocfilehash: 7ee2b9099ea65b95647422dadc1efe4bf043d147
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9a90d15defd57cf2836a6fda5b52ddaa816fd55e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731893"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191030"
 ---
 # <a name="addi-operation"></a>Operación AddI
 
 Espacio de nombres: [Microsoft. Quantum. aritmético](xref:Microsoft.Quantum.Arithmetic)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Elige entre agregar y sin, automáticamente, en función del tamaño del registro de `ys` .
 
 ```qsharp
-operation AddI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation AddI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 

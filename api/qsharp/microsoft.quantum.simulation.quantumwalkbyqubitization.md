@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumWalkByQubitization
 title: QuantumWalkByQubitization función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: QuantumWalkByQubitization
 qsharp.summary: Converts a block-encoding reflection into a quantum walk.
-ms.openlocfilehash: ef9740f1867cee3c79a7ec0bf90f2c2f4b39ad28
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ccef1bbf400e01800053777d0010acb7addaef53
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734117"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192492"
 ---
 # <a name="quantumwalkbyqubitization-function"></a>QuantumWalkByQubitization función)
 
 Espacio de nombres: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Convierte una reflexión de codificación de bloques en un recorrido de Quantum.
@@ -40,7 +40,7 @@ Un `BlockEncodingReflection` unitario $U $ que se va a convertir en un recorrido
 
 
 
-## <a name="output--qubitqubit--unit-adj--ctl"></a>Output: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [unidad](xref:microsoft.quantum.lang-ref.unit) AJ + CTL
+## <a name="output--qubitqubit--unit--is-adj--ctl"></a>Output: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) = la [unidad](xref:microsoft.quantum.lang-ref.unit) > es ADJ + CTL
 
 Un recorrido de Quantum $W $ actuando conjuntamente en los registros `a` y `s` que codifica en bloque $H $, y contiene el espectro de $ \pm e ^ {\pm i\sin ^ {-1} (H)} $.
 
