@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.BoundC
 title: BoundC función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: BoundC
 qsharp.summary: Given an array of operations acting on a single input, produces a new operation that performs each given operation in sequence. The modifier `C` indicates that all operations in the array are controllable.
-ms.openlocfilehash: 04dca4ff317bf3cee053f7c3903112f4e05a3973
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 02e9b6a9676cdd1996d3a2413b2a6383e3a4e90e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728913"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96207588"
 ---
 # <a name="boundc-function"></a>BoundC función)
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada una matriz de operaciones que actúan en una sola entrada, genera una nueva operación que realiza cada operación dada en secuencia.
@@ -31,13 +31,13 @@ function BoundC<'T> (operations : ('T => Unit is Ctl)[]) : ('T => Unit is Ctl)
 
 ## <a name="input"></a>Entrada
 
-### <a name="operations--t--unit-ctl"></a>operaciones: ' t => de la [unidad](xref:microsoft.quantum.lang-ref.unit) CTL []
+### <a name="operations--t--unit--is-ctl"></a>operaciones: ' t => [unidad](xref:microsoft.quantum.lang-ref.unit)  es CTL []
 
 Secuencia de operaciones que se va a realizar en una entrada determinada.
 
 
 
-## <a name="output--t--unit-ctl"></a>Salida: ' t => CTL de [unidad](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--t--unit--is-ctl"></a>Salida: ' t => [unidad](xref:microsoft.quantum.lang-ref.unit)  es CTL
 
 Nueva operación que realiza cada operación dada en secuencia en su entrada.
 
