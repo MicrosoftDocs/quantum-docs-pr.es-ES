@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.JWOptimizedFermionEvolutionFunction
 title: JWOptimizedFermionEvolutionFunction función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: JWOptimizedFermionEvolutionFunction
 qsharp.summary: Represents a dynamical generator as a set of simulatable gates and an expansion in the JWOptimized basis.
-ms.openlocfilehash: 952f3dc4ab0595ace0ee34c040cb21969afa111f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 40a4bccc6cf74a63c354bfd628baa45768916fe2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726399"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229926"
 ---
 # <a name="jwoptimizedfermionevolutionfunction-function"></a>JWOptimizedFermionEvolutionFunction función)
 
 Espacio de nombres: [Microsoft. Quantum. Research. química](xref:Microsoft.Quantum.Research.Chemistry)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Research. química](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de JWOptimized.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.PauliEvolutionSet
 title: PauliEvolutionSet función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: PauliEvolutionSet
 qsharp.summary: Represents a dynamical generator as a set of simulatable gates and an expansion in the Pauli basis.
-ms.openlocfilehash: 89c81aca4cfad6087d764ac8f5a0f1426e905e4b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fb53b90b6ab5ce1003f66b68a8c2ad8b3631f627
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732101"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230353"
 ---
 # <a name="paulievolutionset-function"></a>PauliEvolutionSet función)
 
 Espacio de nombres: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de Pauli.
