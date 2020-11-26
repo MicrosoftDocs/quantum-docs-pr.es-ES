@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Characterization.QuantumPhaseEstimation
 title: Operación QuantumPhaseEstimation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: QuantumPhaseEstimation
 qsharp.summary: Performs the quantum phase estimation algorithm for a given oracle `U` and `targetState`, reading the phase into a big-endian quantum register.
-ms.openlocfilehash: 7e524477a4b2bcd8d6767441e278fbf501355e0c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 14ba3e012f6561e7089f9fe59b2a13516b211d51
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728175"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204222"
 ---
 # <a name="quantumphaseestimation-operation"></a>Operación QuantumPhaseEstimation
 
 Espacio de nombres: [Microsoft. Quantum. Caracterización](xref:Microsoft.Quantum.Characterization)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Realiza el algoritmo de estimación de fase de Quantum para una determinada Oracle `U` y `targetState` lee la fase en un registro Quantum Big-Endian.
 
 ```qsharp
-operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit
+operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit is Adj + Ctl
 ```
 
 

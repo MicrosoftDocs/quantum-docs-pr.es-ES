@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.HTerm
 title: Tipo definido por el usuario HTerm
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Chemistry
 qsharp.name: HTerm
 qsharp.summary: Format of data passed from C# to Q# to represent a term of the Hamiltonian. The meaning of the data represented is determined by the algorithm that receives it.
-ms.openlocfilehash: 7a18db539e55e4c1086b3d83725e3d4ba87f0117
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 504d55dc57ce92c12e6f016e9afcedfd59664aa1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728144"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204137"
 ---
 # <a name="hterm-user-defined-type"></a>Tipo definido por el usuario HTerm
 
 Espacio de nombres: [Microsoft. Quantum. química](xref:Microsoft.Quantum.Chemistry)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Formato de los datos pasados de C# a Q # para representar un término de Hamiltonian.
