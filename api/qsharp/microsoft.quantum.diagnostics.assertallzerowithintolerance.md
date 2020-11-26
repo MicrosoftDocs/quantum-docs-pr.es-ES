@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.AssertAllZeroWithinTolerance
 title: Operación AssertAllZeroWithinTolerance
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: AssertAllZeroWithinTolerance
 qsharp.summary: Assert that given qubits are all in $\ket{0}$ state up to a given tolerance.
-ms.openlocfilehash: 5e401904086323fabef7914d34463f50e4c38862
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a2e73bbc8949b3cdb7733cfc8aae35680e54d2cf
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727359"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202488"
 ---
 # <a name="assertallzerowithintolerance-operation"></a>Operación AssertAllZeroWithinTolerance
 
 Espacio de nombres: [Microsoft. Quantum. Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 La aserción de que los qubits proporcionados están todos en $ \ket {0} $ State hasta una tolerancia determinada.
 
 ```qsharp
-operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit
+operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit is Adj + Ctl
 ```
 
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.Recover
 title: Operación de recuperación
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: Recover
 qsharp.summary: Performs a single round of error correction by a quantum code described by a `QECC` type.
-ms.openlocfilehash: a659399f51794a4edc1d2ff43da84e46797103fb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bdf09decc3705d3285f4eb605c176d7764a994d3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727004"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96200584"
 ---
 # <a name="recover-operation"></a>Operación de recuperación
 
 Espacio de nombres: [Microsoft. Quantum. ErrorCorrection](xref:Microsoft.Quantum.ErrorCorrection)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Realiza una única ronda de corrección de errores mediante un código Quantum descrito por un `QECC` tipo.
