@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._DeltaParityCNOTbitstring
 title: _DeltaParityCNOTbitstring función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _DeltaParityCNOTbitstring
 qsharp.summary: Classical processing step of `ApplyDeltaParity`. This computes a list of control qubits for evaluating parity difference between any two PQRS... terms of even length.
-ms.openlocfilehash: 95b4c2df05f32cb937ec2cf421f43f2fdbf319da
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0c0da60e3c389f8208f9f7d5c84a09893f3c1bda
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726422"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226084"
 ---
 # <a name="_deltaparitycnotbitstring-function"></a>_DeltaParityCNOTbitstring función)
 
 Espacio de nombres: [Microsoft. Quantum. Research. química](xref:Microsoft.Quantum.Research.Chemistry)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Research. química](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Paso de procesamiento clásico de `ApplyDeltaParity` .

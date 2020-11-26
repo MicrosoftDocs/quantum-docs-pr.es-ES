@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation.BlockEncoding
 title: Tipo definido por el usuario BlockEncoding
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -12,18 +12,18 @@ qsharp.summary: >-
   That is, a `BlockEncoding` is a unitary $U$ where an arbitrary operator $H$ of interest that acts on the system register `s` is encoded in the top- left block corresponding to auxiliary state $\ket{0}_a$. That is,
 
   $$ \begin{align} (\bra{0}_a\otimes I_s)U(\ket{0}_a\otimes I_s) = H \end{align} $$.
-ms.openlocfilehash: 1b769c58fd23b4ebc9d779cec3c47d8275822e5a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 75fdbf13cf07d906982d4a611d1d25b3e29db2cd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732469"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225438"
 ---
 # <a name="blockencoding-user-defined-type"></a>Tipo definido por el usuario BlockEncoding
 
 Espacio de nombres: [Microsoft. Quantum. Simulation](xref:Microsoft.Quantum.Simulation)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Representa una unidad en la que un operador arbitrario de interés se codifica en el bloque superior izquierdo.

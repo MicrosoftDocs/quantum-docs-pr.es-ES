@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.ApplyDeltaParity
 title: Operación ApplyDeltaParity
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: ApplyDeltaParity
 qsharp.summary: Computes difference in parity between a previous PQRS... terms and the next PQRS... term. This difference is computed on a auxiliary qubit.
-ms.openlocfilehash: bb01eb684ff1820be08a573c0ca6cfc12efeb889
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 40157b6a166b09c6fee63d86e203f92069d008f1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733205"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225761"
 ---
 # <a name="applydeltaparity-operation"></a>Operación ApplyDeltaParity
 
 Espacio de nombres: [Microsoft. Quantum. Research. química](xref:Microsoft.Quantum.Research.Chemistry)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Research. química](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Calcula la diferencia en la paridad entre un PQRS anterior... términos y el siguiente PQRS... plazo. Esta diferencia se calcula en un qubit auxiliar.
 
 ```qsharp
-operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit
+operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

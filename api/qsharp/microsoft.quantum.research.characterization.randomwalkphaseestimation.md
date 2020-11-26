@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Characterization.RandomWalkPhaseEstimation
 title: Operación RandomWalkPhaseEstimation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Characterization
 qsharp.name: RandomWalkPhaseEstimation
 qsharp.summary: Performs iterative phase estimation using a random walk to approximate Bayesian inference on the classical measurement results from a given oracle and eigenstate.
-ms.openlocfilehash: 5e0c0871b916ff51b85dec8703111788b5204bc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c3afdd41da24a1f32f59f36f0f5c5ed29df1f0b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726434"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226169"
 ---
 # <a name="randomwalkphaseestimation-operation"></a>Operación RandomWalkPhaseEstimation
 
 Espacio de nombres: [Microsoft. Quantum. Research. Caracterización](xref:Microsoft.Quantum.Research.Characterization)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Research. Caracterización](https://nuget.org/packages/Microsoft.Quantum.Research.Characterization)
 
 
 Realiza una estimación de la fase iterativa mediante un recorrido aleatorio para la inferencia bayesiana aproximada en los resultados de medidas clásicas de una determinada Oracle y eigenstate.
@@ -80,7 +80,7 @@ Después, realizar una estimación de la fase iterativa se convergirá en un ún
 
 ### <a name="experiment-design"></a>Diseño de experimentos
 
-Los tiempos de medición $t $ y los ángulos de inversion $ \theta $ pasados a `oracle` se eligen según la heurística de la *partícula* , \Begin{align} \theta \sim \Pr (\phi), \quad t \approx \frac {1} {\variance{\phi}}.
+Los tiempos de medición $t $ y los ángulos de inversion $ \theta $ pasados a `oracle` se eligen según la heurística de la *partícula*, \Begin{align} \theta \sim \Pr (\phi), \quad t \approx \frac {1} {\variance{\phi}}.
 \end{align} esta heurística es óptima para reducir la desviación posterior esperada en la estimación de la fase iterativa bajo la suposición de una normal anterior.
 
 ### <a name="optimality"></a>Idoneidad
@@ -93,4 +93,4 @@ Consulte [estimación de la fase bayesiana](xref:microsoft.quantum.libraries.cha
 
 - Ferrie *et al.* 2011 [doi: 10/TFX](https://doi.org/10.1007/s11128-012-0407-6), [arXiv: 1110.3067](https://arxiv.org/abs/1110.3067).
 - Wiebe *et al.* 2013 [doi: 10/TF3](https://doi.org/10.1103/PhysRevLett.112.190501), [arXiv: 1309.0876](https://arxiv.org/abs/1309.0876)
-- Wiebe y Granade 2018 *(en preparación)* .
+- Wiebe y Granade 2018 *(en preparación)*.

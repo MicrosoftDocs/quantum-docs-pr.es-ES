@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.JordanWignerOptimizedFermionEvolutionSet
 title: JordanWignerOptimizedFermionEvolutionSet función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: JordanWignerOptimizedFermionEvolutionSet
 qsharp.summary: Represents a dynamical generator as a set of simulatable gates and an expansion in the Pauli basis.
-ms.openlocfilehash: d2d916655b7538b39d5739d67dbb3fc9920cf67a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2cd555882792c29cb2ed71972739505df11fbabc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732156"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225744"
 ---
 # <a name="jordanwigneroptimizedfermionevolutionset-function"></a>JordanWignerOptimizedFermionEvolutionSet función)
 
 Espacio de nombres: [Microsoft. Quantum. Research. química](xref:Microsoft.Quantum.Research.Chemistry)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Research. química](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de Pauli.
