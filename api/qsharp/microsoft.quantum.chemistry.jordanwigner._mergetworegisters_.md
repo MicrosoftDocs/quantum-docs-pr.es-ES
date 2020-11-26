@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._MergeTwoRegisters_
 title: Operación _MergeTwoRegisters_
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _MergeTwoRegisters_
 qsharp.summary: ''
-ms.openlocfilehash: 750ffa3112029c2e67a99dfb88418fb001373acc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 28831cee3bdad25a7a0932a1bb0b90e7be55cd7b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727958"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215518"
 ---
 # <a name="_mergetworegisters_-operation"></a>Operación _MergeTwoRegisters_
 
 Espacio de nombres: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
 
 ```qsharp
-operation _MergeTwoRegisters_ (oracle : ((Qubit[], Qubit[]) => Unit is Adj + Ctl), nSystemQubits : Int, allQubits : Qubit[]) : Unit
+operation _MergeTwoRegisters_ (oracle : ((Qubit[], Qubit[]) => Unit is Adj + Ctl), nSystemQubits : Int, allQubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="oracle--qubitqubit--unit-adj--ctl"></a>Oracle: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => el ajuste de [unidad](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="oracle--qubitqubit--unit--is-adj--ctl"></a>Oracle: ([qubit](xref:microsoft.quantum.lang-ref.qubit)[],[qubit](xref:microsoft.quantum.lang-ref.qubit)[]) = la [unidad](xref:microsoft.quantum.lang-ref.unit) > es ADJ + CTL
 
 
 

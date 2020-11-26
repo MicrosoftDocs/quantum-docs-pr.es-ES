@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.Call
 title: Operación de llamada
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: Call
 qsharp.summary: Calls a function with a given input.
-ms.openlocfilehash: 8630f846b4b9823ce1c1dfd61dc8ca81e468517d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 92c159cef878fb587b0ed514fd6660dd19527cab
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727569"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214218"
 ---
 # <a name="call-operation"></a>Operación de llamada
 
 Espacio de nombres: [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Llama a una función con una entrada determinada.

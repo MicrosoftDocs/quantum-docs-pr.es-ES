@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
 title: BoolArrayAsPauli función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: BoolArrayAsPauli
 qsharp.summary: Given a bit string, returns a multi-qubit Pauli operator represented as an array of single-qubit Pauli operators.
-ms.openlocfilehash: c5ef71322dae248fc2c6b1db3adf891de7d72488
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8e7088ec3918165d7b2afb1056a8319c6fb17796
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727599"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214286"
 ---
 # <a name="boolarrayaspauli-function"></a>BoolArrayAsPauli función)
 
 Espacio de nombres: [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada una cadena de bits, devuelve un operador qubit de Pauli que se representa como una matriz de operadores Pauli de qubit único.
