@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOpA
 title: UncurriedOpA función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOpA
 qsharp.summary: Given a function which returns operations, returns a new operation which takes both inputs as a tuple. The modifier `A` indicates that the operations are adjointable.
-ms.openlocfilehash: 21df20354ad2388891f32b1bf1c7781287904983
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e535d017d2665ddb76e5f422e18b8656c73171c6
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728294"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204630"
 ---
 # <a name="uncurriedopa-function"></a>UncurriedOpA función)
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada una función que devuelve operaciones, devuelve una nueva operación que toma ambas entradas como una tupla.
@@ -31,13 +31,13 @@ function UncurriedOpA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 
 
 ## <a name="input"></a>Entrada
 
-### <a name="curriedop--t---u--unit-adj"></a>curriedOp: ' U = > ' U => de [unidad](xref:microsoft.quantum.lang-ref.unit)
+### <a name="curriedop--t---u--unit--is-adj"></a>curriedOp: ' t-> ' U = [unidad](xref:microsoft.quantum.lang-ref.unit)  de> es ADJ
 
 Función que devuelve las operaciones.
 
 
 
-## <a name="output--tu--unit-adj"></a>Salida: (' t, ' U) => de [unidad](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--tu--unit--is-adj"></a>Salida: (' t, ' U) => [unidad](xref:microsoft.quantum.lang-ref.unit)  es ADJ
 
 Una nueva operación `op` , como `op(t, u)` es equivalente a `(curriedOp(t))(u)` .
 

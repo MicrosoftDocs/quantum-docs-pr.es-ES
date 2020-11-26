@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.TransformedOperationA
 title: TransformedOperationA función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TransformedOperationA
 qsharp.summary: Given a function and an operation, returns a new operation whose input is transformed by the given function.
-ms.openlocfilehash: 349424a102dba7354bbaa65fffdc2b5d506a3b91
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eceba260e601b73bdfa2de6ea6ab146820b5c59a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728342"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204885"
 ---
 # <a name="transformedoperationa-function"></a>TransformedOperationA función)
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada una función y una operación, devuelve una nueva operación cuya entrada se transforma mediante la función especificada.
@@ -35,13 +35,13 @@ function TransformedOperationA<'T, 'U> (fn : ('U -> 'T), op : ('T => Unit is Adj
 Función que transforma la entrada especificada en un formato esperado por la operación.
 
 
-### <a name="op--t--unit-adj"></a>OP: ' t => de [unidad](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-adj"></a>OP: ' t => [unidad](xref:microsoft.quantum.lang-ref.unit)  es ADJ
 
 Operación que se va a transformar.
 
 
 
-## <a name="output--u--unit-adj"></a>Salida: ' U => de [unidad](xref:microsoft.quantum.lang-ref.unit)
+## <a name="output--u--unit--is-adj"></a>Salida: ' U = [unidad](xref:microsoft.quantum.lang-ref.unit) > es ADJ
 
 Una nueva operación tbat llama a `fn` con su entrada y, a continuación, pasa el resultado a `op` .
 

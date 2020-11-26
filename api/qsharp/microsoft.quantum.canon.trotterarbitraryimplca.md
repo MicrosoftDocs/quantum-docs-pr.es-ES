@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
 title: Operación TrotterArbitraryImplCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: TrotterArbitraryImplCA
 qsharp.summary: Recursive implementation of even-order Trotter–Suzuki integrator.
-ms.openlocfilehash: 1c094d09ac8bdd71a59ef57d8715a6f90f18efc6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2abfbb9d51a98d8ede1b0835875a3771ffda0691
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728324"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96204732"
 ---
 # <a name="trotterarbitraryimplca-operation"></a>Operación TrotterArbitraryImplCA
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementación recursiva de Trotter de orden uniforme: integrador de Suzuki.
 
 ```qsharp
-operation TrotterArbitraryImplCA<'T> (order : Int, (nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit
+operation TrotterArbitraryImplCA<'T> (order : Int, (nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), stepSize : Double, target : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -40,7 +40,7 @@ Orden de Trotter-Suzuki integrador.
 El número de operaciones que se van a descomponer en pasos temporales.
 
 
-### <a name="op--intdoublet--unit-adj--ctl"></a>OP: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), ' t) => de [unidad](xref:microsoft.quantum.lang-ref.unit) + CTL
+### <a name="op--intdoublet--unit--is-adj--ctl"></a>OP: ([int](xref:microsoft.quantum.lang-ref.int),[Double](xref:microsoft.quantum.lang-ref.double), ' t) = la [unidad](xref:microsoft.quantum.lang-ref.unit) > es ADJ + CTL
 
 Una operación que acepta una entrada de índice (tipo `Int` ) y una entrada de hora (tipo `Double` ) y un registro de Quantum (tipo `'T` ) para la descomposición.
 
