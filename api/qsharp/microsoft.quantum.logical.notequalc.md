@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualC
 title: NotEqualC función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotEqualC
 qsharp.summary: Returns true if and only if two inputs are not equal.
-ms.openlocfilehash: b26ad3515cb801b122858b9474aea76a0e5c498b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0be2c97ec7b0350fc20eace76746f3ffff65fd52
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725979"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197371"
 ---
 # <a name="notequalc-function"></a>NotEqualC función)
 
 Espacio de nombres: [Microsoft. Quantum. Logical](xref:Microsoft.Quantum.Logical)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devuelve true si y solo si dos entradas no son iguales.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._Features
 title: _Features función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _Features
 qsharp.summary: ''
-ms.openlocfilehash: 246c78439b5cf803b7e448c8a30eaa4916ab40a8
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9d4f597a02c7351adf6913ee8f1f11d54030ca0c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732437"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196895"
 ---
 # <a name="_features-function"></a>_Features función)
 
 Espacio de nombres: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 
