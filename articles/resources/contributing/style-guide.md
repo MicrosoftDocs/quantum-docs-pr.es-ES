@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691734"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231662"
 ---
 # <a name="no-locq-style-guide"></a>Q# Guía de estilo #
 ## <a name="general-conventions"></a>Convenciones generales ##
@@ -96,7 +96,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;  | Nombre | Descripción |
+| &nbsp;  | NOMBRE | Descripción |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Desactive el uso de un verbo ("Reflect") para indicar el efecto de la operación. |
 | ☒ | <s>`operation XRotation`</s> | El uso de la frase de nombre sugiere la función, en lugar de la operación. |
@@ -129,7 +129,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;  | Nombre | Descripción |
+| &nbsp;  | NOMBRE | Descripción |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente el propósito del punto de entrada a través del nombre de la operación. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | El uso de `Main` no comunica claramente el propósito del punto de entrada y es redundante con el `@EntryPoint()` atributo. |
@@ -171,7 +171,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;   | Nombre | Descripción |
+| &nbsp;   | NOMBRE | Descripción |
 |---|------|-------------|
 | ☑ | `X` | Abreviatura bien entendida para "aplicar una transformación de $X $" |
 | ☑ | `CNOT` | Abreviatura bien entendida para "controlado" |
@@ -215,7 +215,7 @@ _*_
 Dado que Q# es un lenguaje con establecimiento inflexible de tipos, un valor de un tipo solo se puede usar como un valor de otro tipo mediante una llamada explícita a una función de conversión de tipos.
 Esto contrasta con los lenguajes que permiten a los valores cambiar tipos de forma implícita (por ejemplo: promoción de tipos) o a través de la conversión.
 Como resultado, las funciones de conversión de tipos desempeñan un papel importante en Q# el desarrollo de bibliotecas y constituyen una de las decisiones más frecuentes sobre la nomenclatura.
-Sin embargo, tenemos en cuenta que, dado que las conversiones de tipo siempre son _deterministas_ , se pueden escribir como funciones y, por lo tanto, se incluyen en el Consejo anterior.
+Sin embargo, tenemos en cuenta que, dado que las conversiones de tipo siempre son _deterministas_, se pueden escribir como funciones y, por lo tanto, se incluyen en el Consejo anterior.
 En concreto, se recomienda que las funciones de conversión de tipos nunca se denominen como verbos (por ejemplo, `ConvertToX` ) o frases de preposición de adverbio ( `ToX` ), pero se deben denominar frases de preposicional de adjetivo que indiquen los tipos de origen y destino ( `XAsY` ).
 Al enumerar los tipos de matriz en los nombres de funciones de conversión de tipos, se recomienda la abreviatura `Arr` .
 Salvo en circunstancias excepcionales, recomendamos que todas las funciones de conversión de tipos se denominen con `As` para que se puedan identificar rápidamente.
@@ -228,7 +228,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;   | Nombre | Descripción |
+| &nbsp;   | NOMBRE | Descripción |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | La preposición "to" da como resultado una frase verbal, que indica una operación y no una función. |
 | ☒ | <s>`AsDouble`</s> | El tipo de entrada no está claro en el nombre de la función. |
@@ -251,7 +251,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;  | Nombre | Descripción |
+| &nbsp;  | NOMBRE | Descripción |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | No utilice un carácter de subrayado `_` para indicar que esta operación solo es para uso interno. |
 | ☑ | `internal operation ApplyDecomposedOperation` | La `internal` palabra clave al principio indica claramente que esta operación solo es para uso interno. |
@@ -390,7 +390,7 @@ Del mismo modo, el servidor de lenguaje proporcionado con el kit de desarrollo d
 El uso de los comentarios de la documentación puede ayudar a los usuarios a facilitar el código proporcionando una referencia útil para los detalles que no se expresan fácilmente mediante las demás convenciones de este documento.
 
 > [!div class="nextstepaction"]
-> [Referencia](xref:microsoft.quantum.guide.filestructure#documentation-comments)de la sintaxis de comentarios de documentación.
+> [Referencia](xref:microsoft.quantum.qsharp.comments#documentation-comments)de la sintaxis de comentarios de documentación.
 
 Con el fin de usar esta funcionalidad de forma eficaz para ayudar a los usuarios, se recomienda tener presentes algunas cosas a la vez que escribe comentarios de documentación.
 

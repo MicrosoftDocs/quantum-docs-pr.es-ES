@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b8623ba7e876c4ccda42d0ddaa07c0012a763292
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691814"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231781"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# Principios de diseño de API
 
@@ -215,7 +215,7 @@ En este artículo se enumeran estos principios y se proporcionan ejemplos para a
   *Ejemplos:*
   - Prefiere "iteración de amplificación de amplitud" a "iteración de Grover".
 
-- ✅**Elija las** operaciones y los nombres de función que comunican claramente el efecto previsto de una operación invocable y no su implementación. Tenga en cuenta que la implementación puede y debe documentarse en los [comentarios de documentación](xref:microsoft.quantum.guide.filestructure#documentation-comments)de la API.
+- ✅**Elija las** operaciones y los nombres de función que comunican claramente el efecto previsto de una operación invocable y no su implementación. Tenga en cuenta que la implementación puede y debe documentarse en los [comentarios de documentación](xref:microsoft.quantum.qsharp.comments#documentation-comments)de la API.
 
   *Ejemplos:*
   - Prefiere "estimar superposición" a "prueba de Hadamard", ya que la última comunica cómo se implementa la primera.
@@ -224,32 +224,32 @@ En este artículo se enumeran estos principios y se proporcionan ejemplos para a
 
   - **Verbos**
 
-    - **Assert** : Compruebe que una suposición sobre el estado de un equipo de destino y su qubits contiene, posiblemente mediante recursos no físicos. Las operaciones que utilizan este verbo siempre deben ser extraíbles de forma segura sin que ello afecte a la funcionalidad de las bibliotecas y programas ejecutables. Tenga en cuenta que, a diferencia de los hechos, las aserciones pueden, en general, depender del estado externo, como el estado de un registro de qubit, el entorno de ejecución, etc. Dado que la dependencia del estado externo es un tipo de efecto secundario, las aserciones deben exponerse como operaciones en lugar de funciones.
+    - **Assert**: Compruebe que una suposición sobre el estado de un equipo de destino y su qubits contiene, posiblemente mediante recursos no físicos. Las operaciones que utilizan este verbo siempre deben ser extraíbles de forma segura sin que ello afecte a la funcionalidad de las bibliotecas y programas ejecutables. Tenga en cuenta que, a diferencia de los hechos, las aserciones pueden, en general, depender del estado externo, como el estado de un registro de qubit, el entorno de ejecución, etc. Dado que la dependencia del estado externo es un tipo de efecto secundario, las aserciones deben exponerse como operaciones en lugar de funciones.
 
-    - **Estimación** : el uso de una o varias mediciones posiblemente repetidas calcula una cantidad clásica a partir de los resultados de la medición.
+    - **Estimación**: el uso de una o varias mediciones posiblemente repetidas calcula una cantidad clásica a partir de los resultados de la medición.
 
       *Ejemplos:*
       - @"microsoft.quantum.characterization.estimatefrequency"
       - @"microsoft.quantum.characterization.estimateoverlapbetweenstates"
 
-    - **Preparar** : Aplique una operación Quantum o una secuencia de operaciones a uno o varios qubits que se supone que se inician en un estado inicial determinado (normalmente $ \ket{00\cdots 0} $), lo que hace que el estado de esas qubits evolucione a un estado final deseado. En general, la actuación en Estados distintos del estado de inicio dado **puede** dar lugar a una transformación de unitario sin definir, pero **debe** conservar todavía una operación y su "cancelar salida" y aplicar una operación no operativa.
+    - **Preparar**: Aplique una operación Quantum o una secuencia de operaciones a uno o varios qubits que se supone que se inician en un estado inicial determinado (normalmente $ \ket{00\cdots 0} $), lo que hace que el estado de esas qubits evolucione a un estado final deseado. En general, la actuación en Estados distintos del estado de inicio dado **puede** dar lugar a una transformación de unitario sin definir, pero **debe** conservar todavía una operación y su "cancelar salida" y aplicar una operación no operativa.
 
       *Ejemplos:*
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Medida** : Aplique una operación Quantum o una secuencia de operaciones a uno o varios qubits, y vuelva a leer los datos de la clásica.
+    - **Medida**: Aplique una operación Quantum o una secuencia de operaciones a uno o varios qubits, y vuelva a leer los datos de la clásica.
 
       *Ejemplos:*
       - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
-    - **Apply** : aplica una operación Quantum o una secuencia de operaciones a uno o varios qubits, lo que hace que el estado de esos qubitss cambie de manera coherente. Este verbo es el verbo más general en la \# nomenclatura Q y **no debe** usarse cuando un verbo más específico es más relevante directamente.
+    - **Apply**: aplica una operación Quantum o una secuencia de operaciones a uno o varios qubits, lo que hace que el estado de esos qubitss cambie de manera coherente. Este verbo es el verbo más general en la \# nomenclatura Q y **no debe** usarse cuando un verbo más específico es más relevante directamente.
 
-  - **Nombres** :
+  - **Nombres**:
 
-    - **Hecho** : una condición booleana que depende solo de sus entradas y no del estado de una máquina de destino, su entorno o el estado de la qubits de la máquina. Al contrario que una aserción, un hecho solo es sensible a los *valores* proporcionados en ese hecho. Por ejemplo:
+    - **Hecho**: una condición booleana que depende solo de sus entradas y no del estado de una máquina de destino, su entorno o el estado de la qubits de la máquina. Al contrario que una aserción, un hecho solo es sensible a los *valores* proporcionados en ese hecho. Por ejemplo:
 
       *Ejemplos:*
       - @"microsoft.quantum.diagnostics.equalityfacti": representa un hecho de igualdad sobre dos entradas de entero; los enteros que se proporcionan como entrada son iguales o no, independientemente de cualquier otro estado del programa.
@@ -259,9 +259,9 @@ En este artículo se enumeran estos principios y se proporcionan ejemplos para a
       *Ejemplos:*
       - El @"microsoft.quantum.machinelearning.trainingoptions" UDT incluye elementos con nombre para la velocidad de aprendizaje, el tamaño de minilote y otros parámetros configurables para aprendizaje de ml.
 
-  - **Adjetivos** :
+  - **Adjetivos**:
 
-    - ⛔️ **New** : este adjetivo **no debe** usarse, como para evitar la confusión con su uso como verbo en muchos lenguajes de programación (por ejemplo, C++, C#, Java, TypeScript, PowerShell).
+    - ⛔️ **New**: este adjetivo **no debe** usarse, como para evitar la confusión con su uso como verbo en muchos lenguajes de programación (por ejemplo, C++, C#, Java, TypeScript, PowerShell).
 
   - **Posiciones preposicionadas:** En algunos casos, se pueden usar las preposiciones para eliminar la ambigüedad o clarificar los roles de sustantivos y verbos en los nombres de función y de operación. Sin embargo, se debe tener cuidado de hacerlo de forma moderada y coherente.
 

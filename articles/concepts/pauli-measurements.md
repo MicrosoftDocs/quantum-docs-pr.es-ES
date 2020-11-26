@@ -87,8 +87,8 @@ Autor: bradben UID: Microsoft. Quantum. Concepts. Pauli ms. Author: v-benbra ms.
 
 En las conversaciones anteriores, nos hemos centrado en las mediciones de base de cálculo.
 De hecho, hay otras medidas comunes que se producen en la informática Quantum que, desde una perspectiva de notación, son convenientes para expresar en términos de mediciones de base de cálculo.
-A medida que trabaje con Q# , el tipo más común de medidas en las que se ejecutará probablemente serán *mediciones Paulis* , que generalizan las mediciones de base de cálculo para incluir medidas en otras bases y de paridad entre diferentes qubits.
-En tales casos, es habitual analizar un operador Pauli, en general un operador como $ X, Y, z $ o $ z \otimes z, x \otimes x, x y \otimes , etc $ .
+A medida que trabaje con Q# , el tipo más común de medidas en las que se ejecutará probablemente serán *mediciones Paulis*, que generalizan las mediciones de base de cálculo para incluir medidas en otras bases y de paridad entre diferentes qubits.
+En tales casos, es habitual analizar un operador Pauli, en general un operador como $ X, Y, z $ o $ z \otimes z, x \otimes x, x y \otimes , etc $ . 
 
 > [!TIP]
 > En Q# , los operadores de Pauli de varios qubit suelen estar representados por matrices de tipo `Pauli[]` .
@@ -247,12 +247,12 @@ Para obtener más información, vea [`Measure`](xref:Microsoft.Quantum.Intrinsic
 La información de Quantum es eficaz.
 Nos permite hacer cosas sorprendentes, como números de factor exponencialmente más rápidos que los mejores algoritmos clásicos conocidos, o simular eficazmente sistemas de electrones correlacionados que requieran el costo exponencial para simular con precisión.
 Sin embargo, existen limitaciones en cuanto a la eficacia de la informática Quantum.
-Una de estas limitaciones viene determinada por el *teorema sin clonación* .
+Una de estas limitaciones viene determinada por el *teorema sin clonación*.
 
 El No-Cloning teorema tiene un nombre apropiado.
 No permite la clonación de Estados de Quantum genéricos por un equipo Quantum.
 La prueba de Teorema es bastante sencilla.
-Aunque una prueba completa del teorema sin clonación es un poco muy técnico para nuestro debate aquí, la prueba, en el caso de que no haya ningún qubits auxiliar adicional, se encuentra dentro de nuestro ámbito (los qubits auxiliares son qubits que se usan para el espacio de desecho durante un cálculo y se usan y administran fácilmente en Q# , vea [qubits prestado](xref:microsoft.quantum.guide.qubits#borrowed-qubits)).
+Aunque una prueba completa del teorema sin clonación es un poco técnico para nuestro debate aquí, la prueba en caso de que no haya ningún qubits auxiliar adicional en nuestro ámbito.
 
 Para este tipo de equipo Quantum, la operación de clonación debe describirse mediante una matriz de unitario.
 No permitimos la medición, ya que dañaría el estado de Quantum que estamos intentando clonar.
