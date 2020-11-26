@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.GreatestCommonDivisorL
 title: GreatestCommonDivisorL función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: GreatestCommonDivisorL
 qsharp.summary: Computes the greatest common divisor of $a$ and $b$. The GCD is always positive.
-ms.openlocfilehash: 77bdb040908e9a8af81dee09451a3582f7b7d159
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1bd18758bb2dea8a4801cbfdf258d91f81c5d9a4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733013"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195518"
 ---
 # <a name="greatestcommondivisorl-function"></a>GreatestCommonDivisorL función)
 
 Espacio de nombres: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Calcula el máximo común divisor de $a $ y $b $. El M.C. d siempre es positivo.

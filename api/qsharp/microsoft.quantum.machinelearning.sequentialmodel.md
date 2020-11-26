@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.SequentialModel
 title: Tipo definido por el usuario SequentialModel
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: SequentialModel
 qsharp.summary: Describes a quantum classifier model composed of a sequence of parameterized and controlled rotations, an assignment of rotation angles, and a bias between the two classes recognized by the model.
-ms.openlocfilehash: a425d2155489384ca81ef1c00a5e842bcfb40ae7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3afdb8dafe0179535fe5d8c3dff668f1f3de2f7d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732300"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196181"
 ---
 # <a name="sequentialmodel-user-defined-type"></a>Tipo definido por el usuario SequentialModel
 
 Espacio de nombres: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Describe un modelo de clasificador de Quantum compuesto por una secuencia de giros con parámetros y controlados, una asignación de ángulos de rotación y una diferencia entre las dos clases reconocidas por el modelo.
