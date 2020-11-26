@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.CarryOutCoreCDKM
 title: Operación CarryOutCoreCDKM
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: CarryOutCoreCDKM
 qsharp.summary: The core operation in the RippleCarryAdderCDKM, used with the above ApplyOuterCDKMAdder operation, i.e. conjugated with this operation to obtain the inner operation of the RippleCarryAdderCDKM. This operation computes the carry out qubit and applies a sequence of NOT gates on part of the input `ys`.
-ms.openlocfilehash: 6a292e66f6d9911d2a9075f6397f4f5ba97ec64d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 19a692a3b54a413f25a474c361e773ab6c65579e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731637"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223551"
 ---
 # <a name="carryoutcorecdkm-operation"></a>Operación CarryOutCoreCDKM
 
 Espacio de nombres: [Microsoft. Quantum. aritmético](xref:Microsoft.Quantum.Arithmetic)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 La operación básica en RippleCarryAdderCDKM, que se usa con la operación de ApplyOuterCDKMAdder anterior, es decir, conjugado con esta operación para obtener la operación interna de RippleCarryAdderCDKM. Esta operación calcula el qubit de ejecución y aplica una secuencia de no puertas en parte de la entrada `ys` .
 
 ```qsharp
-operation CarryOutCoreCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit, carry : Qubit) : Unit
+operation CarryOutCoreCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, ancilla : Qubit, carry : Qubit) : Unit is Adj + Ctl
 ```
 
 

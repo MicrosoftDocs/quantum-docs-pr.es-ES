@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.CompareGreaterThanFxP
 title: Operación CompareGreaterThanFxP
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: CompareGreaterThanFxP
 qsharp.summary: Compares two fixed-point numbers stored in quantum registers, and controls a flip on the result.
-ms.openlocfilehash: bd3bcedd7a4a81fc600f7f4b6bdf1d2a797abbd4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1e9afc7645f62b932fa8ebc3d33e21a2a5182361
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731636"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223534"
 ---
 # <a name="comparegreaterthanfxp-operation"></a>Operación CompareGreaterThanFxP
 
 Espacio de nombres: [Microsoft. Quantum. aritmético](xref:Microsoft.Quantum.Arithmetic)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Compara dos números de punto fijo almacenados en registros de Quantum y controla un volteo en el resultado.
 
 ```qsharp
-operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit
+operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit is Adj + Ctl
 ```
 
 

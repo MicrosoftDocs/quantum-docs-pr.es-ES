@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.CompareGTSI
 title: Operación CompareGTSI
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: CompareGTSI
 qsharp.summary: 'Wrapper for signed integer comparison: `result = xs > ys`.'
-ms.openlocfilehash: 735ae21168d8efb3e626a8f1ea36e97f5cdf8760
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a0e8ef66f1e1a62d4f6a78364135376810507534
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92731621"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223500"
 ---
 # <a name="comparegtsi-operation"></a>Operación CompareGTSI
 
 Espacio de nombres: [Microsoft. Quantum. aritmético](xref:Microsoft.Quantum.Arithmetic)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Numerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Contenedor para la comparación de enteros con signo: `result = xs > ys` .
 
 ```qsharp
-operation CompareGTSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit) : Unit
+operation CompareGTSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, ys : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Qubit) : Unit is Adj + Ctl
 ```
 
 

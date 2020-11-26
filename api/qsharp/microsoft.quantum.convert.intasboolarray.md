@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.IntAsBoolArray
 title: IntAsBoolArray función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: IntAsBoolArray
 qsharp.summary: Produces a binary representation of a positive integer, using the little-endian representation for the returned array.
-ms.openlocfilehash: 9783a49a77bdc39ffe8c7725196eb620f4cd0100
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f89cb3d7ca29d7deaaf49573b2670534166caded
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92727538"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224350"
 ---
 # <a name="intasboolarray-function"></a>IntAsBoolArray función)
 
 Espacio de nombres: [Microsoft. Quantum. Convert](xref:Microsoft.Quantum.Convert)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Genera una representación binaria de un entero positivo, utilizando la representación Little-Endian de la matriz devuelta.
