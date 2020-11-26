@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHeadCA
 title: Operación ApplyToHeadCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHeadCA
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: 5bb016373040b1b66984405ea2bda0b8cb0c5102
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f28cff599e06090145fac860dbaf8274c966f80a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729158"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208557"
 ---
 # <a name="applytoheadca-operation"></a>Operación ApplyToHeadCA
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica una operación al primer elemento de una matriz.
 
 ```qsharp
-operation ApplyToHeadCA<'T> (op : ('T => Unit is Adj + Ctl), targets : 'T[]) : Unit
+operation ApplyToHeadCA<'T> (op : ('T => Unit is Adj + Ctl), targets : 'T[]) : Unit is Adj + Ctl
 ```
 
 
@@ -34,7 +34,7 @@ Dada una operación `op` y una matriz de destinos `targets` , se aplica `op(Head
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--t--unit-adj--ctl"></a>OP: ' t => [unidad](xref:microsoft.quantum.lang-ref.unit) + CTL + CTL
+### <a name="op--t--unit--is-adj--ctl"></a>OP: ' t => [unidad](xref:microsoft.quantum.lang-ref.unit)  es ADJ + CTL
 
 Operación que se va a aplicar.
 

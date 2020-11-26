@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.PrepareIdentity
 title: Operación PrepareIdentity
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Given a register, prepares that register in the maximally mixed state.
 
   The register is prepared in the $\boldone / 2^N$ state by applying the complete depolarizing channel to each qubit, where $N$ is the length of the register.
-ms.openlocfilehash: a3f96fbdafb19c90fb2b563243600cca60841566
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6e0a43e61e3c49edef94db63f07ed29132d84c83
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92733725"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210444"
 ---
 # <a name="prepareidentity-operation"></a>Operación PrepareIdentity
 
 Espacio de nombres: [Microsoft. Quantum. preparación](xref:Microsoft.Quantum.Preparation)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dado un registro, prepara ese registro en el estado de máxima mezcla.

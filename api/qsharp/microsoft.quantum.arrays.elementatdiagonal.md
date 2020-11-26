@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.ElementAtDiagonal
 title: ElementAtDiagonal función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ElementAtDiagonal
 qsharp.summary: ''
-ms.openlocfilehash: fc87167671826aa3ab56c8b6946a802ef360df63
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 787aac9264cd878205e90c6510650a4fbdc6821f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730340"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209968"
 ---
 # <a name="elementatdiagonal-function"></a>ElementAtDiagonal función)
 
 Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 

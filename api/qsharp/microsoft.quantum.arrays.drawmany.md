@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.DrawMany
 title: Operación DrawMany
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: DrawMany
 qsharp.summary: Repeats an operation for a given number of samples, collecting its outputs in an array.
-ms.openlocfilehash: 601fe603a869dcf977c1ceade5819ee64f634d53
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3185f2ec01a2b9d01cff82a0c4667f12483801a7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730349"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210002"
 ---
 # <a name="drawmany-operation"></a>Operación DrawMany
 
 Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Repite una operación para un número determinado de muestras, recopilando sus resultados en una matriz.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.LeftShiftedI
 title: LeftShiftedI función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: LeftShiftedI
 qsharp.summary: Shifts the bitwise representation of a number left by a given number of bits.
-ms.openlocfilehash: ce68311adf211169c2fb499bb189332370a6d6ac
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3a7220489bfa241e2337df14291bafb1d6e0e19e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729877"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209866"
 ---
 # <a name="leftshiftedi-function"></a>LeftShiftedI función)
 
 Espacio de nombres: [Microsoft. Quantum. bit a bit](xref:Microsoft.Quantum.Bitwise)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Desplaza la representación bit a bit de un número a la izquierda de un número determinado de bits.

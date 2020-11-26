@@ -1,25 +1,34 @@
 ---
 uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount
 title: QuantumROMQubitCount función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: QuantumROMQubitCount
-qsharp.summary: Returns the total number of qubits that must be allocated to the operation returned by `QuantumROM`.
-ms.openlocfilehash: 988d5efa3e27cf5e9a276ab3ab443c10f88fe1ad
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+qsharp.summary: >-
+  > [!WARNING]
+
+  > QuantumROMQubitCount has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements> instead.
+
+
+  Returns the total number of qubits that must be allocated to the operation returned by `QuantumROM`.
+ms.openlocfilehash: 0ec1e042b9f675505f73bfcdcc6706d0bc0367df
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732605"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210410"
 ---
 # <a name="quantumromqubitcount-function"></a>QuantumROMQubitCount función)
 
 Espacio de nombres: [Microsoft. Quantum. preparación](xref:Microsoft.Quantum.Preparation)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
+
+> [!WARNING]
+> QuantumROMQubitCount está en desuso. Use <xref:Microsoft.Quantum.Preparation.PurifiedMixedStateRequirements> en su lugar.
 
 Devuelve el número total de qubits que deben asignarse a la operación devuelta por `QuantumROM` .
 

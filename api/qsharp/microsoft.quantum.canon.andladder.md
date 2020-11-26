@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.AndLadder
 title: Operación AndLadder
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: AndLadder
 qsharp.summary: Performs a controlled "AND ladder" on a register of target qubits.
-ms.openlocfilehash: 05a0e8110539742501883fea75ac368d9946164d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2c6114ec8a5caabdeea8ab7e26a4877e1633671c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729757"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209730"
 ---
 # <a name="andladder-operation"></a>Operación AndLadder
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Realiza una "y escalera" controlada en un registro de qubits de destino.
 
 ```qsharp
-operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Adj
 ```
 
 
@@ -63,4 +63,4 @@ La longitud de `targets` debe ser al menos 1 y igual a la longitud de `controls`
 
 ## <a name="references"></a>Referencias
 
-- [*Michael A. Nielsen, Isaac L. Chuang* , cálculo de Quantum e información de Quantum](http://doi.org/10.1017/CBO9780511976667)
+- [*Michael A. Nielsen, Isaac L. Chuang*, cálculo de Quantum e información de Quantum](http://doi.org/10.1017/CBO9780511976667)
