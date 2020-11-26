@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.FlatMapped
 title: FlatMapped función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: FlatMapped
 qsharp.summary: Given an array and a function that maps an array element to some output array, returns the concatenated output arrays for each array element.
-ms.openlocfilehash: 3e75c7703471a2986812df660c2f9328f1536d22
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e851e8503b3afcb4572f09fe39079247518c22c4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730269"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221256"
 ---
 # <a name="flatmapped-function"></a>FlatMapped función)
 
 Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada una matriz y una función que asigna un elemento de matriz a alguna matriz de salida, devuelve las matrices de salida concatenadas para cada elemento de la matriz.

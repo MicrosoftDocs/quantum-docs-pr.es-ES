@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Identity
 title: Identity (función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Identity
 qsharp.summary: ''
-ms.openlocfilehash: f7895761699257c1229b4ae671dfb5e42e0527d6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a14005acf958ebc9243e594dd908fcc62472fd66
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730213"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221052"
 ---
 # <a name="identity-function"></a>Identity (función)
 
 Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 

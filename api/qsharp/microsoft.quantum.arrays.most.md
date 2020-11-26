@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Most
 title: La mayoría de las funciones
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Most
 qsharp.summary: Creates an array that is equal to an input array except that the last array element is dropped.
-ms.openlocfilehash: ca89041a4e70472e9bf7a63ffcacccb35aad527c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 81e66e0b64ae8dfc44d163b68370ccadd191c729
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730101"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220610"
 ---
 # <a name="most-function"></a>La mayoría de las funciones
 
 Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Crea una matriz que es igual a una matriz de entrada, salvo que se quita el último elemento de la matriz.
