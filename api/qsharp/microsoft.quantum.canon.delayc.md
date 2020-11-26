@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.DelayC
 title: Operación DelayC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DelayC
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: acb817c3322063353dc08c5d6f8c539391b3bf39
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7a11c3990802ff36856a90de927b38d2ede8bd9d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728751"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216496"
 ---
 # <a name="delayc-operation"></a>Operación DelayC
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica una operación determinada con un retraso.
 
 ```qsharp
-operation DelayC<'T> (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit
+operation DelayC<'T> (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit is Ctl
 ```
 
 
@@ -36,7 +36,7 @@ En concreto, la expresión `Delay(op, arg, _)` es una operación que se aplica `
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--t--unit-ctl"></a>OP: ' t => CTL de [unidad](xref:microsoft.quantum.lang-ref.unit)
+### <a name="op--t--unit--is-ctl"></a>OP: ' t => [unidad](xref:microsoft.quantum.lang-ref.unit)  es CTL
 
 Operación que se va a aplicar.
 

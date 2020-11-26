@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsC
 title: Operación ApplySeriesOfOpsC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOpsC
 qsharp.summary: Applies a list of ops and their targets sequentially on an array. (Controlled)
-ms.openlocfilehash: d909aadbfe86f6d1314e9be5434249c40932ae4a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: eaa0ea3e33cce708af5879cfbe875397fbb82a8a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729333"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217941"
 ---
 # <a name="applyseriesofopsc-operation"></a>Operación ApplySeriesOfOpsC
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica una lista de operaciones y sus destinos secuencialmente en una matriz. Regula
 
 ```qsharp
-operation ApplySeriesOfOpsC<'T> (listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[]) : Unit
+operation ApplySeriesOfOpsC<'T> (listOfOps : ('T[] => Unit is Ctl)[], targets : Int[][], register : 'T[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="listofops--t--unit-ctl"></a>listOfOps: ' t [] => CTL de [unidad](xref:microsoft.quantum.lang-ref.unit) []
+### <a name="listofops--t--unit--is-ctl"></a>listOfOps: ' t [] = la [unidad](xref:microsoft.quantum.lang-ref.unit) > es CTL []
 
 Lista de operaciones, cada una de las cuales toma una matriz ' t ' que se va a aplicar. Se aplican secuencialmente, el índice más bajo en primer lugar.
 Cada debe tener un functor controlado

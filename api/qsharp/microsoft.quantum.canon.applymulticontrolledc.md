@@ -1,31 +1,31 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledC
 title: Operación ApplyMultiControlledC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledC
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: 36010ba667190c237b64f60b7246010199a8ba1c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2d5703eed3a3b6e611ae7c993febf018fcb148b3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729471"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218417"
 ---
 # <a name="applymulticontrolledc-operation"></a>Operación ApplyMultiControlledC
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica una versión con control de multiplicación de una operación controlada de una sola vez.
 El modificador `C` indica que la operación de un solo qubit es controlable.
 
 ```qsharp
-operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Ctl
 ```
 
 
@@ -67,7 +67,7 @@ En el diagrama de explicación y circuito, vea la figura 4,10, sección 4,3 de N
 
 ## <a name="references"></a>Referencias
 
-- [*Michael A. Nielsen, Isaac L. Chuang* , cálculo de Quantum e información de Quantum](http://doi.org/10.1017/CBO9780511976667)
+- [*Michael A. Nielsen, Isaac L. Chuang*, cálculo de Quantum e información de Quantum](http://doi.org/10.1017/CBO9780511976667)
 
 ## <a name="see-also"></a>Consulte también
 

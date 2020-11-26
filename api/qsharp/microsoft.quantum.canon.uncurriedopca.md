@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.UncurriedOpCA
 title: UncurriedOpCA función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: UncurriedOpCA
 qsharp.summary: Given a function which returns operations, returns a new operation which takes both inputs as a tuple. The modifier `CA` indicates that the operations are controllable and adjointable.
-ms.openlocfilehash: 6a0f2e1b345d0ba3ac5c779c5dc2bfffaf659a0b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 45526c0202e417213aab3fe7819827588e794e23
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92728288"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216394"
 ---
 # <a name="uncurriedopca-function"></a>UncurriedOpCA función)
 
 Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada una función que devuelve operaciones, devuelve una nueva operación que toma ambas entradas como una tupla.
@@ -31,13 +31,13 @@ function UncurriedOpCA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Ctl + Adj))) :
 
 ## <a name="input"></a>Entrada
 
-### <a name="curriedop--t---u--unit-ctl--adj"></a>curriedOp: ' t-> ' U => [unidad](xref:microsoft.quantum.lang-ref.unit) CTL + ADJ
+### <a name="curriedop--t---u--unit--is-adj--ctl"></a>curriedOp: ' U = la [unidad](xref:microsoft.quantum.lang-ref.unit)  > de> es ADJ + CTL
 
 Función que devuelve las operaciones.
 
 
 
-## <a name="output--tu--unit-ctl--adj"></a>Salida: (' t, ' U) = [unidad](xref:microsoft.quantum.lang-ref.unit) de> CTL + ADJ
+## <a name="output--tu--unit--is-adj--ctl"></a>Output: (' t, ' U) => [Unit](xref:microsoft.quantum.lang-ref.unit)  es ADJ + CTL
 
 Una nueva operación `op` , como `op(t, u)` es equivalente a `(curriedOp(t))(u)` .
 
