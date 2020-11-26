@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Sorted
 title: Función ordenada
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Sorted
 qsharp.summary: Given an array, returns the elements of that array sorted by a given comparison function.
-ms.openlocfilehash: 14ac5325b81aec4ba0bf94a83cf00e086a075a7c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: bd8b869e03c7f4687c456a944e07a811ae0d2ce2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730028"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220236"
 ---
 # <a name="sorted-function"></a>Función ordenada
 
 Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dada una matriz, devuelve los elementos de esa matriz ordenados por una función de comparación determinada.

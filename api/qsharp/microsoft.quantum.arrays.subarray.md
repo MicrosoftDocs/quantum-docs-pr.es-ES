@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Subarray
 title: Subarray (función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Subarray
 qsharp.summary: Takes an array and a list of locations and produces a new array formed from the elements of the original array that match the given locations.
-ms.openlocfilehash: be7b6ee1a396d67ebc311d8d97f4bd751a32d171
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cf72f04421b277ce64354d1eccec11cbc61d78cc
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729997"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220168"
 ---
 # <a name="subarray-function"></a>Subarray (función)
 
 Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Toma una matriz y una lista de ubicaciones y genera una nueva matriz formada a partir de los elementos de la matriz original que coinciden con las ubicaciones especificadas.

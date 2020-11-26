@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Windows
 title: Función de Windows
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Windows
 qsharp.summary: Returns all consecutive subarrays of length `size`.
-ms.openlocfilehash: 6071d1c3e5981855c57abd0e741b1de0201c30a3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f32a23aa4379744b84c3b8d9c8f565e61c3c64e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92729933"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219896"
 ---
 # <a name="windows-function"></a>Función de Windows
 
 Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devuelve todas las submatrices consecutivas de longitud `size` .
