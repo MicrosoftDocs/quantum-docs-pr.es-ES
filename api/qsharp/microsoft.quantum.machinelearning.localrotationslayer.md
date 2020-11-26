@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.LocalRotationsLayer
 title: LocalRotationsLayer función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: LocalRotationsLayer
 qsharp.summary: Returns an array of uncontrolled (single-qubit) rotations along a given axis, with one rotation for each qubit in a register, parameterized by distinct model parameters.
-ms.openlocfilehash: 8a3557f76d5d7a7b6375e5640cf6d11172cd38a6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1549f24427f19bacbadf72e00c1c0181b64bcb73
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732916"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211736"
 ---
 # <a name="localrotationslayer-function"></a>LocalRotationsLayer función)
 
 Espacio de nombres: [Microsoft. Quantum. MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Devuelve una matriz de giros no controlados (qubit) a lo largo de un eje determinado, con un giro para cada qubit de un registro, parametrizado por parámetros de modelo distintos.

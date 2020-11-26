@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.BitSizeL
 title: BitSizeL función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
@@ -10,18 +10,18 @@ qsharp.summary: >-
   For a non-negative integer `a`, returns the number of bits required to represent `a`.
 
   That is, returns the smallest $n$ such that $a < 2^n$.
-ms.openlocfilehash: 97068f12050317a9aa17c95f33650ef6f406066d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8b3d4cceb69619ed32977337fc0fe7401db38cbd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732756"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211056"
 ---
 # <a name="bitsizel-function"></a>BitSizeL función)
 
 Espacio de nombres: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Para un entero no negativo `a` , devuelve el número de bits necesarios para representar `a` .

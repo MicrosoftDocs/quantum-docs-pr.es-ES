@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.ArcTan2
 title: ArcTan2 función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: ArcTan2
 qsharp.summary: Returns the angle whose tangent is the quotient of two specified numbers.
-ms.openlocfilehash: e59bae7165a6e0ee883d1cafac79b0977d6f2240
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1c21ff7cc530b4e7918ecc1d80525e14936bb339
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92732861"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96211141"
 ---
 # <a name="arctan2-function"></a>ArcTan2 función)
 
 Espacio de nombres: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)
 
-Configura [](https://nuget.org/packages/)
+Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Devuelve el ángulo cuya tangente es el cociente de dos números especificados.
