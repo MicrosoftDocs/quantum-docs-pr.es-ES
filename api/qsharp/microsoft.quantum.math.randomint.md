@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Math.RandomInt
 title: Operación RandomInt
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Math
@@ -10,22 +10,22 @@ qsharp.summary: >-
   > [!WARNING]
 
   > RandomInt has been deprecated. Please use <xref:Microsoft.Quantum.Random.DrawRandomInt> instead.
-ms.openlocfilehash: 82e831f13700d883bd2613d071d2340db90a1441
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a902ff08fdc666a2c9ed6c2cf194d061aac1b3b0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92726530"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194668"
 ---
-# <a name="randomint-operation"></a><span data-ttu-id="a64af-102">Operación RandomInt</span><span class="sxs-lookup"><span data-stu-id="a64af-102">RandomInt operation</span></span>
+# <a name="randomint-operation"></a><span data-ttu-id="a7c67-102">Operación RandomInt</span><span class="sxs-lookup"><span data-stu-id="a7c67-102">RandomInt operation</span></span>
 
-<span data-ttu-id="a64af-103">Espacio de nombres: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)</span><span class="sxs-lookup"><span data-stu-id="a64af-103">Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)</span></span>
+<span data-ttu-id="a7c67-103">Espacio de nombres: [Microsoft. Quantum. Math](xref:Microsoft.Quantum.Math)</span><span class="sxs-lookup"><span data-stu-id="a7c67-103">Namespace: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)</span></span>
 
-<span data-ttu-id="a64af-104">Configura [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="a64af-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="a7c67-104">Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="a7c67-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="a64af-105">RandomInt está en desuso.</span><span class="sxs-lookup"><span data-stu-id="a64af-105">RandomInt has been deprecated.</span></span> <span data-ttu-id="a64af-106">Use <xref:Microsoft.Quantum.Random.DrawRandomInt> en su lugar.</span><span class="sxs-lookup"><span data-stu-id="a64af-106">Please use <xref:Microsoft.Quantum.Random.DrawRandomInt> instead.</span></span>
+> <span data-ttu-id="a7c67-105">RandomInt está en desuso.</span><span class="sxs-lookup"><span data-stu-id="a7c67-105">RandomInt has been deprecated.</span></span> <span data-ttu-id="a7c67-106">Use <xref:Microsoft.Quantum.Random.DrawRandomInt> en su lugar.</span><span class="sxs-lookup"><span data-stu-id="a7c67-106">Please use <xref:Microsoft.Quantum.Random.DrawRandomInt> instead.</span></span>
 
 
 
@@ -34,13 +34,13 @@ operation RandomInt (maxInt : Int) : Int
 ```
 
 
-## <a name="input"></a><span data-ttu-id="a64af-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="a64af-107">Input</span></span>
+## <a name="input"></a><span data-ttu-id="a7c67-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="a7c67-107">Input</span></span>
 
-### <a name="maxint--int"></a><span data-ttu-id="a64af-108">maxInt: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a64af-108">maxInt : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
+### <a name="maxint--int"></a><span data-ttu-id="a7c67-108">maxInt: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a7c67-108">maxInt : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
-## <a name="output--int"></a><span data-ttu-id="a64af-109">Salida: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a64af-109">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+## <a name="output--int"></a><span data-ttu-id="a7c67-109">Salida: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="a7c67-109">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
