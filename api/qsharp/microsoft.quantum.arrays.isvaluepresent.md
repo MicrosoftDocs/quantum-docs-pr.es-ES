@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.IsValuePresent
 title: IsValuePresent función)
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IsValuePresent
 qsharp.summary: ''
-ms.openlocfilehash: f8810d7de91e13df1d33269e8880cae33e7a78c3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 23f22f3297c3f34e7133ac3c79335e11b69a313d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92730157"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220814"
 ---
-# <a name="isvaluepresent-function"></a><span data-ttu-id="97965-102">IsValuePresent función)</span><span class="sxs-lookup"><span data-stu-id="97965-102">IsValuePresent function</span></span>
+# <a name="isvaluepresent-function"></a><span data-ttu-id="ced66-102">IsValuePresent función)</span><span class="sxs-lookup"><span data-stu-id="ced66-102">IsValuePresent function</span></span>
 
-<span data-ttu-id="97965-103">Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="97965-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
+<span data-ttu-id="ced66-103">Espacio de nombres: [Microsoft. Quantum. matrices](xref:Microsoft.Quantum.Arrays)</span><span class="sxs-lookup"><span data-stu-id="ced66-103">Namespace: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)</span></span>
 
-<span data-ttu-id="97965-104">Configura [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="97965-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="ced66-104">Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="ced66-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
@@ -28,18 +28,18 @@ function IsValuePresent (permutation : Int[], value : Int) : Bool
 ```
 
 
-## <a name="input"></a><span data-ttu-id="97965-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="97965-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ced66-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="ced66-105">Input</span></span>
 
-### <a name="permutation--int"></a><span data-ttu-id="97965-106">permutación: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="97965-106">permutation : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
-
-
-
-
-### <a name="value--int"></a><span data-ttu-id="97965-107">valor: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="97965-107">value : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="permutation--int"></a><span data-ttu-id="ced66-106">permutación: [int](xref:microsoft.quantum.lang-ref.int)[]</span><span class="sxs-lookup"><span data-stu-id="ced66-106">permutation : [Int](xref:microsoft.quantum.lang-ref.int)[]</span></span>
 
 
 
 
+### <a name="value--int"></a><span data-ttu-id="ced66-107">valor: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ced66-107">value : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-## <a name="output--bool"></a><span data-ttu-id="97965-108">Salida: [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="97965-108">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
+
+
+
+
+## <a name="output--bool"></a><span data-ttu-id="ced66-108">Salida: [bool](xref:microsoft.quantum.lang-ref.bool)</span><span class="sxs-lookup"><span data-stu-id="ced66-108">Output : [Bool](xref:microsoft.quantum.lang-ref.bool)</span></span>
 
