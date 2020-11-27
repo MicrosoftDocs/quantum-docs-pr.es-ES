@@ -1,4 +1,12 @@
-- name: "Tipos en\_Q#"
-  href: types.md
+- name: Información general
+  href: index.md
+- name: Estructura del programa
+  href: programstructure/toc.yml
+- name: Instrucciones
+  href: statements/toc.yml
 - name: Expresiones
-  href: expressions.md
+  href: expressions/toc.yml
+- name: Sistema de tipos
+  href: typesystem/toc.yml
+- name: Gramática
+  href: grammar.md
