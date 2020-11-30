@@ -1,0 +1,32 @@
+- name: Expresiones en Q#
+  href: index.md
+- name: Precedencia y asociatividad
+  href: precedenceandassociativity.md
+- name: Operadores
+  items:
+    - name: Expresiones de copia y actualización
+      href: copyandupdateexpressions.md
+    - name: Expresiones condicionales
+      href: conditionalexpressions.md
+    - name: Expresiones comparativas
+      href: comparativeexpressions.md
+    - name: Expresiones lógicas
+      href: logicalexpressions.md
+    - name: Expresiones bit a bit
+      href: bitwiseexpressions.md
+    - name: Expresiones aritméticas
+      href: arithmeticexpressions.md
+    - name: Concatenaciones
+      href: concatenation.md
+- name: Modificadores y combinaciones
+  items:
+    - name: Aplicación parcial
+      href: partialapplication.md
+    - name: Aplicación de funtor
+      href: functorapplication.md
+    - name: Expresiones de acceso a elementos
+      href: itemaccessexpressions.md
+- name: Expresiones contextuales
+  href: contextualexpressions.md
+- name: Literales de valor y valores predeterminados
+  href: valueliterals.md
