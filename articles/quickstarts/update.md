@@ -149,7 +149,7 @@ Ahora puede ir directamente a [actualizar la extensión QDK para Visual Studio](
 
 Con los proyectos de Q# actualizados, siga estas instrucciones para actualizar el propio QDK.
 
-## <a name="updating-the-qdk"></a>Actualización del código
+## <a name="updating-the-qdk"></a>Actualización del QDK
 
 El proceso para actualizar el QDK varía en función del lenguaje de desarrollo y del entorno.
 Seleccione el entorno de desarrollo a continuación.
