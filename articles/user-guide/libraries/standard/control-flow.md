@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690870"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858699"
 ---
 # <a name="higher-order-control-flow"></a>Higher-Order flujo de control #
 
@@ -162,9 +162,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-Llegados a este punto, ahora podemos pensar en la expansión Trotter – Suzuki *sin hacer referencia a la mecánica de Quantum* .
+Llegados a este punto, ahora podemos pensar en la expansión Trotter – Suzuki *sin hacer referencia a la mecánica de Quantum*.
 La expansión es en realidad un patrón de iteración muy concreto motivado por $ \eqref{EQ: Trotter-Suzuki-0} $.
-Este patrón de iteración lo implementa <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> :
+Este patrón de iteración lo implementa <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> :
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -213,7 +213,7 @@ Esta construcción es precisamente `ApplyWith` , por lo que escribimos el cuerpo
 ```
 
 Aquí hemos usado <xref:Microsoft.Quantum.Canon.ApplyPauliFromBitString> para aplicar $P $, aplicando parcialmente a través de su destino para su uso con `ApplyWith` .
-Sin embargo, tenga en cuenta que es necesario transformar el registro de *control* en el formulario deseado, por lo que aplicamos parcialmente la operación interna `(Controlled oracle)` en el *destino* .
+Sin embargo, tenga en cuenta que es necesario transformar el registro de *control* en el formulario deseado, por lo que aplicamos parcialmente la operación interna `(Controlled oracle)` en el *destino*.
 Esto deja `ApplyWith` que el registro de control entre corchetes $P $, exactamente como se desea.
 
 En este punto, podríamos hacer esto, pero de algún modo no se satisface que la nueva operación no "se siente" como la aplicación del `Controlled` functor.

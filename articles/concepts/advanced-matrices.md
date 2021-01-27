@@ -1,6 +1,6 @@
 ---
 title: conceptos de matriz avanzada Descripción: Obtenga información sobre vectores propios, vectores propios y exponencial de la matriz, las herramientas fundamentales que se usan para describir y simular algoritmos Quantum.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix: avanzado ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: article no-LOC:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. Matrix: avanzado ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: conceptual no-LOC:
 - "Q#"
 - "$$v"
 - "$$"

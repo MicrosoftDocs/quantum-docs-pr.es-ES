@@ -4,17 +4,17 @@ description: Obtenga información sobre el contador de operaciones primitivas de
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bf75eb94696a489a587316928bc3f33baa4a1785
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 19ea3c1f5a91c00de4d3e435318bf4cf8cdd83be
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690950"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858601"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Simulador de seguimiento de Quantum: contador de operaciones primitivas
 
@@ -34,7 +34,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-primitive-operation-counter-in-a-c-host-program"></a>Usar el contador de operaciones primitivas en un programa host de C#
 
-En el ejemplo de C# que se muestra en esta sección se cuenta el número de <xref:Microsoft.Quantum.Intrinsic.T> operaciones necesarias para implementar la <xref:Microsoft.Quantum.Intrinsic.ccnot> operación, basándose en el Q# código de ejemplo siguiente:
+En el ejemplo de C# que se muestra en esta sección se cuenta el número de <xref:Microsoft.Quantum.Intrinsic.T> operaciones necesarias para implementar la <xref:Microsoft.Quantum.Intrinsic.CCNOT> operación, basándose en el Q# código de ejemplo siguiente:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

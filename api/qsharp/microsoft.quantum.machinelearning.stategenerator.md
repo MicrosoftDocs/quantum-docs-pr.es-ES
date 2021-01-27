@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.StateGenerator
 title: Tipo definido por el usuario StateGenerator
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: StateGenerator
 qsharp.summary: Describes an operation that prepares a given input to a sequential classifier.
-ms.openlocfilehash: 5c9643f5c917ff3cb25fa8c046856b03cc287edd
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b4f6c3ca28e2976b6a0d58f4ef25ea943de9811e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96211566"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854873"
 ---
 # <a name="stategenerator-user-defined-type"></a>Tipo definido por el usuario StateGenerator
 
@@ -35,6 +35,6 @@ newtype StateGenerator = (NQubits : Int, Prepare : (Microsoft.Quantum.Arithmetic
 ### <a name="nqubits--int"></a>NQubits: [int](xref:microsoft.quantum.lang-ref.int)
 
 El número de qubits en el que se define la entrada codificada.
-### <a name="prepare--littleendian--unit--is-adj--ctl"></a>Preparación: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) la => [unidad](xref:microsoft.quantum.lang-ref.unit) LittleEndian es ADJ + CTL
+### <a name="prepare--littleendian--unit--is-adj--ctl"></a>Preparación: [](xref:Microsoft.Quantum.Arithmetic.LittleEndian) la => [unidad](xref:microsoft.quantum.lang-ref.unit) LittleEndian es ADJ + CTL
 
 Operación que prepara la entrada codificada en un registro Little-Endian de `NQubits` qubits.

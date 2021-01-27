@@ -4,26 +4,26 @@ description: Aprenda a instalar la biblioteca de química de Microsoft Quantum y
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.installation
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f1a7d1d041dab73980d8debc179d6c79acac6d33
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 5d32544bbce527a376345023d5549308fd4e7c79
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759806"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854075"
 ---
 # <a name="chemistry-library-installation"></a>Instalación de la biblioteca de química
 
-El [ejemplo **MolecularHydrogen** ](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) usa datos de entrada moleculares que se configuran manualmente.
+El [ejemplo **MolecularHydrogen**](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) usa datos de entrada moleculares que se configuran manualmente.
 Aunque esto es adecuado para pequeños ejemplos, la química de Quantum a escala requiere Hamiltonians con millones o miles de millones de términos.
 Tales Hamiltonians, generados por paquetes de Química computacional escalables, son demasiado grandes para importarlos manualmente.
 
 La biblioteca de química de Quantum para el kit de desarrollo de Quantum se ha diseñado para funcionar bien con paquetes de Química computacional, en particular la plataforma química de cómputo de [**NWChem**](http://www.nwchem-sw.org/) desarrollada por el laboratorio de Ciencias moleculares del entorno (emsl) en el laboratorio nacional de Asia noroccidental.
-En concreto, el [paquete **Microsoft. Quantum. química** ](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) proporciona herramientas para cargar instancias de problemas de simulación de química de Quantum representados en el [esquema de Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), que también se admiten para la exportación de versiones recientes de NWChem.
+En concreto, el [paquete **Microsoft. Quantum. química**](https://www.nuget.org/packages/Microsoft.Quantum.Chemistry) proporciona herramientas para cargar instancias de problemas de simulación de química de Quantum representados en el [esquema de Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), que también se admiten para la exportación de versiones recientes de NWChem.
 
 La biblioteca de química del kit de desarrollo de Quantum también proporciona una herramienta de línea de comandos, `qdk-chem` , para la conversión entre formatos heredados y [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge).
 

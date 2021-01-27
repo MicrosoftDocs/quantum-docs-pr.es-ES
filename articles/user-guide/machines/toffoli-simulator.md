@@ -4,17 +4,17 @@ description: Obtenga información sobre el simulador de Toffoli de Microsoft QDK
 author: alan-geller
 ms.author: ageller
 ms.date: 6/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 036896a33fa02db671a5fd07421160df164bd41d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 84b958912ab5116a3181c8eff4f331fc8394604c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690781"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858559"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Simulador de Quantum Development Kit (QDK) Toffoli
 
@@ -67,7 +67,7 @@ Use el Q# comando "Magic" [% Toffoli](xref:microsoft.quantum.iqsharp.magic-ref.t
 El simulador Toffoli admite:
 
 * Rotations y un exponente Paulis, como `R` y `Exp` , cuando la operación resultante es igual `X` o la matriz de identidad.
-* Operaciones de medición y [aserción](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) , pero solo en la `Z` base de Pauli. Tenga en cuenta que la probabilidad de una operación de medición siempre es **0** o **1** ; no hay aleatoriedad en el simulador Toffoli.
+* Operaciones de medición y [aserción](xref:Microsoft.Quantum.Diagnostics.AssertMeasurement) , pero solo en la `Z` base de Pauli. Tenga en cuenta que la probabilidad de una operación de medición siempre es **0** o **1**; no hay aleatoriedad en el simulador Toffoli.
 * `DumpMachine``DumpRegister`funciones y.
 Ambas funciones generan el `Z` Estado de base actual de cada qubit, un qubit por línea.
 

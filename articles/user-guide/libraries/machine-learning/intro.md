@@ -4,17 +4,17 @@ description: Obtenga información sobre cómo usar machine learning en sistemas 
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833811"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854033"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Introducción a Quantum Machine Learning
 
@@ -41,7 +41,7 @@ Por lo tanto, la solución es un Quantum análogo de una máquina de vectores de
 
 Un sencillo diseño de clasificadores de quantums puede compararse con una solución de máquina de vectores de soporte (SVM) tradicional. La inferencia de una muestra de datos $x $ en el caso de SVM se realiza con un formato de kernel óptimo $ \sum \ alpha_j k (x_j, x) $, donde $k $ es una determinada función de kernel.
 
-Por el contrario, un clasificador de Quantum usa el $p de predicción (y │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $, que es similar en el espíritu pero técnicamente bastante diferente. Por lo tanto, cuando se utiliza una codificación de amplitud sencilla, $p (y │ x, U (\theta)) $ es una forma cuadrática en las amplitudes de $x $, pero los coeficientes de este formulario ya no se aprenden de forma independiente; en su lugar, se agregan a partir de los elementos de la matriz del $U del circuito (\theta) $, que normalmente tiene significativamente menos parámetros que se pueden aprender $ \theta $ que la dimensión del vector $x $. El grado Polinómico de $p (y │ x, U (\theta)) $ en las características originales se puede aumentar a $2 ^ l $ mediante el uso de una codificación de producto Quantum en $l $ copias de $x $.
+Por el contrario, un clasificador de Quantum usa el predicción $p (y │ x, U (\theta)) = 〈 U (\theta) x | M | U (\theta) x 〉 $, que es similar en el espíritu pero técnicamente bastante diferente. Por lo tanto, cuando se utiliza una codificación de amplitud sencilla, $p (y │ x, U (\theta)) $ es una forma cuadrática en las amplitudes de $x $, pero los coeficientes de este formulario ya no se aprenden de forma independiente; en su lugar, se agregan a partir de los elementos de la matriz del $U del circuito (\theta) $, que normalmente tiene significativamente menos parámetros que se pueden aprender $ \theta $ que la dimensión del vector $x $. El grado Polinómico de $p (y │ x, U (\theta)) $ en las características originales se puede aumentar a $2 ^ l $ mediante el uso de una codificación de producto Quantum en $l $ copias de $x $.
 
 Nuestra arquitectura explora circuitos relativamente superficiales que, por tanto, deben estar en *rápida* para capturar todas las correlaciones entre las características de datos en todos los intervalos. En la ilustración siguiente se muestra un ejemplo del componente de circuito de inestabilidad de rápida utilidad. Aunque un circuito con esta geometría consta solo de $3 n + 1 $ portones, la matriz de peso unitario que calcula garantiza una comunicación cruzada significativa entre las características de $2 ^ n $.
 

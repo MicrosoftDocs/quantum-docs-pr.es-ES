@@ -4,16 +4,16 @@ description: Obtenga información sobre las funciones de diagnóstico y las oper
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690854"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858678"
 ---
 # <a name="diagnostics"></a>Diagnóstico #
 
@@ -27,7 +27,7 @@ Los diagnósticos sobre valores clásico se pueden obtener mediante la <xref:Mic
 De forma predeterminada, esto escribe la cadena en la consola.
 Cuando se usa junto con cadenas interpoladas, facilita la <xref:Microsoft.Quantum.Intrinsic.Message> notificación de información de diagnóstico sobre valores de uso clásico:
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
@@ -45,9 +45,9 @@ Por comparación, el equipo de destino del [simulador Toffoli](xref:microsoft.qu
 
 ## <a name="facts-and-assertions"></a>Hechos y aserciones ##
 
-Como se explicó en [pruebas y depuración](xref:microsoft.quantum.guide.testingdebugging), una función u operación con firma `Unit -> Unit` o `Unit => Unit` , respectivamente, se puede marcar como una *prueba unitaria* .
+Como se explicó en [pruebas y depuración](xref:microsoft.quantum.guide.testingdebugging), una función u operación con firma `Unit -> Unit` o `Unit => Unit` , respectivamente, se puede marcar como una *prueba unitaria*.
 Generalmente, cada prueba unitaria consta de un pequeño programa Quantum, junto con una o más condiciones que comprueban la corrección de ese programa.
-Estas condiciones pueden presentarse en forma de _hechos_ , que comprueban los valores de sus entradas, o _aserciones_ , que comprueban los Estados de uno o más qubits pasados como entrada.
+Estas condiciones pueden presentarse en forma de _hechos_, que comprueban los valores de sus entradas, o _aserciones_, que comprueban los Estados de uno o más qubits pasados como entrada.
 
 Por ejemplo, `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` representa el hecho matemático que $1 + 1 = $2, mientras `AssertQubit(One, qubit)` que representa la condición que la medición `qubit` devolverá `One` con certeza.
 En el primer caso, podemos comprobar la exactitud de la condición dados solo sus valores, mientras que en este último, debemos conocer algo sobre el estado de la qubit para evaluar la aserción.
@@ -145,7 +145,7 @@ En los casos en los que una operación implementa una operación clásica revers
 
 Sin embargo, de forma más crítica, los dos enfoques prueban las distintas propiedades de las operaciones en examen.
 Dado que la aserción en contexto llama a cada operación varias veces, una vez para cada estado de entrada, las opciones aleatorias y los resultados de la medición podrían cambiar entre las llamadas.
-Por el contrario, la aserción a la que se hace referencia llama a cada operación exactamente una vez, de modo que comprueba que las operaciones son iguales *en una sola captura* .
+Por el contrario, la aserción a la que se hace referencia llama a cada operación exactamente una vez, de modo que comprueba que las operaciones son iguales *en una sola captura*.
 Ambas pruebas son útiles para garantizar la corrección de los programas Quantum.
 
 

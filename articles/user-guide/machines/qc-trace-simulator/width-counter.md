@@ -4,17 +4,17 @@ description: Obtenga información sobre el contador de ancho de QDK de Microsoft
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9a526ee1440544aace922bd83c6ea39cb83c1ae
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691117"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858588"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Simulador de seguimiento de Quantum: contador de ancho
 
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-La operación de multiplicación controlada <xref:Microsoft.Quantum.Intrinsic.X> actúa en un total de cinco qubits, asigna dos [qubits auxiliares](xref:microsoft.quantum.glossary#ancilla)y tiene un ancho de entrada de **5** . Use el siguiente programa de C# para comprobar los recuentos:
+La operación de multiplicación controlada <xref:Microsoft.Quantum.Intrinsic.X> actúa en un total de cinco qubits, asigna dos [qubits auxiliares](xref:microsoft.quantum.glossary#ancilla)y tiene un ancho de entrada de **5**. Use el siguiente programa de C# para comprobar los recuentos:
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();

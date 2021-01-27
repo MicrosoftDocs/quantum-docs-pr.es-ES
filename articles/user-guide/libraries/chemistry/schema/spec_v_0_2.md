@@ -4,17 +4,17 @@ description: Detalla las especificaciones para el esquema de química Broombridg
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833774"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854062"
 ---
 # <a name="broombridge-specification-v02"></a>Especificación de Broombridge v 0,2 #
 
@@ -33,7 +33,7 @@ Los documentos de Broombridge están diseñados para comunicar instancias de pro
 Esta sección es normativa.
 
 Un documento de Broombridge debe serializarse como un [documento YAML 1,2](http://yaml.org/spec/) que represente un objeto JSON, tal como se describe en la sección 2,2 de [RFC 4627](https://tools.ietf.org/html/rfc4627) .
-El objeto serializado a YAML debe tener una propiedad `"$schema"` cuyo valor sea `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.2.schema.json"` , y debe ser válido de acuerdo con las especificaciones de draft-06 del esquema JSON [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)[[1,2](https://tools.ietf.org/html/draft-wright-json-schema-01)].
+El objeto serializado a YAML debe tener una propiedad `"$schema"` cuyo valor sea `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.2.schema.json"` , y debe ser válido de acuerdo con las especificaciones de draft-06 del esquema JSON [](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)[[1,2](https://tools.ietf.org/html/draft-wright-json-schema-01)].
 
 En el resto de esta especificación, "el objeto Broombridge" hará referencia al objeto JSON deserializado de un documento YAML de Broombridge.
 
@@ -171,7 +171,7 @@ Cada objeto de Descripción del problema debe tener una propiedad `coulomb_repul
 Cada objeto de Descripción del problema debe tener una propiedad `energy_offet` cuyo valor sea un objeto de cantidad simple.
 > Tenga en cuenta Los valores de `coulomb_repulsion` y se `energy_offet` agregan conjuntamente capturan el término de identidad de Hamiltonian.
 
-##### <a name="one-electron-integrals-object"></a>Objeto integral de un solo electrones #####
+##### <a name="one-electron-integrals-object"></a>One-Electron Integrals (objeto) #####
 
 Esta sección es normativa.
 
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > Broombridge usa una indización basada en 1.
 
 
-##### <a name="two-electron-integrals-object"></a>Objeto integral de dos electrones #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron Integrals (objeto) #####
 
 Esta sección es normativa.
 
