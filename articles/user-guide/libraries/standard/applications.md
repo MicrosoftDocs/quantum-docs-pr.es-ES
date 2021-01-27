@@ -5,18 +5,18 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692171"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857237"
 ---
-# <a name="applications"></a>APLICACIONES #
+# <a name="applications"></a>Aplicaciones #
 
 ## <a name="hamiltonian-simulation"></a>Simulación de Hamilton ##
 
@@ -140,7 +140,7 @@ operation EstimateAdiabaticStateEnergy(
 
 ## <a name="shors-algorithm"></a>Algoritmo de Shor ##
 El algoritmo de mé sigue siendo uno de los progresos más importantes de la informática Quantum porque mostró que los equipos Quantum podrían usarse para resolver problemas importantes, que actualmente se pueden deducir.
-El algoritmo de mé proporciona una manera rápida de factorizar números grandes mediante un equipo Quantum, un problema llamado *factorización* .
+El algoritmo de mé proporciona una manera rápida de factorizar números grandes mediante un equipo Quantum, un problema llamado *factorización*.
 La seguridad de muchos cryptosystems de día presentes se basa en la suposición de que no existe ningún algoritmo rápido para la factorización.
 Por lo tanto, el algoritmo de mé ha tenido un impacto profundo en cómo pensamos en la seguridad en un mundo posterior al Quantum.
 
@@ -151,7 +151,7 @@ Estos dos pasos se revisan a continuación.
 
 ### <a name="period-finding"></a>Búsqueda de períodos ###
 
-Después de ver cómo funciona la transformación de Fourier y la fase de estimación de las fases (consulte [algoritmos Quantum](xref:microsoft.quantum.libraries.standard.algorithms)), podemos usar estas herramientas para resolver un problema de cálculo de clase difícilmente llamado *período de búsqueda* .  En la siguiente sección, veremos cómo aplicar el período de búsqueda a la factorización.
+Después de ver cómo funciona la transformación de Fourier y la fase de estimación de las fases (consulte [algoritmos Quantum](xref:microsoft.quantum.libraries.standard.algorithms)), podemos usar estas herramientas para resolver un problema de cálculo de clase difícilmente llamado *período de búsqueda*.  En la siguiente sección, veremos cómo aplicar el período de búsqueda a la factorización.
 
 Dados dos enteros $a $ y $N $, donde $a<N $, el objetivo de la búsqueda del período, también denominado búsqueda de pedidos, es encontrar el _orden_ $r $ de $a $ módulo $N $, donde $r $ se define como el entero menos positivo, de modo que $a ^ r \equiv 1 \text{mod} N $.  
 
@@ -178,7 +178,7 @@ El $U controlado _a $ Gate asigna $ \ket{x} $ a $ \ket{(AX) \text{mod} N} $ si e
 Para lograr $ (a ^ NX) \text{mod} N $, podemos simplemente aplicar el $U controlado _ {a ^ n} $, donde calculamos $a ^ n \text{mod} N $ classly para conectarse al circuito Quantum.  
 Los circuitos para lograr este tipo de aritmética modular se han descrito en la [documentación aritmética de Quantum](./algorithms.md#arithmetic), en concreto, se requiere un circuito de exponenciación modular para implementar las operaciones de $U controlada \_ {a ^ i} $.
 
-Aunque el circuito anterior corresponde a la estimación de la [fase de Quantum](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) y habilita explícitamente la búsqueda de pedidos, podemos reducir el número de qubits necesarias. Podemos seguir el método de Beauregard para buscar el orden, como se describe [en la página 8 de arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), o usar una de las rutinas de estimación de fase disponibles en Microsoft. Quantum. Caracterización. Por ejemplo, la [estimación de fase sólida](xref:microsoft.quantum.characterization.robustphaseestimation) también usa un qubit adicional.
+Aunque el circuito anterior corresponde a la estimación de la [fase de Quantum](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) y habilita explícitamente la búsqueda de pedidos, podemos reducir el número de qubits necesarias. Podemos seguir el método de Beauregard para buscar el orden, como se describe [en la página 8 de arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), o usar una de las rutinas de estimación de fase disponibles en Microsoft. Quantum. Caracterización. Por ejemplo, la [estimación de fase sólida](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) también usa un qubit adicional.
 
 ### <a name="factoring"></a>Factorización ###
 El objetivo de la factorización es determinar los dos factores primos de entero $N $, donde $N $ es una $n número $-bit.  

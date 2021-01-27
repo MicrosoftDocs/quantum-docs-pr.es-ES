@@ -1,6 +1,6 @@
 ---
 Título: "iteraciones y bucles en Q# " Descripción: Obtenga información sobre el uso de bucles ' for ' en el Q# lenguaje de programación.
-Autor: bettinaheim ms. Author: Beheim ms. Date: 10/07/2020 ms. topic: article UID: Microsoft. Quantum. qsharp. ITERATIONS no-LOC:
+Autor: bettinaheim ms. Author: Beheim ms. Date: 10/07/2020 ms. topic: Reference UID: Microsoft. Quantum. qsharp. ITERATIONS no-LOC:
 - "Q#"
 - "$$v"
 

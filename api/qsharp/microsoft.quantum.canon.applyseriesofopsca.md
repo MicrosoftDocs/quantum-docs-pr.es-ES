@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsCA
 title: Operación ApplySeriesOfOpsCA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOpsCA
 qsharp.summary: Applies a list of ops and their targets sequentially on an array. (Adjoint + Controlled)
-ms.openlocfilehash: 9dd1343b3ebcc75592441f150eee822cfe83f9a1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 9a1f6189428b086c38b1d0f289afb18c2cf1be40
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217890"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850863"
 ---
 # <a name="applyseriesofopsca-operation"></a>Operación ApplySeriesOfOpsCA
 
@@ -56,6 +56,10 @@ Registro de qubit en el que se va a actuar.
 ### <a name="t"></a>Traslada
 
 
+
+## <a name="example"></a>Ejemplo
+
+A continuación se aplica exp ([PauliX, PauliY], 0,5) a qubits 0, 1//then X a qubit 2 Let OPS = [exp ([PauliX, PauliY], 0,5, _), ApplyToFirstQubitCA (X, _)]; permitir índices = [[0, 1], [2]]; ApplySeriesOfOpsCA (OPS, índices, qubitArray);
 
 ## <a name="see-also"></a>Consulte también
 

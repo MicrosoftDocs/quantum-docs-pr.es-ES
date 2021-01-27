@@ -1,6 +1,6 @@
 ---
 title: "bifurcación condicional en Q# " Descripción: Obtenga información sobre las bifurcaciones condicionales y la instrucción "if" en el Q# lenguaje de programación.
-Autor: bettinaheim ms. Author: Beheim ms. Date: 10/07/2020 ms. topic: artículo UID: Microsoft. Quantum. qsharp. conditionalbranching no-LOC:
+Autor: bettinaheim ms. Author: Beheim ms. Date: 10/07/2020 ms. topic: Reference UID: Microsoft. Quantum. qsharp. conditionalbranching no-LOC:
 - "Q#"
 - "$$v"
 
