@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.AbsB
 title: AbsB función)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.absl".
-ms.openlocfilehash: 2b66d5675d5d89cd409605a4cb45c6bf06ba8322
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 9284e4bc6a2af920b9c2f0ae18766fd016d0d53d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96213232"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98822784"
 ---
-# <a name="absb-function"></a><span data-ttu-id="b9d38-102">AbsB función)</span><span class="sxs-lookup"><span data-stu-id="b9d38-102">AbsB function</span></span>
+# <a name="absb-function"></a><span data-ttu-id="ebe50-102">AbsB función)</span><span class="sxs-lookup"><span data-stu-id="ebe50-102">AbsB function</span></span>
 
-<span data-ttu-id="b9d38-103">Espacio de nombres: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="b9d38-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
+<span data-ttu-id="ebe50-103">Espacio de nombres: [Microsoft. Quantum. Extensions. Math](xref:Microsoft.Quantum.Extensions.Math)</span><span class="sxs-lookup"><span data-stu-id="ebe50-103">Namespace: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)</span></span>
 
-<span data-ttu-id="b9d38-104">Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="b9d38-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="ebe50-104">Paquete: [Microsoft. Quantum. QSharp. Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="ebe50-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="b9d38-105">AbsB está en desuso.</span><span class="sxs-lookup"><span data-stu-id="b9d38-105">AbsB has been deprecated.</span></span> <span data-ttu-id="b9d38-106">Use <xref:Microsoft.Quantum.Math.AbsL> en su lugar.</span><span class="sxs-lookup"><span data-stu-id="b9d38-106">Please use <xref:Microsoft.Quantum.Math.AbsL> instead.</span></span>
+> <span data-ttu-id="ebe50-105">AbsB está en desuso.</span><span class="sxs-lookup"><span data-stu-id="ebe50-105">AbsB has been deprecated.</span></span> <span data-ttu-id="ebe50-106">Use <xref:Microsoft.Quantum.Math.AbsL> en su lugar.</span><span class="sxs-lookup"><span data-stu-id="ebe50-106">Please use <xref:Microsoft.Quantum.Math.AbsL> instead.</span></span>
 >
-> <span data-ttu-id="b9d38-107">Use @"microsoft.quantum.math.absl".</span><span class="sxs-lookup"><span data-stu-id="b9d38-107">Please use @"microsoft.quantum.math.absl".</span></span>
+> <span data-ttu-id="ebe50-107">Use @"microsoft.quantum.math.absl".</span><span class="sxs-lookup"><span data-stu-id="ebe50-107">Please use @"microsoft.quantum.math.absl".</span></span>
 
 
 
@@ -40,13 +40,13 @@ function AbsB (a : BigInt) : BigInt
 ```
 
 
-## <a name="input"></a><span data-ttu-id="b9d38-108">Entrada</span><span class="sxs-lookup"><span data-stu-id="b9d38-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="ebe50-108">Entrada</span><span class="sxs-lookup"><span data-stu-id="ebe50-108">Input</span></span>
 
-### <a name="a--bigint"></a><span data-ttu-id="b9d38-109">a: [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="b9d38-109">a : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
-
-
+### <a name="a--bigint"></a><span data-ttu-id="ebe50-109">a: [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="ebe50-109">a : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
 
 
-## <a name="output--bigint"></a><span data-ttu-id="b9d38-110">Salida: [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="b9d38-110">Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
+
+
+## <a name="output--bigint"></a><span data-ttu-id="ebe50-110">Salida: [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span><span class="sxs-lookup"><span data-stu-id="ebe50-110">Output : [BigInt](xref:microsoft.quantum.lang-ref.bigint)</span></span>
 
