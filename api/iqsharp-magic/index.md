@@ -4,14 +4,14 @@ description: Enumera los comandos magic disponibles en el kernel de IQ# para Jup
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: ryansha
-ms.date: 11/25/2020
+ms.date: 01/24/2021
 ms.topic: article
-ms.openlocfilehash: 3b6a46b67207953b0e3dd89b1dd083593b374586
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 00b0e0b806c0034d222d286bac5388bd14326a60
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191846"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844095"
 ---
 # <a name="iq-magic-commands"></a>Comandos magic de IQ#
 | Comando magic | Resumen |
