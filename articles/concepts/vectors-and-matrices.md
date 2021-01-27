@@ -1,6 +1,6 @@
 ---
 title: vectores y matrices en Quantum Computing Description: Conozca los conceptos básicos sobre cómo trabajar con vectores y matrices.
-Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vectores ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: article no-LOC:
+Autor: QuantumWriter UID: Microsoft. Quantum. Concepts. vectores ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: conceptual no-LOC:
 - "Q#"
 - "$$v"
 - "$$"

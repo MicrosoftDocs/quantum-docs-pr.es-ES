@@ -4,17 +4,17 @@ description: Detalla las especificaciones para el esquema de química Broombridg
 author: cgranade
 ms.author: chgranad
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 0a306f59a823e76ba0518d023a41f1f9d5670e7a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835747"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858197"
 ---
 # <a name="broombridge-specification-v01"></a>Especificación de Broombridge v 0.1 #
 
@@ -33,7 +33,7 @@ Los documentos de Broombridge están diseñados para comunicar instancias de pro
 Esta sección es normativa.
 
 Un documento de Broombridge debe serializarse como un [documento YAML 1,2](http://yaml.org/spec/) que represente un objeto JSON, tal como se describe en la sección 2,2 de [RFC 4627](https://tools.ietf.org/html/rfc4627) .
-El objeto serializado a YAML debe tener una propiedad `"$schema"` cuyo valor sea `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.1.schema.json"` , y debe ser válido de acuerdo con las especificaciones de draft-06 del esquema JSON [2](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)[[1,2](https://tools.ietf.org/html/draft-wright-json-schema-01)].
+El objeto serializado a YAML debe tener una propiedad `"$schema"` cuyo valor sea `"https://raw.githubusercontent.com/Microsoft/Quantum/master/Chemistry/Schema/qchem-0.1.schema.json"` , y debe ser válido de acuerdo con las especificaciones de draft-06 del esquema JSON [](https://tools.ietf.org/html/draft-wright-json-schema-validation-01)[[1,2](https://tools.ietf.org/html/draft-wright-json-schema-01)].
 
 En el resto de esta especificación, "el objeto Broombridge" hará referencia al objeto JSON deserializado de un documento YAML de Broombridge.
 
@@ -169,7 +169,7 @@ El valor de la `hamiltonian` propiedad se conoce como objeto Hamiltonian y debe 
 Un objeto Hamiltonian también puede tener una propiedad `particle_hole_representation` .
 Si está presente, el valor de `particle_hole_representation` debe seguir el formato descrito en el resto de esta sección.
 
-##### <a name="one-electron-integrals-object"></a>Objeto integral de un solo electrones #####
+##### <a name="one-electron-integrals-object"></a>One-Electron Integrals (objeto) #####
 
 Esta sección es normativa.
 
@@ -199,7 +199,7 @@ one_electron_integrals:     # required
 > Broombridge usa una indización basada en 1.
 
 
-##### <a name="two-electron-integrals-object"></a>Objeto integral de dos electrones #####
+##### <a name="two-electron-integrals-object"></a>Two-Electron Integrals (objeto) #####
 
 Esta sección es normativa.
 
