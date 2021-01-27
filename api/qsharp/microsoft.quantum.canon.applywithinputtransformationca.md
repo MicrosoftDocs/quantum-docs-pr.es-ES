@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWithInputTransformationCA
 title: Operación ApplyWithInputTransformationCA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWithInputTransformationCA
 qsharp.summary: Given an operation that accepts some input, a function that returns an output compatible with that operation, and an input to that function, applies the operation using the function to transform the input to a form expected by the operation.
-ms.openlocfilehash: c81620555bff9449d6a3235dc7cfa56ca5206f04
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b31ed1b3da0d5467588f4cb2e4368e68f0dbe9d5
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96207792"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841111"
 ---
 # <a name="applywithinputtransformationca-operation"></a>Operación ApplyWithInputTransformationCA
 
@@ -58,6 +58,14 @@ Una entrada a la función.
 ### <a name="u"></a>' U
 
 
+
+## <a name="example"></a>Ejemplo
+
+La siguiente llamada utiliza @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" para aplicar una operación diseñada para @"Microsoft.Quantum.Arithmetic.BigEndian" entradas a una entrada de tipo @"Microsoft.Quantum.Arithmetic.LittleEndian" :
+
+```qsharp
+ApplyWithInputTransformation(LittleEndianAsBigEndian, ApplyXorInPlaceBE, LittleEndian(qubits));
+```
 
 ## <a name="see-also"></a>Consulte también
 
