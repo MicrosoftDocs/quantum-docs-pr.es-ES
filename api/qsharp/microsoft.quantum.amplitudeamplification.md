@@ -1,56 +1,56 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification
 title: Espacio de nombres Microsoft. Quantum. AmplitudeAmplification
-ms.date: 11/25/2020 12:00:00 AM
-ms.topic: article
+ms.date: 1/23/2021 12:00:00 AM
+ms.topic: managed-reference
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.AmplitudeAmplification
 qsharp.summary: This namespace contains functions and operations for performing amplitude amplification.
-ms.openlocfilehash: f265f1f8b41513f9201a758f85451e768b7564e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a014f923de62c5e660c1c0fc839fbe60e80f8ba9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191421"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845828"
 ---
-# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="e1dd0-102">Espacio de nombres Microsoft. Quantum. AmplitudeAmplification</span><span class="sxs-lookup"><span data-stu-id="e1dd0-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
+# <a name="microsoftquantumamplitudeamplification-namespace"></a><span data-ttu-id="40d14-102">Espacio de nombres Microsoft. Quantum. AmplitudeAmplification</span><span class="sxs-lookup"><span data-stu-id="40d14-102">Microsoft.Quantum.AmplitudeAmplification namespace</span></span>
 
-<span data-ttu-id="e1dd0-103">Este espacio de nombres contiene funciones y operaciones para realizar amplificación de amplitud.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
+<span data-ttu-id="40d14-103">Este espacio de nombres contiene funciones y operaciones para realizar amplificación de amplitud.</span><span class="sxs-lookup"><span data-stu-id="40d14-103">This namespace contains functions and operations for performing amplitude amplification.</span></span>
 
 
 
-## <a name="description"></a><span data-ttu-id="e1dd0-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="e1dd0-104">Description</span></span>
+## <a name="description"></a><span data-ttu-id="40d14-104">Descripción</span><span class="sxs-lookup"><span data-stu-id="40d14-104">Description</span></span>
 
-<span data-ttu-id="e1dd0-105">La amplificación de amplitud desconocen con reflejos parciales es la forma más general de amplificación de amplitud implementada aquí.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
+<span data-ttu-id="40d14-105">La amplificación de amplitud desconocen con reflejos parciales es la forma más general de amplificación de amplitud implementada aquí.</span><span class="sxs-lookup"><span data-stu-id="40d14-105">Oblivious amplitude amplification with partial reflections is the most general form of amplitude amplification implemented here.</span></span>
 
-<span data-ttu-id="e1dd0-106">Esto se llama a través de la operación AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
+<span data-ttu-id="40d14-106">Esto se llama a través de la operación AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="40d14-106">This is called through the operation AmpAmpObliviousByReflectionPhases.</span></span>
 
-<span data-ttu-id="e1dd0-107">Tiene dos registros: `ancillaRegister` y `systemRegister` .</span><span class="sxs-lookup"><span data-stu-id="e1dd0-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
+<span data-ttu-id="40d14-107">Tiene dos registros: `ancillaRegister` y `systemRegister` .</span><span class="sxs-lookup"><span data-stu-id="40d14-107">This has two registers: `ancillaRegister` and `systemRegister`.</span></span>
 
-<span data-ttu-id="e1dd0-108">Esto acepta dos Oracle para estas reflexiones de tipo `ReflectionOracle` que solo actúan en el `ancillaRegister` registro.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
+<span data-ttu-id="40d14-108">Esto acepta dos Oracle para estas reflexiones de tipo `ReflectionOracle` que solo actúan en el `ancillaRegister` registro.</span><span class="sxs-lookup"><span data-stu-id="40d14-108">This accepts two oracles for these reflections of type `ReflectionOracle` which act only on the `ancillaRegister` register.</span></span>
 
-<span data-ttu-id="e1dd0-109">Esto acepta una amplificación de amplitud de Oracle especial a desconocen de tipo `ObliviousOracle` que actúa conjuntamente en ambos registros.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
+<span data-ttu-id="40d14-109">Esto acepta una amplificación de amplitud de Oracle especial a desconocen de tipo `ObliviousOracle` que actúa conjuntamente en ambos registros.</span><span class="sxs-lookup"><span data-stu-id="40d14-109">This accepts an oracle special to oblivious amplitude amplification of type `ObliviousOracle` which acts jointly on both register.</span></span>
 
-<span data-ttu-id="e1dd0-110">Se supone que el estado de entrada `ancillaRegister` es el único $-$1 eigenstate del primer operador de reflexión $I-2 \ les {s} \ Bra {s} $.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
+<span data-ttu-id="40d14-110">Se supone que el estado de entrada `ancillaRegister` es el único $-$1 eigenstate del primer operador de reflexión $I-2 \ les {s} \ Bra {s} $.</span><span class="sxs-lookup"><span data-stu-id="40d14-110">The input state to `ancillaRegister` is assumed to be the unique $-1$ eigenstate of the first reflection operator $I - 2\ket{s}\bra{s}$.</span></span>
 
-<span data-ttu-id="e1dd0-111">Las reflexiones sobre un estado de cuanto de destino se suelen implementar suponiendo el acceso a un Oracle que preparan ese estado de la base de cálculo $ \ket{0\cdots 0} $.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
+<span data-ttu-id="40d14-111">Las reflexiones sobre un estado de cuanto de destino se suelen implementar suponiendo el acceso a un Oracle que preparan ese estado de la base de cálculo $ \ket{0\cdots 0} $.</span><span class="sxs-lookup"><span data-stu-id="40d14-111">Reflections about a target quantum state are often implemented by assuming access to an oracle that prepare that state from the computational basis $\ket{0\cdots 0}$.</span></span>
 
-<span data-ttu-id="e1dd0-112">Nuestra Convención para estos Oracle requiere dos registros: un registro de un solo qubit `flagQubit` y un registro para todo lo demás en el registro de ancillaRegister.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
+<span data-ttu-id="40d14-112">Nuestra Convención para estos Oracle requiere dos registros: un registro de un solo qubit `flagQubit` y un registro para todo lo demás en el registro de ancillaRegister.</span><span class="sxs-lookup"><span data-stu-id="40d14-112">Our convention for these oracles requires two registers: a single-qubit `flagQubit` register, and a register for everything else on the ancillaRegister register.</span></span>
 
-<span data-ttu-id="e1dd0-113">Oracle de tipo `StateOracle` actúa conjuntamente en ambos registros para crear el estado de destino marcado por $ \ket {1} $ en el `flagQubit` registro con alguna amplitud real.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
+<span data-ttu-id="40d14-113">Oracle de tipo `StateOracle` actúa conjuntamente en ambos registros para crear el estado de destino marcado por $ \ket {1} $ en el `flagQubit` registro con alguna amplitud real.</span><span class="sxs-lookup"><span data-stu-id="40d14-113">The oracle of type `StateOracle` acts jointly on both registers to create the target state flagged by $\ket{1}$ in the `flagQubit` register with some real amplitude.</span></span>
 
-<span data-ttu-id="e1dd0-114">La `ReflectionOracle` operación genera la reflexión sobre el estado de esta marca `TargetStateReflectionOracle` .</span><span class="sxs-lookup"><span data-stu-id="e1dd0-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
+<span data-ttu-id="40d14-114">La `ReflectionOracle` operación genera la reflexión sobre el estado de esta marca `TargetStateReflectionOracle` .</span><span class="sxs-lookup"><span data-stu-id="40d14-114">The reflection `ReflectionOracle` about the this flag state is generated by the operation `TargetStateReflectionOracle`.</span></span>
 
-<span data-ttu-id="e1dd0-115">La reflexión `ReflectionOracle` sobre el estado de entrada en `ancillaRegister` se genera mediante el StateOracle de inversión y, a continuación, refleja aproximadamente $ \ket{0\cdots 0} $ con ReflectionStart ().</span><span class="sxs-lookup"><span data-stu-id="e1dd0-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
+<span data-ttu-id="40d14-115">La reflexión `ReflectionOracle` sobre el estado de entrada en `ancillaRegister` se genera mediante el StateOracle de inversión y, a continuación, refleja aproximadamente $ \ket{0\cdots 0} $ con ReflectionStart ().</span><span class="sxs-lookup"><span data-stu-id="40d14-115">The reflection `ReflectionOracle` about the input state to `ancillaRegister` is generated by the inverting StateOracle and then reflecting about $\ket{0\cdots 0}$ with ReflectionStart().</span></span>
 
-<span data-ttu-id="e1dd0-116">La Oracle de tipo `DeterministicStateOracle` actúa en los `qubitState` registros para crear el estado de destino exactamente sin ninguna marca.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
+<span data-ttu-id="40d14-116">La Oracle de tipo `DeterministicStateOracle` actúa en los `qubitState` registros para crear el estado de destino exactamente sin ninguna marca.</span><span class="sxs-lookup"><span data-stu-id="40d14-116">The oracle of type `DeterministicStateOracle` acts on the `qubitState` registers to create the target state exactly with no flag.</span></span>
 
-<span data-ttu-id="e1dd0-117">`AmpAmpObliviousByOraclePhases` es una versión de amplificación de amplitud de desconocen que acepta Oracle `StateOracle` y `ObliviousOracle` en lugar de reflejos.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
+<span data-ttu-id="40d14-117">`AmpAmpObliviousByOraclePhases` es una versión de amplificación de amplitud de desconocen que acepta Oracle `StateOracle` y `ObliviousOracle` en lugar de reflejos.</span><span class="sxs-lookup"><span data-stu-id="40d14-117">`AmpAmpObliviousByOraclePhases` is a version of oblivious amplitude amplification that accepts oracles `StateOracle` and `ObliviousOracle` instead of reflections.</span></span>
 
-<span data-ttu-id="e1dd0-118">Tenga en cuenta que la amplificación de amplitud es un caso especial de amplificación de amplitud de desconocen donde `ObliviousOracle` es el operador de identidad y no hay ningún qubits del sistema, es decir, `systemRegister` está vacío.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
+<span data-ttu-id="40d14-118">Tenga en cuenta que la amplificación de amplitud es un caso especial de amplificación de amplitud de desconocen donde `ObliviousOracle` es el operador de identidad y no hay ningún qubits del sistema, es decir, `systemRegister` está vacío.</span><span class="sxs-lookup"><span data-stu-id="40d14-118">Note that amplitude amplification is a special case of oblivious amplitude amplification where `ObliviousOracle` is the identity operator, and there are no system qubits i.e. `systemRegister` is empty.</span></span>
 
-<span data-ttu-id="e1dd0-119">Esto se llama a través de la operación `AmpAmByReflectionPhases` y `AmpAmpByOraclePhases` .</span><span class="sxs-lookup"><span data-stu-id="e1dd0-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
+<span data-ttu-id="40d14-119">Esto se llama a través de la operación `AmpAmByReflectionPhases` y `AmpAmpByOraclePhases` .</span><span class="sxs-lookup"><span data-stu-id="40d14-119">This is called through the operation `AmpAmByReflectionPhases` and `AmpAmpByOraclePhases`.</span></span>
 
-<span data-ttu-id="e1dd0-120">La función AmpAmpPhasesStandard proporciona las fases para las reflexiones parciales en el caso estándar de búsqueda de Grover.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
+<span data-ttu-id="40d14-120">La función AmpAmpPhasesStandard proporciona las fases para las reflexiones parciales en el caso estándar de búsqueda de Grover.</span><span class="sxs-lookup"><span data-stu-id="40d14-120">The phases for partial reflections in the standard case of Grover search is provided by the function AmpAmpPhasesStandard.</span></span>
 
-<span data-ttu-id="e1dd0-121">Por ejemplo, tenemos las siguientes dependencias: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="e1dd0-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
+<span data-ttu-id="40d14-121">Por ejemplo, tenemos las siguientes dependencias: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases.</span><span class="sxs-lookup"><span data-stu-id="40d14-121">For instance, we have the following dependencies: AmpAmpByOracle -> AmpAmpByOraclePhases -> AmpAmpObliviousByOraclePhases -> AmpAmpObliviousByReflectionPhases.</span></span>
