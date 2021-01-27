@@ -1,28 +1,28 @@
 ---
 title: 'Contador de ancho: kit de desarrollo de Quantum'
-description: 'Obtenga información sobre el contador de ancho de QDK de Microsoft, que usa el simulador de seguimiento de Quantum para contar el número de operaciones de qubits asignadas y prestadas por el Q# programa.'
+description: Obtenga información sobre el contador de ancho de QDK de Microsoft, que usa el simulador de seguimiento de Quantum para contar el número de operaciones de qubits asignadas y prestadas por el Q# programa.
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
-- 'Q#'
-- '$$v'
-ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+- Q#
+- $$v
+ms.openlocfilehash: e9a526ee1440544aace922bd83c6ea39cb83c1ae
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691117"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858588"
 ---
-# <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="39f92-103">Simulador de seguimiento de Quantum: contador de ancho</span><span class="sxs-lookup"><span data-stu-id="39f92-103">Quantum trace simulator: width counter</span></span>
+# <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="57cf7-103">Simulador de seguimiento de Quantum: contador de ancho</span><span class="sxs-lookup"><span data-stu-id="57cf7-103">Quantum trace simulator: width counter</span></span>
 
-<span data-ttu-id="39f92-104">El contador de ancho forma parte del [simulador de seguimiento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)del kit de desarrollo de Quantum.</span><span class="sxs-lookup"><span data-stu-id="39f92-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="39f92-105">Puede usarlo para contar el número de qubits asignados y prestados por cada operación en un Q# programa.</span><span class="sxs-lookup"><span data-stu-id="39f92-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="39f92-106">Algunas operaciones primitivas pueden asignar qubits adicionales, por ejemplo, las operaciones controladas de multiplicación `X` o `T` las operaciones controladas.</span><span class="sxs-lookup"><span data-stu-id="39f92-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
+<span data-ttu-id="57cf7-104">El contador de ancho forma parte del [simulador de seguimiento Quantum](xref:microsoft.quantum.machines.qc-trace-simulator.intro)del kit de desarrollo de Quantum.</span><span class="sxs-lookup"><span data-stu-id="57cf7-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="57cf7-105">Puede usarlo para contar el número de qubits asignados y prestados por cada operación en un Q# programa.</span><span class="sxs-lookup"><span data-stu-id="57cf7-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="57cf7-106">Algunas operaciones primitivas pueden asignar qubits adicionales, por ejemplo, las operaciones controladas de multiplicación `X` o `T` las operaciones controladas.</span><span class="sxs-lookup"><span data-stu-id="57cf7-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
 
-## <a name="invoking-the-width-counter"></a><span data-ttu-id="39f92-107">Invocar el contador de ancho</span><span class="sxs-lookup"><span data-stu-id="39f92-107">Invoking the width counter</span></span>
+## <a name="invoking-the-width-counter"></a><span data-ttu-id="57cf7-107">Invocar el contador de ancho</span><span class="sxs-lookup"><span data-stu-id="57cf7-107">Invoking the width counter</span></span>
 
-<span data-ttu-id="39f92-108">Para ejecutar el simulador de seguimiento de Quantum con el contador de ancho, debe crear una <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instancia de, establecer la `UseWidthCounter` propiedad en **true** y, a continuación, crear una nueva <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instancia de con `QCTraceSimulatorConfiguration` como parámetro.</span><span class="sxs-lookup"><span data-stu-id="39f92-108">To run the quantum trace simulator with the width counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseWidthCounter` property to **true** , and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+<span data-ttu-id="57cf7-108">Para ejecutar el simulador de seguimiento de Quantum con el contador de ancho, debe crear una <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instancia de, establecer la `UseWidthCounter` propiedad en **true** y, a continuación, crear una nueva <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instancia de con `QCTraceSimulatorConfiguration` como parámetro.</span><span class="sxs-lookup"><span data-stu-id="57cf7-108">To run the quantum trace simulator with the width counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set the `UseWidthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with the `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -30,9 +30,9 @@ config.UseWidthCounter = true;
 var sim = new QCTraceSimulator(config);
 ```
 
-## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="39f92-109">Usar el contador de ancho en un programa host de C#</span><span class="sxs-lookup"><span data-stu-id="39f92-109">Using the width counter in a C# host program</span></span>
+## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="57cf7-109">Usar el contador de ancho en un programa host de C#</span><span class="sxs-lookup"><span data-stu-id="57cf7-109">Using the width counter in a C# host program</span></span>
 
-<span data-ttu-id="39f92-110">En el ejemplo de C# que se muestra a continuación en esta sección se calcula el número de qubits adicionales asignados por la implementación de una operación controlada multiplicación <xref:Microsoft.Quantum.Intrinsic.X> , basándose en el Q# código de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="39f92-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following Q# sample code:</span></span>
+<span data-ttu-id="57cf7-110">En el ejemplo de C# que se muestra a continuación en esta sección se calcula el número de qubits adicionales asignados por la implementación de una operación controlada multiplicación <xref:Microsoft.Quantum.Intrinsic.X> , basándose en el Q# código de ejemplo siguiente:</span><span class="sxs-lookup"><span data-stu-id="57cf7-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-<span data-ttu-id="39f92-111">La operación de multiplicación controlada <xref:Microsoft.Quantum.Intrinsic.X> actúa en un total de cinco qubits, asigna dos [qubits auxiliares](xref:microsoft.quantum.glossary#ancilla)y tiene un ancho de entrada de **5** .</span><span class="sxs-lookup"><span data-stu-id="39f92-111">The multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation acts on a total of five qubits, allocates two [ancillary qubits](xref:microsoft.quantum.glossary#ancilla), and has an input width of **5** .</span></span> <span data-ttu-id="39f92-112">Use el siguiente programa de C# para comprobar los recuentos:</span><span class="sxs-lookup"><span data-stu-id="39f92-112">Use the following C# program to verify the counts:</span></span>
+<span data-ttu-id="57cf7-111">La operación de multiplicación controlada <xref:Microsoft.Quantum.Intrinsic.X> actúa en un total de cinco qubits, asigna dos [qubits auxiliares](xref:microsoft.quantum.glossary#ancilla)y tiene un ancho de entrada de **5**.</span><span class="sxs-lookup"><span data-stu-id="57cf7-111">The multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation acts on a total of five qubits, allocates two [ancillary qubits](xref:microsoft.quantum.glossary#ancilla), and has an input width of **5**.</span></span> <span data-ttu-id="57cf7-112">Use el siguiente programa de C# para comprobar los recuentos:</span><span class="sxs-lookup"><span data-stu-id="57cf7-112">Use the following C# program to verify the counts:</span></span>
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
@@ -64,16 +64,16 @@ double inputWidth =
         functor: OperationFunctor.Controlled);
 ```
 
-<span data-ttu-id="39f92-113">La primera parte del programa ejecuta la `ApplyMultiControlledX` operación.</span><span class="sxs-lookup"><span data-stu-id="39f92-113">The first part of the program runs the `ApplyMultiControlledX` operation.</span></span> <span data-ttu-id="39f92-114">La segunda parte usa el [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) método para recuperar el número de qubits asignados, así como el número de qubits que la `Controlled X` operación recibió como entrada.</span><span class="sxs-lookup"><span data-stu-id="39f92-114">The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of allocated qubits as well as the number of qubits that the `Controlled X` operation received as input.</span></span> 
+<span data-ttu-id="57cf7-113">La primera parte del programa ejecuta la `ApplyMultiControlledX` operación.</span><span class="sxs-lookup"><span data-stu-id="57cf7-113">The first part of the program runs the `ApplyMultiControlledX` operation.</span></span> <span data-ttu-id="57cf7-114">La segunda parte usa el [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) método para recuperar el número de qubits asignados, así como el número de qubits que la `Controlled X` operación recibió como entrada.</span><span class="sxs-lookup"><span data-stu-id="57cf7-114">The second part uses the [`QCTraceSimulator.GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the number of allocated qubits as well as the number of qubits that the `Controlled X` operation received as input.</span></span> 
 
-<span data-ttu-id="39f92-115">Por último, puede generar todas las estadísticas recopiladas por el contador de ancho en formato CSV con lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="39f92-115">Finally, you can output all the statistics collected by the width counter in CSV format using the following:</span></span>
+<span data-ttu-id="57cf7-115">Por último, puede generar todas las estadísticas recopiladas por el contador de ancho en formato CSV con lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="57cf7-115">Finally, you can output all the statistics collected by the width counter in CSV format using the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="39f92-116">Consulte también</span><span class="sxs-lookup"><span data-stu-id="39f92-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57cf7-116">Consulte también</span><span class="sxs-lookup"><span data-stu-id="57cf7-116">See also</span></span>
 
-- <span data-ttu-id="39f92-117">Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Quantum del kit de desarrollo de Quantum.</span><span class="sxs-lookup"><span data-stu-id="39f92-117">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
-- <span data-ttu-id="39f92-118">Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API.</span><span class="sxs-lookup"><span data-stu-id="39f92-118">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
-- <span data-ttu-id="39f92-119">Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API.</span><span class="sxs-lookup"><span data-stu-id="39f92-119">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
-- <span data-ttu-id="39f92-120">Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API.</span><span class="sxs-lookup"><span data-stu-id="39f92-120">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API reference.</span></span>
+- <span data-ttu-id="57cf7-117">Información general del [simulador de seguimiento](xref:microsoft.quantum.machines.qc-trace-simulator.intro) Quantum del kit de desarrollo de Quantum.</span><span class="sxs-lookup"><span data-stu-id="57cf7-117">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="57cf7-118">Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API.</span><span class="sxs-lookup"><span data-stu-id="57cf7-118">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="57cf7-119">Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API.</span><span class="sxs-lookup"><span data-stu-id="57cf7-119">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="57cf7-120">Referencia de la <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API.</span><span class="sxs-lookup"><span data-stu-id="57cf7-120">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.WidthCounter> API reference.</span></span>

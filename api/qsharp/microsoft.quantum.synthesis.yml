@@ -8,6 +8,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.Extended
 - summary: Calcula la transformación de Hadamard de una función booleana en {-1,1} la codificación mediante el método de yates
   uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: Por cada unitario de 2 niveles calcula "Flip Mask", que denota qubits, que debe invertirse antes y después de aplicar la puerta 1-qubit correspondiente. Para mayor comodidad, el resultado es 0.
+  uid: Microsoft.Quantum.Synthesis.FlipMasks
 - summary: Construye un tipo MCMTMask como una matriz singleton si los destinos no son 0; de lo contrario, devuelve una matriz vacía.
   uid: Microsoft.Quantum.Synthesis.GateMask
 - summary: Calcula hasta dos máscaras MCMT para transformar y en x.
@@ -20,6 +22,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.RMEncoding
 - summary: Ajusta la tabla de verdad de la matriz de valores booleanos de acuerdo con el número de variables que se devuelve una nueva matriz de longitud `2^numVars` , posiblemente requiriendo extender `table` el tamaño de `false` las entradas o truncarla en `2^numVars` elementos.
   uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: Comprueba que la matriz dada representa una matriz cuadrada.
+  uid: Microsoft.Quantum.Synthesis.SquareMatrixFact
 - summary: Máscaras de la puerta de proceso para sintetizar la permutación.
   uid: Microsoft.Quantum.Synthesis.TBSMain
 - summary: Calcula las máscaras de puerta para transformar Perm [x] a x y actualiza la permutación actual.
@@ -34,6 +38,8 @@ functions:
   uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 - summary: Insertar un bit de 0 en un entero
   uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis._TwoLevelDecomposition
 name: Microsoft.Quantum.Synthesis
 newtypes:
 - summary: Estado durante la descomposición en función de los índices de variable
@@ -54,8 +60,15 @@ operations:
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
 - summary: Permute las amplitudes en un estado de Quantum dada una permutación mediante la síntesis basada en la transformación.
   uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: Aplica una puerta qubit única definida por la matriz de la unitario de 2x2.
+  uid: Microsoft.Quantum.Synthesis.ApplySingleQubitUnitary
 - summary: ''
   uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: >-
+    Aplica la puerta definida por 2 ^ n x 2 ^ n matriz de unitarios.
+
+    Se produce un error si la matriz no es unitario o tiene un tamaño incorrecto.
+  uid: Microsoft.Quantum.Synthesis.ApplyUnitary
 - summary: Aplica la @"microsoft.quantum.intrinsic.x" operación en `target` , si la función booleana se `func` evalúa como true para la asignación clásica en `controlRegister` .
   uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
 - summary: Aplica la @"microsoft.quantum.intrinsic.x" operación en `target` , si la función booleana se `func` evalúa como true para la asignación clásica en `controlRegister` .
@@ -63,9 +76,9 @@ operations:
 summary: Este espacio de nombres contiene funciones y operaciones para sintetizar operaciones Quantum basadas en permutaciones y funciones booleanas.
 uid: Microsoft.Quantum.Synthesis
 metadata:
-  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: e238fdedcc931bb02c35591014d20b50b695b116
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92734204"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98855183"
