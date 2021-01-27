@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692049"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857205"
 ---
 # <a name="error-correction"></a>Corrección de errores #
 
@@ -61,7 +61,7 @@ Denotamos los resultados de cada medida por el signo del eigenvalue que se obser
 | $X _2 $ | $ \ket {001} $ | $ \ket {110} $ | $+$ | $-$ |
 
 Por lo tanto, los resultados de las dos medidas determinan de forma exclusiva qué error de volteo de bits se produjo, pero sin revelar ninguna información sobre el estado que hemos codificado.
-Llamamos a estos resultados como un *síndrome* y hacen referencia al proceso de asignación de un síndrome de vuelta al error que lo causó como *recuperación* .
+Llamamos a estos resultados como un *síndrome* y hacen referencia al proceso de asignación de un síndrome de vuelta al error que lo causó como *recuperación*.
 En concreto, hacemos hincapié en que la recuperación es un procedimiento de inferencia *clásico* que toma como entrada el síndrome que se produjo y devuelve una receta sobre cómo corregir los errores que se hayan producido.
 
 > [!NOTE]
@@ -70,7 +70,7 @@ En concreto, hacemos hincapié en que la recuperación es un procedimiento de in
 > Del mismo modo, si se aplica una operación de volteo de fase, `Z` se asignará $ \ket{\overline {1} } $ a $-\ket{\overline {1} } $ y, por lo tanto, se asignará $ \ket{\overline{+}} $ a $ \ket{\overline {-} } $.
 > En general, se pueden crear códigos para controlar un mayor número de errores y controlar $Z $ errores, así como $X errores $.
 
-La información que podemos describir medidas en la corrección de errores de Quantum que actúan de la misma manera en todos los Estados de código es la esencia del *formalismo de estabilizador* .
+La información que podemos describir medidas en la corrección de errores de Quantum que actúan de la misma manera en todos los Estados de código es la esencia del *formalismo de estabilizador*.
 La Q# Canon proporciona un marco para describir la codificación y la descodificación de los códigos del estabilizador, y para describir cómo se recupera de los errores.
 En esta sección, se describe este marco de trabajo y su aplicación para algunos códigos de corrección de errores de Quantum simples.
 
@@ -101,7 +101,7 @@ let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([
 let code = QECC(encodeOp, decodeOp, syndMeasOp);
 ```
 
-Observe que el `QECC` tipo no *not* incluye una función de recuperación.
+Observe que el `QECC` tipo no  incluye una función de recuperación.
 Esto nos permite cambiar la función de recuperación que se usa para corregir errores sin cambiar la definición del propio código; Esta capacidad es especialmente útil cuando se incorporan comentarios de medidas de caracterización en el modelo asumido por recuperación.
 
 Una vez que se define un código de esta manera, se puede usar la <xref:Microsoft.Quantum.ErrorCorrection.Recover> operación para recuperarse de errores:
