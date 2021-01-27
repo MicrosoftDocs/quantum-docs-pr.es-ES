@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.ResultStack
 title: Tipo definido por el usuario ResultStack
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,22 +10,22 @@ qsharp.summary: >-
   > [!WARNING]
 
   > ResultStack has been deprecated.
-ms.openlocfilehash: 239fd4b0b8540645541863874dd99c7aac4c5d12
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 69d7c972f3e7f753df24fa02c805e8368ec594c0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96205344"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840189"
 ---
-# <a name="resultstack-user-defined-type"></a><span data-ttu-id="21fcd-102">Tipo definido por el usuario ResultStack</span><span class="sxs-lookup"><span data-stu-id="21fcd-102">ResultStack user defined type</span></span>
+# <a name="resultstack-user-defined-type"></a><span data-ttu-id="ce38e-102">Tipo definido por el usuario ResultStack</span><span class="sxs-lookup"><span data-stu-id="ce38e-102">ResultStack user defined type</span></span>
 
-<span data-ttu-id="21fcd-103">Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="21fcd-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="ce38e-103">Espacio de nombres: [Microsoft. Quantum. Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="ce38e-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="21fcd-104">Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="21fcd-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="ce38e-104">Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="ce38e-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="21fcd-105">ResultStack está en desuso.</span><span class="sxs-lookup"><span data-stu-id="21fcd-105">ResultStack has been deprecated.</span></span>
+> <span data-ttu-id="ce38e-105">ResultStack está en desuso.</span><span class="sxs-lookup"><span data-stu-id="ce38e-105">ResultStack has been deprecated.</span></span>
 
 
 
