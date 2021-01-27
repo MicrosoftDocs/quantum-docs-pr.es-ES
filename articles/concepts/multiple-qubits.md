@@ -1,6 +1,6 @@
 ---
 Título: varias qubits Descripción: Obtenga información sobre cómo realizar operaciones en dos o más qubits.
-Autor: bradben UID: Microsoft. Quantum. Concepts. Multiple-qubits ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: article no-LOC:
+Autor: bradben UID: Microsoft. Quantum. Concepts. Multiple-qubits ms. Author: v-benbra ms. Date: 12/11/2017 ms. topic: conceptual no-LOC:
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@ Esto se debe a que la base de cálculo de los Estados de dos qubit está formada
 Es fácil ver que, en general, el estado del Quantum de $ n $ qubits se representa mediante un vector de unidad de $ la dimensión 2 ^ n que $ usa esta construcción.  Vector
 
 $$
-\begin{bmatrix}\alpha _ { 00 } 01 \\\\ 10 \alpha   _ { } \\\\ \alpha _ { 11 } \\\\ \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ 00 } 01 \\\\ 10 \alpha_ { } \\\\ \alpha _{ 11 } \\\\ \alpha_ { }  \end{bmatrix}
 $$
 
-representa un estado de Quantum en dos qubits si $ | \alpha _ { 00 } | ^ 2 | \alpha +_ { 01 } | ^ 2 + | \alpha _ { 10 } | ^ 2 | \alpha +_ { 11 } | ^ 2 = 1 $ . Del mismo modo que con un solo qubits, el vector de estado Quantum de varios qubits contiene toda la información necesaria para describir el comportamiento del sistema.
+representa un estado de Quantum en dos qubits si $ | \alpha _{ 00 } | ^ 2 | \alpha +_ { 01 } | ^ 2 + | \alpha _{ 10 } | ^ 2 | \alpha +_ { 11 } | ^ 2 = 1 $ . Del mismo modo que con un solo qubits, el vector de estado Quantum de varios qubits contiene toda la información necesaria para describir el comportamiento del sistema.
 
 Si se proporcionan dos qubits independientes, uno en el estado $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ y un segundo qubit en el estado $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ , el estado de dos qubit correspondiente es    
 
@@ -124,22 +124,22 @@ $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt {
 
 Este estado de dos qubit, que no se puede escribir como el producto tensores de los Estados de qubit único, se denomina "estado de inscrito". [*se dice*](https://en.wikipedia.org/wiki/Quantum_entanglement)que los dos qubits están inscritos.  Hablando de forma flexible, dado que el estado del Quantum no se puede considerar como un producto tensores de Estados de qubit únicos, la información que el estado contiene no se limita a ninguno de los qubits individualmente.  En su lugar, la información se almacena de forma no local en las correlaciones entre los dos Estados.  Este no emplazamiento de la información es una de las principales características distintivas de la informática Quantum en la informática clásica y es esencial para varios protocolos Quantum, como la [teleportabilidad de Quantum](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) y la [corrección de errores de Quantum](xref:microsoft.quantum.libraries.error-correction).
 
-## <a name="measuring-two-qubit-states"></a>Medición de Estados de dos qubit ##
+## <a name="measuring-two-qubit-states"></a>Medición de Estados de Two-Qubit ##
 Medir los Estados de dos qubit es muy similar a las mediciones de un solo qubit. Medir el estado
 
 $$
     \begin{bmatrix}
-        \alpha_ { 00 } 01 \\\\ \alpha _ { }\\\\ 
-        \alpha_ { 10 } 11 \\\\ \alpha _ {}
+        \alpha_{ 00 } 01 \\\\ \alpha_ { }\\\\ 
+        \alpha_{ 10 } 11 \\\\ \alpha_ {}
     \end{bmatrix}
 $$
 
-produce $ 00 $ con probabilidad $ | \alpha _ { 00 } | ^ 2 $ , $ 01 $ con probabilidad $ | 01 \alpha _ { } | ^ 2 $ , $ 10 $ con probabilidad $ | \alpha _ { 10 } | ^ 2 $ y $ 11 $ con $ probabilidad | 11 \alpha _ { } | ^ 2 $ . Las variables $ \alpha _ { 00 } , \alpha _ { 01 } , \alpha _ { 10 } $ y $ 11 \alpha _ { } $ se denominaron deliberadamente para que esta conexión resulte clara. Después de la medición, si el resultado es $ 00 $ , el estado de cuanto del sistema de dos qubit se ha contraído y ahora es
+produce $ 00 $ con probabilidad $ | \alpha _{ 00 } | ^ 2 $ , $ 01 $ con probabilidad $ | 01 \alpha_ { } | ^ 2 $ , $ 10 $ con probabilidad $ | \alpha _{ 10 } | ^ 2 $ y $ 11 $ con $ probabilidad | 11 \alpha_ { } | ^ 2 $ . Las variables $ \alpha _{ 00 } , \alpha_ { 01 } , \alpha _{ 10 } $ y $ 11 \alpha_ { } $ se denominaron deliberadamente para que esta conexión resulte clara. Después de la medición, si el resultado es $ 00 $ , el estado de cuanto del sistema de dos qubit se ha contraído y ahora es
 
 $$
     0 \equiv
     \begin{bmatrix}
-        dimensional \\\\ 
+        1 \\\\ 
         0,1 \\\\ 
         0,1 \\\\ 
         0 \end{bmatrix} .
@@ -193,7 +193,7 @@ $$
 
 de nuevo de acuerdo con nuestro Intuition.
 
-## <a name="two-qubit-operations"></a>Dos operaciones de qubit
+## <a name="two-qubit-operations"></a>Operaciones de Two-Qubit
 Como en el caso de una sola qubit, cualquier transformación unitario es una operación válida en qubits. En general, una transformación unitario en $ n $ qubits es una matriz $ U $ de tamaño $ 2 ^ n \times 2 ^ n $ (para que actúe en vectores de tamaño $ 2 ^ n $ ), de modo que $ u ^ { -1 } = u ^ \dagger $ .
 Por ejemplo, la puerta CNOT (controlada-NOT) es una puerta de dos qubits de uso frecuente y se representa mediante la siguiente matriz de unitario:
 
@@ -240,7 +240,7 @@ Las puertas también se pueden controlar mediante información clásica.  Por ej
 Como en el caso de un solo qubit, un conjunto de puertas de dos qubit es universal si cualquier $ \times $ matriz de 4 4 unitarios se puede aproximar mediante un producto de las puertas de este conjunto a una precisión arbitraria.
 Un ejemplo de un conjunto de puerta universal es la puerta Hadamard, la puerta T y la puerta CNOT. Mediante la toma de los productos de estas puertas, podemos aproximar cualquier matriz de unitarios en dos qubits.
 
-## <a name="many-qubit-systems"></a>Muchos sistemas qubit
+## <a name="many-qubit-systems"></a>Sistemas Many-Qubit
 Seguimos exactamente los mismos patrones explorados en el caso de dos qubit para compilar los Estados de Quantum de varios qubit desde sistemas más pequeños.  Estos Estados se crean formando productos tensores de Estados más pequeños.  Por ejemplo, considere la posibilidad de codificar la cadena $ de bits 1011001 $ en un equipo Quantum.  Podemos codificarlo como
 
 $$

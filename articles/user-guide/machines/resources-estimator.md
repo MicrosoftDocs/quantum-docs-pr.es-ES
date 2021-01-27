@@ -1,20 +1,20 @@
 ---
 title: 'Estimador de recursos Quantum: kit de desarrollo de Quantum'
 description: Obtenga información sobre el estimador de recursos QDK de Microsoft, que estima los recursos necesarios para ejecutar una instancia determinada de una Q# operación en un equipo Quantum.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604650"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847459"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimador de recursos del kit de desarrollo de Quantum (QDK)
 
@@ -123,14 +123,14 @@ namespace Quantum.MyProgram
 
 El estimador de recursos realiza un seguimiento de las métricas siguientes:
 
-|Métrica|Descripción|
+|Metric|Descripción|
 |----|----|
 |__CNOT__    |Recuento de ejecuciones de `CNOT` operaciones (también conocidas como operaciones Pauli X controladas).|
 |__QubitClifford__ |El recuento de ejecuciones de todas las operaciones qubit Clifford y Pauli.|
 |__Medida__    |Recuento de ejecuciones de cualquier medida.  |
 |__R__    |Recuento de ejecuciones de cualquier rotación de un solo qubit, excluidas `T` las operaciones Clifford y Pauli.  |
 |__T__    |El recuento de ejecuciones de `T` operaciones y sus conjugaciones, incluidas las `T` operaciones, T_x = H. T. h y T_y = HY. t. HY.  |
-|__Profundidad__|Profundidad del circuito de Quantum ejecutado por la Q# operación (vea [más abajo](#depth-width-and-qubitcount)). De forma predeterminada, la métrica de profundidad solo cuenta las `T` puertas. Para obtener más información, vea [contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
+|__Depth__|Profundidad del circuito de Quantum ejecutado por la Q# operación (vea [más abajo](#depth-width-and-qubitcount)). De forma predeterminada, la métrica de profundidad solo cuenta las `T` puertas. Para obtener más información, vea [contador de profundidad](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter).   |
 |__Width__|Ancho del circuito de Quantum ejecutado por la Q# operación (vea [más abajo](#depth-width-and-qubitcount)). De forma predeterminada, la métrica de profundidad solo cuenta las `T` puertas. Para obtener más información, vea [contador de ancho](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
 |__QubitCount__    |Límite inferior para el número máximo de qubits asignado durante la ejecución de la Q# operación. Es posible que esta métrica no sea compatible con la __profundidad__ (consulte a continuación).  |
 |__BorrowedWidth__    |Número máximo de qubits prestado dentro de la Q# operación.  |
@@ -143,8 +143,8 @@ Las estimaciones de profundidad y ancho detectadas son compatibles entre sí.
 
 Se muestran las siguientes métricas:
 
-__Profundidad:__ Para la operación raíz: tiempo que se tarda en ejecutarse suponiendo tiempos de puerta específicos.
-Para las operaciones a las que se llama o la diferencia de tiempo de operación posterior entre la última hora de disponibilidad de qubit al principio y el final de la operación.
+__Profundidad:__ Para la operación raíz: tiempo que se tarda en ejecutarse, suponiendo que las horas de la puerta estén configuradas.
+Para las operaciones a las que se llama o la diferencia de tiempo de operaciones posterior entre la última hora de disponibilidad de qubit al principio y el final de la operación.
 
 __Ancho:__ Para la operación raíz: el número de qubits que se usa realmente para ejecutarlo (y la operación a la que llama).
 En el caso de las operaciones llamadas o las operaciones posteriores, el número de qubits que se usaron además de los qubits ya usados al principio de la operación.
@@ -157,9 +157,9 @@ En el caso de las operaciones llamadas o posteriores: número mínimo de qubits 
 
 Se admiten dos modos de operación. El modo se selecciona estableciendo QCTraceSimulatorConfiguration. OptimizeDepth.
 
-__OptimizeDepth = true:__ QubitManager se desaconseja de la reutilización de qubit y asigna un nuevo qubit cada vez que se le pide una qubit. Para la __profundidad__ de la operación raíz se convierte en la profundidad mínima (límite inferior). Se ha proporcionado un __ancho__ compatible para esta profundidad (ambos se pueden lograr al mismo tiempo). Tenga en cuenta que es probable que este ancho no sea óptimo dado esta profundidad. __QubitCount__ puede ser menor que el ancho de la operación raíz porque supone reutilización.
+__OptimizeDepth = false:__ Este es el modo predeterminado. Se recomienda a QubitManager reutilizar qubits y volverá a usar qubits liberado antes de asignar nuevos. El __ancho__ de la operación raíz se convierte en el ancho mínimo (límite inferior). Se registra la __profundidad__ compatible en la que se puede lograr. __QubitCount__ será el mismo que el __ancho__ de la operación raíz, suponiendo que no haya ningún préstamo.
 
-__OptimizeDepth = false:__ Se recomienda a QubitManager reutilizar qubits y volverá a usar qubits liberado antes de asignar nuevos. El __ancho__ de la operación raíz se convierte en el ancho mínimo (límite inferior). Se registra la __profundidad__ compatible en la que se puede lograr. __QubitCount__ será el mismo que el __ancho__ de la operación raíz, suponiendo que no haya ningún préstamo.
+__OptimizeDepth = true:__ QubitManager se desaconseja de la reutilización de qubit y la optimización basada en la heurística para la reutilización de qubit se realiza durante y después de la ejecución. Para la __profundidad__ de la operación raíz se convierte en la profundidad mínima (límite inferior). Se ha proporcionado un __ancho__ compatible para esta profundidad (ambos se pueden lograr al mismo tiempo). Para optimizar el ancho, las puertas que se encuentran más adelante en el programa pueden programarse antes de que las puertas se encuentren con anterioridad en el programa, pero las qubits están programadas para reutilizarlas de forma que la profundidad siga siendo mínima. Como qubits se reutilizan en función de los valores de tiempo, se recomienda que las horas de la puerta se configuren como valores enteros. No se garantiza que el __ancho__ sea óptimo. Puede encontrar más información en la [profundidad y el ancho del documento en el seguimiento](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs).
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Probabilidad de los resultados de una medición
 

@@ -4,17 +4,17 @@ description: Obtenga información sobre cómo aportar contenido conceptual o de 
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691778"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857353"
 ---
 # <a name="improving-documentation"></a>Mejora de la documentación
 
@@ -54,6 +54,19 @@ Si desea incluir código del [repositorio de ejemplos](https://github.com/Micros
 
 Este comando importará las líneas 4 a 8 del [ `Game.qs` archivo del `chsh-game` ejemplo](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs), y las marcará como Q# código con el fin de resaltar la sintaxis.
 Con este comando, puede evitar la duplicación de código entre los artículos conceptuales y el repositorio de ejemplos, de modo que el código de ejemplo de la documentación esté siempre tan actualizado como sea posible.
+
+### <a name="contributing-image-files"></a>Archivos de imagen contribuyentes
+
+**Importante**: para que las imágenes se representen correctamente en modo oscuro, debe evitar las transparencias.
+
+- Para archivos. jpg. no es necesario hacer nada, ya que el formato. jpg no admite elementos transparentes.
+- En el caso de los archivos. png, debe agregar un fondo blanco o cambiar el valor del canal alfa a **100**. La forma más fácil de hacerlo en Windows es abrir el archivo en **Paint** y guardarlo, sobrescribiendo el archivo original.
+- En el caso de los archivos. SVG, debe agregar un rectángulo blanco en la capa inferior. Puede hacerlo con **Inkscape**:
+  1. Abra el archivo. svg.
+  1. Seleccione la herramienta creador cuadrado y dibuje un rectángulo blanco encima de la figura original.
+  1. Seleccione la herramienta **seleccionar y transformar objetos** ; para ello, haga clic en la flecha oscura o presione **F1**.
+  1. Con el rectángulo seleccionado, haga clic en el elemento de la barra de herramientas en la **parte inferior (final)**.
+  1. Ajuste el rectángulo con el mouse o con las teclas de dirección.
 
 ## <a name="contributing-to-the-api-references"></a>Contribución a las referencias de API
 

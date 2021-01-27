@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Simulation._PauliBlockEncoding
 title: _PauliBlockEncoding función)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
@@ -10,12 +10,12 @@ qsharp.summary: >-
   Creates a block-encoding unitary for a Hamiltonian.
 
   The Hamiltonian $H=\sum_{j}\alpha_j P_j$ is described by a sum of Pauli terms $P_j$, each with real coefficient $\alpha_j$.
-ms.openlocfilehash: 6ad3e692f68ec2d405e19a7e467ef8fe33d449fc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c27ef1a6b7cd7c84defe2a783e9fb1610e52d1e7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96225574"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851077"
 ---
 # <a name="_pauliblockencoding-function"></a>_PauliBlockEncoding función)
 
@@ -40,7 +40,7 @@ function _PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.Gen
 `GeneratorSystem`Que describe $H $ como suma de los términos de Pauli
 
 
-### <a name="stateprepunitary--double---littleendian--unit--is-adj--ctl"></a>statePrepUnitary: [Double](xref:microsoft.quantum.lang-ref.double)[]-> [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [unidad](xref:microsoft.quantum.lang-ref.unit) LittleEndian es ADJ + CTL
+### <a name="stateprepunitary--double---littleendian--unit--is-adj--ctl"></a>statePrepUnitary: [Double](xref:microsoft.quantum.lang-ref.double)[]-> [](xref:Microsoft.Quantum.Arithmetic.LittleEndian) => [unidad](xref:microsoft.quantum.lang-ref.unit) LittleEndian es ADJ + CTL
 
 Operación unitario $V $ que aplica la $V unitario _j $ controlada en el índice $ \ket{j} $, dada una función $f: j\rightarrow V_j $.
 
