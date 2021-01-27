@@ -1,41 +1,41 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerFermionFunction
 title: JordanWignerFermionFunction función)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: JordanWignerFermionFunction
 qsharp.summary: Represents a dynamical generator as a set of simulatable gates and an expansion in the JordanWigner basis.
-ms.openlocfilehash: e1eeed0dcd4084401e2680ff1188db4225ee85ca
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a1c0b56e18f3adfb6c413880cc0c155741a3255a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96214762"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98838871"
 ---
-# <a name="jordanwignerfermionfunction-function"></a><span data-ttu-id="42d30-102">JordanWignerFermionFunction función)</span><span class="sxs-lookup"><span data-stu-id="42d30-102">JordanWignerFermionFunction function</span></span>
+# <a name="jordanwignerfermionfunction-function"></a><span data-ttu-id="4c156-102">JordanWignerFermionFunction función)</span><span class="sxs-lookup"><span data-stu-id="4c156-102">JordanWignerFermionFunction function</span></span>
 
-<span data-ttu-id="42d30-103">Espacio de nombres: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="42d30-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
+<span data-ttu-id="4c156-103">Espacio de nombres: [Microsoft. Quantum. química. JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span><span class="sxs-lookup"><span data-stu-id="4c156-103">Namespace: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)</span></span>
 
-<span data-ttu-id="42d30-104">Paquete: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="42d30-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
+<span data-ttu-id="4c156-104">Paquete: [Microsoft. Quantum. química](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span><span class="sxs-lookup"><span data-stu-id="4c156-104">Package: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)</span></span>
 
 
-<span data-ttu-id="42d30-105">Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de JordanWigner.</span><span class="sxs-lookup"><span data-stu-id="42d30-105">Represents a dynamical generator as a set of simulatable gates and an expansion in the JordanWigner basis.</span></span>
+<span data-ttu-id="4c156-105">Representa un generador dinámico como un conjunto de puertas simulables y una expansión en la base de JordanWigner.</span><span class="sxs-lookup"><span data-stu-id="4c156-105">Represents a dynamical generator as a set of simulatable gates and an expansion in the JordanWigner basis.</span></span>
 
 ```qsharp
 function JordanWignerFermionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.EvolutionUnitary
 ```
 
 
-## <a name="input"></a><span data-ttu-id="42d30-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="42d30-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="4c156-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="4c156-106">Input</span></span>
 
-### <a name="generatorindex--generatorindex"></a><span data-ttu-id="42d30-107">generatorIndex: [generatorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="42d30-107">generatorIndex : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
+### <a name="generatorindex--generatorindex"></a><span data-ttu-id="4c156-107">generatorIndex: [generatorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span><span class="sxs-lookup"><span data-stu-id="4c156-107">generatorIndex : [GeneratorIndex](xref:Microsoft.Quantum.Simulation.GeneratorIndex)</span></span>
 
-<span data-ttu-id="42d30-108">Índice de generador que se va a representar como una evolución de la unitario en el JordanWigner.</span><span class="sxs-lookup"><span data-stu-id="42d30-108">A generator index to be represented as unitary evolution in the JordanWigner.</span></span>
+<span data-ttu-id="4c156-108">Índice de generador que se va a representar como una evolución de la unitario en el JordanWigner.</span><span class="sxs-lookup"><span data-stu-id="4c156-108">A generator index to be represented as unitary evolution in the JordanWigner.</span></span>
 
 
 
-## <a name="output--evolutionunitary"></a><span data-ttu-id="42d30-109">Salida: [EvolutionUnitary](xref:Microsoft.Quantum.Simulation.EvolutionUnitary)</span><span class="sxs-lookup"><span data-stu-id="42d30-109">Output : [EvolutionUnitary](xref:Microsoft.Quantum.Simulation.EvolutionUnitary)</span></span>
+## <a name="output--evolutionunitary"></a><span data-ttu-id="4c156-109">Salida: [EvolutionUnitary](xref:Microsoft.Quantum.Simulation.EvolutionUnitary)</span><span class="sxs-lookup"><span data-stu-id="4c156-109">Output : [EvolutionUnitary](xref:Microsoft.Quantum.Simulation.EvolutionUnitary)</span></span>
 
-<span data-ttu-id="42d30-110">`EvolutionUnitary`Que representa la evolución del tiempo por el término al que se hace referencia en ' generatorIndex.</span><span class="sxs-lookup"><span data-stu-id="42d30-110">An `EvolutionUnitary` representing time-evolution by the term referenced in \`generatorIndex.</span></span>
+<span data-ttu-id="4c156-110">`EvolutionUnitary`Que representa la evolución del tiempo por el término al que se hace referencia en ' generatorIndex.</span><span class="sxs-lookup"><span data-stu-id="4c156-110">An `EvolutionUnitary` representing time-evolution by the term referenced in \`generatorIndex.</span></span>
