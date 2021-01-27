@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ReversedOpLECA
 title: ReversedOpLECA función)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ReversedOpLECA
 qsharp.summary: Given an operation that takes a little-endian input, returns a new operation that takes a big-endian input.
-ms.openlocfilehash: c058243db2b4cee3a72e025b084b4f98f7020a6b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: d4245437f2b71abb8bf1bbe4db43ae7d2ee23799
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222072"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845748"
 ---
 # <a name="reversedopleca-function"></a>ReversedOpLECA función)
 
@@ -30,13 +30,13 @@ function ReversedOpLECA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--littleendian--unit--is-adj--ctl"></a>OP: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) la => [unidad](xref:microsoft.quantum.lang-ref.unit) LittleEndian es ADJ + CTL
+### <a name="op--littleendian--unit--is-adj--ctl"></a>OP: [](xref:Microsoft.Quantum.Arithmetic.LittleEndian) la => [unidad](xref:microsoft.quantum.lang-ref.unit) LittleEndian es ADJ + CTL
 
 Operación cuya entrada se va a invertir.
 
 
 
-## <a name="output--bigendian--unit--is-adj--ctl"></a>Salida: [BigEndian](xref:Microsoft.Quantum.Arithmetic.BigEndian) la => [unidad](xref:microsoft.quantum.lang-ref.unit) bigEndian es ADJ + CTL
+## <a name="output--bigendian--unit--is-adj--ctl"></a>Salida: [](xref:Microsoft.Quantum.Arithmetic.BigEndian) la => [unidad](xref:microsoft.quantum.lang-ref.unit) bigEndian es ADJ + CTL
 
 Nueva operación que acepta su entrada como registro Big-Endian.
 
