@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.AmpAmpByOracle
 title: AmpAmpByOracle función)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
@@ -14,24 +14,24 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".
-ms.openlocfilehash: bd9cb0ae54d6b09a1945df80b6c62c1e966fd282
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 27775b35523522298cbca5d6d1e3c36ea24acf97
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191829"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844021"
 ---
-# <a name="ampampbyoracle-function"></a><span data-ttu-id="1dd0a-102">AmpAmpByOracle función)</span><span class="sxs-lookup"><span data-stu-id="1dd0a-102">AmpAmpByOracle function</span></span>
+# <a name="ampampbyoracle-function"></a><span data-ttu-id="b88e2-102">AmpAmpByOracle función)</span><span class="sxs-lookup"><span data-stu-id="b88e2-102">AmpAmpByOracle function</span></span>
 
-<span data-ttu-id="1dd0a-103">Espacio de nombres: [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)</span><span class="sxs-lookup"><span data-stu-id="1dd0a-103">Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)</span></span>
+<span data-ttu-id="b88e2-103">Espacio de nombres: [Microsoft. Quantum. AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)</span><span class="sxs-lookup"><span data-stu-id="b88e2-103">Namespace: [Microsoft.Quantum.AmplitudeAmplification](xref:Microsoft.Quantum.AmplitudeAmplification)</span></span>
 
-<span data-ttu-id="1dd0a-104">Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="1dd0a-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="b88e2-104">Paquete: [Microsoft. Quantum. Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="b88e2-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 > [!WARNING]
-> <span data-ttu-id="1dd0a-105">AmpAmpByOracle está en desuso.</span><span class="sxs-lookup"><span data-stu-id="1dd0a-105">AmpAmpByOracle has been deprecated.</span></span> <span data-ttu-id="1dd0a-106">Use <xref:Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification> en su lugar.</span><span class="sxs-lookup"><span data-stu-id="1dd0a-106">Please use <xref:Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification> instead.</span></span>
+> <span data-ttu-id="b88e2-105">AmpAmpByOracle está en desuso.</span><span class="sxs-lookup"><span data-stu-id="b88e2-105">AmpAmpByOracle has been deprecated.</span></span> <span data-ttu-id="b88e2-106">Use <xref:Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification> en su lugar.</span><span class="sxs-lookup"><span data-stu-id="b88e2-106">Please use <xref:Microsoft.Quantum.AmplitudeAmplification.StandardAmplitudeAmplification> instead.</span></span>
 >
-> <span data-ttu-id="1dd0a-107">Use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".</span><span class="sxs-lookup"><span data-stu-id="1dd0a-107">Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".</span></span>
+> <span data-ttu-id="b88e2-107">Use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".</span><span class="sxs-lookup"><span data-stu-id="b88e2-107">Please use @"microsoft.quantum.amplitudeamplification.standardamplitudeamplification".</span></span>
 
 
 
@@ -40,23 +40,23 @@ function AmpAmpByOracle (nIterations : Int, stateOracle : Microsoft.Quantum.Orac
 ```
 
 
-## <a name="input"></a><span data-ttu-id="1dd0a-108">Entrada</span><span class="sxs-lookup"><span data-stu-id="1dd0a-108">Input</span></span>
+## <a name="input"></a><span data-ttu-id="b88e2-108">Entrada</span><span class="sxs-lookup"><span data-stu-id="b88e2-108">Input</span></span>
 
-### <a name="niterations--int"></a><span data-ttu-id="1dd0a-109">nIterations: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="1dd0a-109">nIterations : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
-
-
-### <a name="stateoracle--stateoracle"></a><span data-ttu-id="1dd0a-110">stateOracle: [stateOracle](xref:Microsoft.Quantum.Oracles.StateOracle)</span><span class="sxs-lookup"><span data-stu-id="1dd0a-110">stateOracle : [StateOracle](xref:Microsoft.Quantum.Oracles.StateOracle)</span></span>
+### <a name="niterations--int"></a><span data-ttu-id="b88e2-109">nIterations: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="b88e2-109">nIterations : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
-### <a name="idxflagqubit--int"></a><span data-ttu-id="1dd0a-111">idxFlagQubit: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="1dd0a-111">idxFlagQubit : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="stateoracle--stateoracle"></a><span data-ttu-id="b88e2-110">stateOracle: [stateOracle](xref:Microsoft.Quantum.Oracles.StateOracle)</span><span class="sxs-lookup"><span data-stu-id="b88e2-110">stateOracle : [StateOracle](xref:Microsoft.Quantum.Oracles.StateOracle)</span></span>
+
+
+
+
+### <a name="idxflagqubit--int"></a><span data-ttu-id="b88e2-111">idxFlagQubit: [int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="b88e2-111">idxFlagQubit : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
 
 
-## <a name="output--qubit--unit--is-adj--ctl"></a><span data-ttu-id="1dd0a-112">Output: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] = la [unidad](xref:microsoft.quantum.lang-ref.unit) > es ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="1dd0a-112">Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
+## <a name="output--qubit--unit--is-adj--ctl"></a><span data-ttu-id="b88e2-112">Output: [qubit](xref:microsoft.quantum.lang-ref.qubit)[] = la [unidad](xref:microsoft.quantum.lang-ref.unit) > es ADJ + CTL</span><span class="sxs-lookup"><span data-stu-id="b88e2-112">Output : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
