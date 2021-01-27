@@ -4,33 +4,33 @@ description: Introducción al paquete de aprendizaje automático cuántico
 author: QuantumWriter
 ms.author: alexeib
 ms.date: 12/5/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machine-learning.concepts.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 321901a7976e4633a672495827c27c5f1645ad30
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1e36948a216a06d76b99cd451bbfac6f5defd7c8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835696"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858789"
 ---
-# <a name="introduction-to-the-quantum-machine-learning-library"></a><span data-ttu-id="b1097-103">Introducción a la biblioteca de aprendizaje automático cuántico</span><span class="sxs-lookup"><span data-stu-id="b1097-103">Introduction to the Quantum Machine Learning Library</span></span>
+# <a name="introduction-to-the-quantum-machine-learning-library"></a><span data-ttu-id="38eaa-103">Introducción a la biblioteca de aprendizaje automático cuántico</span><span class="sxs-lookup"><span data-stu-id="38eaa-103">Introduction to the Quantum Machine Learning Library</span></span>
 
-<span data-ttu-id="b1097-104">La biblioteca de aprendizaje automático cuántico es una API escrita en Q# que ofrece la posibilidad de ejecutar experimentos de aprendizaje automático híbridos clásicos y cuánticos.</span><span class="sxs-lookup"><span data-stu-id="b1097-104">The Quantum Machine Learning Library is an API, written in Q#, that gives you the ability to run hybrid quantum/classical machine learning experiments.</span></span> <span data-ttu-id="b1097-105">La biblioteca permite:</span><span class="sxs-lookup"><span data-stu-id="b1097-105">The library gives you the ability to:</span></span>
+<span data-ttu-id="38eaa-104">La biblioteca de aprendizaje automático cuántico es una API escrita en Q# que ofrece la posibilidad de ejecutar experimentos de aprendizaje automático híbridos clásicos y cuánticos.</span><span class="sxs-lookup"><span data-stu-id="38eaa-104">The Quantum Machine Learning Library is an API, written in Q#, that gives you the ability to run hybrid quantum/classical machine learning experiments.</span></span> <span data-ttu-id="38eaa-105">La biblioteca permite:</span><span class="sxs-lookup"><span data-stu-id="38eaa-105">The library gives you the ability to:</span></span>
 
-- <span data-ttu-id="b1097-106">Cargar sus propios datos para clasificarlos con simuladores cuánticos.</span><span class="sxs-lookup"><span data-stu-id="b1097-106">Load your own data to classify with quantum simulators</span></span>
+- <span data-ttu-id="38eaa-106">Cargar sus propios datos para clasificarlos con simuladores cuánticos.</span><span class="sxs-lookup"><span data-stu-id="38eaa-106">Load your own data to classify with quantum simulators</span></span>
 
-- <span data-ttu-id="b1097-107">Usar ejemplos y tutoriales para introducirse en el campo del aprendizaje automático cuántico.</span><span class="sxs-lookup"><span data-stu-id="b1097-107">Use samples and tutorials to get introduced to the field of quantum machine learning</span></span>
+- <span data-ttu-id="38eaa-107">Usar ejemplos y tutoriales para introducirse en el campo del aprendizaje automático cuántico.</span><span class="sxs-lookup"><span data-stu-id="38eaa-107">Use samples and tutorials to get introduced to the field of quantum machine learning</span></span>
 
-<span data-ttu-id="b1097-108">Es de esperar un rendimiento bajo en comparación con las plataformas de aprendizaje automático clásicas actuales (recuerde que todo se ejecuta en la simulación de un dispositivo cuántico, que ya es costoso desde el punto de vista del cálculo).</span><span class="sxs-lookup"><span data-stu-id="b1097-108">You can expect low performance compared to current classical machine learning frameworks (remember that everything is running on top of the simulation of a quantum device that is already computationally expensive).</span></span>
+<span data-ttu-id="38eaa-108">Es de esperar un rendimiento bajo en comparación con las plataformas de aprendizaje automático clásicas actuales (recuerde que todo se ejecuta en la simulación de un dispositivo cuántico, que ya es costoso desde el punto de vista del cálculo).</span><span class="sxs-lookup"><span data-stu-id="38eaa-108">You can expect low performance compared to current classical machine learning frameworks (remember that everything is running on top of the simulation of a quantum device that is already computationally expensive).</span></span>
 
-<span data-ttu-id="b1097-109">El objetivo de este documento es:</span><span class="sxs-lookup"><span data-stu-id="b1097-109">The purpose of this documentation is:</span></span>
+<span data-ttu-id="38eaa-109">El objetivo de este documento es:</span><span class="sxs-lookup"><span data-stu-id="38eaa-109">The purpose of this documentation is:</span></span>
 
-- <span data-ttu-id="b1097-110">Servir de introducción concisa a las herramientas de aprendizaje automático (escritas en Q\#) para el aprendizaje híbrido cuántico y clásico.</span><span class="sxs-lookup"><span data-stu-id="b1097-110">A concise introduction to machine learning tools (written in Q\#) for hybrid quantum/classical learning.</span></span>
-- <span data-ttu-id="b1097-111">Presentar los conceptos de aprendizaje automático y, concretamente, su aplicación en clasificadores cuánticos centrados en circuitos (también conocidos como clasificadores cuánticos secuenciales).</span><span class="sxs-lookup"><span data-stu-id="b1097-111">Introduce machine learning concepts and specifically their realization in quantum circuit centric classifiers (also known as quantum sequential classifiers).</span></span>
-- <span data-ttu-id="b1097-112">Ofrecer un conjunto de tutoriales acerca de los aspectos básicos para empezar a usar las herramientas que la biblioteca proporciona.</span><span class="sxs-lookup"><span data-stu-id="b1097-112">Provide a set of tutorials on the basics to start using the tools provided by the library.</span></span>
-- <span data-ttu-id="b1097-113">Analizar los métodos de entrenamiento y validación de estos clasificadores y cómo se traducen en las operaciones de Q\# específicas proporcionadas por la biblioteca.</span><span class="sxs-lookup"><span data-stu-id="b1097-113">Discuss the training and validation methods for such classifiers and how they translate into specific Q\# operations provided by the library.</span></span>
+- <span data-ttu-id="38eaa-110">Servir de introducción concisa a las herramientas de aprendizaje automático (escritas en Q\#) para el aprendizaje híbrido cuántico y clásico.</span><span class="sxs-lookup"><span data-stu-id="38eaa-110">A concise introduction to machine learning tools (written in Q\#) for hybrid quantum/classical learning.</span></span>
+- <span data-ttu-id="38eaa-111">Presentar los conceptos de aprendizaje automático y, concretamente, su aplicación en clasificadores cuánticos centrados en circuitos (también conocidos como clasificadores cuánticos secuenciales).</span><span class="sxs-lookup"><span data-stu-id="38eaa-111">Introduce machine learning concepts and specifically their realization in quantum circuit centric classifiers (also known as quantum sequential classifiers).</span></span>
+- <span data-ttu-id="38eaa-112">Ofrecer un conjunto de tutoriales acerca de los aspectos básicos para empezar a usar las herramientas que la biblioteca proporciona.</span><span class="sxs-lookup"><span data-stu-id="38eaa-112">Provide a set of tutorials on the basics to start using the tools provided by the library.</span></span>
+- <span data-ttu-id="38eaa-113">Analizar los métodos de entrenamiento y validación de estos clasificadores y cómo se traducen en las operaciones de Q\# específicas proporcionadas por la biblioteca.</span><span class="sxs-lookup"><span data-stu-id="38eaa-113">Discuss the training and validation methods for such classifiers and how they translate into specific Q\# operations provided by the library.</span></span>
 
-<span data-ttu-id="b1097-114">El modelo implementado en esta biblioteca se basa en el esquema de aprendizaje automático cuántico-clásico presentado en [Clasificadores cuánticos centrados en circuitos](https://arxiv.org/abs/1804.00633).</span><span class="sxs-lookup"><span data-stu-id="b1097-114">The model implemented in this library is based on the quantum-classical training scheme presented in [Circuit-centric quantum classifiers](https://arxiv.org/abs/1804.00633)</span></span>
+<span data-ttu-id="38eaa-114">El modelo implementado en esta biblioteca se basa en el esquema de aprendizaje automático cuántico-clásico presentado en [Clasificadores cuánticos centrados en circuitos](https://arxiv.org/abs/1804.00633).</span><span class="sxs-lookup"><span data-stu-id="38eaa-114">The model implemented in this library is based on the quantum-classical training scheme presented in [Circuit-centric quantum classifiers](https://arxiv.org/abs/1804.00633)</span></span>
