@@ -4,17 +4,17 @@ description: Aprenda a cargar su propio conjunto de información para entrenar u
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7ebfe085e50d4647fdb1027250cf3134f8d8f8c2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833702"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856455"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Carga y clasificación de sus propios conjuntos de valores
 
@@ -78,11 +78,11 @@ Supongamos que tenemos un conjunto de filas pequeño con los altos y pesos de lo
 | Alto (m) | Peso (kg) | Animal |
 |-----------|------------|--------|
 | 0,54      | 30         | Foto    |
-| 0,30      | 8          | Catalítica    |
+| 0,30      | 8          | Gato    |
 | 0,91      | 44         | Foto    |
 | 0,86      | 31          | Foto    |
-| 0,32      | 5         | Catalítica    |
-| 0,25 %      | 4          | Catalítica    |
+| 0,32      | 5         | Gato    |
+| 0,25 %      | 4          | Gato    |
 
 El proceso es:
 

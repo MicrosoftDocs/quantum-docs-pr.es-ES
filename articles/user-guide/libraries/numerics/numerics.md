@@ -4,17 +4,17 @@ description: Obtenga información sobre los tipos y las operaciones disponibles 
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.usage
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dfcb8e9e5a15d0881750d67cf58d7ad47cbecd3a
-ms.sourcegitcommit: 897ace8b506adb2331e911ee5633dceced566174
+ms.openlocfilehash: 92efd3b8677d2f27bc59f986ce6c9e915cd23652
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764131"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856443"
 ---
 # <a name="using-the-numerics-library"></a>Usar la biblioteca de valores numéricos
 
@@ -39,7 +39,7 @@ La biblioteca de valores numéricos admite los siguientes tipos
 1. **`SignedLittleEndian`**: Igual que, `LittleEndian` salvo que representa un entero con signo almacenado en el complemento de dos.
 1. **`FixedPoint`**: Representa un número real que consta de una matriz de qubit `qArr2 : Qubit[]` y una posición de punto binario `pos` , que cuenta el número de dígitos binarios a la izquierda del punto binario. `qArr2` se almacena de la misma manera que `SignedLittleEndian` .
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Operaciones
 
 Para cada uno de los tres tipos anteriores, hay disponible una variedad de operaciones:
 

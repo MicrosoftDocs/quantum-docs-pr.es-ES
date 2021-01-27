@@ -4,24 +4,24 @@ description: Obtenga información sobre cómo se simulan los sistemas electróni
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833928"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856216"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Modelos de Quantum para sistemas electrónicos
 
 Con el fin de simular sistemas electrónicos, primero es necesario especificar el Hamiltonian, que se puede encontrar mediante el procedimiento de cuantificación canónico descrito anteriormente.
 En concreto, por $N _e $ electrones con Momentum $p _i $ (en tres dimensiones) y masa $m _e $ y vectores de posición $x _i $ junto con núcleos con cargos $Z _k e $ en las posiciones $y _k $, el operador Hamiltonian Lee \begin{Equation} \hat{H} = \sum \_ {i = 1} ^ {N \_ e} \frac{\hat{p} \_ i ^ 2} {2m \_ e} + \frac {1} {2} \sum \_ {i\ne j} \frac{e ^ 2} {| \hat{x} \_ i-\hat{x} \_ j |}-\sum \_ {i, k} \frac{Z \_ ke ^ 2} {| \hat{x} \_ i-{y} \_ k |} + \frac {1} {2} \ sum_ {k\ne k '} \frac{Z \_ KZ \_ {k '} e ^ 2} {| y \_ k-y \_ k ' |}. \label{EQ: jamón} \end{Equation} los operadores Momentum $ \hat{p} \_ i ^ 2 $ se pueden ver en el espacio real como operadores Laplacian, es decir, $ \hat{p} \_ i ^ 2 =-\partial \_ {x \_ i} ^ 2-\partial \_ {y \_ i} ^ 2-\partial \_ {z \_ i} ^ 2 $.
 Aquí hemos realizado la suposición de simplificación de que los núcleos están en reposo para la molécula.
-Esto se conoce como la aproximación nacida Oppenheimer y tiende a ser válida para el espectro de energía de bajo consumo de $ \hat{H} $, ya que la masa de electrones es aproximadamente 1/1836 $ la masa de una Proton.
+Esto se conoce como la aproximación Born-Oppenheimer y tiende a ser válida para el espectro de energía de bajo consumo de $ \hat{H} $, ya que la masa de electrones es aproximadamente 1/1836 $ la masa de un Proton.
 Este operador Hamiltonian se puede encontrar fácilmente escribiendo la energía de un sistema de $N \_ e $ electrones y aplicando el proceso de cuantificación canónico descrito en [dinámica de Quantum](xref:microsoft.quantum.chemistry.concepts.quantumdynamics).
 
 Para construir la representación de matriz de unitarios para $e ^ {-i\hat {H} t} $ necesitamos representar el operador $ \hat{H} $ como una matriz.
@@ -36,7 +36,7 @@ Por esta razón, es fundamental elegir una base que pueda representar el problem
 
 Hay muchas bases adecuadas que se pueden usar y la elección de una buena base para adaptarse al problema es gran parte del arte de la química de Quantum.
 Es posible que los conjuntos más sencillos de estas bases sean Slater-Type-orbital (ALM), que son soluciones (ortogonales) a la ecuación Schrödinger (es decir, eigenfunctions de $ \hat{H} $) para átomos similares a hidrógeno.
-Se pueden usar otros conjuntos, como ondas de plano o órbitas de espacio en tiempo real, y, para obtener más detalles, se hace referencia al lector de curiosidades en el texto estándar ["teoría de la estructura electrónica molecular"](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) de Helgaker.
+Se pueden usar otros conjuntos, como ondas de plano o de espacio en tiempo real, y, para obtener más detalles, se hace referencia al lector de curiosidades en el texto estándar [' Molecular Electronic-Structure teoría '](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) de Helgaker.
 
 Aunque los Estados usados en el modelo anterior pueden parecer arbitrarios, la mecánica de Quantum impone restricciones en los Estados que se pueden encontrar por naturaleza.
 En concreto, todos los Estados electrónicos de Quantum válidos deben ser antisimétricos en el intercambio de etiquetas de electrones.
