@@ -4,17 +4,17 @@ description: Obtenga información acerca de cómo generar automáticamente un Ha
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4bd663ade7649be05058f07bee1acf541ec3e487
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869246"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844116"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Carga de una función de Hamilton desde un archivo
 Anteriormente, construimos Hamiltonians agregando términos individuales. Aunque esto es adecuado para pequeños ejemplos, la química de Quantum a escala requiere Hamiltonians con millones o miles de millones de términos. Tales Hamiltonians, generados por paquetes de química como NWChem, son demasiado grandes para importar a mano. En este ejemplo, se muestra cómo `FermionHamiltonian` se puede generar automáticamente una instancia a partir de una molécula representada por el [esquema Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Como referencia, puede inspeccionar el `LithiumHydrideGUI` ejemplo proporcionado o el `RunSimulation` ejemplo. También hay compatibilidad limitada para importar desde el formato utilizado por [LIQUi |>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).

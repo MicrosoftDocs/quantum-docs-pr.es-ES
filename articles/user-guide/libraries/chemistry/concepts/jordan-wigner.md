@@ -1,30 +1,30 @@
 ---
-title: 'Jordania: representación Wigner'
-description: Obtenga información sobre la representación Jordania-Wigner, que asigna operadores Hamiltonian a matrices unitarios que se pueden implementar más fácilmente en un equipo Quantum.
+title: Jordan-Wigner representación
+description: Obtenga información sobre la representación de Jordan-Wigner, que asigna operadores de Hamiltonian a matrices de unitarios que se pueden implementar más fácilmente en un equipo Quantum.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833878"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844129"
 ---
-# <a name="jordan-wigner-representation"></a>Jordania: representación Wigner
+# <a name="jordan-wigner-representation"></a>Jordan-Wigner representación
 
 Aunque el segundo Hamiltonians cuantificado se representa de manera adecuada en términos de $a ^ \dagger $ (creación) y $a $ (Annihilation), estas operaciones no son operaciones fundamentales en los equipos Quantum.
 Como resultado, si se desea implementarlos en un equipo Quantum, es necesario asignar los operadores a las matrices unitarios que se pueden implementar en un equipo Quantum.
 La representación Jordania – Wigner proporciona una de estas asignaciones.
 Sin embargo, también existen otros, como la representación Bravyi – Kitaev y tienen sus propias ventajas y desventajas relativas.
-La principal ventaja de la representación Jordania-Wigner es su simplicidad.
+La principal ventaja de la representación Jordan-Wigner es su simplicidad.
 
-La representación Jordania-Wigner es sencilla para derivar.
+La representación Jordan-Wigner es sencilla para derivar.
 Recuerde que un estado $ \ket {0} _J $ implica que el giro orbital $j $ está vacío y $ \ket {1} _J $ implica que está ocupado.
 Esto significa que qubits puede almacenar de forma natural la profesión de un giro orbital determinado.
 Después tenemos ese $a ^ \ dagger_j \ket {0} _J = \ket {1} _J $ y $a ^ \ dagger_j \ket {1} _J = $0.
@@ -51,14 +51,14 @@ La construcción completa es la siguiente:
 \begin{Align} a ^ \ dagger_1 &= \left (\frac{X-iY} {2} \right) \otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1, \\ \\ a ^ \ dagger_2 &= Z\otimes\left (\frac{X-iy} {2} \right) \otimes 1 \ otimes 1 \otimes \cdots \otimes 1, \\ \\ a ^ \ dagger_3 &= Z\otimes Z\otimes \left (\frac{X-iy} {2} \right) \otimes 1 \otimes \cdots \otimes 1, \\ \\ & \Vdots \\ \\ a ^ \ dagger_N &= Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z\otimes \left (\frac{X-iy} {2} \right). \label{EQ: JW} \end{align}
 
 También es conveniente expresar los operadores de número, $n _j $, en términos de operadores de Pauli.
-Afortunadamente, las cadenas de $Z $ Operators (conocidas como cadenas de Jordania-Wigner) cancelan después de una realiza esta sustitución.
+Afortunadamente, las cadenas de $Z operadores $ (conocidas como cadenas de Jordan-Wigner) se cancelan después de una.
 Después de llevar esto (y de que se revoque $X _jY_j = iZ_j $), tenemos \begin{Equation} n_j = a ^ \ dagger_j a_j = \frac{(1-Z_j)} {2} .
 \end{equation}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Construir Hamiltonians en Jordania: representación Wigner
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Construir Hamiltonians en Jordan-Wigner representación
 
-Una vez que se ha invocado la representación Jordania-Wigner, la conversión de Hamiltonian a una suma de operadores de Pauli es sencilla.
+Una vez que se ha invocado la Jordan-Wigner representación que traduce el Hamiltonian a una suma de operadores de Pauli es sencillo.
 Simplemente tiene que reemplazar cada uno de los operadores $a ^ \dagger $ y $a $ en el Hamiltonian Fermionic con las cadenas de operadores Pauli especificados anteriormente.
 Cuando una realiza esta sustitución, solo hay cinco clases de términos dentro de Hamiltonian.
 Estas cinco clases se corresponden con las distintas formas en que se puede elegir el $p, q $ y $p, q, r, s $ en los términos de un cuerpo y dos cuerpos en el Hamiltonian.

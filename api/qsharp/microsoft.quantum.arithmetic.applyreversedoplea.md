@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA
 title: Operación ApplyReversedOpLEA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: ApplyReversedOpLEA
 qsharp.summary: Applies an operation that takes little-endian input to a register encoding an unsigned integer using big-endian format.
-ms.openlocfilehash: d5bc1b38500c449b58f8dafd640627b8e933e902
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 572841410f16085256fdee9302038cd347476dd9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202743"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843522"
 ---
 # <a name="applyreversedoplea-operation"></a>Operación ApplyReversedOpLEA
 
@@ -30,7 +30,7 @@ operation ApplyReversedOpLEA (op : (Microsoft.Quantum.Arithmetic.LittleEndian =>
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--littleendian--unit--is-adj"></a>OP: [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian) la => [unidad](xref:microsoft.quantum.lang-ref.unit) LittleEndian es ADJ
+### <a name="op--littleendian--unit--is-adj"></a>OP: [](xref:Microsoft.Quantum.Arithmetic.LittleEndian) la => [unidad](xref:microsoft.quantum.lang-ref.unit) LittleEndian es ADJ
 
 Operación que actúa en un registro Little-Endian.
 

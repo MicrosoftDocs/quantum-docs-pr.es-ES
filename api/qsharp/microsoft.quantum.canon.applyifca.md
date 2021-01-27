@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfCA
 title: Operación ApplyIfCA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfCA
 qsharp.summary: Applies a unitary operation conditioned on a classical bit.
-ms.openlocfilehash: b0ac469d6dea51951e0d9b2cfceb54253d4b4c5d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b9d5e2c6868dc7b876917abf28f68bb5d0d0f2f7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209628"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845005"
 ---
 # <a name="applyifca-operation"></a>Operación ApplyIfCA
 
@@ -60,6 +60,19 @@ Entrada a la que se aplica la operación.
 ### <a name="t"></a>Traslada
 
 Tipo de entrada de la operación que se va a aplicar condicionalmente.
+
+## <a name="example"></a>Ejemplo
+
+Lo siguiente prepara un registro de qubits en un estado de base de cálculo representado por una cadena de bits clásica dada como una matriz de `Bool` valores:
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## <a name="see-also"></a>Consulte también
 
