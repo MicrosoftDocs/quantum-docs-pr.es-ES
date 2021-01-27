@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.NormalDistribution
 title: NormalDistribution función)
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: NormalDistribution
 qsharp.summary: Returns a normal distribution with a given mean and variance.
-ms.openlocfilehash: cfbf9c0918a571fefc4294befacf641d6a7835b8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 733a2763dca6d75f81d538f63c3084331a8e1d51
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192730"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98814184"
 ---
 # <a name="normaldistribution-function"></a>NormalDistribution función)
 
@@ -44,6 +44,17 @@ function NormalDistribution (mean : Double, variance : Double) : Microsoft.Quant
 ## <a name="output--continuousdistribution"></a>Salida: [ContinuousDistribution](xref:Microsoft.Quantum.Random.ContinuousDistribution)
 
 
+
+## <a name="example"></a>Ejemplo
+
+En el siguiente ejemplo se dibujan 10 ejemplos de la distribución normal con la media 2 y la desviación estándar 0,1:
+
+```qsharp
+let samples = DrawMany(
+    (NormalDistribution(2.0, PowD(0.1, 2.0)))::Sample,
+    10, ()
+);
+```
 
 ## <a name="see-also"></a>Consulte también
 
