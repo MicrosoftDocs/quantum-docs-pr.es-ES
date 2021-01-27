@@ -4,24 +4,24 @@ description: Obtenga información sobre las convenciones de nomenclatura, entrad
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 2edd6baf7375415e395d15bac422168216bcff9a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96231662"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852755"
 ---
 # <a name="no-locq-style-guide"></a>Q# Guía de estilo #
 ## <a name="general-conventions"></a>Convenciones generales ##
 
 Las convenciones sugeridas en esta guía están diseñadas para ayudar a facilitar la lectura y comprensión de los programas y las bibliotecas escritos Q# .
 
-## <a name="guidance"></a>Instrucciones
+## <a name="guidance"></a>Guía
 
 Sugerimos:
 
@@ -68,7 +68,7 @@ Otros verbos también pueden resultar útiles en este caso, como en `IterateThro
 | Aplicar | Se llama a una operación que se proporciona como entrada. |
 | Assert | Un simulador comprueba una hipótesis sobre el resultado de una posible medida Quantum. |
 | Presupuesto | Se devuelve un valor clásico que representa una estimación dibujada a partir de una o más medidas |
-| Measure | Se realiza una medición de cuanto y el resultado se devuelve al usuario. |
+| Medida | Se realiza una medición de cuanto y el resultado se devuelve al usuario. |
 | Preparación | Un registro determinado de qubits se inicializa en un estado determinado. |
 | Muestra | Un valor clásico se devuelve de forma aleatoria desde alguna distribución |
 
@@ -96,7 +96,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;  | NOMBRE | Descripción |
+| &nbsp;  | Nombre | Descripción |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Desactive el uso de un verbo ("Reflect") para indicar el efecto de la operación. |
 | ☒ | <s>`operation XRotation`</s> | El uso de la frase de nombre sugiere la función, en lugar de la operación. |
@@ -129,7 +129,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;  | NOMBRE | Descripción |
+| &nbsp;  | Nombre | Descripción |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente el propósito del punto de entrada a través del nombre de la operación. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | El uso de `Main` no comunica claramente el propósito del punto de entrada y es redundante con el `@EntryPoint()` atributo. |
@@ -171,7 +171,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;   | NOMBRE | Descripción |
+| &nbsp;   | Nombre | Descripción |
 |---|------|-------------|
 | ☑ | `X` | Abreviatura bien entendida para "aplicar una transformación de $X $" |
 | ☑ | `CNOT` | Abreviatura bien entendida para "controlado" |
@@ -228,7 +228,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;   | NOMBRE | Descripción |
+| &nbsp;   | Nombre | Descripción |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | La preposición "to" da como resultado una frase verbal, que indica una operación y no una función. |
 | ☒ | <s>`AsDouble`</s> | El tipo de entrada no está claro en el nombre de la función. |
@@ -251,7 +251,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Ejemplos](#tab/examples)
 
-| &nbsp;  | NOMBRE | Descripción |
+| &nbsp;  | Nombre | Descripción |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | No utilice un carácter de subrayado `_` para indicar que esta operación solo es para uso interno. |
 | ☑ | `internal operation ApplyDecomposedOperation` | La `internal` palabra clave al principio indica claramente que esta operación solo es para uso interno. |
