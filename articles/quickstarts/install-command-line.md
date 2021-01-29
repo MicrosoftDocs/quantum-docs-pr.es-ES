@@ -4,18 +4,17 @@ description: Obtenga información sobre cómo crear una aplicación de Q# que se
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: eeb567dedc1b8123b32faf7ed3a42bb51f16a7d2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3e4f1e97477ecb0547b1586b1c7603c8a9954584
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96228736"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844313"
 ---
 # <a name="develop-with-no-locq-applications-in-an-ide"></a>Desarrollo con aplicaciones de Q# en un IDE
 
