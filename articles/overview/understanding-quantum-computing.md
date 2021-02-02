@@ -9,16 +9,16 @@ uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c6c6249fd56c6fb65550c81ffee902eca555b0cd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834999"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855103"
 ---
 # <a name="understanding-quantum-computing"></a>Descripción de la computación cuántica
 
-La computación cuántica usa los principios de la mecánica cuántica para procesar la información. Por este motivo, la computación cuántica requiere un enfoque diferente de la computación clásica. Un ejemplo de esta diferencia es el procesador que usan los equipos cuánticos. Los equipos clásicos usan los conocidos chips de silicio, mientras que los equipos cuánticos usan sistemas cuánticos como átomos, iones o electrones. Usan sus propiedades cuánticas para representar bits que se pueden preparar en diferentes superposiciones cuánticas de 1 y 0.  
+La computación cuántica usa los principios de la mecánica cuántica para procesar la información. Por este motivo, la computación cuántica requiere un enfoque diferente de la computación clásica. Un ejemplo de esta diferencia es el procesador que usan los equipos cuánticos. Los equipos clásicos usan los conocidos chips de silicio, pero los equipos cuánticos usan sistemas cuánticos (sistemas en los que se pueden controlar las propiedades y los comportamientos únicos de las mecánicas cuánticas) tales como átomos, iones, protones o electrones. Mientras que los equipos clásicos usan valores altos y bajos lógicos binarios (1 y 0, respectivamente), los equipos cuánticos usan sus propiedades cuánticas para representar bits que se pueden preparar en las distintas superposiciones cuánticas de 1 y 0.  
 
 El material cuántico se comporta de acuerdo con las leyes de las mecánicas cuántica, lo que permite aprovechar conceptos como la computación probabilística, la superposición y el entrelazamiento. Estos conceptos son la base de los algoritmos cuánticos, que aprovechan la eficacia de la computación cuántica para solucionar problemas complejos. En este artículo se describen algunos de los conceptos esenciales de la mecánica cuántica en la que se basa la computación cuántica.
 
@@ -52,7 +52,7 @@ Además de esta interdependencia, las partículas pueden mantener esta conexión
 
 ### <a name="qubits-and-probability"></a>Cúbits y probabilidad
 
-Los equipos clásicos almacenan y procesan información en bits, que pueden tener un estado de 1 o 0, pero nunca ambos. El equivalente en la computación cuántica es el **cúbit**, que representa el estado de una partícula cuántica. Debido a la superposición, cúbits puede ser 1 o 0 o cualquier cosa entre ellos. En función de su configuración, un cúbit tiene una determinada *probabilidad* de colapsar en 1 o 0. La probabilidad de que un cúbit colapse en una u otra forma está determinada por la **interferencia cuántica**. 
+Los equipos clásicos almacenan y procesan información en bits, que pueden tener un estado de 1 o 0, pero nunca ambos. El equivalente en la computación cuántica es el **cúbit**, que representa el estado de una partícula cuántica. Debido a la superposición, cúbits puede ser 1 o 0 o cualquier cosa entre ellos. En función de su configuración, un cúbit tiene una determinada *probabilidad* de colapsar en 1 o 0. La probabilidad de que un cúbit colapse en una u otra forma está determinada por la **interferencia cuántica**.
 
 ¿Recuerda el amigo que le estaba haciendo la foto? Supongamos que tiene unos filtros especiales en su cámara llamados filtros de *interferencia*. Si selecciona el filtro *70/30* y empieza a hacer fotos, en el 70 % de ellas se le verá a la izquierda y, en un 30 % se le verá a la derecha. El filtro ha interferido con el estado normal de la cámara y ha influido en la probabilidad de su comportamiento.
 

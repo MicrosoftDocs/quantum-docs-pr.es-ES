@@ -4,20 +4,19 @@ description: Obtenga información sobre cómo crear una aplicación de Q# con Py
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.python
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f6a2a7d1888cfe458fa3989a27d71fcdeed0f01f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1ec40b6f1b7a8d9144860e3b8cfd554eb51bae81
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834166"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844265"
 ---
-# <a name="develop-with-no-locq-and-python"></a>Desarrollo con Q# y Python
+# <a name="develop-with-q-and-python"></a>Desarrollo con Q# y Python
 
 Instale el QDK para desarrollar programas host de Python para llamar a las operaciones de Q#.
 
@@ -72,7 +71,7 @@ Instale el QDK para desarrollar programas host de Python para llamar a las opera
     > donde `/path/to/dotnet-iqsharp` debe reemplazarse por la ruta de acceso absoluta a la herramienta `dotnet-iqsharp` en el sistema de archivos.
     > Normalmente, estará en `.dotnet/tools`, en la carpeta de perfil de usuario.
     
-***
+**_
 
 Eso es todo. Ahora tiene el paquete `qsharp` de Python y el kernel de IQ# para Jupyter, que proporciona la funcionalidad básica para compilar y ejecutar operaciones de Q# desde Python y permite usar cuadernos de Jupyter en Q#.
 
@@ -87,7 +86,7 @@ Si desea usar VS Code:
 
 Si quiere usar un editor diferente, siga las instrucciones anteriores.
 
-## <a name="write-your-first-no-locq-program"></a>Escribir el primer programa de Q#
+## <a name="write-your-first-q-program"></a>Escribir el primer programa de Q#
 
 Ahora ya puede comprobar la instalación del paquete `qsharp` de Python; para ello, escriba y ejecute un sencillo programa de Q#.
 
@@ -113,7 +112,7 @@ Ahora ya puede comprobar la instalación del paquete `qsharp` de Python; para el
 1. Verá el resultado de la operación que ha invocado. En este caso, como la operación genera un resultado aleatorio, verá `0` o `1` en la pantalla. Si ejecuta el programa varias veces, verá cada resultado aproximadamente la mitad del tiempo.
 
 > [!NOTE]
-> * El código de Python es un programa normal de Python. Puede usar cualquier entorno de Python, incluidos cuadernos en Python de Jupyter Notebook, para escribir el programa de Python y llamar a las operaciones de Q#. El programa de Python puede importar las operaciones de Q# desde cualquier archivo .qs situado en la misma carpeta que el código de Python.
+> _ El código de Python es un programa normal de Python. Puede usar cualquier entorno de Python, incluidos cuadernos en Python de Jupyter Notebook, para escribir el programa de Python y llamar a las operaciones de Q#. El programa de Python puede importar las operaciones de Q# desde cualquier archivo .qs situado en la misma carpeta que el código de Python.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

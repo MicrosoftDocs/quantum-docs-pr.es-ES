@@ -4,18 +4,17 @@ description: Describe cómo actualizar los proyectos de Q# y el kit de desarroll
 author: bradben
 ms.author: v-benbra
 ms.date: 5/30/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d9678a61f5fe4ca466b6a84e9e4b68321c5baee3
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 1b5def3226bd073c878f8573aaddd757d733ec48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834930"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858059"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Actualización del kit de desarrollo de Microsoft Quantum (QDK)
 
@@ -27,7 +26,7 @@ Es recomendable mantenerse al día con la versión más reciente del QDK. Siga e
 1. Actualización de los proyectos y archivos de Q# existentes para alinear el código con la sintaxis actualizada.
 2. Actualización del propio QDK para el entorno de desarrollo elegido.
 
-## <a name="updating-no-locq-projects"></a>Actualización de proyectos de Q# 
+## <a name="updating-q-projects"></a>Actualización de proyectos de Q# 
 
 Independientemente de si usa C# o Python para hospedar las operaciones de Q#, siga estas instrucciones para actualizar los proyectos de Q#.
 
@@ -39,7 +38,7 @@ Independientemente de si usa C# o Python para hospedar las operaciones de Q#, si
 
     Compruebe que la salida es `3.1.100` o superior. Si no es así, instale la [última versión](https://dotnet.microsoft.com/download) y vuelva a comprobarlo. Después, siga las instrucciones que se indican a continuación en función de su configuración (Visual Studio, Visual Studio Code o directamente desde el símbolo del sistema).
 
-### <a name="update-no-locq-projects-in-visual-studio"></a>Actualización de proyectos de Q# en Visual Studio
+### <a name="update-q-projects-in-visual-studio"></a>Actualización de proyectos de Q# en Visual Studio
  
 1. Actualice a la versión más reciente de Visual Studio 2019; consulte [aquí](https://docs.microsoft.com/visualstudio/install/update-visual-studio) para obtener instrucciones.
 2. Abra su solución en Visual Studio.
@@ -80,13 +79,13 @@ Independientemente de si usa C# o Python para hospedar las operaciones de Q#, si
 Ahora puede ir directamente a [actualizar la extensión QDK para Visual Studio](#update-visual-studio-qdk-extension).
 
 
-### <a name="update-no-locq-projects-in-visual-studio-code"></a>Actualización de proyectos de Q# en Visual Studio Code
+### <a name="update-q-projects-in-visual-studio-code"></a>Actualización de proyectos de Q# en Visual Studio Code
 
 1. En Visual Studio Code, abra la carpeta que contiene el proyecto que se va a actualizar.
 2. Seleccione **Terminal** -> **Nuevo terminal**.
 3. Siga las instrucciones para actualizar mediante el símbolo del sistema (a continuación).
 
-### <a name="update-no-locq-projects-using-the-command-prompt"></a>Actualización de proyectos de Q# mediante el símbolo del sistema
+### <a name="update-q-projects-using-the-command-prompt"></a>Actualización de proyectos de Q# mediante el símbolo del sistema
 
 1. Vaya hasta la carpeta que contiene el archivo de proyecto principal.
 
@@ -234,7 +233,7 @@ El procedimiento de actualización depende de la instalación original se hizo c
 
 Ahora puede usar la versión actualizada del paquete `qsharp` de Python para ejecutar los programas cuánticos existentes.
 
-### <a name="update-the-ino-locq-jupyter-kernel"></a>Actualización del kernel de IQ# para Jupyter
+### <a name="update-the-iq-jupyter-kernel"></a>Actualización del kernel de IQ# para Jupyter
 
 El procedimiento de actualización depende de la instalación original se hizo con Conda o con la CLI de .NET y PIP.
 
@@ -282,7 +281,7 @@ El procedimiento de actualización depende de la instalación original se hizo c
     %workspace reload
     ```
 
-***
+**_
 
 Ahora puede usar el kernel de IQ# actualizado para ejecutar los cuadernos en Q# de Jupyter Notebook existentes.
 
@@ -301,7 +300,7 @@ Ahora puede usar el kernel de IQ# actualizado para ejecutar los cuadernos en Q# 
 1. Actualización de la extensión Quantum para VS Code
 
     - Reinicie VS Code.
-    - Vaya a la pestaña **Extensiones**.
+    - Vaya a la pestaña _ *Extensiones**.
     - Seleccione la extensión **Kit de desarrollo de Microsoft Quantum para Visual Studio Code**.
     - Vuelva a cargar la extensión
 
